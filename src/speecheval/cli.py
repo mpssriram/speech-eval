@@ -1,5 +1,8 @@
 """Command-line entry point for the speech evaluation pipeline."""
 
+import logging
+from pathlib import Path
+
 import typer
 
 app = typer.Typer(help="Deterministic speech-delivery evaluation pipeline.")
@@ -14,9 +17,21 @@ app.add_typer(evaluate_app, name="evaluate")
 app.add_typer(report_app, name="report")
 
 
+@app.callback()
+def main() -> None:
+    """Configure process-wide CLI logging."""
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+
+
 @app.command()
-def fetch() -> None:
+def fetch(
+    manifest: Path = typer.Option(Path("data/manifest/sources.yaml"), exists=True, dir_okay=False),
+    output: Path = typer.Option(Path("data/manifest/raw_files.csv"), dir_okay=False),
+) -> None:
     """Fetch licensed source audio declared in the source manifest."""
+    from speecheval.sources import fetch_sources
+
+    fetch_sources(manifest, output)
 
 
 @app.command()
