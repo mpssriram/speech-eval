@@ -1,0 +1,129 @@
+# Source recordings for the speech-eval dataset.
+# Every audio file in data/raw/ must trace back to an entry here.
+# license_evidence = a page that states the rights; checked by a human on the date given.
+#
+# download.method:
+#   ia_item  -> Internet Archive item; download audio files with the `internetarchive` package
+#   manual   -> a human downloads the file in a browser and saves it to data/raw/<expected_file>
+#
+# kind:
+#   single     -> one recording of one text
+#   collection -> many readers of the same text (one recording per audio file in the item)
+
+texts:
+  gettysburg:
+    title: "The Gettysburg Address"
+    author: "Abraham Lincoln"
+    canonical_transcript: data/transcripts/canonical/gettysburg.txt
+    canonical_source: "Bliss copy (verify which version each reader used; see Day 1 spec, step 5)"
+    competition_category: declamation
+  o_captain:
+    title: "O Captain! My Captain!"
+    author: "Walt Whitman"
+    canonical_transcript: data/transcripts/canonical/o_captain.txt
+    competition_category: interpretive_reading
+  jfk_rice:
+    title: "Address at Rice University on the Nation's Space Effort (excerpt)"
+    author: "John F. Kennedy"
+    canonical_transcript: data/transcripts/canonical/jfk_rice.txt
+    canonical_source: "https://www.jfklibrary.org/learn/about-jfk/historic-speeches/address-at-rice-university-on-the-nations-space-effort"
+    competition_category: persuasive_oratory
+  reagan_challenger:
+    title: "Address to the Nation on the Space Shuttle Challenger"
+    author: "Ronald Reagan"
+    canonical_transcript: data/transcripts/canonical/reagan_challenger.txt
+    canonical_source: "https://www.reaganlibrary.gov/archives/speech/address-nation-explosion-space-shuttle-challenger"
+    competition_category: declamation
+
+sources:
+  # ---------- DAY 1 ----------
+  - id: lv_gettysburg_150
+    kind: collection
+    text_id: gettysburg
+    description: "LibriVox Gettysburg Address 150th anniversary collection (15 readers)"
+    page: "https://librivox.org/the-gettysburg-address-150th-anniversary-by-abraham-lincoln"
+    download: {method: ia_item, item: "gettysburgaddress_150anniv_1311_librivox", formats: ["64Kbps MP3", "VBR MP3", "Ogg Vorbis"]}
+    license: "Public domain (LibriVox recording; text by Lincoln, d. 1865)"
+    license_evidence: "https://librivox.org/pages/public-domain/"
+    checked_on: 2026-10-01
+    notes: "Each file starts with a LibriVox intro and ends with an outro; trim to the speech (Day 1 spec, step 4)."
+
+  - id: lv_o_captain
+    kind: collection
+    text_id: o_captain
+    description: "LibriVox 'O Captain! My Captain!' collection (12 readers)"
+    page: "https://librivox.org/o-captain-my-captain-by-walt-whitman/"
+    download: {method: ia_item, item: "o_captain_librivox", formats: ["64Kbps MP3", "VBR MP3", "Ogg Vorbis"]}
+    license: "Public domain (LibriVox recording; text by Whitman, d. 1892)"
+    license_evidence: "https://librivox.org/pages/public-domain/"
+    checked_on: 2026-10-01
+    notes: "Same intro/outro trimming as above."
+
+  - id: jfk_rice_1962
+    kind: single
+    text_id: jfk_rice
+    speaker_slug: jfk
+    page: "https://www.jfklibrary.org/asset-viewer/archives/jfkwha-127-002"
+    download: {method: manual, expected_file: "data/raw/jfk_rice_1962.mp3"}
+    license: "Public domain (prepared by US officials as part of official duties)"
+    license_evidence: "https://www.jfklibrary.org/asset-viewer/archives/jfkwha-127-002"
+    checked_on: 2026-10-01
+    excerpt:
+      # Excerpt is located by text anchors, not hard-coded times (Day 1 spec, step 4).
+      start_anchor: "We choose to go to the moon"
+      target_length_s: [120, 240]
+      notes: "Start a few sentences before the anchor if needed so the excerpt begins at a sentence start."
+
+  - id: reagan_challenger_1986
+    kind: single
+    text_id: reagan_challenger
+    speaker_slug: reagan
+    page: "https://www.reaganlibrary.gov/archives/audio/remarks-president-reagan-during-address-nation-space-shuttle-challenger-oval-office"
+    download: {method: manual, expected_file: "data/raw/reagan_challenger_1986.mp3"}
+    license: "Public domain (NARA presidential record) — page does not state it explicitly; confirm before publishing"
+    license_evidence: "https://www.reaganlibrary.gov/archives/audio/remarks-president-reagan-during-address-nation-space-shuttle-challenger-oval-office"
+    checked_on: 2026-10-01
+    notes: "NARA catalog ID 7087577. ~5 min, use in full."
+
+  # ---------- LATER (not part of Day 1) ----------
+  - id: jfk_inaugural_1961
+    kind: single
+    text_id: jfk_inaugural
+    speaker_slug: jfk
+    page: "https://www.jfklibrary.org/asset-viewer/archives/usg-17"
+    download: {method: manual, expected_file: "data/raw/jfk_inaugural_1961.mp3"}
+    license: "TO CONFIRM on page"
+    status: later
+
+  - id: eleanor_roosevelt_1948
+    kind: single
+    text_id: er_human_rights
+    speaker_slug: eleanor_roosevelt
+    page: "https://archive.org/details/gov.fdr.309"
+    download: {method: ia_item, item: "gov.fdr.309"}
+    license: "CC0 1.0 (Internet Archive item, FDR Library material)"
+    license_evidence: "https://archive.org/details/gov.fdr.309"
+    checked_on: 2026-10-01
+    status: later
+    notes: "Video file; extract audio with ffmpeg. Old recording = robustness test."
+
+  - id: obama_selma_2015
+    kind: single
+    text_id: obama_selma
+    speaker_slug: obama
+    page: "https://obamawhitehouse.archives.gov/photos-and-video/video/2015/03/07/president-obama-delivers-remarks-50th-anniversary-selma-marches"
+    transcript_page: "https://obamawhitehouse.archives.gov/the-press-office/2015/03/07/remarks-president-50th-anniversary-selma-montgomery-marches"
+    download: {method: manual}
+    license: "Government-produced material, not copyright protected"
+    license_evidence: "https://obamawhitehouse.archives.gov/copyright"
+    checked_on: 2026-10-01
+    status: later
+    notes: "Need a government-hosted video/audio file, not YouTube. If only YouTube is available, raise with the user."
+
+  - id: harris_vp_tbd
+    kind: single
+    speaker_slug: harris
+    license: "Government-produced material, not copyright protected"
+    license_evidence: "https://bidenwhitehouse.archives.gov/copyright/"
+    status: later
+    notes: "Speech not chosen yet. Need a modern female speaker with clean audio."
