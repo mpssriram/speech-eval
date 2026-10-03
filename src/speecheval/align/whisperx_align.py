@@ -1,0 +1,1 @@
+"""WhisperX forced-alignment adapter."""

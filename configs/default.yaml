@@ -1,0 +1,32 @@
+paths:
+  raw: data/raw
+  hq: data/audio/hq
+  align16k: data/audio/align16k
+  transcripts_canonical: data/transcripts/canonical
+  transcripts_as_spoken: data/transcripts/as_spoken
+  alignment: data/alignment
+  gold: data/gold/alignment
+  reports: reports
+audio:
+  hq_sample_rate: 44100
+  align_sample_rate: 16000
+  trim_padding_s: 0.25
+  edge_fade_ms: 10
+asr:
+  model: large-v3
+  language: en
+  beam_size: 5
+  temperature: 0.0
+  compute_type: float16
+alignment:
+  primary: null
+  sentence_window_padding_s: 0.30
+  mfa:
+    acoustic_model: english_mfa
+    dictionary: english_us_mfa
+    g2p_model: english_us_mfa
+    beam: 100
+    retry_beam: 400
+rounding:
+  time_decimals: 3
+  feature_sig_digits: 4

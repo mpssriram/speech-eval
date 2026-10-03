@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "speech-eval"
+version = "0.1.0"
+description = "Deterministic speech-delivery evaluation pipeline"
+requires-python = "==3.11.*"
+dependencies = [
+  "internetarchive==5.11.1",
+  "librosa==0.11.0",
+  "num2words==0.5.14",
+  "numpy==2.0.2",
+  "praat-parselmouth==0.4.7",
+  "praatio==6.2.2",
+  "pydantic==2.13.5",
+  "pyloudnorm==0.2.0",
+  "pyyaml==6.0.3",
+  "rapidfuzz==3.14.6",
+  "scipy==1.17.1",
+  "soundfile==0.14.0",
+  "torch==2.11.0+cu128",
+  "torchaudio==2.11.0+cu128",
+  "typer==0.27.2",
+  "whisperx==3.7.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+
+[project.scripts]
+speecheval = "speecheval.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/speecheval"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128" }]
+torchaudio = [{ index = "pytorch-cu128" }]
