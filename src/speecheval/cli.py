@@ -50,6 +50,9 @@ def align() -> None:
 @transcripts_app.command("diff")
 def transcripts_diff() -> None:
     """Compare frozen ASR output with as-spoken transcripts."""
+    from speecheval.transcripts import build_transcript_diffs
+
+    build_transcript_diffs()
 
 
 @gold_app.command("prepare")
