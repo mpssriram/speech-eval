@@ -1,6 +1,7 @@
 """Command-line entry point for the speech evaluation pipeline."""
 
 import logging
+import os
 from pathlib import Path
 
 import typer
@@ -21,6 +22,11 @@ app.add_typer(report_app, name="report")
 def main() -> None:
     """Configure process-wide CLI logging."""
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+    if os.environ.get("PYTHONPATH"):
+        logging.getLogger(__name__).warning(
+            "PYTHONPATH is non-empty; inherited packages (for example ROS 2) may interfere. "
+            "Run with env -u PYTHONPATH for an isolated environment."
+        )
 
 
 @app.command()
@@ -53,6 +59,14 @@ def transcripts_diff() -> None:
     from speecheval.transcripts import build_transcript_diffs
 
     build_transcript_diffs()
+
+
+@transcripts_app.command("triage")
+def transcripts_triage() -> None:
+    """Select manuscript versions and prioritize human transcript review."""
+    from speecheval.triage import triage_transcripts
+
+    triage_transcripts()
 
 
 @gold_app.command("prepare")

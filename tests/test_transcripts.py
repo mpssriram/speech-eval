@@ -4,6 +4,7 @@ from speecheval.transcripts import (
     canonical_excerpt,
     compare_transcript,
     normalize_tokens,
+    _escape_table,
 )
 
 
@@ -15,6 +16,9 @@ from speecheval.transcripts import (
         ("don't", ["dont"]),
         ("well-being", ["wellbeing"]),
         ("&", ["and"]),
+        ("10,000", ["ten", "thousand"]),
+        ("48-story", ["forty", "eight", "story"]),
+        ("C-1", ["c", "one"]),
     ],
 )
 def test_normalize_tokens(text: str, expected: list[str]) -> None:
@@ -55,3 +59,7 @@ def test_canonical_excerpt_uses_only_matched_cut_span() -> None:
     ]
 
     assert canonical_excerpt(canonical, words, 4.5, 6.5) == "We choose to go."
+
+
+def test_multiline_poem_edits_stay_in_one_markdown_row() -> None:
+    assert _escape_table("heart!\nhear the bells; |") == "heart! hear the bells; \\|"

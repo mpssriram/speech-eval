@@ -1,6 +1,6 @@
 # Day 1 transcript differences
 
-Recordings: 30 · edit groups: 178
+Recordings: 30 · edit groups: 177
 
 Times are relative to the prepared audio clip.
 
@@ -224,7 +224,7 @@ Times are relative to the prepared audio clip.
 | 50.658s | replace | can not | cannot |
 | 113.476s | replace | the | this |
 
-## jfk_rice__jfk__orig — 6 differences — unreviewed
+## jfk_rice__jfk__orig — 5 differences — unreviewed
 
 | Time | Type | Transcript | ASR |
 |---:|---|---|---|
@@ -232,7 +232,6 @@ Times are relative to the prepared audio clip.
 | 33.866s | replace | we are | were |
 | 38.896s | delete | which | — |
 | 92.357s | replace | accelerators | accelerator |
-| 115.483s | replace | eight story | eightstory |
 | 150.222s | insert | — | the mariner spacecraft |
 
 ## o_captain__lv_apc__orig — 5 differences — unreviewed

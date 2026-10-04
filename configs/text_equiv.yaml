@@ -1,0 +1,55 @@
+# Only orthographic/contraction equivalences; these never edit stored transcripts.
+numbers_to_words: true
+compound_splits: true
+apostrophes: ["’", "‘", "ʼ", "`"]
+aliases:
+  oh: o
+  ok: okay
+  to-day: today
+  battle-field: battlefield
+  colour: color
+  colours: colors
+  honour: honor
+  honoured: honored
+  honours: honors
+  neighbour: neighbor
+  neighbours: neighbors
+  centre: center
+  centres: centers
+  theatre: theater
+  theatres: theaters
+  organise: organize
+  organised: organized
+  organisation: organization
+  realise: realize
+  realised: realized
+  defence: defense
+  licence: license
+  travelling: traveling
+  travelled: traveled
+  programme: program
+  grey: gray
+  weather'd: weathered
+  ribbon'd: ribboned
+  anchor'd: anchored
+  a-crowding: acrowding
+contractions:
+  "can't": "can not"
+  "cannot": "can not"
+  "don't": "do not"
+  "doesn't": "does not"
+  "didn't": "did not"
+  "won't": "will not"
+  "isn't": "is not"
+  "aren't": "are not"
+  "wasn't": "was not"
+  "weren't": "were not"
+  "it's": "it is"
+  "we're": "we are"
+  "they're": "they are"
+  "you're": "you are"
+  "i'm": "i am"
+  "we've": "we have"
+  "they've": "they have"
+  "i've": "i have"
+  "that's": "that is"

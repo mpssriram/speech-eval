@@ -11,4 +11,10 @@
 ## 2026-10-03 — O Captain collection count differs from spec
 
 - The Internet Archive item `o_captain_librivox` currently exposes 13 distinct VBR MP3 readings, while the Day 1 spec says 12.
-- No licensed reading was silently discarded; all 13 are retained. This makes the expected total 30 recordings when the two government files are present (currently 29 because JFK is blocked).
+- No licensed reading was silently discarded; all 13 are retained. There are now 30 recordings, including both government files; JFK is resolved.
+
+## 2026-10-04 — Automated opening of local review page
+
+- `data/review/index.html` is generated and references the prepared WAVs with relative paths.
+- The browser tool rejected its `file://wsl.localhost/Ubuntu/home/sriram/speech-eval/data/review/index.html` URL because the tool permits only HTTP/HTTPS protocols.
+- Open `\\wsl$\Ubuntu\home\sriram\speech-eval\data\review\index.html` manually in a browser. No server or protocol workaround was used.

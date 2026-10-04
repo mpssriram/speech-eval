@@ -256,6 +256,6 @@ Generated and human audio is stored as **FLAC** (lossless). Source audio prepare
 ## 8. Definition of done for any spec
 
 1. All acceptance checks in the spec pass.
-2. `uv run pytest` passes.
+2. `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 env -u PYTHONPATH uv run pytest` passes.
 3. Running the spec's commands a second time produces identical outputs (check with `sha256sum`).
 4. A short summary is appended to `docs/specs/PROGRESS.md`: what was done, commands to reproduce, open issues.

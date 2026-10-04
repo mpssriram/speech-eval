@@ -23,6 +23,8 @@ Splits are by **source recording (= speaker)**. Rule, applied deterministically 
 | `reagan_challenger` | — | — | all (setting B-same-speaker) |
 | user's recordings | — | — | all (Human setting) |
 
+- For the 13-reader O Captain collection, reserve the same two dev and last two test readers from the alphabetical rule; after dev and test are taken, all remaining readers go to train (nine train readers when none are excluded).
+
 - Readers flagged in Phase 1/2 QA (clipping, octave jumps, > 10% transcript deviation) are put in `excluded` with a reason, before the split is applied.
 - Write the resulting lists to `configs/splits.yaml` and never regenerate it automatically. Add a test asserting no `speaker_slug` appears in two splits.
 

@@ -17,12 +17,14 @@ LOGGER = logging.getLogger(__name__)
 
 
 def _number_to_words(match: re.Match[str]) -> str:
-    return str(num2words(int(match.group(0)))).replace("-", " ")
+    # Keep digits adjacent to a hyphen (C-1, 48-story) as separate words.
+    return " " + str(num2words(int(match.group(0)))).replace("-", " ") + " "
 
 
 def normalize_tokens(text: str) -> list[str]:
     """Normalize transcript text into lowercase comparison tokens."""
     text = text.lower().replace("&", " and ")
+    text = re.sub(r"(?<=\d),(?=\d{3}(?:\D|$))", "", text)
     text = re.sub(r"\d+", _number_to_words, text)
     text = text.replace("’", "'").replace("‘", "'")
     text = re.sub(r"['-]", "", text)
@@ -33,7 +35,7 @@ def normalize_tokens(text: str) -> list[str]:
 def _tokens_with_spans(text: str) -> tuple[list[str], list[tuple[int, int]]]:
     tokens: list[str] = []
     spans: list[tuple[int, int]] = []
-    for match in re.finditer(r"\d+|[A-Za-z]+(?:['’\-][A-Za-z]+)*|&", text):
+    for match in re.finditer(r"\d+(?:,\d{3})*|[A-Za-z]+(?:['’\-][A-Za-z]+)*|&", text):
         normalized = normalize_tokens(match.group(0))
         tokens.extend(normalized)
         spans.extend([match.span()] * len(normalized))
@@ -131,7 +133,7 @@ def _body_text(text: str) -> str:
 
 
 def _escape_table(text: str) -> str:
-    return (text or "—").replace("|", "\\|")
+    return (text or "—").replace("|", "\\|").replace("\r", " ").replace("\n", " ")
 
 
 def build_transcript_diffs(root: Path | None = None) -> list[dict[str, Any]]:

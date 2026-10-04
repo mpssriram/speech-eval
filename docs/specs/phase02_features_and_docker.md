@@ -140,7 +140,7 @@ One row per transcript word (`i` matches the alignment JSON):
 Add a `Makefile` with:
 
 - `make docker-build`
-- `make docker-test` (runs `uv run pytest` in the container)
+- `make docker-test` (runs `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 env -u PYTHONPATH uv run pytest` in the container)
 - `make docker-shell`
 
 `docker-test` must pass now. Do **not** run the full data pipeline in Docker yet; that happens in Phase 10.
@@ -162,7 +162,7 @@ Add a `Makefile` with:
 - [ ] No recording is flagged for octave jumps, or the flagged ones are listed in `docs/BLOCKERS.md` with a proposed pitch-range fix.
 - [ ] Re-running `speecheval features all` produces identical hashes.
 - [ ] `make docker-build && make docker-test` pass.
-- [ ] `uv run pytest` passes; `PROGRESS.md` is updated.
+- [ ] `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 env -u PYTHONPATH uv run pytest` passes; `PROGRESS.md` is updated.
 
 ## Out of scope
 

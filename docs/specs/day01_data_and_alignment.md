@@ -307,7 +307,7 @@ Fast tests only. No real audio, no model downloads.
 - [ ] `reports/day01_aligner_bakeoff.md` exists. `alignment.primary` is set and files are promoted.
 - [ ] `reports/day01_alignment_qa.md` exists, and the user has spot-checked the flagged recordings in Praat.
 - [ ] Re-running `prepare` and `align --aligner <primary>` gives identical sha256 for all outputs.
-- [ ] `uv run pytest` passes.
+- [ ] `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 env -u PYTHONPATH uv run pytest` passes.
 - [ ] `docs/specs/PROGRESS.md` has the Day 1 summary.
 
 ## Out of scope for Day 1
