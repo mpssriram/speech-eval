@@ -82,6 +82,8 @@ def transcripts_verify() -> None:
 @gold_app.command("prepare")
 def gold_prepare() -> None:
     """Prepare TextGrids for manual gold-boundary annotation."""
+    from speecheval.gold import prepare_gold
+    prepare_gold()
 
 
 @evaluate_app.command("alignment")

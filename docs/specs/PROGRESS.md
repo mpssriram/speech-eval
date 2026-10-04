@@ -64,3 +64,11 @@ Both CPU forced aligners completed all 30 recordings: MFA 3.4.2 (77.940 s, fixed
 All 30 frozen cuts match excerpts.yaml; windows match final transcript and source-ASR hashes. Cached both-aligner reruns are byte-identical for alignments, TextGrids, windows and transcripts. A read-only review found a frozen-window overwrite bug and a minor stale hardlink hazard; failing regression tests preceded both fixes. Full suite: 62 passed, including inherited ROS PYTHONPATH isolation. Fresh calibration seed/inference checks also passed again.
 
 Final calibration remains margin 2.425378476083314 total nats; 6/300 = 2% in-sample proxy false acceptance; 64 applied / 18 kept / 3 uncertain. One uncertain word each in gettysburg lv_eep, gettysburg lv_fb, and O Captain lv_rg; zero in the other 27. Three-way ASR agreement is not human ground truth. Reports: `reports/day01_acoustic_verification.md` and `reports/day01_alignment_runs.md`. `alignment.primary` remains null, no gold has been prepared, and Phase 1 as a whole remains incomplete until the later bake-off/QA steps.
+
+## 2026-10-04 — Step 7a templates prepared; STOP for USER annotation
+
+User said continue. Implemented `speecheval gold prepare` with frozen provenance and no manual-file overwrites. Selected clean highest-LUFS Gettysburg reader lv_fb (-22.405), JFK and Reagan. Each has 20 symmetric averaged/padded candidate intervals in `data/gold/alignment/todo`, not human gold. Uncertain/interpolated words are excluded; both aligners must place each word for at least 0.15 s. Rounded fractional stride spans all eligible words, with the selection method disclosed.
+
+Real artifact verification and byte-identical cached preparation passed. Independent read-only review confirmed all 60 candidates. Two failing identity regressions preceded the schema/identity safeguard fix; full suite 69 passed. Preparation never runs evaluation or chooses a primary aligner. User must annotate the 60 boundaries in Praat and save the three final TextGrids outside todo. Detailed handoff: `reports/day01_gold_annotation.md`. Phase 1 remains incomplete.
+
+Reproduce inside WSL: `env -u PYTHONPATH ~/.local/bin/uv run speecheval gold prepare`, `env -u PYTHONPATH ~/.local/bin/uv run python scripts/check_gold.py`, `scripts/test.sh -o addopts='' -q`.

@@ -30,6 +30,10 @@ alignment:
 rounding:
   time_decimals: 3
   feature_sig_digits: 4
+gold_alignment:
+  words_per_recording: 20
+  min_duration_s: 0.15
+  padding_s: 0.15
 transcript_verification:
   method: local_total_ctc
   numerics: isolated_cpu_v1
