@@ -35,8 +35,11 @@ def fetch(
 
 
 @app.command()
-def prepare() -> None:
+def prepare(force: bool = typer.Option(False, help="Overwrite existing prepared audio.")) -> None:
     """Prepare source audio for feature extraction and alignment."""
+    from speecheval.prepare import prepare_recordings
+
+    prepare_recordings(force=force)
 
 
 @app.command()
