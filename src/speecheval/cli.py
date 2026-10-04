@@ -69,6 +69,14 @@ def transcripts_triage() -> None:
     triage_transcripts()
 
 
+@transcripts_app.command("verify")
+def transcripts_verify() -> None:
+    """Compare transcript candidates acoustically on deterministic CPU CTC emissions."""
+    from speecheval.verify import verify_transcripts
+
+    verify_transcripts()
+
+
 @gold_app.command("prepare")
 def gold_prepare() -> None:
     """Prepare TextGrids for manual gold-boundary annotation."""

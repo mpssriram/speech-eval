@@ -19,3 +19,25 @@ make test
 ```
 
 USER Step 5b is next: open `\\wsl$\Ubuntu\home\sriram\speech-eval\data\review\index.html` manually, listen to the 85 items, record decisions in `reports/day01_listen_list.md`, edit as-spoken transcripts only for actual speech differences, and add `# reviewed: yes` after each recording is reviewed. The browser tool cannot open file-protocol URLs; this is logged in `docs/BLOCKERS.md`. Steps 5c onward remain pending.
+
+## 2026-10-04 — Automatic acoustic verification replaces USER Step 5b
+
+The user superseded the listening-review requirement. The previous entry is historical; no human review is claimed.
+
+- Implemented `speecheval transcripts verify` for all 85 frozen listen-list items. Candidate A is the original local transcript sentence; B substitutes the ASR variant. CPU wav2vec2 emissions and CTC likelihood summed over all monotonic paths are scored per frame, with evaluation mode, one thread, fixed seed and deterministic PyTorch settings. Multi-line edits use the contiguous affected sentence span.
+- At the requested 0.05 nats/frame margin: 6 APPLY_B edits across five recordings, 17 KEEP_A and 62 UNSURE. One applied edit also has independent-ASR agreement (LIKELY_REAL). Agreement does not bypass the acoustic margin. All 85 pairs have finite scores; no impossible alignment was used to justify deleting text.
+- Median B-minus-A score is +0.017185 nats/frame; p10 is -2.712631, p90 +0.047313, and range -3.934342 to +0.211645. The threshold is provisional, not calibrated accuracy or proof of correct speech. Boundary insertions remain model preferences, not human confirmation.
+- Preflight exposed 12 O Captain clips trimmed at a repeated first-stanza ending. Fixed the ending tie-break and regenerated prepared audio from unchanged raw files. All 30 current transcripts have sentence-window JSON; the audit preserves the exact candidate texts and windows used for scoring.
+- Verification evidence: 46 fast tests pass, including inherited ROS-style PYTHONPATH isolation. Two independent uncached CPU model runs on a real sentence produced byte-identical emissions and identical candidate scores matching the stored audit. A repeated verifier run is checked for byte-identical reports, transcripts, windows and audit artefacts.
+- Audit and distribution are in `reports/day01_acoustic_verification.md` and `data/review/acoustic_verification.json`; the original listen list records automatic decisions. Corrected full-poem audio exposes additional differences: the refreshed diff report contains 221 groups, not all acoustically verified. The 62 UNSURE items remain unresolved; no transcript was labeled human-reviewed. Phase 1 is not complete; Steps 5c onward remain pending.
+
+Reproduce in WSL:
+
+```bash
+cd /home/sriram/speech-eval
+env -u PYTHONPATH ~/.local/bin/uv run speecheval transcripts verify
+make test
+./scripts/test.sh
+```
+
+The verifier freezes its inputs before applying edits, reuses deterministic evidence on rerun, and rejects changed inference settings, model, scored audio or audited output transcripts rather than silently overwriting applied decisions.

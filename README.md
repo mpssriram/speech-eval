@@ -7,6 +7,7 @@ The project runs in WSL Ubuntu at `/home/sriram/speech-eval`.
 ```bash
 cd /home/sriram/speech-eval
 env -u PYTHONPATH ~/.local/bin/uv run speecheval transcripts triage
+env -u PYTHONPATH ~/.local/bin/uv run speecheval transcripts verify
 make test
 # Equivalent direct test command:
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 env -u PYTHONPATH ~/.local/bin/uv run pytest
@@ -30,10 +31,32 @@ and caches the result by audio SHA-256, clip bounds and model settings in
 `data/review/secondary_asr.json`. LIKELY_REAL requires both ASRs to agree on
 the entire normalized clip context; it remains a human-review suggestion.
 
-Open `\\wsl$\Ubuntu\home\sriram\speech-eval\data\review\index.html` in a browser.
+Step 5b human listening review has been replaced, at the user's request, by
+`speecheval transcripts verify`. It freezes the original listen-list items and
+transcripts, repairs repeated-ending poem cuts if needed, builds sentence/poem-line
+windows, and compares candidate A (current transcript) with B (ASR substitution).
+The cached WhisperX wav2vec2 model runs on CPU with seed 0, evaluation mode, one
+thread and deterministic algorithms. Each score is the total CTC log-likelihood
+summed over all valid alignment paths, divided by the same number of audio frames.
+The model checkpoint, audio, inference settings and candidate texts identify caches.
+
+With a margin of 0.05 nats/frame, a finite B advantage applies B, a finite A advantage
+keeps A, and other cases stay UNSURE. ASR agreement is recorded as supporting
+evidence. The score distribution and every decision appear in
+`reports/day01_acoustic_verification.md`; full candidate texts, window times, frame
+counts and evidence hashes appear in `data/review/acoustic_verification.json`.
+This is automatic model evidence, not human-verified ground truth. No
+`# reviewed: yes` marker is added. The margin remains provisional; this dataset
+cannot establish its accuracy. New differences exposed by repaired audio and
+UNSURE items remain explicitly unresolved. An unchanged rerun validates provenance,
+reuses its audit and preserves applied edits; if transcripts/audio/model/settings
+have changed, it stops rather than overwriting that audit.
+
+For optional inspection, open `\\wsl$\Ubuntu\home\sriram\speech-eval\data\review\index.html` in a browser.
 Its players reference `../audio/hq/*.wav` and play the four-second review
 window around each timestamp. Decisions typed into the HTML are temporary;
-save decisions in `reports/day01_listen_list.md`, update the corresponding
-as-spoken transcript for actual speech changes, then add `# reviewed: yes`.
+save any later human decisions separately, update the corresponding
+as-spoken transcript for actual speech changes, and add `# reviewed: yes` only
+if a human actually performed that review.
 Already reviewed recordings stay in the audit but are excluded from the
 active listen list. Triage does not mark recordings reviewed automatically.

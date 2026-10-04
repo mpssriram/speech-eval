@@ -1,0 +1,3548 @@
+{
+  "audio_repairs": [
+    {
+      "new_end_s": 121.611,
+      "new_start_s": 12.307,
+      "old_end_s": 45.959,
+      "old_start_s": 12.307,
+      "recording_id": "o_captain__lv_apc__orig"
+    },
+    {
+      "new_end_s": 109.772,
+      "new_start_s": 0.456,
+      "old_end_s": 42.289,
+      "old_start_s": 0.456,
+      "recording_id": "o_captain__lv_chip__orig"
+    },
+    {
+      "new_end_s": 106.348,
+      "new_start_s": 14.104,
+      "old_end_s": 42.291,
+      "old_start_s": 14.104,
+      "recording_id": "o_captain__lv_foxits__orig"
+    },
+    {
+      "new_end_s": 109.761,
+      "new_start_s": 12.553,
+      "old_end_s": 44.77,
+      "old_start_s": 12.553,
+      "recording_id": "o_captain__lv_jtm__orig"
+    },
+    {
+      "new_end_s": 80.727,
+      "new_start_s": 10.132,
+      "old_end_s": 31.564,
+      "old_start_s": 10.132,
+      "recording_id": "o_captain__lv_mac__orig"
+    },
+    {
+      "new_end_s": 102.072,
+      "new_start_s": 20.203,
+      "old_end_s": 45.762,
+      "old_start_s": 20.203,
+      "recording_id": "o_captain__lv_mb__orig"
+    },
+    {
+      "new_end_s": 142.732,
+      "new_start_s": 29.704,
+      "old_end_s": 61.378,
+      "old_start_s": 29.704,
+      "recording_id": "o_captain__lv_md__orig"
+    },
+    {
+      "new_end_s": 125.473,
+      "new_start_s": 33.384,
+      "old_end_s": 63.692,
+      "old_start_s": 33.384,
+      "recording_id": "o_captain__lv_rg__orig"
+    },
+    {
+      "new_end_s": 97.716,
+      "new_start_s": 10.955,
+      "old_end_s": 38.8,
+      "old_start_s": 10.955,
+      "recording_id": "o_captain__lv_s__orig"
+    },
+    {
+      "new_end_s": 107.82,
+      "new_start_s": 9.837,
+      "old_end_s": 39.866,
+      "old_start_s": 9.837,
+      "recording_id": "o_captain__lv_sjs__orig"
+    },
+    {
+      "new_end_s": 106.284,
+      "new_start_s": 18.996,
+      "old_end_s": 43.56,
+      "old_start_s": 18.996,
+      "recording_id": "o_captain__lv_ss__orig"
+    },
+    {
+      "new_end_s": 86.466,
+      "new_start_s": 7.932,
+      "old_end_s": 32.766,
+      "old_start_s": 7.932,
+      "recording_id": "o_captain__lv_th__orig"
+    }
+  ],
+  "counts": {
+    "APPLY_B": 6,
+    "KEEP_A": 17,
+    "UNSURE": 62
+  },
+  "human_reviewed": false,
+  "items": [
+    {
+      "asr": "Boulay.",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -0.06342366,
+      "emission_key": "9d043962bd5376f0bead46f517f6b4b2092169dff8a93bd16ba082e6073ae6ec",
+      "end_s": 0.209,
+      "frames": 727,
+      "kind": "insert",
+      "primary_context": "",
+      "recording_id": "gettysburg__lv_amb__orig",
+      "reviewed": false,
+      "score_a": -0.10411793,
+      "score_b": -0.16754159,
+      "second_asr": "A.",
+      "second_asr_window": [
+        0.0,
+        1.209
+      ],
+      "start_s": 0.0,
+      "token_end": 1,
+      "token_start": 0,
+      "transcript": "",
+      "transcript_end": 0,
+      "transcript_start": 0,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Boulay Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 14.551,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02114801,
+      "emission_key": "9d043962bd5376f0bead46f517f6b4b2092169dff8a93bd16ba082e6073ae6ec",
+      "end_s": 6.139,
+      "frames": 727,
+      "kind": "replace",
+      "primary_context": "fathers brought forth upon this continent",
+      "recording_id": "gettysburg__lv_amb__orig",
+      "reviewed": false,
+      "score_a": -0.10411793,
+      "score_b": -0.08296993,
+      "second_asr": "fathers brought forth upon this continent.",
+      "second_asr_window": [
+        4.898,
+        7.139
+      ],
+      "start_s": 5.898,
+      "token_end": 12,
+      "token_start": 11,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 14.551,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": true,
+      "class": "LIKELY_REAL",
+      "decision": "APPLY_B",
+      "delta_nats_per_frame": 0.05291872,
+      "emission_key": "d83f9ac24570df8a8852de93886e2261bd26b7550d1ea64f246d4fc5b9fa9580",
+      "end_s": 35.312,
+      "frames": 474,
+      "kind": "replace",
+      "primary_context": "lives that this nation might live.",
+      "recording_id": "gettysburg__lv_amb__orig",
+      "reviewed": false,
+      "score_a": -0.28744683,
+      "score_b": -0.23452811,
+      "second_asr": "lives that this nation might live.",
+      "second_asr_window": [
+        34.132,
+        36.312
+      ],
+      "start_s": 35.132,
+      "token_end": 89,
+      "token_start": 88,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 36.753,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 27.262,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01372388,
+      "emission_key": "0bee752a3f17f6c1d1c2688e808af5b681420b17fe43caa7d99cf169b673a075",
+      "end_s": 105.048,
+      "frames": 1555,
+      "kind": "replace",
+      "primary_context": "perish from this earth.",
+      "recording_id": "gettysburg__lv_amb__orig",
+      "reviewed": false,
+      "score_a": -0.03444488,
+      "score_b": -0.020721,
+      "second_asr": "from this earth.",
+      "second_asr_window": [
+        103.788,
+        105.738
+      ],
+      "start_s": 104.788,
+      "token_end": 268,
+      "token_start": 267,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 105.738,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 74.618,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01931517,
+      "emission_key": "f5f42e8d54e92b0e30b20b61efea3231483306b325af3c2f9da937e4184e2a8f",
+      "end_s": 3.654,
+      "frames": 534,
+      "kind": "replace",
+      "primary_context": "fathers brought forth upon this continent a",
+      "recording_id": "gettysburg__lv_dj__orig",
+      "reviewed": false,
+      "score_a": -0.08240592,
+      "score_b": -0.06309076,
+      "second_asr": "fathers brought forth upon this continent a new",
+      "second_asr_window": [
+        2.454,
+        4.654
+      ],
+      "start_s": 3.454,
+      "token_end": 11,
+      "token_start": 10,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 10.701,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.04283984,
+      "emission_key": "8c5ec8600d19e94436d71de3c5c56f05e799b88f15a6ac96b09703ece04020eb",
+      "end_s": 30.048,
+      "frames": 404,
+      "kind": "replace",
+      "primary_context": "their lives that this nation might live.",
+      "recording_id": "gettysburg__lv_dj__orig",
+      "reviewed": false,
+      "score_a": -0.11045798,
+      "score_b": -0.06761813,
+      "second_asr": "their lives that this nation might live.",
+      "second_asr_window": [
+        28.868,
+        31.048
+      ],
+      "start_s": 29.868,
+      "token_end": 88,
+      "token_start": 87,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 31.329,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 23.242,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02941896,
+      "emission_key": "d3aaf1fea8adb433b9094ab37e412fcfdd6e5178a665b0d0dd98cc094548306d",
+      "end_s": 46.304,
+      "frames": 299,
+      "kind": "delete",
+      "primary_context": "here have consecrated far above our poor",
+      "recording_id": "gettysburg__lv_dj__orig",
+      "reviewed": false,
+      "score_a": -0.17070671,
+      "score_b": -0.14128775,
+      "second_asr": "of consecrated far above our porpoise.",
+      "second_asr_window": [
+        45.304,
+        47.304
+      ],
+      "start_s": 46.304,
+      "token_end": 129,
+      "token_start": 129,
+      "transcript": "it",
+      "transcript_end": 736,
+      "transcript_start": 734,
+      "window": {
+        "candidate_a": "The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract.",
+        "candidate_b": "The brave men, living and dead, who struggled here, have consecrated , far above our poor power to add or detract.",
+        "end_s": 48.966,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          6
+        ],
+        "start_s": 42.981,
+        "valid": true
+      }
+    },
+    {
+      "asr": "I",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00204522,
+      "emission_key": "b2b2f604ce9f1a745a057afc6c09a26ed624e3697ef451132fed979e3611dbbc",
+      "end_s": 53.878,
+      "frames": 342,
+      "kind": "replace",
+      "primary_context": "here. but I can never forget what",
+      "recording_id": "gettysburg__lv_dj__orig",
+      "reviewed": false,
+      "score_a": -0.13268962,
+      "score_b": -0.1306444,
+      "second_asr": "but I can never forget what",
+      "second_asr_window": [
+        52.858,
+        54.878
+      ],
+      "start_s": 53.858,
+      "token_end": 152,
+      "token_start": 151,
+      "transcript": "it",
+      "transcript_end": 852,
+      "transcript_start": 850,
+      "window": {
+        "candidate_a": "The world will little note, nor long remember what we say here, but it can never forget what they did here.",
+        "candidate_b": "The world will little note, nor long remember what we say here, but I can never forget what they did here.",
+        "end_s": 55.941,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          7
+        ],
+        "start_s": 49.087,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00539831,
+      "emission_key": "fe893a6dbba72a04429cb5b7c31f04d3816992fffd0028b791c5f40175c48842",
+      "end_s": 96.858,
+      "frames": 1839,
+      "kind": "replace",
+      "primary_context": "not perish from this",
+      "recording_id": "gettysburg__lv_dj__orig",
+      "reviewed": false,
+      "score_a": -0.36771074,
+      "score_b": -0.36231243,
+      "second_asr": "perish from this earth.",
+      "second_asr_window": [
+        95.718,
+        97.858
+      ],
+      "start_s": 96.718,
+      "token_end": 266,
+      "token_start": 265,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 102.88,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 66.078,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02444214,
+      "emission_key": "9e80d531da8f2fcadebb0d788d39fa91bd449f3cb14e10accdbc3591269d8653",
+      "end_s": 4.715,
+      "frames": 671,
+      "kind": "replace",
+      "primary_context": "brought forth upon this continent",
+      "recording_id": "gettysburg__lv_dl__orig",
+      "reviewed": false,
+      "score_a": -0.04416848,
+      "score_b": -0.01972635,
+      "second_asr": "brought forth upon this continent",
+      "second_asr_window": [
+        3.455,
+        5.715
+      ],
+      "start_s": 4.455,
+      "token_end": 11,
+      "token_start": 10,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 13.426,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.03317176,
+      "emission_key": "4fdfddd149ae88ad2b9809bee75e57296a506fb8b6944bfb34271c4c0d8c397a",
+      "end_s": 38.221,
+      "frames": 581,
+      "kind": "replace",
+      "primary_context": "lives that this nation might",
+      "recording_id": "gettysburg__lv_dl__orig",
+      "reviewed": false,
+      "score_a": -0.19329215,
+      "score_b": -0.16012039,
+      "second_asr": "that this nation might live",
+      "second_asr_window": [
+        37.041,
+        39.221
+      ],
+      "start_s": 38.041,
+      "token_end": 88,
+      "token_start": 87,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 39.723,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 28.098,
+        "valid": true
+      }
+    },
+    {
+      "asr": "cannot hollow",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.0237035,
+      "emission_key": "99ab7a859c66284169569fbaae42980cf9cc85abbb8b15e5f4968e76b006d8fc",
+      "end_s": 52.213,
+      "frames": 433,
+      "kind": "replace",
+      "primary_context": "We cannot hollow this ground.",
+      "recording_id": "gettysburg__lv_dl__orig",
+      "reviewed": false,
+      "score_a": -0.16598452,
+      "score_b": -0.14228102,
+      "second_asr": "We cannot hollow this ground.",
+      "second_asr_window": [
+        50.492,
+        53.213
+      ],
+      "start_s": 51.492,
+      "token_end": 116,
+      "token_start": 114,
+      "transcript": "can not hallow",
+      "transcript_end": 648,
+      "transcript_start": 634,
+      "window": {
+        "candidate_a": "But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground.",
+        "candidate_b": "But, in a larger sense, we can not dedicate -- we can not consecrate -- we cannot hollow -- this ground.",
+        "end_s": 53.154,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          5
+        ],
+        "start_s": 44.489,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00538537,
+      "emission_key": "c40d217a3bcb3c8f2def0fb18a7ddd357fb8ec288eec760454bae36fe4e9537c",
+      "end_s": 117.749,
+      "frames": 2063,
+      "kind": "replace",
+      "primary_context": "not perish from this",
+      "recording_id": "gettysburg__lv_dl__orig",
+      "reviewed": false,
+      "score_a": -0.41082267,
+      "score_b": -0.40543731,
+      "second_asr": "perish from this earth.",
+      "second_asr_window": [
+        116.529,
+        118.749
+      ],
+      "start_s": 117.529,
+      "token_end": 267,
+      "token_start": 266,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 125.478,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 84.2,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01718513,
+      "emission_key": "5a6780d6e30447926227b300c9df3787b8c53e9ff9e147c1a4eff037cc9d61c6",
+      "end_s": 5.297,
+      "frames": 731,
+      "kind": "replace",
+      "primary_context": "brought forth upon this continent",
+      "recording_id": "gettysburg__lv_eep__orig",
+      "reviewed": false,
+      "score_a": -0.23004899,
+      "score_b": -0.21286386,
+      "second_asr": "brought forth upon this continent.",
+      "second_asr_window": [
+        4.097,
+        6.297
+      ],
+      "start_s": 5.097,
+      "token_end": 10,
+      "token_start": 9,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 15.591,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.951,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.03280301,
+      "emission_key": "eca920c6fe1b2190d57cf501934b2c5385516fd3a672004afb9879f5aed7409b",
+      "end_s": 43.997,
+      "frames": 533,
+      "kind": "replace",
+      "primary_context": "that this nation",
+      "recording_id": "gettysburg__lv_eep__orig",
+      "reviewed": false,
+      "score_a": -0.15566997,
+      "score_b": -0.12286696,
+      "second_asr": "that this nation",
+      "second_asr_window": [
+        42.817,
+        44.997
+      ],
+      "start_s": 43.817,
+      "token_end": 87,
+      "token_start": 86,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 45.959,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 35.289,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00342807,
+      "emission_key": "0491c3b7b3793f8765059e4d9a15d18b61eb67cbe76dd3c4181552553cda09bc",
+      "end_s": 145.103,
+      "frames": 2673,
+      "kind": "replace",
+      "primary_context": "from this",
+      "recording_id": "gettysburg__lv_eep__orig",
+      "reviewed": false,
+      "score_a": -0.2556498,
+      "score_b": -0.25222173,
+      "second_asr": "from this Earth.",
+      "second_asr_window": [
+        143.421,
+        146.103
+      ],
+      "start_s": 144.421,
+      "token_end": 266,
+      "token_start": 265,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 154.869,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 101.401,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01758027,
+      "emission_key": "94b903100dfb47d9b2f977f8de4a92953d2ed69a4c67a741415afa9de3456247",
+      "end_s": 5.558,
+      "frames": 706,
+      "kind": "replace",
+      "primary_context": "brought forth upon this continent",
+      "recording_id": "gettysburg__lv_fb__orig",
+      "reviewed": false,
+      "score_a": -0.04272012,
+      "score_b": -0.02513986,
+      "second_asr": "brought forth upon this continent.",
+      "second_asr_window": [
+        4.278,
+        6.558
+      ],
+      "start_s": 5.278,
+      "token_end": 11,
+      "token_start": 10,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 14.131,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.0366418,
+      "emission_key": "c4461851cdfa3e2cc6d305202f5ed0d19605eb6b7fbb84f4fac78390ef8ed880",
+      "end_s": 35.132,
+      "frames": 531,
+      "kind": "replace",
+      "primary_context": "lives that this nation might",
+      "recording_id": "gettysburg__lv_fb__orig",
+      "reviewed": false,
+      "score_a": -0.16805939,
+      "score_b": -0.13141758,
+      "second_asr": "that this nation might live.",
+      "second_asr_window": [
+        33.952,
+        36.132
+      ],
+      "start_s": 34.952,
+      "token_end": 87,
+      "token_start": 86,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 36.464,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 25.83,
+        "valid": true
+      }
+    },
+    {
+      "asr": "cannot hollow",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02341295,
+      "emission_key": "8eea428209976728754751f2194f55143a7cc90b5bc376bb3d9f222d4b308d0d",
+      "end_s": 47.569,
+      "frames": 380,
+      "kind": "replace",
+      "primary_context": "we cannot hollow this ground",
+      "recording_id": "gettysburg__lv_fb__orig",
+      "reviewed": false,
+      "score_a": -0.18275481,
+      "score_b": -0.15934187,
+      "second_asr": "We cannot hollow this ground.",
+      "second_asr_window": [
+        45.688,
+        48.569
+      ],
+      "start_s": 46.688,
+      "token_end": 115,
+      "token_start": 113,
+      "transcript": "can not hallow",
+      "transcript_end": 648,
+      "transcript_start": 634,
+      "window": {
+        "candidate_a": "But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground.",
+        "candidate_b": "But, in a larger sense, we can not dedicate -- we can not consecrate -- we cannot hollow -- this ground.",
+        "end_s": 48.77,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          5
+        ],
+        "start_s": 41.161,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.04261582,
+      "emission_key": "a51159af16f7a8977f263afe481bbe195e52aade3b6674157e0ff77f34d1e506",
+      "end_s": 77.636,
+      "frames": 1962,
+      "kind": "delete",
+      "primary_context": "for us to be dedicated to the great",
+      "recording_id": "gettysburg__lv_fb__orig",
+      "reviewed": false,
+      "score_a": -0.34847251,
+      "score_b": -0.30585669,
+      "second_asr": "For us to be dedicated to the great task",
+      "second_asr_window": [
+        76.636,
+        78.636
+      ],
+      "start_s": 77.636,
+      "token_end": 192,
+      "token_start": 192,
+      "transcript": "here",
+      "transcript_end": 1058,
+      "transcript_start": 1054,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be  dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "end_s": 114.928,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 75.674,
+        "valid": true
+      }
+    },
+    {
+      "asr": "of",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00612283,
+      "emission_key": "a51159af16f7a8977f263afe481bbe195e52aade3b6674157e0ff77f34d1e506",
+      "end_s": 78.878,
+      "frames": 1962,
+      "kind": "insert",
+      "primary_context": "dedicated to the great task of remaining before",
+      "recording_id": "gettysburg__lv_fb__orig",
+      "reviewed": false,
+      "score_a": -0.34847251,
+      "score_b": -0.34234967,
+      "second_asr": "to the great task of remaining before us.",
+      "second_asr_window": [
+        77.838,
+        79.878
+      ],
+      "start_s": 78.838,
+      "token_end": 198,
+      "token_start": 197,
+      "transcript": "",
+      "transcript_end": 1087,
+      "transcript_start": 1087,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task of remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "end_s": 114.928,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 75.674,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00134391,
+      "emission_key": "a51159af16f7a8977f263afe481bbe195e52aade3b6674157e0ff77f34d1e506",
+      "end_s": 110.102,
+      "frames": 1962,
+      "kind": "replace",
+      "primary_context": "from this",
+      "recording_id": "gettysburg__lv_fb__orig",
+      "reviewed": false,
+      "score_a": -0.34847251,
+      "score_b": -0.3471286,
+      "second_asr": "this earth.",
+      "second_asr_window": [
+        108.661,
+        111.102
+      ],
+      "start_s": 109.661,
+      "token_end": 266,
+      "token_start": 265,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 114.928,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 75.674,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02963966,
+      "emission_key": "5aefafca2ca4e502f8a0cadf3fa5b5b5c00a4abee37316623997abf68580c259",
+      "end_s": 4.995,
+      "frames": 668,
+      "kind": "replace",
+      "primary_context": "brought forth upon this continent",
+      "recording_id": "gettysburg__lv_jn__orig",
+      "reviewed": false,
+      "score_a": -0.093957,
+      "score_b": -0.06431734,
+      "second_asr": "brought forth upon this continent",
+      "second_asr_window": [
+        3.735,
+        5.995
+      ],
+      "start_s": 4.735,
+      "token_end": 11,
+      "token_start": 10,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 13.382,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.04768483,
+      "emission_key": "b7ff30900463fbc4410c98a75be28f8b22fd417bcfaba31ff70cf3b404a84651",
+      "end_s": 34.828,
+      "frames": 427,
+      "kind": "replace",
+      "primary_context": "gave their lives that this nation might live.",
+      "recording_id": "gettysburg__lv_jn__orig",
+      "reviewed": false,
+      "score_a": -0.14778581,
+      "score_b": -0.10010098,
+      "second_asr": "their lives that this nation might live.",
+      "second_asr_window": [
+        33.628,
+        35.828
+      ],
+      "start_s": 34.628,
+      "token_end": 88,
+      "token_start": 87,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 36.25,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 27.701,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01359428,
+      "emission_key": "821b9bd4990ed7a1a4abeb1d5339fa62089096275a8e6a89c50beb76f563c0e6",
+      "end_s": 105.83,
+      "frames": 1477,
+      "kind": "replace",
+      "primary_context": "not perish from this earth.",
+      "recording_id": "gettysburg__lv_jn__orig",
+      "reviewed": false,
+      "score_a": -0.03082024,
+      "score_b": -0.01722596,
+      "second_asr": "not perish from this earth.",
+      "second_asr_window": [
+        104.61,
+        106.541
+      ],
+      "start_s": 105.61,
+      "token_end": 267,
+      "token_start": 266,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 106.541,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 76.994,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01622261,
+      "emission_key": "541d3b148721849615d14f3395ffee7277497116a682a855aa42ab3af48d7bac",
+      "end_s": 10.242,
+      "frames": 878,
+      "kind": "replace",
+      "primary_context": "fathers brought forth upon this continent a",
+      "recording_id": "gettysburg__lv_law__orig",
+      "reviewed": false,
+      "score_a": -1.11196783,
+      "score_b": -1.09574522,
+      "second_asr": "fathers brought forth upon this continent and",
+      "second_asr_window": [
+        9.041,
+        11.242
+      ],
+      "start_s": 10.041,
+      "token_end": 11,
+      "token_start": 10,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 17.57,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.04725885,
+      "emission_key": "b39d9343e32c20e7269edabe264c7a892734118c08b07754bb2ed13d71a3ce2e",
+      "end_s": 39.068,
+      "frames": 493,
+      "kind": "replace",
+      "primary_context": "their lives that this nation might",
+      "recording_id": "gettysburg__lv_law__orig",
+      "reviewed": false,
+      "score_a": -0.26179059,
+      "score_b": -0.21453174,
+      "second_asr": "lives that this nation might live.",
+      "second_asr_window": [
+        37.888,
+        40.068
+      ],
+      "start_s": 38.888,
+      "token_end": 88,
+      "token_start": 87,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 40.61,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 30.734,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01767767,
+      "emission_key": "d0a5e02ac04beffb915fa2dba6edcd24301cd95fc656c794028335fe50893b4e",
+      "end_s": 105.694,
+      "frames": 1437,
+      "kind": "replace",
+      "primary_context": "not perish from this earth.",
+      "recording_id": "gettysburg__lv_law__orig",
+      "reviewed": false,
+      "score_a": -0.0360563,
+      "score_b": -0.01837862,
+      "second_asr": "not perish from this earth.",
+      "second_asr_window": [
+        104.533,
+        106.404
+      ],
+      "start_s": 105.533,
+      "token_end": 267,
+      "token_start": 266,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 106.404,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 77.646,
+        "valid": true
+      }
+    },
+    {
+      "asr": "b",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02547139,
+      "emission_key": "95465d2dd7200c97564dbb3f03def8f9c5ebd1f1f076c740e0b2778b1af77369",
+      "end_s": 0.21,
+      "frames": 891,
+      "kind": "insert",
+      "primary_context": "b four",
+      "recording_id": "gettysburg__lv_lb__orig",
+      "reviewed": false,
+      "score_a": -0.08504597,
+      "score_b": -0.05957459,
+      "second_asr": "E",
+      "second_asr_window": [
+        0.0,
+        1.21
+      ],
+      "start_s": 0.0,
+      "token_end": 1,
+      "token_start": 0,
+      "transcript": "",
+      "transcript_end": 0,
+      "transcript_start": 0,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "b Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 17.835,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02237527,
+      "emission_key": "95465d2dd7200c97564dbb3f03def8f9c5ebd1f1f076c740e0b2778b1af77369",
+      "end_s": 6.98,
+      "frames": 891,
+      "kind": "replace",
+      "primary_context": "brought forth upon this continent",
+      "recording_id": "gettysburg__lv_lb__orig",
+      "reviewed": false,
+      "score_a": -0.08504597,
+      "score_b": -0.06267071,
+      "second_asr": "brought forth upon this continent\ufffd",
+      "second_asr_window": [
+        5.7,
+        7.98
+      ],
+      "start_s": 6.7,
+      "token_end": 12,
+      "token_start": 11,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 17.835,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.043331,
+      "emission_key": "ce6bcc533686a53762d1bb0b7f46c955b259e6a7962ce4a1d43e7c941557c191",
+      "end_s": 47.34,
+      "frames": 601,
+      "kind": "replace",
+      "primary_context": "lives that this nation",
+      "recording_id": "gettysburg__lv_lb__orig",
+      "reviewed": false,
+      "score_a": -0.1067097,
+      "score_b": -0.0633787,
+      "second_asr": "lives, that this nation might",
+      "second_asr_window": [
+        46.159,
+        48.34
+      ],
+      "start_s": 47.159,
+      "token_end": 89,
+      "token_start": 88,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 49.342,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 37.309,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.0053042,
+      "emission_key": "dd1e116a4e7a3c754306fadb76089cf416222cc7fd6c0f8cdf96deee14924869",
+      "end_s": 145.957,
+      "frames": 2580,
+      "kind": "replace",
+      "primary_context": "from this",
+      "recording_id": "gettysburg__lv_lb__orig",
+      "reviewed": false,
+      "score_a": -0.39601677,
+      "score_b": -0.39071258,
+      "second_asr": "from this earth.",
+      "second_asr_window": [
+        144.656,
+        146.957
+      ],
+      "start_s": 145.656,
+      "token_end": 268,
+      "token_start": 267,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 155.065,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 103.459,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01890186,
+      "emission_key": "a79c6888b8e814c525f675476d4d2f2e42a3e1b5e401e4a6f366ad21206ec450",
+      "end_s": 6.178,
+      "frames": 926,
+      "kind": "replace",
+      "primary_context": "brought forth upon this continent",
+      "recording_id": "gettysburg__lv_mas__orig",
+      "reviewed": false,
+      "score_a": -0.0393759,
+      "score_b": -0.02047405,
+      "second_asr": "brought forth upon this continent.",
+      "second_asr_window": [
+        4.858,
+        7.178
+      ],
+      "start_s": 5.858,
+      "token_end": 11,
+      "token_start": 10,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 18.534,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02393984,
+      "emission_key": "d079c974d96db92be9cf0b90198ce9bb8e36117eb0668fef338507bb90e5c665",
+      "end_s": 59.158,
+      "frames": 830,
+      "kind": "replace",
+      "primary_context": "that this nation",
+      "recording_id": "gettysburg__lv_mas__orig",
+      "reviewed": false,
+      "score_a": -0.08502359,
+      "score_b": -0.06108374,
+      "second_asr": "that this nation",
+      "second_asr_window": [
+        57.978,
+        60.158
+      ],
+      "start_s": 58.978,
+      "token_end": 88,
+      "token_start": 87,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 61.82,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 45.209,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00827119,
+      "emission_key": "538d73fb4d1183bf572a75b81568383883f676a6037981f29d6757c83b51ef50",
+      "end_s": 190.298,
+      "frames": 2722,
+      "kind": "replace",
+      "primary_context": "from this earth.",
+      "recording_id": "gettysburg__lv_mas__orig",
+      "reviewed": false,
+      "score_a": -0.0123007,
+      "score_b": -0.0040295,
+      "second_asr": "from this earth.",
+      "second_asr_window": [
+        189.057,
+        190.948
+      ],
+      "start_s": 190.057,
+      "token_end": 267,
+      "token_start": 266,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 190.948,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 136.5,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01621477,
+      "emission_key": "cae61f5c18d63ac885be49988639eb7a8d7c1ae41193d5103182325e2cf3248e",
+      "end_s": 4.334,
+      "frames": 661,
+      "kind": "replace",
+      "primary_context": "fathers brought forth upon this continent",
+      "recording_id": "gettysburg__lv_mk__orig",
+      "reviewed": false,
+      "score_a": -0.04069363,
+      "score_b": -0.02447886,
+      "second_asr": "others brought forth upon this continent,",
+      "second_asr_window": [
+        3.134,
+        5.334
+      ],
+      "start_s": 4.134,
+      "token_end": 11,
+      "token_start": 10,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 13.242,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.04196042,
+      "emission_key": "8c814c7fa1dc1c0196d6cd13c03d9dda73c7924478903387554ea1056d72470a",
+      "end_s": 38.169,
+      "frames": 485,
+      "kind": "replace",
+      "primary_context": "lives that this nation might live",
+      "recording_id": "gettysburg__lv_mk__orig",
+      "reviewed": false,
+      "score_a": -0.11584994,
+      "score_b": -0.07388952,
+      "second_asr": "that this nation might live.",
+      "second_asr_window": [
+        37.009,
+        39.169
+      ],
+      "start_s": 38.009,
+      "token_end": 88,
+      "token_start": 87,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 39.27,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 29.56,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00651854,
+      "emission_key": "33505aef443dfec756f9b1fbc1d00522f64feab58d51cafc6c60a1dd37fcd86a",
+      "end_s": 113.617,
+      "frames": 1994,
+      "kind": "replace",
+      "primary_context": "shall not perish from this",
+      "recording_id": "gettysburg__lv_mk__orig",
+      "reviewed": false,
+      "score_a": -0.40896928,
+      "score_b": -0.40245074,
+      "second_asr": "not perish from this earth.",
+      "second_asr_window": [
+        112.476,
+        114.617
+      ],
+      "start_s": 113.476,
+      "token_end": 267,
+      "token_start": 266,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 120.976,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 81.082,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02291393,
+      "emission_key": "5753dfbced18d7205904f7480bf4e24ac0930c2ae81d3c0491482f27ea0a2040",
+      "end_s": 4.416,
+      "frames": 652,
+      "kind": "replace",
+      "primary_context": "brought forth upon this continent",
+      "recording_id": "gettysburg__lv_pc__orig",
+      "reviewed": false,
+      "score_a": -0.08145733,
+      "score_b": -0.0585434,
+      "second_asr": "brought forth upon this continent",
+      "second_asr_window": [
+        3.155,
+        5.416
+      ],
+      "start_s": 4.155,
+      "token_end": 11,
+      "token_start": 10,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 13.046,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.04182292,
+      "emission_key": "68a8ecc6de15da3b9700cd8c53f5cec367833a4b1d3c5f00ed8ad92880719fd2",
+      "end_s": 36.867,
+      "frames": 498,
+      "kind": "replace",
+      "primary_context": "that this nation might",
+      "recording_id": "gettysburg__lv_pc__orig",
+      "reviewed": false,
+      "score_a": -0.13551982,
+      "score_b": -0.0936969,
+      "second_asr": "lives that this nation might live.",
+      "second_asr_window": [
+        35.666,
+        37.867
+      ],
+      "start_s": 36.666,
+      "token_end": 88,
+      "token_start": 87,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 38.509,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 28.535,
+        "valid": true
+      }
+    },
+    {
+      "asr": "cannot hollow",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02374393,
+      "emission_key": "a2ad0dc2e3754df5c4e074166c6051c8105f60f4f3c6be2b38740b2a8b4cc108",
+      "end_s": 51.403,
+      "frames": 443,
+      "kind": "replace",
+      "primary_context": "We cannot hollow this ground.",
+      "recording_id": "gettysburg__lv_pc__orig",
+      "reviewed": false,
+      "score_a": -0.15128585,
+      "score_b": -0.12754192,
+      "second_asr": "We cannot hollow this ground.",
+      "second_asr_window": [
+        49.402,
+        52.403
+      ],
+      "start_s": 50.402,
+      "token_end": 116,
+      "token_start": 114,
+      "transcript": "can not hallow",
+      "transcript_end": 648,
+      "transcript_start": 634,
+      "window": {
+        "candidate_a": "But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground.",
+        "candidate_b": "But, in a larger sense, we can not dedicate -- we can not consecrate -- we cannot hollow -- this ground.",
+        "end_s": 52.343,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          5
+        ],
+        "start_s": 43.477,
+        "valid": true
+      }
+    },
+    {
+      "asr": "and",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01525041,
+      "emission_key": "73f387f2d3738a0f3519d51453968f802cbc472d112411cbaa2cb3731a6a2532",
+      "end_s": 113.767,
+      "frames": 2088,
+      "kind": "insert",
+      "primary_context": "by the people, and for the people,",
+      "recording_id": "gettysburg__lv_pc__orig",
+      "reviewed": false,
+      "score_a": -0.4463909,
+      "score_b": -0.43114049,
+      "second_asr": "by the people and for the people.",
+      "second_asr_window": [
+        112.687,
+        114.767
+      ],
+      "start_s": 113.687,
+      "token_end": 260,
+      "token_start": 259,
+      "transcript": "",
+      "transcript_end": 1428,
+      "transcript_start": 1428,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, and for the people, shall not perish from the earth.",
+        "end_s": 124.735,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 82.969,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00562096,
+      "emission_key": "73f387f2d3738a0f3519d51453968f802cbc472d112411cbaa2cb3731a6a2532",
+      "end_s": 116.992,
+      "frames": 2088,
+      "kind": "replace",
+      "primary_context": "perish from this",
+      "recording_id": "gettysburg__lv_pc__orig",
+      "reviewed": false,
+      "score_a": -0.4463909,
+      "score_b": -0.44076994,
+      "second_asr": "perish from this earth.",
+      "second_asr_window": [
+        115.852,
+        117.992
+      ],
+      "start_s": 116.852,
+      "token_end": 268,
+      "token_start": 267,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 124.735,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 82.969,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00933129,
+      "emission_key": "82c336d0ac36b18ce886f6533dac745f265e3de2bf06b0b9d7973d7c02099102",
+      "end_s": 5.139,
+      "frames": 694,
+      "kind": "replace",
+      "primary_context": "brought forth upon this continent a",
+      "recording_id": "gettysburg__lv_rk__orig",
+      "reviewed": false,
+      "score_a": -0.10210521,
+      "score_b": -0.09277392,
+      "second_asr": "brought forth upon this continent a new",
+      "second_asr_window": [
+        3.858,
+        6.139
+      ],
+      "start_s": 4.858,
+      "token_end": 11,
+      "token_start": 10,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 13.893,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.03036626,
+      "emission_key": "82c336d0ac36b18ce886f6533dac745f265e3de2bf06b0b9d7973d7c02099102",
+      "end_s": 9.126,
+      "frames": 694,
+      "kind": "delete",
+      "primary_context": "in liberty, dedicated to the",
+      "recording_id": "gettysburg__lv_rk__orig",
+      "reviewed": false,
+      "score_a": -0.10210521,
+      "score_b": -0.07173895,
+      "second_asr": "liberty, dedicated to the",
+      "second_asr_window": [
+        8.126,
+        10.126
+      ],
+      "start_s": 9.126,
+      "token_end": 19,
+      "token_start": 19,
+      "transcript": "and",
+      "transcript_end": 115,
+      "transcript_start": 112,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty,  dedicated to the proposition that all men are created equal.",
+        "end_s": 13.893,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02695222,
+      "emission_key": "f0f736f5e1d4ceca1187a8bd4fb0a0f9f16537f64b811b4f3d94abecde6638c9",
+      "end_s": 38.543,
+      "frames": 551,
+      "kind": "replace",
+      "primary_context": "their lives that this nation might",
+      "recording_id": "gettysburg__lv_rk__orig",
+      "reviewed": false,
+      "score_a": -0.21884884,
+      "score_b": -0.19189662,
+      "second_asr": "lives that this nation might live.",
+      "second_asr_window": [
+        37.342,
+        39.543
+      ],
+      "start_s": 38.342,
+      "token_end": 87,
+      "token_start": 86,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 40.265,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 29.229,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": -0.03551006,
+      "emission_key": "3e1326f19b4a6cc603cc5dad4a26c4725588cbd3df5a4f487f7b73e369003174",
+      "end_s": 65.051,
+      "frames": 462,
+      "kind": "delete",
+      "primary_context": "world will little nor long",
+      "recording_id": "gettysburg__lv_rk__orig",
+      "reviewed": false,
+      "score_a": -0.10872017,
+      "score_b": -0.14423023,
+      "second_asr": "The world will little know no longer.",
+      "second_asr_window": [
+        64.051,
+        66.051
+      ],
+      "start_s": 65.051,
+      "token_end": 142,
+      "token_start": 142,
+      "transcript": "note",
+      "transcript_end": 808,
+      "transcript_start": 804,
+      "window": {
+        "candidate_a": "The world will little note, nor long remember what we say here, but it can never forget what they did here.",
+        "candidate_b": "The world will little , nor long remember what we say here, but it can never forget what they did here.",
+        "end_s": 72.84,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          7
+        ],
+        "start_s": 63.59,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00396051,
+      "emission_key": "42e7758b28f79600a0fc394ff1a9fad65a1189cd5b762f8fe4eb25460b19db7a",
+      "end_s": 121.424,
+      "frames": 2272,
+      "kind": "replace",
+      "primary_context": "perish from this",
+      "recording_id": "gettysburg__lv_rk__orig",
+      "reviewed": false,
+      "score_a": -0.27168822,
+      "score_b": -0.26772771,
+      "second_asr": "perish from this Earth.",
+      "second_asr_window": [
+        119.963,
+        122.424
+      ],
+      "start_s": 120.963,
+      "token_end": 265,
+      "token_start": 264,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 129.366,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 83.916,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.0203228,
+      "emission_key": "087077b584accaf05708610d5d7a59e48e614efa8780df78670dea1c704c3302",
+      "end_s": 4.435,
+      "frames": 758,
+      "kind": "replace",
+      "primary_context": "fathers brought forth upon this continent",
+      "recording_id": "gettysburg__lv_sa__orig",
+      "reviewed": false,
+      "score_a": -0.06329308,
+      "score_b": -0.04297028,
+      "second_asr": "brought forth upon this continent.",
+      "second_asr_window": [
+        3.215,
+        5.435
+      ],
+      "start_s": 4.215,
+      "token_end": 11,
+      "token_start": 10,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 15.169,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.03222077,
+      "emission_key": "f3f44ba6bed1fad178f27afa98a9289d02816c8da35379922df238fef36fa240",
+      "end_s": 41.707,
+      "frames": 623,
+      "kind": "replace",
+      "primary_context": "lives that this nation might",
+      "recording_id": "gettysburg__lv_sa__orig",
+      "reviewed": false,
+      "score_a": -0.17545882,
+      "score_b": -0.14323805,
+      "second_asr": "that this nation might live.",
+      "second_asr_window": [
+        40.527,
+        42.707
+      ],
+      "start_s": 41.527,
+      "token_end": 88,
+      "token_start": 87,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 43.289,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 30.823,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -0.06318924,
+      "emission_key": "827a50c74e889f6734304e89e653cdc89c114b3dee0778e341aa23fa0fd01ce1",
+      "end_s": 81.37,
+      "frames": 673,
+      "kind": "delete",
+      "primary_context": "is for us",
+      "recording_id": "gettysburg__lv_sa__orig",
+      "reviewed": false,
+      "score_a": -0.1393721,
+      "score_b": -0.20256134,
+      "second_asr": "It is for us",
+      "second_asr_window": [
+        80.37,
+        82.37
+      ],
+      "start_s": 81.37,
+      "token_end": 160,
+      "token_start": 160,
+      "transcript": "It",
+      "transcript_end": 892,
+      "transcript_start": 890,
+      "window": {
+        "candidate_a": "It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced.",
+        "candidate_b": " is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced.",
+        "end_s": 93.305,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8
+        ],
+        "start_s": 79.833,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02791475,
+      "emission_key": "6176eb1082c1bec93042e7b6baacd272b899391953d66b30d4718238a6790408",
+      "end_s": 4.034,
+      "frames": 603,
+      "kind": "replace",
+      "primary_context": "fathers brought forth upon this continent a",
+      "recording_id": "gettysburg__lv_tg__orig",
+      "reviewed": false,
+      "score_a": -0.16686156,
+      "score_b": -0.13894681,
+      "second_asr": "others brought forth upon this continent",
+      "second_asr_window": [
+        2.814,
+        5.034
+      ],
+      "start_s": 3.814,
+      "token_end": 11,
+      "token_start": 10,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 12.083,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "were",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.04098887,
+      "emission_key": "6176eb1082c1bec93042e7b6baacd272b899391953d66b30d4718238a6790408",
+      "end_s": 10.782,
+      "frames": 603,
+      "kind": "replace",
+      "primary_context": "that all men were created equal.",
+      "recording_id": "gettysburg__lv_tg__orig",
+      "reviewed": false,
+      "score_a": -0.16686156,
+      "score_b": -0.12587269,
+      "second_asr": "men were created equal.",
+      "second_asr_window": [
+        9.642,
+        11.782
+      ],
+      "start_s": 10.642,
+      "token_end": 28,
+      "token_start": 27,
+      "transcript": "are",
+      "transcript_end": 161,
+      "transcript_start": 158,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men were created equal.",
+        "end_s": 12.083,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "have",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.04798393,
+      "emission_key": "c164c6096cff34487ed6c550e3bceac72d37436d136113508d03b05efe23f853",
+      "end_s": 13.385,
+      "frames": 497,
+      "kind": "replace",
+      "primary_context": "Now we have engaged in a great",
+      "recording_id": "gettysburg__lv_tg__orig",
+      "reviewed": false,
+      "score_a": -0.19435157,
+      "score_b": -0.14636764,
+      "second_asr": "Now we have engaged in a great",
+      "second_asr_window": [
+        12.224,
+        14.385
+      ],
+      "start_s": 13.224,
+      "token_end": 33,
+      "token_start": 32,
+      "transcript": "are",
+      "transcript_end": 188,
+      "transcript_start": 185,
+      "window": {
+        "candidate_a": "Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure.",
+        "candidate_b": "Now we have engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure.",
+        "end_s": 22.314,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          1
+        ],
+        "start_s": 12.364,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.04734944,
+      "emission_key": "b17fbae628ff88ea603f9ab8737a680e69973bdbf8ba7c1be15d0382f81c3512",
+      "end_s": 33.008,
+      "frames": 427,
+      "kind": "replace",
+      "primary_context": "their lives that this nation might live.",
+      "recording_id": "gettysburg__lv_tg__orig",
+      "reviewed": false,
+      "score_a": -0.12594952,
+      "score_b": -0.07860008,
+      "second_asr": "their lives that this nation might live.",
+      "second_asr_window": [
+        31.828,
+        34.008
+      ],
+      "start_s": 32.828,
+      "token_end": 88,
+      "token_start": 87,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 34.47,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 25.919,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.0043182,
+      "emission_key": "edf3d33a40218d9501a7cb205297dcdfe5c9056d223dbe7c37182b0155c4a037",
+      "end_s": 102.898,
+      "frames": 1814,
+      "kind": "replace",
+      "primary_context": "not perish from this",
+      "recording_id": "gettysburg__lv_tg__orig",
+      "reviewed": false,
+      "score_a": -0.55064024,
+      "score_b": -0.54632203,
+      "second_asr": "perish from this earth.",
+      "second_asr_window": [
+        101.678,
+        103.898
+      ],
+      "start_s": 102.678,
+      "token_end": 267,
+      "token_start": 266,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 109.496,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 73.201,
+        "valid": true
+      }
+    },
+    {
+      "asr": "upon",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.02082999,
+      "emission_key": "cdf124c355270a356921c2a803db2e5bce19e2b06ea0381debbb98d8b52ceb31",
+      "end_s": 4.997,
+      "frames": 676,
+      "kind": "replace",
+      "primary_context": "brought forth upon this continent a",
+      "recording_id": "gettysburg__lv_wt__orig",
+      "reviewed": false,
+      "score_a": -0.18601826,
+      "score_b": -0.16518827,
+      "second_asr": "is brought forth upon this continent",
+      "second_asr_window": [
+        3.757,
+        5.997
+      ],
+      "start_s": 4.757,
+      "token_end": 10,
+      "token_start": 9,
+      "transcript": "on",
+      "transcript_end": 59,
+      "transcript_start": 57,
+      "window": {
+        "candidate_a": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "candidate_b": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+        "end_s": 14.37,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.832,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.0379892,
+      "emission_key": "772f3933a94f3b48d9e557a98987570be6098911289418f2479c2e2ee5207daa",
+      "end_s": 41.115,
+      "frames": 525,
+      "kind": "replace",
+      "primary_context": "lives that this nation",
+      "recording_id": "gettysburg__lv_wt__orig",
+      "reviewed": false,
+      "score_a": -0.11461895,
+      "score_b": -0.07662974,
+      "second_asr": "that this nation might",
+      "second_asr_window": [
+        39.915,
+        42.115
+      ],
+      "start_s": 40.915,
+      "token_end": 87,
+      "token_start": 86,
+      "transcript": "that",
+      "transcript_end": 478,
+      "transcript_start": 474,
+      "window": {
+        "candidate_a": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live.",
+        "candidate_b": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+        "end_s": 43.138,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 32.622,
+        "valid": true
+      }
+    },
+    {
+      "asr": "this",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01210464,
+      "emission_key": "498cc8631f9a138772f121d5580c9d099fce97220342ad0d446e5f1f2bc36e97",
+      "end_s": 125.309,
+      "frames": 1905,
+      "kind": "replace",
+      "primary_context": "not perish from this earth.",
+      "recording_id": "gettysburg__lv_wt__orig",
+      "reviewed": false,
+      "score_a": -0.02417024,
+      "score_b": -0.01206559,
+      "second_asr": "not perish from this earth.",
+      "second_asr_window": [
+        124.069,
+        126.0
+      ],
+      "start_s": 125.069,
+      "token_end": 266,
+      "token_start": 265,
+      "transcript": "the",
+      "transcript_end": 1469,
+      "transcript_start": 1466,
+      "window": {
+        "candidate_a": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "candidate_b": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from this earth.",
+        "end_s": 126.0,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          9
+        ],
+        "start_s": 87.88,
+        "valid": true
+      }
+    },
+    {
+      "asr": "We choose to go to the moon.",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -0.20232462,
+      "emission_key": "a06a9326160b335037439b98f6fd12d9f9b9ee91b01e0fbf1d3c17e216964fdd",
+      "end_s": 7.117,
+      "frames": 416,
+      "kind": "insert",
+      "primary_context": "Texas? We choose to go to the moon.",
+      "recording_id": "jfk_rice__jfk__orig",
+      "reviewed": false,
+      "score_a": -0.18087036,
+      "score_b": -0.38319498,
+      "second_asr": "We choose to go to the moon.",
+      "second_asr_window": [
+        4.475,
+        8.117
+      ],
+      "start_s": 5.475,
+      "token_end": 20,
+      "token_start": 13,
+      "transcript": "",
+      "transcript_end": 64,
+      "transcript_start": 64,
+      "window": {
+        "candidate_a": "We choose to go to the Moon.",
+        "candidate_b": "We choose to go to the moon We choose to go to the Moon.",
+        "end_s": 16.307,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          2
+        ],
+        "start_s": 7.978,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.03944387,
+      "emission_key": "091ff74bb229f2abcd333bad5456ed4d9b3341125e67f966318d93136173ef88",
+      "end_s": 38.896,
+      "frames": 1272,
+      "kind": "delete",
+      "primary_context": "and one we intend to win",
+      "recording_id": "jfk_rice__jfk__orig",
+      "reviewed": false,
+      "score_a": -0.1642294,
+      "score_b": -0.12478553,
+      "second_asr": "and one we intend to win.",
+      "second_asr_window": [
+        37.896,
+        39.896
+      ],
+      "start_s": 38.896,
+      "token_end": 86,
+      "token_start": 86,
+      "transcript": "which",
+      "transcript_end": 413,
+      "transcript_start": 408,
+      "window": {
+        "candidate_a": "We choose to go to the Moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.",
+        "candidate_b": "We choose to go to the Moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one  we intend to win, and the others, too.",
+        "end_s": 41.46,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 16.007,
+        "valid": true
+      }
+    },
+    {
+      "asr": "The Mariner spacecraft",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "APPLY_B",
+      "delta_nats_per_frame": 0.08928668,
+      "emission_key": "cd068b7e3d100b8a09493936e97842bfa95ffc73d6334df72ebf069a7d25160f",
+      "end_s": 151.725,
+      "frames": 742,
+      "kind": "insert",
+      "primary_context": "The Mariner spacecraft now on its way to",
+      "recording_id": "jfk_rice__jfk__orig",
+      "reviewed": false,
+      "score_a": -0.31566589,
+      "score_b": -0.22637921,
+      "second_asr": "Mariner spacecraft now in its way to victory",
+      "second_asr_window": [
+        149.222,
+        152.725
+      ],
+      "start_s": 150.222,
+      "token_end": 325,
+      "token_start": 322,
+      "transcript": "",
+      "transcript_end": 1684,
+      "transcript_start": 1684,
+      "window": {
+        "candidate_a": "The Mariner spacecraft now on its way to Venus is the most intricate instrument in the history of space science.",
+        "candidate_b": "The Mariner spacecraft The Mariner spacecraft now on its way to Venus is the most intricate instrument in the history of space science.",
+        "end_s": 157.632,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          10
+        ],
+        "start_s": 142.771,
+        "valid": true
+      }
+    },
+    {
+      "asr": "2006.",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "APPLY_B",
+      "delta_nats_per_frame": 0.21164453,
+      "emission_key": "3a1003db0f6083a9625fe77aaf3156561488b3852fa69e2d513c77f44c302900",
+      "end_s": 0.089,
+      "frames": 374,
+      "kind": "insert",
+      "primary_context": "O",
+      "recording_id": "o_captain__lv_apc__orig",
+      "reviewed": false,
+      "score_a": -0.58135708,
+      "score_b": -0.36971255,
+      "second_asr": "2006",
+      "second_asr_window": [
+        0.0,
+        1.089
+      ],
+      "start_s": 0.0,
+      "token_end": 4,
+      "token_start": 0,
+      "transcript": "",
+      "transcript_end": 0,
+      "transcript_start": 0,
+      "window": {
+        "candidate_a": "O Captain! my Captain! our fearful trip is done,",
+        "candidate_b": "2006 O Captain! my Captain! our fearful trip is done,",
+        "end_s": 7.5,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          0
+        ],
+        "start_s": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -2.67790668,
+      "emission_key": "b6a3794b1fee3dba3e10b5d3d51a22ed0304ae5e10d43a6401cc6ce201d31d4c",
+      "end_s": 33.102,
+      "frames": 3809,
+      "kind": "delete",
+      "primary_context": "cold and dead.",
+      "recording_id": "o_captain__lv_apc__orig",
+      "reviewed": false,
+      "score_a": -0.04532804,
+      "score_b": -2.72323472,
+      "second_asr": "Cold and dead.",
+      "second_asr_window": [
+        32.102,
+        33.652
+      ],
+      "start_s": 33.102,
+      "token_end": 70,
+      "token_start": 70,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": ".",
+        "end_s": 109.304,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 33.102,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -2.73578081,
+      "emission_key": "7a8eb9023c69f43dcc3eb91975af8fffe2da25d3a4c5e123c319d73fdc547fe6",
+      "end_s": 41.242,
+      "frames": 3402,
+      "kind": "delete",
+      "primary_context": "cold and dead.",
+      "recording_id": "o_captain__lv_chip__orig",
+      "reviewed": false,
+      "score_a": -0.04909228,
+      "score_b": -2.7848731,
+      "second_asr": "cold and dead.",
+      "second_asr_window": [
+        40.242,
+        41.833
+      ],
+      "start_s": 41.242,
+      "token_end": 66,
+      "token_start": 66,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": ".",
+        "end_s": 109.316,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 41.263,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -3.09343418,
+      "emission_key": "89bf1477550a95a7331c7d9eaf4e15dae8c15de77801d63139e278880cc54a54",
+      "end_s": 27.597,
+      "frames": 3231,
+      "kind": "delete",
+      "primary_context": "cold and dead.",
+      "recording_id": "o_captain__lv_foxits__orig",
+      "reviewed": false,
+      "score_a": -0.24734353,
+      "score_b": -3.34077772,
+      "second_asr": "fallen cold and dead.",
+      "second_asr_window": [
+        26.597,
+        28.187
+      ],
+      "start_s": 27.597,
+      "token_end": 66,
+      "token_start": 66,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": ".",
+        "end_s": 92.244,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 27.617,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -3.02219252,
+      "emission_key": "74a15f7b7a8dda55116595a4dfcc66bc0800889c9073093f3b4c1a73c5c594b3",
+      "end_s": 31.686,
+      "frames": 3276,
+      "kind": "delete",
+      "primary_context": "cold, and dead.",
+      "recording_id": "o_captain__lv_jtm__orig",
+      "reviewed": false,
+      "score_a": -0.05386495,
+      "score_b": -3.07605747,
+      "second_asr": "cold and dead.",
+      "second_asr_window": [
+        30.686,
+        32.217
+      ],
+      "start_s": 31.686,
+      "token_end": 66,
+      "token_start": 66,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": ".",
+        "end_s": 97.208,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 31.677,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -3.93434215,
+      "emission_key": "25bc48b54b534d7f00d875e44ad1e2de8e3e0a2380e05ca10994cbf551f151fe",
+      "end_s": 20.821,
+      "frames": 2403,
+      "kind": "delete",
+      "primary_context": "fallen, cold and dead.",
+      "recording_id": "o_captain__lv_mac__orig",
+      "reviewed": false,
+      "score_a": -0.03156825,
+      "score_b": -3.9659104,
+      "second_asr": "cold and dead.",
+      "second_asr_window": [
+        19.821,
+        21.432
+      ],
+      "start_s": 20.821,
+      "token_end": 66,
+      "token_start": 66,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": ".",
+        "end_s": 70.595,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 22.53,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -3.44487127,
+      "emission_key": "33396c9d3b821b69ae1ed9e9f65a1a6777f3ec5e1af4cb1c48890b51b36f7db0",
+      "end_s": 25.048,
+      "frames": 2841,
+      "kind": "delete",
+      "primary_context": "cold and dead.",
+      "recording_id": "o_captain__lv_mb__orig",
+      "reviewed": false,
+      "score_a": -0.05091473,
+      "score_b": -3.495786,
+      "second_asr": "and cold and dead.",
+      "second_asr_window": [
+        24.048,
+        25.559
+      ],
+      "start_s": 25.048,
+      "token_end": 66,
+      "token_start": 66,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": ".",
+        "end_s": 81.869,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 25.029,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -1.9830202,
+      "emission_key": "f562af4513eb3b7e64f7b6acfb7cc9c9d192179df9410e93f44a8fa519a3c72b",
+      "end_s": 31.144,
+      "frames": 3990,
+      "kind": "delete",
+      "primary_context": "cold and dead.",
+      "recording_id": "o_captain__lv_md__orig",
+      "reviewed": false,
+      "score_a": -0.25369414,
+      "score_b": -2.23671433,
+      "second_asr": "cold and dead.",
+      "second_asr_window": [
+        30.144,
+        31.674
+      ],
+      "start_s": 31.144,
+      "token_end": 65,
+      "token_start": 65,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": ".",
+        "end_s": 113.028,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 33.207,
+        "valid": true
+      }
+    },
+    {
+      "asr": "are",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "APPLY_B",
+      "delta_nats_per_frame": 0.12342797,
+      "emission_key": "2bbb05c8b26fc77d9a81089f3bbfe757e70290c28ddda46d9723f9bae8850ca9",
+      "end_s": 11.325,
+      "frames": 243,
+      "kind": "replace",
+      "primary_context": "I hear. The people are exulting.",
+      "recording_id": "o_captain__lv_mrg__orig",
+      "reviewed": false,
+      "score_a": -0.5923905,
+      "score_b": -0.46896253,
+      "second_asr": "here the people are exulting.",
+      "second_asr_window": [
+        10.225,
+        12.325
+      ],
+      "start_s": 11.225,
+      "token_end": 32,
+      "token_start": 31,
+      "transcript": "all",
+      "transcript_end": 162,
+      "transcript_start": 159,
+      "window": {
+        "candidate_a": "The port is near, the bells I hear, the people all exulting,",
+        "candidate_b": "The port is near, the bells I hear, the people are exulting,",
+        "end_s": 12.286,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          2
+        ],
+        "start_s": 7.42,
+        "valid": true
+      }
+    },
+    {
+      "asr": "pulled,",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -0.11459236,
+      "emission_key": "57f7314eb9be2454c2c57fa9f1fef54f7480df98f502269877319e0aca8fb398",
+      "end_s": 26.096,
+      "frames": 114,
+      "kind": "replace",
+      "primary_context": "lies fallen, pulled, and dead.",
+      "recording_id": "o_captain__lv_mrg__orig",
+      "reviewed": false,
+      "score_a": -0.51076973,
+      "score_b": -0.62536209,
+      "second_asr": "fallen, pulled, and dead.",
+      "second_asr_window": [
+        24.716,
+        27.096
+      ],
+      "start_s": 25.716,
+      "token_end": 64,
+      "token_start": 63,
+      "transcript": "cold",
+      "transcript_end": 378,
+      "transcript_start": 374,
+      "window": {
+        "candidate_a": "Fallen cold and dead.",
+        "candidate_b": "Fallen pulled and dead.",
+        "end_s": 27.137,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          7
+        ],
+        "start_s": 24.835,
+        "valid": true
+      }
+    },
+    {
+      "asr": "End",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "APPLY_B",
+      "delta_nats_per_frame": 0.16450296,
+      "emission_key": "053fb79f44bce7679626c7870d6a63b2e302a1f6815ec98764955e533d323923",
+      "end_s": 86.412,
+      "frames": 187,
+      "kind": "insert",
+      "primary_context": "dead.",
+      "recording_id": "o_captain__lv_mrg__orig",
+      "reviewed": false,
+      "score_a": -0.37953444,
+      "score_b": -0.21503148,
+      "second_asr": "and dead.",
+      "second_asr_window": [
+        85.202,
+        86.412
+      ],
+      "start_s": 86.202,
+      "token_end": 203,
+      "token_start": 202,
+      "transcript": "",
+      "transcript_end": 1188,
+      "transcript_start": 1188,
+      "window": {
+        "candidate_a": "Fallen cold and dead.",
+        "candidate_b": "Fallen cold and dead. End",
+        "end_s": 86.412,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          23
+        ],
+        "start_s": 82.651,
+        "valid": true
+      }
+    },
+    {
+      "asr": "I as",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -0.19164502,
+      "emission_key": "da272ec5fb1e247311780cc54eb3091b9c5807cd57b0e5645941d64eb41e7e68",
+      "end_s": 15.765,
+      "frames": 230,
+      "kind": "replace",
+      "primary_context": "while follow I as the steady keel,",
+      "recording_id": "o_captain__lv_rg__orig",
+      "reviewed": false,
+      "score_a": -0.25931881,
+      "score_b": -0.45096382,
+      "second_asr": "while follow eyes the steady keel",
+      "second_asr_window": [
+        14.604,
+        16.765
+      ],
+      "start_s": 15.604,
+      "token_end": 37,
+      "token_start": 35,
+      "transcript": "eyes",
+      "transcript_end": 190,
+      "transcript_start": 186,
+      "window": {
+        "candidate_a": "While follow eyes the steady keel, the vessel grim and daring;",
+        "candidate_b": "While follow I as the steady keel, the vessel grim and daring;",
+        "end_s": 19.127,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 14.504,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -3.39140248,
+      "emission_key": "b746b909879811dfbf9d73b32fc704c5667d0344ac5314059521264a38a86d64",
+      "end_s": 29.598,
+      "frames": 3025,
+      "kind": "delete",
+      "primary_context": "cold and dead.",
+      "recording_id": "o_captain__lv_rg__orig",
+      "reviewed": false,
+      "score_a": -0.02728478,
+      "score_b": -3.41868727,
+      "second_asr": "cold and dead.",
+      "second_asr_window": [
+        28.598,
+        30.308
+      ],
+      "start_s": 29.598,
+      "token_end": 67,
+      "token_start": 67,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": ".",
+        "end_s": 92.089,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 31.566,
+        "valid": true
+      }
+    },
+    {
+      "asr": "Oh,",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -3.74374265,
+      "emission_key": "7bf35abcb91ec50ddea2002054746d0642f331ecb56a3cb3ae945d3dd3fce383",
+      "end_s": 27.845,
+      "frames": 2971,
+      "kind": "replace",
+      "primary_context": "and dead.",
+      "recording_id": "o_captain__lv_s__orig",
+      "reviewed": false,
+      "score_a": -0.06467483,
+      "score_b": -3.80841748,
+      "second_asr": "and dead.",
+      "second_asr_window": [
+        26.655,
+        27.845
+      ],
+      "start_s": 27.655,
+      "token_end": 67,
+      "token_start": 66,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": "Oh.",
+        "end_s": 86.761,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 27.335,
+        "valid": true
+      }
+    },
+    {
+      "asr": "Hot! Oh,",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": -0.04040975,
+      "emission_key": "a932fb81a7388de7085aec33818de4ec74ceda096aaaef3e7036778a187fb07c",
+      "end_s": 23.952,
+      "frames": 366,
+      "kind": "replace",
+      "primary_context": "heart, Hot! Oh, the bleeding drops",
+      "recording_id": "o_captain__lv_sjs__orig",
+      "reviewed": false,
+      "score_a": -0.14010161,
+      "score_b": -0.18051135,
+      "second_asr": "Heart! Heart! Oh, the bleeding drops of",
+      "second_asr_window": [
+        20.589,
+        24.952
+      ],
+      "start_s": 21.589,
+      "token_end": 50,
+      "token_start": 48,
+      "transcript": "heart!\n         O",
+      "transcript_end": 280,
+      "transcript_start": 263,
+      "window": {
+        "candidate_a": "But O heart! heart! heart!\n         O the bleeding drops of red,",
+        "candidate_b": "But O heart! heart! Hot! Oh the bleeding drops of red,",
+        "end_s": 25.674,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          4,
+          5
+        ],
+        "start_s": 18.337,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -2.34046581,
+      "emission_key": "d4a5da441d61a15e59787f0ad4ef4f1cb70ee612f8dbb7c4d1399bd37ad3538c",
+      "end_s": 29.539,
+      "frames": 3423,
+      "kind": "delete",
+      "primary_context": "Fallen, cold, and dead.",
+      "recording_id": "o_captain__lv_sjs__orig",
+      "reviewed": false,
+      "score_a": -0.08686605,
+      "score_b": -2.42733186,
+      "second_asr": "fallen, cold, and dead.",
+      "second_asr_window": [
+        28.539,
+        30.029
+      ],
+      "start_s": 29.539,
+      "token_end": 66,
+      "token_start": 66,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": ".",
+        "end_s": 97.983,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 29.509,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -3.00156603,
+      "emission_key": "0b72786e46b4d885f4d5a9cb48dcfd2f63aa560d877c347762a0512986733a18",
+      "end_s": 24.054,
+      "frames": 3099,
+      "kind": "delete",
+      "primary_context": "fallen, cold, and dead.",
+      "recording_id": "o_captain__lv_ss__orig",
+      "reviewed": false,
+      "score_a": -0.42718118,
+      "score_b": -3.42874722,
+      "second_asr": "fallen, cold, and dead.",
+      "second_asr_window": [
+        23.054,
+        24.564
+      ],
+      "start_s": 24.054,
+      "token_end": 66,
+      "token_start": 66,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": ".",
+        "end_s": 87.288,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 25.295,
+        "valid": true
+      }
+    },
+    {
+      "asr": "Oh,",
+      "asr_agreement_and_acoustics": false,
+      "class": "LIKELY_REAL",
+      "decision": "KEEP_A",
+      "delta_nats_per_frame": -3.46640061,
+      "emission_key": "1c8590339fefea11d54d0731db244ede5dffb1b42097c5db74b3af512f4fd122",
+      "end_s": 24.834,
+      "frames": 2713,
+      "kind": "replace",
+      "primary_context": "cold and dead.",
+      "recording_id": "o_captain__lv_th__orig",
+      "reviewed": false,
+      "score_a": -0.05618644,
+      "score_b": -3.52258705,
+      "second_asr": "cold and dead.",
+      "second_asr_window": [
+        23.604,
+        24.834
+      ],
+      "start_s": 24.604,
+      "token_end": 67,
+      "token_start": 66,
+      "transcript": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead",
+      "transcript_end": 1187,
+      "transcript_start": 389,
+      "window": {
+        "candidate_a": "O Captain! my Captain! rise up and hear the bells;\nRise up- for you the flag is flung- for you the bugle trills,\nFor you bouquets and ribbon\u2019d wreaths- for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n       Here Captain! dear father!\n         This arm beneath your head!\n           It is some dream that on the deck,\n             You\u2019ve fallen cold and dead.\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor\u2019d safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n       Exult O shores, and ring O bells!\n         But I with mournful tread,\n           Walk the deck my Captain lies,\n             Fallen cold and dead.",
+        "candidate_b": "Oh.",
+        "end_s": 78.534,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "start_s": 24.264,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "APPLY_B",
+      "delta_nats_per_frame": 0.05138326,
+      "emission_key": "cd946974f675d86a9a332c3cb21eb6b079b3473d6eec9ff6051a06a8d88e1903",
+      "end_s": 20.163,
+      "frames": 179,
+      "kind": "delete",
+      "primary_context": "pain with all the people of our country.",
+      "recording_id": "reagan_challenger__reagan__orig",
+      "reviewed": false,
+      "score_a": -0.10123449,
+      "score_b": -0.04985123,
+      "second_asr": "country.",
+      "second_asr_window": [
+        19.163,
+        21.163
+      ],
+      "start_s": 20.163,
+      "token_end": 62,
+      "token_start": 62,
+      "transcript": "of",
+      "transcript_end": 322,
+      "transcript_start": 320,
+      "window": {
+        "candidate_a": "We know we share this pain with all of the people of our country.",
+        "candidate_b": "We know we share this pain with all  the people of our country.",
+        "end_s": 21.505,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          3
+        ],
+        "start_s": 17.92,
+        "valid": true
+      }
+    },
+    {
+      "asr": "Nick Scobie,",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.00035787,
+      "emission_key": "140bef4d5a50940f59ebaf1642d45cc1742b20a89266115422cc1d2b3e84085b",
+      "end_s": 53.295,
+      "frames": 604,
+      "kind": "replace",
+      "primary_context": "Nick Scobie, Judith",
+      "recording_id": "reagan_challenger__reagan__orig",
+      "reviewed": false,
+      "score_a": -0.10430034,
+      "score_b": -0.10394248,
+      "second_asr": "Scobee.",
+      "second_asr_window": [
+        51.695,
+        54.295
+      ],
+      "start_s": 52.695,
+      "token_end": 146,
+      "token_start": 144,
+      "transcript": "Dick Scobee",
+      "transcript_end": 801,
+      "transcript_start": 790,
+      "window": {
+        "candidate_a": "Michael Smith, Dick Scobee, Judith Resnik, Ronald McNair, Ellison Onizuka, Gregory Jarvis, and Christa McAuliffe.",
+        "candidate_b": "Michael Smith, Nick Scobie, Judith Resnik, Ronald McNair, Ellison Onizuka, Gregory Jarvis, and Christa McAuliffe.",
+        "end_s": 62.993,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          11
+        ],
+        "start_s": 50.892,
+        "valid": true
+      }
+    },
+    {
+      "asr": "",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": -0.00410574,
+      "emission_key": "65e347b90a160cf5b881ceb9f365512c4e1fcce8e7fffc7dad99e51139e64169",
+      "end_s": 66.138,
+      "frames": 366,
+      "kind": "delete",
+      "primary_context": "The families of the seven,",
+      "recording_id": "reagan_challenger__reagan__orig",
+      "reviewed": false,
+      "score_a": -0.1808696,
+      "score_b": -0.18497534,
+      "second_asr": "families of the seven.",
+      "second_asr_window": [
+        65.138,
+        67.138
+      ],
+      "start_s": 66.138,
+      "token_end": 165,
+      "token_start": 165,
+      "transcript": "For",
+      "transcript_end": 936,
+      "transcript_start": 933,
+      "window": {
+        "candidate_a": "For the families of the seven, we cannot bear, as you do, the full impact of this tragedy.",
+        "candidate_b": " the families of the seven, we cannot bear, as you do, the full impact of this tragedy.",
+        "end_s": 71.926,
+        "interpolated_boundary": true,
+        "sentence_indices": [
+          13
+        ],
+        "start_s": 64.596,
+        "valid": true
+      }
+    },
+    {
+      "asr": "the",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": -0.00309901,
+      "emission_key": "d0d7553db5acf08269aef26f16056b0a24c2d848e009982e616525e451e47380",
+      "end_s": 214.962,
+      "frames": 471,
+      "kind": "replace",
+      "primary_context": "the oceans. And the historian",
+      "recording_id": "reagan_challenger__reagan__orig",
+      "reviewed": false,
+      "score_a": -0.06258267,
+      "score_b": -0.06568168,
+      "second_asr": "story in later.",
+      "second_asr_window": [
+        213.902,
+        215.962
+      ],
+      "start_s": 214.902,
+      "token_end": 564,
+      "token_start": 563,
+      "transcript": "an",
+      "transcript_end": 3129,
+      "transcript_start": 3127,
+      "window": {
+        "candidate_a": "In his lifetime the great frontiers were the oceans, and an historian later said, ``He lived by the sea, died on it, and was buried in it.''",
+        "candidate_b": "In his lifetime the great frontiers were the oceans, and the historian later said, ``He lived by the sea, died on it, and was buried in it.''",
+        "end_s": 221.088,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          46
+        ],
+        "start_s": 211.658,
+        "valid": true
+      }
+    },
+    {
+      "asr": "for",
+      "asr_agreement_and_acoustics": false,
+      "class": "LISTEN",
+      "decision": "UNSURE",
+      "delta_nats_per_frame": 0.01308649,
+      "emission_key": "394ce4acf32a49caeabf74b77544aa506ab4bb357ea843fd74f44f976537fac4",
+      "end_s": 232.71,
+      "frames": 244,
+      "kind": "replace",
+      "primary_context": "honored us for the manner in which they",
+      "recording_id": "reagan_challenger__reagan__orig",
+      "reviewed": false,
+      "score_a": -0.09004058,
+      "score_b": -0.07695409,
+      "second_asr": "for the manner in which they live.",
+      "second_asr_window": [
+        231.61,
+        233.71
+      ],
+      "start_s": 232.61,
+      "token_end": 605,
+      "token_start": 604,
+      "transcript": "by",
+      "transcript_end": 3359,
+      "transcript_start": 3357,
+      "window": {
+        "candidate_a": "The crew of the space shuttle Challenger honored us by the manner in which they lived their lives.",
+        "candidate_b": "The crew of the space shuttle Challenger honored us for the manner in which they lived their lives.",
+        "end_s": 234.693,
+        "interpolated_boundary": false,
+        "sentence_indices": [
+          49
+        ],
+        "start_s": 229.806,
+        "valid": true
+      }
+    }
+  ],
+  "margin_nats_per_frame": 0.05,
+  "model_sha256": "488fd4f16de84438ffc945334278c1b9fb9b7159a806c1080b16111a958c945d",
+  "output_transcript_sha256": {
+    "gettysburg__lv_amb__orig": "d2e875d19c2252eb88df1b4ba5e35403748cd6df9a6fc94e626406eaf2244466",
+    "gettysburg__lv_dj__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_dl__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_eep__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_fb__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_jn__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_law__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_lb__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_mas__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_mk__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_pc__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_rk__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_sa__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_tg__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "gettysburg__lv_wt__orig": "51c219c6ba8ba22a2202639ad564f307973b0924e6a40b0cbf7beb18e02c9f7a",
+    "jfk_rice__jfk__orig": "a1167b71c66c91d9de8f4b143e79916d5ff2661b46f6806e6ddec91d72f761bb",
+    "o_captain__lv_apc__orig": "3973a4481a96af10c972a05c9424c8233f2ba067f2d7e196971ff0a134f06196",
+    "o_captain__lv_chip__orig": "ce5ab3a159fa4b50f5afeb1df818bd3ad07a684295a9f929371d822f87b03986",
+    "o_captain__lv_foxits__orig": "ce5ab3a159fa4b50f5afeb1df818bd3ad07a684295a9f929371d822f87b03986",
+    "o_captain__lv_jtm__orig": "ce5ab3a159fa4b50f5afeb1df818bd3ad07a684295a9f929371d822f87b03986",
+    "o_captain__lv_mac__orig": "ce5ab3a159fa4b50f5afeb1df818bd3ad07a684295a9f929371d822f87b03986",
+    "o_captain__lv_mb__orig": "ce5ab3a159fa4b50f5afeb1df818bd3ad07a684295a9f929371d822f87b03986",
+    "o_captain__lv_md__orig": "ce5ab3a159fa4b50f5afeb1df818bd3ad07a684295a9f929371d822f87b03986",
+    "o_captain__lv_mrg__orig": "27f74fd8497a9eb4de2df948e8b5f59a2b246bd5c5228f5dff302593d5f4fd77",
+    "o_captain__lv_rg__orig": "ce5ab3a159fa4b50f5afeb1df818bd3ad07a684295a9f929371d822f87b03986",
+    "o_captain__lv_s__orig": "ce5ab3a159fa4b50f5afeb1df818bd3ad07a684295a9f929371d822f87b03986",
+    "o_captain__lv_sjs__orig": "ce5ab3a159fa4b50f5afeb1df818bd3ad07a684295a9f929371d822f87b03986",
+    "o_captain__lv_ss__orig": "ce5ab3a159fa4b50f5afeb1df818bd3ad07a684295a9f929371d822f87b03986",
+    "o_captain__lv_th__orig": "ce5ab3a159fa4b50f5afeb1df818bd3ad07a684295a9f929371d822f87b03986",
+    "reagan_challenger__reagan__orig": "cd1138430e9d79657e2d686409561e689d0e3f797c0721702b1f2503b1119bf0"
+  },
+  "schema": "acoustic_verification/v1",
+  "settings": {
+    "device": "cpu",
+    "margin_nats_per_frame": 0.05,
+    "model": "WAV2VEC2_ASR_BASE_960H",
+    "threads": 1
+  }
+}

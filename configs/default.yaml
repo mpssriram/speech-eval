@@ -30,3 +30,8 @@ alignment:
 rounding:
   time_decimals: 3
   feature_sig_digits: 4
+transcript_verification:
+  margin_nats_per_frame: 0.05
+  device: cpu
+  threads: 1
+  model: WAV2VEC2_ASR_BASE_960H

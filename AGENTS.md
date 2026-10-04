@@ -4,6 +4,9 @@ Read this file fully before every task. It is the contract for this repository.
 The phase-by-phase roadmap is `docs/PLAN.md`. Task specs live in `docs/specs/`.
 Do one spec at a time. Do not start work that no spec asks for.
 When a spec step is marked **USER**, stop and report; that step is done by the human.
+Exception authorized by the user on 2026-10-04: Phase 1 Step 5b listening review
+is replaced by automatic acoustic transcript verification. Record its evidence,
+retain UNSURE cases, and never label automatic results as human-reviewed.
 
 ## 1. What we are building
 

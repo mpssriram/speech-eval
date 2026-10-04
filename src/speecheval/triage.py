@@ -151,6 +151,8 @@ def edit_groups(text: str, words: list[dict[str, Any]], start: float, end: float
             "kind": kind, "transcript": transcript, "asr": asr_text,
             "start_s": round(point, 3), "end_s": round(max(point, min(end - start, last)), 3),
             "token_start": j1, "token_end": j2,
+            "transcript_start": spans[i1][0] if i1 < len(spans) else len(text),
+            "transcript_end": spans[i2 - 1][1] if i2 > i1 else (spans[i1][0] if i1 < len(spans) else len(text)),
         })
     return result
 
@@ -199,6 +201,10 @@ def write_review_html(path: Path, items: list[dict[str, Any]]) -> None:
         rid = html.escape(item["recording_id"], quote=True)
         start = max(0.0, item["start_s"] - 1.5)
         end = item["start_s"] + 2.5
+        decision = html.escape(str(item.get("decision", "")))
+        decision_cell = (
+            decision if decision else '<input aria-label="Review decision" placeholder="Record decision in the Markdown report">'
+        )
         rows.append(
             f'<tr><td>{rid}<br>{item["start_s"]:.3f}s</td>'
             f'<td><audio controls preload="none" data-start="{start:.3f}" data-end="{end:.3f}" '
@@ -206,12 +212,17 @@ def write_review_html(path: Path, items: list[dict[str, Any]]) -> None:
             '<button type="button" class="replay">Play review window</button></td>'
             f'<td>{html.escape(item["transcript"]) or "&mdash;"}</td>'
             f'<td>{html.escape(item["asr"]) or "&mdash;"}</td><td>{item["class"]}</td>'
-            '<td><input aria-label="Review decision" placeholder="Record decision in the Markdown report"></td></tr>'
+            f'<td>{decision_cell}</td></tr>'
         )
+    verification_notice = (
+        '<p><strong>Automatic acoustic verification; no human review.</strong> Decisions are CTC model preferences. UNSURE remains unresolved. See reports/day01_acoustic_verification.md for both scores and the threshold distribution.</p>'
+        if any("decision" in item for item in items) else ""
+    )
     page = '''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><title>Day 1 transcript review</title>
 <style>body{font:16px system-ui;margin:24px;color:#18212b}table{border-collapse:collapse;width:100%}td,th{padding:12px;border:1px solid #ccd3da;text-align:left}audio{width:250px}button{display:block;margin-top:8px}input{min-width:180px}thead{background:#edf2f6}</style>
 </head><body><h1>Day 1 transcript review</h1>
+''' + verification_notice + '''
 <p>Review windows play from the listed time minus 1.5 seconds to plus 2.5 seconds. Times refer to prepared WAVs. LIKELY_REAL means two ASRs agree; it still needs your decision. Input notes here are temporary: save decisions in reports/day01_listen_list.md, edit the as-spoken transcript only for real differences, then add # reviewed: yes.</p>
 <table><thead><tr><th>Recording / time</th><th>Audio</th><th>Transcript says</th><th>ASR says</th><th>Class</th><th>Decision</th></tr></thead><tbody>
 ''' + "\n".join(rows) + '''

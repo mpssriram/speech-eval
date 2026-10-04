@@ -188,6 +188,18 @@ a different manuscript version, and JFK departed from his prepared text.
 
 **5b. User**
 
+**2026-10-04 user-authorized replacement:** the user cannot reliably perform
+listening review. Use `speecheval transcripts verify` instead: frozen listen-list
+items, sentence/poem-line windows, CPU wav2vec2 CTC log-likelihood summed across
+alignment paths and normalized per audio frame, A/B candidate comparison with
+margin 0.05 nats/frame. Apply B above the margin, keep A below the negative margin,
+and retain UNSURE otherwise. Record ASR agreement and the score-difference
+distribution. Never add `# reviewed: yes` to automatic results; these are model
+preferences rather than human-verified ground truth. The original manual procedure
+below remains available only for optional later human review. The updated
+acceptance condition is documented automatic decisions with all remaining
+uncertainty and newly exposed differences reported, rather than false human-review markers.
+
 For each listed difference, listen at the given time and decide:
 
 - the speaker really said something different → edit `as_spoken/{recording_id}.txt`;
@@ -302,7 +314,7 @@ Fast tests only. No real audio, no model downloads.
 - [ ] `speecheval fetch` → `raw_files.csv` lists ~29 recordings (15 + 12 + 2), each with a sha256.
 - [ ] Every recording has `hq` and `align16k` WAVs. Spot-check 3 LibriVox files: no intro or outro text remains.
 - [ ] JFK excerpt is 120–240 s, starts and ends at sentence boundaries, and contains "We choose to go to the moon".
-- [ ] Every as-spoken transcript is marked `# reviewed: yes`.
+- [ ] Every original Step 5b listen-list item has an automatic acoustic audit and a decision; UNSURE cases and additional unverified differences are explicitly documented. Automatic results are not marked `# reviewed: yes` (user-authorized replacement on 2026-10-04).
 - [ ] Both aligners produced valid `alignment/v1` JSON for every recording.
 - [ ] `reports/day01_aligner_bakeoff.md` exists. `alignment.primary` is set and files are promoted.
 - [ ] `reports/day01_alignment_qa.md` exists, and the user has spot-checked the flagged recordings in Praat.
