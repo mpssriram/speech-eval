@@ -1,12 +1,12 @@
 # Blockers
 
-## 2026-10-03 — JFK Rice audio download
+## 2026-10-03 — JFK Rice audio download (resolved)
 
 - Expected file: `data/raw/jfk_rice_1962.mp3`
 - Source page: <https://www.jfklibrary.org/asset-viewer/archives/jfkwha-127-002>
 - Tried `curl` with default and browser user agents; both received HTTP 403 / a Cloudflare verification page.
 - Tried the source page in a real browser; it remained at Cloudflare's "Performing security verification" screen. Automated CAPTCHA or security-challenge bypass was not attempted.
-- Action needed: download the public-domain MP3 manually from the source page and save it at the expected path.
+- Resolved: the user supplied `JFKWHA-127-002-AU_WR.mp3`; it was copied to the expected WSL path and validated with `ffprobe` (44.1 kHz mono, 1068.513 seconds).
 
 ## 2026-10-03 — O Captain collection count differs from spec
 
