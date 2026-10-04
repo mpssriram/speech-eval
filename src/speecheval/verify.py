@@ -115,6 +115,12 @@ def ctc_score(log_probs: torch.Tensor, target: list[int], blank: int = 0) -> flo
     return value if math.isfinite(value) else None
 
 
+def ctc_total(log_probs: torch.Tensor, target: list[int], blank: int = 0) -> float | None:
+    """Total CTC log-likelihood in nats over identical candidate audio."""
+    score = ctc_score(log_probs, target, blank)
+    return None if score is None else score * log_probs.shape[0]
+
+
 def acoustic_decision(a: float | None, b: float | None, margin: float) -> str:
     """Decide from unrounded normalized likelihoods with a positive nats/frame margin."""
     if margin <= 0:
@@ -329,7 +335,9 @@ def _refresh_output_windows(root: Path, config: dict[str, Any], inputs: dict[str
                                          float(config["alignment"]["sentence_window_padding_s"]), row["text_id"] == "o_captain")
         _write_json(root / config["paths"]["alignment"] / "windows" / f"{rid}.json", {
             "schema": "sentence_windows/v1", "recording_id": rid, "transcript_sha256": _hash_bytes(current.encode()),
-            "time_basis": "prepared_clip", "sentences": windows})
+            "time_basis": "prepared_clip", "sentences": windows,
+            "source_asr_sha256": _hash_bytes((root / config["paths"]["alignment"] / "asr" / f"{rid}.json").read_bytes()),
+            "cut_start_s": float(row['cut_start_s']), "cut_end_s": float(row['cut_end_s'])})
 
 
 def verify_transcripts(root: Path | None = None) -> dict[str, Any]:

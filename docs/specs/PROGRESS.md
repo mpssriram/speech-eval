@@ -41,3 +41,14 @@ make test
 ```
 
 The verifier freezes its inputs before applying edits, reuses deterministic evidence on rerun, and rejects changed inference settings, model, scored audio or audited output transcripts rather than silently overwriting applied decisions.
+
+## 2026-10-04 — Calibrated local acoustic verification (Step 5b)
+
+- Reassessed all 85 original candidates from the original pre-verification text, including the six earlier edits. Local total CTC scores replace sentence-averaged scores; the old audit/report are preserved for comparison.
+- Regenerated all 12 repaired full-source large-v3 caches, 15 affected medium.en dispute clips, and final sentence windows. All 30 raw hashes and frozen cuts are consistent with the manifests; all 60 prepared WAV formats/durations are valid. Cut changes and hashes are in the report and `data/review/asr_regeneration.json`.
+- Exactly 300 fixed-seed controls: 100 phonetic substitutions, 100 deletions and 100 insertions, sampled proportionally to eligible words across all 30 recordings. Previously uncertain words are excluded. Three-way ASR agreement is only a proxy label, not human ground truth; unprompted full-recording medium.en context was needed for one reader.
+- Final margin: 2.425378476083314 total nats, in-sample fake acceptance 6/300 = 2%. Decisions: 64 applied, 18 kept, 3 uncertain. Uncertain final word indices are one each for `gettysburg__lv_eep__orig`, `gettysburg__lv_fb__orig`, and `o_captain__lv_rg__orig`; the other 27 masks are empty. Automatic markers are `# reviewed: auto-acoustic-calibrated`, not human review.
+- The report includes the true-minus-fake histogram, threshold lines, all decisions, per-recording controls/masks and limitations. Replayed historical normalization on identical inputs confirms 178 -> 177 groups (JFK 6 -> 5); no review item was dropped.
+- A preliminary mixed-process cache failed fresh-model consistency by ~0.002 nats and was preserved, then superseded by isolated CPU workers with explicit backend settings. Two fresh uncached models now have identical emissions/scores matching the audit. Seeded control replay is exact, 100 phonetic distances were checked, all masks/windows match final transcript hashes, and 60 tests pass. Step 5c and Step 6 are next; stop before Step 7a.
+
+Reproduce inside WSL: `env -u PYTHONPATH ~/.local/bin/uv run speecheval transcripts verify`, `env -u PYTHONPATH ~/.local/bin/uv run python scripts/check_calibration.py`, `make test`.

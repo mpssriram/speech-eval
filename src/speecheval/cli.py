@@ -72,9 +72,9 @@ def transcripts_triage() -> None:
 @transcripts_app.command("verify")
 def transcripts_verify() -> None:
     """Compare transcript candidates acoustically on deterministic CPU CTC emissions."""
-    from speecheval.verify import verify_transcripts
+    from speecheval.calibrated import verify_calibrated
 
-    verify_transcripts()
+    verify_calibrated()
 
 
 @gold_app.command("prepare")

@@ -167,6 +167,12 @@ speech-eval/
 - `word_end` in `sentences` is **inclusive**.
 - Words the aligner could not place get `start`/`end` interpolated and the index added to `warnings`
   as `{"type": "interpolated", "word": i}`.
+- Optional `uncertain_words: [i, ...]` contains zero-based FINAL as-spoken word indices
+  from `data/transcripts/uncertain/{recording_id}.json`. Both aligners must propagate
+  this list. Later phases MUST exclude these words from reference statistics and
+  evaluation, including any aggregate whose required word evidence is uncertain.
+  Unresolved insertions mark their flanking transcript words. Automatic transcript
+  review uses `# reviewed: auto-acoustic-calibrated`, never human `# reviewed: yes`.
 
 ### 6.2 Flaw label JSON — `data/labels/{recording_id}.json` (written from day 3)
 

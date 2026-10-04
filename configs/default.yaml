@@ -20,7 +20,7 @@ asr:
   compute_type: float16
 alignment:
   primary: null
-  sentence_window_padding_s: 0.30
+  sentence_window_padding_s: 0.3
   mfa:
     acoustic_model: english_mfa
     dictionary: english_us_mfa
@@ -31,7 +31,14 @@ rounding:
   time_decimals: 3
   feature_sig_digits: 4
 transcript_verification:
-  margin_nats_per_frame: 0.05
+  method: local_total_ctc
+  numerics: isolated_cpu_v1
+  padding_s: 0.2
+  seed: 20261004
+  controls: 300
+  max_false_acceptance_rate: 0.02
   device: cpu
   threads: 1
   model: WAV2VEC2_ASR_BASE_960H
+  margin_total_nats: 2.425378476083314
+  measured_false_acceptance_rate: 0.02

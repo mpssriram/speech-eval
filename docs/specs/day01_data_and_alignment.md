@@ -190,12 +190,19 @@ a different manuscript version, and JFK departed from his prepared text.
 
 **2026-10-04 user-authorized replacement:** the user cannot reliably perform
 listening review. Use `speecheval transcripts verify` instead: frozen listen-list
-items, sentence/poem-line windows, CPU wav2vec2 CTC log-likelihood summed across
-alignment paths and normalized per audio frame, A/B candidate comparison with
-margin 0.05 nats/frame. Apply B above the margin, keep A below the negative margin,
+items, CPU wav2vec2 TOTAL CTC log-likelihood summed across alignment paths in local
+windows (disputed words plus one neighbouring word each side, 0.2 s padding).
+Candidate A is ORIGINAL pre-verification text, including the six previously applied
+edits. Calibrate a total-nats margin on 300 seeded controls proportionally across
+all 30 recordings using three-way agreeing, non-uncertain proxy-labelled sentences;
+choose the smallest positive margin with empirical fake acceptance <=2%.
+Apply B above the margin, keep A below the negative margin,
 and retain UNSURE otherwise. Record ASR agreement and the score-difference
 distribution. Never add `# reviewed: yes` to automatic results; these are model
-preferences rather than human-verified ground truth. The original manual procedure
+preferences rather than human-verified ground truth. Use `# reviewed: auto-acoustic-calibrated`
+and preserve unresolved final word indices in `data/transcripts/uncertain/*.json`;
+both aligners propagate `uncertain_words`, excluded from later statistics/evaluation.
+The original manual procedure
 below remains available only for optional later human review. The updated
 acceptance condition is documented automatic decisions with all remaining
 uncertainty and newly exposed differences reported, rather than false human-review markers.
