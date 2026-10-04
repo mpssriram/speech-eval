@@ -52,3 +52,7 @@ The verifier freezes its inputs before applying edits, reuses deterministic evid
 - A preliminary mixed-process cache failed fresh-model consistency by ~0.002 nats and was preserved, then superseded by isolated CPU workers with explicit backend settings. Two fresh uncached models now have identical emissions/scores matching the audit. Seeded control replay is exact, 100 phonetic distances were checked, all masks/windows match final transcript hashes, and 60 tests pass. Step 5c and Step 6 are next; stop before Step 7a.
 
 Reproduce inside WSL: `env -u PYTHONPATH ~/.local/bin/uv run speecheval transcripts verify`, `env -u PYTHONPATH ~/.local/bin/uv run python scripts/check_calibration.py`, `make test`.
+
+## 2026-10-04 — Step 5c complete
+
+Re-ran `env -u PYTHONPATH ~/.local/bin/uv run speecheval transcripts diff`: 163 current groups across 30 recordings. All files are listed as auto-acoustic-calibrated (not human), with remaining differences shown. New differences beyond the original 85 are not claimed verified. Review classification has a regression test; 60 tests pass. Continue with both forced aligners, then stop before Step 7a.

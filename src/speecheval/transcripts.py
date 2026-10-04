@@ -136,6 +136,15 @@ def _escape_table(text: str) -> str:
     return (text or "—").replace("|", "\\|").replace("\r", " ").replace("\n", " ")
 
 
+def review_kind(text: str) -> str:
+    """Distinguish human review from the explicitly calibrated automatic marker."""
+    if re.search(r'^#\s*reviewed:\s*yes\s*$',text,re.IGNORECASE|re.MULTILINE):
+        return 'human'
+    if re.search(r'^#\s*reviewed:\s*auto-acoustic-calibrated\s*$',text,re.IGNORECASE|re.MULTILINE):
+        return 'automatic'
+    return 'unreviewed'
+
+
 def build_transcript_diffs(root: Path | None = None) -> list[dict[str, Any]]:
     """Create missing as-spoken drafts and the Day 1 transcript-difference report."""
     root = (root or Path.cwd()).resolve()
@@ -173,6 +182,7 @@ def build_transcript_diffs(root: Path | None = None) -> list[dict[str, Any]]:
         results.append(
             {
                 "recording_id": recording_id,
+                "review_kind": review_kind(as_spoken),
                 "reviewed": bool(
                     re.search(r"^#\s*reviewed:\s*yes\s*$", as_spoken, re.IGNORECASE | re.MULTILINE)
                 ),
@@ -194,7 +204,8 @@ def build_transcript_diffs(root: Path | None = None) -> list[dict[str, Any]]:
     ]
     for result in results:
         differences = result["differences"]
-        status = "reviewed" if result["reviewed"] else "unreviewed"
+        status = {'human':'reviewed (human)', 'automatic':'auto-acoustic-calibrated (not human)',
+                  'unreviewed':'unreviewed'}[result['review_kind']]
         lines.extend(
             [
                 f"## {result['recording_id']} — {len(differences)} differences — {status}",

@@ -63,3 +63,11 @@ def test_canonical_excerpt_uses_only_matched_cut_span() -> None:
 
 def test_multiline_poem_edits_stay_in_one_markdown_row() -> None:
     assert _escape_table("heart!\nhear the bells; |") == "heart! hear the bells; \\|"
+
+
+def test_automatic_review_is_not_human_review():
+    from speecheval import transcripts
+    assert hasattr(transcripts,'review_kind')
+    assert transcripts.review_kind('# reviewed: auto-acoustic-calibrated\none two')=='automatic'
+    assert transcripts.review_kind('# reviewed: yes\none two')=='human'
+    assert transcripts.review_kind('one two')=='unreviewed'
