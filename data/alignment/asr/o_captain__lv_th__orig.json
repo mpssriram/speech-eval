@@ -2,6 +2,7 @@
   "device": "cuda",
   "language": "en",
   "model": "large-v3",
+  "raw_sha256": "dfcdf13297bc6337e1be51d3a9acbdf008b0b0c689100fce6c6aefeac86004ff",
   "segments": [
     {
       "end": 3.197,
@@ -820,7 +821,7 @@
     {
       "end": 53.426,
       "start": 50.101,
-      "text": "Here, captain, dear father, this arm beneath your head—",
+      "text": "Here, captain, dear father, this arm beneath your head\u2014",
       "words": [
         {
           "end": 50.322,
@@ -874,7 +875,7 @@
           "end": 53.426,
           "score": 0.836,
           "start": 52.905,
-          "word": "head—"
+          "word": "head\u2014"
         }
       ]
     },
@@ -1466,6 +1467,7 @@
       ]
     }
   ],
+  "time_basis": "full_source",
   "words": [
     {
       "end": 0.854,
@@ -2263,7 +2265,7 @@
       "end": 53.426,
       "score": 0.836,
       "start": 52.905,
-      "word": "head—"
+      "word": "head\u2014"
     },
     {
       "end": 53.962,
