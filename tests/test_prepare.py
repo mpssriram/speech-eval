@@ -3,7 +3,12 @@ from pathlib import Path
 import numpy as np
 import soundfile as sf
 
-from speecheval.prepare import _import_whisperx, compute_trim_bounds, render_prepared_audio
+from speecheval.prepare import (
+    _excerpt_bounds,
+    _import_whisperx,
+    compute_trim_bounds,
+    render_prepared_audio,
+)
 
 
 def test_compute_trim_bounds_ignores_intro_and_outro() -> None:
@@ -56,3 +61,16 @@ def test_whisperx_import_compatibility() -> None:
 
     assert callable(whisperx.load_model)
     assert callable(whisperx.load_align_model)
+
+
+def test_excerpt_bounds_do_not_end_on_truncated_segment() -> None:
+    words = [{"word": "anchor", "start": 20.0, "end": 20.5}]
+    segments = [
+        {"text": "Two sentences before.", "start": 10.0, "end": 15.0},
+        {"text": "One sentence before.", "start": 15.0, "end": 20.0},
+        {"text": "anchor begins.", "start": 20.0, "end": 30.0},
+        {"text": "truncated...", "start": 30.0, "end": 160.0},
+        {"text": "A real sentence.", "start": 160.0, "end": 170.0},
+    ]
+
+    assert _excerpt_bounds(words, segments, "anchor", [120, 240]) == (10.0, 170.0)

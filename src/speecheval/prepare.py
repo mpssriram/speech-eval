@@ -6,6 +6,7 @@ import csv
 import json
 import logging
 import os
+import re
 import subprocess
 import tempfile
 from pathlib import Path
@@ -114,6 +115,7 @@ def render_prepared_audio(
         subprocess.run(
             [
                 "ffmpeg",
+                "-nostdin",
                 "-hide_banner",
                 "-loglevel",
                 "error",
@@ -150,6 +152,7 @@ def _decode_for_asr(raw_path: Path, output_path: Path) -> None:
     subprocess.run(
         [
             "ffmpeg",
+            "-nostdin",
             "-hide_banner",
             "-loglevel",
             "error",
@@ -242,21 +245,27 @@ def _excerpt_bounds(
     start = float(segments[start_index]["start"])
     minimum, maximum = map(float, target_length_s)
     desired = min(max(150.0, minimum), maximum)
+    sentence_ends = [
+        index
+        for index in range(start_index, len(segments))
+        if re.search(r"[.!?][\\\"']?$", str(segments[index].get("text", "")).strip())
+        and not str(segments[index].get("text", "")).strip().endswith("...")
+    ]
     end_index = next(
         (
             index
-            for index in range(start_index, len(segments))
+            for index in sentence_ends
             if float(segments[index]["end"]) - start >= desired
         ),
-        len(segments) - 1,
+        sentence_ends[-1],
     )
-    while end_index > start_index and float(segments[end_index]["end"]) - start > maximum:
-        end_index -= 1
-    while (
-        end_index + 1 < len(segments)
-        and float(segments[end_index]["end"]) - start < minimum
-    ):
-        end_index += 1
+    eligible_ends = [
+        index
+        for index in sentence_ends
+        if minimum <= float(segments[index]["end"]) - start <= maximum
+    ]
+    if eligible_ends and float(segments[end_index]["end"]) - start > maximum:
+        end_index = eligible_ends[-1]
     end = float(segments[end_index]["end"])
     if not minimum <= end - start <= maximum:
         raise ValueError(f"unable to make excerpt within {minimum:g}–{maximum:g} seconds")
