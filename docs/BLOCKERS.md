@@ -1,5 +1,11 @@
 # Blockers
 
+## 2026-10-04 — Repeated O Captain ending selected too early (resolved)
+
+- Acoustic-verification preflight found 12 prepared clips ending after the first stanza. The original matcher chose the first highest-scoring instance of the repeated last six words.
+- The ending matcher now chooses the last occurrence on a score tie. Full-source ASR was reused to repair the 12 cuts and regenerate both prepared WAV rates; all raw audio remains unchanged.
+- Original listen-list items are frozen in `data/review/verification_input.json`. Apparent missing stanzas are scored against the corrected full poem audio, not treated as evidence for deleting transcript text.
+
 ## 2026-10-03 — JFK Rice audio download (resolved)
 
 - Expected file: `data/raw/jfk_rice_1962.mp3`

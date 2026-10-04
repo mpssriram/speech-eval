@@ -51,7 +51,7 @@ def _flatten_asr_words(words: list[dict[str, Any]]) -> tuple[list[str], list[int
     return tokens, word_indices
 
 
-def _best_token_window(haystack: list[str], needle: list[str]) -> tuple[int, int]:
+def _best_token_window(haystack: list[str], needle: list[str], prefer_last: bool = False) -> tuple[int, int]:
     if not haystack or not needle:
         raise ValueError("cannot match an empty token sequence")
     best_score = -1.0
@@ -63,7 +63,7 @@ def _best_token_window(haystack: list[str], needle: list[str]) -> tuple[int, int
         for start in range(0, len(haystack) - width + 1):
             end = start + width
             score = fuzz.ratio(target, " ".join(haystack[start:end]))
-            if score > best_score:
+            if score > best_score or (prefer_last and score == best_score and end > best[1]):
                 best_score = score
                 best = (start, end)
     if best_score < 60:
@@ -83,7 +83,7 @@ def compute_trim_bounds(
         raise ValueError("canonical transcript needs at least six words")
     asr_tokens, token_word_indices = _flatten_asr_words(asr_words)
     first_start, _ = _best_token_window(asr_tokens, canonical[:6])
-    _, last_end = _best_token_window(asr_tokens, canonical[-6:])
+    _, last_end = _best_token_window(asr_tokens, canonical[-6:], prefer_last=True)
     first_word = token_word_indices[first_start]
     last_word = token_word_indices[last_end - 1]
     start = max(0.0, float(asr_words[first_word]["start"]) - padding_s)

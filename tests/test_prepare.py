@@ -63,6 +63,17 @@ def test_whisperx_import_compatibility() -> None:
     assert callable(whisperx.load_align_model)
 
 
+def test_trim_uses_last_repeated_poem_ending() -> None:
+    canonical = "We start here and then walk the deck my captain lies fallen cold and dead"
+    first = canonical.split()
+    repeated = "walk the deck my captain lies fallen cold and dead".split()
+    words = [{"word": word, "start": float(i), "end": i + 0.4} for i, word in enumerate(first)]
+    words += [{"word": word, "start": 50.0 + i, "end": 50.4 + i} for i, word in enumerate(repeated)]
+    start, end = compute_trim_bounds(canonical, words, 70, 0.25)
+    assert start == 0.0
+    assert end == 59.65
+
+
 def test_excerpt_bounds_do_not_end_on_truncated_segment() -> None:
     words = [{"word": "anchor", "start": 20.0, "end": 20.5}]
     segments = [
