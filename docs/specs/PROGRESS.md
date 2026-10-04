@@ -56,3 +56,11 @@ Reproduce inside WSL: `env -u PYTHONPATH ~/.local/bin/uv run speecheval transcri
 ## 2026-10-04 — Step 5c complete
 
 Re-ran `env -u PYTHONPATH ~/.local/bin/uv run speecheval transcripts diff`: 163 current groups across 30 recordings. All files are listed as auto-acoustic-calibrated (not human), with remaining differences shown. New differences beyond the original 85 are not claimed verified. Review classification has a regression test; 60 tests pass. Continue with both forced aligners, then stop before Step 7a.
+
+## 2026-10-04 — Step 6 complete; STOP before Step 7a
+
+Both CPU forced aligners completed all 30 recordings: MFA 3.4.2 (77.940 s, fixed one job; 18 OOV pronunciations generated) and WhisperX 3.7.2 (468.177 s, one thread). All 60 alignment/v1 JSON and 60 TextGrids passed schema, original-word mapping, monotonic bounds, tier and uncertainty-mask checks. Both map 7,671 words. MFA has no zero-duration entries; WhisperX has 28, retained and disclosed for later QA rather than assigning invented durations. No interpolated entries in either run.
+
+All 30 frozen cuts match excerpts.yaml; windows match final transcript and source-ASR hashes. Cached both-aligner reruns are byte-identical for alignments, TextGrids, windows and transcripts. A read-only review found a frozen-window overwrite bug and a minor stale hardlink hazard; failing regression tests preceded both fixes. Full suite: 62 passed, including inherited ROS PYTHONPATH isolation. Fresh calibration seed/inference checks also passed again.
+
+Final calibration remains margin 2.425378476083314 total nats; 6/300 = 2% in-sample proxy false acceptance; 64 applied / 18 kept / 3 uncertain. One uncertain word each in gettysburg lv_eep, gettysburg lv_fb, and O Captain lv_rg; zero in the other 27. Three-way ASR agreement is not human ground truth. Reports: `reports/day01_acoustic_verification.md` and `reports/day01_alignment_runs.md`. `alignment.primary` remains null, no gold has been prepared, and Phase 1 as a whole remains incomplete until the later bake-off/QA steps.

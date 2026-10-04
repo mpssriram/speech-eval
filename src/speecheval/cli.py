@@ -49,8 +49,10 @@ def prepare(force: bool = typer.Option(False, help="Overwrite existing prepared 
 
 
 @app.command()
-def align() -> None:
+def align(aligner: str = typer.Option('both'), force: bool = typer.Option(False), promote: bool = typer.Option(False)) -> None:
     """Run forced alignment for prepared recordings."""
+    from speecheval.align.pipeline import run_alignment
+    run_alignment(aligner,force,promote)
 
 
 @transcripts_app.command("diff")

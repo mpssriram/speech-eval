@@ -335,6 +335,7 @@ def _refresh_output_windows(root: Path, config: dict[str, Any], inputs: dict[str
                                          float(config["alignment"]["sentence_window_padding_s"]), row["text_id"] == "o_captain")
         _write_json(root / config["paths"]["alignment"] / "windows" / f"{rid}.json", {
             "schema": "sentence_windows/v1", "recording_id": rid, "transcript_sha256": _hash_bytes(current.encode()),
+            "sentence_window_padding_s": float(config['alignment']['sentence_window_padding_s']),
             "time_basis": "prepared_clip", "sentences": windows,
             "source_asr_sha256": _hash_bytes((root / config["paths"]["alignment"] / "asr" / f"{rid}.json").read_bytes()),
             "cut_start_s": float(row['cut_start_s']), "cut_end_s": float(row['cut_end_s'])})

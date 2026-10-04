@@ -1,6 +1,42 @@
 import pytest
+import json
 
 from speecheval.align import base
+
+
+def test_alignment_preserves_frozen_windows_and_rejects_stale_inputs(tmp_path, monkeypatch):
+    from speecheval.align import pipeline
+    from speecheval.verify import _hash_bytes
+    rid='sample';config={'paths':{'transcripts_as_spoken':'transcripts','alignment':'alignment'},
+                         'alignment':{'sentence_window_padding_s':.3}}
+    (tmp_path/'transcripts').mkdir();(tmp_path/'alignment/asr').mkdir(parents=True)
+    (tmp_path/'alignment/windows').mkdir()
+    text=tmp_path/'transcripts/sample.txt';text.write_text('one two')
+    asr=tmp_path/'alignment/asr/sample.json';asr.write_text('{}')
+    window=tmp_path/'alignment/windows/sample.json'
+    payload={'transcript_sha256':_hash_bytes(text.read_bytes()),'source_asr_sha256':_hash_bytes(asr.read_bytes()),
+             'cut_start_s':1.,'cut_end_s':3.,'sentences':[{'start':.123,'end':1.8}]}
+    window.write_text(json.dumps(payload));before=window.read_bytes()
+    monkeypatch.setattr(pipeline,'_refresh_output_windows',lambda *args: pytest.fail('Frozen windows rewritten'))
+    rows=[{'recording_id':rid,'cut_start_s':'1','cut_end_s':'3'}]
+    pipeline.ensure_windows(tmp_path,config,rows,False)
+    assert window.read_bytes()==before
+    text.write_text('changed')
+    with pytest.raises(ValueError,match='Stale frozen'):
+        pipeline.ensure_windows(tmp_path,config,rows,False)
+    text.write_text('one two');config['alignment']['sentence_window_padding_s']=.4
+    with pytest.raises(ValueError,match='Stale frozen'):
+        pipeline.ensure_windows(tmp_path,config,rows,False)
+
+
+def test_mfa_replaces_stale_owned_audio_link(tmp_path):
+    from speecheval.align import mfa
+    source=tmp_path/'prepared.wav';target=tmp_path/'corpus.wav'
+    source.write_bytes(b'old');mfa.link_audio(source,target)
+    replacement=tmp_path/'replacement.wav';replacement.write_bytes(b'new');replacement.replace(source)
+    mfa.link_audio(source,target)
+    assert target.read_bytes()==b'new'
+    assert source.samefile(target)
 
 
 def test_split_hyphen_and_number_map_to_single_transcript_word():

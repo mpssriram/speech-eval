@@ -1,0 +1,1802 @@
+{
+  "aligner": {
+    "device": "cpu",
+    "name": "whisperx",
+    "version": "3.7.2"
+  },
+  "audio": "data/audio/hq/o_captain__lv_chip__orig.wav",
+  "duration_s": 109.316,
+  "recording_id": "o_captain__lv_chip__orig",
+  "schema": "alignment/v1",
+  "sentences": [
+    {
+      "end": 14.846,
+      "i": 0,
+      "start": 0.0,
+      "word_end": 8,
+      "word_start": 0
+    },
+    {
+      "end": 18.821,
+      "i": 1,
+      "start": 14.846,
+      "word_end": 20,
+      "word_start": 9
+    },
+    {
+      "end": 23.536,
+      "i": 2,
+      "start": 18.821,
+      "word_end": 32,
+      "word_start": 21
+    },
+    {
+      "end": 29.164,
+      "i": 3,
+      "start": 23.536,
+      "word_end": 43,
+      "word_start": 33
+    },
+    {
+      "end": 32.2,
+      "i": 4,
+      "start": 29.164,
+      "word_end": 48,
+      "word_start": 44
+    },
+    {
+      "end": 34.833,
+      "i": 5,
+      "start": 32.2,
+      "word_end": 54,
+      "word_start": 49
+    },
+    {
+      "end": 38.018,
+      "i": 6,
+      "start": 35.114,
+      "word_end": 61,
+      "word_start": 55
+    },
+    {
+      "end": 41.422,
+      "i": 7,
+      "start": 38.018,
+      "word_end": 65,
+      "word_start": 62
+    },
+    {
+      "end": 46.37,
+      "i": 8,
+      "start": 41.422,
+      "word_end": 75,
+      "word_start": 66
+    },
+    {
+      "end": 50.364,
+      "i": 9,
+      "start": 46.37,
+      "word_end": 88,
+      "word_start": 76
+    },
+    {
+      "end": 54.56,
+      "i": 10,
+      "start": 50.364,
+      "word_end": 99,
+      "word_start": 89
+    },
+    {
+      "end": 61.034,
+      "i": 11,
+      "start": 55.622,
+      "word_end": 110,
+      "word_start": 100
+    },
+    {
+      "end": 63.439,
+      "i": 12,
+      "start": 61.034,
+      "word_end": 114,
+      "word_start": 111
+    },
+    {
+      "end": 65.223,
+      "i": 13,
+      "start": 63.439,
+      "word_end": 119,
+      "word_start": 115
+    },
+    {
+      "end": 67.769,
+      "i": 14,
+      "start": 65.223,
+      "word_end": 127,
+      "word_start": 120
+    },
+    {
+      "end": 70.504,
+      "i": 15,
+      "start": 67.769,
+      "word_end": 132,
+      "word_start": 128
+    },
+    {
+      "end": 78.122,
+      "i": 16,
+      "start": 71.588,
+      "word_end": 143,
+      "word_start": 133
+    },
+    {
+      "end": 85.077,
+      "i": 17,
+      "start": 78.83,
+      "word_end": 156,
+      "word_start": 144
+    },
+    {
+      "end": 89.943,
+      "i": 18,
+      "start": 85.077,
+      "word_end": 168,
+      "word_start": 157
+    },
+    {
+      "end": 94.899,
+      "i": 19,
+      "start": 89.943,
+      "word_end": 179,
+      "word_start": 169
+    },
+    {
+      "end": 98.333,
+      "i": 20,
+      "start": 94.899,
+      "word_end": 186,
+      "word_start": 180
+    },
+    {
+      "end": 102.789,
+      "i": 21,
+      "start": 99.114,
+      "word_end": 191,
+      "word_start": 187
+    },
+    {
+      "end": 105.702,
+      "i": 22,
+      "start": 102.789,
+      "word_end": 197,
+      "word_start": 192
+    },
+    {
+      "end": 109.316,
+      "i": 23,
+      "start": 106.223,
+      "word_end": 201,
+      "word_start": 198
+    }
+  ],
+  "transcript": "data/transcripts/as_spoken/o_captain__lv_chip__orig.txt",
+  "uncertain_words": [],
+  "warnings": [],
+  "words": [
+    {
+      "end": 0.641,
+      "i": 0,
+      "norm": "o",
+      "sentence": 0,
+      "start": 0.0,
+      "text": "O"
+    },
+    {
+      "end": 1.122,
+      "i": 1,
+      "norm": "captain",
+      "sentence": 0,
+      "start": 0.661,
+      "text": "Captain!"
+    },
+    {
+      "end": 1.583,
+      "i": 2,
+      "norm": "my",
+      "sentence": 0,
+      "start": 1.182,
+      "text": "my"
+    },
+    {
+      "end": 2.164,
+      "i": 3,
+      "norm": "captain",
+      "sentence": 0,
+      "start": 1.723,
+      "text": "Captain!"
+    },
+    {
+      "end": 13.223,
+      "i": 4,
+      "norm": "our",
+      "sentence": 0,
+      "start": 2.645,
+      "text": "our"
+    },
+    {
+      "end": 13.824,
+      "i": 5,
+      "norm": "fearful",
+      "sentence": 0,
+      "start": 13.363,
+      "text": "fearful"
+    },
+    {
+      "end": 14.205,
+      "i": 6,
+      "norm": "trip",
+      "sentence": 0,
+      "start": 13.944,
+      "text": "trip"
+    },
+    {
+      "end": 14.405,
+      "i": 7,
+      "norm": "is",
+      "sentence": 0,
+      "start": 14.305,
+      "text": "is"
+    },
+    {
+      "end": 14.846,
+      "i": 8,
+      "norm": "done",
+      "sentence": 0,
+      "start": 14.525,
+      "text": "done,"
+    },
+    {
+      "end": 14.846,
+      "i": 9,
+      "norm": "the",
+      "sentence": 1,
+      "start": 14.846,
+      "text": "The"
+    },
+    {
+      "end": 15.795,
+      "i": 10,
+      "norm": "ship",
+      "sentence": 1,
+      "start": 14.847,
+      "text": "ship"
+    },
+    {
+      "end": 15.956,
+      "i": 11,
+      "norm": "has",
+      "sentence": 1,
+      "start": 15.876,
+      "text": "has"
+    },
+    {
+      "end": 16.38,
+      "i": 12,
+      "norm": "weatherd",
+      "sentence": 1,
+      "start": 16.057,
+      "text": "weather\u2019d"
+    },
+    {
+      "end": 16.662,
+      "i": 13,
+      "norm": "every",
+      "sentence": 1,
+      "start": 16.44,
+      "text": "every"
+    },
+    {
+      "end": 16.985,
+      "i": 14,
+      "norm": "rack",
+      "sentence": 1,
+      "start": 16.763,
+      "text": "rack,"
+    },
+    {
+      "end": 17.146,
+      "i": 15,
+      "norm": "the",
+      "sentence": 1,
+      "start": 17.045,
+      "text": "the"
+    },
+    {
+      "end": 17.65,
+      "i": 16,
+      "norm": "prize",
+      "sentence": 1,
+      "start": 17.247,
+      "text": "prize"
+    },
+    {
+      "end": 17.933,
+      "i": 17,
+      "norm": "we",
+      "sentence": 1,
+      "start": 17.771,
+      "text": "we"
+    },
+    {
+      "end": 18.255,
+      "i": 18,
+      "norm": "sought",
+      "sentence": 1,
+      "start": 18.013,
+      "text": "sought"
+    },
+    {
+      "end": 18.437,
+      "i": 19,
+      "norm": "is",
+      "sentence": 1,
+      "start": 18.356,
+      "text": "is"
+    },
+    {
+      "end": 18.821,
+      "i": 20,
+      "norm": "won",
+      "sentence": 1,
+      "start": 18.638,
+      "text": "won,"
+    },
+    {
+      "end": 18.923,
+      "i": 21,
+      "norm": "the",
+      "sentence": 2,
+      "start": 18.821,
+      "text": "The"
+    },
+    {
+      "end": 19.326,
+      "i": 22,
+      "norm": "port",
+      "sentence": 2,
+      "start": 19.003,
+      "text": "port"
+    },
+    {
+      "end": 19.507,
+      "i": 23,
+      "norm": "is",
+      "sentence": 2,
+      "start": 19.427,
+      "text": "is"
+    },
+    {
+      "end": 19.809,
+      "i": 24,
+      "norm": "near",
+      "sentence": 2,
+      "start": 19.588,
+      "text": "near,"
+    },
+    {
+      "end": 19.97,
+      "i": 25,
+      "norm": "the",
+      "sentence": 2,
+      "start": 19.89,
+      "text": "the"
+    },
+    {
+      "end": 20.353,
+      "i": 26,
+      "norm": "bells",
+      "sentence": 2,
+      "start": 20.011,
+      "text": "bells"
+    },
+    {
+      "end": 20.595,
+      "i": 27,
+      "norm": "i",
+      "sentence": 2,
+      "start": 20.514,
+      "text": "I"
+    },
+    {
+      "end": 20.917,
+      "i": 28,
+      "norm": "hear",
+      "sentence": 2,
+      "start": 20.676,
+      "text": "hear,"
+    },
+    {
+      "end": 21.501,
+      "i": 29,
+      "norm": "the",
+      "sentence": 2,
+      "start": 20.978,
+      "text": "the"
+    },
+    {
+      "end": 21.884,
+      "i": 30,
+      "norm": "people",
+      "sentence": 2,
+      "start": 21.562,
+      "text": "people"
+    },
+    {
+      "end": 22.489,
+      "i": 31,
+      "norm": "all",
+      "sentence": 2,
+      "start": 22.307,
+      "text": "all"
+    },
+    {
+      "end": 23.536,
+      "i": 32,
+      "norm": "exulting",
+      "sentence": 2,
+      "start": 22.609,
+      "text": "exulting,"
+    },
+    {
+      "end": 24.199,
+      "i": 33,
+      "norm": "while",
+      "sentence": 3,
+      "start": 23.536,
+      "text": "While"
+    },
+    {
+      "end": 24.842,
+      "i": 34,
+      "norm": "follow",
+      "sentence": 3,
+      "start": 24.239,
+      "text": "follow"
+    },
+    {
+      "end": 25.445,
+      "i": 35,
+      "norm": "eyes",
+      "sentence": 3,
+      "start": 25.204,
+      "text": "eyes"
+    },
+    {
+      "end": 25.746,
+      "i": 36,
+      "norm": "the",
+      "sentence": 3,
+      "start": 25.485,
+      "text": "the"
+    },
+    {
+      "end": 26.248,
+      "i": 37,
+      "norm": "steady",
+      "sentence": 3,
+      "start": 25.887,
+      "text": "steady"
+    },
+    {
+      "end": 26.67,
+      "i": 38,
+      "norm": "keel",
+      "sentence": 3,
+      "start": 26.349,
+      "text": "keel,"
+    },
+    {
+      "end": 26.891,
+      "i": 39,
+      "norm": "the",
+      "sentence": 3,
+      "start": 26.75,
+      "text": "the"
+    },
+    {
+      "end": 27.293,
+      "i": 40,
+      "norm": "vessel",
+      "sentence": 3,
+      "start": 26.951,
+      "text": "vessel"
+    },
+    {
+      "end": 27.815,
+      "i": 41,
+      "norm": "grim",
+      "sentence": 3,
+      "start": 27.434,
+      "text": "grim"
+    },
+    {
+      "end": 28.056,
+      "i": 42,
+      "norm": "and",
+      "sentence": 3,
+      "start": 27.835,
+      "text": "and"
+    },
+    {
+      "end": 29.164,
+      "i": 43,
+      "norm": "daring",
+      "sentence": 3,
+      "start": 28.177,
+      "text": "daring;"
+    },
+    {
+      "end": 29.572,
+      "i": 44,
+      "norm": "but",
+      "sentence": 4,
+      "start": 29.164,
+      "text": "But"
+    },
+    {
+      "end": 29.956,
+      "i": 45,
+      "norm": "o",
+      "sentence": 4,
+      "start": 29.855,
+      "text": "O"
+    },
+    {
+      "end": 30.602,
+      "i": 46,
+      "norm": "heart",
+      "sentence": 4,
+      "start": 30.178,
+      "text": "heart!"
+    },
+    {
+      "end": 31.39,
+      "i": 47,
+      "norm": "heart",
+      "sentence": 4,
+      "start": 30.986,
+      "text": "heart!"
+    },
+    {
+      "end": 32.2,
+      "i": 48,
+      "norm": "heart",
+      "sentence": 4,
+      "start": 32.037,
+      "text": "heart!"
+    },
+    {
+      "end": 32.344,
+      "i": 49,
+      "norm": "o",
+      "sentence": 5,
+      "start": 32.2,
+      "text": "O"
+    },
+    {
+      "end": 32.708,
+      "i": 50,
+      "norm": "the",
+      "sentence": 5,
+      "start": 32.364,
+      "text": "the"
+    },
+    {
+      "end": 33.396,
+      "i": 51,
+      "norm": "bleeding",
+      "sentence": 5,
+      "start": 32.829,
+      "text": "bleeding"
+    },
+    {
+      "end": 33.902,
+      "i": 52,
+      "norm": "drops",
+      "sentence": 5,
+      "start": 33.497,
+      "text": "drops"
+    },
+    {
+      "end": 34.105,
+      "i": 53,
+      "norm": "of",
+      "sentence": 5,
+      "start": 34.024,
+      "text": "of"
+    },
+    {
+      "end": 34.833,
+      "i": 54,
+      "norm": "red",
+      "sentence": 5,
+      "start": 34.266,
+      "text": "red,"
+    },
+    {
+      "end": 35.601,
+      "i": 55,
+      "norm": "where",
+      "sentence": 6,
+      "start": 35.114,
+      "text": "Where"
+    },
+    {
+      "end": 35.804,
+      "i": 56,
+      "norm": "on",
+      "sentence": 6,
+      "start": 35.723,
+      "text": "on"
+    },
+    {
+      "end": 35.987,
+      "i": 57,
+      "norm": "the",
+      "sentence": 6,
+      "start": 35.845,
+      "text": "the"
+    },
+    {
+      "end": 36.291,
+      "i": 58,
+      "norm": "deck",
+      "sentence": 6,
+      "start": 36.047,
+      "text": "deck"
+    },
+    {
+      "end": 36.778,
+      "i": 59,
+      "norm": "my",
+      "sentence": 6,
+      "start": 36.616,
+      "text": "my"
+    },
+    {
+      "end": 37.448,
+      "i": 60,
+      "norm": "captain",
+      "sentence": 6,
+      "start": 36.92,
+      "text": "Captain"
+    },
+    {
+      "end": 38.018,
+      "i": 61,
+      "norm": "lies",
+      "sentence": 6,
+      "start": 37.529,
+      "text": "lies,"
+    },
+    {
+      "end": 39.538,
+      "i": 62,
+      "norm": "fallen",
+      "sentence": 7,
+      "start": 38.018,
+      "text": "Fallen"
+    },
+    {
+      "end": 40.854,
+      "i": 63,
+      "norm": "cold",
+      "sentence": 7,
+      "start": 40.368,
+      "text": "cold"
+    },
+    {
+      "end": 41.096,
+      "i": 64,
+      "norm": "and",
+      "sentence": 7,
+      "start": 40.995,
+      "text": "and"
+    },
+    {
+      "end": 41.422,
+      "i": 65,
+      "norm": "dead",
+      "sentence": 7,
+      "start": 41.258,
+      "text": "dead."
+    },
+    {
+      "end": 43.213,
+      "i": 66,
+      "norm": "o",
+      "sentence": 8,
+      "start": 41.422,
+      "text": "O"
+    },
+    {
+      "end": 43.776,
+      "i": 67,
+      "norm": "captain",
+      "sentence": 8,
+      "start": 43.253,
+      "text": "Captain!"
+    },
+    {
+      "end": 44.017,
+      "i": 68,
+      "norm": "my",
+      "sentence": 8,
+      "start": 43.876,
+      "text": "my"
+    },
+    {
+      "end": 44.539,
+      "i": 69,
+      "norm": "captain",
+      "sentence": 8,
+      "start": 44.117,
+      "text": "Captain!"
+    },
+    {
+      "end": 44.881,
+      "i": 70,
+      "norm": "rise",
+      "sentence": 8,
+      "start": 44.62,
+      "text": "rise"
+    },
+    {
+      "end": 45.082,
+      "i": 71,
+      "norm": "up",
+      "sentence": 8,
+      "start": 44.982,
+      "text": "up"
+    },
+    {
+      "end": 45.243,
+      "i": 72,
+      "norm": "and",
+      "sentence": 8,
+      "start": 45.163,
+      "text": "and"
+    },
+    {
+      "end": 45.565,
+      "i": 73,
+      "norm": "hear",
+      "sentence": 8,
+      "start": 45.344,
+      "text": "hear"
+    },
+    {
+      "end": 45.725,
+      "i": 74,
+      "norm": "the",
+      "sentence": 8,
+      "start": 45.605,
+      "text": "the"
+    },
+    {
+      "end": 46.37,
+      "i": 75,
+      "norm": "bells",
+      "sentence": 8,
+      "start": 45.766,
+      "text": "bells;"
+    },
+    {
+      "end": 46.795,
+      "i": 76,
+      "norm": "rise",
+      "sentence": 9,
+      "start": 46.37,
+      "text": "Rise"
+    },
+    {
+      "end": 46.998,
+      "i": 77,
+      "norm": "up",
+      "sentence": 9,
+      "start": 46.917,
+      "text": "up-"
+    },
+    {
+      "end": 47.22,
+      "i": 78,
+      "norm": "for",
+      "sentence": 9,
+      "start": 47.078,
+      "text": "for"
+    },
+    {
+      "end": 47.483,
+      "i": 79,
+      "norm": "you",
+      "sentence": 9,
+      "start": 47.281,
+      "text": "you"
+    },
+    {
+      "end": 47.645,
+      "i": 80,
+      "norm": "the",
+      "sentence": 9,
+      "start": 47.564,
+      "text": "the"
+    },
+    {
+      "end": 47.988,
+      "i": 81,
+      "norm": "flag",
+      "sentence": 9,
+      "start": 47.705,
+      "text": "flag"
+    },
+    {
+      "end": 48.15,
+      "i": 82,
+      "norm": "is",
+      "sentence": 9,
+      "start": 48.069,
+      "text": "is"
+    },
+    {
+      "end": 48.514,
+      "i": 83,
+      "norm": "flung",
+      "sentence": 9,
+      "start": 48.251,
+      "text": "flung-"
+    },
+    {
+      "end": 48.757,
+      "i": 84,
+      "norm": "for",
+      "sentence": 9,
+      "start": 48.635,
+      "text": "for"
+    },
+    {
+      "end": 49.019,
+      "i": 85,
+      "norm": "you",
+      "sentence": 9,
+      "start": 48.817,
+      "text": "you"
+    },
+    {
+      "end": 49.161,
+      "i": 86,
+      "norm": "the",
+      "sentence": 9,
+      "start": 49.08,
+      "text": "the"
+    },
+    {
+      "end": 49.565,
+      "i": 87,
+      "norm": "bugle",
+      "sentence": 9,
+      "start": 49.201,
+      "text": "bugle"
+    },
+    {
+      "end": 50.364,
+      "i": 88,
+      "norm": "trills",
+      "sentence": 9,
+      "start": 49.626,
+      "text": "trills,"
+    },
+    {
+      "end": 50.798,
+      "i": 89,
+      "norm": "for",
+      "sentence": 10,
+      "start": 50.364,
+      "text": "For"
+    },
+    {
+      "end": 51.12,
+      "i": 90,
+      "norm": "you",
+      "sentence": 10,
+      "start": 50.878,
+      "text": "you"
+    },
+    {
+      "end": 51.804,
+      "i": 91,
+      "norm": "bouquets",
+      "sentence": 10,
+      "start": 51.22,
+      "text": "bouquets"
+    },
+    {
+      "end": 51.985,
+      "i": 92,
+      "norm": "and",
+      "sentence": 10,
+      "start": 51.904,
+      "text": "and"
+    },
+    {
+      "end": 52.387,
+      "i": 93,
+      "norm": "ribbond",
+      "sentence": 10,
+      "start": 52.065,
+      "text": "ribbon\u2019d"
+    },
+    {
+      "end": 52.89,
+      "i": 94,
+      "norm": "wreaths",
+      "sentence": 10,
+      "start": 52.448,
+      "text": "wreaths-"
+    },
+    {
+      "end": 53.272,
+      "i": 95,
+      "norm": "for",
+      "sentence": 10,
+      "start": 53.091,
+      "text": "for"
+    },
+    {
+      "end": 53.534,
+      "i": 96,
+      "norm": "you",
+      "sentence": 10,
+      "start": 53.333,
+      "text": "you"
+    },
+    {
+      "end": 53.695,
+      "i": 97,
+      "norm": "the",
+      "sentence": 10,
+      "start": 53.594,
+      "text": "the"
+    },
+    {
+      "end": 54.218,
+      "i": 98,
+      "norm": "shores",
+      "sentence": 10,
+      "start": 53.775,
+      "text": "shores"
+    },
+    {
+      "end": 54.56,
+      "i": 99,
+      "norm": "acrowding",
+      "sentence": 10,
+      "start": 54.339,
+      "text": "a-crowding,"
+    },
+    {
+      "end": 56.045,
+      "i": 100,
+      "norm": "for",
+      "sentence": 11,
+      "start": 55.622,
+      "text": "For"
+    },
+    {
+      "end": 56.267,
+      "i": 101,
+      "norm": "you",
+      "sentence": 11,
+      "start": 56.106,
+      "text": "you"
+    },
+    {
+      "end": 56.509,
+      "i": 102,
+      "norm": "they",
+      "sentence": 11,
+      "start": 56.327,
+      "text": "they"
+    },
+    {
+      "end": 56.992,
+      "i": 103,
+      "norm": "call",
+      "sentence": 11,
+      "start": 56.569,
+      "text": "call,"
+    },
+    {
+      "end": 57.375,
+      "i": 104,
+      "norm": "the",
+      "sentence": 11,
+      "start": 57.275,
+      "text": "the"
+    },
+    {
+      "end": 57.879,
+      "i": 105,
+      "norm": "swaying",
+      "sentence": 11,
+      "start": 57.436,
+      "text": "swaying"
+    },
+    {
+      "end": 58.343,
+      "i": 106,
+      "norm": "mass",
+      "sentence": 11,
+      "start": 57.96,
+      "text": "mass,"
+    },
+    {
+      "end": 59.028,
+      "i": 107,
+      "norm": "their",
+      "sentence": 11,
+      "start": 58.846,
+      "text": "their"
+    },
+    {
+      "end": 59.491,
+      "i": 108,
+      "norm": "eager",
+      "sentence": 11,
+      "start": 59.189,
+      "text": "eager"
+    },
+    {
+      "end": 60.096,
+      "i": 109,
+      "norm": "faces",
+      "sentence": 11,
+      "start": 59.612,
+      "text": "faces"
+    },
+    {
+      "end": 61.034,
+      "i": 110,
+      "norm": "turning",
+      "sentence": 11,
+      "start": 60.297,
+      "text": "turning;"
+    },
+    {
+      "end": 61.655,
+      "i": 111,
+      "norm": "here",
+      "sentence": 12,
+      "start": 61.034,
+      "text": "Here"
+    },
+    {
+      "end": 62.267,
+      "i": 112,
+      "norm": "captain",
+      "sentence": 12,
+      "start": 61.818,
+      "text": "Captain!"
+    },
+    {
+      "end": 62.633,
+      "i": 113,
+      "norm": "dear",
+      "sentence": 12,
+      "start": 62.409,
+      "text": "dear"
+    },
+    {
+      "end": 63.439,
+      "i": 114,
+      "norm": "father",
+      "sentence": 12,
+      "start": 62.776,
+      "text": "father!"
+    },
+    {
+      "end": 63.877,
+      "i": 115,
+      "norm": "this",
+      "sentence": 13,
+      "start": 63.439,
+      "text": "This"
+    },
+    {
+      "end": 64.284,
+      "i": 116,
+      "norm": "arm",
+      "sentence": 13,
+      "start": 64.121,
+      "text": "arm"
+    },
+    {
+      "end": 64.671,
+      "i": 117,
+      "norm": "beneath",
+      "sentence": 13,
+      "start": 64.345,
+      "text": "beneath"
+    },
+    {
+      "end": 64.976,
+      "i": 118,
+      "norm": "your",
+      "sentence": 13,
+      "start": 64.752,
+      "text": "your"
+    },
+    {
+      "end": 65.223,
+      "i": 119,
+      "norm": "head",
+      "sentence": 13,
+      "start": 65.078,
+      "text": "head!"
+    },
+    {
+      "end": 65.366,
+      "i": 120,
+      "norm": "it",
+      "sentence": 14,
+      "start": 65.223,
+      "text": "It"
+    },
+    {
+      "end": 65.669,
+      "i": 121,
+      "norm": "is",
+      "sentence": 14,
+      "start": 65.386,
+      "text": "is"
+    },
+    {
+      "end": 66.072,
+      "i": 122,
+      "norm": "some",
+      "sentence": 14,
+      "start": 65.709,
+      "text": "some"
+    },
+    {
+      "end": 66.658,
+      "i": 123,
+      "norm": "dream",
+      "sentence": 14,
+      "start": 66.092,
+      "text": "dream"
+    },
+    {
+      "end": 67.001,
+      "i": 124,
+      "norm": "that",
+      "sentence": 14,
+      "start": 66.698,
+      "text": "that"
+    },
+    {
+      "end": 67.223,
+      "i": 125,
+      "norm": "on",
+      "sentence": 14,
+      "start": 67.142,
+      "text": "on"
+    },
+    {
+      "end": 67.384,
+      "i": 126,
+      "norm": "the",
+      "sentence": 14,
+      "start": 67.303,
+      "text": "the"
+    },
+    {
+      "end": 67.769,
+      "i": 127,
+      "norm": "deck",
+      "sentence": 14,
+      "start": 67.425,
+      "text": "deck,"
+    },
+    {
+      "end": 67.994,
+      "i": 128,
+      "norm": "youve",
+      "sentence": 15,
+      "start": 67.769,
+      "text": "You\u2019ve"
+    },
+    {
+      "end": 68.54,
+      "i": 129,
+      "norm": "fallen",
+      "sentence": 15,
+      "start": 68.115,
+      "text": "fallen"
+    },
+    {
+      "end": 69.37,
+      "i": 130,
+      "norm": "cold",
+      "sentence": 15,
+      "start": 68.824,
+      "text": "cold"
+    },
+    {
+      "end": 69.674,
+      "i": 131,
+      "norm": "and",
+      "sentence": 15,
+      "start": 69.573,
+      "text": "and"
+    },
+    {
+      "end": 70.504,
+      "i": 132,
+      "norm": "dead",
+      "sentence": 15,
+      "start": 69.836,
+      "text": "dead."
+    },
+    {
+      "end": 72.03,
+      "i": 133,
+      "norm": "my",
+      "sentence": 16,
+      "start": 71.588,
+      "text": "My"
+    },
+    {
+      "end": 72.694,
+      "i": 134,
+      "norm": "captain",
+      "sentence": 16,
+      "start": 72.191,
+      "text": "Captain"
+    },
+    {
+      "end": 73.056,
+      "i": 135,
+      "norm": "does",
+      "sentence": 16,
+      "start": 72.814,
+      "text": "does"
+    },
+    {
+      "end": 73.337,
+      "i": 136,
+      "norm": "not",
+      "sentence": 16,
+      "start": 73.156,
+      "text": "not"
+    },
+    {
+      "end": 73.84,
+      "i": 137,
+      "norm": "answer",
+      "sentence": 16,
+      "start": 73.478,
+      "text": "answer,"
+    },
+    {
+      "end": 75.126,
+      "i": 138,
+      "norm": "his",
+      "sentence": 16,
+      "start": 74.946,
+      "text": "his"
+    },
+    {
+      "end": 75.569,
+      "i": 139,
+      "norm": "lips",
+      "sentence": 16,
+      "start": 75.227,
+      "text": "lips"
+    },
+    {
+      "end": 75.991,
+      "i": 140,
+      "norm": "are",
+      "sentence": 16,
+      "start": 75.609,
+      "text": "are"
+    },
+    {
+      "end": 76.896,
+      "i": 141,
+      "norm": "pale",
+      "sentence": 16,
+      "start": 76.132,
+      "text": "pale"
+    },
+    {
+      "end": 77.137,
+      "i": 142,
+      "norm": "and",
+      "sentence": 16,
+      "start": 77.057,
+      "text": "and"
+    },
+    {
+      "end": 78.122,
+      "i": 143,
+      "norm": "still",
+      "sentence": 16,
+      "start": 77.177,
+      "text": "still,"
+    },
+    {
+      "end": 79.372,
+      "i": 144,
+      "norm": "my",
+      "sentence": 17,
+      "start": 78.83,
+      "text": "My"
+    },
+    {
+      "end": 79.854,
+      "i": 145,
+      "norm": "father",
+      "sentence": 17,
+      "start": 79.473,
+      "text": "father"
+    },
+    {
+      "end": 80.176,
+      "i": 146,
+      "norm": "does",
+      "sentence": 17,
+      "start": 79.955,
+      "text": "does"
+    },
+    {
+      "end": 80.557,
+      "i": 147,
+      "norm": "not",
+      "sentence": 17,
+      "start": 80.196,
+      "text": "not"
+    },
+    {
+      "end": 81.16,
+      "i": 148,
+      "norm": "feel",
+      "sentence": 17,
+      "start": 80.839,
+      "text": "feel"
+    },
+    {
+      "end": 81.481,
+      "i": 149,
+      "norm": "my",
+      "sentence": 17,
+      "start": 81.18,
+      "text": "my"
+    },
+    {
+      "end": 81.903,
+      "i": 150,
+      "norm": "arm",
+      "sentence": 17,
+      "start": 81.743,
+      "text": "arm,"
+    },
+    {
+      "end": 82.124,
+      "i": 151,
+      "norm": "he",
+      "sentence": 17,
+      "start": 82.004,
+      "text": "he"
+    },
+    {
+      "end": 82.546,
+      "i": 152,
+      "norm": "has",
+      "sentence": 17,
+      "start": 82.205,
+      "text": "has"
+    },
+    {
+      "end": 82.606,
+      "i": 153,
+      "norm": "no",
+      "sentence": 17,
+      "start": 82.566,
+      "text": "no"
+    },
+    {
+      "end": 83.912,
+      "i": 154,
+      "norm": "pulse",
+      "sentence": 17,
+      "start": 83.37,
+      "text": "pulse"
+    },
+    {
+      "end": 84.193,
+      "i": 155,
+      "norm": "nor",
+      "sentence": 17,
+      "start": 84.093,
+      "text": "nor"
+    },
+    {
+      "end": 85.077,
+      "i": 156,
+      "norm": "will",
+      "sentence": 17,
+      "start": 84.414,
+      "text": "will,"
+    },
+    {
+      "end": 85.459,
+      "i": 157,
+      "norm": "the",
+      "sentence": 18,
+      "start": 85.077,
+      "text": "The"
+    },
+    {
+      "end": 85.821,
+      "i": 158,
+      "norm": "ship",
+      "sentence": 18,
+      "start": 85.56,
+      "text": "ship"
+    },
+    {
+      "end": 86.002,
+      "i": 159,
+      "norm": "is",
+      "sentence": 18,
+      "start": 85.901,
+      "text": "is"
+    },
+    {
+      "end": 86.665,
+      "i": 160,
+      "norm": "anchord",
+      "sentence": 18,
+      "start": 86.022,
+      "text": "anchor\u2019d"
+    },
+    {
+      "end": 87.208,
+      "i": 161,
+      "norm": "safe",
+      "sentence": 18,
+      "start": 86.826,
+      "text": "safe"
+    },
+    {
+      "end": 87.409,
+      "i": 162,
+      "norm": "and",
+      "sentence": 18,
+      "start": 87.309,
+      "text": "and"
+    },
+    {
+      "end": 87.972,
+      "i": 163,
+      "norm": "sound",
+      "sentence": 18,
+      "start": 87.57,
+      "text": "sound,"
+    },
+    {
+      "end": 88.193,
+      "i": 164,
+      "norm": "its",
+      "sentence": 18,
+      "start": 88.093,
+      "text": "its"
+    },
+    {
+      "end": 88.716,
+      "i": 165,
+      "norm": "voyage",
+      "sentence": 18,
+      "start": 88.294,
+      "text": "voyage"
+    },
+    {
+      "end": 89.299,
+      "i": 166,
+      "norm": "closed",
+      "sentence": 18,
+      "start": 88.837,
+      "text": "closed"
+    },
+    {
+      "end": 89.52,
+      "i": 167,
+      "norm": "and",
+      "sentence": 18,
+      "start": 89.399,
+      "text": "and"
+    },
+    {
+      "end": 89.943,
+      "i": 168,
+      "norm": "done",
+      "sentence": 18,
+      "start": 89.601,
+      "text": "done,"
+    },
+    {
+      "end": 90.286,
+      "i": 169,
+      "norm": "from",
+      "sentence": 19,
+      "start": 89.943,
+      "text": "From"
+    },
+    {
+      "end": 90.991,
+      "i": 170,
+      "norm": "fearful",
+      "sentence": 19,
+      "start": 90.327,
+      "text": "fearful"
+    },
+    {
+      "end": 91.394,
+      "i": 171,
+      "norm": "trip",
+      "sentence": 19,
+      "start": 91.112,
+      "text": "trip"
+    },
+    {
+      "end": 91.958,
+      "i": 172,
+      "norm": "the",
+      "sentence": 19,
+      "start": 91.837,
+      "text": "the"
+    },
+    {
+      "end": 92.643,
+      "i": 173,
+      "norm": "victor",
+      "sentence": 19,
+      "start": 92.099,
+      "text": "victor"
+    },
+    {
+      "end": 93.045,
+      "i": 174,
+      "norm": "ship",
+      "sentence": 19,
+      "start": 92.763,
+      "text": "ship"
+    },
+    {
+      "end": 93.408,
+      "i": 175,
+      "norm": "comes",
+      "sentence": 19,
+      "start": 93.146,
+      "text": "comes"
+    },
+    {
+      "end": 93.629,
+      "i": 176,
+      "norm": "in",
+      "sentence": 19,
+      "start": 93.428,
+      "text": "in"
+    },
+    {
+      "end": 93.911,
+      "i": 177,
+      "norm": "with",
+      "sentence": 19,
+      "start": 93.69,
+      "text": "with"
+    },
+    {
+      "end": 94.596,
+      "i": 178,
+      "norm": "object",
+      "sentence": 19,
+      "start": 93.952,
+      "text": "object"
+    },
+    {
+      "end": 94.899,
+      "i": 179,
+      "norm": "won",
+      "sentence": 19,
+      "start": 94.838,
+      "text": "won;"
+    },
+    {
+      "end": 95.728,
+      "i": 180,
+      "norm": "exult",
+      "sentence": 20,
+      "start": 94.899,
+      "text": "Exult"
+    },
+    {
+      "end": 95.971,
+      "i": 181,
+      "norm": "o",
+      "sentence": 20,
+      "start": 95.89,
+      "text": "O"
+    },
+    {
+      "end": 96.435,
+      "i": 182,
+      "norm": "shores",
+      "sentence": 20,
+      "start": 96.031,
+      "text": "shores,"
+    },
+    {
+      "end": 96.617,
+      "i": 183,
+      "norm": "and",
+      "sentence": 20,
+      "start": 96.536,
+      "text": "and"
+    },
+    {
+      "end": 97.122,
+      "i": 184,
+      "norm": "ring",
+      "sentence": 20,
+      "start": 96.799,
+      "text": "ring"
+    },
+    {
+      "end": 97.465,
+      "i": 185,
+      "norm": "o",
+      "sentence": 20,
+      "start": 97.364,
+      "text": "O"
+    },
+    {
+      "end": 98.333,
+      "i": 186,
+      "norm": "bells",
+      "sentence": 20,
+      "start": 97.526,
+      "text": "bells!"
+    },
+    {
+      "end": 99.538,
+      "i": 187,
+      "norm": "but",
+      "sentence": 21,
+      "start": 99.114,
+      "text": "But"
+    },
+    {
+      "end": 100.103,
+      "i": 188,
+      "norm": "i",
+      "sentence": 21,
+      "start": 100.022,
+      "text": "I"
+    },
+    {
+      "end": 100.83,
+      "i": 189,
+      "norm": "with",
+      "sentence": 21,
+      "start": 100.608,
+      "text": "with"
+    },
+    {
+      "end": 101.839,
+      "i": 190,
+      "norm": "mournful",
+      "sentence": 21,
+      "start": 101.072,
+      "text": "mournful"
+    },
+    {
+      "end": 102.789,
+      "i": 191,
+      "norm": "tread",
+      "sentence": 21,
+      "start": 102.0,
+      "text": "tread,"
+    },
+    {
+      "end": 103.236,
+      "i": 192,
+      "norm": "walk",
+      "sentence": 22,
+      "start": 102.789,
+      "text": "Walk"
+    },
+    {
+      "end": 103.478,
+      "i": 193,
+      "norm": "the",
+      "sentence": 22,
+      "start": 103.377,
+      "text": "the"
+    },
+    {
+      "end": 103.781,
+      "i": 194,
+      "norm": "deck",
+      "sentence": 22,
+      "start": 103.519,
+      "text": "deck"
+    },
+    {
+      "end": 104.105,
+      "i": 195,
+      "norm": "my",
+      "sentence": 22,
+      "start": 103.923,
+      "text": "my"
+    },
+    {
+      "end": 104.732,
+      "i": 196,
+      "norm": "captain",
+      "sentence": 22,
+      "start": 104.226,
+      "text": "Captain"
+    },
+    {
+      "end": 105.702,
+      "i": 197,
+      "norm": "lies",
+      "sentence": 22,
+      "start": 104.813,
+      "text": "lies,"
+    },
+    {
+      "end": 106.991,
+      "i": 198,
+      "norm": "fallen",
+      "sentence": 23,
+      "start": 106.223,
+      "text": "Fallen"
+    },
+    {
+      "end": 107.82,
+      "i": 199,
+      "norm": "cold",
+      "sentence": 23,
+      "start": 107.173,
+      "text": "cold"
+    },
+    {
+      "end": 108.629,
+      "i": 200,
+      "norm": "and",
+      "sentence": 23,
+      "start": 108.528,
+      "text": "and"
+    },
+    {
+      "end": 109.316,
+      "i": 201,
+      "norm": "dead",
+      "sentence": 23,
+      "start": 108.79,
+      "text": "dead."
+    }
+  ]
+}
