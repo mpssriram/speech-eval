@@ -26,6 +26,9 @@ def normalize_tokens(text: str) -> list[str]:
     text = text.lower().replace("&", " and ")
     text = re.sub(r"(?<=\d),(?=\d{3}(?:\D|$))", "", text)
     text = re.sub(r"\d+", _number_to_words, text)
+    # Spoken number compounds must retain the same tokenization as their digit forms.
+    text = re.sub(r"\b(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)-(one|two|three|four|five|six|seven|eight|nine)\b", r"\1 \2", text)
+    text = re.sub(r"\b([a-z])-(one|two|three|four|five|six|seven|eight|nine)\b", r"\1 \2", text)
     text = text.replace("’", "'").replace("‘", "'")
     text = re.sub(r"['-]", "", text)
     text = re.sub(r"[^a-z]+", " ", text)

@@ -72,3 +72,33 @@ User said continue. Implemented `speecheval gold prepare` with frozen provenance
 Real artifact verification and byte-identical cached preparation passed. Independent read-only review confirmed all 60 candidates. Two failing identity regressions preceded the schema/identity safeguard fix; full suite 69 passed. Preparation never runs evaluation or chooses a primary aligner. User must annotate the 60 boundaries in Praat and save the three final TextGrids outside todo. Detailed handoff: `reports/day01_gold_annotation.md`. Phase 1 remains incomplete.
 
 Reproduce inside WSL: `env -u PYTHONPATH ~/.local/bin/uv run speecheval gold prepare`, `env -u PYTHONPATH ~/.local/bin/uv run python scripts/check_gold.py`, `scripts/test.sh -o addopts='' -q`.
+
+## 2026-10-06 — supplied Step 7a annotations; Step 7b complete; STOP after report
+
+Latest user instruction supersedes earlier promotion/QA requests: stop after the bake-off report. Phase 1 is not yet closed; primary promotion and Step 8 remain pending. No Phase 2 work was started.
+
+- Copied (not moved) three TextGrids and ANNOTATION_NOTES.md from gold_pack/done into data/gold/alignment, next to todo. The annotator is Claude, visually using waveform/spectrogram/intensity/pitch, without listening, plus a human spot-check reported by the user. The notes contain no actual human boundary measurements or measured error estimate. This is a limited supplied reference, not fully human-listened gold; independence is asserted by the annotator, not proven by this evaluation.
+- Each supplied grid has 41 total intervals including gaps and 20 labelled words. Excluded trailing question marks: Gettysburg lv_fb 5, JFK 5, Reagan 13; 37 words / 74 boundaries remain. Labels, bounds, ordering and non-overlap pass. Seventeen intervals extend beyond old template boxes and are flagged but retained within recording bounds, not clipped to model suggestions. Supplied files and todo originals remain byte-identical.
+- Spelled every remaining numeric body token in JFK, Reagan and O Captain lv_apc, preserving punctuation/comments. This includes all seven requested examples, C-1/F-1 digit portions, 25, 390 and 2006. All 30 normalized token sequences are unchanged. Archived original texts/masks/windows, committed complete old-to-new word-span mappings, remapped mask hashes/indices, regenerated the three affected windows and reran diffs (163 groups). Raw audio, ASR caches, cuts and the other 27 frozen windows are unchanged. Historical calibrated acoustic evidence remains historical, not falsely relabelled as verification of the expanded text.
+- Reran both aligners on all 30 current transcripts: MFA CPU one job 143.179 s; WhisperX CPU one thread 767.813 s. All 60 JSON/TextGrid pairs match the current texts/masks/windows and valid timing schema. MFA has 0 interpolated words and 84 OOV word occurrences; WhisperX has 0 interpolated words and 0 emitted OOV warnings (character-based alignment, not equivalent lexical dictionary coverage).
+- Two additional real fresh-process runs per aligner on the three gold recordings produced identical JSON SHA256 pairs for all three: MFA 53.417 / 53.183 s, WhisperX 82.378 / 80.104 s. Hardware: Intel Core Ultra 9 275HX, WSL Ubuntu 24.04, CPU only. Exact hashes, per-word errors and environment/model fingerprints are committed with the audit.
+
+| Aligner | Start median / mean ms | End median / mean ms | Pooled median ms | Boundaries within 20 / 50 ms |
+|---|---:|---:|---:|---:|
+| MFA | 61.000 / 74.541 | 38.000 / 66.081 | 52.000 | 13.514% / 48.649% |
+| WhisperX | 134.000 / 143.243 | 45.000 / 108.486 | 72.000 | 16.216% / 39.189% |
+
+Recommendation: MFA by lower pooled median (20 ms difference, so the tie-break is not needed). **Both fail the 90%-within-50-ms target**, explicitly recorded as risks. Small selected visual reference, 23 unclear-word exclusions and unquantified spot-check quality limit interpretation. Recommendation does not establish general accuracy. `alignment.primary` remains null and nothing was promoted, consistent with the requested report-only stop.
+
+Verification: `make test` with ROS-style PYTHONPATH inherited passed 80/80; the Makefile removes it and disables external plugins. `scripts/check_bakeoff.py` verified all raw hashes, supplied files/HQ audio/todo bytes, current mappings/masks, all 30 frozen cuts and window provenance, 60 JSON/TextGrids, 12 actual determinism outputs and report arithmetic. Cached alignment and bake-off reruns are byte-identical. Test-first implementation and one final code-review fix pass added stale-dataset, complete-migration and model/environment-cache safeguards; no review findings remain deferred for this step.
+
+Reproduce in WSL:
+
+```bash
+cd /home/sriram/speech-eval
+env -u PYTHONPATH ~/.local/bin/uv run speecheval evaluate alignment
+env -u PYTHONPATH ~/.local/bin/uv run python scripts/check_bakeoff.py
+make test
+```
+
+Use `speecheval evaluate alignment --force` for four new actual determinism passes. `check_gold.py` and `check_alignment.py` are historical pre-annotation checks; their no-gold/unchanged-original-text assumptions no longer describe this stage. Use the current check above. Reports: reports/day01_gold_annotation.md and reports/day01_aligner_bakeoff.md. STOP here.

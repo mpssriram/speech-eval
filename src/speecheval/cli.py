@@ -87,8 +87,10 @@ def gold_prepare() -> None:
 
 
 @evaluate_app.command("alignment")
-def evaluate_alignment() -> None:
-    """Evaluate word-boundary alignment against human gold data."""
+def evaluate_alignment(force: bool = typer.Option(False, help="Actually rerun both independent determinism passes.")) -> None:
+    """Evaluate word boundaries against the supplied annotated reference."""
+    from speecheval.evaluate import evaluate_alignment as evaluate
+    evaluate(force=force)
 
 
 @report_app.command("alignment")

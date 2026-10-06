@@ -18,9 +18,9 @@ def link_audio(source: Path, target: Path) -> None:
     if not target.exists():os.link(source,target)
 
 
-def run_mfa(root: Path, recordings: list[dict[str,Any]], settings: dict[str,Any]) -> dict[str,dict[str,Any]]:
+def run_mfa(root: Path, recordings: list[dict[str,Any]], settings: dict[str,Any], isolated: bool = False) -> dict[str,dict[str,Any]]:
     """Run installed MFA CPU with one fixed job; all temporary state remains in repo."""
-    work=root/'data/.cache/mfa'
+    work=root/('data/.cache/mfa/bakeoff' if isolated else 'data/.cache/mfa')
     corpus=work/'corpus';corpus.mkdir(parents=True,exist_ok=True)
     home=Path('/home/sriram')
     pretrained=home/'Documents/MFA/pretrained_models'
@@ -69,7 +69,7 @@ def run_mfa(root: Path, recordings: list[dict[str,Any]], settings: dict[str,Any]
         final_dictionary.write_text(dictionary.read_text().rstrip()+'\n'+generated.read_text())
         missing=set(oov)-{line.split()[0] for line in generated.read_text().splitlines() if line.strip()}
         if missing:raise ValueError(f'G2P did not generate pronunciations for {sorted(missing)}')
-    _write_json(root/'data/alignment/mfa_oovs.json',{'oovs':oov,'num_jobs':1,'beam':settings['beam'],
+    _write_json(work/'oov_audit.json' if isolated else root/'data/alignment/mfa_oovs.json',{'oovs':oov,'num_jobs':1,'beam':settings['beam'],
         'retry_beam':settings['retry_beam'],'dictionary':settings['dictionary'],'g2p_model':settings['g2p_model']})
     output=work/'output'
     call('align',['align',str(corpus),str(final_dictionary),str(acoustic),str(output),'--config_path',str(cfg),'--overwrite'])

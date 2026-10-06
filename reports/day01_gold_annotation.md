@@ -1,6 +1,26 @@
-# Step 7a — human boundary annotation required
+# Step 7a — supplied visual annotation and human spot-check
 
-Preparation is complete; **these are unreviewed templates, not gold labels**. No bake-off results or primary aligner recommendation have been generated.
+## 2026-10-06 — completed annotations received
+
+The three TextGrids and `ANNOTATION_NOTES.md` were copied, not moved, from the user's `gold_pack/done/` to `data/gold/alignment/`, alongside `todo/`. Source/destination bytes were compared. The originals in done and todo are unchanged.
+
+**Annotator: Claude, visual annotation from waveform/spectrogram/intensity/pitch tracks, not listened**, plus a human spot-check reported by the user. The notes list seven suggested human spot checks but provide no measured human boundaries or numerical annotation-error estimate. This is not fully human-listened gold. Independence from MFA/WhisperX is asserted by the annotator, not independently proven by the evaluation.
+
+| Recording | Total intervals | Labelled words | Excluded trailing ? | Eligible words |
+|---|---:|---:|---:|---:|
+| gettysburg__lv_fb__orig | 41 | 20 | 5 | 15 |
+| jfk_rice__jfk__orig | 41 | 20 | 5 | 15 |
+| reagan_challenger__reagan__orig | 41 | 20 | 13 | 7 |
+
+The 41 intervals include blank gaps, including a gap before the first word. Validation counts the 20 labelled intervals and matches labels in order, removing only a trailing ?. Unclear words are excluded from comparison. All intervals must remain finite, non-overlapping and inside the prepared audio.
+
+Seventeen supplied intervals extend beyond the old aligner-derived template windows. They are preserved and explicitly reported, not clipped to model suggestions. Frozen numeric template labels are mapped to the full expanded transcript word span, including any index shifts. Annotation files are never rewritten for the numeric alignment fix.
+
+Current evaluation command: `env -u PYTHONPATH ~/.local/bin/uv run speecheval evaluate alignment`. Results and limitations are in `reports/day01_aligner_bakeoff.md`. The historical template handoff below is retained for provenance, not a request for additional approval or a claim that these annotations were heard by a human.
+
+## Historical template preparation
+
+At preparation time these were **unreviewed templates, not gold labels**. The subsequent supplied annotations have the provenance described above.
 
 | Recording | Why selected | Candidate words |
 |---|---|---:|
@@ -10,7 +30,7 @@ Preparation is complete; **these are unreviewed templates, not gold labels**. No
 
 Selection excludes uncertain/interpolated words and requires at least 0.15 s word duration in both aligners. Twenty unique samples span each eligible word list using a rounded fractional stride. Each candidate averages the two aligners' start/end times, then widens by 0.15 s on each side, clipped to the prepared recording. The selection and original model boundaries are frozen in `data/gold/alignment/todo/selection.json`.
 
-## What the user must do
+## Original annotation handoff (historical)
 
 1. In Praat, open the prepared WAV from `\\wsl$\Ubuntu\home\sriram\speech-eval\data\audio\hq\{recording_id}.wav` and its template from `\\wsl$\Ubuntu\home\sriram\speech-eval\data\gold\alignment\todo\{recording_id}.TextGrid`.
 2. Open the sound and TextGrid together in View & Edit. For each of the 20 labeled words, zoom in, listen, and inspect the waveform/spectrogram. Tighten the `gold` interval to the actual start and end of that word. The deliberately widened template is not a correct label.
