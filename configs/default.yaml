@@ -19,7 +19,7 @@ asr:
   temperature: 0.0
   compute_type: float16
 alignment:
-  primary: null
+  primary: mfa
   sentence_window_padding_s: 0.3
   mfa:
     acoustic_model: english_mfa
@@ -27,6 +27,11 @@ alignment:
     g2p_model: english_us_mfa
     beam: 100
     retry_beam: 400
+    custom_dictionary: data/dictionaries/custom_english_us_mfa.dict
+    custom_dictionary_sha256: 545628038195f4fca6435fd8b2cf32243ec00b05466f5d10a08cd04cca69c6df
+  bakeoff:
+    bootstrap_seed: 20261007
+    bootstrap_resamples: 10000
 rounding:
   time_decimals: 3
   feature_sig_digits: 4

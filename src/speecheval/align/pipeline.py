@@ -8,12 +8,19 @@ import time
 from pathlib import Path
 import yaml
 from speecheval.align.base import Alignment, write_textgrid
-from speecheval.align.mfa import run_mfa
+from speecheval.align.mfa import check_custom_dictionary, ensure_adoption, run_mfa
 from speecheval.align.whisperx_align import align_recording
 from speecheval.transcripts import _body_text
 from speecheval.verify import _hash_bytes, _refresh_output_windows, _write_json
 
 LOGGER=logging.getLogger(__name__)
+
+
+def promote_outputs(root: Path, primary: str, ids: list[str]) -> None:
+    """Copy only selected recording artifacts; source provenance is not a recording."""
+    for rid in ids:
+        for suffix in ('.json','.TextGrid'):
+            shutil.copyfile(root/'data/alignment'/primary/(rid+suffix),root/'data/alignment'/(rid+suffix))
 
 
 def ensure_windows(root: Path, config: dict, rows: list[dict], force: bool) -> None:
@@ -35,14 +42,19 @@ def ensure_windows(root: Path, config: dict, rows: list[dict], force: bool) -> N
     if refresh:_refresh_output_windows(root,config,{'transcripts':refresh})
 
 
-def run_alignment(aligner: str = 'both', force: bool = False, promote: bool = False) -> None:
+def run_alignment(aligner: str = 'both', force: bool = False, promote: bool = False, dictionary_experiment: bool = False) -> None:
     """Produce validated JSON/TextGrid for all prepared recordings; no gold work."""
     root=Path.cwd();config=yaml.safe_load((root/'configs/default.yaml').read_text())
+    check_custom_dictionary(root,config['alignment']['mfa'])
+    if dictionary_experiment and promote:raise ValueError('An unapproved dictionary experiment cannot promote')
+    if not dictionary_experiment:ensure_adoption(root,config['alignment']['mfa'])
     if promote:
         primary=config['alignment']['primary']
         if primary not in ('mfa','whisperx'):raise ValueError('Set alignment.primary after Step 7 bake-off before promotion')
-        for path in (root/'data/alignment'/primary).glob('*'):
-            if path.suffix in ('.json','.TextGrid'):shutil.copyfile(path,root/'data/alignment'/path.name)
+        from speecheval.evaluate import load_recordings, validate_dataset
+        ids=[r['recording_id'] for r in csv.DictReader((root/'data/manifest/recordings.csv').open())]
+        validate_dataset(root,config,load_recordings(root,ids))
+        promote_outputs(root,primary,ids)
         return
     if aligner not in ('both','mfa','whisperx'):raise ValueError('Aligner must be mfa, whisperx or both')
     rows=list(csv.DictReader((root/'data/manifest/recordings.csv').open()))

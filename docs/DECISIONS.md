@@ -1,5 +1,25 @@
 # Execution decisions
 
+## 2026-10-07 — final Phase 1 analysis and autonomous continuation
+
+Current order: correct provenance/counts; signed/bias/bootstrap/breakdown diagnostics; deterministic committed G2P dictionary experiment; MFA promotion; QA, acceptance and tests; commit/push. The latest user then authorizes continuing later phases without approval pauses. Respect missing user-audio and human-evidence limits; never fabricate them.
+
+- Human spot-check is PENDING, not reported/completed. The prior report's claim is corrected; historical log statements are superseded, not treated as evidence.
+- Ruling: keep corpus coverage in a separate table (30 recordings, actual transcript-word count); the gold table uses 37 words / 74 edges. The 84 baseline OOVs count repeated whitespace-word occurrences containing a base-dictionary-missing normalized token. There were 18 unique forms and temporary G2P already supplied pronunciations; this is not a count of failed alignments.
+- Ruling: bootstrap paired words, stratified within the three recordings (15/15/7), retain both edges together, 10,000 resamples, seed 20261007. Show mean and median absolute-error differences MFA minus WhisperX and percentile 95% CIs. These are conditional on the selected visual reference, not population CIs over readers or annotation uncertainty.
+- Ruling: subtract each aligner's separate median signed start/end bias only for an in-sample pooled-error diagnostic. Do not alter stored timings or use corrected errors for aligner selection.
+- Ruling: CMUdict first phoneme defines lexical stop initials P/B/T/D/K/G; affricates are other, absent/mixed variants unknown. No acoustic onset claim. Cost if wrong: subgroup descriptions may not reflect realized speech.
+- Ruling: G2P creates a committed supplemental dictionary; pipeline combines it with the installed base dictionary. Generate twice and hash canonical outputs, preserve all variants. Adopt only if OOV coverage reaches zero and gold absolute errors do not worsen; retain the baseline audit/alignments for comparison. Hash-check dictionary contents before cached reuse.
+- Five behavior regressions were observed failing before implementing signed bias, paired bootstrap, onset classification, pronunciation canonicalization and QA edge/count rules. Existing main-branch workflow/push authorization is retained; no new worktree or approval gate is introduced.
+
+Final review: one Important adoption-gate finding accepted and fixed in one pass. Comparison now validates all current source alignments/provenance, counts OOV occurrences from the actual corpus outputs, binds dictionary/candidate/input/gold artifacts by hashes and fails rejection. Default alignment/evaluation, promotion and Phase 1 acceptance require matching accepted evidence. Candidate runs require explicit `--dictionary-experiment` and cannot promote. One rejection/stale-evidence regression was observed RED before the fix; complete suite verification follows.
+
+Final: minor (deferred): bootstrap unit regression has homogeneous rows and does not strongly detect independently resampled edges or lost stratification. The implemented algorithm was reviewed as correctly paired/stratified; defer a heterogeneous-fixture regression rather than a second review/fix loop.
+
+Final: Ruling: reviewer declined acoustic/pronunciation accuracy, annotator independence and human review — retain pending-human provenance and gold-quality risk; code/hash agreement is not human truth. Cost if wrong: visually annotated boundaries or G2P phones may bias later feature placement.
+
+Final: Ruling: reviewer declined ongoing real inference/QA/acceptance/tests and source/push verification — executor runs them, reads results and checks hashes/remote before claiming completion. Later-phase engineering may proceed under the latest explicit authorization; no implicit human acceptance is inferred.
+
 ## 2026-10-06 — supplied visual gold and number rendering
 
 Latest scope: copy supplied annotations, expand numbers, regenerate affected alignment inputs, complete Step 7b bake-off and STOP after its report. Do not start Phase 2. Do not silently promote an aligner or claim Phase 1 complete before the remaining choice/QA/acceptance steps.

@@ -83,7 +83,8 @@ def installed_inference_fingerprint(root: Path, config: dict) -> dict:
            'mfa_dictionary':pretrained/'dictionary'/f"{mfa['dictionary']}.dict",
            'mfa_g2p':pretrained/'g2p'/f"{mfa['g2p_model']}.zip",
            'whisperx_checkpoint':root/'data/.cache/torch/wav2vec2_fairseq_base_ls960_asr_ls960.pth'}
-    versions={name:importlib.metadata.version(name) for name in ('torch','torchaudio','whisperx','numpy','scipy','praatio')}
+    if mfa.get('custom_dictionary'):paths['custom_dictionary']=root/mfa['custom_dictionary']
+    versions={name:importlib.metadata.version(name) for name in ('torch','torchaudio','whisperx','numpy','scipy','praatio','cmudict')}
     # Kalpy is conda-native here and has no Python distribution metadata.
     command=['/home/sriram/miniforge3/bin/conda','list','-n','aligner','--json']
     env=os.environ.copy();env.pop('PYTHONPATH',None)
@@ -200,6 +201,8 @@ def evaluate_alignment(root: Path | None = None, force: bool = False) -> None:
             item['current_indices']=mappings[rid][item['word_index']]
     recordings=load_recordings(root,ids)
     config=yaml.safe_load((root/'configs/default.yaml').read_text())
+    from speecheval.align.mfa import ensure_adoption
+    ensure_adoption(root,config['alignment']['mfa'])
     all_ids=[r['recording_id'] for r in csv.DictReader((root/'data/manifest/recordings.csv').open())]
     scored_artifact_hashes=validate_dataset(root,config,load_recordings(root,all_ids))
     inputs={'recordings':recordings,'settings':config['alignment'],
@@ -208,7 +211,7 @@ def evaluate_alignment(root: Path | None = None, force: bool = False) -> None:
             'selection_sha256':_hash_bytes((root/'data/gold/alignment/todo/selection.json').read_bytes()),
             'migration_sha256':_hash_bytes(migration_path.read_bytes()) if migration_path.exists() else None,
             'implementation_sha256':{str(p.relative_to(root)):_hash_bytes(p.read_bytes()) for p in
-                [root/'src/speecheval/evaluate.py',root/'src/speecheval/align/mfa.py',root/'src/speecheval/align/whisperx_align.py',root/'src/speecheval/align/base.py',root/'src/speecheval/transcripts.py']}}
+                [root/'src/speecheval/evaluate.py',root/'src/speecheval/alignment_analysis.py',root/'src/speecheval/align/mfa.py',root/'src/speecheval/align/whisperx_align.py',root/'src/speecheval/align/base.py',root/'src/speecheval/transcripts.py']}}
     identity=_hash_bytes(json.dumps(inputs,sort_keys=True).encode())
     cache=root/'data/review/bakeoff'/identity
     env=os.environ.copy();env.pop('PYTHONPATH',None)
@@ -252,7 +255,10 @@ def evaluate_alignment(root: Path | None = None, force: bool = False) -> None:
             'dataset_run':json.loads((root/'data/alignment'/name/'provenance.json').read_text())}
     recommendation=recommend_aligner(evidence)
     audit={'schema':'alignment_bakeoff/v1','input_identity':identity,'inputs':inputs,'gold':gold,'evidence':evidence,
-           'recommendation':recommendation,'details':details,'annotation_method':'Claude visual, not listened; user-reported human spot-check'}
+           'recommendation':recommendation,'details':details,'annotation_method':'Claude visual, not listened; human spot-check PENDING'}
+    from speecheval.alignment_analysis import annotate_audit
+    analysis_settings=config['alignment']['bakeoff']
+    annotate_audit(root,audit,analysis_settings['bootstrap_seed'],analysis_settings['bootstrap_resamples'])
     _write_json(root/'data/review/alignment_bakeoff.json',audit)
     write_bakeoff_report(root,audit)
     LOGGER.info('Bake-off complete: recommended %s; STOP after report',recommendation)
@@ -261,18 +267,18 @@ def evaluate_alignment(root: Path | None = None, force: bool = False) -> None:
 def write_bakeoff_report(root: Path, audit: dict) -> None:
     """Write the evidence and annotation limitations without claiming human-listened gold."""
     lines=['# Day 1 aligner bake-off','',
-        'Annotator: **Claude**, visually from waveform/spectrogram/intensity/pitch, **without listening**, plus a human spot-check reported by the user. This is not fully human-listened gold. The notes suggest seven spot-check words but contain no human boundary measurements or measured annotation-error estimate. Independence from MFA/WhisperX is asserted by the annotator, not independently established by this evaluation.',
+        'Annotator: **Claude**, visually from waveform/spectrogram/intensity/pitch, **without listening**. Human spot-check: **PENDING**. This is not fully human-listened gold. The notes suggest seven spot-check words but contain no human boundary measurements or measured annotation-error estimate. Independence from MFA/WhisperX is asserted by the annotator, not independently established by this evaluation.',
         '', '## Validation and exclusions','',
         '| Recording | Total intervals | Labelled words | Excluded ? | Excluded transcript uncertainty | Scored | Outside old template |',
         '|---|---:|---:|---:|---:|---:|---:|']
     for rid,g in audit['gold'].items():
         lines.append(f"| {rid} | {g['total_intervals']} | {g['labelled']} | {g['excluded_question']} | {g['excluded_transcript_uncertain']} | {len(g['scored'])-g['excluded_transcript_uncertain']} | {g['outside_template']} |")
     lines.extend(['','All labelled intervals match the frozen template labels after removing only a trailing ?. Blank gaps do not count as annotated words. Bounds are finite, ordered, non-overlapping and inside the same prepared audio. Seventeen supplied boundaries extend outside old model-derived boxes; they are flagged and retained, never clipped or changed. The 41-interval grids are copied unchanged.',
-        '', '## Error table','', '| Aligner | Start median ms | Start mean ms | End median ms | End mean ms | Pooled median ms | ≤20 ms % | ≤50 ms % | Interpolated words /30 | OOV words /30 | Deterministic 3/3 | Hardware |',
+        '', '## Error table — 37 scored words, 74 pooled edges','', '| Aligner | Start median ms | Start mean ms | End median ms | End mean ms | Pooled median ms | ≤20 ms % (74 edges) | ≤50 ms % (74 edges) | Interpolated gold words /37 | OOV gold words /37 | Deterministic 3/3 | Hardware |',
         '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---|'])
     for name,e in audit['evidence'].items():
         s,t,o=e['start'],e['end'],e['overall']
-        lines.append(f"| {name} | {s['median_ms']} | {s['mean_ms']} | {t['median_ms']} | {t['mean_ms']} | {o['median_ms']} | {o['within_20_ms_pct']} | {o['within_50_ms_pct']} | {e['interpolated_words']} | {e['oov_words']} | {e['deterministic']} | CPU |")
+        lines.append(f"| {name} | {s['median_ms']} | {s['mean_ms']} | {t['median_ms']} | {t['mean_ms']} | {o['median_ms']} | {o['within_20_ms_pct']} | {o['within_50_ms_pct']} | {e['gold_interpolated_words']} | {e['gold_oov_words']} | {e['deterministic']} | CPU |")
     lines.extend(['','Threshold percentages above pool start/end boundaries. OOV counts count actual word occurrences, not unique dictionary entries.',
         '', '| Aligner | Starts within 20 ms % | Starts within 50 ms % | Ends within 20 ms % | Ends within 50 ms % |',
         '|---|---:|---:|---:|---:|'])
@@ -287,13 +293,16 @@ def write_bakeoff_report(root: Path, audit: dict) -> None:
     for name,e in audit['evidence'].items():
         for rid,pair in e['run_hashes'].items():lines.append(f'| {name} | {rid} | {pair[0]} | {pair[1]} |')
     lines.extend(['', '## Recommendation and risks','', f"Recommended: **{audit['recommendation']}** under the specified pooled median rule; when medians differ by less than 10 ms, deterministic CPU aligners win the tie, with MFA preferred if both qualify. This report does not set alignment.primary or promote files."])
+    lines.append('')
     for name,e in audit['evidence'].items():
         if e['overall']['within_50_ms_pct']<90:lines.append(f"- RISK: {name} has {e['overall']['within_50_ms_pct']}% within 50 ms, below 90%.")
     lines.extend(['', '## Limits and reproducibility','',
         'Only 37 of 60 visually annotated words are potentially scorable after 23 question-mark exclusions; this is a small selected sample, especially Reagan (7 words). Unclear-word exclusion creates selection bias. Human spot-check extent/error is not quantified, no inter-annotator study was done, and visual annotation without listening may miss acoustic ambiguity. Results compare models against this supplied reference, not an established human error-free ground truth.',
         '', 'Numeric transcript rendering was changed for alignment. Original bodies, hashes, old-to-new word spans and number edits are preserved in data/review/number_expansion.json and before_number_expansion/. Frozen templates and gold labels were NOT rewritten. Numeric gold labels map to the complete expanded word span, not just its first token. ASR, audio, raw recordings and frozen cuts are unchanged; affected diffs/windows/alignments were regenerated.',
         '', 'Reproduce inside WSL: `env -u PYTHONPATH ~/.local/bin/uv run speecheval evaluate alignment`. Cached evidence is tied to current audio/transcript/window/config/gold/code hashes. `--force` reruns all four real inference passes. Full scoring rows and per-edge metrics: data/review/alignment_bakeoff.json.', ''])
-    (root/'reports/day01_aligner_bakeoff.md').write_text('\n'.join(lines))
+    from speecheval.alignment_analysis import report_lines
+    lines.extend(report_lines(audit))
+    (root/'reports/day01_aligner_bakeoff.md').write_text('\n'.join(lines)+'\n')
 
 
 if __name__=='__main__':

@@ -34,10 +34,12 @@
     "reagan_challenger__reagan__orig": "da2f84a9e2d222215041d8f0d2201a59fdc1b56a84d779ba911ff5e7599ad69c"
   },
   "recordings": 30,
-  "runtime_s": 143.179,
+  "runtime_s": 152.82,
   "settings": {
     "acoustic_model": "english_mfa",
     "beam": 100,
+    "custom_dictionary": "data/dictionaries/custom_english_us_mfa.dict",
+    "custom_dictionary_sha256": "545628038195f4fca6435fd8b2cf32243ec00b05466f5d10a08cd04cca69c6df",
     "dictionary": "english_us_mfa",
     "g2p_model": "english_us_mfa",
     "retry_beam": 400

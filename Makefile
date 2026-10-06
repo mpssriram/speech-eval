@@ -1,8 +1,8 @@
 UV ?= $(HOME)/.local/bin/uv
 export PYTEST_DISABLE_PLUGIN_AUTOLOAD := 1
-export TMPDIR := $(CURDIR)/data/.cache/tmp
+export TMPDIR := $(CURDIR)/.pytest_work/tmp
 
 .PHONY: test
 test:
 	mkdir -p "$(TMPDIR)"
-	env -u PYTHONPATH $(UV) run pytest --basetemp=data/.cache/pytest
+	env -u PYTHONPATH $(UV) run pytest --basetemp=.pytest_work/runs

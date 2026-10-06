@@ -1,0 +1,179 @@
+{
+  "accepted": true,
+  "after": {
+    "end": {
+      "mean_ms": 66.081,
+      "median_ms": 38.0,
+      "within_20_ms_pct": 13.514,
+      "within_50_ms_pct": 59.459
+    },
+    "oov_words": 0,
+    "overall": {
+      "mean_ms": 70.311,
+      "median_ms": 52.0,
+      "within_20_ms_pct": 13.514,
+      "within_50_ms_pct": 48.649
+    },
+    "start": {
+      "mean_ms": 74.541,
+      "median_ms": 61.0,
+      "within_20_ms_pct": 13.514,
+      "within_50_ms_pct": 37.838
+    }
+  },
+  "artifact_hashes": {
+    "data/alignment/mfa/gettysburg__lv_amb__orig.json": "6374219bf5f3721240ac54e511c5b3ccb2372204061a6d4bc74c85f496a4ba8d",
+    "data/alignment/mfa/gettysburg__lv_dj__orig.json": "34641ac9a4e2f12d4ea63586ce2152ef4b9c48ed671c17ce717f9daeef1e5a7c",
+    "data/alignment/mfa/gettysburg__lv_dl__orig.json": "cc7d6f6c1d6ebbb958b450da22b5ac0784bf7a6bfff14b64955b8bbc0904b5ec",
+    "data/alignment/mfa/gettysburg__lv_eep__orig.json": "dec87ab946eeaf8a5a141954c1e93daab66b6f4543595acb3452c79037b69aa0",
+    "data/alignment/mfa/gettysburg__lv_fb__orig.json": "7d9a7f5a2455ea5ae0aeeea8bbeb9df379f9c75fef7f4b3a149d90c955d01c86",
+    "data/alignment/mfa/gettysburg__lv_jn__orig.json": "45e937d32083fac8aa8a10b9f50f10ae7012b73dd6f951346c69af98f99ae49a",
+    "data/alignment/mfa/gettysburg__lv_law__orig.json": "41af2bd059d254d12729c054dbb4dca401c206ec27212262b5e0779a8b4eb0de",
+    "data/alignment/mfa/gettysburg__lv_lb__orig.json": "0ed994366d1451e5a2b48148be811010b25e399f92cd2b9681243719eb2b5dc5",
+    "data/alignment/mfa/gettysburg__lv_mas__orig.json": "e3dc47d8c4806cf3fdde416c9e6a02b210a5966ed21668ec78e388da3d354e31",
+    "data/alignment/mfa/gettysburg__lv_mk__orig.json": "5e17abfa4526400633b5023138d4fa02e619de62c0c51b446a659d7ca6c8cc4c",
+    "data/alignment/mfa/gettysburg__lv_pc__orig.json": "4ca61e3f4cb4cd67ff78c0fdc1f207eb43a6deb15305832214e4421e073a07fe",
+    "data/alignment/mfa/gettysburg__lv_rk__orig.json": "8c735c14784681a3aaa298afb0e36bfe0605f9c58739a81ffd7b70cb7b864303",
+    "data/alignment/mfa/gettysburg__lv_sa__orig.json": "79b2ce7e790510e9894e92d2ba0a4f19fbe7518c62787cf24353da8470eac713",
+    "data/alignment/mfa/gettysburg__lv_tg__orig.json": "fc807afe466492d1e77112c3a055ea090613e9aac4717f9019172933fe8cca08",
+    "data/alignment/mfa/gettysburg__lv_wt__orig.json": "63df26bd1547ae355bb9b48efe516359742b595d540949b6e01aa8a4f26d1db9",
+    "data/alignment/mfa/jfk_rice__jfk__orig.json": "d4cd775aa37916388544f716fb59c9b68e099ba3bb5b27ef2507ad7a22354482",
+    "data/alignment/mfa/o_captain__lv_apc__orig.json": "65e1206dc0ea05c2531c71425dee2d54b0eff777ca3e63b21aa511a6f2fe5096",
+    "data/alignment/mfa/o_captain__lv_chip__orig.json": "46ed99ef922e32285c1781b8e4151151c7a64632fcbad9923ed941af437770e3",
+    "data/alignment/mfa/o_captain__lv_foxits__orig.json": "4a7a2519410717a333e4b23e4c078b309718314a9ea67c97158bd2c9b73e7492",
+    "data/alignment/mfa/o_captain__lv_jtm__orig.json": "48f3ae48f10cbaea0da3f2547dc4410c60c2d281a223934b31b1291ff1a74711",
+    "data/alignment/mfa/o_captain__lv_mac__orig.json": "f4f5c75778ccd67632fb7bb47bd90eb790879f922379506ec4d969c4ed807933",
+    "data/alignment/mfa/o_captain__lv_mb__orig.json": "297d9c80baa8b3e11254331c3571a94c53daacb59c6dde581ca7f7f6b0935610",
+    "data/alignment/mfa/o_captain__lv_md__orig.json": "aced1044cacec7c79d17c937f0610a12ba160ac3ea97a59d26921d5fd3fae2fd",
+    "data/alignment/mfa/o_captain__lv_mrg__orig.json": "0725a5726287bd5249d245b75884f893c7081da3b6be02860ea8a9117b7a63eb",
+    "data/alignment/mfa/o_captain__lv_rg__orig.json": "cde73170f2877facccc509c0303e38754326f7009cbb75b0c939ff252b6bcffd",
+    "data/alignment/mfa/o_captain__lv_s__orig.json": "e164e9451de5c8e30ec60912b3bee7b1ccbd05351e8e51ff47c0ad06d91f6547",
+    "data/alignment/mfa/o_captain__lv_sjs__orig.json": "8579c7f1e02ec181b2550fb84150c2c96e16dd40305ef841443f432c4bf4a79e",
+    "data/alignment/mfa/o_captain__lv_ss__orig.json": "a6e6c5a5c657f1c52450e8a69d9f5f8459212b58420b57b39b6e8957d1c74547",
+    "data/alignment/mfa/o_captain__lv_th__orig.json": "c2a1ffeb15976049e2ddcd098d3ad817b0220ee8e4528d6ec69a4b77ff2f2994",
+    "data/alignment/mfa/provenance.json": "92078153dfd80c727cbd571c8121bdb9cc607ebfe07ec3e1dab23ed4423abf0c",
+    "data/alignment/mfa/reagan_challenger__reagan__orig.json": "9b67d7032ee86b1958f0b030bf8a61134938a86e90f47522c64b7f8bdb5769e4",
+    "data/dictionaries/custom_english_us_mfa.dict": "545628038195f4fca6435fd8b2cf32243ec00b05466f5d10a08cd04cca69c6df",
+    "data/gold/alignment/gettysburg__lv_fb__orig.TextGrid": "963b90af36134c9c7251aac6dd403f502686ba27b23419c852e683134e1b8890",
+    "data/gold/alignment/jfk_rice__jfk__orig.TextGrid": "981fabe24543f78e63ddcb7c3648ffe27c866b3c3c3b7264cc555c7932905558",
+    "data/gold/alignment/reagan_challenger__reagan__orig.TextGrid": "2bdc24d6ae12b42aaa166fac82c91486758dfdfa653a388d95231254bbc2fcdf",
+    "data/gold/alignment/todo/selection.json": "6f34a11157f83f51ef3007f99047cd0059a817582499f476b2f353d0f05cc3d9",
+    "data/manifest/recordings.csv": "a4a87f1a550f1cec4ecf6ccaac1b093ff69cba28a68bab9e5755e70114d45e1b",
+    "data/review/before_custom_dictionary/alignment_bakeoff.json": "2029f0544a9d672583ed6b8cfcea26475de0730b57117746eec7cc7f2490db0c",
+    "data/review/number_expansion.json": "f75dd8f1c66df468afff31100a2a2030d0f62074982963949a09580ec6a08ed5"
+  },
+  "before": {
+    "corpus_words": 7678,
+    "dataset_run": {
+      "aligner": "mfa",
+      "device": "cpu",
+      "input_hashes": {
+        "gettysburg__lv_amb__orig": "c1360461569b76057e7869d3af1df5cb75d69d8b55d23f3896918831c22331ea",
+        "gettysburg__lv_dj__orig": "709103016f1e3e7ac1aa8375d44f178473ddd9391ced75984896d180b6b09b63",
+        "gettysburg__lv_dl__orig": "3e3cd26c35f7cb64c46398c6e568ee6239de1dd8fd3df9ced8fff756d80d86da",
+        "gettysburg__lv_eep__orig": "8ba44ffb116b5fe314ae772a218bac1368974312382e7f6ca16347102ad85b6a",
+        "gettysburg__lv_fb__orig": "e11edbc902f641f41086aca2bc536d77ae1880f022f211809b604c05ce48f6e0",
+        "gettysburg__lv_jn__orig": "ee04c2e1a489c3fcbfe5032935b017149e4aab850a98dcbcaba5bf9238f45945",
+        "gettysburg__lv_law__orig": "4156d5af8c0dd239737a166162713586df4614efdac17ba25c5cb7100565fa1d",
+        "gettysburg__lv_lb__orig": "929399ddfd1a277ca7b64c0e7213ee74e3740801212491131d27dd020fe408aa",
+        "gettysburg__lv_mas__orig": "1e30a1e1b4361c2b1e6e45c70a7e72987d38f112599cb5317748494f6a5b79d1",
+        "gettysburg__lv_mk__orig": "5b28e6a40c45d94e58184f058bae7941a2300a939ac9ad19784bf422aaf63980",
+        "gettysburg__lv_pc__orig": "2459610adddda35e78bfc82f06e0faa22571f0c2ef75be801327ead922ca23b1",
+        "gettysburg__lv_rk__orig": "4a70f63992c8b1051d98e0efd31824b110f74aa23085114af3870308bc88a9f8",
+        "gettysburg__lv_sa__orig": "59706ce3155caa14a92cd95659bdca50f7e3a4d893edefc0b79f6a63a1475946",
+        "gettysburg__lv_tg__orig": "3dad18a3806b64c727d91379025643e5116ff0dabb92f311f79fe0c945f3ea13",
+        "gettysburg__lv_wt__orig": "8e311e13012b95899bc0ad6b32f1eb2ffc11c2b06f38843efebfb016bfe1e886",
+        "jfk_rice__jfk__orig": "e9c98ec1628e29003f0ef50bebf3962addff59d9f36071fbf1c1c643188f8da0",
+        "o_captain__lv_apc__orig": "20e0ef11d191342df7b7e3deeb20bfd726bf18017155e7d85697c144288d632c",
+        "o_captain__lv_chip__orig": "c4594017dbc88ce955009c58fb573156dc32fcde0f42b855ca0aa2541aa45deb",
+        "o_captain__lv_foxits__orig": "ba65dc16e690a5d105cb130ebfa95274014e8792dc634bb6b86a7c61412a8b63",
+        "o_captain__lv_jtm__orig": "a436c79329dd0dfd586bd5df7867baceb786ddbf2164070b622094a42b252065",
+        "o_captain__lv_mac__orig": "94607bd52f6e78ef15a6c5d1c5231349218cf42c4c442b5da39f146115810aab",
+        "o_captain__lv_mb__orig": "cbd530d82d5c41981ca37a062a1e532ea9ffac48d5ed2844f95025bc39f35338",
+        "o_captain__lv_md__orig": "68f652e38780b5f7a0a3a0f5afc564bfd246e8b6170681970f2efca9de58d2e6",
+        "o_captain__lv_mrg__orig": "be7413d10f697344c8603be9654969c44deb26bbb2162f6cb9e4af6c2056a096",
+        "o_captain__lv_rg__orig": "2b7907bf8917c1dac1c1a3424d67f3fc961b28a8ddabb5fc3e4340805d709f7c",
+        "o_captain__lv_s__orig": "2757a223e8b28dca1a6307410eac428a1fa081512714bd8cb666181c033b45e0",
+        "o_captain__lv_sjs__orig": "b6d6e1708c61aec7beffcb7ec84843c122af1835def49816592447acc3b30347",
+        "o_captain__lv_ss__orig": "9ec13eaaa2dfcb8b3a00197bf6ca6d673425d26e7faf65b51286257386dc8d42",
+        "o_captain__lv_th__orig": "e3cc4faf42ac9c8396e8fe7fcd33e1fa7e6f1ccf39eb62ac68ae94266b4594a7",
+        "reagan_challenger__reagan__orig": "da2f84a9e2d222215041d8f0d2201a59fdc1b56a84d779ba911ff5e7599ad69c"
+      },
+      "recordings": 30,
+      "runtime_s": 143.179,
+      "settings": {
+        "acoustic_model": "english_mfa",
+        "beam": 100,
+        "dictionary": "english_us_mfa",
+        "g2p_model": "english_us_mfa",
+        "retry_beam": 400
+      }
+    },
+    "deterministic": true,
+    "device": "cpu",
+    "end": {
+      "mean_ms": 66.081,
+      "median_ms": 38.0,
+      "within_20_ms_pct": 13.514,
+      "within_50_ms_pct": 59.459
+    },
+    "gold_interpolated_words": 0,
+    "gold_oov_words": 0,
+    "gold_run_runtime_s": [
+      53.417,
+      53.183
+    ],
+    "interpolated_words": 0,
+    "oov_words": 84,
+    "overall": {
+      "mean_ms": 70.311,
+      "median_ms": 52.0,
+      "within_20_ms_pct": 13.514,
+      "within_50_ms_pct": 48.649
+    },
+    "run_hashes": {
+      "gettysburg__lv_fb__orig": [
+        "7d9a7f5a2455ea5ae0aeeea8bbeb9df379f9c75fef7f4b3a149d90c955d01c86",
+        "7d9a7f5a2455ea5ae0aeeea8bbeb9df379f9c75fef7f4b3a149d90c955d01c86"
+      ],
+      "jfk_rice__jfk__orig": [
+        "d4cd775aa37916388544f716fb59c9b68e099ba3bb5b27ef2507ad7a22354482",
+        "d4cd775aa37916388544f716fb59c9b68e099ba3bb5b27ef2507ad7a22354482"
+      ],
+      "reagan_challenger__reagan__orig": [
+        "658c1964365541097412fddba0da2fc20c6bf969d8fbe43268056c851a1bd551",
+        "658c1964365541097412fddba0da2fc20c6bf969d8fbe43268056c851a1bd551"
+      ]
+    },
+    "start": {
+      "mean_ms": 74.541,
+      "median_ms": 61.0,
+      "within_20_ms_pct": 13.514,
+      "within_50_ms_pct": 37.838
+    },
+    "unique_oov": [
+      "acrowding",
+      "anchord",
+      "christa",
+      "doesnt",
+      "dont",
+      "ive",
+      "mcauliffe",
+      "mcnair",
+      "onizuka",
+      "ribbond",
+      "schoolchildren",
+      "scobee",
+      "shuttles",
+      "thats",
+      "theres",
+      "weatherd",
+      "weve",
+      "youve"
+    ],
+    "words_scored": 37
+  },
+  "gold_edges": 74,
+  "gold_words": 37,
+  "rule": "zero OOV; start/end/pooled mean and median do not worsen"
+}

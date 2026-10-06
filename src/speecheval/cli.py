@@ -49,10 +49,10 @@ def prepare(force: bool = typer.Option(False, help="Overwrite existing prepared 
 
 
 @app.command()
-def align(aligner: str = typer.Option('both'), force: bool = typer.Option(False), promote: bool = typer.Option(False)) -> None:
+def align(aligner: str = typer.Option('both'), force: bool = typer.Option(False), promote: bool = typer.Option(False), dictionary_experiment: bool = typer.Option(False, help='Run a candidate dictionary without adoption; cannot promote.')) -> None:
     """Run forced alignment for prepared recordings."""
     from speecheval.align.pipeline import run_alignment
-    run_alignment(aligner,force,promote)
+    run_alignment(aligner,force,promote,dictionary_experiment)
 
 
 @transcripts_app.command("diff")
@@ -96,6 +96,8 @@ def evaluate_alignment(force: bool = typer.Option(False, help="Actually rerun bo
 @report_app.command("alignment")
 def report_alignment() -> None:
     """Generate the alignment quality-assurance report."""
+    from speecheval.alignment_qa import report_alignment as report
+    report()
 
 
 if __name__ == "__main__":

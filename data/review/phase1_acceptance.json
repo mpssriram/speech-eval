@@ -1,0 +1,77 @@
+{
+  "all_acceptance_pass": false,
+  "checks": [
+    {
+      "evidence": "30 sources: 15 Gettysburg, 13 O Captain, JFK and Reagan; SHA256 verified",
+      "item": "Licensed source manifest and raw hashes",
+      "status": "PASS"
+    },
+    {
+      "evidence": "60 mono PCM16 WAVs: 44.1 kHz / 16 kHz",
+      "item": "Prepared audio formats and durations",
+      "status": "PASS"
+    },
+    {
+      "evidence": "Frozen ASR-anchor cuts are available; no human listening check claimed",
+      "item": "Three LibriVox listening spot-checks",
+      "status": "PENDING"
+    },
+    {
+      "evidence": "157.632 s; frozen sentence-bounded excerpt from Phase 1 ASR-anchor audit; anchor present",
+      "item": "JFK excerpt",
+      "status": "PASS"
+    },
+    {
+      "evidence": "Historical original-candidate audit: 64 APPLY_B, 18 KEEP_A, 3 UNSURE; number rendering changed without claiming new human/acoustic truth",
+      "item": "Automatic transcript audit replacing Step 5b",
+      "status": "PASS"
+    },
+    {
+      "evidence": "60 alignment/v1 outputs match transcript words, masks and provenance",
+      "item": "Both aligners produced valid current JSON",
+      "status": "PASS"
+    },
+    {
+      "evidence": "MFA selected by user; all 60 promoted artifacts byte-identical to primary",
+      "item": "Bake-off, primary selection and promotion",
+      "status": "PASS"
+    },
+    {
+      "evidence": "30 rows; 12 flagged recordings",
+      "item": "Step 8 QA report",
+      "status": "PASS"
+    },
+    {
+      "evidence": "PENDING; user approval of aligner choice is not a listening/boundary check",
+      "item": "Human Praat spot-check of flagged alignments",
+      "status": "PENDING"
+    },
+    {
+      "evidence": "Both aligners below 90% within 50 ms against limited visual reference; explicit risk, not silently passed",
+      "item": "Gold accuracy target",
+      "status": "FAIL"
+    },
+    {
+      "evidence": "Audio, manifests, alignments, windows and transcripts byte-identical",
+      "item": "Cached prepare and primary alignment hash rerun",
+      "status": "PASS"
+    },
+    {
+      "evidence": ".pytest_work/ and .pytest_cache/ ignored outside data/.cache; make test removes PYTHONPATH and disables external plugins",
+      "item": "Pytest isolation/cache placement",
+      "status": "PASS"
+    },
+    {
+      "evidence": "make test with inherited ROS PYTHONPATH: 88 tests passed; exit 0",
+      "item": "Full test suite",
+      "status": "PASS"
+    },
+    {
+      "evidence": "Current dated summary in docs/specs/PROGRESS.md",
+      "item": "Progress summary",
+      "status": "PASS"
+    }
+  ],
+  "engineering_pass": true,
+  "human_spot_check": "PENDING"
+}

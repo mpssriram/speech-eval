@@ -4,7 +4,7 @@
 
 The three TextGrids and `ANNOTATION_NOTES.md` were copied, not moved, from the user's `gold_pack/done/` to `data/gold/alignment/`, alongside `todo/`. Source/destination bytes were compared. The originals in done and todo are unchanged.
 
-**Annotator: Claude, visual annotation from waveform/spectrogram/intensity/pitch tracks, not listened**, plus a human spot-check reported by the user. The notes list seven suggested human spot checks but provide no measured human boundaries or numerical annotation-error estimate. This is not fully human-listened gold. Independence from MFA/WhisperX is asserted by the annotator, not independently proven by the evaluation.
+**Annotator: Claude, visual annotation from waveform/spectrogram/intensity/pitch tracks, not listened**. Human spot-check: **PENDING** (corrected by the user on 2026-10-07). The notes list seven suggested human spot checks but provide no measured human boundaries or numerical annotation-error estimate. This is not fully human-listened gold. Independence from MFA/WhisperX is asserted by the annotator, not independently proven by the evaluation.
 
 | Recording | Total intervals | Labelled words | Excluded trailing ? | Eligible words |
 |---|---:|---:|---:|---:|

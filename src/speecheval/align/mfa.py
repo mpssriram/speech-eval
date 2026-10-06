@@ -1,6 +1,9 @@
 """MFA corpus validation, supplementary pronunciations and fixed-job CPU alignment."""
 from __future__ import annotations
 import os
+import hashlib
+import csv
+import json
 import shutil
 import subprocess
 from pathlib import Path
@@ -10,6 +13,49 @@ import yaml
 from speecheval.align.base import make_alignment
 from speecheval.transcripts import normalize_tokens
 from speecheval.verify import _write_json
+
+
+def canonical_dictionary(text: str, required: set[str]) -> str:
+    """Canonical supplemental pronunciations, retaining every distinct phone variant."""
+    entries={tuple(line.split()) for line in text.splitlines() if line.strip()}
+    if any(len(e)<2 for e in entries):raise ValueError('Malformed pronunciation')
+    missing=required-{e[0] for e in entries}
+    if missing:raise ValueError(f'Dictionary missing words: {sorted(missing)}')
+    return ''.join(e[0]+'\t'+' '.join(e[1:])+'\n' for e in sorted(entries))
+
+
+def check_custom_dictionary(root: Path, settings: dict) -> Path | None:
+    """Reject modified dictionary contents even on a cached alignment invocation."""
+    if not settings.get('custom_dictionary'):return None
+    path=(root/settings['custom_dictionary']).resolve()
+    if not path.is_relative_to(root.resolve()):raise ValueError('Custom dictionary outside project')
+    sha=hashlib.sha256(path.read_bytes()).hexdigest()
+    if sha!=settings.get('custom_dictionary_sha256'):raise ValueError('Stale custom dictionary SHA256')
+    return path
+
+
+def adoption_identity(root: Path, settings: dict) -> dict[str,str]:
+    """Bind an adoption decision to dictionary, candidate, inputs and visual gold files."""
+    dictionary=check_custom_dictionary(root,settings)
+    paths=[dictionary,root/'data/alignment/mfa/provenance.json',root/'data/manifest/recordings.csv',
+           root/'data/review/before_custom_dictionary/alignment_bakeoff.json',root/'data/gold/alignment/todo/selection.json',
+           root/'data/review/number_expansion.json']
+    paths.extend(root/'data/alignment/mfa'/f"{r['recording_id']}.json" for r in csv.DictReader((root/'data/manifest/recordings.csv').open()))
+    paths.extend(sorted((root/'data/gold/alignment').glob('*.TextGrid')))
+    return {str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths if p is not None}
+
+
+def require_adoption(expected: dict, decision: dict) -> None:
+    """Reject failed or stale pronunciation-experiment evidence before using a default."""
+    if decision.get('accepted') is not True:raise ValueError('Custom dictionary rejected or not approved by comparison')
+    if decision.get('artifact_hashes')!=expected:raise ValueError('Custom dictionary adoption evidence stale')
+
+
+def ensure_adoption(root: Path, settings: dict) -> None:
+    """Require matching accepted corpus/gold evidence for a configured custom default."""
+    if not settings.get('custom_dictionary'):return
+    decision=json.loads((root/'data/review/custom_dictionary_comparison.json').read_text())
+    require_adoption(adoption_identity(root,settings),decision)
 
 
 def link_audio(source: Path, target: Path) -> None:
@@ -57,16 +103,22 @@ def run_mfa(root: Path, recordings: list[dict[str,Any]], settings: dict[str,Any]
         with (logs/f'{name}.log').open('w') as log:
             subprocess.run(command+args+common,env=env,stdout=log,stderr=subprocess.STDOUT,check=True,cwd=root)
     validation=work/'validation';validation.mkdir(exist_ok=True)
-    call('validate',['validate',str(corpus),str(dictionary),'--ignore_acoustics','--output_directory',str(validation)])
+    custom=check_custom_dictionary(root,settings)
     known={line.split()[0].lower() for line in dictionary.read_text().splitlines() if line.strip()}
+    base_dictionary=dictionary
+    if custom:
+        known.update(line.split()[0].lower() for line in custom.read_text().splitlines() if line.strip())
+        base_dictionary=work/'custom_combined.dict'
+        base_dictionary.write_text(dictionary.read_text().rstrip()+'\n'+custom.read_text())
+    call('validate',['validate',str(corpus),str(base_dictionary),'--ignore_acoustics','--output_directory',str(validation)])
     oov=sorted(vocab-known)
-    final_dictionary=dictionary
+    final_dictionary=base_dictionary
     if oov:
         oov_path=work/'oovs.txt';oov_path.write_text('\n'.join(oov)+'\n')
         generated=work/'supplementary.dict'
         call('g2p',['g2p',str(oov_path),str(g2p),str(generated),'--sorted'])
         final_dictionary=work/'combined.dict'
-        final_dictionary.write_text(dictionary.read_text().rstrip()+'\n'+generated.read_text())
+        final_dictionary.write_text(base_dictionary.read_text().rstrip()+'\n'+generated.read_text())
         missing=set(oov)-{line.split()[0] for line in generated.read_text().splitlines() if line.strip()}
         if missing:raise ValueError(f'G2P did not generate pronunciations for {sorted(missing)}')
     _write_json(work/'oov_audit.json' if isolated else root/'data/alignment/mfa_oovs.json',{'oovs':oov,'num_jobs':1,'beam':settings['beam'],

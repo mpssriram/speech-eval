@@ -1,0 +1,3654 @@
+{
+  "analysis": {
+    "baseline_oov": [
+      {
+        "in_scored_words": false,
+        "word": "acrowding"
+      },
+      {
+        "in_scored_words": false,
+        "word": "anchord"
+      },
+      {
+        "in_scored_words": false,
+        "word": "christa"
+      },
+      {
+        "in_scored_words": false,
+        "word": "doesnt"
+      },
+      {
+        "in_scored_words": false,
+        "word": "dont"
+      },
+      {
+        "in_scored_words": false,
+        "word": "ive"
+      },
+      {
+        "in_scored_words": false,
+        "word": "mcauliffe"
+      },
+      {
+        "in_scored_words": false,
+        "word": "mcnair"
+      },
+      {
+        "in_scored_words": false,
+        "word": "onizuka"
+      },
+      {
+        "in_scored_words": false,
+        "word": "ribbond"
+      },
+      {
+        "in_scored_words": false,
+        "word": "schoolchildren"
+      },
+      {
+        "in_scored_words": false,
+        "word": "scobee"
+      },
+      {
+        "in_scored_words": false,
+        "word": "shuttles"
+      },
+      {
+        "in_scored_words": false,
+        "word": "thats"
+      },
+      {
+        "in_scored_words": false,
+        "word": "theres"
+      },
+      {
+        "in_scored_words": false,
+        "word": "weatherd"
+      },
+      {
+        "in_scored_words": false,
+        "word": "weve"
+      },
+      {
+        "in_scored_words": false,
+        "word": "youve"
+      }
+    ],
+    "bootstrap": {
+      "end": {
+        "mean_ci95_ms": [
+          -99.166,
+          0.703
+        ],
+        "mean_difference_ms": -42.405,
+        "median_ci95_ms": [
+          -21.0,
+          14.0
+        ],
+        "median_difference_ms": -7.0
+      },
+      "pooled": {
+        "mean_ci95_ms": [
+          -84.19,
+          -31.526
+        ],
+        "mean_difference_ms": -55.554,
+        "median_ci95_ms": [
+          -64.5,
+          -3.5
+        ],
+        "median_difference_ms": -20.0
+      },
+      "start": {
+        "mean_ci95_ms": [
+          -95.028,
+          -43.513
+        ],
+        "mean_difference_ms": -68.703,
+        "median_ci95_ms": [
+          -136.0,
+          -18.0
+        ],
+        "median_difference_ms": -73.0
+      }
+    },
+    "onsets": {
+      "mfa": {
+        "other": {
+          "start": {
+            "mean_ms": 69.077,
+            "median_ms": 58.5,
+            "within_20_ms_pct": 15.385,
+            "within_50_ms_pct": 42.308
+          },
+          "words": 26
+        },
+        "stop": {
+          "start": {
+            "mean_ms": 87.455,
+            "median_ms": 81.0,
+            "within_20_ms_pct": 9.091,
+            "within_50_ms_pct": 27.273
+          },
+          "words": 11
+        },
+        "unknown": {
+          "start": null,
+          "words": 0
+        }
+      },
+      "whisperx": {
+        "other": {
+          "start": {
+            "mean_ms": 138.885,
+            "median_ms": 129.5,
+            "within_20_ms_pct": 11.538,
+            "within_50_ms_pct": 15.385
+          },
+          "words": 26
+        },
+        "stop": {
+          "start": {
+            "mean_ms": 153.545,
+            "median_ms": 205.0,
+            "within_20_ms_pct": 0.0,
+            "within_50_ms_pct": 27.273
+          },
+          "words": 11
+        },
+        "unknown": {
+          "start": null,
+          "words": 0
+        }
+      }
+    },
+    "per_recording": {
+      "mfa": {
+        "gettysburg__lv_fb__orig": {
+          "end": {
+            "mean_ms": 52.267,
+            "median_ms": 40.0,
+            "within_20_ms_pct": 13.333,
+            "within_50_ms_pct": 60.0
+          },
+          "start": {
+            "mean_ms": 75.0,
+            "median_ms": 78.0,
+            "within_20_ms_pct": 20.0,
+            "within_50_ms_pct": 40.0
+          },
+          "words": 15
+        },
+        "jfk_rice__jfk__orig": {
+          "end": {
+            "mean_ms": 86.933,
+            "median_ms": 47.0,
+            "within_20_ms_pct": 20.0,
+            "within_50_ms_pct": 53.333
+          },
+          "start": {
+            "mean_ms": 82.333,
+            "median_ms": 88.0,
+            "within_20_ms_pct": 13.333,
+            "within_50_ms_pct": 33.333
+          },
+          "words": 15
+        },
+        "reagan_challenger__reagan__orig": {
+          "end": {
+            "mean_ms": 51.0,
+            "median_ms": 36.0,
+            "within_20_ms_pct": 0.0,
+            "within_50_ms_pct": 71.429
+          },
+          "start": {
+            "mean_ms": 56.857,
+            "median_ms": 57.0,
+            "within_20_ms_pct": 0.0,
+            "within_50_ms_pct": 42.857
+          },
+          "words": 7
+        }
+      },
+      "whisperx": {
+        "gettysburg__lv_fb__orig": {
+          "end": {
+            "mean_ms": 88.6,
+            "median_ms": 52.0,
+            "within_20_ms_pct": 26.667,
+            "within_50_ms_pct": 46.667
+          },
+          "start": {
+            "mean_ms": 146.867,
+            "median_ms": 174.0,
+            "within_20_ms_pct": 20.0,
+            "within_50_ms_pct": 20.0
+          },
+          "words": 15
+        },
+        "jfk_rice__jfk__orig": {
+          "end": {
+            "mean_ms": 82.133,
+            "median_ms": 45.0,
+            "within_20_ms_pct": 26.667,
+            "within_50_ms_pct": 73.333
+          },
+          "start": {
+            "mean_ms": 150.8,
+            "median_ms": 172.0,
+            "within_20_ms_pct": 0.0,
+            "within_50_ms_pct": 13.333
+          },
+          "words": 15
+        },
+        "reagan_challenger__reagan__orig": {
+          "end": {
+            "mean_ms": 207.571,
+            "median_ms": 33.0,
+            "within_20_ms_pct": 14.286,
+            "within_50_ms_pct": 57.143
+          },
+          "start": {
+            "mean_ms": 119.286,
+            "median_ms": 72.0,
+            "within_20_ms_pct": 0.0,
+            "within_50_ms_pct": 28.571
+          },
+          "words": 7
+        }
+      }
+    },
+    "resamples": 10000,
+    "seed": 20261007,
+    "signed": {
+      "mfa": {
+        "bias_corrected_pooled": {
+          "mean_ms": 69.486,
+          "median_ms": 50.5,
+          "within_20_ms_pct": 21.622,
+          "within_50_ms_pct": 50.0
+        },
+        "end": {
+          "mean_ms": -18.081,
+          "median_ms": -19.0
+        },
+        "start": {
+          "mean_ms": 19.351,
+          "median_ms": -8.0
+        }
+      },
+      "whisperx": {
+        "bias_corrected_pooled": {
+          "mean_ms": 108.77,
+          "median_ms": 54.0,
+          "within_20_ms_pct": 20.27,
+          "within_50_ms_pct": 47.297
+        },
+        "end": {
+          "mean_ms": 23.081,
+          "median_ms": -2.0
+        },
+        "start": {
+          "mean_ms": 81.73,
+          "median_ms": 87.0
+        }
+      }
+    }
+  },
+  "annotation_method": "Claude visual, not listened; human spot-check PENDING",
+  "details": [
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        0
+      ],
+      "end_error_ms": 0.0,
+      "gold_end": 0.6,
+      "gold_start": 0.215,
+      "initial_class": "other",
+      "original_word_index": 0,
+      "predicted_end": 0.6,
+      "predicted_start": 0.2,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 15.0,
+      "word": "Four"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        11
+      ],
+      "end_error_ms": 45.0,
+      "gold_end": 5.865,
+      "gold_start": 5.61,
+      "initial_class": "other",
+      "original_word_index": 11,
+      "predicted_end": 5.82,
+      "predicted_start": 5.6,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 10.0,
+      "word": "this"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        38
+      ],
+      "end_error_ms": 112.0,
+      "gold_end": 16.45,
+      "gold_start": 16.06,
+      "initial_class": "other",
+      "original_word_index": 38,
+      "predicted_end": 16.562,
+      "predicted_start": 16.172,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 112.0,
+      "word": "war,"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        49
+      ],
+      "end_error_ms": 88.0,
+      "gold_end": 21.37,
+      "gold_start": 21.03,
+      "initial_class": "other",
+      "original_word_index": 49,
+      "predicted_end": 21.282,
+      "predicted_start": 20.952,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 78.0,
+      "word": "so"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        68
+      ],
+      "end_error_ms": 40.0,
+      "gold_end": 28.3,
+      "gold_start": 27.6,
+      "initial_class": "stop",
+      "original_word_index": 68,
+      "predicted_end": 28.26,
+      "predicted_start": 27.73,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 130.0,
+      "word": "dedicate"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        83
+      ],
+      "end_error_ms": 20.0,
+      "gold_end": 33.69,
+      "gold_start": 33.37,
+      "initial_class": "stop",
+      "original_word_index": 83,
+      "predicted_end": 33.67,
+      "predicted_start": 33.34,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 30.0,
+      "word": "gave"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        114
+      ],
+      "end_error_ms": 31.0,
+      "gold_end": 45.99,
+      "gold_start": 45.31,
+      "initial_class": "stop",
+      "original_word_index": 114,
+      "predicted_end": 46.021,
+      "predicted_start": 45.281,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 29.0,
+      "word": "consecrate"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        127
+      ],
+      "end_error_ms": 28.0,
+      "gold_end": 51.82,
+      "gold_start": 51.31,
+      "initial_class": "other",
+      "original_word_index": 127,
+      "predicted_end": 51.792,
+      "predicted_start": 51.292,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 18.0,
+      "word": "struggled"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        140
+      ],
+      "end_error_ms": 32.0,
+      "gold_end": 57.58,
+      "gold_start": 56.875,
+      "initial_class": "stop",
+      "original_word_index": 140,
+      "predicted_end": 57.612,
+      "predicted_start": 56.992,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 117.0,
+      "word": "detract."
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        176
+      ],
+      "end_error_ms": 53.0,
+      "gold_end": 71.14,
+      "gold_start": 70.8,
+      "initial_class": "other",
+      "original_word_index": 176,
+      "predicted_end": 71.193,
+      "predicted_start": 70.823,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 23.0,
+      "word": "work"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        187
+      ],
+      "end_error_ms": 23.0,
+      "gold_end": 75.05,
+      "gold_start": 74.3,
+      "initial_class": "other",
+      "original_word_index": 187,
+      "predicted_end": 75.073,
+      "predicted_start": 74.423,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 123.0,
+      "word": "advanced."
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        216
+      ],
+      "end_error_ms": 96.0,
+      "gold_end": 86.4,
+      "gold_start": 86.17,
+      "initial_class": "other",
+      "original_word_index": 216,
+      "predicted_end": 86.304,
+      "predicted_start": 86.114,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 56.0,
+      "word": "for"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        229
+      ],
+      "end_error_ms": 76.0,
+      "gold_end": 92.06,
+      "gold_start": 91.63,
+      "initial_class": "other",
+      "original_word_index": 229,
+      "predicted_end": 91.984,
+      "predicted_start": 91.534,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 96.0,
+      "word": "highly"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        242
+      ],
+      "end_error_ms": 106.0,
+      "gold_end": 96.86,
+      "gold_start": 96.2,
+      "initial_class": "other",
+      "original_word_index": 242,
+      "predicted_end": 96.754,
+      "predicted_start": 96.304,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 104.0,
+      "word": "nation,"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        257
+      ],
+      "end_error_ms": 34.0,
+      "gold_end": 103.03,
+      "gold_start": 102.26,
+      "initial_class": "stop",
+      "original_word_index": 257,
+      "predicted_end": 103.064,
+      "predicted_start": 102.444,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 184.0,
+      "word": "people,"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        1
+      ],
+      "end_error_ms": 540.0,
+      "gold_end": 1.06,
+      "gold_start": 0.23,
+      "initial_class": "other",
+      "original_word_index": 1,
+      "predicted_end": 0.52,
+      "predicted_start": 0.07,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 160.0,
+      "word": "35"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        13
+      ],
+      "end_error_ms": 19.0,
+      "gold_end": 6.18,
+      "gold_start": 5.79,
+      "initial_class": "other",
+      "original_word_index": 13,
+      "predicted_end": 6.161,
+      "predicted_start": 5.781,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 9.0,
+      "word": "choose"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        39
+      ],
+      "end_error_ms": 23.0,
+      "gold_end": 19.6,
+      "gold_start": 19.235,
+      "initial_class": "other",
+      "original_word_index": 39,
+      "predicted_end": 19.577,
+      "predicted_start": 19.357,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 122.0,
+      "word": "other"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        53
+      ],
+      "end_error_ms": 17.0,
+      "gold_end": 25.55,
+      "gold_start": 25.265,
+      "initial_class": "stop",
+      "original_word_index": 53,
+      "predicted_end": 25.567,
+      "predicted_start": 25.257,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 8.0,
+      "word": "goal"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        68
+      ],
+      "end_error_ms": 57.0,
+      "gold_end": 32.46,
+      "gold_start": 32.25,
+      "initial_class": "other",
+      "original_word_index": 68,
+      "predicted_end": 32.517,
+      "predicted_start": 32.227,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 23.0,
+      "word": "that"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        97
+      ],
+      "end_error_ms": 32.0,
+      "gold_end": 49.57,
+      "gold_start": 49.2,
+      "initial_class": "other",
+      "original_word_index": 97,
+      "predicted_end": 49.602,
+      "predicted_start": 49.252,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 52.0,
+      "word": "these"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        132
+      ],
+      "end_error_ms": 68.0,
+      "gold_end": 62.96,
+      "gold_start": 62.53,
+      "initial_class": "other",
+      "original_word_index": 132,
+      "predicted_end": 62.892,
+      "predicted_start": 62.622,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 92.0,
+      "word": "office"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        150
+      ],
+      "end_error_ms": 63.0,
+      "gold_end": 70.63,
+      "gold_start": 69.99,
+      "initial_class": "stop",
+      "original_word_index": 150,
+      "predicted_end": 70.567,
+      "predicted_start": 70.157,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 167.0,
+      "word": "greatest"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        167
+      ],
+      "end_error_ms": 38.0,
+      "gold_end": 78.4,
+      "gold_start": 77.94,
+      "initial_class": "other",
+      "original_word_index": 167,
+      "predicted_end": 78.438,
+      "predicted_start": 78.058,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 118.0,
+      "word": "shattered"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        183
+      ],
+      "end_error_ms": 142.0,
+      "gold_end": 85.72,
+      "gold_start": 85.08,
+      "initial_class": "other",
+      "original_word_index": 183,
+      "predicted_end": 85.578,
+      "predicted_start": 85.168,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 88.0,
+      "word": "Atlas"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        210
+      ],
+      "end_error_ms": 163.0,
+      "gold_end": 98.58,
+      "gold_start": 98.19,
+      "initial_class": "other",
+      "original_word_index": 209,
+      "predicted_end": 98.743,
+      "predicted_start": 98.283,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 93.0,
+      "word": "engines,"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        267
+      ],
+      "end_error_ms": 47.0,
+      "gold_end": 125.12,
+      "gold_start": 124.835,
+      "initial_class": "other",
+      "original_word_index": 266,
+      "predicted_end": 125.073,
+      "predicted_start": 124.813,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 22.0,
+      "word": "these"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        279
+      ],
+      "end_error_ms": 57.0,
+      "gold_end": 131.1,
+      "gold_start": 130.75,
+      "initial_class": "other",
+      "original_word_index": 278,
+      "predicted_end": 131.043,
+      "predicted_start": 130.553,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 197.0,
+      "word": "Some"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        299
+      ],
+      "end_error_ms": 17.0,
+      "gold_end": 138.27,
+      "gold_start": 137.93,
+      "initial_class": "other",
+      "original_word_index": 298,
+      "predicted_end": 138.253,
+      "predicted_start": 137.953,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 23.0,
+      "word": "far"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        318
+      ],
+      "end_error_ms": 21.0,
+      "gold_end": 150.74,
+      "gold_start": 150.16,
+      "initial_class": "other",
+      "original_word_index": 317,
+      "predicted_end": 150.761,
+      "predicted_start": 150.221,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 61.0,
+      "word": "Mariner"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        73
+      ],
+      "end_error_ms": 36.0,
+      "gold_end": 25.77,
+      "gold_start": 25.32,
+      "initial_class": "other",
+      "original_word_index": 73,
+      "predicted_end": 25.734,
+      "predicted_start": 25.284,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 36.0,
+      "word": "Nineteen"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        153
+      ],
+      "end_error_ms": 52.0,
+      "gold_end": 60.42,
+      "gold_start": 59.71,
+      "initial_class": "other",
+      "original_word_index": 153,
+      "predicted_end": 60.472,
+      "predicted_start": 59.672,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 38.0,
+      "word": "Jarvis,"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        234
+      ],
+      "end_error_ms": 38.0,
+      "gold_end": 90.31,
+      "gold_start": 89.885,
+      "initial_class": "stop",
+      "original_word_index": 234,
+      "predicted_end": 90.348,
+      "predicted_start": 89.828,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 57.0,
+      "word": "truths."
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        296
+      ],
+      "end_error_ms": 23.0,
+      "gold_end": 114.28,
+      "gold_start": 113.89,
+      "initial_class": "other",
+      "original_word_index": 296,
+      "predicted_end": 114.257,
+      "predicted_start": 113.917,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 27.0,
+      "word": "members"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        373
+      ],
+      "end_error_ms": 156.0,
+      "gold_end": 143.43,
+      "gold_start": 143.225,
+      "initial_class": "stop",
+      "original_word_index": 373,
+      "predicted_end": 143.586,
+      "predicted_start": 143.326,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 101.0,
+      "word": "crew"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        444
+      ],
+      "end_error_ms": 23.0,
+      "gold_end": 169.03,
+      "gold_start": 168.465,
+      "initial_class": "stop",
+      "original_word_index": 444,
+      "predicted_end": 169.007,
+      "predicted_start": 168.407,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 58.0,
+      "word": "continue"
+    },
+    {
+      "aligner": "mfa",
+      "current_indices": [
+        544
+      ],
+      "end_error_ms": 29.0,
+      "gold_end": 207.88,
+      "gold_start": 207.56,
+      "initial_class": "stop",
+      "original_word_index": 541,
+      "predicted_end": 207.909,
+      "predicted_start": 207.479,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 81.0,
+      "word": "Drake"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        0
+      ],
+      "end_error_ms": 1.0,
+      "gold_end": 0.6,
+      "gold_start": 0.215,
+      "initial_class": "other",
+      "original_word_index": 0,
+      "predicted_end": 0.601,
+      "predicted_start": 0.0,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 215.0,
+      "word": "Four"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        11
+      ],
+      "end_error_ms": 52.0,
+      "gold_end": 5.865,
+      "gold_start": 5.61,
+      "initial_class": "other",
+      "original_word_index": 11,
+      "predicted_end": 5.813,
+      "predicted_start": 5.592,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 18.0,
+      "word": "this"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        38
+      ],
+      "end_error_ms": 12.0,
+      "gold_end": 16.45,
+      "gold_start": 16.06,
+      "initial_class": "other",
+      "original_word_index": 38,
+      "predicted_end": 16.462,
+      "predicted_start": 16.241,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 181.0,
+      "word": "war,"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        49
+      ],
+      "end_error_ms": 43.0,
+      "gold_end": 21.37,
+      "gold_start": 21.03,
+      "initial_class": "other",
+      "original_word_index": 49,
+      "predicted_end": 21.327,
+      "predicted_start": 21.126,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 96.0,
+      "word": "so"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        68
+      ],
+      "end_error_ms": 82.0,
+      "gold_end": 28.3,
+      "gold_start": 27.6,
+      "initial_class": "stop",
+      "original_word_index": 68,
+      "predicted_end": 28.218,
+      "predicted_start": 27.816,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 216.0,
+      "word": "dedicate"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        83
+      ],
+      "end_error_ms": 15.0,
+      "gold_end": 33.69,
+      "gold_start": 33.37,
+      "initial_class": "stop",
+      "original_word_index": 83,
+      "predicted_end": 33.675,
+      "predicted_start": 33.434,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 64.0,
+      "word": "gave"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        114
+      ],
+      "end_error_ms": 31.0,
+      "gold_end": 45.99,
+      "gold_start": 45.31,
+      "initial_class": "stop",
+      "original_word_index": 114,
+      "predicted_end": 45.959,
+      "predicted_start": 45.056,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 254.0,
+      "word": "consecrate"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        127
+      ],
+      "end_error_ms": 6.0,
+      "gold_end": 51.82,
+      "gold_start": 51.31,
+      "initial_class": "other",
+      "original_word_index": 127,
+      "predicted_end": 51.826,
+      "predicted_start": 51.444,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 134.0,
+      "word": "struggled"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        140
+      ],
+      "end_error_ms": 308.0,
+      "gold_end": 57.58,
+      "gold_start": 56.875,
+      "initial_class": "stop",
+      "original_word_index": 140,
+      "predicted_end": 57.888,
+      "predicted_start": 57.085,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 210.0,
+      "word": "detract."
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        176
+      ],
+      "end_error_ms": 22.0,
+      "gold_end": 71.14,
+      "gold_start": 70.8,
+      "initial_class": "other",
+      "original_word_index": 176,
+      "predicted_end": 71.162,
+      "predicted_start": 70.921,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 121.0,
+      "word": "work"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        187
+      ],
+      "end_error_ms": 428.0,
+      "gold_end": 75.05,
+      "gold_start": 74.3,
+      "initial_class": "other",
+      "original_word_index": 187,
+      "predicted_end": 75.478,
+      "predicted_start": 74.474,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 174.0,
+      "word": "advanced."
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        216
+      ],
+      "end_error_ms": 57.0,
+      "gold_end": 86.4,
+      "gold_start": 86.17,
+      "initial_class": "other",
+      "original_word_index": 216,
+      "predicted_end": 86.343,
+      "predicted_start": 86.183,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 13.0,
+      "word": "for"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        229
+      ],
+      "end_error_ms": 72.0,
+      "gold_end": 92.06,
+      "gold_start": 91.63,
+      "initial_class": "other",
+      "original_word_index": 229,
+      "predicted_end": 91.988,
+      "predicted_start": 91.648,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 18.0,
+      "word": "highly"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        242
+      ],
+      "end_error_ms": 68.0,
+      "gold_end": 96.86,
+      "gold_start": 96.2,
+      "initial_class": "other",
+      "original_word_index": 242,
+      "predicted_end": 96.792,
+      "predicted_start": 96.392,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 192.0,
+      "word": "nation,"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        257
+      ],
+      "end_error_ms": 132.0,
+      "gold_end": 103.03,
+      "gold_start": 102.26,
+      "initial_class": "stop",
+      "original_word_index": 257,
+      "predicted_end": 102.898,
+      "predicted_start": 102.557,
+      "recording_id": "gettysburg__lv_fb__orig",
+      "start_error_ms": 297.0,
+      "word": "people,"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        1
+      ],
+      "end_error_ms": 552.0,
+      "gold_end": 1.06,
+      "gold_start": 0.23,
+      "initial_class": "other",
+      "original_word_index": 1,
+      "predicted_end": 0.508,
+      "predicted_start": 0.122,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 108.0,
+      "word": "35"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        13
+      ],
+      "end_error_ms": 2.0,
+      "gold_end": 6.18,
+      "gold_start": 5.79,
+      "initial_class": "other",
+      "original_word_index": 13,
+      "predicted_end": 6.178,
+      "predicted_start": 5.877,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 87.0,
+      "word": "choose"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        39
+      ],
+      "end_error_ms": 32.0,
+      "gold_end": 19.6,
+      "gold_start": 19.235,
+      "initial_class": "other",
+      "original_word_index": 39,
+      "predicted_end": 19.632,
+      "predicted_start": 19.431,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 196.0,
+      "word": "other"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        53
+      ],
+      "end_error_ms": 49.0,
+      "gold_end": 25.55,
+      "gold_start": 25.265,
+      "initial_class": "stop",
+      "original_word_index": 53,
+      "predicted_end": 25.599,
+      "predicted_start": 25.299,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 34.0,
+      "word": "goal"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        68
+      ],
+      "end_error_ms": 48.0,
+      "gold_end": 32.46,
+      "gold_start": 32.25,
+      "initial_class": "other",
+      "original_word_index": 68,
+      "predicted_end": 32.508,
+      "predicted_start": 32.288,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 38.0,
+      "word": "that"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        97
+      ],
+      "end_error_ms": 45.0,
+      "gold_end": 49.57,
+      "gold_start": 49.2,
+      "initial_class": "other",
+      "original_word_index": 97,
+      "predicted_end": 49.615,
+      "predicted_start": 49.414,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 214.0,
+      "word": "these"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        132
+      ],
+      "end_error_ms": 12.0,
+      "gold_end": 62.96,
+      "gold_start": 62.53,
+      "initial_class": "other",
+      "original_word_index": 132,
+      "predicted_end": 62.972,
+      "predicted_start": 62.751,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 221.0,
+      "word": "office"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        150
+      ],
+      "end_error_ms": 16.0,
+      "gold_end": 70.63,
+      "gold_start": 69.99,
+      "initial_class": "stop",
+      "original_word_index": 150,
+      "predicted_end": 70.646,
+      "predicted_start": 70.265,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 275.0,
+      "word": "greatest"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        167
+      ],
+      "end_error_ms": 26.0,
+      "gold_end": 78.4,
+      "gold_start": 77.94,
+      "initial_class": "other",
+      "original_word_index": 167,
+      "predicted_end": 78.426,
+      "predicted_start": 78.065,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 125.0,
+      "word": "shattered"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        183
+      ],
+      "end_error_ms": 79.0,
+      "gold_end": 85.72,
+      "gold_start": 85.08,
+      "initial_class": "other",
+      "original_word_index": 183,
+      "predicted_end": 85.641,
+      "predicted_start": 85.321,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 241.0,
+      "word": "Atlas"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        210
+      ],
+      "end_error_ms": 167.0,
+      "gold_end": 98.58,
+      "gold_start": 98.19,
+      "initial_class": "other",
+      "original_word_index": 209,
+      "predicted_end": 98.747,
+      "predicted_start": 98.407,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 217.0,
+      "word": "engines,"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        267
+      ],
+      "end_error_ms": 33.0,
+      "gold_end": 125.12,
+      "gold_start": 124.835,
+      "initial_class": "other",
+      "original_word_index": 266,
+      "predicted_end": 125.087,
+      "predicted_start": 124.906,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 71.0,
+      "word": "these"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        279
+      ],
+      "end_error_ms": 45.0,
+      "gold_end": 131.1,
+      "gold_start": 130.75,
+      "initial_class": "other",
+      "original_word_index": 278,
+      "predicted_end": 131.055,
+      "predicted_start": 130.553,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 197.0,
+      "word": "Some"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        299
+      ],
+      "end_error_ms": 13.0,
+      "gold_end": 138.27,
+      "gold_start": 137.93,
+      "initial_class": "other",
+      "original_word_index": 298,
+      "predicted_end": 138.257,
+      "predicted_start": 137.996,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 66.0,
+      "word": "far"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        318
+      ],
+      "end_error_ms": 113.0,
+      "gold_end": 150.74,
+      "gold_start": 150.16,
+      "initial_class": "other",
+      "original_word_index": 317,
+      "predicted_end": 150.853,
+      "predicted_start": 150.332,
+      "recording_id": "jfk_rice__jfk__orig",
+      "start_error_ms": 172.0,
+      "word": "Mariner"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        73
+      ],
+      "end_error_ms": 33.0,
+      "gold_end": 25.77,
+      "gold_start": 25.32,
+      "initial_class": "other",
+      "original_word_index": 73,
+      "predicted_end": 25.737,
+      "predicted_start": 24.974,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 346.0,
+      "word": "Nineteen"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        153
+      ],
+      "end_error_ms": 216.0,
+      "gold_end": 60.42,
+      "gold_start": 59.71,
+      "initial_class": "other",
+      "original_word_index": 153,
+      "predicted_end": 60.204,
+      "predicted_start": 59.782,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 72.0,
+      "word": "Jarvis,"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        234
+      ],
+      "end_error_ms": 923.0,
+      "gold_end": 90.31,
+      "gold_start": 89.885,
+      "initial_class": "stop",
+      "original_word_index": 234,
+      "predicted_end": 91.233,
+      "predicted_start": 89.925,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 40.0,
+      "word": "truths."
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        296
+      ],
+      "end_error_ms": 29.0,
+      "gold_end": 114.28,
+      "gold_start": 113.89,
+      "initial_class": "other",
+      "original_word_index": 296,
+      "predicted_end": 114.251,
+      "predicted_start": 113.968,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 78.0,
+      "word": "members"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        373
+      ],
+      "end_error_ms": 221.0,
+      "gold_end": 143.43,
+      "gold_start": 143.225,
+      "initial_class": "stop",
+      "original_word_index": 373,
+      "predicted_end": 143.651,
+      "predicted_start": 143.43,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 205.0,
+      "word": "crew"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        444
+      ],
+      "end_error_ms": 26.0,
+      "gold_end": 169.03,
+      "gold_start": 168.465,
+      "initial_class": "stop",
+      "original_word_index": 444,
+      "predicted_end": 169.004,
+      "predicted_start": 168.536,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 71.0,
+      "word": "continue"
+    },
+    {
+      "aligner": "whisperx",
+      "current_indices": [
+        544
+      ],
+      "end_error_ms": 5.0,
+      "gold_end": 207.88,
+      "gold_start": 207.56,
+      "initial_class": "stop",
+      "original_word_index": 541,
+      "predicted_end": 207.885,
+      "predicted_start": 207.583,
+      "recording_id": "reagan_challenger__reagan__orig",
+      "start_error_ms": 23.0,
+      "word": "Drake"
+    }
+  ],
+  "evidence": {
+    "mfa": {
+      "corpus_words": 7678,
+      "dataset_run": {
+        "aligner": "mfa",
+        "device": "cpu",
+        "input_hashes": {
+          "gettysburg__lv_amb__orig": "c1360461569b76057e7869d3af1df5cb75d69d8b55d23f3896918831c22331ea",
+          "gettysburg__lv_dj__orig": "709103016f1e3e7ac1aa8375d44f178473ddd9391ced75984896d180b6b09b63",
+          "gettysburg__lv_dl__orig": "3e3cd26c35f7cb64c46398c6e568ee6239de1dd8fd3df9ced8fff756d80d86da",
+          "gettysburg__lv_eep__orig": "8ba44ffb116b5fe314ae772a218bac1368974312382e7f6ca16347102ad85b6a",
+          "gettysburg__lv_fb__orig": "e11edbc902f641f41086aca2bc536d77ae1880f022f211809b604c05ce48f6e0",
+          "gettysburg__lv_jn__orig": "ee04c2e1a489c3fcbfe5032935b017149e4aab850a98dcbcaba5bf9238f45945",
+          "gettysburg__lv_law__orig": "4156d5af8c0dd239737a166162713586df4614efdac17ba25c5cb7100565fa1d",
+          "gettysburg__lv_lb__orig": "929399ddfd1a277ca7b64c0e7213ee74e3740801212491131d27dd020fe408aa",
+          "gettysburg__lv_mas__orig": "1e30a1e1b4361c2b1e6e45c70a7e72987d38f112599cb5317748494f6a5b79d1",
+          "gettysburg__lv_mk__orig": "5b28e6a40c45d94e58184f058bae7941a2300a939ac9ad19784bf422aaf63980",
+          "gettysburg__lv_pc__orig": "2459610adddda35e78bfc82f06e0faa22571f0c2ef75be801327ead922ca23b1",
+          "gettysburg__lv_rk__orig": "4a70f63992c8b1051d98e0efd31824b110f74aa23085114af3870308bc88a9f8",
+          "gettysburg__lv_sa__orig": "59706ce3155caa14a92cd95659bdca50f7e3a4d893edefc0b79f6a63a1475946",
+          "gettysburg__lv_tg__orig": "3dad18a3806b64c727d91379025643e5116ff0dabb92f311f79fe0c945f3ea13",
+          "gettysburg__lv_wt__orig": "8e311e13012b95899bc0ad6b32f1eb2ffc11c2b06f38843efebfb016bfe1e886",
+          "jfk_rice__jfk__orig": "e9c98ec1628e29003f0ef50bebf3962addff59d9f36071fbf1c1c643188f8da0",
+          "o_captain__lv_apc__orig": "20e0ef11d191342df7b7e3deeb20bfd726bf18017155e7d85697c144288d632c",
+          "o_captain__lv_chip__orig": "c4594017dbc88ce955009c58fb573156dc32fcde0f42b855ca0aa2541aa45deb",
+          "o_captain__lv_foxits__orig": "ba65dc16e690a5d105cb130ebfa95274014e8792dc634bb6b86a7c61412a8b63",
+          "o_captain__lv_jtm__orig": "a436c79329dd0dfd586bd5df7867baceb786ddbf2164070b622094a42b252065",
+          "o_captain__lv_mac__orig": "94607bd52f6e78ef15a6c5d1c5231349218cf42c4c442b5da39f146115810aab",
+          "o_captain__lv_mb__orig": "cbd530d82d5c41981ca37a062a1e532ea9ffac48d5ed2844f95025bc39f35338",
+          "o_captain__lv_md__orig": "68f652e38780b5f7a0a3a0f5afc564bfd246e8b6170681970f2efca9de58d2e6",
+          "o_captain__lv_mrg__orig": "be7413d10f697344c8603be9654969c44deb26bbb2162f6cb9e4af6c2056a096",
+          "o_captain__lv_rg__orig": "2b7907bf8917c1dac1c1a3424d67f3fc961b28a8ddabb5fc3e4340805d709f7c",
+          "o_captain__lv_s__orig": "2757a223e8b28dca1a6307410eac428a1fa081512714bd8cb666181c033b45e0",
+          "o_captain__lv_sjs__orig": "b6d6e1708c61aec7beffcb7ec84843c122af1835def49816592447acc3b30347",
+          "o_captain__lv_ss__orig": "9ec13eaaa2dfcb8b3a00197bf6ca6d673425d26e7faf65b51286257386dc8d42",
+          "o_captain__lv_th__orig": "e3cc4faf42ac9c8396e8fe7fcd33e1fa7e6f1ccf39eb62ac68ae94266b4594a7",
+          "reagan_challenger__reagan__orig": "da2f84a9e2d222215041d8f0d2201a59fdc1b56a84d779ba911ff5e7599ad69c"
+        },
+        "recordings": 30,
+        "runtime_s": 143.179,
+        "settings": {
+          "acoustic_model": "english_mfa",
+          "beam": 100,
+          "dictionary": "english_us_mfa",
+          "g2p_model": "english_us_mfa",
+          "retry_beam": 400
+        }
+      },
+      "deterministic": true,
+      "device": "cpu",
+      "end": {
+        "mean_ms": 66.081,
+        "median_ms": 38.0,
+        "within_20_ms_pct": 13.514,
+        "within_50_ms_pct": 59.459
+      },
+      "gold_interpolated_words": 0,
+      "gold_oov_words": 0,
+      "gold_run_runtime_s": [
+        53.417,
+        53.183
+      ],
+      "interpolated_words": 0,
+      "oov_words": 84,
+      "overall": {
+        "mean_ms": 70.311,
+        "median_ms": 52.0,
+        "within_20_ms_pct": 13.514,
+        "within_50_ms_pct": 48.649
+      },
+      "run_hashes": {
+        "gettysburg__lv_fb__orig": [
+          "7d9a7f5a2455ea5ae0aeeea8bbeb9df379f9c75fef7f4b3a149d90c955d01c86",
+          "7d9a7f5a2455ea5ae0aeeea8bbeb9df379f9c75fef7f4b3a149d90c955d01c86"
+        ],
+        "jfk_rice__jfk__orig": [
+          "d4cd775aa37916388544f716fb59c9b68e099ba3bb5b27ef2507ad7a22354482",
+          "d4cd775aa37916388544f716fb59c9b68e099ba3bb5b27ef2507ad7a22354482"
+        ],
+        "reagan_challenger__reagan__orig": [
+          "658c1964365541097412fddba0da2fc20c6bf969d8fbe43268056c851a1bd551",
+          "658c1964365541097412fddba0da2fc20c6bf969d8fbe43268056c851a1bd551"
+        ]
+      },
+      "start": {
+        "mean_ms": 74.541,
+        "median_ms": 61.0,
+        "within_20_ms_pct": 13.514,
+        "within_50_ms_pct": 37.838
+      },
+      "unique_oov": [
+        "acrowding",
+        "anchord",
+        "christa",
+        "doesnt",
+        "dont",
+        "ive",
+        "mcauliffe",
+        "mcnair",
+        "onizuka",
+        "ribbond",
+        "schoolchildren",
+        "scobee",
+        "shuttles",
+        "thats",
+        "theres",
+        "weatherd",
+        "weve",
+        "youve"
+      ],
+      "words_scored": 37
+    },
+    "whisperx": {
+      "corpus_words": 7678,
+      "dataset_run": {
+        "aligner": "whisperx",
+        "device": "cpu",
+        "input_hashes": {
+          "gettysburg__lv_amb__orig": "c1360461569b76057e7869d3af1df5cb75d69d8b55d23f3896918831c22331ea",
+          "gettysburg__lv_dj__orig": "709103016f1e3e7ac1aa8375d44f178473ddd9391ced75984896d180b6b09b63",
+          "gettysburg__lv_dl__orig": "3e3cd26c35f7cb64c46398c6e568ee6239de1dd8fd3df9ced8fff756d80d86da",
+          "gettysburg__lv_eep__orig": "8ba44ffb116b5fe314ae772a218bac1368974312382e7f6ca16347102ad85b6a",
+          "gettysburg__lv_fb__orig": "e11edbc902f641f41086aca2bc536d77ae1880f022f211809b604c05ce48f6e0",
+          "gettysburg__lv_jn__orig": "ee04c2e1a489c3fcbfe5032935b017149e4aab850a98dcbcaba5bf9238f45945",
+          "gettysburg__lv_law__orig": "4156d5af8c0dd239737a166162713586df4614efdac17ba25c5cb7100565fa1d",
+          "gettysburg__lv_lb__orig": "929399ddfd1a277ca7b64c0e7213ee74e3740801212491131d27dd020fe408aa",
+          "gettysburg__lv_mas__orig": "1e30a1e1b4361c2b1e6e45c70a7e72987d38f112599cb5317748494f6a5b79d1",
+          "gettysburg__lv_mk__orig": "5b28e6a40c45d94e58184f058bae7941a2300a939ac9ad19784bf422aaf63980",
+          "gettysburg__lv_pc__orig": "2459610adddda35e78bfc82f06e0faa22571f0c2ef75be801327ead922ca23b1",
+          "gettysburg__lv_rk__orig": "4a70f63992c8b1051d98e0efd31824b110f74aa23085114af3870308bc88a9f8",
+          "gettysburg__lv_sa__orig": "59706ce3155caa14a92cd95659bdca50f7e3a4d893edefc0b79f6a63a1475946",
+          "gettysburg__lv_tg__orig": "3dad18a3806b64c727d91379025643e5116ff0dabb92f311f79fe0c945f3ea13",
+          "gettysburg__lv_wt__orig": "8e311e13012b95899bc0ad6b32f1eb2ffc11c2b06f38843efebfb016bfe1e886",
+          "jfk_rice__jfk__orig": "e9c98ec1628e29003f0ef50bebf3962addff59d9f36071fbf1c1c643188f8da0",
+          "o_captain__lv_apc__orig": "20e0ef11d191342df7b7e3deeb20bfd726bf18017155e7d85697c144288d632c",
+          "o_captain__lv_chip__orig": "c4594017dbc88ce955009c58fb573156dc32fcde0f42b855ca0aa2541aa45deb",
+          "o_captain__lv_foxits__orig": "ba65dc16e690a5d105cb130ebfa95274014e8792dc634bb6b86a7c61412a8b63",
+          "o_captain__lv_jtm__orig": "a436c79329dd0dfd586bd5df7867baceb786ddbf2164070b622094a42b252065",
+          "o_captain__lv_mac__orig": "94607bd52f6e78ef15a6c5d1c5231349218cf42c4c442b5da39f146115810aab",
+          "o_captain__lv_mb__orig": "cbd530d82d5c41981ca37a062a1e532ea9ffac48d5ed2844f95025bc39f35338",
+          "o_captain__lv_md__orig": "68f652e38780b5f7a0a3a0f5afc564bfd246e8b6170681970f2efca9de58d2e6",
+          "o_captain__lv_mrg__orig": "be7413d10f697344c8603be9654969c44deb26bbb2162f6cb9e4af6c2056a096",
+          "o_captain__lv_rg__orig": "2b7907bf8917c1dac1c1a3424d67f3fc961b28a8ddabb5fc3e4340805d709f7c",
+          "o_captain__lv_s__orig": "2757a223e8b28dca1a6307410eac428a1fa081512714bd8cb666181c033b45e0",
+          "o_captain__lv_sjs__orig": "b6d6e1708c61aec7beffcb7ec84843c122af1835def49816592447acc3b30347",
+          "o_captain__lv_ss__orig": "9ec13eaaa2dfcb8b3a00197bf6ca6d673425d26e7faf65b51286257386dc8d42",
+          "o_captain__lv_th__orig": "e3cc4faf42ac9c8396e8fe7fcd33e1fa7e6f1ccf39eb62ac68ae94266b4594a7",
+          "reagan_challenger__reagan__orig": "da2f84a9e2d222215041d8f0d2201a59fdc1b56a84d779ba911ff5e7599ad69c"
+        },
+        "recordings": 30,
+        "runtime_s": 767.813,
+        "settings": {
+          "model": "WAV2VEC2_ASR_BASE_960H",
+          "threads": 1
+        }
+      },
+      "deterministic": true,
+      "device": "cpu",
+      "end": {
+        "mean_ms": 108.486,
+        "median_ms": 45.0,
+        "within_20_ms_pct": 24.324,
+        "within_50_ms_pct": 59.459
+      },
+      "gold_interpolated_words": 0,
+      "gold_oov_words": 0,
+      "gold_run_runtime_s": [
+        82.378,
+        80.104
+      ],
+      "interpolated_words": 0,
+      "oov_words": 0,
+      "overall": {
+        "mean_ms": 125.865,
+        "median_ms": 72.0,
+        "within_20_ms_pct": 16.216,
+        "within_50_ms_pct": 39.189
+      },
+      "run_hashes": {
+        "gettysburg__lv_fb__orig": [
+          "977c9bfbaee28f97d3cac7398008ce1292a701ae7a74e0c2dd68190d50872e9c",
+          "977c9bfbaee28f97d3cac7398008ce1292a701ae7a74e0c2dd68190d50872e9c"
+        ],
+        "jfk_rice__jfk__orig": [
+          "0fc2c927f4064a8e357ce0d19b12bb8feeff27911610909ea3e6b7fd46644c35",
+          "0fc2c927f4064a8e357ce0d19b12bb8feeff27911610909ea3e6b7fd46644c35"
+        ],
+        "reagan_challenger__reagan__orig": [
+          "cce01dd076ff7c2e9550efa8e22d3b178fec2231697cb49cb5f41b6f4664e32d",
+          "cce01dd076ff7c2e9550efa8e22d3b178fec2231697cb49cb5f41b6f4664e32d"
+        ]
+      },
+      "start": {
+        "mean_ms": 143.243,
+        "median_ms": 134.0,
+        "within_20_ms_pct": 8.108,
+        "within_50_ms_pct": 18.919
+      },
+      "unique_oov": [],
+      "words_scored": 37
+    }
+  },
+  "gold": {
+    "gettysburg__lv_fb__orig": {
+      "all_words": [
+        {
+          "current_indices": [
+            0
+          ],
+          "end": 0.6,
+          "outside_template": false,
+          "start": 0.215,
+          "text": "Four",
+          "unclear": false,
+          "word_index": 0
+        },
+        {
+          "current_indices": [
+            11
+          ],
+          "end": 5.865,
+          "outside_template": false,
+          "start": 5.61,
+          "text": "this",
+          "unclear": false,
+          "word_index": 11
+        },
+        {
+          "current_indices": [
+            24
+          ],
+          "end": 12.19,
+          "outside_template": true,
+          "start": 11.865,
+          "text": "that",
+          "unclear": true,
+          "word_index": 24
+        },
+        {
+          "current_indices": [
+            38
+          ],
+          "end": 16.45,
+          "outside_template": false,
+          "start": 16.06,
+          "text": "war,",
+          "unclear": false,
+          "word_index": 38
+        },
+        {
+          "current_indices": [
+            49
+          ],
+          "end": 21.37,
+          "outside_template": false,
+          "start": 21.03,
+          "text": "so",
+          "unclear": false,
+          "word_index": 49
+        },
+        {
+          "current_indices": [
+            68
+          ],
+          "end": 28.3,
+          "outside_template": true,
+          "start": 27.6,
+          "text": "dedicate",
+          "unclear": false,
+          "word_index": 68
+        },
+        {
+          "current_indices": [
+            83
+          ],
+          "end": 33.69,
+          "outside_template": false,
+          "start": 33.37,
+          "text": "gave",
+          "unclear": false,
+          "word_index": 83
+        },
+        {
+          "current_indices": [
+            94
+          ],
+          "end": 38.47,
+          "outside_template": false,
+          "start": 38.15,
+          "text": "fitting",
+          "unclear": true,
+          "word_index": 94
+        },
+        {
+          "current_indices": [
+            114
+          ],
+          "end": 45.99,
+          "outside_template": false,
+          "start": 45.31,
+          "text": "consecrate",
+          "unclear": false,
+          "word_index": 114
+        },
+        {
+          "current_indices": [
+            127
+          ],
+          "end": 51.82,
+          "outside_template": false,
+          "start": 51.31,
+          "text": "struggled",
+          "unclear": false,
+          "word_index": 127
+        },
+        {
+          "current_indices": [
+            140
+          ],
+          "end": 57.58,
+          "outside_template": true,
+          "start": 56.875,
+          "text": "detract.",
+          "unclear": false,
+          "word_index": 140
+        },
+        {
+          "current_indices": [
+            155
+          ],
+          "end": 63.93,
+          "outside_template": true,
+          "start": 63.55,
+          "text": "can",
+          "unclear": true,
+          "word_index": 155
+        },
+        {
+          "current_indices": [
+            176
+          ],
+          "end": 71.14,
+          "outside_template": false,
+          "start": 70.8,
+          "text": "work",
+          "unclear": false,
+          "word_index": 176
+        },
+        {
+          "current_indices": [
+            187
+          ],
+          "end": 75.05,
+          "outside_template": false,
+          "start": 74.3,
+          "text": "advanced.",
+          "unclear": false,
+          "word_index": 187
+        },
+        {
+          "current_indices": [
+            206
+          ],
+          "end": 81.88,
+          "outside_template": false,
+          "start": 81.5,
+          "text": "these",
+          "unclear": true,
+          "word_index": 206
+        },
+        {
+          "current_indices": [
+            216
+          ],
+          "end": 86.4,
+          "outside_template": false,
+          "start": 86.17,
+          "text": "for",
+          "unclear": false,
+          "word_index": 216
+        },
+        {
+          "current_indices": [
+            229
+          ],
+          "end": 92.06,
+          "outside_template": false,
+          "start": 91.63,
+          "text": "highly",
+          "unclear": false,
+          "word_index": 229
+        },
+        {
+          "current_indices": [
+            242
+          ],
+          "end": 96.86,
+          "outside_template": false,
+          "start": 96.2,
+          "text": "nation,",
+          "unclear": false,
+          "word_index": 242
+        },
+        {
+          "current_indices": [
+            257
+          ],
+          "end": 103.03,
+          "outside_template": true,
+          "start": 102.26,
+          "text": "people,",
+          "unclear": false,
+          "word_index": 257
+        },
+        {
+          "current_indices": [
+            269
+          ],
+          "end": 114.46,
+          "outside_template": false,
+          "start": 114.21,
+          "text": "earth.",
+          "unclear": true,
+          "word_index": 269
+        }
+      ],
+      "excluded_question": 5,
+      "excluded_transcript_uncertain": 0,
+      "labelled": 20,
+      "outside_template": 5,
+      "scored": [
+        {
+          "current_indices": [
+            0
+          ],
+          "end": 0.6,
+          "outside_template": false,
+          "start": 0.215,
+          "text": "Four",
+          "unclear": false,
+          "word_index": 0
+        },
+        {
+          "current_indices": [
+            11
+          ],
+          "end": 5.865,
+          "outside_template": false,
+          "start": 5.61,
+          "text": "this",
+          "unclear": false,
+          "word_index": 11
+        },
+        {
+          "current_indices": [
+            38
+          ],
+          "end": 16.45,
+          "outside_template": false,
+          "start": 16.06,
+          "text": "war,",
+          "unclear": false,
+          "word_index": 38
+        },
+        {
+          "current_indices": [
+            49
+          ],
+          "end": 21.37,
+          "outside_template": false,
+          "start": 21.03,
+          "text": "so",
+          "unclear": false,
+          "word_index": 49
+        },
+        {
+          "current_indices": [
+            68
+          ],
+          "end": 28.3,
+          "outside_template": true,
+          "start": 27.6,
+          "text": "dedicate",
+          "unclear": false,
+          "word_index": 68
+        },
+        {
+          "current_indices": [
+            83
+          ],
+          "end": 33.69,
+          "outside_template": false,
+          "start": 33.37,
+          "text": "gave",
+          "unclear": false,
+          "word_index": 83
+        },
+        {
+          "current_indices": [
+            114
+          ],
+          "end": 45.99,
+          "outside_template": false,
+          "start": 45.31,
+          "text": "consecrate",
+          "unclear": false,
+          "word_index": 114
+        },
+        {
+          "current_indices": [
+            127
+          ],
+          "end": 51.82,
+          "outside_template": false,
+          "start": 51.31,
+          "text": "struggled",
+          "unclear": false,
+          "word_index": 127
+        },
+        {
+          "current_indices": [
+            140
+          ],
+          "end": 57.58,
+          "outside_template": true,
+          "start": 56.875,
+          "text": "detract.",
+          "unclear": false,
+          "word_index": 140
+        },
+        {
+          "current_indices": [
+            176
+          ],
+          "end": 71.14,
+          "outside_template": false,
+          "start": 70.8,
+          "text": "work",
+          "unclear": false,
+          "word_index": 176
+        },
+        {
+          "current_indices": [
+            187
+          ],
+          "end": 75.05,
+          "outside_template": false,
+          "start": 74.3,
+          "text": "advanced.",
+          "unclear": false,
+          "word_index": 187
+        },
+        {
+          "current_indices": [
+            216
+          ],
+          "end": 86.4,
+          "outside_template": false,
+          "start": 86.17,
+          "text": "for",
+          "unclear": false,
+          "word_index": 216
+        },
+        {
+          "current_indices": [
+            229
+          ],
+          "end": 92.06,
+          "outside_template": false,
+          "start": 91.63,
+          "text": "highly",
+          "unclear": false,
+          "word_index": 229
+        },
+        {
+          "current_indices": [
+            242
+          ],
+          "end": 96.86,
+          "outside_template": false,
+          "start": 96.2,
+          "text": "nation,",
+          "unclear": false,
+          "word_index": 242
+        },
+        {
+          "current_indices": [
+            257
+          ],
+          "end": 103.03,
+          "outside_template": true,
+          "start": 102.26,
+          "text": "people,",
+          "unclear": false,
+          "word_index": 257
+        }
+      ],
+      "total_intervals": 41
+    },
+    "jfk_rice__jfk__orig": {
+      "all_words": [
+        {
+          "current_indices": [
+            1
+          ],
+          "end": 1.06,
+          "outside_template": true,
+          "start": 0.23,
+          "text": "35",
+          "unclear": false,
+          "word_index": 1
+        },
+        {
+          "current_indices": [
+            13
+          ],
+          "end": 6.18,
+          "outside_template": false,
+          "start": 5.79,
+          "text": "choose",
+          "unclear": false,
+          "word_index": 13
+        },
+        {
+          "current_indices": [
+            39
+          ],
+          "end": 19.6,
+          "outside_template": true,
+          "start": 19.235,
+          "text": "other",
+          "unclear": false,
+          "word_index": 39
+        },
+        {
+          "current_indices": [
+            53
+          ],
+          "end": 25.55,
+          "outside_template": false,
+          "start": 25.265,
+          "text": "goal",
+          "unclear": false,
+          "word_index": 53
+        },
+        {
+          "current_indices": [
+            68
+          ],
+          "end": 32.46,
+          "outside_template": false,
+          "start": 32.25,
+          "text": "that",
+          "unclear": false,
+          "word_index": 68
+        },
+        {
+          "current_indices": [
+            97
+          ],
+          "end": 49.57,
+          "outside_template": false,
+          "start": 49.2,
+          "text": "these",
+          "unclear": false,
+          "word_index": 97
+        },
+        {
+          "current_indices": [
+            113
+          ],
+          "end": 56.6,
+          "outside_template": false,
+          "start": 56.34,
+          "text": "low",
+          "unclear": true,
+          "word_index": 113
+        },
+        {
+          "current_indices": [
+            132
+          ],
+          "end": 62.96,
+          "outside_template": true,
+          "start": 62.53,
+          "text": "office",
+          "unclear": false,
+          "word_index": 132
+        },
+        {
+          "current_indices": [
+            150
+          ],
+          "end": 70.63,
+          "outside_template": true,
+          "start": 69.99,
+          "text": "greatest",
+          "unclear": false,
+          "word_index": 150
+        },
+        {
+          "current_indices": [
+            167
+          ],
+          "end": 78.4,
+          "outside_template": false,
+          "start": 77.94,
+          "text": "shattered",
+          "unclear": false,
+          "word_index": 167
+        },
+        {
+          "current_indices": [
+            183
+          ],
+          "end": 85.72,
+          "outside_template": true,
+          "start": 85.08,
+          "text": "Atlas",
+          "unclear": false,
+          "word_index": 183
+        },
+        {
+          "current_indices": [
+            195
+          ],
+          "end": 91.62,
+          "outside_template": false,
+          "start": 91.48,
+          "text": "with",
+          "unclear": true,
+          "word_index": 194
+        },
+        {
+          "current_indices": [
+            210
+          ],
+          "end": 98.58,
+          "outside_template": true,
+          "start": 98.19,
+          "text": "engines,",
+          "unclear": false,
+          "word_index": 209
+        },
+        {
+          "current_indices": [
+            228
+          ],
+          "end": 107.7,
+          "outside_template": false,
+          "start": 107.45,
+          "text": "make",
+          "unclear": true,
+          "word_index": 227
+        },
+        {
+          "current_indices": [
+            248
+          ],
+          "end": 115.88,
+          "outside_template": true,
+          "start": 115.37,
+          "text": "48",
+          "unclear": true,
+          "word_index": 247
+        },
+        {
+          "current_indices": [
+            267
+          ],
+          "end": 125.12,
+          "outside_template": false,
+          "start": 124.835,
+          "text": "these",
+          "unclear": false,
+          "word_index": 266
+        },
+        {
+          "current_indices": [
+            279
+          ],
+          "end": 131.1,
+          "outside_template": false,
+          "start": 130.75,
+          "text": "Some",
+          "unclear": false,
+          "word_index": 278
+        },
+        {
+          "current_indices": [
+            299
+          ],
+          "end": 138.27,
+          "outside_template": false,
+          "start": 137.93,
+          "text": "far",
+          "unclear": false,
+          "word_index": 298
+        },
+        {
+          "current_indices": [
+            318
+          ],
+          "end": 150.74,
+          "outside_template": false,
+          "start": 150.16,
+          "text": "Mariner",
+          "unclear": false,
+          "word_index": 317
+        },
+        {
+          "current_indices": [
+            336
+          ],
+          "end": 157.62,
+          "outside_template": false,
+          "start": 157.14,
+          "text": "science.",
+          "unclear": true,
+          "word_index": 335
+        }
+      ],
+      "excluded_question": 5,
+      "excluded_transcript_uncertain": 0,
+      "labelled": 20,
+      "outside_template": 7,
+      "scored": [
+        {
+          "current_indices": [
+            1
+          ],
+          "end": 1.06,
+          "outside_template": true,
+          "start": 0.23,
+          "text": "35",
+          "unclear": false,
+          "word_index": 1
+        },
+        {
+          "current_indices": [
+            13
+          ],
+          "end": 6.18,
+          "outside_template": false,
+          "start": 5.79,
+          "text": "choose",
+          "unclear": false,
+          "word_index": 13
+        },
+        {
+          "current_indices": [
+            39
+          ],
+          "end": 19.6,
+          "outside_template": true,
+          "start": 19.235,
+          "text": "other",
+          "unclear": false,
+          "word_index": 39
+        },
+        {
+          "current_indices": [
+            53
+          ],
+          "end": 25.55,
+          "outside_template": false,
+          "start": 25.265,
+          "text": "goal",
+          "unclear": false,
+          "word_index": 53
+        },
+        {
+          "current_indices": [
+            68
+          ],
+          "end": 32.46,
+          "outside_template": false,
+          "start": 32.25,
+          "text": "that",
+          "unclear": false,
+          "word_index": 68
+        },
+        {
+          "current_indices": [
+            97
+          ],
+          "end": 49.57,
+          "outside_template": false,
+          "start": 49.2,
+          "text": "these",
+          "unclear": false,
+          "word_index": 97
+        },
+        {
+          "current_indices": [
+            132
+          ],
+          "end": 62.96,
+          "outside_template": true,
+          "start": 62.53,
+          "text": "office",
+          "unclear": false,
+          "word_index": 132
+        },
+        {
+          "current_indices": [
+            150
+          ],
+          "end": 70.63,
+          "outside_template": true,
+          "start": 69.99,
+          "text": "greatest",
+          "unclear": false,
+          "word_index": 150
+        },
+        {
+          "current_indices": [
+            167
+          ],
+          "end": 78.4,
+          "outside_template": false,
+          "start": 77.94,
+          "text": "shattered",
+          "unclear": false,
+          "word_index": 167
+        },
+        {
+          "current_indices": [
+            183
+          ],
+          "end": 85.72,
+          "outside_template": true,
+          "start": 85.08,
+          "text": "Atlas",
+          "unclear": false,
+          "word_index": 183
+        },
+        {
+          "current_indices": [
+            210
+          ],
+          "end": 98.58,
+          "outside_template": true,
+          "start": 98.19,
+          "text": "engines,",
+          "unclear": false,
+          "word_index": 209
+        },
+        {
+          "current_indices": [
+            267
+          ],
+          "end": 125.12,
+          "outside_template": false,
+          "start": 124.835,
+          "text": "these",
+          "unclear": false,
+          "word_index": 266
+        },
+        {
+          "current_indices": [
+            279
+          ],
+          "end": 131.1,
+          "outside_template": false,
+          "start": 130.75,
+          "text": "Some",
+          "unclear": false,
+          "word_index": 278
+        },
+        {
+          "current_indices": [
+            299
+          ],
+          "end": 138.27,
+          "outside_template": false,
+          "start": 137.93,
+          "text": "far",
+          "unclear": false,
+          "word_index": 298
+        },
+        {
+          "current_indices": [
+            318
+          ],
+          "end": 150.74,
+          "outside_template": false,
+          "start": 150.16,
+          "text": "Mariner",
+          "unclear": false,
+          "word_index": 317
+        }
+      ],
+      "total_intervals": 41
+    },
+    "reagan_challenger__reagan__orig": {
+      "all_words": [
+        {
+          "current_indices": [
+            0
+          ],
+          "end": 0.6,
+          "outside_template": false,
+          "start": 0.205,
+          "text": "Ladies",
+          "unclear": true,
+          "word_index": 0
+        },
+        {
+          "current_indices": [
+            38
+          ],
+          "end": 12.41,
+          "outside_template": true,
+          "start": 11.95,
+          "text": "remembering.",
+          "unclear": true,
+          "word_index": 38
+        },
+        {
+          "current_indices": [
+            73
+          ],
+          "end": 25.77,
+          "outside_template": false,
+          "start": 25.32,
+          "text": "Nineteen",
+          "unclear": false,
+          "word_index": 73
+        },
+        {
+          "current_indices": [
+            101
+          ],
+          "end": 35.72,
+          "outside_template": false,
+          "start": 35.46,
+          "text": "had",
+          "unclear": true,
+          "word_index": 101
+        },
+        {
+          "current_indices": [
+            134
+          ],
+          "end": 47.165,
+          "outside_template": true,
+          "start": 46.98,
+          "text": "did",
+          "unclear": true,
+          "word_index": 134
+        },
+        {
+          "current_indices": [
+            153
+          ],
+          "end": 60.42,
+          "outside_template": false,
+          "start": 59.71,
+          "text": "Jarvis,",
+          "unclear": false,
+          "word_index": 153
+        },
+        {
+          "current_indices": [
+            193
+          ],
+          "end": 75.93,
+          "outside_template": false,
+          "start": 75.55,
+          "text": "very",
+          "unclear": true,
+          "word_index": 193
+        },
+        {
+          "current_indices": [
+            234
+          ],
+          "end": 90.31,
+          "outside_template": false,
+          "start": 89.885,
+          "text": "truths.",
+          "unclear": false,
+          "word_index": 234
+        },
+        {
+          "current_indices": [
+            268
+          ],
+          "end": 102.98,
+          "outside_template": false,
+          "start": 102.62,
+          "text": "program",
+          "unclear": true,
+          "word_index": 268
+        },
+        {
+          "current_indices": [
+            296
+          ],
+          "end": 114.28,
+          "outside_template": false,
+          "start": 113.89,
+          "text": "members",
+          "unclear": false,
+          "word_index": 296
+        },
+        {
+          "current_indices": [
+            337
+          ],
+          "end": 127.5,
+          "outside_template": true,
+          "start": 127.14,
+          "text": "happen.",
+          "unclear": true,
+          "word_index": 337
+        },
+        {
+          "current_indices": [
+            373
+          ],
+          "end": 143.43,
+          "outside_template": true,
+          "start": 143.225,
+          "text": "crew",
+          "unclear": false,
+          "word_index": 373
+        },
+        {
+          "current_indices": [
+            408
+          ],
+          "end": 157.04,
+          "outside_template": false,
+          "start": 156.84,
+          "text": "don't",
+          "unclear": true,
+          "word_index": 408
+        },
+        {
+          "current_indices": [
+            444
+          ],
+          "end": 169.03,
+          "outside_template": false,
+          "start": 168.465,
+          "text": "continue",
+          "unclear": false,
+          "word_index": 444
+        },
+        {
+          "current_indices": [
+            470
+          ],
+          "end": 179.75,
+          "outside_template": false,
+          "start": 179.37,
+          "text": "ends",
+          "unclear": true,
+          "word_index": 470
+        },
+        {
+          "current_indices": [
+            509
+          ],
+          "end": 193.95,
+          "outside_template": false,
+          "start": 193.05,
+          "text": "professionalism",
+          "unclear": true,
+          "word_index": 509
+        },
+        {
+          "current_indices": [
+            544
+          ],
+          "end": 207.88,
+          "outside_template": false,
+          "start": 207.56,
+          "text": "Drake",
+          "unclear": false,
+          "word_index": 541
+        },
+        {
+          "current_indices": [
+            584
+          ],
+          "end": 224.14,
+          "outside_template": false,
+          "start": 223.85,
+          "text": "say",
+          "unclear": true,
+          "word_index": 581
+        },
+        {
+          "current_indices": [
+            616
+          ],
+          "end": 236.01,
+          "outside_template": true,
+          "start": 235.66,
+          "text": "forget",
+          "unclear": true,
+          "word_index": 613
+        },
+        {
+          "current_indices": [
+            648
+          ],
+          "end": 248.88,
+          "outside_template": false,
+          "start": 248.54,
+          "text": "God.''",
+          "unclear": true,
+          "word_index": 645
+        }
+      ],
+      "excluded_question": 13,
+      "excluded_transcript_uncertain": 0,
+      "labelled": 20,
+      "outside_template": 5,
+      "scored": [
+        {
+          "current_indices": [
+            73
+          ],
+          "end": 25.77,
+          "outside_template": false,
+          "start": 25.32,
+          "text": "Nineteen",
+          "unclear": false,
+          "word_index": 73
+        },
+        {
+          "current_indices": [
+            153
+          ],
+          "end": 60.42,
+          "outside_template": false,
+          "start": 59.71,
+          "text": "Jarvis,",
+          "unclear": false,
+          "word_index": 153
+        },
+        {
+          "current_indices": [
+            234
+          ],
+          "end": 90.31,
+          "outside_template": false,
+          "start": 89.885,
+          "text": "truths.",
+          "unclear": false,
+          "word_index": 234
+        },
+        {
+          "current_indices": [
+            296
+          ],
+          "end": 114.28,
+          "outside_template": false,
+          "start": 113.89,
+          "text": "members",
+          "unclear": false,
+          "word_index": 296
+        },
+        {
+          "current_indices": [
+            373
+          ],
+          "end": 143.43,
+          "outside_template": true,
+          "start": 143.225,
+          "text": "crew",
+          "unclear": false,
+          "word_index": 373
+        },
+        {
+          "current_indices": [
+            444
+          ],
+          "end": 169.03,
+          "outside_template": false,
+          "start": 168.465,
+          "text": "continue",
+          "unclear": false,
+          "word_index": 444
+        },
+        {
+          "current_indices": [
+            544
+          ],
+          "end": 207.88,
+          "outside_template": false,
+          "start": 207.56,
+          "text": "Drake",
+          "unclear": false,
+          "word_index": 541
+        }
+      ],
+      "total_intervals": 41
+    }
+  },
+  "input_identity": "0fe4f689bf302e48e2b0d72d974eb4f5c21fa846867247fe9e9a5b7b258eb861",
+  "inputs": {
+    "gold_hashes": {
+      "gettysburg__lv_fb__orig": "963b90af36134c9c7251aac6dd403f502686ba27b23419c852e683134e1b8890",
+      "jfk_rice__jfk__orig": "981fabe24543f78e63ddcb7c3648ffe27c866b3c3c3b7264cc555c7932905558",
+      "reagan_challenger__reagan__orig": "2bdc24d6ae12b42aaa166fac82c91486758dfdfa653a388d95231254bbc2fcdf"
+    },
+    "implementation_sha256": {
+      "src/speecheval/align/base.py": "994dc16583cc442b5ec6520e6c7069e4a5ba8f9bf0a5db0bb547cf985d05529f",
+      "src/speecheval/align/mfa.py": "4432f86f24ee6eec622bc373c1121e2566714ee5a555e17ed27e4809e938c482",
+      "src/speecheval/align/whisperx_align.py": "8fabd1b0a7c4dc40191acc5160e7ac1f89b5924bf413e3665239bd8ebe235ceb",
+      "src/speecheval/evaluate.py": "713727a21f3ab9e991f6dcd625dff0f86432e260e2f31a29910236454128bc49",
+      "src/speecheval/transcripts.py": "9f61b340cd609f52cd141083dc00810091abbfbbe6ed3b4c405e70d7c777796d"
+    },
+    "inference_environment": {
+      "model_sha256": {
+        "mfa_acoustic": "2c08bd4f82c3943dd57ac09aeac99dbce17a1e1bfe9fd932c8d95cd13d971068",
+        "mfa_dictionary": "cbf4ed8cee1338e009b9b387bcb9ee789ce70b98c61ca9bc6ed4f4e63d4812d5",
+        "mfa_g2p": "9923b38d59a8b3e3e322f225c52523c2a6248e5ffc9fd89be151ade2dc97cb02",
+        "whisperx_checkpoint": "488fd4f16de84438ffc945334278c1b9fb9b7159a806c1080b16111a958c945d"
+      },
+      "versions": {
+        "mfa_environment": "[[\"_openmp_mutex\", \"4.5\", \"20_gnu\"], [\"_python_abi3_support\", \"1.0\", \"hd8ed1ab_3\"], [\"adwaita-icon-theme\", \"51.0\", \"unix_0\"], [\"alsa-lib\", \"1.2.16.1\", \"h7cc23a3_1\"], [\"anyio\", \"4.15.1\", \"pyh5ded981_1\"], [\"aom\", \"3.14.1\", \"pl5321h57e6904_2\"], [\"at-spi2-atk\", \"2.38.0\", \"h0630a04_3\"], [\"at-spi2-core\", \"2.40.3\", \"h0630a04_0\"], [\"atk-1.0\", \"2.38.0\", \"h04ea711_2\"], [\"backports.zstd\", \"1.7.0\", \"py314h680f03e_1\"], [\"baumwelch\", \"0.3.11\", \"hb700be7_1\"], [\"brotli\", \"1.2.0\", \"h505cf86_4\"], [\"brotli-bin\", \"1.2.0\", \"h9908984_4\"], [\"brotli-python\", \"1.2.0\", \"py314hcd2bdb6_4\"], [\"bzip2\", \"1.0.8\", \"hda65f42_10\"], [\"ca-certificates\", \"2026.7.22\", \"hbd8a1cb_0\"], [\"cairo\", \"1.18.6\", \"h3c89d7e_0\"], [\"certifi\", \"2026.7.22\", \"pyhd8ed1ab_0\"], [\"cffi\", \"2.1.1\", \"py314h8d76f0c_3\"], [\"charset-normalizer\", \"3.5.2\", \"h1114479_0\"], [\"click\", \"8.5.0\", \"pyh5ded981_0\"], [\"cloudpickle\", \"3.1.2\", \"pyhcf101f3_1\"], [\"contourpy\", \"1.4.0\", \"py314h5383ef5_1\"], [\"cpython\", \"3.14.7\", \"py314hd8ed1ab_106\"], [\"cycler\", \"0.12.1\", \"pyhcf101f3_2\"], [\"cyrus-sasl\", \"2.1.28\", \"hac629b4_1\"], [\"dav1d\", \"1.2.1\", \"hd590300_0\"], [\"dbus\", \"1.16.2\", \"he8c428d_2\"], [\"decorator\", \"5.3.1\", \"pyhd8ed1ab_0\"], [\"epoxy\", \"1.5.10\", \"hb03c661_2\"], [\"ffmpeg\", \"9.0.0\", \"gpl_h95e667c_900\"], [\"filelock\", \"4.0.8\", \"pyhd8ed1ab_0\"], [\"font-ttf-dejavu-sans-mono\", \"2.37\", \"hab24e00_0\"], [\"font-ttf-inconsolata\", \"3.000\", \"h77eed37_0\"], [\"font-ttf-source-code-pro\", \"2.038\", \"h77eed37_0\"], [\"font-ttf-ubuntu\", \"0.83\", \"h77eed37_3\"], [\"fontconfig\", \"2.18.3\", \"h4db4eae_1\"], [\"fonts-conda-ecosystem\", \"1\", \"0\"], [\"fonts-conda-forge\", \"1\", \"hc364b38_1\"], [\"fonttools\", \"4.66.1\", \"py314hd42368d_0\"], [\"freetype\", \"2.14.3\", \"ha770c72_2\"], [\"fribidi\", \"1.0.17\", \"h7cc23a3_0\"], [\"fsspec\", \"2026.9.0\", \"pyhd8ed1ab_0\"], [\"gdk-pixbuf\", \"2.44.8\", \"h68053f1_2\"], [\"glib-tools\", \"2.90.0\", \"h3d503d9_0\"], [\"glslang\", \"16.6.0\", \"h980caa0_0\"], [\"gmp\", \"6.3.0\", \"hfd2156b_3\"], [\"graphite2\", \"1.3.15\", \"h54a6638_1\"], [\"graphviz\", \"14.1.2\", \"h8b86629_0\"], [\"gtk3\", \"3.24.52\", \"ha5ea40c_0\"], [\"gts\", \"0.7.6\", \"h977cf35_4\"], [\"h11\", \"0.16.0\", \"pyhcf101f3_1\"], [\"h2\", \"4.4.1\", \"pyhcf101f3_0\"], [\"harfbuzz\", \"14.5.1\", \"ha770c72_0\"], [\"hdbscan\", \"0.8.44\", \"py314h12ceea2_1\"], [\"hf-xet\", \"1.5.2\", \"py310hb823017_2\"], [\"hicolor-icon-theme\", \"0.17\", \"ha770c72_3\"], [\"hpack\", \"4.2.0\", \"pyhd8ed1ab_0\"], [\"httpcore\", \"1.0.9\", \"pyh29332c3_0\"], [\"httpx\", \"0.28.1\", \"pyhd8ed1ab_0\"], [\"huggingface_hub\", \"1.32.0\", \"pyh5ded981_0\"], [\"hyperframe\", \"6.1.0\", \"pyhd8ed1ab_0\"], [\"icu\", \"78.3\", \"py310h44b86e0_2\"], [\"idna\", \"3.20\", \"pyh5ded981_0\"], [\"intel-gmmlib\", \"22.10.2\", \"h7148c6a_0\"], [\"intel-media-driver\", \"26.1.6\", \"hecca717_0\"], [\"jinja2\", \"3.1.6\", \"pyhcf101f3_1\"], [\"joblib\", \"1.6.0\", \"pyhcf101f3_0\"], [\"kaldi\", \"5.5.1172\", \"cpu_h5f874f2_5\"], [\"kalpy\", \"0.10.5\", \"py314hb3b7642_0\"], [\"keyutils\", \"1.6.3\", \"h7cc23a3_1\"], [\"kiwisolver\", \"1.5.1\", \"py314h5383ef5_3\"], [\"kneed\", \"0.8.6\", \"pyhd8ed1ab_0\"], [\"krb5\", \"1.22.2\", \"hbc21106_2\"], [\"lame\", \"3.100\", \"h166bdaf_1003\"], [\"lazy-loader\", \"0.6\", \"pyhd8ed1ab_0\"], [\"lazy_loader\", \"0.6\", \"pyhd8ed1ab_0\"], [\"lcms2\", \"2.19.1\", \"h9073bf1_3\"], [\"ld_impl_linux-64\", \"2.46.1\", \"default_hbd61a6d_102\"], [\"lerc\", \"4.2.0\", \"hdb68285_0\"], [\"level-zero\", \"1.33.1\", \"h7148c6a_0\"], [\"libabseil\", \"20260526.0\", \"cxx17_h0dc7533_2\"], [\"libass\", \"0.17.5\", \"h3b6f6bf_1\"], [\"libblas\", \"3.11.0\", \"11_h4a7cf45_openblas\"], [\"libbrotlicommon\", \"1.2.0\", \"h39a168f_4\"], [\"libbrotlidec\", \"1.2.0\", \"ha411449_4\"], [\"libbrotlienc\", \"1.2.0\", \"h018ffa1_4\"], [\"libcap\", \"2.78\", \"h084b8d7_1\"], [\"libcblas\", \"3.11.0\", \"11_h0358290_openblas\"], [\"libcups\", \"2.3.3\", \"h7a8fb5f_6\"], [\"libdeflate\", \"1.25\", \"hd45a770_1\"], [\"libdovi\", \"3.4.0\", \"h39d0f39_1\"], [\"libdrm\", \"2.4.129\", \"h7cc23a3_0\"], [\"libedit\", \"3.1.20250104\", \"pl5321h373387f_1\"], [\"libegl\", \"1.7.0\", \"ha4b6fd6_5\"], [\"libegl-devel\", \"1.7.0\", \"ha4b6fd6_5\"], [\"libexpat\", \"2.8.5\", \"hd2095e1_0\"], [\"libffi\", \"3.7.0\", \"h81df57d_1\"], [\"libflac\", \"1.5.0\", \"he200343_1\"], [\"libfreetype\", \"2.14.3\", \"ha770c72_2\"], [\"libfreetype6\", \"2.14.3\", \"h5e6c136_2\"], [\"libgcc\", \"16.2.0\", \"ha9f2e26_7\"], [\"libgcc-ng\", \"16.2.0\", \"h69a702a_7\"], [\"libgd\", \"2.3.3\", \"h5fbf134_12\"], [\"libgfortran\", \"16.2.0\", \"h69a702a_7\"], [\"libgfortran5\", \"16.2.0\", \"h6b99dfc_7\"], [\"libgl\", \"1.7.0\", \"ha4b6fd6_5\"], [\"libgl-devel\", \"1.7.0\", \"ha4b6fd6_5\"], [\"libglib\", \"2.90.0\", \"h569388d_0\"], [\"libglvnd\", \"1.7.0\", \"ha4b6fd6_5\"], [\"libglx\", \"1.7.0\", \"ha4b6fd6_5\"], [\"libglx-devel\", \"1.7.0\", \"ha4b6fd6_5\"], [\"libgomp\", \"16.2.0\", \"he0feb66_7\"], [\"libharfbuzz\", \"14.5.1\", \"h23af247_0\"], [\"libharfbuzz-devel\", \"14.5.1\", \"h23af247_0\"], [\"libhwloc\", \"2.15.0\", \"default_hd7c4d0c_1001\"], [\"libhwy\", \"1.4.0\", \"h57c4cff_1\"], [\"libiconv\", \"1.18\", \"h0cb94f2_3\"], [\"libjpeg-turbo\", \"3.2.0\", \"hb03c661_1\"], [\"libjxl\", \"0.12.0\", \"heb2dce7_2\"], [\"liblapack\", \"3.11.0\", \"11_h47877c9_openblas\"], [\"liblapacke\", \"3.11.0\", \"11_h6ae95b6_openblas\"], [\"liblzma\", \"5.8.3\", \"hb03c661_1\"], [\"liblzma-devel\", \"5.8.3\", \"hb03c661_1\"], [\"libmpdec\", \"4.0.0\", \"hb03c661_2\"], [\"libntlm\", \"1.8\", \"hb9d3cd8_0\"], [\"libogg\", \"1.3.5\", \"hd0c01bc_1\"], [\"libopenblas\", \"0.3.34\", \"pthreads_hf13c14d_2\"], [\"libopenvino\", \"2026.3.0\", \"hb2f3c86_0\"], [\"libopenvino-auto-batch-plugin\", \"2026.3.0\", \"h9f30d58_0\"], [\"libopenvino-auto-plugin\", \"2026.3.0\", \"h9f30d58_0\"], [\"libopenvino-hetero-plugin\", \"2026.3.0\", \"hfeb6f35_0\"], [\"libopenvino-intel-cpu-plugin\", \"2026.3.0\", \"hb2f3c86_0\"], [\"libopenvino-intel-gpu-plugin\", \"2026.3.0\", \"hb2f3c86_0\"], [\"libopenvino-intel-npu-plugin\", \"2026.3.0\", \"hb2f3c86_0\"], [\"libopenvino-ir-frontend\", \"2026.3.0\", \"hfeb6f35_0\"], [\"libopenvino-onnx-frontend\", \"2026.3.0\", \"h6c33c14_0\"], [\"libopenvino-paddle-frontend\", \"2026.3.0\", \"h6c33c14_0\"], [\"libopenvino-pytorch-frontend\", \"2026.3.0\", \"h0542e35_0\"], [\"libopenvino-tensorflow-frontend\", \"2026.3.0\", \"h565fa1b_0\"], [\"libopenvino-tensorflow-lite-frontend\", \"2026.3.0\", \"h0542e35_0\"], [\"libopus\", \"1.6.1\", \"hebe6cf0_1\"], [\"libpciaccess\", \"0.19\", \"hb03c661_1\"], [\"libplacebo\", \"7.360.1\", \"hc50b9dd_1\"], [\"libpng\", \"1.6.59\", \"h922cc85_0\"], [\"libpq\", \"18.6\", \"h3883810_3\"], [\"libprotobuf\", \"7.35.1\", \"h622638d_3\"], [\"libpython\", \"3.14.7\", \"hdc7f604_106_cp314\"], [\"libraqm\", \"0.11.0\", \"h6406941_0\"], [\"librosa\", \"1.0.0\", \"pyhd8ed1ab_0\"], [\"librsvg\", \"2.62.4\", \"ha427ee3_0\"], [\"libsndfile\", \"1.2.2\", \"hc7d488a_2\"], [\"libsqlite\", \"3.53.4\", \"h13e7031_1\"], [\"libstdcxx\", \"16.2.0\", \"h934c35e_7\"], [\"libstdcxx-ng\", \"16.2.0\", \"hdf11a46_7\"], [\"libsystemd0\", \"262\", \"h26e0ef7_2\"], [\"libtiff\", \"4.7.2\", \"hcc2c06a_1\"], [\"libudev1\", \"262\", \"h26e0ef7_2\"], [\"libunwind\", \"1.8.3\", \"h65a8314_0\"], [\"liburing\", \"2.14\", \"hb700be7_0\"], [\"libusb\", \"1.0.30\", \"h0d1bbbc_0\"], [\"libuuid\", \"2.42.4\", \"hcfc3c73_0\"], [\"libva\", \"2.24.1\", \"hb83e432_1\"], [\"libvorbis\", \"1.3.7\", \"h54a6638_2\"], [\"libvpl\", \"2.16.0\", \"h54a6638_0\"], [\"libvpx\", \"1.15.2\", \"hd2095e1_1\"], [\"libvulkan-loader\", \"1.4.357.0\", \"h0e34353_2\"], [\"libwebp-base\", \"1.6.0\", \"hd42ef1d_1\"], [\"libxcb\", \"1.17.0\", \"hb83e432_2\"], [\"libxcrypt\", \"4.4.38\", \"h280c20c_0\"], [\"libxkbcommon\", \"1.13.2\", \"h51789e4_1\"], [\"libxml2\", \"2.15.4\", \"h7df9aa5_0\"], [\"libxml2-16\", \"2.15.4\", \"hf3af7cc_0\"], [\"libxslt\", \"1.1.45\", \"h8e12856_1\"], [\"libzlib\", \"1.3.2\", \"h25fd6f3_3\"], [\"llvmlite\", \"0.50.0\", \"py314h264585c_0\"], [\"lz4-c\", \"1.10.0\", \"hee9eb32_2\"], [\"mad\", \"0.15.1b\", \"h9c3ff4c_1\"], [\"markdown-it-py\", \"4.2.0\", \"pyhd8ed1ab_0\"], [\"markupsafe\", \"3.0.3\", \"py314h67df5f8_1\"], [\"matplotlib-base\", \"3.11.2\", \"py314h9124352_1\"], [\"mdurl\", \"0.1.2\", \"pyhd8ed1ab_1\"], [\"montreal-forced-aligner\", \"3.4.2\", \"pyhd8ed1ab_0\"], [\"mpg123\", \"1.32.9\", \"h8142553_0\"], [\"msgpack-python\", \"1.2.3\", \"py314h5383ef5_0\"], [\"munkres\", \"1.1.4\", \"pyhd8ed1ab_1\"], [\"narwhals\", \"2.26.0\", \"pyh5ded981_0\"], [\"ncurses\", \"6.6\", \"hdb14827_1\"], [\"ngram\", \"1.3.17\", \"hb700be7_0\"], [\"numba\", \"0.68.0\", \"py314hf3b331d_1\"], [\"numpy\", \"2.5.3\", \"py314hd3a7d6b_0\"], [\"ocl-icd\", \"2.3.4\", \"hb03c661_1\"], [\"opencl-headers\", \"2025.06.13\", \"hecca717_0\"], [\"openfst\", \"1.8.4\", \"h84d6215_1\"], [\"openh264\", \"2.6.0\", \"h8c49934_2\"], [\"openjpeg\", \"2.5.4\", \"heb1ab33_2\"], [\"openldap\", \"2.6.13\", \"hbde042b_0\"], [\"openssl\", \"3.6.4\", \"h781a0a9_0\"], [\"packaging\", \"26.3\", \"pyhc364b38_0\"], [\"pango\", \"1.58.2\", \"h7bb47b9_1\"], [\"pcre2\", \"10.47\", \"h8b3dc9c_1\"], [\"pgvector\", \"0.8.6\", \"h1b92c21_0\"], [\"pgvector-python\", \"0.5.0\", \"pyhcf101f3_0\"], [\"pillow\", \"12.3.0\", \"py314h50bfbbb_4\"], [\"pip\", \"26.2.1\", \"pyh145f28c_0\"], [\"pixman\", \"0.46.4\", \"h54a6638_3\"], [\"platformdirs\", \"4.12.2\", \"pyh5ded981_0\"], [\"pooch\", \"1.9.0\", \"pyhd8ed1ab_0\"], [\"postgresql\", \"18.6\", \"hcb5e64f_3\"], [\"praatio\", \"6.2.2\", \"pyhd8ed1ab_0\"], [\"psycopg2\", \"2.9.13\", \"py314hce6ae18_0\"], [\"pthread-stubs\", \"0.4\", \"h7cc23a3_1004\"], [\"pugixml\", \"1.15\", \"h3f63f65_0\"], [\"pulseaudio-client\", \"17.0\", \"hb10c1b2_4\"], [\"pycparser\", \"3.0\", \"pyhcf101f3_0\"], [\"pygments\", \"2.21.0\", \"pyhcf101f3_0\"], [\"pynini\", \"2.1.7\", \"py314h9891dd4_2\"], [\"pyparsing\", \"3.3.3\", \"pyh5ded981_0\"], [\"pysocks\", \"1.7.1\", \"pyha55dd90_7\"], [\"pysoundfile\", \"0.14.0\", \"pyhcf101f3_0\"], [\"python\", \"3.14.7\", \"hcd007b5_106_cp314\"], [\"python-dateutil\", \"2.9.0.post0\", \"pyhe01879c_2\"], [\"python-gil\", \"3.14.7\", \"h4df99d1_106\"], [\"python_abi\", \"3.14\", \"9_cp314\"], [\"pyyaml\", \"6.0.3\", \"py314h67df5f8_1\"], [\"qhull\", \"2020.2\", \"h434a139_5\"], [\"readline\", \"8.3\", \"hd6e31c0_1\"], [\"requests\", \"2.34.2\", \"pyhcf101f3_0\"], [\"rich\", \"15.0.0\", \"pyhcf101f3_0\"], [\"rich-click\", \"1.9.9\", \"pyhfa0c392_0\"], [\"scikit-learn\", \"1.9.1\", \"np2py314h9e1d7c2_1\"], [\"scipy\", \"1.18.1\", \"py314h36f0660_1\"], [\"sdl2\", \"2.32.56\", \"h54a6638_0\"], [\"sdl3\", \"3.4.16\", \"h5330f5c_0\"], [\"shaderc\", \"2026.3\", \"hcebf71c_1\"], [\"six\", \"1.17.0\", \"pyhe01879c_1\"], [\"snappy\", \"1.2.2\", \"h34e00bb_2\"], [\"sniffio\", \"1.3.1\", \"pyhd8ed1ab_2\"], [\"sox\", \"14.4.2\", \"h8c9d6be_1021\"], [\"soxr\", \"0.1.3\", \"h0b41bf4_3\"], [\"soxr-python\", \"1.1.0\", \"py314ha160325_0\"], [\"spirv-tools\", \"2026.3\", \"h7148c6a_1\"], [\"sqlalchemy\", \"2.1.1\", \"py314hfe1a184_0\"], [\"sqlite\", \"3.53.4\", \"h9ffa6c4_1\"], [\"svt-av1\", \"4.2.0\", \"hd2095e1_1\"], [\"tbb\", \"2023.1.0\", \"haa8c3ee_2\"], [\"threadpoolctl\", \"3.7.0\", \"pyhc455866_0\"], [\"tk\", \"8.6.13\", \"noxft_h1df4ec4_4\"], [\"tqdm\", \"4.70.1\", \"pyhfa0c392_0\"], [\"typing-extensions\", \"4.16.0\", \"h69aa097_0\"], [\"typing_extensions\", \"4.16.0\", \"pyhcf101f3_0\"], [\"tzcode\", \"2026e\", \"hebe6cf0_0\"], [\"tzdata\", \"2026c\", \"h151e31d_0\"], [\"urllib3\", \"2.8.0\", \"pyhd8ed1ab_0\"], [\"wayland\", \"1.26.0\", \"hc1c935e_2\"], [\"wayland-protocols\", \"1.49\", \"hd8ed1ab_0\"], [\"x264\", \"1!164.3095\", \"h7cc23a3_3\"], [\"x265\", \"3.5\", \"h73f68a7_4\"], [\"xkeyboard-config\", \"2.48\", \"h280c20c_0\"], [\"xorg-libice\", \"1.1.2\", \"h280c20c_0\"], [\"xorg-libsm\", \"1.2.6\", \"h0d788c3_1\"], [\"xorg-libx11\", \"1.8.13\", \"he1eb515_1\"], [\"xorg-libxau\", \"1.0.12\", \"h7cc23a3_2\"], [\"xorg-libxcomposite\", \"0.4.7\", \"hb03c661_0\"], [\"xorg-libxcursor\", \"1.2.3\", \"hb9d3cd8_0\"], [\"xorg-libxdamage\", \"1.1.6\", \"hb9d3cd8_0\"], [\"xorg-libxdmcp\", \"1.1.5\", \"h7cc23a3_2\"], [\"xorg-libxext\", \"1.3.7\", \"h7cc23a3_1\"], [\"xorg-libxfixes\", \"6.0.2\", \"h7cc23a3_1\"], [\"xorg-libxi\", \"1.8.3\", \"h7cc23a3_1\"], [\"xorg-libxinerama\", \"1.1.6\", \"hecca717_0\"], [\"xorg-libxrandr\", \"1.5.5\", \"h7cc23a3_1\"], [\"xorg-libxrender\", \"0.9.12\", \"hb03c661_1\"], [\"xorg-libxscrnsaver\", \"1.2.4\", \"hb9d3cd8_0\"], [\"xorg-libxtst\", \"1.2.5\", \"h7cc23a3_4\"], [\"xorg-libxxf86vm\", \"1.1.7\", \"hb03c661_0\"], [\"xorg-xorgproto\", \"2025.1\", \"hebe6cf0_3\"], [\"yaml\", \"0.2.5\", \"hebe6cf0_3\"], [\"zlib\", \"1.3.2\", \"h25fd6f3_3\"], [\"zlib-ng\", \"2.3.3\", \"hce19668_1\"], [\"zstd\", \"1.5.7\", \"hb78ec9c_7\"]]",
+        "numpy": "2.0.2",
+        "praatio": "6.2.2",
+        "scipy": "1.17.1",
+        "torch": "2.11.0+cu128",
+        "torchaudio": "2.11.0+cu128",
+        "whisperx": "3.7.2"
+      }
+    },
+    "migration_sha256": "f75dd8f1c66df468afff31100a2a2030d0f62074982963949a09580ec6a08ed5",
+    "recordings": [
+      {
+        "audio_sha256": "366fba756b51c09ac83dde8e91298a9a1bb59cae3c5f7606912fa61fce55fdac",
+        "body": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.\n\nNow we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live. It is altogether fitting and proper that we should do this.\n\nBut, in a larger sense, we can not dedicate -- we can not consecrate -- we cannot hollow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced.\n\nIt is rather for us to be  dedicated to the great task of remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+        "duration_s": 114.928,
+        "recording_id": "gettysburg__lv_fb__orig",
+        "transcript_sha256": "9fc7e9c1fe552f150ccdb526064ba0ee40f5c0b5b6d8c99d2d40772d7ecd3afa",
+        "uncertain": [
+          268
+        ],
+        "windows": [
+          {
+            "char_end": 178,
+            "char_start": 0,
+            "end": 14.131,
+            "i": 0,
+            "interpolated_boundary": false,
+            "start": 0.0,
+            "text": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+            "valid": true
+          },
+          {
+            "char_end": 311,
+            "char_start": 180,
+            "end": 22.935,
+            "i": 1,
+            "interpolated_boundary": false,
+            "start": 14.452,
+            "text": "Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure.",
+            "valid": true
+          },
+          {
+            "char_end": 359,
+            "char_start": 312,
+            "end": 26.13,
+            "i": 2,
+            "interpolated_boundary": false,
+            "start": 23.256,
+            "text": "We are met on a great battle-field of that war.",
+            "valid": true
+          },
+          {
+            "char_end": 499,
+            "char_start": 360,
+            "end": 36.464,
+            "i": 3,
+            "interpolated_boundary": false,
+            "start": 25.83,
+            "text": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that this nation might live.",
+            "valid": true
+          },
+          {
+            "char_end": 559,
+            "char_start": 500,
+            "end": 40.519,
+            "i": 4,
+            "interpolated_boundary": false,
+            "start": 36.164,
+            "text": "It is altogether fitting and proper that we should do this.",
+            "valid": true
+          },
+          {
+            "char_end": 665,
+            "char_start": 561,
+            "end": 48.77,
+            "i": 5,
+            "interpolated_boundary": false,
+            "start": 41.161,
+            "text": "But, in a larger sense, we can not dedicate -- we can not consecrate -- we cannot hollow -- this ground.",
+            "valid": true
+          },
+          {
+            "char_end": 782,
+            "char_start": 666,
+            "end": 57.868,
+            "i": 6,
+            "interpolated_boundary": false,
+            "start": 48.634,
+            "text": "The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract.",
+            "valid": true
+          },
+          {
+            "char_end": 890,
+            "char_start": 783,
+            "end": 65.541,
+            "i": 7,
+            "interpolated_boundary": false,
+            "start": 58.43,
+            "text": "The world will little note, nor long remember what we say here, but it can never forget what they did here.",
+            "valid": true
+          },
+          {
+            "char_end": 1027,
+            "char_start": 891,
+            "end": 75.458,
+            "i": 8,
+            "interpolated_boundary": false,
+            "start": 65.903,
+            "text": "It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced.",
+            "valid": true
+          },
+          {
+            "char_end": 1476,
+            "char_start": 1029,
+            "end": 114.928,
+            "i": 9,
+            "interpolated_boundary": false,
+            "start": 75.674,
+            "text": "It is rather for us to be  dedicated to the great task of remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.",
+            "valid": true
+          }
+        ]
+      },
+      {
+        "audio_sha256": "e6b14a97c50431d20d400be2b1ff3595d29a1f0d60356c4967f766f469778500",
+        "body": "Why, thirty-five years ago, fly the Atlantic? Why does Rice play Texas?\n\nWe choose to go to the moon We choose to go to the Moon. We choose to go to the Moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one  we intend to win, and the others, too.\n\nIt is for these reasons that I regard the decision last year to shift our efforts in space from low to high gear as among the most important decisions that will be made during my incumbency in the office of the Presidency.\n\nIn the last twenty-four hours we have seen facilities now being created for the greatest and most complex exploration in man's history. We have felt the ground shake and the air shattered by the testing of a Saturn C-one booster rocket, many times as powerful as the Atlas which launched John Glenn, generating power equivalent to ten thousand automobiles with their accelerators on the floor. We have seen the site where five F-one rocket engines, each one as powerful as all eight engines of the Saturn combined, will be clustered together to make the advanced Saturn missile, assembled in a new building to be built at Cape Canaveral as tall as a forty-eight story structure, as wide as a city block, and as long as two lengths of this field.\n\nWithin these last nineteen months at least forty-five satellites have circled the earth. Some forty of them were \"made in the United States of America\" and they were far more sophisticated and supplied far more knowledge to the people of the world than those of the Soviet Union.\n\nThe Mariner spacecraft The Mariner spacecraft now on its way to Venus is the most intricate instrument in the history of space science.",
+        "duration_s": 157.632,
+        "recording_id": "jfk_rice__jfk__orig",
+        "transcript_sha256": "3f321b927ed5d4498a56a734efc67a7b17020913460bb397efe98a873c8351e7",
+        "uncertain": [],
+        "windows": [
+          {
+            "char_end": 45,
+            "char_start": 0,
+            "end": 2.964,
+            "i": 0,
+            "interpolated_boundary": false,
+            "start": 0.0,
+            "text": "Why, thirty-five years ago, fly the Atlantic?",
+            "valid": true
+          },
+          {
+            "char_end": 71,
+            "char_start": 46,
+            "end": 5.407,
+            "i": 1,
+            "interpolated_boundary": false,
+            "start": 3.125,
+            "text": "Why does Rice play Texas?",
+            "valid": true
+          },
+          {
+            "char_end": 129,
+            "char_start": 73,
+            "end": 16.307,
+            "i": 2,
+            "interpolated_boundary": false,
+            "start": 5.175,
+            "text": "We choose to go to the moon We choose to go to the Moon.",
+            "valid": true
+          },
+          {
+            "char_end": 484,
+            "char_start": 130,
+            "end": 41.46,
+            "i": 3,
+            "interpolated_boundary": false,
+            "start": 16.007,
+            "text": "We choose to go to the Moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one  we intend to win, and the others, too.",
+            "valid": true
+          },
+          {
+            "char_end": 708,
+            "char_start": 486,
+            "end": 64.095,
+            "i": 4,
+            "interpolated_boundary": false,
+            "start": 48.672,
+            "text": "It is for these reasons that I regard the decision last year to shift our efforts in space from low to high gear as among the most important decisions that will be made during my incumbency in the office of the Presidency.",
+            "valid": true
+          },
+          {
+            "char_end": 845,
+            "char_start": 710,
+            "end": 74.237,
+            "i": 5,
+            "interpolated_boundary": false,
+            "start": 64.247,
+            "text": "In the last twenty-four hours we have seen facilities now being created for the greatest and most complex exploration in man's history.",
+            "valid": true
+          },
+          {
+            "char_end": 1103,
+            "char_start": 846,
+            "end": 94.079,
+            "i": 6,
+            "interpolated_boundary": false,
+            "start": 74.638,
+            "text": "We have felt the ground shake and the air shattered by the testing of a Saturn C-one booster rocket, many times as powerful as the Atlas which launched John Glenn, generating power equivalent to ten thousand automobiles with their accelerators on the floor.",
+            "valid": true
+          },
+          {
+            "char_end": 1455,
+            "char_start": 1104,
+            "end": 124.031,
+            "i": 7,
+            "interpolated_boundary": false,
+            "start": 94.263,
+            "text": "We have seen the site where five F-one rocket engines, each one as powerful as all eight engines of the Saturn combined, will be clustered together to make the advanced Saturn missile, assembled in a new building to be built at Cape Canaveral as tall as a forty-eight story structure, as wide as a city block, and as long as two lengths of this field.",
+            "valid": true
+          },
+          {
+            "char_end": 1545,
+            "char_start": 1457,
+            "end": 130.331,
+            "i": 8,
+            "interpolated_boundary": false,
+            "start": 124.183,
+            "text": "Within these last nineteen months at least forty-five satellites have circled the earth.",
+            "valid": true
+          },
+          {
+            "char_end": 1736,
+            "char_start": 1546,
+            "end": 142.47,
+            "i": 9,
+            "interpolated_boundary": false,
+            "start": 130.553,
+            "text": "Some forty of them were \"made in the United States of America\" and they were far more sophisticated and supplied far more knowledge to the people of the world than those of the Soviet Union.",
+            "valid": true
+          },
+          {
+            "char_end": 1873,
+            "char_start": 1738,
+            "end": 157.632,
+            "i": 10,
+            "interpolated_boundary": false,
+            "start": 142.771,
+            "text": "The Mariner spacecraft The Mariner spacecraft now on its way to Venus is the most intricate instrument in the history of space science.",
+            "valid": true
+          }
+        ]
+      },
+      {
+        "audio_sha256": "21702f4dd88b87c6c7ae3cbe22735ad6c6ce44f3e95004d2e3264e4b3078953b",
+        "body": "Ladies and gentlemen, I'd planned to speak to you tonight to report on the state of the Union, but the events of earlier today have led me to change those plans. Today is a day for mourning and remembering. Nancy and I are pained to the core by the tragedy of the shuttle Challenger. We know we share this pain with all  the people of our country. This is truly a national loss.\n\nNineteen years ago, almost to the day, we lost three astronauts in a terrible accident on the ground. But we've never lost an astronaut in flight; we've never had a tragedy like this. And perhaps we've forgotten the courage it took for the crew of the shuttle. But they, the Challenger Seven, were aware of the dangers, but overcame them and did their jobs brilliantly. We mourn seven heroes: Michael Smith, Dick Scobee, Judith Resnik, Ronald McNair, Ellison Onizuka, Gregory Jarvis, and Christa McAuliffe.\n\nWe mourn their loss as a nation together.\n\n the families of the seven, we cannot bear, as you do, the full impact of this tragedy. But we feel the loss, and we're thinking about you so very much. Your loved ones were daring and brave, and they had that special grace, that special spirit that says, ``Give me a challenge, and I'll meet it with joy.'' They had a hunger to explore the universe and discover its truths. They wished to serve, and they did. They served all of us. We've grown used to wonders in this century. It's hard to dazzle us.\n\nBut for twenty-five years the United States space program has been doing just that. We've grown used to the idea of space, and perhaps we forget that we've only just begun. We're still pioneers. They, the members of the Challenger crew, were pioneers.\n\nAnd I want to say something to the schoolchildren of America who were watching the live coverage of the shuttle's takeoff. I know it is hard to understand, but sometimes painful things like this happen. It's all part of the process of exploration and discovery. It's all part of taking a chance and expanding man's horizons. The future doesn't belong to the fainthearted; it belongs to the brave. The Challenger crew was pulling us into the future, and we'll continue to follow them.\n\nI've always had great faith in and respect for our space program, and what happened today does nothing to diminish it. We don't hide our space program. We don't keep secrets and cover things up. We do it all up front and in public. That's the way freedom is, and we wouldn't change it for a minute. We'll continue our quest in space. There will be more shuttle flights and more shuttle crews and, yes, more volunteers, more civilians, more teachers in space.\n\nNothing ends here; our hopes and our journeys continue. I want to add that I wish I could talk to every man and woman who works for NASA or who worked on this mission and tell them: ``Your dedication and professionalism have moved and impressed us for decades. And we know of your anguish. We share it.''\n\nThere's a coincidence today. On this day three hundred and ninety years ago, the great explorer Sir Francis Drake died aboard ship off the coast of Panama. In his lifetime the great frontiers were the oceans, and the historian later said, ``He lived by the sea, died on it, and was buried in it.'' Well, today we can say of the Challenger crew: Their dedication was, like Drake's, complete.\n\nThe crew of the space shuttle Challenger honored us for the manner in which they lived their lives. We will never forget them, nor the last time we saw them, this morning, as they prepared for their journey and waved goodbye and ``slipped the surly bonds of earth'' to ``touch the face of God.''",
+        "duration_s": 249.128,
+        "recording_id": "reagan_challenger__reagan__orig",
+        "transcript_sha256": "0e686cc152ad0481f92f94a81013cf4e279138eeaced4fba67201be152a497bd",
+        "uncertain": [],
+        "windows": [
+          {
+            "char_end": 161,
+            "char_start": 0,
+            "end": 9.365,
+            "i": 0,
+            "interpolated_boundary": false,
+            "start": 0.0,
+            "text": "Ladies and gentlemen, I'd planned to speak to you tonight to report on the state of the Union, but the events of earlier today have led me to change those plans.",
+            "valid": true
+          },
+          {
+            "char_end": 206,
+            "char_start": 162,
+            "end": 14.013,
+            "i": 1,
+            "interpolated_boundary": false,
+            "start": 9.907,
+            "text": "Today is a day for mourning and remembering.",
+            "valid": true
+          },
+          {
+            "char_end": 283,
+            "char_start": 207,
+            "end": 18.22,
+            "i": 2,
+            "interpolated_boundary": false,
+            "start": 13.713,
+            "text": "Nancy and I are pained to the core by the tragedy of the shuttle Challenger.",
+            "valid": true
+          },
+          {
+            "char_end": 347,
+            "char_start": 284,
+            "end": 21.505,
+            "i": 3,
+            "interpolated_boundary": false,
+            "start": 17.92,
+            "text": "We know we share this pain with all  the people of our country.",
+            "valid": true
+          },
+          {
+            "char_end": 378,
+            "char_start": 348,
+            "end": 24.47,
+            "i": 4,
+            "interpolated_boundary": false,
+            "start": 21.726,
+            "text": "This is truly a national loss.",
+            "valid": true
+          },
+          {
+            "char_end": 481,
+            "char_start": 380,
+            "end": 31.262,
+            "i": 5,
+            "interpolated_boundary": false,
+            "start": 24.974,
+            "text": "Nineteen years ago, almost to the day, we lost three astronauts in a terrible accident on the ground.",
+            "valid": true
+          },
+          {
+            "char_end": 526,
+            "char_start": 482,
+            "end": 34.367,
+            "i": 6,
+            "interpolated_boundary": false,
+            "start": 31.584,
+            "text": "But we've never lost an astronaut in flight;",
+            "valid": true
+          },
+          {
+            "char_end": 563,
+            "char_start": 527,
+            "end": 37.071,
+            "i": 7,
+            "interpolated_boundary": false,
+            "start": 34.648,
+            "text": "we've never had a tragedy like this.",
+            "valid": true
+          },
+          {
+            "char_end": 640,
+            "char_start": 564,
+            "end": 42.159,
+            "i": 8,
+            "interpolated_boundary": false,
+            "start": 37.513,
+            "text": "And perhaps we've forgotten the courage it took for the crew of the shuttle.",
+            "valid": true
+          },
+          {
+            "char_end": 749,
+            "char_start": 641,
+            "end": 48.408,
+            "i": 9,
+            "interpolated_boundary": false,
+            "start": 41.859,
+            "text": "But they, the Challenger Seven, were aware of the dangers, but overcame them and did their jobs brilliantly.",
+            "valid": true
+          },
+          {
+            "char_end": 772,
+            "char_start": 750,
+            "end": 50.912,
+            "i": 10,
+            "interpolated_boundary": false,
+            "start": 48.789,
+            "text": "We mourn seven heroes:",
+            "valid": true
+          },
+          {
+            "char_end": 886,
+            "char_start": 773,
+            "end": 62.993,
+            "i": 11,
+            "interpolated_boundary": false,
+            "start": 50.892,
+            "text": "Michael Smith, Dick Scobee, Judith Resnik, Ronald McNair, Ellison Onizuka, Gregory Jarvis, and Christa McAuliffe.",
+            "valid": true
+          },
+          {
+            "char_end": 929,
+            "char_start": 888,
+            "end": 65.256,
+            "i": 12,
+            "interpolated_boundary": false,
+            "start": 62.693,
+            "text": "We mourn their loss as a nation together.",
+            "valid": true
+          },
+          {
+            "char_end": 1018,
+            "char_start": 932,
+            "end": 71.926,
+            "i": 13,
+            "interpolated_boundary": false,
+            "start": 65.838,
+            "text": "the families of the seven, we cannot bear, as you do, the full impact of this tragedy.",
+            "valid": true
+          },
+          {
+            "char_end": 1083,
+            "char_start": 1019,
+            "end": 76.393,
+            "i": 14,
+            "interpolated_boundary": false,
+            "start": 72.428,
+            "text": "But we feel the loss, and we're thinking about you so very much.",
+            "valid": true
+          },
+          {
+            "char_end": 1238,
+            "char_start": 1084,
+            "end": 86.487,
+            "i": 15,
+            "interpolated_boundary": false,
+            "start": 77.095,
+            "text": "Your loved ones were daring and brave, and they had that special grace, that special spirit that says, ``Give me a challenge, and I'll meet it with joy.''",
+            "valid": true
+          },
+          {
+            "char_end": 1305,
+            "char_start": 1239,
+            "end": 91.373,
+            "i": 16,
+            "interpolated_boundary": false,
+            "start": 87.028,
+            "text": "They had a hunger to explore the universe and discover its truths.",
+            "valid": true
+          },
+          {
+            "char_end": 1341,
+            "char_start": 1306,
+            "end": 93.115,
+            "i": 17,
+            "interpolated_boundary": false,
+            "start": 91.073,
+            "text": "They wished to serve, and they did.",
+            "valid": true
+          },
+          {
+            "char_end": 1364,
+            "char_start": 1342,
+            "end": 94.897,
+            "i": 18,
+            "interpolated_boundary": false,
+            "start": 93.376,
+            "text": "They served all of us.",
+            "valid": true
+          },
+          {
+            "char_end": 1409,
+            "char_start": 1365,
+            "end": 98.1,
+            "i": 19,
+            "interpolated_boundary": false,
+            "start": 95.498,
+            "text": "We've grown used to wonders in this century.",
+            "valid": true
+          },
+          {
+            "char_end": 1433,
+            "char_start": 1410,
+            "end": 100.463,
+            "i": 20,
+            "interpolated_boundary": false,
+            "start": 98.141,
+            "text": "It's hard to dazzle us.",
+            "valid": true
+          },
+          {
+            "char_end": 1518,
+            "char_start": 1435,
+            "end": 104.607,
+            "i": 21,
+            "interpolated_boundary": false,
+            "start": 100.163,
+            "text": "But for twenty-five years the United States space program has been doing just that.",
+            "valid": true
+          },
+          {
+            "char_end": 1607,
+            "char_start": 1519,
+            "end": 110.454,
+            "i": 22,
+            "interpolated_boundary": false,
+            "start": 104.969,
+            "text": "We've grown used to the idea of space, and perhaps we forget that we've only just begun.",
+            "valid": true
+          },
+          {
+            "char_end": 1629,
+            "char_start": 1608,
+            "end": 112.376,
+            "i": 23,
+            "interpolated_boundary": false,
+            "start": 110.154,
+            "text": "We're still pioneers.",
+            "valid": true
+          },
+          {
+            "char_end": 1686,
+            "char_start": 1630,
+            "end": 116.654,
+            "i": 24,
+            "interpolated_boundary": false,
+            "start": 112.857,
+            "text": "They, the members of the Challenger crew, were pioneers.",
+            "valid": true
+          },
+          {
+            "char_end": 1810,
+            "char_start": 1688,
+            "end": 124.004,
+            "i": 25,
+            "interpolated_boundary": false,
+            "start": 117.255,
+            "text": "And I want to say something to the schoolchildren of America who were watching the live coverage of the shuttle's takeoff.",
+            "valid": true
+          },
+          {
+            "char_end": 1890,
+            "char_start": 1811,
+            "end": 128.831,
+            "i": 26,
+            "interpolated_boundary": false,
+            "start": 123.704,
+            "text": "I know it is hard to understand, but sometimes painful things like this happen.",
+            "valid": true
+          },
+          {
+            "char_end": 1949,
+            "char_start": 1891,
+            "end": 131.735,
+            "i": 27,
+            "interpolated_boundary": false,
+            "start": 128.531,
+            "text": "It's all part of the process of exploration and discovery.",
+            "valid": true
+          },
+          {
+            "char_end": 2012,
+            "char_start": 1950,
+            "end": 136.622,
+            "i": 28,
+            "interpolated_boundary": false,
+            "start": 132.337,
+            "text": "It's all part of taking a chance and expanding man's horizons.",
+            "valid": true
+          },
+          {
+            "char_end": 2059,
+            "char_start": 2013,
+            "end": 140.047,
+            "i": 29,
+            "interpolated_boundary": false,
+            "start": 137.244,
+            "text": "The future doesn't belong to the fainthearted;",
+            "valid": true
+          },
+          {
+            "char_end": 2084,
+            "char_start": 2060,
+            "end": 142.07,
+            "i": 30,
+            "interpolated_boundary": false,
+            "start": 140.469,
+            "text": "it belongs to the brave.",
+            "valid": true
+          },
+          {
+            "char_end": 2171,
+            "char_start": 2085,
+            "end": 149.517,
+            "i": 31,
+            "interpolated_boundary": false,
+            "start": 142.446,
+            "text": "The Challenger crew was pulling us into the future, and we'll continue to follow them.",
+            "valid": true
+          },
+          {
+            "char_end": 2291,
+            "char_start": 2173,
+            "end": 155.907,
+            "i": 32,
+            "interpolated_boundary": false,
+            "start": 149.217,
+            "text": "I've always had great faith in and respect for our space program, and what happened today does nothing to diminish it.",
+            "valid": true
+          },
+          {
+            "char_end": 2324,
+            "char_start": 2292,
+            "end": 158.671,
+            "i": 33,
+            "interpolated_boundary": false,
+            "start": 156.468,
+            "text": "We don't hide our space program.",
+            "valid": true
+          },
+          {
+            "char_end": 2367,
+            "char_start": 2325,
+            "end": 160.875,
+            "i": 34,
+            "interpolated_boundary": false,
+            "start": 158.371,
+            "text": "We don't keep secrets and cover things up.",
+            "valid": true
+          },
+          {
+            "char_end": 2404,
+            "char_start": 2368,
+            "end": 164.461,
+            "i": 35,
+            "interpolated_boundary": false,
+            "start": 161.156,
+            "text": "We do it all up front and in public.",
+            "valid": true
+          },
+          {
+            "char_end": 2471,
+            "char_start": 2405,
+            "end": 167.445,
+            "i": 36,
+            "interpolated_boundary": false,
+            "start": 164.161,
+            "text": "That's the way freedom is, and we wouldn't change it for a minute.",
+            "valid": true
+          },
+          {
+            "char_end": 2506,
+            "char_start": 2472,
+            "end": 170.55,
+            "i": 37,
+            "interpolated_boundary": false,
+            "start": 168.007,
+            "text": "We'll continue our quest in space.",
+            "valid": true
+          },
+          {
+            "char_end": 2631,
+            "char_start": 2507,
+            "end": 178.382,
+            "i": 38,
+            "interpolated_boundary": false,
+            "start": 170.414,
+            "text": "There will be more shuttle flights and more shuttle crews and, yes, more volunteers, more civilians, more teachers in space.",
+            "valid": true
+          },
+          {
+            "char_end": 2651,
+            "char_start": 2633,
+            "end": 180.264,
+            "i": 39,
+            "interpolated_boundary": false,
+            "start": 178.883,
+            "text": "Nothing ends here;",
+            "valid": true
+          },
+          {
+            "char_end": 2688,
+            "char_start": 2652,
+            "end": 183.848,
+            "i": 40,
+            "interpolated_boundary": false,
+            "start": 180.285,
+            "text": "our hopes and our journeys continue.",
+            "valid": true
+          },
+          {
+            "char_end": 2893,
+            "char_start": 2689,
+            "end": 196.322,
+            "i": 41,
+            "interpolated_boundary": false,
+            "start": 183.548,
+            "text": "I want to add that I wish I could talk to every man and woman who works for NASA or who worked on this mission and tell them: ``Your dedication and professionalism have moved and impressed us for decades.",
+            "valid": true
+          },
+          {
+            "char_end": 2922,
+            "char_start": 2894,
+            "end": 199.025,
+            "i": 42,
+            "interpolated_boundary": false,
+            "start": 196.683,
+            "text": "And we know of your anguish.",
+            "valid": true
+          },
+          {
+            "char_end": 2937,
+            "char_start": 2923,
+            "end": 200.246,
+            "i": 43,
+            "interpolated_boundary": false,
+            "start": 199.045,
+            "text": "We share it.''",
+            "valid": true
+          },
+          {
+            "char_end": 2967,
+            "char_start": 2939,
+            "end": 203.648,
+            "i": 44,
+            "interpolated_boundary": false,
+            "start": 201.166,
+            "text": "There's a coincidence today.",
+            "valid": true
+          },
+          {
+            "char_end": 3094,
+            "char_start": 2968,
+            "end": 211.257,
+            "i": 45,
+            "interpolated_boundary": false,
+            "start": 203.689,
+            "text": "On this day three hundred and ninety years ago, the great explorer Sir Francis Drake died aboard ship off the coast of Panama.",
+            "valid": true
+          },
+          {
+            "char_end": 3236,
+            "char_start": 3095,
+            "end": 221.088,
+            "i": 46,
+            "interpolated_boundary": false,
+            "start": 211.658,
+            "text": "In his lifetime the great frontiers were the oceans, and the historian later said, ``He lived by the sea, died on it, and was buried in it.''",
+            "valid": true
+          },
+          {
+            "char_end": 3283,
+            "char_start": 3237,
+            "end": 225.374,
+            "i": 47,
+            "interpolated_boundary": false,
+            "start": 221.87,
+            "text": "Well, today we can say of the Challenger crew:",
+            "valid": true
+          },
+          {
+            "char_end": 3329,
+            "char_start": 3284,
+            "end": 229.398,
+            "i": 48,
+            "interpolated_boundary": false,
+            "start": 225.073,
+            "text": "Their dedication was, like Drake's, complete.",
+            "valid": true
+          },
+          {
+            "char_end": 3430,
+            "char_start": 3331,
+            "end": 234.693,
+            "i": 49,
+            "interpolated_boundary": false,
+            "start": 229.806,
+            "text": "The crew of the space shuttle Challenger honored us for the manner in which they lived their lives.",
+            "valid": true
+          },
+          {
+            "char_end": 3626,
+            "char_start": 3431,
+            "end": 249.128,
+            "i": 50,
+            "interpolated_boundary": false,
+            "start": 235.135,
+            "text": "We will never forget them, nor the last time we saw them, this morning, as they prepared for their journey and waved goodbye and ``slipped the surly bonds of earth'' to ``touch the face of God.''",
+            "valid": true
+          }
+        ]
+      }
+    ],
+    "scored_artifact_hashes": {
+      "data/alignment/mfa/gettysburg__lv_amb__orig.json": "6374219bf5f3721240ac54e511c5b3ccb2372204061a6d4bc74c85f496a4ba8d",
+      "data/alignment/mfa/gettysburg__lv_dj__orig.json": "34641ac9a4e2f12d4ea63586ce2152ef4b9c48ed671c17ce717f9daeef1e5a7c",
+      "data/alignment/mfa/gettysburg__lv_dl__orig.json": "cc7d6f6c1d6ebbb958b450da22b5ac0784bf7a6bfff14b64955b8bbc0904b5ec",
+      "data/alignment/mfa/gettysburg__lv_eep__orig.json": "dec87ab946eeaf8a5a141954c1e93daab66b6f4543595acb3452c79037b69aa0",
+      "data/alignment/mfa/gettysburg__lv_fb__orig.json": "ba84ae4e6429d12b829d934fb43163304bc4c9519a90a6941c013f898d7475c9",
+      "data/alignment/mfa/gettysburg__lv_jn__orig.json": "83d09920c384128ddd840ac4aff84acbc798c4f33f2d945452fd82714fd45d30",
+      "data/alignment/mfa/gettysburg__lv_law__orig.json": "41af2bd059d254d12729c054dbb4dca401c206ec27212262b5e0779a8b4eb0de",
+      "data/alignment/mfa/gettysburg__lv_lb__orig.json": "c8d278ac002fccb3cf6ebf4782a832a9b51236043de29d5bb1ab4ad1df687bcd",
+      "data/alignment/mfa/gettysburg__lv_mas__orig.json": "e1575da2dd9149fcce23f5df60c928ee0d91dff51d4883147e5361377da4e216",
+      "data/alignment/mfa/gettysburg__lv_mk__orig.json": "5e17abfa4526400633b5023138d4fa02e619de62c0c51b446a659d7ca6c8cc4c",
+      "data/alignment/mfa/gettysburg__lv_pc__orig.json": "4ca61e3f4cb4cd67ff78c0fdc1f207eb43a6deb15305832214e4421e073a07fe",
+      "data/alignment/mfa/gettysburg__lv_rk__orig.json": "8c735c14784681a3aaa298afb0e36bfe0605f9c58739a81ffd7b70cb7b864303",
+      "data/alignment/mfa/gettysburg__lv_sa__orig.json": "79b2ce7e790510e9894e92d2ba0a4f19fbe7518c62787cf24353da8470eac713",
+      "data/alignment/mfa/gettysburg__lv_tg__orig.json": "fc807afe466492d1e77112c3a055ea090613e9aac4717f9019172933fe8cca08",
+      "data/alignment/mfa/gettysburg__lv_wt__orig.json": "63df26bd1547ae355bb9b48efe516359742b595d540949b6e01aa8a4f26d1db9",
+      "data/alignment/mfa/jfk_rice__jfk__orig.json": "d4cd775aa37916388544f716fb59c9b68e099ba3bb5b27ef2507ad7a22354482",
+      "data/alignment/mfa/o_captain__lv_apc__orig.json": "113cf61b58e62be35924f8a5695cbd6c83c40b37c26402af7c5270c387ad6f01",
+      "data/alignment/mfa/o_captain__lv_chip__orig.json": "717ab2a0888a432048012d5a74cdc0dee49ab6ed2157ace3338027bd4beff40f",
+      "data/alignment/mfa/o_captain__lv_foxits__orig.json": "a7d8911fd645d4b76945f3208e0abd5600120100b99a2a61a6b3f82edb8d46ce",
+      "data/alignment/mfa/o_captain__lv_jtm__orig.json": "8b438085133ca014721678c6d1809488ff12c1c33cd06b5f927b1bb47a5e6566",
+      "data/alignment/mfa/o_captain__lv_mac__orig.json": "17492f3405631c50d48276736ca955126f784074e9f2e641c6bf8e32ed287a09",
+      "data/alignment/mfa/o_captain__lv_mb__orig.json": "538d410eb2894e983e6a8fd0d47c670eb37876213d09e7dcd485ee09c2134bc2",
+      "data/alignment/mfa/o_captain__lv_md__orig.json": "ddde4d6e4a6cd1c81d4ce49b6027dad0bec74212de1c30f65b59c983936177b7",
+      "data/alignment/mfa/o_captain__lv_mrg__orig.json": "fae3b2d8d583a25a808d43b3d2aa13cdf9a82988cf5a9051cc1071028e79c7eb",
+      "data/alignment/mfa/o_captain__lv_rg__orig.json": "7aba5e920e73e4f73c67aeefbe7637d657261f420c838f27c1d083a7c5f81d39",
+      "data/alignment/mfa/o_captain__lv_s__orig.json": "3beaa3350ed903536676fbf5d08fad6f0860f56a4d995494aaaa5d0297202a0e",
+      "data/alignment/mfa/o_captain__lv_sjs__orig.json": "9d76846ad2ef1178547060cfb4a4ae60c4d83069171680840434eb81d5d012ef",
+      "data/alignment/mfa/o_captain__lv_ss__orig.json": "9aa2e1aebd909fad72ac80fd565e5831edc0aebfd217d8cec3fdb9d6ddc3a033",
+      "data/alignment/mfa/o_captain__lv_th__orig.json": "c114ed8cd3ed7767c98e22a9251902bde92c2bff022d92bcf78ed236c38ffb46",
+      "data/alignment/mfa/provenance.json": "729bd87db8e6af183903cb48e81e317d06cb600a21b9b4ce8f5d162523fe2317",
+      "data/alignment/mfa/reagan_challenger__reagan__orig.json": "e973f2bd072b1aa13d9078784c715a13eb11e8b84f6ef38a1582568195e36385",
+      "data/alignment/whisperx/gettysburg__lv_amb__orig.json": "4d61641b6f05bbdeaab5fab6bf24592dbf9add3e86da6d1c380eed123183b8e8",
+      "data/alignment/whisperx/gettysburg__lv_dj__orig.json": "3b9b36d70015c5b5051fba65e97f2ebc350d9e40aaa051bad8ddcc5782f19b8f",
+      "data/alignment/whisperx/gettysburg__lv_dl__orig.json": "f8b7b5dfedc8cdd965745909aa72f747f5b881bfaa22f5e435b2a8a0c8bdaa1b",
+      "data/alignment/whisperx/gettysburg__lv_eep__orig.json": "0e9cc50d460cfb6cedbb3b1f07f863d243e2fb8b5d0edd57f30ad3fbfe6b06e7",
+      "data/alignment/whisperx/gettysburg__lv_fb__orig.json": "977c9bfbaee28f97d3cac7398008ce1292a701ae7a74e0c2dd68190d50872e9c",
+      "data/alignment/whisperx/gettysburg__lv_jn__orig.json": "9e414ba390cd22689317ff6bb640c1195408c48574fd0b0acfbc7130fb997a8e",
+      "data/alignment/whisperx/gettysburg__lv_law__orig.json": "a13981099ada78fbd8e6108f2b7caad23811c0e32a905a4b947ee148a1422408",
+      "data/alignment/whisperx/gettysburg__lv_lb__orig.json": "6ac379c7d09760d25f934c68775424c7ed8f835fba13f2dd85f09a9d5bb41128",
+      "data/alignment/whisperx/gettysburg__lv_mas__orig.json": "d344433ac5e40480dfbce0d8bec9759ba803d41b9961781a9e37305e47b4ce39",
+      "data/alignment/whisperx/gettysburg__lv_mk__orig.json": "c5b322efe613b984339dd883bb47ab8179223deeaebc904e1c4d9ebd76d59931",
+      "data/alignment/whisperx/gettysburg__lv_pc__orig.json": "f931fdcf6948c71f482c7781a836756a06d43de91653320c148e763df2749f37",
+      "data/alignment/whisperx/gettysburg__lv_rk__orig.json": "9d5064162e30586d6a6e938d88b5dfddcb353b4c0fd27b3a94afc4e969dd2c93",
+      "data/alignment/whisperx/gettysburg__lv_sa__orig.json": "fac6166f7c02cfe98d761ebf93c6076533e921903f176b033fa64e40c81e46ea",
+      "data/alignment/whisperx/gettysburg__lv_tg__orig.json": "40acf3d96224b2ac9e8f9dff10507e2d182f4c1bf34121924ffb1844e37f93af",
+      "data/alignment/whisperx/gettysburg__lv_wt__orig.json": "555f8a0f045e5f5c5d7fefdd71751b10df457a937bd15e9d0154cf78cbd11e38",
+      "data/alignment/whisperx/jfk_rice__jfk__orig.json": "0fc2c927f4064a8e357ce0d19b12bb8feeff27911610909ea3e6b7fd46644c35",
+      "data/alignment/whisperx/o_captain__lv_apc__orig.json": "87dfbc3f2c3ba9e8bbaa92f4815fa09274763567bd6979a556e92d32fd554b21",
+      "data/alignment/whisperx/o_captain__lv_chip__orig.json": "a87d41e51069e493082b954e8d8b6441de3e1bad3be0cd0a74013681938ec212",
+      "data/alignment/whisperx/o_captain__lv_foxits__orig.json": "e46f03bf52cf5a9a3b3c8c5b1808bfbcabcd9b2d2c3dbe64c46cd975544e7620",
+      "data/alignment/whisperx/o_captain__lv_jtm__orig.json": "2b15cdfe0c02c145c7697b2371baea9629c2642084267814425fb411626fda7f",
+      "data/alignment/whisperx/o_captain__lv_mac__orig.json": "08b38089a373bbe7e06dc03381dfdfd6c8fbcccbed99e1c3ce6d8410bde35474",
+      "data/alignment/whisperx/o_captain__lv_mb__orig.json": "89a181c14bc5a64e697ae7fa1952c96b4dd859128bcea4b708b7d6a41d90931f",
+      "data/alignment/whisperx/o_captain__lv_md__orig.json": "397ccf4ee21446c91b44c5cfee8908c6a278938df0919e6165babffdf7140eae",
+      "data/alignment/whisperx/o_captain__lv_mrg__orig.json": "2fd7bbcfbd35a33c836443be38353b09cb615d76470c6b44f2273e3d5eef82cd",
+      "data/alignment/whisperx/o_captain__lv_rg__orig.json": "af8946714e8cd6d772de5f45c10873563c1f43a791240d1c6220625d4a2e7a7e",
+      "data/alignment/whisperx/o_captain__lv_s__orig.json": "25f97384dcf8a13f1c9f8fa9f1a63c585f2442bb32e6ce343f4b941c6af1a83d",
+      "data/alignment/whisperx/o_captain__lv_sjs__orig.json": "5804e7853ace7214c1e8ab7ec4c73191be58dfbce5a4d81e9e772d1e6aafe66b",
+      "data/alignment/whisperx/o_captain__lv_ss__orig.json": "e1bbe5daa4e2c1d3fae28f123b531750a672835e16807bd98f3009353f8d869a",
+      "data/alignment/whisperx/o_captain__lv_th__orig.json": "11ffb6064b97de3994ecd0494144c420df20429d8d7da6f42a4607e33abd32b6",
+      "data/alignment/whisperx/provenance.json": "b42935315ed5593d0c1f031efe430332d7f09d77bf06238ff8f905e982cad231",
+      "data/alignment/whisperx/reagan_challenger__reagan__orig.json": "cce01dd076ff7c2e9550efa8e22d3b178fec2231697cb49cb5f41b6f4664e32d"
+    },
+    "selection_sha256": "6f34a11157f83f51ef3007f99047cd0059a817582499f476b2f353d0f05cc3d9",
+    "settings": {
+      "mfa": {
+        "acoustic_model": "english_mfa",
+        "beam": 100,
+        "dictionary": "english_us_mfa",
+        "g2p_model": "english_us_mfa",
+        "retry_beam": 400
+      },
+      "primary": null,
+      "sentence_window_padding_s": 0.3
+    }
+  },
+  "recommendation": "mfa",
+  "schema": "alignment_bakeoff/v1"
+}
