@@ -1,0 +1,22 @@
+{
+  "flaws": [
+    {
+      "end": 13.087,
+      "parameters": {
+        "pause_kept_frac": 0.3,
+        "result_pause_s": 0.317,
+        "source_pause_s": 1.057
+      },
+      "severity": 3,
+      "start": 12.77,
+      "type": "missing_pause",
+      "word_end": 30,
+      "word_start": 29
+    }
+  ],
+  "recording_id": "gettysburg__lv_pc__missing_pause_s3_01",
+  "reference_id": "gettysburg__lv_pc__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "gettysburg"
+}

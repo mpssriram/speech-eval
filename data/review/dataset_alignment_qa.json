@@ -1,0 +1,51 @@
+{
+  "by_type": {
+    "awkward_pause": {
+      "edges": 676,
+      "median_absolute_error_ms": 7.0,
+      "p90_absolute_error_ms": 56.0,
+      "risk_above_60ms": false
+    },
+    "dragging": {
+      "edges": 2206,
+      "median_absolute_error_ms": 8.0,
+      "p90_absolute_error_ms": 43.0,
+      "risk_above_60ms": false
+    },
+    "missing_pause": {
+      "edges": 700,
+      "median_absolute_error_ms": 4.0,
+      "p90_absolute_error_ms": 16.0,
+      "risk_above_60ms": false
+    },
+    "monotone": {
+      "edges": 2462,
+      "median_absolute_error_ms": 3.0,
+      "p90_absolute_error_ms": 10.0,
+      "risk_above_60ms": false
+    },
+    "mumbling": {
+      "edges": 2352,
+      "median_absolute_error_ms": 16.0,
+      "p90_absolute_error_ms": 340.0,
+      "risk_above_60ms": false
+    },
+    "rushing": {
+      "edges": 2368,
+      "median_absolute_error_ms": 5.0,
+      "p90_absolute_error_ms": 17.0,
+      "risk_above_60ms": false
+    },
+    "too_quiet": {
+      "edges": 2314,
+      "median_absolute_error_ms": 3.0,
+      "p90_absolute_error_ms": 18.0,
+      "risk_above_60ms": false
+    }
+  },
+  "files_scored": 1073,
+  "limitations": [
+    "Oracle agreement is not human boundary accuracy."
+  ],
+  "schema": "dataset_alignment_qa/v1"
+}

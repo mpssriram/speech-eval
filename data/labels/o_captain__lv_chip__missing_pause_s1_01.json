@@ -1,0 +1,22 @@
+{
+  "flaws": [
+    {
+      "end": 12.736,
+      "parameters": {
+        "pause_kept_frac": 0.7,
+        "result_pause_s": 1.316,
+        "source_pause_s": 1.88
+      },
+      "severity": 1,
+      "start": 11.42,
+      "type": "missing_pause",
+      "word_end": 5,
+      "word_start": 4
+    }
+  ],
+  "recording_id": "o_captain__lv_chip__missing_pause_s1_01",
+  "reference_id": "o_captain__lv_chip__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

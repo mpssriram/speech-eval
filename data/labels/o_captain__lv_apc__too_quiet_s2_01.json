@@ -1,0 +1,24 @@
+{
+  "flaws": [
+    {
+      "end": 17.097,
+      "parameters": {
+        "edit_source_end_s": 17.097,
+        "edit_source_start_s": 14.007,
+        "gain_db": -6,
+        "peak_normalised_db": -0.0331,
+        "shape": "trail"
+      },
+      "severity": 2,
+      "start": 14.007,
+      "type": "too_quiet",
+      "word_end": 36,
+      "word_start": 29
+    }
+  ],
+  "recording_id": "o_captain__lv_apc__too_quiet_s2_01",
+  "reference_id": "o_captain__lv_apc__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

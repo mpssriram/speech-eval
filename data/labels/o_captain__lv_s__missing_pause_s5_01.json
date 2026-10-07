@@ -1,0 +1,23 @@
+{
+  "flaws": [
+    {
+      "end": 16.496,
+      "parameters": {
+        "pause_kept_frac": 0.0,
+        "peak_normalised_db": -0.9788,
+        "result_pause_s": 0.03,
+        "source_pause_s": 1.136
+      },
+      "severity": 5,
+      "start": 16.466,
+      "type": "missing_pause",
+      "word_end": 44,
+      "word_start": 43
+    }
+  ],
+  "recording_id": "o_captain__lv_s__missing_pause_s5_01",
+  "reference_id": "o_captain__lv_s__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

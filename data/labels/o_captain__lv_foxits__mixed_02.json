@@ -1,0 +1,49 @@
+{
+  "flaws": [
+    {
+      "end": 45.007,
+      "parameters": {
+        "pause_kept_frac": 0.5,
+        "peak_normalised_db": -0.4009,
+        "result_pause_s": 0.195,
+        "source_pause_s": 0.39
+      },
+      "severity": 2,
+      "start": 44.812,
+      "type": "missing_pause",
+      "word_end": 107,
+      "word_start": 106
+    },
+    {
+      "end": 56.21,
+      "parameters": {
+        "inserted_pause_s": 1.5,
+        "peak_normalised_db": -0.4009
+      },
+      "severity": 3,
+      "start": 54.71,
+      "type": "awkward_pause",
+      "word_end": 131,
+      "word_start": 130
+    },
+    {
+      "end": 66.872,
+      "parameters": {
+        "edit_source_end_s": 66.872,
+        "edit_source_start_s": 64.682,
+        "lowpass_hz": 1700,
+        "peak_normalised_db": -0.4009
+      },
+      "severity": 4,
+      "start": 64.682,
+      "type": "mumbling",
+      "word_end": 154,
+      "word_start": 149
+    }
+  ],
+  "recording_id": "o_captain__lv_foxits__mixed_02",
+  "reference_id": "o_captain__lv_foxits__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

@@ -1,0 +1,119 @@
+{
+  "artifacts": {
+    "data/alignment/oracle/o_captain__lv_foxits__mumbling_s2_01.json": "e0646d370c7313ed67530b07d13ddad9d282ae6fbd6b3fbc0812e0a285c41c7a",
+    "data/flawed/align16k/o_captain__lv_foxits__mumbling_s2_01.flac": "2db5e7eefa10ee7570844fac30000a8ef03028dcc8bf28cf5d9438c9cda3e8f8",
+    "data/flawed/hq/o_captain__lv_foxits__mumbling_s2_01.flac": "7c7f83119fbebbdf26149b9d8d208726986cd7cb488c7546878591100eb0fab3",
+    "data/flawed/timemaps/o_captain__lv_foxits__mumbling_s2_01.json": "4c287ddc5def14714a421a1dc290a778e10aff8aa4a65f0dc835da867d6ca0b2",
+    "data/labels/o_captain__lv_foxits__mumbling_s2_01.json": "44d0218d9b9ffee03926996c4b7be8e61d8556c059b8ef366870a5d0a5e4696e"
+  },
+  "inputs": {
+    "alignment_sha256": "691414c9a72efb8f7e224249de62680e122b29283efe5a0ba92f62f15be325e3",
+    "audio_sha256": "cd44cd169126f1b04365e870add45ebf9b27d56a01f8e31a63a0cb988854eac0",
+    "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+    "config": {
+      "crossfade_ms": 20,
+      "keep_out_s": 1.0,
+      "min_gap_between_flaws_s": 2.0,
+      "region_words": {
+        "max": 12,
+        "min": 4
+      },
+      "seed": 20261001,
+      "types": {
+        "awkward_pause": {
+          "kind": "boundary",
+          "param": "inserted_pause_s",
+          "severity": [
+            0.6,
+            1.0,
+            1.5,
+            2.2,
+            3.0
+          ]
+        },
+        "dragging": {
+          "kind": "region",
+          "param": "speed_factor",
+          "severity": [
+            0.87,
+            0.77,
+            0.67,
+            0.58,
+            0.5
+          ]
+        },
+        "missing_pause": {
+          "kind": "boundary",
+          "param": "pause_kept_frac",
+          "severity": [
+            0.7,
+            0.5,
+            0.3,
+            0.15,
+            0.0
+          ]
+        },
+        "monotone": {
+          "kind": "region",
+          "param": "pitch_range_kept",
+          "severity": [
+            0.7,
+            0.5,
+            0.35,
+            0.2,
+            0.08
+          ]
+        },
+        "mumbling": {
+          "extra_gain_db_per_severity": -1.0,
+          "kind": "region",
+          "param": "lowpass_hz",
+          "severity": [
+            3500,
+            2800,
+            2200,
+            1700,
+            1300
+          ]
+        },
+        "rushing": {
+          "kind": "region",
+          "param": "speed_factor",
+          "severity": [
+            1.15,
+            1.3,
+            1.5,
+            1.75,
+            2.0
+          ]
+        },
+        "too_quiet": {
+          "kind": "region",
+          "param": "gain_db",
+          "severity": [
+            -3,
+            -6,
+            -9,
+            -12,
+            -18
+          ],
+          "shapes": [
+            "flat",
+            "trail"
+          ]
+        }
+      }
+    },
+    "rubberband": "3.3.0",
+    "shape": "flat",
+    "stats_sha256": "a2fcc313290bf0bfc4e8b01471c995dda90c6b6b5904c6e9b7c854b2a2cf8513",
+    "versions": {
+      "numpy": "2.0.2",
+      "praat-parselmouth": "0.4.7",
+      "scipy": "1.17.1",
+      "soundfile": "0.14.0"
+    }
+  },
+  "recording_id": "o_captain__lv_foxits__mumbling_s2_01",
+  "schema": "injection_provenance/v1"
+}

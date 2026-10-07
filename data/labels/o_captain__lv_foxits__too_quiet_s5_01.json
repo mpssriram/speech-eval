@@ -1,0 +1,24 @@
+{
+  "flaws": [
+    {
+      "end": 63.627,
+      "parameters": {
+        "edit_source_end_s": 63.627,
+        "edit_source_start_s": 61.937,
+        "gain_db": -18,
+        "peak_normalised_db": -0.4009,
+        "shape": "flat"
+      },
+      "severity": 5,
+      "start": 61.937,
+      "type": "too_quiet",
+      "word_end": 149,
+      "word_start": 144
+    }
+  ],
+  "recording_id": "o_captain__lv_foxits__too_quiet_s5_01",
+  "reference_id": "o_captain__lv_foxits__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

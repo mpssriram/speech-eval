@@ -1,0 +1,23 @@
+{
+  "flaws": [
+    {
+      "end": 9.71,
+      "parameters": {
+        "edit_source_end_s": 9.71,
+        "edit_source_start_s": 6.769,
+        "gain_db": -12,
+        "shape": "trail"
+      },
+      "severity": 4,
+      "start": 6.769,
+      "type": "too_quiet",
+      "word_end": 32,
+      "word_start": 21
+    }
+  ],
+  "recording_id": "o_captain__lv_mac__too_quiet_s4_01",
+  "reference_id": "o_captain__lv_mac__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

@@ -1,0 +1,22 @@
+{
+  "flaws": [
+    {
+      "end": 42.628,
+      "parameters": {
+        "pause_kept_frac": 0.5,
+        "result_pause_s": 0.223,
+        "source_pause_s": 0.447
+      },
+      "severity": 2,
+      "start": 42.405,
+      "type": "missing_pause",
+      "word_end": 89,
+      "word_start": 88
+    }
+  ],
+  "recording_id": "o_captain__lv_jtm__missing_pause_s2_01",
+  "reference_id": "o_captain__lv_jtm__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

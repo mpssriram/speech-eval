@@ -1,0 +1,48 @@
+{
+  "flaws": [
+    {
+      "end": 36.313,
+      "parameters": {
+        "edit_source_end_s": 37.977,
+        "edit_source_start_s": 34.647,
+        "speed_factor": 2.0
+      },
+      "severity": 5,
+      "start": 34.647,
+      "type": "rushing",
+      "word_end": 86,
+      "word_start": 80
+    },
+    {
+      "end": 103.783,
+      "parameters": {
+        "edit_source_end_s": 101.675,
+        "edit_source_start_s": 98.764,
+        "speed_factor": 0.58
+      },
+      "severity": 4,
+      "start": 98.766,
+      "type": "dragging",
+      "word_end": 233,
+      "word_start": 227
+    },
+    {
+      "end": 113.398,
+      "parameters": {
+        "pause_kept_frac": 0.15,
+        "result_pause_s": 0.105,
+        "source_pause_s": 0.7
+      },
+      "severity": 4,
+      "start": 113.293,
+      "type": "missing_pause",
+      "word_end": 258,
+      "word_start": 257
+    }
+  ],
+  "recording_id": "gettysburg__lv_dl__mixed_01",
+  "reference_id": "gettysburg__lv_dl__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "gettysburg"
+}

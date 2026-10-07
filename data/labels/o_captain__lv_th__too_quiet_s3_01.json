@@ -1,0 +1,24 @@
+{
+  "flaws": [
+    {
+      "end": 9.798,
+      "parameters": {
+        "edit_source_end_s": 9.798,
+        "edit_source_start_s": 8.168,
+        "gain_db": -9,
+        "peak_normalised_db": -0.9487,
+        "shape": "flat"
+      },
+      "severity": 3,
+      "start": 8.168,
+      "type": "too_quiet",
+      "word_end": 28,
+      "word_start": 23
+    }
+  ],
+  "recording_id": "o_captain__lv_th__too_quiet_s3_01",
+  "reference_id": "o_captain__lv_th__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

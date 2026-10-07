@@ -1,0 +1,23 @@
+{
+  "flaws": [
+    {
+      "end": 71.514,
+      "parameters": {
+        "pause_kept_frac": 0.5,
+        "peak_normalised_db": -0.4009,
+        "result_pause_s": 0.37,
+        "source_pause_s": 0.74
+      },
+      "severity": 2,
+      "start": 71.144,
+      "type": "missing_pause",
+      "word_end": 169,
+      "word_start": 168
+    }
+  ],
+  "recording_id": "o_captain__lv_foxits__missing_pause_s2_01",
+  "reference_id": "o_captain__lv_foxits__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

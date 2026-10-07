@@ -1,0 +1,48 @@
+{
+  "flaws": [
+    {
+      "end": 82.745,
+      "parameters": {
+        "edit_source_end_s": 82.745,
+        "edit_source_start_s": 77.965,
+        "pitch_range_kept": 0.08
+      },
+      "severity": 5,
+      "start": 77.965,
+      "type": "monotone",
+      "word_end": 209,
+      "word_start": 198
+    },
+    {
+      "end": 95.338,
+      "parameters": {
+        "pause_kept_frac": 0.5,
+        "result_pause_s": 0.44,
+        "source_pause_s": 0.881
+      },
+      "severity": 2,
+      "start": 94.897,
+      "type": "missing_pause",
+      "word_end": 247,
+      "word_start": 246
+    },
+    {
+      "end": 207.246,
+      "parameters": {
+        "edit_source_end_s": 206.379,
+        "edit_source_start_s": 204.618,
+        "speed_factor": 0.67
+      },
+      "severity": 3,
+      "start": 204.619,
+      "type": "dragging",
+      "word_end": 541,
+      "word_start": 536
+    }
+  ],
+  "recording_id": "reagan_challenger__reagan__mixed_02",
+  "reference_id": "reagan_challenger__reagan__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "reagan_challenger"
+}

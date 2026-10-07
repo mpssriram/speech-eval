@@ -1,0 +1,4874 @@
+{
+  "alignment_state": {
+    "artifacts": {
+      "data/alignment/o_captain__lv_mb__awkward_pause_s1_01.TextGrid": "39c1443ef62615dc40c4ebd11db25fe91ef557f82f5670920f966083daa42c25",
+      "data/alignment/o_captain__lv_mb__awkward_pause_s1_01.json": "b29e5cd63810412c5d44159e4aff4e9abca4fb169e4461c6a7269a9226bc1f85",
+      "data/alignment/o_captain__lv_mb__awkward_pause_s2_01.TextGrid": "67f481198f1c82f292ed2a4939488c3c960f5d805b5a87d57b3c5906648cfde7",
+      "data/alignment/o_captain__lv_mb__awkward_pause_s2_01.json": "20fc4297772a7a0dfc0afcb50010aaab41341d06a745ada5a108b3f55a9b5259",
+      "data/alignment/o_captain__lv_mb__awkward_pause_s3_01.TextGrid": "6c9c70d9a189fac86cb8ad8aa96f960aabb0b3929d49bc2b43e4834fbdd0ae97",
+      "data/alignment/o_captain__lv_mb__awkward_pause_s3_01.json": "4bf195d4ccce1cb3ac48f0582dc9085fe46f7f2ac12db5a705a35a378a372987",
+      "data/alignment/o_captain__lv_mb__awkward_pause_s4_01.TextGrid": "2eb233e1905a70e1388b1eb0a29783503a1212a430e365ba40663fe62ad9bad7",
+      "data/alignment/o_captain__lv_mb__awkward_pause_s4_01.json": "0c8da2ddcd62744411ae18048d4004673f78b2382ce5e22647e4ec0b731c1397",
+      "data/alignment/o_captain__lv_mb__awkward_pause_s5_01.TextGrid": "5b817f656753742ddb12b61b09735095980fcd1ededf1ced7cd8738333753279",
+      "data/alignment/o_captain__lv_mb__awkward_pause_s5_01.json": "abc5eb9fd8d52cde35cb4c81562c251265217f5785c2bdb10da04ca183875c76",
+      "data/alignment/o_captain__lv_mb__dragging_s1_01.TextGrid": "d9bf3d1d0d7cbe4216544c6f21956e6e71fc3e6fc7eab1089fb10640693050a9",
+      "data/alignment/o_captain__lv_mb__dragging_s1_01.json": "fa0c4c759a3d976a98320cae7c9b8546fdd8429906847e417e5c2abaa38f5196",
+      "data/alignment/o_captain__lv_mb__dragging_s2_01.TextGrid": "3196406de0d785c275eca4183ec429b16bb6cd055399a6cdb3bb9aa84d31ea3a",
+      "data/alignment/o_captain__lv_mb__dragging_s2_01.json": "d181a366fa0a24f1b9a57a6e5036190d0a35cef82579b5aa20885e8226a95219",
+      "data/alignment/o_captain__lv_mb__dragging_s3_01.TextGrid": "e056583e24f476099b635749962331a2be4876cf232e5b58e584db4b88fbc8c1",
+      "data/alignment/o_captain__lv_mb__dragging_s3_01.json": "a5effb20dad8751fabc23eb041dd04fdd11289838c3efe40f6c83fbfb02cf038",
+      "data/alignment/o_captain__lv_mb__dragging_s4_01.TextGrid": "3352ab0b1ff5836d272fb8c4dc2d4b25cf6575015d067062b6835dd65fa20aa3",
+      "data/alignment/o_captain__lv_mb__dragging_s4_01.json": "d1ebfb04fda0945c084113193ad1eadf9d2cd1631f2e85149f6a898a1c47629f",
+      "data/alignment/o_captain__lv_mb__dragging_s5_01.TextGrid": "31bef93e2587c59ec83a5bc0b85e8c5fad6886a3a98ff884a3996c07945022a9",
+      "data/alignment/o_captain__lv_mb__dragging_s5_01.json": "8abfdee9b548e38887dedea9dfe0b618db93c047ea81f7195f16ebd1d9369232",
+      "data/alignment/o_captain__lv_mb__missing_pause_s1_01.TextGrid": "517c862dbd2a9140a717ed74b649f2017bb8a15cc212ce0077436e66945d651f",
+      "data/alignment/o_captain__lv_mb__missing_pause_s1_01.json": "10adf8e953d2bca7308c3c44f78c940b3957672e86e6a5f6287c7a6b0da8bb5c",
+      "data/alignment/o_captain__lv_mb__missing_pause_s2_01.TextGrid": "151a63dd3ebdd0ac7e4b20bfb06966229318800a4e74e0fc9aba8b7425811b6e",
+      "data/alignment/o_captain__lv_mb__missing_pause_s2_01.json": "e9b477d969ba94511c81ed815be6af626a2129b350c027f01214d379e348c48a",
+      "data/alignment/o_captain__lv_mb__missing_pause_s3_01.TextGrid": "a88aef0622591f32ae979112c78a4c5ada3918d9026ab2ee41211aaa92383657",
+      "data/alignment/o_captain__lv_mb__missing_pause_s3_01.json": "bfa58d6cb5791529f235455751b91ad0a57fb79f029cda57e3a5cd4e5581ee79",
+      "data/alignment/o_captain__lv_mb__missing_pause_s4_01.TextGrid": "c4a4241645b094f46ff01948eace36af61edc3f5e8096841991928564b1d3523",
+      "data/alignment/o_captain__lv_mb__missing_pause_s4_01.json": "a1078809ffd97058595b40af4047222c8ddcea261102229f8d0824595ecab1f2",
+      "data/alignment/o_captain__lv_mb__missing_pause_s5_01.TextGrid": "61a9623fb47321e651bcd68133e8e39dd9d0b2d28d0bf2838e7e23aa78bcbea4",
+      "data/alignment/o_captain__lv_mb__missing_pause_s5_01.json": "e0758a3c389a82bfe06f127557bbc8c5fc9b7af6e540d814d5b67c895c14242f",
+      "data/alignment/o_captain__lv_mb__mixed_01.TextGrid": "9c2da3a6bd2ef5dff4b73b8e9ce9c1053616842a18b168b1bbbc7e9acab495d3",
+      "data/alignment/o_captain__lv_mb__mixed_01.json": "81cf57b172e2dbcd7ece48be5d3e56e71baf786f4a8460ba1c5f33e65abbc02c",
+      "data/alignment/o_captain__lv_mb__mixed_02.TextGrid": "40dcb2388e98e189d2009014e867469550b444c4ea05417449e38a9f593c9044",
+      "data/alignment/o_captain__lv_mb__mixed_02.json": "6be8d3a46617af88f9acc42f0bcb1ebd5cd7dbae6f492905dd8e337af46af67e",
+      "data/alignment/o_captain__lv_mb__monotone_s1_01.TextGrid": "ccd71315ee1760ea79853ab3df7cff14c00db969bc4aa6e5b6bfd04105a27adc",
+      "data/alignment/o_captain__lv_mb__monotone_s1_01.json": "a54630b375eef96ab73bc19795605cd1c858b931ae504419467e2d090462b6a7",
+      "data/alignment/o_captain__lv_mb__monotone_s2_01.TextGrid": "170ad08b3fce582ac0b6a93857740e7c6a27faedc8eae25edea35d7d5d9eefd7",
+      "data/alignment/o_captain__lv_mb__monotone_s2_01.json": "981b91746b5eac08eb9ba3ac3ab6ee55047682d50b6d3131394b74a0d46d0201",
+      "data/alignment/o_captain__lv_mb__monotone_s3_01.TextGrid": "6e5d393c737f5180d60d598299d9664a48737b054b30758941fb4210840953b2",
+      "data/alignment/o_captain__lv_mb__monotone_s3_01.json": "7980097d8fb6f04ae3de3c36dfed4cfaee54b1915b518cfb93382391fa57a358",
+      "data/alignment/o_captain__lv_mb__monotone_s4_01.TextGrid": "fc2e7e486f15f1948057b6cbcb5ef3ee6e11cde09574640e27944978d396d8be",
+      "data/alignment/o_captain__lv_mb__monotone_s4_01.json": "33e327131891d1c283ec8a7fe0d0fee672210194f6dd73a72b4f438ff6ee82e1",
+      "data/alignment/o_captain__lv_mb__monotone_s5_01.TextGrid": "f5d657d3d5f0622d7f9f8bc4090367ca83ff79eacbf18ad64c3a04692bb781a3",
+      "data/alignment/o_captain__lv_mb__monotone_s5_01.json": "5a5a5f2382d01ba8ff88029ea9686a954ba540bbbe079428dcb8b4bf1074c2d2",
+      "data/alignment/o_captain__lv_mb__mumbling_s1_01.TextGrid": "56a110a5d8019796ef0ca1cc63026c6fd496fe09c038ead8fa5e3769b77f1d78",
+      "data/alignment/o_captain__lv_mb__mumbling_s1_01.json": "5b5a9d6b82291938022d7a33ee4958d8ec51c0129becfbcc86cd12d60ad61ca3",
+      "data/alignment/o_captain__lv_mb__mumbling_s2_01.TextGrid": "69ab78635015dec98d77c823bf7811dc1265be35c849d0df09b9113881858a30",
+      "data/alignment/o_captain__lv_mb__mumbling_s2_01.json": "4134a6570cc4a38aa7cf6edf103b005cdf259aa1ca90653fccab18cc38a300ff",
+      "data/alignment/o_captain__lv_mb__mumbling_s3_01.TextGrid": "0409a3b92ad7d8897dd7d3de37aef69cdeaa4a4461f12460e7a50383bac05fe9",
+      "data/alignment/o_captain__lv_mb__mumbling_s3_01.json": "7774a53e2c29c86afa80853b3dce103a89fee4610139c32ed6a5ae824a2446ea",
+      "data/alignment/o_captain__lv_mb__mumbling_s4_01.TextGrid": "7f931730cc59d4e9f2dece2e3b6ed78ede26ef459fb8f42d7c2d5b0c07c9b443",
+      "data/alignment/o_captain__lv_mb__mumbling_s4_01.json": "2d4df7b089871fb03780baf079fa05b64bb11a0b7d148202fdc34bf28c4270d7",
+      "data/alignment/o_captain__lv_mb__mumbling_s5_01.TextGrid": "cdd017e84c9475083e6846313ec45e34c950a932c3cd251b3d6161570bbfde81",
+      "data/alignment/o_captain__lv_mb__mumbling_s5_01.json": "78ce613054f430f32fd8e22277f1a7396d4a4e62a9e12101361e8fa85db89fbd",
+      "data/alignment/o_captain__lv_mb__rushing_s1_01.TextGrid": "fbdf6330ab6f211f7f740835587e638890d90479a43785f0cc1a7fd08d97d5d4",
+      "data/alignment/o_captain__lv_mb__rushing_s1_01.json": "86f3679fd7e46ae08f37b1452c4e97c629e1986efe48ce97c73d1066efa43a6f",
+      "data/alignment/o_captain__lv_mb__rushing_s2_01.TextGrid": "3aaa6d79fec4194a35c9e165c40018c7f240b40f298585a5a4c09d8eca0dd1b1",
+      "data/alignment/o_captain__lv_mb__rushing_s2_01.json": "52f26cc2694523fca83961f92628f4904a8cc2724021ad05c8e753e4facecfc1",
+      "data/alignment/o_captain__lv_mb__rushing_s3_01.TextGrid": "ece97a6afb1c8cda1f0f67e55ad0ded32606e7174282c791f4fba9f8a24c58a7",
+      "data/alignment/o_captain__lv_mb__rushing_s3_01.json": "fcfdd0532147945d2970f3151c5a1ddd7967bcd0243d19be30f1acb97df9e3c9",
+      "data/alignment/o_captain__lv_mb__rushing_s4_01.TextGrid": "ca5dbb7623fd0448dd9755a9d62ff2d156cb974deff9316ed26b461cad7bfcc0",
+      "data/alignment/o_captain__lv_mb__rushing_s4_01.json": "a0ac8695d586bd4fe380d762c62052bb5afbfd6b141c0ee247c935c43edffb93",
+      "data/alignment/o_captain__lv_mb__rushing_s5_01.TextGrid": "ab0199cae85dd03a4e40ebd55a9e1e72cf3f7c81c97cb70e48d92370dbfbb200",
+      "data/alignment/o_captain__lv_mb__rushing_s5_01.json": "01a35db9a7cb18fc5524fad64ec98d740b8c83dbfbc81310a1627a78fca2f31d",
+      "data/alignment/o_captain__lv_mb__too_quiet_s1_01.TextGrid": "fb55c2fadcb273d7a7f772870331c3d1c8552b0f298772cb4e2a8f0c9a94ab06",
+      "data/alignment/o_captain__lv_mb__too_quiet_s1_01.json": "906644f3eb471936019c7e305d1d9d7c52edb69819de51ddbde68526c7224483",
+      "data/alignment/o_captain__lv_mb__too_quiet_s2_01.TextGrid": "4608e4c985bdb1fe4ba068420ab078ecffefb45f3d35b74c468e600a587153d0",
+      "data/alignment/o_captain__lv_mb__too_quiet_s2_01.json": "a56243cd23f6903760be4d127a7089fe939922177e9c95dd308ab796d82e8be3",
+      "data/alignment/o_captain__lv_mb__too_quiet_s3_01.TextGrid": "f6b647b7ded77f943bcf4c3aa8f38fc32f1dd4915711ddaeb207c6f5e01646df",
+      "data/alignment/o_captain__lv_mb__too_quiet_s3_01.json": "0eaeca132b9930c439b14664d646bce49afe62aece502675abe20455c2d2759e",
+      "data/alignment/o_captain__lv_mb__too_quiet_s4_01.TextGrid": "8eab9dbbb78c9c57e5dcc1ca0f189278ea5ae2f48636e1317410a552e054c2bf",
+      "data/alignment/o_captain__lv_mb__too_quiet_s4_01.json": "caf9277eb17623baba6e8533d9e6ac1ae89edbeca65bee8b42651d523b1ef97f",
+      "data/alignment/o_captain__lv_mb__too_quiet_s5_01.TextGrid": "7fdb112fe563c53e1d5af1ab423245fe6c29e8c456d0376b1eaf1c2aa74fd839",
+      "data/alignment/o_captain__lv_mb__too_quiet_s5_01.json": "7f3b639be941ed43739c3f5fbb2158c58491601aa6981bf48af1e711d4cd47b9"
+    },
+    "device": "cpu",
+    "inputs": {
+      "audio_hashes": {
+        "o_captain__lv_mb__awkward_pause_s1_01": "838d6d386219fd992c0a934bf318fe3ab3b3843dadd384dee02638d9ca50b3c3",
+        "o_captain__lv_mb__awkward_pause_s2_01": "1450ab7394caccf87072ba4aecfce7902cc25e698fb76646637bac35f79bf15f",
+        "o_captain__lv_mb__awkward_pause_s3_01": "81dfadc7d985863f0b364eef26375984392175588537e41fc3c8a1a988240391",
+        "o_captain__lv_mb__awkward_pause_s4_01": "5c655d89d6c2458b120b352561ed9b77a7b19f5b8f2442e7f9a6d498b7704122",
+        "o_captain__lv_mb__awkward_pause_s5_01": "bbeea8aa0fc3595593b297f3724706d80dca8d86bfa3a8477c605a98d21f813b",
+        "o_captain__lv_mb__dragging_s1_01": "772e0f626f35a1b4c7ffdd2bb47c8ba8a2e8d21aacd09c599fdb9c645e4bed31",
+        "o_captain__lv_mb__dragging_s2_01": "c1603c34017f862ceb4f53a3157977b87b600fefafbc6aee59354fa12c468288",
+        "o_captain__lv_mb__dragging_s3_01": "2628e65b13d010d6285c603772a5669dc0251586f59d1b388a9773ba64613536",
+        "o_captain__lv_mb__dragging_s4_01": "76b9cbf53ba5ef98174dbc9f482e8ffe776c33f0aa729a8040c32a68ac8f31d6",
+        "o_captain__lv_mb__dragging_s5_01": "2f86295b0c9e844ef517e01a5d096e51e340505cfb9e01b6d899e57331a3bad1",
+        "o_captain__lv_mb__missing_pause_s1_01": "e0a9fbc64b1c78c9fc6e3b4a3ff52a99e21372d8c297b580cd29013f7a7c4d49",
+        "o_captain__lv_mb__missing_pause_s2_01": "efb678a33e6bc8452c7837fbf03c5bcc9144a399ecf2aae9f70db8988e5ad056",
+        "o_captain__lv_mb__missing_pause_s3_01": "eb0a597e2f481bf300578a76c95a258f1833681c96e5a7699230d3ed5c2aface",
+        "o_captain__lv_mb__missing_pause_s4_01": "058feb9846e28bb23899ecd5ae5290cca325a3a211318177e53334088f62e12f",
+        "o_captain__lv_mb__missing_pause_s5_01": "b731e7f23f8db754f177e111ee4d7d589f0311960d210885154b9382910a80be",
+        "o_captain__lv_mb__mixed_01": "04ebff929eba947eb5db41c948764e5e233567a0a1f1b3d9efe80373234602ec",
+        "o_captain__lv_mb__mixed_02": "d461c860ddbdd155711845c74cf0970032eec8d7b9bbff196feb74adc33ad385",
+        "o_captain__lv_mb__monotone_s1_01": "667cbad1d0e02c318bf45d395489e0abd8924b0316b5081fc672c7afa206b8f8",
+        "o_captain__lv_mb__monotone_s2_01": "fb768f3b77789a986c364dac877e5812b3e2ae2ae39ec852301406a1d9b08067",
+        "o_captain__lv_mb__monotone_s3_01": "abdc54d5f09e17d8fa02c3644f2a0bd1fb49e3ca9bef720bd6ecc83b0a73da1f",
+        "o_captain__lv_mb__monotone_s4_01": "8f65805afa6c4d5b2051d49376c33975487fa087323ecff216ee164a4ccabd48",
+        "o_captain__lv_mb__monotone_s5_01": "18b121eaef6f8421a4bb5fb220d9ec1c2383ef73f5c241021ff078b36599dde0",
+        "o_captain__lv_mb__mumbling_s1_01": "a6441e25c1bc6bd6f5b33b2d6c2888edfd01365cf2770202f26a6c10325da00d",
+        "o_captain__lv_mb__mumbling_s2_01": "108643cfb565e5198e20a0e8e5ad4c81bb45796e3e3bd36267ec57fefba5cf99",
+        "o_captain__lv_mb__mumbling_s3_01": "4ab9f0989de8201a4ba4bb9637c74a95ce9fe021cbff59ef8aeaf10bdb65e61c",
+        "o_captain__lv_mb__mumbling_s4_01": "c4d393a6a2d3a34e792f3b27019723098611d1e926d580c9d75cc397c6c0592b",
+        "o_captain__lv_mb__mumbling_s5_01": "a81fee89e112c16782b806453a68611f787263de545088e72222dac455f6d241",
+        "o_captain__lv_mb__rushing_s1_01": "af5cc47f33764897056ded393e43a8c91afae0ca9a85404e19e7cead5e53b22a",
+        "o_captain__lv_mb__rushing_s2_01": "520de03c488890bedb2d25fd2ea906f045f952b0733154ea97fd79e7cef1c9ed",
+        "o_captain__lv_mb__rushing_s3_01": "d8929798f1f07b55cc2d375e2ff051f3cc4ac54df599c21423236145b311a54a",
+        "o_captain__lv_mb__rushing_s4_01": "35c79e98be403317c8eef3c89ce49e7f9cd4115e8ddd8202d07087640428b182",
+        "o_captain__lv_mb__rushing_s5_01": "6082cea3240752b318c8ffd4865cd1443d641a94f80efe1dc0270330aba4e9a4",
+        "o_captain__lv_mb__too_quiet_s1_01": "0b5e0688a1c6e80879783276b6ac8edd9eb6e176517fe5736f62a24ea46cd3d0",
+        "o_captain__lv_mb__too_quiet_s2_01": "3e153166a4e75ca8840b6b58c3f3e477c47375941948bc72d620a394bad1a32e",
+        "o_captain__lv_mb__too_quiet_s3_01": "31b209fef17e3a4731f7368c9d6af8c7f59ef5484338c2e022eec9136b659936",
+        "o_captain__lv_mb__too_quiet_s4_01": "5e5c5b3671dfa1b4fbdb267b6d519a08fbcee51db8541efce93a89e902920039",
+        "o_captain__lv_mb__too_quiet_s5_01": "cd27d8e27f26df73990e7aa2a0faeba9420e482be38eca382c0b7267acd2f4b7"
+      },
+      "code": {
+        "align/base.py": "994dc16583cc442b5ec6520e6c7069e4a5ba8f9bf0a5db0bb547cf985d05529f",
+        "align/mfa.py": "889d7fa27cab72ead0d5df87c1fc0a0f66d3a89d6a978abd9f9b5ed1685a4366",
+        "dataset.py": "73ce6bee4be9ffc63b7ed6c638625d3e53165605f6e3464dd3107ded0aa653a3",
+        "transcripts.py": "9f61b340cd609f52cd141083dc00810091abbfbbe6ed3b4c405e70d7c777796d"
+      },
+      "model_sha256": {
+        "/home/sriram/Documents/MFA/pretrained_models/acoustic/english_mfa.zip": "2c08bd4f82c3943dd57ac09aeac99dbce17a1e1bfe9fd932c8d95cd13d971068",
+        "/home/sriram/Documents/MFA/pretrained_models/dictionary/english_us_mfa.dict": "cbf4ed8cee1338e009b9b387bcb9ee789ce70b98c61ca9bc6ed4f4e63d4812d5",
+        "/home/sriram/Documents/MFA/pretrained_models/g2p/english_us_mfa.zip": "9923b38d59a8b3e3e322f225c52523c2a6248e5ffc9fd89be151ade2dc97cb02"
+      },
+      "settings": {
+        "acoustic_model": "english_mfa",
+        "beam": 100,
+        "custom_dictionary": "data/dictionaries/custom_english_us_mfa.dict",
+        "custom_dictionary_sha256": "545628038195f4fca6435fd8b2cf32243ec00b05466f5d10a08cd04cca69c6df",
+        "dictionary": "english_us_mfa",
+        "g2p_model": "english_us_mfa",
+        "retry_beam": 400
+      },
+      "source_alignment_sha256": "297d9c80baa8b3e11254331c3571a94c53daacb59c6dde581ca7f7f6b0935610",
+      "transcript_sha256": "9b98424355cc6fc0c0d89a622affc6a11b80e0be016cab4eaf981f54702beaaf"
+    },
+    "jobs": 1,
+    "runtime_s": 85.264
+  },
+  "feature_state": {
+    "artifacts": {
+      "data/features/frames/o_captain__lv_mb__awkward_pause_s1_01.parquet": "b2eb8f8ce04283c896354c3420578437170b501e785dd76d8abfb316f15ee2c9",
+      "data/features/frames/o_captain__lv_mb__awkward_pause_s2_01.parquet": "090f86425cf9035bd191af47f414a50105a706ce1aac31bde689eb1deb9880c8",
+      "data/features/frames/o_captain__lv_mb__awkward_pause_s3_01.parquet": "b4f0e4cf395f7b63c2f270f8808f649c52331f0643a10484b78c25d5fdf0ab6f",
+      "data/features/frames/o_captain__lv_mb__awkward_pause_s4_01.parquet": "348cd711afb93a9e30cf68590e422e25e58b0a71fd07f7d0614458e285b7fbc8",
+      "data/features/frames/o_captain__lv_mb__awkward_pause_s5_01.parquet": "106b1501b136f1e0162533b512f8a76a3c2577bc312eb562bb2d92215503299b",
+      "data/features/frames/o_captain__lv_mb__dragging_s1_01.parquet": "ff67669392cf2e28f4c7b0f1bc2fb23ee1f691b5eaee4402ec68e0ceb14fee4d",
+      "data/features/frames/o_captain__lv_mb__dragging_s2_01.parquet": "b8e5ee964d0b7cd9b749d65ebb4f855b744fedcf90373a24629395be3bd7ec46",
+      "data/features/frames/o_captain__lv_mb__dragging_s3_01.parquet": "7f38f367d25b8f5c69582fe54fa1d2276ccf2126647179a8eaf091f99fd78d49",
+      "data/features/frames/o_captain__lv_mb__dragging_s4_01.parquet": "3b4db762155b5adca8698eebb053bc76fd8462c7d38b90b2dc8d69a394c2bcbc",
+      "data/features/frames/o_captain__lv_mb__dragging_s5_01.parquet": "3337badd021a147865f1408e78a45a27b5d078295a6f2dac094a51550c164fa1",
+      "data/features/frames/o_captain__lv_mb__missing_pause_s1_01.parquet": "a8f6b4bf25e98925669f15259037c5d80704cb53c28be7195012abd04e2fec4e",
+      "data/features/frames/o_captain__lv_mb__missing_pause_s2_01.parquet": "10251fc7ff1361d8b6ed9ef9609d78e1b54554bdeb31c4944a193449a2c00c09",
+      "data/features/frames/o_captain__lv_mb__missing_pause_s3_01.parquet": "812f950d9d79bfb828686275e9339397bebf3a99fb1c007baefa706cf0587034",
+      "data/features/frames/o_captain__lv_mb__missing_pause_s4_01.parquet": "5ebb055a20529ffb70ece6d3a23d034f1565acc6ad94946dbf5ed81bd28638c6",
+      "data/features/frames/o_captain__lv_mb__missing_pause_s5_01.parquet": "63c4a6c2fb0215a921e723c5bbf3e9206ca2ec38694cae8140f0fe10832d52dc",
+      "data/features/frames/o_captain__lv_mb__mixed_01.parquet": "b7bd1e0e13c67caded79e642d43ecd5eccbd727975da882678e80584c8c96e10",
+      "data/features/frames/o_captain__lv_mb__mixed_02.parquet": "6a3a44989d148324a6a33a40cf01658af7f1d365d79c6ebb20a2f7b54c486706",
+      "data/features/frames/o_captain__lv_mb__monotone_s1_01.parquet": "912211322e5bc5d6ad46064e24beceb885f27cfc225479af6ac9b1d92050f00f",
+      "data/features/frames/o_captain__lv_mb__monotone_s2_01.parquet": "9bd363fba59a111cd587ab5a524db61338fd9f79e4ee4ab350c0006d0cd4fa71",
+      "data/features/frames/o_captain__lv_mb__monotone_s3_01.parquet": "b1f8fd834598df257e1f03c6d20594b0ae4ae325708357b5c755f0096c7fd51b",
+      "data/features/frames/o_captain__lv_mb__monotone_s4_01.parquet": "d368bc1312a39e55952a1f4d3d5283ba85aec793564d030f0120dcf63b69a463",
+      "data/features/frames/o_captain__lv_mb__monotone_s5_01.parquet": "3f70ba597971e15374b0e7b017941112d2f34dea95a97216078aae5ca41eb8e0",
+      "data/features/frames/o_captain__lv_mb__mumbling_s1_01.parquet": "8a3e7e025536dee955c3eeef9ec04379222fb103bc6a9ae9e3565462ad474bc2",
+      "data/features/frames/o_captain__lv_mb__mumbling_s2_01.parquet": "ed8d2d6a67b93245c4bacb5e5a84aa9a5ef76c94cb789ef299984c473b4bc82d",
+      "data/features/frames/o_captain__lv_mb__mumbling_s3_01.parquet": "927c27b68f881f0889f55dc93348c5eff340822a8f5efba113dcc6689fac56ee",
+      "data/features/frames/o_captain__lv_mb__mumbling_s4_01.parquet": "9296e12b76422315065e2abac3d0da99199928e5f0637a7e390bffc9ff7c9b9d",
+      "data/features/frames/o_captain__lv_mb__mumbling_s5_01.parquet": "2482c3076a203ca8681efe58ea8e43f2b444693b974436d495dbd096963995ac",
+      "data/features/frames/o_captain__lv_mb__rushing_s1_01.parquet": "6f9ff391f965b4a2ff4279e5450f42974b02197f26402e01de04af8fbf524296",
+      "data/features/frames/o_captain__lv_mb__rushing_s2_01.parquet": "0964a674b7ca2e71c93e35292c52d25df6cfc6ced942e5f0031b12f79e0d3a47",
+      "data/features/frames/o_captain__lv_mb__rushing_s3_01.parquet": "bc7494e7f1df4892f68fe1fe0451b056671b6849fb498e838dabfe192a41f855",
+      "data/features/frames/o_captain__lv_mb__rushing_s4_01.parquet": "4fbce06990c10a74e23e82302c2cf29361ee8dc61a37114bf72249a783bb99ba",
+      "data/features/frames/o_captain__lv_mb__rushing_s5_01.parquet": "f31d4a3bd86c5d1835c5ca1d2f4f09ec61d9c9d08c1aa61c1e4fcf476af89eec",
+      "data/features/frames/o_captain__lv_mb__too_quiet_s1_01.parquet": "76a666f1d57ce8a2ab811d384079e66233d438ea8bd6190975d4802c0b84ebbc",
+      "data/features/frames/o_captain__lv_mb__too_quiet_s2_01.parquet": "54f40f6c0786166aee17d61fe2e1d71cecc5d6fbdc6bfdd01d1772a6110f9344",
+      "data/features/frames/o_captain__lv_mb__too_quiet_s3_01.parquet": "1ffafe020b5e5c5e95481c8b471b63dc231e3bed223a3ed841acc671a85eceee",
+      "data/features/frames/o_captain__lv_mb__too_quiet_s4_01.parquet": "647ff7c90597bbbcc77eafb2a7ccf5014adee424ce391a980b26dc08ea975b9c",
+      "data/features/frames/o_captain__lv_mb__too_quiet_s5_01.parquet": "2853097a1b95e51255745d675412a0116e66b8a281ee8a98fd0c90ac9e4a5a6f",
+      "data/features/sentences/o_captain__lv_mb__awkward_pause_s1_01.parquet": "cedbc1fe67e0fc4aaa20c80b22ed73df54077dc8af804ef059a6a7e98637e266",
+      "data/features/sentences/o_captain__lv_mb__awkward_pause_s2_01.parquet": "59d2cdb8b655298c40d980ba7d9e5374a9407ee9c9ea632139f324c01c6948f1",
+      "data/features/sentences/o_captain__lv_mb__awkward_pause_s3_01.parquet": "41311d4be8afe3b77a598644d28ee648383ecfd236f8d8c42fedf2c77f204397",
+      "data/features/sentences/o_captain__lv_mb__awkward_pause_s4_01.parquet": "7b06deb58997c63cc395187aa7d2994fadd5a82adce461c72719b2b337611a4f",
+      "data/features/sentences/o_captain__lv_mb__awkward_pause_s5_01.parquet": "dc7acaf0e653ce2eee20e2b4071c05c22bb067d917423190c59698bddb54c2e3",
+      "data/features/sentences/o_captain__lv_mb__dragging_s1_01.parquet": "f4ce02932cdc3562aa791337240ae359936d291fca631669b1be93e5b1be7baa",
+      "data/features/sentences/o_captain__lv_mb__dragging_s2_01.parquet": "34ffdd16a268b2f5e7228a16d827e97ae8937a541834456c75f8117d869b8453",
+      "data/features/sentences/o_captain__lv_mb__dragging_s3_01.parquet": "4a95a012203bef9cd94acbf0a9750c3610e9c5a7033c23166121210d210be3a3",
+      "data/features/sentences/o_captain__lv_mb__dragging_s4_01.parquet": "0fc04be6f4b07adcb83801bcf808c00736a26142d76795fdc4e2840fcfbc491a",
+      "data/features/sentences/o_captain__lv_mb__dragging_s5_01.parquet": "eb259124db82c936068e9fa253ea3f892f0af19317e68cff392ef8ddf1bee627",
+      "data/features/sentences/o_captain__lv_mb__missing_pause_s1_01.parquet": "bb69ab3765a8a87f87667931dd9d68f9d66ff98f1edc2562d1b3871e060229b0",
+      "data/features/sentences/o_captain__lv_mb__missing_pause_s2_01.parquet": "45798458412106ee2f5abf99ac4e83e800a822ed45751008bc93e9adb9a01a85",
+      "data/features/sentences/o_captain__lv_mb__missing_pause_s3_01.parquet": "bdb82bcf26344ee3b113cc53f102fcea3eacd71e623536fe5a6993a7e528120f",
+      "data/features/sentences/o_captain__lv_mb__missing_pause_s4_01.parquet": "e4988476c431446ad9ea6da20fe8bce8265388c1a1428b66e360f5427f700a30",
+      "data/features/sentences/o_captain__lv_mb__missing_pause_s5_01.parquet": "7cc6daa3888878f768305d8f6a69473fe2e6baf344de85d25c0f9e0b0a07aeed",
+      "data/features/sentences/o_captain__lv_mb__mixed_01.parquet": "66f6074e577c520d53f9e6ec6001c112c1882e7a64d3f283e10c7f575f5241bc",
+      "data/features/sentences/o_captain__lv_mb__mixed_02.parquet": "60280dba0ffbe091fc95d8ea734434c00a6dbf11ba27b05b8d1724ba571ff662",
+      "data/features/sentences/o_captain__lv_mb__monotone_s1_01.parquet": "3f79a230fb1d59f4ac00e47247ee8425c86f0858c7d465588b808b2fd8cb5ea4",
+      "data/features/sentences/o_captain__lv_mb__monotone_s2_01.parquet": "99e3a2a626e68ac94b89c49499cfc98aaaf3229b1413f478feeb581d81901c5a",
+      "data/features/sentences/o_captain__lv_mb__monotone_s3_01.parquet": "d9e7fba4922dfb30344a12eb3bfd63bd3b788ae71ef39667dc76f692de236a9c",
+      "data/features/sentences/o_captain__lv_mb__monotone_s4_01.parquet": "fed3ae84b85a9926183c259920d6ac9067b271f0deb7dffb2c0a1a18275c5699",
+      "data/features/sentences/o_captain__lv_mb__monotone_s5_01.parquet": "089cfb0a55c5d6049aa519bebb6eda3b659e9e4bccfdeda53f1b762400e3302e",
+      "data/features/sentences/o_captain__lv_mb__mumbling_s1_01.parquet": "a63782408f35133cb0683bd8d590cb429b5fbee45dd8679bec7cfafdb89b13d8",
+      "data/features/sentences/o_captain__lv_mb__mumbling_s2_01.parquet": "723cc7fc200aef44b61cd7d8d6daf9b845042917d294baca4f98dd8cae7373f0",
+      "data/features/sentences/o_captain__lv_mb__mumbling_s3_01.parquet": "d6597dac35562204c3dfde92a9edb7298b6f3f2598082a5c206e055cc017039b",
+      "data/features/sentences/o_captain__lv_mb__mumbling_s4_01.parquet": "824df37505d83f3a7d0fd4611db68f2db3cb51aeba093f6deedbc575cf3cb637",
+      "data/features/sentences/o_captain__lv_mb__mumbling_s5_01.parquet": "4fc44c420526ae9799eb0e766258966b6d821b314688688513bfa60d5536af69",
+      "data/features/sentences/o_captain__lv_mb__rushing_s1_01.parquet": "b4dd365bcde749b94ae2f888986be8a7a36338d5e93e09f63ad240a3bffa65d2",
+      "data/features/sentences/o_captain__lv_mb__rushing_s2_01.parquet": "858ccddc79c280b2ddbd83939d49a7e10c67c33e2980e6730dc8955dda1ebc88",
+      "data/features/sentences/o_captain__lv_mb__rushing_s3_01.parquet": "c78c7cbe4a84de0689958f51d409cfa6e1b85129f9d5b823a7c3e7eb9d4a55ed",
+      "data/features/sentences/o_captain__lv_mb__rushing_s4_01.parquet": "3249c83a6ccc2eb71f453240d7c42adc3442ae57b4f9fb7ff867f79c6d73c245",
+      "data/features/sentences/o_captain__lv_mb__rushing_s5_01.parquet": "6fd410d5875cbcb0f4c2ef96826ef4fd297a1f4f58dd8ed6759ef68e453aa6df",
+      "data/features/sentences/o_captain__lv_mb__too_quiet_s1_01.parquet": "f4fe850dc906237c1b948a204ad0a0df2e08e621d08794110ee937c0e4491215",
+      "data/features/sentences/o_captain__lv_mb__too_quiet_s2_01.parquet": "10c405f87b816a0815cb8de681e3a4aa75c8ce4f478bafafaeee1bf2874b5f37",
+      "data/features/sentences/o_captain__lv_mb__too_quiet_s3_01.parquet": "0d561a3b010b1f4ed38ddfd1b6944ca92f237c32d5614959a5ff0f2cb30b7865",
+      "data/features/sentences/o_captain__lv_mb__too_quiet_s4_01.parquet": "41f1c9f67919884d300e0f311f3d6abc1e0d9b5191cf99dd3ba7b4e167b62937",
+      "data/features/sentences/o_captain__lv_mb__too_quiet_s5_01.parquet": "b485fbd3cb1aae4ab8a19778cfa3da7b0b1bfd41f207d71317deb961ab1b2453",
+      "data/features/speaker_stats/o_captain__lv_mb__awkward_pause_s1_01.json": "a9c5425ba1bda49c9062b3c9245c8563c12224fc380b55274de9041e49b54840",
+      "data/features/speaker_stats/o_captain__lv_mb__awkward_pause_s2_01.json": "8130b13f1b06624ed349c5cca7348d2074aa400cbae434aec1cea1f190dc0a42",
+      "data/features/speaker_stats/o_captain__lv_mb__awkward_pause_s3_01.json": "460c5f7ce7bb6ad65b02d18edfa0f9b5b5930ac6939b27095dffb60e71cce1d7",
+      "data/features/speaker_stats/o_captain__lv_mb__awkward_pause_s4_01.json": "15b70e9947f4e42f70f71a2e3ea3fb2a5bd7351084ac5bf233cf1e83b67637dd",
+      "data/features/speaker_stats/o_captain__lv_mb__awkward_pause_s5_01.json": "f2e499f7ae71e37823a66bb13b9e06545bc2179bea0be68c3028b74da5eddfaa",
+      "data/features/speaker_stats/o_captain__lv_mb__dragging_s1_01.json": "dce4254fded2931fe8ec10eda66bcfc36bcb9b19a4279887ae217d96c26889c0",
+      "data/features/speaker_stats/o_captain__lv_mb__dragging_s2_01.json": "48579b0e58ad93bd455c07ba2f5d0a94a2b42970043d72a01c8e6d9cf27327ae",
+      "data/features/speaker_stats/o_captain__lv_mb__dragging_s3_01.json": "a13d92367727efced90e784b59ed7f742b4b4d557ec805acefe8ede576be25ae",
+      "data/features/speaker_stats/o_captain__lv_mb__dragging_s4_01.json": "0c46069cba2dcc55e4e23753c936d44b9341aba3b91910492cfedd7493661dd5",
+      "data/features/speaker_stats/o_captain__lv_mb__dragging_s5_01.json": "b3a300a245be00db582fc4f6dd43c38b4350bc66876855de83861035180d4d15",
+      "data/features/speaker_stats/o_captain__lv_mb__missing_pause_s1_01.json": "0ad736f030c4039900f5de34c04f342228029dbdb4fef971e2421d390a8f4465",
+      "data/features/speaker_stats/o_captain__lv_mb__missing_pause_s2_01.json": "44c26e06f4335cc148db6bbae62fb137e858869e933722cf22c0d5a7e18efdcd",
+      "data/features/speaker_stats/o_captain__lv_mb__missing_pause_s3_01.json": "2beb051210d19cb255304e7bb3dcd3acc04753f5587582c4c3b9198d91753a19",
+      "data/features/speaker_stats/o_captain__lv_mb__missing_pause_s4_01.json": "615cea32cb08cf11f2ebdfd4303e288d7da5a7647c14d93a64be55b765123b62",
+      "data/features/speaker_stats/o_captain__lv_mb__missing_pause_s5_01.json": "6949f513684b9bf98d73300b312d885195923896e5d246f7c619c02b779b7fb3",
+      "data/features/speaker_stats/o_captain__lv_mb__mixed_01.json": "2faf9ffcd8761a348a5187563d9a7eb15e65ada5e28a7f400610cec8e39d4306",
+      "data/features/speaker_stats/o_captain__lv_mb__mixed_02.json": "f7b4362e937944f0bafb78c9ec31ab7edbeeacfda36324691fb02ad492d36fe0",
+      "data/features/speaker_stats/o_captain__lv_mb__monotone_s1_01.json": "d5a82a9f0ccb1e69519f3ea4e9cf5a29cad266be43765908067f45285a57142c",
+      "data/features/speaker_stats/o_captain__lv_mb__monotone_s2_01.json": "5146dd51202ef9e7215fe9a93ee365eb76b1b6f002099025bd5b7ded101c21fb",
+      "data/features/speaker_stats/o_captain__lv_mb__monotone_s3_01.json": "082ff20d386f65075ed715ba291d7a46d7d645c0ea2660f2829f590ea57be906",
+      "data/features/speaker_stats/o_captain__lv_mb__monotone_s4_01.json": "7849b32c9cf860c59ff3f54d2c80ac59b1c541936e814009769db5de58d8fc19",
+      "data/features/speaker_stats/o_captain__lv_mb__monotone_s5_01.json": "3cae0d849304d020f651a4a4278aa8243563f4314d3b3bf12293585ccd10dbb3",
+      "data/features/speaker_stats/o_captain__lv_mb__mumbling_s1_01.json": "c4b6c36a7210bd4da3cec55d00a8147087e1c86777c9ffbef37e16ce1528d18f",
+      "data/features/speaker_stats/o_captain__lv_mb__mumbling_s2_01.json": "ea2b2447a895d90779b530d6be002cf82d0870161f308de17e2d3461ab81def9",
+      "data/features/speaker_stats/o_captain__lv_mb__mumbling_s3_01.json": "912c900dccdbd0c527d314e5f536b2e1d37e20d984fe8319d3735d7b1e837efe",
+      "data/features/speaker_stats/o_captain__lv_mb__mumbling_s4_01.json": "bc54a973073311813d1d9e2374cbdfcbbe634e168673539adc09942f9e8e9c69",
+      "data/features/speaker_stats/o_captain__lv_mb__mumbling_s5_01.json": "bca3bd5e37199fb27ba8f80b21c67a23befdcf90b7f447b1c7fed9c68c1453ac",
+      "data/features/speaker_stats/o_captain__lv_mb__rushing_s1_01.json": "75d2bdc01eabf6337d5a5ca10848529fd9e178384908b0262e9b6d2553d2cbea",
+      "data/features/speaker_stats/o_captain__lv_mb__rushing_s2_01.json": "f6c55a06eabd69916d9c3f9306eb378643212ce27c57cf7e8b2761c43d0b3101",
+      "data/features/speaker_stats/o_captain__lv_mb__rushing_s3_01.json": "e07c36334d5473c038d4d6c287c282d2a18e840601b06f28c86ff350e61a3957",
+      "data/features/speaker_stats/o_captain__lv_mb__rushing_s4_01.json": "3c366ecceb50623b4fb47ede63ef4647d87ca8c6e713348d0f3e1c9159b21417",
+      "data/features/speaker_stats/o_captain__lv_mb__rushing_s5_01.json": "c038c34bce596e40e23525289444ef396acaf5ba5edc218349317807a6b741ed",
+      "data/features/speaker_stats/o_captain__lv_mb__too_quiet_s1_01.json": "46bf5095cd3582af7dc2c9efa7299c9460fb454f84f7a0204628486a50ed513e",
+      "data/features/speaker_stats/o_captain__lv_mb__too_quiet_s2_01.json": "6ba6fa518d0a922340d0d04c1ad74495281d3c1470ed54e82c8cdce49fef38f3",
+      "data/features/speaker_stats/o_captain__lv_mb__too_quiet_s3_01.json": "5e8231588c56cd63f1e8a9563006a1ad5ca2f8c174c124c6b4a20f40709cc231",
+      "data/features/speaker_stats/o_captain__lv_mb__too_quiet_s4_01.json": "dbd05a2740fa5d4db6f5e2ef8906aa44cc5f7959f89e7e3f184eaf2fce1a7200",
+      "data/features/speaker_stats/o_captain__lv_mb__too_quiet_s5_01.json": "3634b97ca4656236d8c83006c154a26ef9f685a3b3fda9a10309d93edb7c2f84",
+      "data/features/windows/o_captain__lv_mb__awkward_pause_s1_01.parquet": "310f5398a149cb3511916dae8cea418a883b075f136980496118b8c4a87172a5",
+      "data/features/windows/o_captain__lv_mb__awkward_pause_s2_01.parquet": "55c64927f93520c49fd723fd54fe78440d7b6b42767d80f30ff58ab8b4a54d9e",
+      "data/features/windows/o_captain__lv_mb__awkward_pause_s3_01.parquet": "56c95c97535ee016409c44bb19721d47f13d8acb7c0076b521b138a0d251bdee",
+      "data/features/windows/o_captain__lv_mb__awkward_pause_s4_01.parquet": "5d8d3e1993882bf6b3c529b5b34bce98ea23e174c4acb892ae2f6ea5f88b4037",
+      "data/features/windows/o_captain__lv_mb__awkward_pause_s5_01.parquet": "bbb21a805483e75efad6ac6248628a621f6bb3b14ee7783cc30db53d2ecafa7d",
+      "data/features/windows/o_captain__lv_mb__dragging_s1_01.parquet": "3bb8aade924b0aa5e50e8a4ddbab99e77994b7cc5b6267c90a97a22cc4d1269c",
+      "data/features/windows/o_captain__lv_mb__dragging_s2_01.parquet": "739b78ff049281007b8d36aa43a2e3912e2f7f463d97e3e3e44d3527d497f140",
+      "data/features/windows/o_captain__lv_mb__dragging_s3_01.parquet": "17244fbe9281e7fff49c5a3270f0d772f7e03b4c98f20d820a8a19b516695655",
+      "data/features/windows/o_captain__lv_mb__dragging_s4_01.parquet": "ae99348646448400b5f390a6573a2e2f6a48c926c953e59842dbf8f096e76f4c",
+      "data/features/windows/o_captain__lv_mb__dragging_s5_01.parquet": "75abaa185f347b47bd2af2a245f2192cd3679e5f7f60ba4cac58fc7d107c5606",
+      "data/features/windows/o_captain__lv_mb__missing_pause_s1_01.parquet": "8639e51e435fe87293c165f011f26d0bcd9ede6b0d2f19cf9e8fcd0729be6182",
+      "data/features/windows/o_captain__lv_mb__missing_pause_s2_01.parquet": "92357c4ff4894f177612424ff6b5d94f740da2a713c9cb06ae7b5d96e57407ed",
+      "data/features/windows/o_captain__lv_mb__missing_pause_s3_01.parquet": "bfb252ee3e880e5cf3670fd556f10fc55e53b9e069cf88adfd985885d5a8344a",
+      "data/features/windows/o_captain__lv_mb__missing_pause_s4_01.parquet": "be9657fef9794c956e799fa29f7d18a75a19243a8ce47781cfc71cbc16964ab9",
+      "data/features/windows/o_captain__lv_mb__missing_pause_s5_01.parquet": "7d5839b432ad12ac22f96e2a1f9cbc8ad9aafbd24a32ca4a05f6e69f31249ad2",
+      "data/features/windows/o_captain__lv_mb__mixed_01.parquet": "74a90fc6f0a1d6049320025442bb24e9817b682d969f64a9092e361335680386",
+      "data/features/windows/o_captain__lv_mb__mixed_02.parquet": "98537ac2ef154221dfbe601eea789fcae3b8a3b00f2cc67c301aa701e4fe5c84",
+      "data/features/windows/o_captain__lv_mb__monotone_s1_01.parquet": "26ee121a8db8e8bb8b3be601710324735eaf1fdb8453c3d6115b9805288c8648",
+      "data/features/windows/o_captain__lv_mb__monotone_s2_01.parquet": "163b1cb2e2e8825591d2db68b8e4191d11e8e0b1d13226710d4291a824955aeb",
+      "data/features/windows/o_captain__lv_mb__monotone_s3_01.parquet": "0c597082ee8c2a985778ec59d5b0add0a5947d8ef515dbb66e9c99644a2c46b1",
+      "data/features/windows/o_captain__lv_mb__monotone_s4_01.parquet": "f8c552c4a14844d45835799b77c3711b9126891f1b6cade2a83a96b9c611c4d6",
+      "data/features/windows/o_captain__lv_mb__monotone_s5_01.parquet": "a4ba4433f05588b9f35cb0b3dffa5cc4209e3a129ff63bf3f996e7621e65b0b0",
+      "data/features/windows/o_captain__lv_mb__mumbling_s1_01.parquet": "6963a289d6f7560fc0ebfb977bc5224b4ad14903105fb026dce24b92991879ca",
+      "data/features/windows/o_captain__lv_mb__mumbling_s2_01.parquet": "b3658220920be4a838d20422471abb6cb8e5401555b3489c8c136eb91322ac54",
+      "data/features/windows/o_captain__lv_mb__mumbling_s3_01.parquet": "3f5adec59e5f3757103db788ae471e10cb771ff2cbc6b351caa620dc63daec43",
+      "data/features/windows/o_captain__lv_mb__mumbling_s4_01.parquet": "c2e82deacc7538b2965b1bdcb0685dea519466ba07aa15b6f38d2a6a84222e31",
+      "data/features/windows/o_captain__lv_mb__mumbling_s5_01.parquet": "b0f65732deee0c6bad1f7b6a3d54fffe4a9379b1853ca713f0fdc7168e6a6d33",
+      "data/features/windows/o_captain__lv_mb__rushing_s1_01.parquet": "d872a1e56844ebf9c5217b4d399559fbbb91c7bc6b249511e87f9fbd7c202d69",
+      "data/features/windows/o_captain__lv_mb__rushing_s2_01.parquet": "5e6f3dc391de3e33bf9f75858eaeebfec7ea446bddcfe8f31c9fca3934a946d9",
+      "data/features/windows/o_captain__lv_mb__rushing_s3_01.parquet": "8508e0ead68d1bfc28438162ff3f51215af1268b64065f9dd948e9d1db368d4c",
+      "data/features/windows/o_captain__lv_mb__rushing_s4_01.parquet": "947c884767ca8dbe039af284033d2fdc3026d3c1ab8ae344dffda73e088b69eb",
+      "data/features/windows/o_captain__lv_mb__rushing_s5_01.parquet": "d2638221ea9fb04f31b552caa6568796ec0fa8fc6824ba7d328914bc2a0a8705",
+      "data/features/windows/o_captain__lv_mb__too_quiet_s1_01.parquet": "3a50b6ec10503f325fe8f833fc4f0044cbe5dad9a2a16c915a06f1b60d74879f",
+      "data/features/windows/o_captain__lv_mb__too_quiet_s2_01.parquet": "f7dd1ecaec650bbe7d22ebdf42fb4408337ddb9fb9ae2ef729a59398e5bc79d6",
+      "data/features/windows/o_captain__lv_mb__too_quiet_s3_01.parquet": "47b789e9665a27ee09ea54d7c97096a7e795a1065cd99152b4d0feb18e24ac44",
+      "data/features/windows/o_captain__lv_mb__too_quiet_s4_01.parquet": "7ac06a38cf0db97edcf7db72460a99635ecb790c063750776399928a089d7c3b",
+      "data/features/windows/o_captain__lv_mb__too_quiet_s5_01.parquet": "c43bb1ed4d6afdbc96306e046bd0b8811ab8fb18b81517b8766e15392238c5e1",
+      "data/features/words/o_captain__lv_mb__awkward_pause_s1_01.parquet": "8d7eee657f6d4612e77fab6585e2c2b04c0d422986b36fbc122c158df8bbe2b1",
+      "data/features/words/o_captain__lv_mb__awkward_pause_s2_01.parquet": "14a694fc2bd61937f76965db4dfb6faffd76958c72c72d1c4510dd963b1b9faa",
+      "data/features/words/o_captain__lv_mb__awkward_pause_s3_01.parquet": "d929756fa4bd591e6fa7157ef95c02cb8190f7d389c00386e2dc1348a2d777c0",
+      "data/features/words/o_captain__lv_mb__awkward_pause_s4_01.parquet": "48f6879dc9737570bd5445effa26bc54929a8c414323795268690e0d10a0c395",
+      "data/features/words/o_captain__lv_mb__awkward_pause_s5_01.parquet": "b7338a72440a92ae19a0f29ced23d2c1c0a3c5012a8e69999829c00c614781aa",
+      "data/features/words/o_captain__lv_mb__dragging_s1_01.parquet": "223fb54e8dd12188e8f374cb595af3e055d2455348b9707b7a767fb6168ca8f8",
+      "data/features/words/o_captain__lv_mb__dragging_s2_01.parquet": "8af869ec7c60ffe1cad9f23f55d22b80407438fc6ed99c25d643b4b3218b182a",
+      "data/features/words/o_captain__lv_mb__dragging_s3_01.parquet": "5e1e751112d933e210dc50b65a839d53bc9b9d1997282523a776727be9da504f",
+      "data/features/words/o_captain__lv_mb__dragging_s4_01.parquet": "79c625928ca17a5107bb19c50e1391cb3c886e1fe6ca396262739e560dc6cc7f",
+      "data/features/words/o_captain__lv_mb__dragging_s5_01.parquet": "32eb558e93ec525a06edb44d5952fe387fb9004236825b99c82187bfdbd6fa1c",
+      "data/features/words/o_captain__lv_mb__missing_pause_s1_01.parquet": "2981b288449994366d5b87259ce4640297c14105df0bef87f82031f75a2bfd04",
+      "data/features/words/o_captain__lv_mb__missing_pause_s2_01.parquet": "94dff49e9ad9e303b75ddfdfa2aad6569321bb05bfcfde4b6008436a5e30e244",
+      "data/features/words/o_captain__lv_mb__missing_pause_s3_01.parquet": "d28ddd906e8c64a8e22f062ccc2f00287ea09268028befaab322df147129269d",
+      "data/features/words/o_captain__lv_mb__missing_pause_s4_01.parquet": "0a07d4ae8e9b32aa9f38a5e22373e0425bff908edac6c2e87ebd4b71872b74b4",
+      "data/features/words/o_captain__lv_mb__missing_pause_s5_01.parquet": "1d21cbe13481e52ab567238a6baaf3943853c3ad789df8bc0521da1d8f996883",
+      "data/features/words/o_captain__lv_mb__mixed_01.parquet": "14f048564d09a282bb5cce8ecf7fb988d36e51950f2a3733601b8f3f21e8574f",
+      "data/features/words/o_captain__lv_mb__mixed_02.parquet": "4037c2dcc01d834635f51d7a8746f0f3c70bea886c4c63c69aac3674f598bfe4",
+      "data/features/words/o_captain__lv_mb__monotone_s1_01.parquet": "b8ae8e22f5f060d7f00ccf9d5ea56775773b08563450d977b1375752245486e9",
+      "data/features/words/o_captain__lv_mb__monotone_s2_01.parquet": "586d518f28d5a00d2043e081758e80fbccf63cac7df7eb73c94d8017b450efdc",
+      "data/features/words/o_captain__lv_mb__monotone_s3_01.parquet": "3ac2fce636574ca3021de3a9de68bfdd3752f0864029860b2083ca398eb08b2e",
+      "data/features/words/o_captain__lv_mb__monotone_s4_01.parquet": "5976c3628204f81d0478f8a01dc9171ed166089bcef12884fcc5bd7bb753920e",
+      "data/features/words/o_captain__lv_mb__monotone_s5_01.parquet": "a8d90f61b2ef29e7b2f807e29b4031362e36b8554a5d5f40565ef8fd8d65246a",
+      "data/features/words/o_captain__lv_mb__mumbling_s1_01.parquet": "419ffbd2cde04b2cb70f7513e3e60a1701f22fef05d90d1af24f008935727e84",
+      "data/features/words/o_captain__lv_mb__mumbling_s2_01.parquet": "f434eeb5009ab908982af68574665ab64f65111c96ecbded020f9e0c509059cf",
+      "data/features/words/o_captain__lv_mb__mumbling_s3_01.parquet": "aae807a71c05d9c4a6770ac5365957e96911c1cb8f2c3adc572f669cf3ba9c75",
+      "data/features/words/o_captain__lv_mb__mumbling_s4_01.parquet": "ec833576f707c80f57ec16e9f8f3a078ebfe22d9297dac03e794101e74fd416c",
+      "data/features/words/o_captain__lv_mb__mumbling_s5_01.parquet": "d4a26f251d5859e5a6299e5c2c67fad871a0319c7042a3a66a1fca3f2c0212dd",
+      "data/features/words/o_captain__lv_mb__rushing_s1_01.parquet": "02608e627ec404484a95ee6cb5657dd1f215e4ae00ade444ca594ae5b00f5623",
+      "data/features/words/o_captain__lv_mb__rushing_s2_01.parquet": "8240798de9efc82569a2e41754ce10b557c261ad805f39c44980e7b719dda73c",
+      "data/features/words/o_captain__lv_mb__rushing_s3_01.parquet": "f13df17b85c8babc00870f7d0c638177f00122d13346bc74dc67ea152fd206c3",
+      "data/features/words/o_captain__lv_mb__rushing_s4_01.parquet": "a607214264a7b32ad52b436ef735a8bb362e1d72407cad65390c59caa7fe3669",
+      "data/features/words/o_captain__lv_mb__rushing_s5_01.parquet": "77db325f3601966ce5dd3a01176a72516f57d3d158dbfa4e33fe7f01f591db06",
+      "data/features/words/o_captain__lv_mb__too_quiet_s1_01.parquet": "fca868964efa7351129cfe89f3dd7a56726ba8ab4a12ad927cc92b1751948b7b",
+      "data/features/words/o_captain__lv_mb__too_quiet_s2_01.parquet": "fe8ad6aec5d8c701d8f7954b1e9e72fd6c8a3ebeb83b58becc75d6568323262e",
+      "data/features/words/o_captain__lv_mb__too_quiet_s3_01.parquet": "42140ebabba00d2e9999fb05abc143def4397aa9a15395c3a9f4fb6ee836c8dd",
+      "data/features/words/o_captain__lv_mb__too_quiet_s4_01.parquet": "f1e91295c28436e202ae46f0f09c37e5338b3093ddd4fa0f764cc64203603ef4",
+      "data/features/words/o_captain__lv_mb__too_quiet_s5_01.parquet": "4885870d4bdcc84a1e126d4d5e4b1763bb98e86b2e420f6d29159b8beea4bf08"
+    },
+    "inputs": {
+      "code_sha256": "e34045ca86ed32d57aa893495bf22d96800f9faa26950aa4b22f2dad0a1f167f",
+      "hq_audio_hashes": {
+        "o_captain__lv_mb__awkward_pause_s1_01": "13578b7597cb519bfe7a0a4841376ee204688d3afe04c383d3da608d1e479f9a",
+        "o_captain__lv_mb__awkward_pause_s2_01": "341a59c25222d64b5a190a9e225de9ce5156e7812572400c13850f713c968cd4",
+        "o_captain__lv_mb__awkward_pause_s3_01": "c09a5a99eb1855531542cc0247378e1c710270fdd849d3c40531a213d0f4bb56",
+        "o_captain__lv_mb__awkward_pause_s4_01": "aee33e6ed32ea6e8c4a4f20c3cc78796c1142374fff16eae1b6949b3c33ccad1",
+        "o_captain__lv_mb__awkward_pause_s5_01": "f632debc7ca65fadb7f169b7334cc4c17238b67273c7527b0ff040d0d27930ee",
+        "o_captain__lv_mb__dragging_s1_01": "889654937838b8bbc938e192bfca27fd680e97b15e7321d13d9362dd7e2c40f2",
+        "o_captain__lv_mb__dragging_s2_01": "e45a0a78fbdf663638a59714a43b5e6e19743dc181aa760319ce8a5581391f03",
+        "o_captain__lv_mb__dragging_s3_01": "e6f0a72a8ee4762204c9f5215c8376e6631df86a8d4f685dbb127cb38f1813e5",
+        "o_captain__lv_mb__dragging_s4_01": "94a82c7e6487fb0829d0ddce088a8c1a99ce873508452daef5f39b563a60f0ad",
+        "o_captain__lv_mb__dragging_s5_01": "a1a7db3347007c32825b517ab79efd9030590874ca033012333bc5882448c6b1",
+        "o_captain__lv_mb__missing_pause_s1_01": "3d373e7b7678c341c9d7a21f0d7ce307a180dd65638ee0c6f2c20526a2160c5e",
+        "o_captain__lv_mb__missing_pause_s2_01": "d5cc511c2068f1ed9a75b96bdbd374e299c73f877d1c1ca24dd6917111ea3dc1",
+        "o_captain__lv_mb__missing_pause_s3_01": "2a9d9ec19da82a4e290eb323ac7da3e7999a8e7bc388f63cf3fb95af7d689f5a",
+        "o_captain__lv_mb__missing_pause_s4_01": "a753a28805e31ce33e22b1eabae1e5280a8fa4b3b3336e4793d3c9ed69fe16ca",
+        "o_captain__lv_mb__missing_pause_s5_01": "51ef7d4b3eaf111a8d2e807beee8d02e0ab1ff906c2e0fefa899cc868571da0a",
+        "o_captain__lv_mb__mixed_01": "3c17e984e3a144fe9435b77e01c10a3f7b69b7d274b48625ec950e66a19050f2",
+        "o_captain__lv_mb__mixed_02": "f31835827c41175401a300dff272eef3738f8a167a3bf3053fd2e0a233603392",
+        "o_captain__lv_mb__monotone_s1_01": "508b37bb13b19807432948829744148c59a4f1a4127cd61b9b6be31dd2967ac2",
+        "o_captain__lv_mb__monotone_s2_01": "0fdf1633a9664483dd9817aa51357cc1677e055929017b2cebd969ed54ed9e21",
+        "o_captain__lv_mb__monotone_s3_01": "30d538e9133f162642a1e9700ecef0e0c2bbf8ac8257a0cc8727a261d3358a7d",
+        "o_captain__lv_mb__monotone_s4_01": "915a78830b6ed6756ea6f1dc106c95a7311f95ce6b668863a0155247500d7787",
+        "o_captain__lv_mb__monotone_s5_01": "85669cb58d7f6304da8dfa8458ae7770136796f5b67d767256052d574c950c77",
+        "o_captain__lv_mb__mumbling_s1_01": "a15315d93e3f25a76caa25f57b33af15eec25090d759ef885bff3bfd55080466",
+        "o_captain__lv_mb__mumbling_s2_01": "9e028854088d53213140866cc0b70be676a1d38d3abe98c93e4d06a24d45225d",
+        "o_captain__lv_mb__mumbling_s3_01": "9a510d83430eab3dd82e0edefef819a28d540da763de8ea0a529f21e4c115017",
+        "o_captain__lv_mb__mumbling_s4_01": "64bf56a29a91f2113a517aebce33cd1cea40f19bae673ff33afd7ea8f3c6241a",
+        "o_captain__lv_mb__mumbling_s5_01": "f77ff7e47da7339db498fb313ebabaa225143dcca5350d4d33c8fa5bee16331b",
+        "o_captain__lv_mb__rushing_s1_01": "b60a9d57811955a842f4c4cc7a8cc3b83c02b40c9ab9fe007b4d1be7ab9e3d55",
+        "o_captain__lv_mb__rushing_s2_01": "721e91192a8d3e6c37ea64d0bd1e2ebe77ed5ee8880ce923c3aa65709b3d468d",
+        "o_captain__lv_mb__rushing_s3_01": "25451d35ae39fe54aa44166a91f3baccb31d3945e5e673480cb3eaebb1a05e4b",
+        "o_captain__lv_mb__rushing_s4_01": "26a0a7092b89716f01474f1d3666a7b2dac1b0dfe9f162994d803c73e76276ee",
+        "o_captain__lv_mb__rushing_s5_01": "223352c66a2abc8f6594d45c72c651ddd458bd8f520dca91a110967295838840",
+        "o_captain__lv_mb__too_quiet_s1_01": "ceb633fe3d47af5a0eb858ef5b90faaedd8d2e1487eaa2d44444d7281a4fc69f",
+        "o_captain__lv_mb__too_quiet_s2_01": "047d57062d9aac3adad4d91442d981bc1254cc5d6f49bb50e32c8c6b44d7a216",
+        "o_captain__lv_mb__too_quiet_s3_01": "440d6aa31e829ca99bbc172fb5ce7dc90f70a0f8f26153c10d579729325a8755",
+        "o_captain__lv_mb__too_quiet_s4_01": "29efbc2683c7b2980b1bf9953e9d8f28c3e74408fc7059f1549433a7a68cec4e",
+        "o_captain__lv_mb__too_quiet_s5_01": "9d39e8a375a9453b30161d364e59d23dff8032c231880b2dfbc91d85cba2aaa0"
+      },
+      "real_alignment_artifacts": {
+        "data/alignment/o_captain__lv_mb__awkward_pause_s1_01.TextGrid": "39c1443ef62615dc40c4ebd11db25fe91ef557f82f5670920f966083daa42c25",
+        "data/alignment/o_captain__lv_mb__awkward_pause_s1_01.json": "b29e5cd63810412c5d44159e4aff4e9abca4fb169e4461c6a7269a9226bc1f85",
+        "data/alignment/o_captain__lv_mb__awkward_pause_s2_01.TextGrid": "67f481198f1c82f292ed2a4939488c3c960f5d805b5a87d57b3c5906648cfde7",
+        "data/alignment/o_captain__lv_mb__awkward_pause_s2_01.json": "20fc4297772a7a0dfc0afcb50010aaab41341d06a745ada5a108b3f55a9b5259",
+        "data/alignment/o_captain__lv_mb__awkward_pause_s3_01.TextGrid": "6c9c70d9a189fac86cb8ad8aa96f960aabb0b3929d49bc2b43e4834fbdd0ae97",
+        "data/alignment/o_captain__lv_mb__awkward_pause_s3_01.json": "4bf195d4ccce1cb3ac48f0582dc9085fe46f7f2ac12db5a705a35a378a372987",
+        "data/alignment/o_captain__lv_mb__awkward_pause_s4_01.TextGrid": "2eb233e1905a70e1388b1eb0a29783503a1212a430e365ba40663fe62ad9bad7",
+        "data/alignment/o_captain__lv_mb__awkward_pause_s4_01.json": "0c8da2ddcd62744411ae18048d4004673f78b2382ce5e22647e4ec0b731c1397",
+        "data/alignment/o_captain__lv_mb__awkward_pause_s5_01.TextGrid": "5b817f656753742ddb12b61b09735095980fcd1ededf1ced7cd8738333753279",
+        "data/alignment/o_captain__lv_mb__awkward_pause_s5_01.json": "abc5eb9fd8d52cde35cb4c81562c251265217f5785c2bdb10da04ca183875c76",
+        "data/alignment/o_captain__lv_mb__dragging_s1_01.TextGrid": "d9bf3d1d0d7cbe4216544c6f21956e6e71fc3e6fc7eab1089fb10640693050a9",
+        "data/alignment/o_captain__lv_mb__dragging_s1_01.json": "fa0c4c759a3d976a98320cae7c9b8546fdd8429906847e417e5c2abaa38f5196",
+        "data/alignment/o_captain__lv_mb__dragging_s2_01.TextGrid": "3196406de0d785c275eca4183ec429b16bb6cd055399a6cdb3bb9aa84d31ea3a",
+        "data/alignment/o_captain__lv_mb__dragging_s2_01.json": "d181a366fa0a24f1b9a57a6e5036190d0a35cef82579b5aa20885e8226a95219",
+        "data/alignment/o_captain__lv_mb__dragging_s3_01.TextGrid": "e056583e24f476099b635749962331a2be4876cf232e5b58e584db4b88fbc8c1",
+        "data/alignment/o_captain__lv_mb__dragging_s3_01.json": "a5effb20dad8751fabc23eb041dd04fdd11289838c3efe40f6c83fbfb02cf038",
+        "data/alignment/o_captain__lv_mb__dragging_s4_01.TextGrid": "3352ab0b1ff5836d272fb8c4dc2d4b25cf6575015d067062b6835dd65fa20aa3",
+        "data/alignment/o_captain__lv_mb__dragging_s4_01.json": "d1ebfb04fda0945c084113193ad1eadf9d2cd1631f2e85149f6a898a1c47629f",
+        "data/alignment/o_captain__lv_mb__dragging_s5_01.TextGrid": "31bef93e2587c59ec83a5bc0b85e8c5fad6886a3a98ff884a3996c07945022a9",
+        "data/alignment/o_captain__lv_mb__dragging_s5_01.json": "8abfdee9b548e38887dedea9dfe0b618db93c047ea81f7195f16ebd1d9369232",
+        "data/alignment/o_captain__lv_mb__missing_pause_s1_01.TextGrid": "517c862dbd2a9140a717ed74b649f2017bb8a15cc212ce0077436e66945d651f",
+        "data/alignment/o_captain__lv_mb__missing_pause_s1_01.json": "10adf8e953d2bca7308c3c44f78c940b3957672e86e6a5f6287c7a6b0da8bb5c",
+        "data/alignment/o_captain__lv_mb__missing_pause_s2_01.TextGrid": "151a63dd3ebdd0ac7e4b20bfb06966229318800a4e74e0fc9aba8b7425811b6e",
+        "data/alignment/o_captain__lv_mb__missing_pause_s2_01.json": "e9b477d969ba94511c81ed815be6af626a2129b350c027f01214d379e348c48a",
+        "data/alignment/o_captain__lv_mb__missing_pause_s3_01.TextGrid": "a88aef0622591f32ae979112c78a4c5ada3918d9026ab2ee41211aaa92383657",
+        "data/alignment/o_captain__lv_mb__missing_pause_s3_01.json": "bfa58d6cb5791529f235455751b91ad0a57fb79f029cda57e3a5cd4e5581ee79",
+        "data/alignment/o_captain__lv_mb__missing_pause_s4_01.TextGrid": "c4a4241645b094f46ff01948eace36af61edc3f5e8096841991928564b1d3523",
+        "data/alignment/o_captain__lv_mb__missing_pause_s4_01.json": "a1078809ffd97058595b40af4047222c8ddcea261102229f8d0824595ecab1f2",
+        "data/alignment/o_captain__lv_mb__missing_pause_s5_01.TextGrid": "61a9623fb47321e651bcd68133e8e39dd9d0b2d28d0bf2838e7e23aa78bcbea4",
+        "data/alignment/o_captain__lv_mb__missing_pause_s5_01.json": "e0758a3c389a82bfe06f127557bbc8c5fc9b7af6e540d814d5b67c895c14242f",
+        "data/alignment/o_captain__lv_mb__mixed_01.TextGrid": "9c2da3a6bd2ef5dff4b73b8e9ce9c1053616842a18b168b1bbbc7e9acab495d3",
+        "data/alignment/o_captain__lv_mb__mixed_01.json": "81cf57b172e2dbcd7ece48be5d3e56e71baf786f4a8460ba1c5f33e65abbc02c",
+        "data/alignment/o_captain__lv_mb__mixed_02.TextGrid": "40dcb2388e98e189d2009014e867469550b444c4ea05417449e38a9f593c9044",
+        "data/alignment/o_captain__lv_mb__mixed_02.json": "6be8d3a46617af88f9acc42f0bcb1ebd5cd7dbae6f492905dd8e337af46af67e",
+        "data/alignment/o_captain__lv_mb__monotone_s1_01.TextGrid": "ccd71315ee1760ea79853ab3df7cff14c00db969bc4aa6e5b6bfd04105a27adc",
+        "data/alignment/o_captain__lv_mb__monotone_s1_01.json": "a54630b375eef96ab73bc19795605cd1c858b931ae504419467e2d090462b6a7",
+        "data/alignment/o_captain__lv_mb__monotone_s2_01.TextGrid": "170ad08b3fce582ac0b6a93857740e7c6a27faedc8eae25edea35d7d5d9eefd7",
+        "data/alignment/o_captain__lv_mb__monotone_s2_01.json": "981b91746b5eac08eb9ba3ac3ab6ee55047682d50b6d3131394b74a0d46d0201",
+        "data/alignment/o_captain__lv_mb__monotone_s3_01.TextGrid": "6e5d393c737f5180d60d598299d9664a48737b054b30758941fb4210840953b2",
+        "data/alignment/o_captain__lv_mb__monotone_s3_01.json": "7980097d8fb6f04ae3de3c36dfed4cfaee54b1915b518cfb93382391fa57a358",
+        "data/alignment/o_captain__lv_mb__monotone_s4_01.TextGrid": "fc2e7e486f15f1948057b6cbcb5ef3ee6e11cde09574640e27944978d396d8be",
+        "data/alignment/o_captain__lv_mb__monotone_s4_01.json": "33e327131891d1c283ec8a7fe0d0fee672210194f6dd73a72b4f438ff6ee82e1",
+        "data/alignment/o_captain__lv_mb__monotone_s5_01.TextGrid": "f5d657d3d5f0622d7f9f8bc4090367ca83ff79eacbf18ad64c3a04692bb781a3",
+        "data/alignment/o_captain__lv_mb__monotone_s5_01.json": "5a5a5f2382d01ba8ff88029ea9686a954ba540bbbe079428dcb8b4bf1074c2d2",
+        "data/alignment/o_captain__lv_mb__mumbling_s1_01.TextGrid": "56a110a5d8019796ef0ca1cc63026c6fd496fe09c038ead8fa5e3769b77f1d78",
+        "data/alignment/o_captain__lv_mb__mumbling_s1_01.json": "5b5a9d6b82291938022d7a33ee4958d8ec51c0129becfbcc86cd12d60ad61ca3",
+        "data/alignment/o_captain__lv_mb__mumbling_s2_01.TextGrid": "69ab78635015dec98d77c823bf7811dc1265be35c849d0df09b9113881858a30",
+        "data/alignment/o_captain__lv_mb__mumbling_s2_01.json": "4134a6570cc4a38aa7cf6edf103b005cdf259aa1ca90653fccab18cc38a300ff",
+        "data/alignment/o_captain__lv_mb__mumbling_s3_01.TextGrid": "0409a3b92ad7d8897dd7d3de37aef69cdeaa4a4461f12460e7a50383bac05fe9",
+        "data/alignment/o_captain__lv_mb__mumbling_s3_01.json": "7774a53e2c29c86afa80853b3dce103a89fee4610139c32ed6a5ae824a2446ea",
+        "data/alignment/o_captain__lv_mb__mumbling_s4_01.TextGrid": "7f931730cc59d4e9f2dece2e3b6ed78ede26ef459fb8f42d7c2d5b0c07c9b443",
+        "data/alignment/o_captain__lv_mb__mumbling_s4_01.json": "2d4df7b089871fb03780baf079fa05b64bb11a0b7d148202fdc34bf28c4270d7",
+        "data/alignment/o_captain__lv_mb__mumbling_s5_01.TextGrid": "cdd017e84c9475083e6846313ec45e34c950a932c3cd251b3d6161570bbfde81",
+        "data/alignment/o_captain__lv_mb__mumbling_s5_01.json": "78ce613054f430f32fd8e22277f1a7396d4a4e62a9e12101361e8fa85db89fbd",
+        "data/alignment/o_captain__lv_mb__rushing_s1_01.TextGrid": "fbdf6330ab6f211f7f740835587e638890d90479a43785f0cc1a7fd08d97d5d4",
+        "data/alignment/o_captain__lv_mb__rushing_s1_01.json": "86f3679fd7e46ae08f37b1452c4e97c629e1986efe48ce97c73d1066efa43a6f",
+        "data/alignment/o_captain__lv_mb__rushing_s2_01.TextGrid": "3aaa6d79fec4194a35c9e165c40018c7f240b40f298585a5a4c09d8eca0dd1b1",
+        "data/alignment/o_captain__lv_mb__rushing_s2_01.json": "52f26cc2694523fca83961f92628f4904a8cc2724021ad05c8e753e4facecfc1",
+        "data/alignment/o_captain__lv_mb__rushing_s3_01.TextGrid": "ece97a6afb1c8cda1f0f67e55ad0ded32606e7174282c791f4fba9f8a24c58a7",
+        "data/alignment/o_captain__lv_mb__rushing_s3_01.json": "fcfdd0532147945d2970f3151c5a1ddd7967bcd0243d19be30f1acb97df9e3c9",
+        "data/alignment/o_captain__lv_mb__rushing_s4_01.TextGrid": "ca5dbb7623fd0448dd9755a9d62ff2d156cb974deff9316ed26b461cad7bfcc0",
+        "data/alignment/o_captain__lv_mb__rushing_s4_01.json": "a0ac8695d586bd4fe380d762c62052bb5afbfd6b141c0ee247c935c43edffb93",
+        "data/alignment/o_captain__lv_mb__rushing_s5_01.TextGrid": "ab0199cae85dd03a4e40ebd55a9e1e72cf3f7c81c97cb70e48d92370dbfbb200",
+        "data/alignment/o_captain__lv_mb__rushing_s5_01.json": "01a35db9a7cb18fc5524fad64ec98d740b8c83dbfbc81310a1627a78fca2f31d",
+        "data/alignment/o_captain__lv_mb__too_quiet_s1_01.TextGrid": "fb55c2fadcb273d7a7f772870331c3d1c8552b0f298772cb4e2a8f0c9a94ab06",
+        "data/alignment/o_captain__lv_mb__too_quiet_s1_01.json": "906644f3eb471936019c7e305d1d9d7c52edb69819de51ddbde68526c7224483",
+        "data/alignment/o_captain__lv_mb__too_quiet_s2_01.TextGrid": "4608e4c985bdb1fe4ba068420ab078ecffefb45f3d35b74c468e600a587153d0",
+        "data/alignment/o_captain__lv_mb__too_quiet_s2_01.json": "a56243cd23f6903760be4d127a7089fe939922177e9c95dd308ab796d82e8be3",
+        "data/alignment/o_captain__lv_mb__too_quiet_s3_01.TextGrid": "f6b647b7ded77f943bcf4c3aa8f38fc32f1dd4915711ddaeb207c6f5e01646df",
+        "data/alignment/o_captain__lv_mb__too_quiet_s3_01.json": "0eaeca132b9930c439b14664d646bce49afe62aece502675abe20455c2d2759e",
+        "data/alignment/o_captain__lv_mb__too_quiet_s4_01.TextGrid": "8eab9dbbb78c9c57e5dcc1ca0f189278ea5ae2f48636e1317410a552e054c2bf",
+        "data/alignment/o_captain__lv_mb__too_quiet_s4_01.json": "caf9277eb17623baba6e8533d9e6ac1ae89edbeca65bee8b42651d523b1ef97f",
+        "data/alignment/o_captain__lv_mb__too_quiet_s5_01.TextGrid": "7fdb112fe563c53e1d5af1ab423245fe6c29e8c456d0376b1eaf1c2aa74fd839",
+        "data/alignment/o_captain__lv_mb__too_quiet_s5_01.json": "7f3b639be941ed43739c3f5fbb2158c58491601aa6981bf48af1e711d4cd47b9"
+      },
+      "settings": {
+        "pause_threshold_s": 0.25,
+        "pitch_ceiling_q3_factor": 1.5
+      },
+      "versions": {
+        "cmudict": "1.1.3",
+        "librosa": "0.11.0",
+        "numpy": "2.0.2",
+        "pandas": "2.2.3",
+        "praat-parselmouth": "0.4.7",
+        "pyarrow": "25.0.1"
+      }
+    }
+  },
+  "features_completed": true,
+  "real_alignment_completed": true,
+  "records": [
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__awkward_pause_s1_01.json": "2566277c3ef277903830d0e13d094174c98754952f313c34804eea91cf540418",
+        "data/flawed/align16k/o_captain__lv_mb__awkward_pause_s1_01.flac": "838d6d386219fd992c0a934bf318fe3ab3b3843dadd384dee02638d9ca50b3c3",
+        "data/flawed/hq/o_captain__lv_mb__awkward_pause_s1_01.flac": "13578b7597cb519bfe7a0a4841376ee204688d3afe04c383d3da608d1e479f9a",
+        "data/flawed/timemaps/o_captain__lv_mb__awkward_pause_s1_01.json": "ac2ccd8c04cf57e785761fc63e5881b5211bde5175b98cb78df09cfba06ef1e3",
+        "data/labels/o_captain__lv_mb__awkward_pause_s1_01.json": "e4a4e4ba9210cb2260249ebb75ed861049d68d7bbb7727c8f3cb8b0a3bfb1d1c"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__awkward_pause_s1_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__awkward_pause_s2_01.json": "989bc7a8a35421074805760d6e375a392b174addead94c74c6a1130e9d54da1f",
+        "data/flawed/align16k/o_captain__lv_mb__awkward_pause_s2_01.flac": "1450ab7394caccf87072ba4aecfce7902cc25e698fb76646637bac35f79bf15f",
+        "data/flawed/hq/o_captain__lv_mb__awkward_pause_s2_01.flac": "341a59c25222d64b5a190a9e225de9ce5156e7812572400c13850f713c968cd4",
+        "data/flawed/timemaps/o_captain__lv_mb__awkward_pause_s2_01.json": "2cc796d47845f428ffccfdafa8d7bc93a87a75eacf74756278c1676dc158f076",
+        "data/labels/o_captain__lv_mb__awkward_pause_s2_01.json": "f2c905fc39bcc3080c662301e11a71df404ebd9681f4887a171c3bdce7517c73"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__awkward_pause_s2_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__awkward_pause_s3_01.json": "8a1634e4a20f845a3abf6dc0c8ba0b432d6ccd262234002e92e172046edb1e43",
+        "data/flawed/align16k/o_captain__lv_mb__awkward_pause_s3_01.flac": "81dfadc7d985863f0b364eef26375984392175588537e41fc3c8a1a988240391",
+        "data/flawed/hq/o_captain__lv_mb__awkward_pause_s3_01.flac": "c09a5a99eb1855531542cc0247378e1c710270fdd849d3c40531a213d0f4bb56",
+        "data/flawed/timemaps/o_captain__lv_mb__awkward_pause_s3_01.json": "7f34c0df42f876b51ae628e432b635c24b36bc53d06cbc96f2a5ac7b9aabdbb3",
+        "data/labels/o_captain__lv_mb__awkward_pause_s3_01.json": "2975b0f235d67158763143a514a04b0adca054d255e0fea77ce6c4f26781575e"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__awkward_pause_s3_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__awkward_pause_s4_01.json": "e8155afc7c7a2ca73142911c82847909ae6213b3cbde3e9f3f965467c8f9f5c8",
+        "data/flawed/align16k/o_captain__lv_mb__awkward_pause_s4_01.flac": "5c655d89d6c2458b120b352561ed9b77a7b19f5b8f2442e7f9a6d498b7704122",
+        "data/flawed/hq/o_captain__lv_mb__awkward_pause_s4_01.flac": "aee33e6ed32ea6e8c4a4f20c3cc78796c1142374fff16eae1b6949b3c33ccad1",
+        "data/flawed/timemaps/o_captain__lv_mb__awkward_pause_s4_01.json": "d74a384fd8f6472883437e4af9b7a12b32b3ad8c3ddcaed78315f8c6fd9c9b79",
+        "data/labels/o_captain__lv_mb__awkward_pause_s4_01.json": "9b61827e9ea329d20d1d7ba88255c9b711a4cc9ce701e859eb71881e1b34e565"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__awkward_pause_s4_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__awkward_pause_s5_01.json": "eac69db3ad08188e22aa1b185ccac1526134355bf7522b8136ac4eaff6e1238f",
+        "data/flawed/align16k/o_captain__lv_mb__awkward_pause_s5_01.flac": "bbeea8aa0fc3595593b297f3724706d80dca8d86bfa3a8477c605a98d21f813b",
+        "data/flawed/hq/o_captain__lv_mb__awkward_pause_s5_01.flac": "f632debc7ca65fadb7f169b7334cc4c17238b67273c7527b0ff040d0d27930ee",
+        "data/flawed/timemaps/o_captain__lv_mb__awkward_pause_s5_01.json": "adc063fdd88f85b37c05c26714d981070d2afbac564250f28e3e225abe4c6715",
+        "data/labels/o_captain__lv_mb__awkward_pause_s5_01.json": "4e3510c938670083937ac3f51caaa09611a398a436f6b3d148aa9848deaa7543"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__awkward_pause_s5_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__dragging_s1_01.json": "3af811f0e9a293052481d089e5efd75d42346985c9b77ef7ccabdb9e004bb3a3",
+        "data/flawed/align16k/o_captain__lv_mb__dragging_s1_01.flac": "772e0f626f35a1b4c7ffdd2bb47c8ba8a2e8d21aacd09c599fdb9c645e4bed31",
+        "data/flawed/hq/o_captain__lv_mb__dragging_s1_01.flac": "889654937838b8bbc938e192bfca27fd680e97b15e7321d13d9362dd7e2c40f2",
+        "data/flawed/timemaps/o_captain__lv_mb__dragging_s1_01.json": "ca4bdc9a9e9277493ca9d4e2efeafeb0a5291b83045aed67da3938b6e8f3185a",
+        "data/labels/o_captain__lv_mb__dragging_s1_01.json": "89712a1895f4aac7d9370c17cd889650dd85db3bf90b2ac4ebf3d03b5fd61b6e"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__dragging_s1_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__dragging_s2_01.json": "b74f84f4828996e23f49007e6fcb1abcf407348b3bba4e886ecc00cb157d82ca",
+        "data/flawed/align16k/o_captain__lv_mb__dragging_s2_01.flac": "c1603c34017f862ceb4f53a3157977b87b600fefafbc6aee59354fa12c468288",
+        "data/flawed/hq/o_captain__lv_mb__dragging_s2_01.flac": "e45a0a78fbdf663638a59714a43b5e6e19743dc181aa760319ce8a5581391f03",
+        "data/flawed/timemaps/o_captain__lv_mb__dragging_s2_01.json": "56a2d2427d9b536bd04dbc1862a871339571dec2fb133050a802b674ec53cd23",
+        "data/labels/o_captain__lv_mb__dragging_s2_01.json": "909f25b41dd9d4a44fbe5242deeb6f4fcfd48277ed488e618166f1dc58356d3f"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__dragging_s2_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__dragging_s3_01.json": "9ec8be91fe738ecc173d732cbb7f7f91904a1e7a165c106f7c77a7c0c35b757e",
+        "data/flawed/align16k/o_captain__lv_mb__dragging_s3_01.flac": "2628e65b13d010d6285c603772a5669dc0251586f59d1b388a9773ba64613536",
+        "data/flawed/hq/o_captain__lv_mb__dragging_s3_01.flac": "e6f0a72a8ee4762204c9f5215c8376e6631df86a8d4f685dbb127cb38f1813e5",
+        "data/flawed/timemaps/o_captain__lv_mb__dragging_s3_01.json": "57fb6cc64acf9055a3b500ed16a6f5d47ebace9d8e01bcb372bdcbf3074eef13",
+        "data/labels/o_captain__lv_mb__dragging_s3_01.json": "84fdd759a86f84944a0a9e806e9633c460b09e704baf7172fdb935307ab20dca"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__dragging_s3_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__dragging_s4_01.json": "75ea791ba940398695b96e380f8fc296684122bb2f21b1e60555dcbb5e06dc34",
+        "data/flawed/align16k/o_captain__lv_mb__dragging_s4_01.flac": "76b9cbf53ba5ef98174dbc9f482e8ffe776c33f0aa729a8040c32a68ac8f31d6",
+        "data/flawed/hq/o_captain__lv_mb__dragging_s4_01.flac": "94a82c7e6487fb0829d0ddce088a8c1a99ce873508452daef5f39b563a60f0ad",
+        "data/flawed/timemaps/o_captain__lv_mb__dragging_s4_01.json": "a4490df8c9986e66c2d72d86b42deaadacb7f4dda6b5098e899041b92651ebce",
+        "data/labels/o_captain__lv_mb__dragging_s4_01.json": "084818f8faab416de4a56d53dafde584d14e2755ae9c792d66c75e70513ebaf2"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__dragging_s4_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__dragging_s5_01.json": "9212ef5316d373417ee67c4dd61eb4d03f7e622226710d89ad35971502b5e7fc",
+        "data/flawed/align16k/o_captain__lv_mb__dragging_s5_01.flac": "2f86295b0c9e844ef517e01a5d096e51e340505cfb9e01b6d899e57331a3bad1",
+        "data/flawed/hq/o_captain__lv_mb__dragging_s5_01.flac": "a1a7db3347007c32825b517ab79efd9030590874ca033012333bc5882448c6b1",
+        "data/flawed/timemaps/o_captain__lv_mb__dragging_s5_01.json": "d61df21fc60667b743e976312c1526f0f4f527948cc8c0faac8f13aca956661b",
+        "data/labels/o_captain__lv_mb__dragging_s5_01.json": "b34e31e374aa3ed88efbb5f55ed0f8c671d1d4e47da54379f70ed8745f3120d2"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__dragging_s5_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__missing_pause_s1_01.json": "4f3e40c5e2ba1b010989e234d27a72d1dfad08cdd2c2b7edcb453203335629f5",
+        "data/flawed/align16k/o_captain__lv_mb__missing_pause_s1_01.flac": "e0a9fbc64b1c78c9fc6e3b4a3ff52a99e21372d8c297b580cd29013f7a7c4d49",
+        "data/flawed/hq/o_captain__lv_mb__missing_pause_s1_01.flac": "3d373e7b7678c341c9d7a21f0d7ce307a180dd65638ee0c6f2c20526a2160c5e",
+        "data/flawed/timemaps/o_captain__lv_mb__missing_pause_s1_01.json": "2ea288c6cc4513c8d5ce262ace620a1f06a2429fb293ef6869d1503b490fc9f7",
+        "data/labels/o_captain__lv_mb__missing_pause_s1_01.json": "4c6fb633d2a677e3d332d05d0b78960b2dda423d0a075c8bc2f7009479ececc3"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__missing_pause_s1_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__missing_pause_s2_01.json": "d4ea8b903fbc6b2730e5393e635193243b610af6e48f61c8940a524011503ad6",
+        "data/flawed/align16k/o_captain__lv_mb__missing_pause_s2_01.flac": "efb678a33e6bc8452c7837fbf03c5bcc9144a399ecf2aae9f70db8988e5ad056",
+        "data/flawed/hq/o_captain__lv_mb__missing_pause_s2_01.flac": "d5cc511c2068f1ed9a75b96bdbd374e299c73f877d1c1ca24dd6917111ea3dc1",
+        "data/flawed/timemaps/o_captain__lv_mb__missing_pause_s2_01.json": "6ca838e5df61b125b300e2b8835c2d01e6bf416bf5f4aa64c6a2575c98d68577",
+        "data/labels/o_captain__lv_mb__missing_pause_s2_01.json": "51ad753c09aab529cdf4a844600901b5fff5dd1495b84cb549e286405cfebe40"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__missing_pause_s2_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__missing_pause_s3_01.json": "63a5a1fc2594bcaa99dd106595db632e863443e068bf54d67f23910ad02750e3",
+        "data/flawed/align16k/o_captain__lv_mb__missing_pause_s3_01.flac": "eb0a597e2f481bf300578a76c95a258f1833681c96e5a7699230d3ed5c2aface",
+        "data/flawed/hq/o_captain__lv_mb__missing_pause_s3_01.flac": "2a9d9ec19da82a4e290eb323ac7da3e7999a8e7bc388f63cf3fb95af7d689f5a",
+        "data/flawed/timemaps/o_captain__lv_mb__missing_pause_s3_01.json": "7ee01f11489683c0c6c959812704babeab0921487f02f1778a4862d0aa563d41",
+        "data/labels/o_captain__lv_mb__missing_pause_s3_01.json": "6d292db7cfd6ddbe9be40ecd4d86ea7c83caaa8b3a30f4b2129dc832ee0aa801"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__missing_pause_s3_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__missing_pause_s4_01.json": "29126455b366ed452f5c974add45983676a05018928887941c9dae57b565f7fa",
+        "data/flawed/align16k/o_captain__lv_mb__missing_pause_s4_01.flac": "058feb9846e28bb23899ecd5ae5290cca325a3a211318177e53334088f62e12f",
+        "data/flawed/hq/o_captain__lv_mb__missing_pause_s4_01.flac": "a753a28805e31ce33e22b1eabae1e5280a8fa4b3b3336e4793d3c9ed69fe16ca",
+        "data/flawed/timemaps/o_captain__lv_mb__missing_pause_s4_01.json": "d5177c06e0631028130960c35c4ff4a09e3de26da462a7c7e5d8dbe9e2ab39a0",
+        "data/labels/o_captain__lv_mb__missing_pause_s4_01.json": "a08c6e269a6157f80a17023bc237d4067c90054c87b4e76ec7720b10e461267b"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__missing_pause_s4_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__missing_pause_s5_01.json": "9944b63d83ba87baee54f8f1c6f09b15a5e6a2c38d24c2eb818863ef2b5c9bcc",
+        "data/flawed/align16k/o_captain__lv_mb__missing_pause_s5_01.flac": "b731e7f23f8db754f177e111ee4d7d589f0311960d210885154b9382910a80be",
+        "data/flawed/hq/o_captain__lv_mb__missing_pause_s5_01.flac": "51ef7d4b3eaf111a8d2e807beee8d02e0ab1ff906c2e0fefa899cc868571da0a",
+        "data/flawed/timemaps/o_captain__lv_mb__missing_pause_s5_01.json": "43a65177ab12097d0ac83af267e892b77c50144d5cb78a16d70a96731ba30f94",
+        "data/labels/o_captain__lv_mb__missing_pause_s5_01.json": "27db6c131fbe75cfe6420da0d140fcda058b19595309f52859cfc9b76f316679"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__missing_pause_s5_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__mixed_01.json": "a6418ef89c84531c55128c4f7f95975c61fb7fcafea27cfeb0c3a3943b197e89",
+        "data/flawed/align16k/o_captain__lv_mb__mixed_01.flac": "04ebff929eba947eb5db41c948764e5e233567a0a1f1b3d9efe80373234602ec",
+        "data/flawed/hq/o_captain__lv_mb__mixed_01.flac": "3c17e984e3a144fe9435b77e01c10a3f7b69b7d274b48625ec950e66a19050f2",
+        "data/flawed/timemaps/o_captain__lv_mb__mixed_01.json": "d2a80ef8ae5dbacb89f439383cb9a154d8e661ef26a8f576a8795f5e8c55ff8f",
+        "data/labels/o_captain__lv_mb__mixed_01.json": "c31c4f10aad4186c8e19cb50d575bd98ea7bd776d60e619f0abc350bba365e16"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "73ce6bee4be9ffc63b7ed6c638625d3e53165605f6e3464dd3107ded0aa653a3",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "inject_code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "rubberband": "3.3.0",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__mixed_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__mixed_02.json": "fda8e1652eb600ba4aa65b93fb504af50d7c09dc765a4e4835b3e5a98f425046",
+        "data/flawed/align16k/o_captain__lv_mb__mixed_02.flac": "d461c860ddbdd155711845c74cf0970032eec8d7b9bbff196feb74adc33ad385",
+        "data/flawed/hq/o_captain__lv_mb__mixed_02.flac": "f31835827c41175401a300dff272eef3738f8a167a3bf3053fd2e0a233603392",
+        "data/flawed/timemaps/o_captain__lv_mb__mixed_02.json": "0ae544ec8b93ac6b7f61f79660bc4029c48c576c7566628173c5213485583aa8",
+        "data/labels/o_captain__lv_mb__mixed_02.json": "e0f6410056ffdd4b1e567d2eb4ec164d6fb08aea9dcfd3aea15208bda07c5b42"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "73ce6bee4be9ffc63b7ed6c638625d3e53165605f6e3464dd3107ded0aa653a3",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "inject_code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "rubberband": "3.3.0",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__mixed_02",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__monotone_s1_01.json": "e44ef391830a88052ffa778fe0fbd6e9b1bc275796b9ffcf2e7907f690883495",
+        "data/flawed/align16k/o_captain__lv_mb__monotone_s1_01.flac": "667cbad1d0e02c318bf45d395489e0abd8924b0316b5081fc672c7afa206b8f8",
+        "data/flawed/hq/o_captain__lv_mb__monotone_s1_01.flac": "508b37bb13b19807432948829744148c59a4f1a4127cd61b9b6be31dd2967ac2",
+        "data/flawed/timemaps/o_captain__lv_mb__monotone_s1_01.json": "30a958a3fcf65ea89977290d6a31f7e53cc5aad8d0a779b96f93446ed0bf1b0d",
+        "data/labels/o_captain__lv_mb__monotone_s1_01.json": "39851eb3efd67f8ae568d54375ffed09fd372490d90e1e279d6ec9cf9f469679"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__monotone_s1_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__monotone_s2_01.json": "af6464413973829e1742e5b750c6ddb78e7e8db6fa4650b84b6de7c243819a71",
+        "data/flawed/align16k/o_captain__lv_mb__monotone_s2_01.flac": "fb768f3b77789a986c364dac877e5812b3e2ae2ae39ec852301406a1d9b08067",
+        "data/flawed/hq/o_captain__lv_mb__monotone_s2_01.flac": "0fdf1633a9664483dd9817aa51357cc1677e055929017b2cebd969ed54ed9e21",
+        "data/flawed/timemaps/o_captain__lv_mb__monotone_s2_01.json": "939b6ba8a66b7d7885d3580e64e679e0f97279d2a01f3d27709318f7b8d792d2",
+        "data/labels/o_captain__lv_mb__monotone_s2_01.json": "f1f9ac230ad0f53b93bd81c2223b828e8f32a02ba9c2c3d780aabe821e0f6295"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__monotone_s2_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__monotone_s3_01.json": "2ad7917ed9a939ed293bee1c1024e3c53c166035837803da0e380a70a50eb3f4",
+        "data/flawed/align16k/o_captain__lv_mb__monotone_s3_01.flac": "abdc54d5f09e17d8fa02c3644f2a0bd1fb49e3ca9bef720bd6ecc83b0a73da1f",
+        "data/flawed/hq/o_captain__lv_mb__monotone_s3_01.flac": "30d538e9133f162642a1e9700ecef0e0c2bbf8ac8257a0cc8727a261d3358a7d",
+        "data/flawed/timemaps/o_captain__lv_mb__monotone_s3_01.json": "4ecde89a73fd23d3383b336a2e3275dfe2178fdc0b01de7a6f4cc72b0f853e16",
+        "data/labels/o_captain__lv_mb__monotone_s3_01.json": "9398177a51b3dbeca0f0c898dc156d62852afae2d3b19d1f9410c10c7857b028"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__monotone_s3_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__monotone_s4_01.json": "2ea5022a63e7e38b9d875cabd415eec332154ec1339a8139ed0af84cc94ec2e3",
+        "data/flawed/align16k/o_captain__lv_mb__monotone_s4_01.flac": "8f65805afa6c4d5b2051d49376c33975487fa087323ecff216ee164a4ccabd48",
+        "data/flawed/hq/o_captain__lv_mb__monotone_s4_01.flac": "915a78830b6ed6756ea6f1dc106c95a7311f95ce6b668863a0155247500d7787",
+        "data/flawed/timemaps/o_captain__lv_mb__monotone_s4_01.json": "ec2f0579f3d35b86aaf2fbcad6a1db714ed47c26bd88acb223fe2a6839d43f6b",
+        "data/labels/o_captain__lv_mb__monotone_s4_01.json": "5df20001e916f2fa1ec3876ba05a455692948e0a0223785503eb1f99b8fc5186"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__monotone_s4_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__monotone_s5_01.json": "d5d16b04c48f4be6540446d3a17751f935ac808384a741bf4fcca30c2e550dc8",
+        "data/flawed/align16k/o_captain__lv_mb__monotone_s5_01.flac": "18b121eaef6f8421a4bb5fb220d9ec1c2383ef73f5c241021ff078b36599dde0",
+        "data/flawed/hq/o_captain__lv_mb__monotone_s5_01.flac": "85669cb58d7f6304da8dfa8458ae7770136796f5b67d767256052d574c950c77",
+        "data/flawed/timemaps/o_captain__lv_mb__monotone_s5_01.json": "fb01d649c1189ee4c688255ea95dc69ea7c3bac19d919da4c9d73b495d1dc2b0",
+        "data/labels/o_captain__lv_mb__monotone_s5_01.json": "1ad36d0fe122c4c8891f9143d470846b02661dc3d85b286adc795aade23787b4"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__monotone_s5_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__mumbling_s1_01.json": "98ac17487bce2f3e4fdc38d0377ada23abd0e7063391ec78eb80a6fb62034b07",
+        "data/flawed/align16k/o_captain__lv_mb__mumbling_s1_01.flac": "a6441e25c1bc6bd6f5b33b2d6c2888edfd01365cf2770202f26a6c10325da00d",
+        "data/flawed/hq/o_captain__lv_mb__mumbling_s1_01.flac": "a15315d93e3f25a76caa25f57b33af15eec25090d759ef885bff3bfd55080466",
+        "data/flawed/timemaps/o_captain__lv_mb__mumbling_s1_01.json": "88961ca3c77b12fb0fc63c13429d3395d3854d7aaf5e9cf8d7c38a8a67d7896a",
+        "data/labels/o_captain__lv_mb__mumbling_s1_01.json": "ae3dcfd19c612f9117a7792823f17b213ec9a913c059bb43922b89c2c5ab8241"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__mumbling_s1_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__mumbling_s2_01.json": "d12f4db30d97c2dcd8771819bcb6d6f3c4f3a0ea8aa94051d3dd41349384757f",
+        "data/flawed/align16k/o_captain__lv_mb__mumbling_s2_01.flac": "108643cfb565e5198e20a0e8e5ad4c81bb45796e3e3bd36267ec57fefba5cf99",
+        "data/flawed/hq/o_captain__lv_mb__mumbling_s2_01.flac": "9e028854088d53213140866cc0b70be676a1d38d3abe98c93e4d06a24d45225d",
+        "data/flawed/timemaps/o_captain__lv_mb__mumbling_s2_01.json": "868559fdfc3398538c2fd3c026567488338a77dfd2d48e7b53dbcf0b870fe07a",
+        "data/labels/o_captain__lv_mb__mumbling_s2_01.json": "c4dff1ed7c8409d2ba7a0bf94a4d55de8f68d337c4ca3cdf24438edee9985c8c"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__mumbling_s2_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__mumbling_s3_01.json": "9ddfc6b2a66ed968f548d2f37ea73104d4fd3e004c6e68a5b7f0b43c3f85bfc8",
+        "data/flawed/align16k/o_captain__lv_mb__mumbling_s3_01.flac": "4ab9f0989de8201a4ba4bb9637c74a95ce9fe021cbff59ef8aeaf10bdb65e61c",
+        "data/flawed/hq/o_captain__lv_mb__mumbling_s3_01.flac": "9a510d83430eab3dd82e0edefef819a28d540da763de8ea0a529f21e4c115017",
+        "data/flawed/timemaps/o_captain__lv_mb__mumbling_s3_01.json": "4af17b7a4d834e37005ad5a893c77979a3b1940bd1c0811f9f2e9e9293a5a147",
+        "data/labels/o_captain__lv_mb__mumbling_s3_01.json": "906daebdc780389a5a58f258a935532ec81c6d90c06c9d95be8c8fb61502426c"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__mumbling_s3_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__mumbling_s4_01.json": "8f3b97caa839c9ca3131163e470457e8e6e6eef414dd618b41dcbb6ed6cc4ae1",
+        "data/flawed/align16k/o_captain__lv_mb__mumbling_s4_01.flac": "c4d393a6a2d3a34e792f3b27019723098611d1e926d580c9d75cc397c6c0592b",
+        "data/flawed/hq/o_captain__lv_mb__mumbling_s4_01.flac": "64bf56a29a91f2113a517aebce33cd1cea40f19bae673ff33afd7ea8f3c6241a",
+        "data/flawed/timemaps/o_captain__lv_mb__mumbling_s4_01.json": "2da5d887624013b46324b898a750fec68990c5151d5a0b02b0c6a123676a815b",
+        "data/labels/o_captain__lv_mb__mumbling_s4_01.json": "d0b2a83a185f52e043596537b99242109db55ae2ea21879f8f2e3dffdc983852"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__mumbling_s4_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__mumbling_s5_01.json": "0c9c2ba0c0a9c3ca3ffec60e726a76b860f5e0973ea9c8d1162516d28231a2b6",
+        "data/flawed/align16k/o_captain__lv_mb__mumbling_s5_01.flac": "a81fee89e112c16782b806453a68611f787263de545088e72222dac455f6d241",
+        "data/flawed/hq/o_captain__lv_mb__mumbling_s5_01.flac": "f77ff7e47da7339db498fb313ebabaa225143dcca5350d4d33c8fa5bee16331b",
+        "data/flawed/timemaps/o_captain__lv_mb__mumbling_s5_01.json": "bea600cea6ae1f7217264aa38cc1f33b66c6e46454d49b90f674b426e45536f4",
+        "data/labels/o_captain__lv_mb__mumbling_s5_01.json": "e3fbe30b546ebfd01d7c3c602cf6fe54146f91b02ec1d543e1d55c3ef9bbfd3f"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__mumbling_s5_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__rushing_s1_01.json": "56146112b241962948f090a94d2477580b338c490759d5642af6d752b50b4b9c",
+        "data/flawed/align16k/o_captain__lv_mb__rushing_s1_01.flac": "af5cc47f33764897056ded393e43a8c91afae0ca9a85404e19e7cead5e53b22a",
+        "data/flawed/hq/o_captain__lv_mb__rushing_s1_01.flac": "b60a9d57811955a842f4c4cc7a8cc3b83c02b40c9ab9fe007b4d1be7ab9e3d55",
+        "data/flawed/timemaps/o_captain__lv_mb__rushing_s1_01.json": "4b71135115403df7c2ded1150298ebb3a9531b703c716de71c4554cbb6da60ee",
+        "data/labels/o_captain__lv_mb__rushing_s1_01.json": "2f00d00d95fd6141157745cbcec062c564bd58d01836192aa3d821a8d9bad56c"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__rushing_s1_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__rushing_s2_01.json": "d16f3cc434b91b36c77ddb7059f476712b26050526722b9f558f98448409b7e9",
+        "data/flawed/align16k/o_captain__lv_mb__rushing_s2_01.flac": "520de03c488890bedb2d25fd2ea906f045f952b0733154ea97fd79e7cef1c9ed",
+        "data/flawed/hq/o_captain__lv_mb__rushing_s2_01.flac": "721e91192a8d3e6c37ea64d0bd1e2ebe77ed5ee8880ce923c3aa65709b3d468d",
+        "data/flawed/timemaps/o_captain__lv_mb__rushing_s2_01.json": "767c238dc10820d9807fdbedf64a2b8b10ecc3550df49d7de95f9fcaf68a529f",
+        "data/labels/o_captain__lv_mb__rushing_s2_01.json": "fd7afac28c1ab5f243a5452eb38189b7b455ea7ae58b8c049239f358e05e3dc6"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__rushing_s2_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__rushing_s3_01.json": "cdfa481385c68a5804ec144be4dc98adc61e1333f4aba416095e30b4e815085d",
+        "data/flawed/align16k/o_captain__lv_mb__rushing_s3_01.flac": "d8929798f1f07b55cc2d375e2ff051f3cc4ac54df599c21423236145b311a54a",
+        "data/flawed/hq/o_captain__lv_mb__rushing_s3_01.flac": "25451d35ae39fe54aa44166a91f3baccb31d3945e5e673480cb3eaebb1a05e4b",
+        "data/flawed/timemaps/o_captain__lv_mb__rushing_s3_01.json": "46c2df0d7d8aebdefebb956b32b0f1746b0a75af90ea2f7de33e203ac9785e4d",
+        "data/labels/o_captain__lv_mb__rushing_s3_01.json": "33087c120010be996f2f5f3976e5ebd8c7645fc47b6f30e3ef345823471fcd9e"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__rushing_s3_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__rushing_s4_01.json": "cab8d370b227e5c29b231ec18bec18b7ebf44c3413c4e2204086b3f10c99010f",
+        "data/flawed/align16k/o_captain__lv_mb__rushing_s4_01.flac": "35c79e98be403317c8eef3c89ce49e7f9cd4115e8ddd8202d07087640428b182",
+        "data/flawed/hq/o_captain__lv_mb__rushing_s4_01.flac": "26a0a7092b89716f01474f1d3666a7b2dac1b0dfe9f162994d803c73e76276ee",
+        "data/flawed/timemaps/o_captain__lv_mb__rushing_s4_01.json": "6cad9afd8b8201c3a217c442d042e1c0774d4e28c54962ab08fbb7c96a192266",
+        "data/labels/o_captain__lv_mb__rushing_s4_01.json": "a562d5879e9a356b5455cac2f89c8c82c1ab4631e920674ad6edbec4ec3d3e85"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__rushing_s4_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__rushing_s5_01.json": "d83e2e8f658b83968b9a8da0e6ebc230a641c09bfe3811e7b89b634d6e888475",
+        "data/flawed/align16k/o_captain__lv_mb__rushing_s5_01.flac": "6082cea3240752b318c8ffd4865cd1443d641a94f80efe1dc0270330aba4e9a4",
+        "data/flawed/hq/o_captain__lv_mb__rushing_s5_01.flac": "223352c66a2abc8f6594d45c72c651ddd458bd8f520dca91a110967295838840",
+        "data/flawed/timemaps/o_captain__lv_mb__rushing_s5_01.json": "ee63050b6e75f864ad7c063bfe79472832e7793e956ffaeea39255d07a5d921f",
+        "data/labels/o_captain__lv_mb__rushing_s5_01.json": "289fb592db78c887ddc353926b433ec5a3be55e17c782e316d5a65e5cb787ddf"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__rushing_s5_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__too_quiet_s1_01.json": "1cfac6aec99f10ba34b71127dcd979e605680d4cb7579a16fe62e720a114a2ec",
+        "data/flawed/align16k/o_captain__lv_mb__too_quiet_s1_01.flac": "0b5e0688a1c6e80879783276b6ac8edd9eb6e176517fe5736f62a24ea46cd3d0",
+        "data/flawed/hq/o_captain__lv_mb__too_quiet_s1_01.flac": "ceb633fe3d47af5a0eb858ef5b90faaedd8d2e1487eaa2d44444d7281a4fc69f",
+        "data/flawed/timemaps/o_captain__lv_mb__too_quiet_s1_01.json": "afffb3ffb621a6e6cdcd6ba4519a704f43e896f9430a86c52cc87d89f593818a",
+        "data/labels/o_captain__lv_mb__too_quiet_s1_01.json": "954033726cd664b82d614de0c21229a65c758a2eb7c6ea73ffcee441155d881d"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__too_quiet_s1_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__too_quiet_s2_01.json": "9f44ea66853de8bc9ecab9f673cb039fee15844161436623e48ea3239910b4df",
+        "data/flawed/align16k/o_captain__lv_mb__too_quiet_s2_01.flac": "3e153166a4e75ca8840b6b58c3f3e477c47375941948bc72d620a394bad1a32e",
+        "data/flawed/hq/o_captain__lv_mb__too_quiet_s2_01.flac": "047d57062d9aac3adad4d91442d981bc1254cc5d6f49bb50e32c8c6b44d7a216",
+        "data/flawed/timemaps/o_captain__lv_mb__too_quiet_s2_01.json": "db7147641779b47698c69a0e5b0a25984d63f9aa49a8510f4c5ebfed62c27957",
+        "data/labels/o_captain__lv_mb__too_quiet_s2_01.json": "447c0da26c00c068109a5851a92035ee0c9bbe85cab3d2caa480807dcc5e7794"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "trail",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__too_quiet_s2_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__too_quiet_s3_01.json": "3d539d4ac254adc90a2246322def5ffdbe35e420778893042046e8a3204c73b5",
+        "data/flawed/align16k/o_captain__lv_mb__too_quiet_s3_01.flac": "31b209fef17e3a4731f7368c9d6af8c7f59ef5484338c2e022eec9136b659936",
+        "data/flawed/hq/o_captain__lv_mb__too_quiet_s3_01.flac": "440d6aa31e829ca99bbc172fb5ce7dc90f70a0f8f26153c10d579729325a8755",
+        "data/flawed/timemaps/o_captain__lv_mb__too_quiet_s3_01.json": "7cb52c0bf6e61159af3be2806c54f6a070332dd72b4e635dc05455f797e62e43",
+        "data/labels/o_captain__lv_mb__too_quiet_s3_01.json": "20f00d7c33a3488ab0f1f8f1d2427136661ad4376a4cece70e7f6ff6d4a95260"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__too_quiet_s3_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__too_quiet_s4_01.json": "97f51d6790593c224dc120d11936f50290c71ec6f2d3b74798d9ce5676dc0445",
+        "data/flawed/align16k/o_captain__lv_mb__too_quiet_s4_01.flac": "5e5c5b3671dfa1b4fbdb267b6d519a08fbcee51db8541efce93a89e902920039",
+        "data/flawed/hq/o_captain__lv_mb__too_quiet_s4_01.flac": "29efbc2683c7b2980b1bf9953e9d8f28c3e74408fc7059f1549433a7a68cec4e",
+        "data/flawed/timemaps/o_captain__lv_mb__too_quiet_s4_01.json": "81b20cef9c1c0cb5bdaa194deaa1dd1aba711c63dbdafa7d6a7d5d07f34501ad",
+        "data/labels/o_captain__lv_mb__too_quiet_s4_01.json": "df4ed89306a8f9079290cc9a0467230f2060e2cd1617fca198923ef2cdd35713"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "trail",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__too_quiet_s4_01",
+      "schema": "injection_provenance/v1"
+    },
+    {
+      "artifacts": {
+        "data/alignment/oracle/o_captain__lv_mb__too_quiet_s5_01.json": "b508e39ab5738207952475e1f8bf37a7ee2a360b4411bb262ef816c31d0d9702",
+        "data/flawed/align16k/o_captain__lv_mb__too_quiet_s5_01.flac": "cd27d8e27f26df73990e7aa2a0faeba9420e482be38eca382c0b7267acd2f4b7",
+        "data/flawed/hq/o_captain__lv_mb__too_quiet_s5_01.flac": "9d39e8a375a9453b30161d364e59d23dff8032c231880b2dfbc91d85cba2aaa0",
+        "data/flawed/timemaps/o_captain__lv_mb__too_quiet_s5_01.json": "13b9fc936c5ba76ad300f2171a0bb0d0099e8657d702713a55e7d547c374cd61",
+        "data/labels/o_captain__lv_mb__too_quiet_s5_01.json": "48b2f29011f7e826f3e4c25965db579667d3fa2c53c29474aaa26a9503ac0521"
+      },
+      "inputs": {
+        "alignment_sha256": "85a059bd4c60cc3b1c8148689e51d258521cd5371ff080f2c9b555c753fcfbdf",
+        "audio_sha256": "02b093e0f85fe56f37fbdcb046f05389178097337ce05957adab969c4ad775e7",
+        "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+        "config": {
+          "crossfade_ms": 20,
+          "keep_out_s": 1.0,
+          "min_gap_between_flaws_s": 2.0,
+          "region_words": {
+            "max": 12,
+            "min": 4
+          },
+          "seed": 20261001,
+          "types": {
+            "awkward_pause": {
+              "kind": "boundary",
+              "param": "inserted_pause_s",
+              "severity": [
+                0.6,
+                1.0,
+                1.5,
+                2.2,
+                3.0
+              ]
+            },
+            "dragging": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                0.87,
+                0.77,
+                0.67,
+                0.58,
+                0.5
+              ]
+            },
+            "missing_pause": {
+              "kind": "boundary",
+              "param": "pause_kept_frac",
+              "severity": [
+                0.7,
+                0.5,
+                0.3,
+                0.15,
+                0.0
+              ]
+            },
+            "monotone": {
+              "kind": "region",
+              "param": "pitch_range_kept",
+              "severity": [
+                0.7,
+                0.5,
+                0.35,
+                0.2,
+                0.08
+              ]
+            },
+            "mumbling": {
+              "extra_gain_db_per_severity": -1.0,
+              "kind": "region",
+              "param": "lowpass_hz",
+              "severity": [
+                3500,
+                2800,
+                2200,
+                1700,
+                1300
+              ]
+            },
+            "rushing": {
+              "kind": "region",
+              "param": "speed_factor",
+              "severity": [
+                1.15,
+                1.3,
+                1.5,
+                1.75,
+                2.0
+              ]
+            },
+            "too_quiet": {
+              "kind": "region",
+              "param": "gain_db",
+              "severity": [
+                -3,
+                -6,
+                -9,
+                -12,
+                -18
+              ],
+              "shapes": [
+                "flat",
+                "trail"
+              ]
+            }
+          }
+        },
+        "rubberband": "3.3.0",
+        "shape": "flat",
+        "stats_sha256": "183dd195840eeed4cea42d8ef62b30f27c2b55dec77f0fdef93221f4c8450fb9",
+        "versions": {
+          "numpy": "2.0.2",
+          "praat-parselmouth": "0.4.7",
+          "scipy": "1.17.1",
+          "soundfile": "0.14.0"
+        }
+      },
+      "recording_id": "o_captain__lv_mb__too_quiet_s5_01",
+      "schema": "injection_provenance/v1"
+    }
+  ],
+  "skipped": [],
+  "source_id": "o_captain__lv_mb__orig"
+}

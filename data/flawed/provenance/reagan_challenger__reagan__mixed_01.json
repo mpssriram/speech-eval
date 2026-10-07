@@ -1,0 +1,119 @@
+{
+  "artifacts": {
+    "data/alignment/oracle/reagan_challenger__reagan__mixed_01.json": "f38d9dd70ddee573612402ea50430716b1cb10060a6bd6d4cf77cf3fba61b166",
+    "data/flawed/align16k/reagan_challenger__reagan__mixed_01.flac": "3c86e6878f7ebd29b2bf3213a1a74dc7b64f2b911ed9a219a775afa98c8a6cbb",
+    "data/flawed/hq/reagan_challenger__reagan__mixed_01.flac": "3df9272fd13dd4127d7069c7a33d9b2d6166ec06cb9fb16ec3acbada3f6cafa8",
+    "data/flawed/timemaps/reagan_challenger__reagan__mixed_01.json": "fda68fba126db825a0eb570e6900fff478232478bf08e5922e328f3508bc9ba7",
+    "data/labels/reagan_challenger__reagan__mixed_01.json": "17b56bcd802936270163f4237d3e1ab7f6f65fae59d1029801a2e065cc9b5053"
+  },
+  "inputs": {
+    "alignment_sha256": "d213eb772d5f1fe4dcd33ca8f089a26d39d55429afcc9f8e2ba1efab1714b16a",
+    "audio_sha256": "53e5778bafa6ec87f89c98181ebafde94db145a58cd8df76ba9952488b1fe992",
+    "code_sha256": "73ce6bee4be9ffc63b7ed6c638625d3e53165605f6e3464dd3107ded0aa653a3",
+    "config": {
+      "crossfade_ms": 20,
+      "keep_out_s": 1.0,
+      "min_gap_between_flaws_s": 2.0,
+      "region_words": {
+        "max": 12,
+        "min": 4
+      },
+      "seed": 20261001,
+      "types": {
+        "awkward_pause": {
+          "kind": "boundary",
+          "param": "inserted_pause_s",
+          "severity": [
+            0.6,
+            1.0,
+            1.5,
+            2.2,
+            3.0
+          ]
+        },
+        "dragging": {
+          "kind": "region",
+          "param": "speed_factor",
+          "severity": [
+            0.87,
+            0.77,
+            0.67,
+            0.58,
+            0.5
+          ]
+        },
+        "missing_pause": {
+          "kind": "boundary",
+          "param": "pause_kept_frac",
+          "severity": [
+            0.7,
+            0.5,
+            0.3,
+            0.15,
+            0.0
+          ]
+        },
+        "monotone": {
+          "kind": "region",
+          "param": "pitch_range_kept",
+          "severity": [
+            0.7,
+            0.5,
+            0.35,
+            0.2,
+            0.08
+          ]
+        },
+        "mumbling": {
+          "extra_gain_db_per_severity": -1.0,
+          "kind": "region",
+          "param": "lowpass_hz",
+          "severity": [
+            3500,
+            2800,
+            2200,
+            1700,
+            1300
+          ]
+        },
+        "rushing": {
+          "kind": "region",
+          "param": "speed_factor",
+          "severity": [
+            1.15,
+            1.3,
+            1.5,
+            1.75,
+            2.0
+          ]
+        },
+        "too_quiet": {
+          "kind": "region",
+          "param": "gain_db",
+          "severity": [
+            -3,
+            -6,
+            -9,
+            -12,
+            -18
+          ],
+          "shapes": [
+            "flat",
+            "trail"
+          ]
+        }
+      }
+    },
+    "inject_code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+    "rubberband": "3.3.0",
+    "stats_sha256": "b449c4dd07ff614d12c11efaa572b8f28312ebc8c9447fb5389bcced6ff0cceb",
+    "versions": {
+      "numpy": "2.0.2",
+      "praat-parselmouth": "0.4.7",
+      "scipy": "1.17.1",
+      "soundfile": "0.14.0"
+    }
+  },
+  "recording_id": "reagan_challenger__reagan__mixed_01",
+  "schema": "injection_provenance/v1"
+}

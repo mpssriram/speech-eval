@@ -1,0 +1,46 @@
+{
+  "flaws": [
+    {
+      "end": 72.797,
+      "parameters": {
+        "edit_source_end_s": 72.797,
+        "edit_source_start_s": 68.227,
+        "pitch_range_kept": 0.35
+      },
+      "severity": 3,
+      "start": 68.227,
+      "type": "monotone",
+      "word_end": 154,
+      "word_start": 145
+    },
+    {
+      "end": 130.253,
+      "parameters": {
+        "inserted_pause_s": 1.0
+      },
+      "severity": 2,
+      "start": 129.253,
+      "type": "awkward_pause",
+      "word_end": 276,
+      "word_start": 275
+    },
+    {
+      "end": 155.121,
+      "parameters": {
+        "edit_source_end_s": 155.121,
+        "edit_source_start_s": 153.111,
+        "lowpass_hz": 2200
+      },
+      "severity": 3,
+      "start": 153.111,
+      "type": "mumbling",
+      "word_end": 327,
+      "word_start": 321
+    }
+  ],
+  "recording_id": "jfk_rice__jfk__mixed_02",
+  "reference_id": "jfk_rice__jfk__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "jfk_rice"
+}

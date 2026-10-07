@@ -15,6 +15,19 @@ from speecheval.dataset import generate_mixed
 from speecheval.inject import Label, generate_one, map_time
 
 
+def mapping_edge_check(source_t: float,oracle_t: float,mapping: list[list[float]],side: str) -> dict:
+    """Check 1 ms serialized-map consistency; disclose discontinuity-side ambiguity."""
+    slopes=[(b[1]-a[1])/(b[0]-a[0]) for a,b in zip(mapping,mapping[1:]) if b[0]>a[0]]
+    tolerance=.001+.0005*max(slopes)+1e-8
+    point_error=abs(map_time(source_t,mapping,side=side)-oracle_t)
+    if point_error<=tolerance:return {'valid':True,'ambiguous_step':False,'point_error_s':point_error}
+    near_step=any(a[0]==b[0] and b[1]>a[1] and abs(source_t-a[0])<=.0005+1e-9 for a,b in zip(mapping,mapping[1:]))
+    low=map_time(max(0.,source_t-.0005),mapping,side='left')-.001-1e-8
+    high=map_time(source_t+.0005,mapping,side='right')+.001+1e-8
+    valid=near_step and low<=oracle_t<=high
+    return {'valid':bool(valid),'ambiguous_step':bool(valid),'point_error_s':point_error}
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--fresh',action='store_true')
@@ -35,6 +48,7 @@ def main():
     assert len(generated)==build['synthetic_files']
     for row in rows:
         assert hashlib.sha256((root/row['audio_path']).read_bytes()).hexdigest()==row['sha256']
+    ambiguities=[]
     for row in generated:
         rid=row['recording_id']
         label=json.loads((root/row['label_path']).read_text());Label.model_validate(label)
@@ -46,11 +60,12 @@ def main():
         assert real.get('uncertain_words',[])==source.get('uncertain_words',[])
         mapping=json.loads((root/'data/flawed/timemaps'/f'{rid}.json').read_text())['breakpoints']
         assert np.all(np.diff(np.asarray(mapping),axis=0)>=-1e-9)
-        slopes=[(b[1]-a[1])/(b[0]-a[0]) for a,b in zip(mapping,mapping[1:]) if b[0]>a[0]]
-        tolerance=.001+.0005*max(slopes)+1e-8
         for before,after in zip(source['words'],oracle['words']):
-            assert abs(map_time(before['start'],mapping)-after['start'])<=tolerance
-            assert abs(map_time(before['end'],mapping,side='left')-after['end'])<=tolerance
+            for edge,side in (('start','right'),('end','left')):
+                check=mapping_edge_check(before[edge],after[edge],mapping,side)
+                assert check['valid'],(rid,before['i'],edge,check)
+                if check['ambiguous_step']:ambiguities.append({'recording_id':rid,'word':before['i'],'edge':edge,
+                    'point_error_s':check['point_error_s'],'limitation':'Serialized millisecond map cannot determine insertion-step side for this edge.'})
         for folder,rate in [('hq',44100),('align16k',16000)]:
             wave,sr=sf.read(root/'data/flawed'/folder/f'{rid}.flac')
             assert sr==rate and wave.ndim==1 and np.max(np.abs(wave))<1
@@ -88,10 +103,10 @@ def main():
             replayed.append(rid)
     evidence={'schema':'dataset_integrity/v1','passed':True,'sources':len(build['sources']),
               'synthetic_files':len(generated),'index_rows':len(rows),'skipped':len(build['skipped']),
-              'fresh_replayed':replayed,'human_acceptance':'PENDING'}
+              'fresh_replayed':replayed,'quantized_step_ambiguities':ambiguities,'human_acceptance':'PENDING'}
     from speecheval.verify import _write_json
     _write_json(root/'data/review/dataset_integrity.json',evidence)
-    print(f"PASS: {len(generated)} synthetic files, hashes, real/oracle maps, features, speaker separation; fresh replay {len(replayed)}")
+    print(f"PASS: {len(generated)} synthetic files, hashes, map interval consistency, features, speaker separation; fresh replay {len(replayed)}; unresolved map-step sides {len(ambiguities)}")
 
 
 if __name__=='__main__':main()

@@ -1,0 +1,119 @@
+{
+  "artifacts": {
+    "data/alignment/oracle/jfk_rice__jfk__missing_pause_s2_01.json": "87dfb4ecfb2c9a8c9c50aa1622ab9b7093efeb4766b3fb1296772caa7a4114e8",
+    "data/flawed/align16k/jfk_rice__jfk__missing_pause_s2_01.flac": "2fd92f70394e3cf34f02e8bcc5c34b77e0d97e830f18ed3be5e725800d837d88",
+    "data/flawed/hq/jfk_rice__jfk__missing_pause_s2_01.flac": "8df5624261068389cee65535e888f69169395349e456f77dfdb978bf552d5d98",
+    "data/flawed/timemaps/jfk_rice__jfk__missing_pause_s2_01.json": "d5b21e5d1704dfe4c568c3cc4624b95abf443a10356cdd3360a65655541f220f",
+    "data/labels/jfk_rice__jfk__missing_pause_s2_01.json": "b662e3573dd0c6149e86dee75816acacdb5966d9e88396ec455e3841799dc961"
+  },
+  "inputs": {
+    "alignment_sha256": "69868dd6351693ffed1d21232993b7758ae1b236e02b9a97145589af4452c71d",
+    "audio_sha256": "c64776094910d9d8dc53480ca537086dac95c13a9ff0e81747cf17cee0d36d11",
+    "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+    "config": {
+      "crossfade_ms": 20,
+      "keep_out_s": 1.0,
+      "min_gap_between_flaws_s": 2.0,
+      "region_words": {
+        "max": 12,
+        "min": 4
+      },
+      "seed": 20261001,
+      "types": {
+        "awkward_pause": {
+          "kind": "boundary",
+          "param": "inserted_pause_s",
+          "severity": [
+            0.6,
+            1.0,
+            1.5,
+            2.2,
+            3.0
+          ]
+        },
+        "dragging": {
+          "kind": "region",
+          "param": "speed_factor",
+          "severity": [
+            0.87,
+            0.77,
+            0.67,
+            0.58,
+            0.5
+          ]
+        },
+        "missing_pause": {
+          "kind": "boundary",
+          "param": "pause_kept_frac",
+          "severity": [
+            0.7,
+            0.5,
+            0.3,
+            0.15,
+            0.0
+          ]
+        },
+        "monotone": {
+          "kind": "region",
+          "param": "pitch_range_kept",
+          "severity": [
+            0.7,
+            0.5,
+            0.35,
+            0.2,
+            0.08
+          ]
+        },
+        "mumbling": {
+          "extra_gain_db_per_severity": -1.0,
+          "kind": "region",
+          "param": "lowpass_hz",
+          "severity": [
+            3500,
+            2800,
+            2200,
+            1700,
+            1300
+          ]
+        },
+        "rushing": {
+          "kind": "region",
+          "param": "speed_factor",
+          "severity": [
+            1.15,
+            1.3,
+            1.5,
+            1.75,
+            2.0
+          ]
+        },
+        "too_quiet": {
+          "kind": "region",
+          "param": "gain_db",
+          "severity": [
+            -3,
+            -6,
+            -9,
+            -12,
+            -18
+          ],
+          "shapes": [
+            "flat",
+            "trail"
+          ]
+        }
+      }
+    },
+    "rubberband": "3.3.0",
+    "shape": "flat",
+    "stats_sha256": "cc0784dea71c6c36a5a1adefcbb05c2e488b398436e227851ed59102c7ffff4a",
+    "versions": {
+      "numpy": "2.0.2",
+      "praat-parselmouth": "0.4.7",
+      "scipy": "1.17.1",
+      "soundfile": "0.14.0"
+    }
+  },
+  "recording_id": "jfk_rice__jfk__missing_pause_s2_01",
+  "schema": "injection_provenance/v1"
+}

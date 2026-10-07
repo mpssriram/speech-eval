@@ -1,0 +1,23 @@
+{
+  "flaws": [
+    {
+      "end": 127.076,
+      "parameters": {
+        "edit_source_end_s": 127.075,
+        "edit_source_start_s": 121.826,
+        "gain_db": -18,
+        "shape": "flat"
+      },
+      "severity": 5,
+      "start": 121.826,
+      "type": "too_quiet",
+      "word_end": 253,
+      "word_start": 244
+    }
+  ],
+  "recording_id": "gettysburg__lv_sa__too_quiet_s5_01",
+  "reference_id": "gettysburg__lv_sa__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "gettysburg"
+}

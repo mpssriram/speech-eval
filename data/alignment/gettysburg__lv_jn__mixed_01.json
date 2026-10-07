@@ -1,0 +1,2256 @@
+{
+  "aligner": {
+    "device": "cpu",
+    "name": "mfa",
+    "version": "3.4.2"
+  },
+  "audio": "data/flawed/hq/gettysburg__lv_jn__mixed_01.flac",
+  "duration_s": 107.691,
+  "recording_id": "gettysburg__lv_jn__mixed_01",
+  "schema": "alignment/v1",
+  "sentences": [
+    {
+      "end": 13.12,
+      "i": 0,
+      "start": 0.14,
+      "word_end": 29,
+      "word_start": 0
+    },
+    {
+      "end": 23.84,
+      "i": 1,
+      "start": 14.05,
+      "word_end": 53,
+      "word_start": 30
+    },
+    {
+      "end": 27.32,
+      "i": 2,
+      "start": 24.7,
+      "word_end": 63,
+      "word_start": 54
+    },
+    {
+      "end": 36.51,
+      "i": 3,
+      "start": 28.56,
+      "word_end": 90,
+      "word_start": 64
+    },
+    {
+      "end": 40.59,
+      "i": 4,
+      "start": 37.12,
+      "word_end": 101,
+      "word_start": 91
+    },
+    {
+      "end": 48.06,
+      "i": 5,
+      "start": 41.31,
+      "word_end": 120,
+      "word_start": 102
+    },
+    {
+      "end": 58.26,
+      "i": 6,
+      "start": 48.84,
+      "word_end": 141,
+      "word_start": 121
+    },
+    {
+      "end": 66.87,
+      "i": 7,
+      "start": 59.18,
+      "word_end": 162,
+      "word_start": 142
+    },
+    {
+      "end": 77.65,
+      "i": 8,
+      "start": 68.26,
+      "word_end": 188,
+      "word_start": 163
+    },
+    {
+      "end": 107.34,
+      "i": 9,
+      "start": 78.34,
+      "word_end": 270,
+      "word_start": 189
+    }
+  ],
+  "transcript": "data/transcripts/as_spoken/gettysburg__lv_jn__orig.txt",
+  "uncertain_words": [],
+  "warnings": [],
+  "words": [
+    {
+      "end": 0.51,
+      "i": 0,
+      "norm": "four",
+      "sentence": 0,
+      "start": 0.14,
+      "text": "Four"
+    },
+    {
+      "end": 1.07,
+      "i": 1,
+      "norm": "score",
+      "sentence": 0,
+      "start": 0.51,
+      "text": "score"
+    },
+    {
+      "end": 1.38,
+      "i": 2,
+      "norm": "and",
+      "sentence": 0,
+      "start": 1.23,
+      "text": "and"
+    },
+    {
+      "end": 1.81,
+      "i": 3,
+      "norm": "seven",
+      "sentence": 0,
+      "start": 1.38,
+      "text": "seven"
+    },
+    {
+      "end": 2.15,
+      "i": 4,
+      "norm": "years",
+      "sentence": 0,
+      "start": 1.81,
+      "text": "years"
+    },
+    {
+      "end": 2.54,
+      "i": 5,
+      "norm": "ago",
+      "sentence": 0,
+      "start": 2.15,
+      "text": "ago"
+    },
+    {
+      "end": 3.19,
+      "i": 6,
+      "norm": "our",
+      "sentence": 0,
+      "start": 2.97,
+      "text": "our"
+    },
+    {
+      "end": 3.76,
+      "i": 7,
+      "norm": "fathers",
+      "sentence": 0,
+      "start": 3.19,
+      "text": "fathers"
+    },
+    {
+      "end": 4.05,
+      "i": 8,
+      "norm": "brought",
+      "sentence": 0,
+      "start": 3.76,
+      "text": "brought"
+    },
+    {
+      "end": 4.53,
+      "i": 9,
+      "norm": "forth",
+      "sentence": 0,
+      "start": 4.05,
+      "text": "forth"
+    },
+    {
+      "end": 5.01,
+      "i": 10,
+      "norm": "upon",
+      "sentence": 0,
+      "start": 4.61,
+      "text": "upon"
+    },
+    {
+      "end": 5.21,
+      "i": 11,
+      "norm": "this",
+      "sentence": 0,
+      "start": 5.01,
+      "text": "this"
+    },
+    {
+      "end": 5.84,
+      "i": 12,
+      "norm": "continent",
+      "sentence": 0,
+      "start": 5.21,
+      "text": "continent,"
+    },
+    {
+      "end": 6.0,
+      "i": 13,
+      "norm": "a",
+      "sentence": 0,
+      "start": 5.92,
+      "text": "a"
+    },
+    {
+      "end": 6.34,
+      "i": 14,
+      "norm": "new",
+      "sentence": 0,
+      "start": 6.0,
+      "text": "new"
+    },
+    {
+      "end": 6.91,
+      "i": 15,
+      "norm": "nation",
+      "sentence": 0,
+      "start": 6.34,
+      "text": "nation,"
+    },
+    {
+      "end": 8.12,
+      "i": 16,
+      "norm": "conceived",
+      "sentence": 0,
+      "start": 7.47,
+      "text": "conceived"
+    },
+    {
+      "end": 8.2,
+      "i": 17,
+      "norm": "in",
+      "sentence": 0,
+      "start": 8.12,
+      "text": "in"
+    },
+    {
+      "end": 8.8,
+      "i": 18,
+      "norm": "liberty",
+      "sentence": 0,
+      "start": 8.2,
+      "text": "Liberty,"
+    },
+    {
+      "end": 9.14,
+      "i": 19,
+      "norm": "and",
+      "sentence": 0,
+      "start": 9.02,
+      "text": "and"
+    },
+    {
+      "end": 9.75,
+      "i": 20,
+      "norm": "dedicated",
+      "sentence": 0,
+      "start": 9.14,
+      "text": "dedicated"
+    },
+    {
+      "end": 9.99,
+      "i": 21,
+      "norm": "to",
+      "sentence": 0,
+      "start": 9.75,
+      "text": "to"
+    },
+    {
+      "end": 10.08,
+      "i": 22,
+      "norm": "the",
+      "sentence": 0,
+      "start": 9.99,
+      "text": "the"
+    },
+    {
+      "end": 10.81,
+      "i": 23,
+      "norm": "proposition",
+      "sentence": 0,
+      "start": 10.08,
+      "text": "proposition"
+    },
+    {
+      "end": 11.21,
+      "i": 24,
+      "norm": "that",
+      "sentence": 0,
+      "start": 11.04,
+      "text": "that"
+    },
+    {
+      "end": 11.55,
+      "i": 25,
+      "norm": "all",
+      "sentence": 0,
+      "start": 11.29,
+      "text": "all"
+    },
+    {
+      "end": 11.91,
+      "i": 26,
+      "norm": "men",
+      "sentence": 0,
+      "start": 11.55,
+      "text": "men"
+    },
+    {
+      "end": 12.15,
+      "i": 27,
+      "norm": "are",
+      "sentence": 0,
+      "start": 12.02,
+      "text": "are"
+    },
+    {
+      "end": 12.69,
+      "i": 28,
+      "norm": "created",
+      "sentence": 0,
+      "start": 12.15,
+      "text": "created"
+    },
+    {
+      "end": 13.12,
+      "i": 29,
+      "norm": "equal",
+      "sentence": 0,
+      "start": 12.69,
+      "text": "equal."
+    },
+    {
+      "end": 14.61,
+      "i": 30,
+      "norm": "now",
+      "sentence": 1,
+      "start": 14.05,
+      "text": "Now"
+    },
+    {
+      "end": 14.79,
+      "i": 31,
+      "norm": "we",
+      "sentence": 1,
+      "start": 14.66,
+      "text": "we"
+    },
+    {
+      "end": 14.95,
+      "i": 32,
+      "norm": "are",
+      "sentence": 1,
+      "start": 14.79,
+      "text": "are"
+    },
+    {
+      "end": 15.76,
+      "i": 33,
+      "norm": "engaged",
+      "sentence": 1,
+      "start": 14.95,
+      "text": "engaged"
+    },
+    {
+      "end": 15.93,
+      "i": 34,
+      "norm": "in",
+      "sentence": 1,
+      "start": 15.76,
+      "text": "in"
+    },
+    {
+      "end": 16.01,
+      "i": 35,
+      "norm": "a",
+      "sentence": 1,
+      "start": 15.93,
+      "text": "a"
+    },
+    {
+      "end": 16.54,
+      "i": 36,
+      "norm": "great",
+      "sentence": 1,
+      "start": 16.01,
+      "text": "great"
+    },
+    {
+      "end": 16.82,
+      "i": 37,
+      "norm": "civil",
+      "sentence": 1,
+      "start": 16.54,
+      "text": "civil"
+    },
+    {
+      "end": 17.2,
+      "i": 38,
+      "norm": "war",
+      "sentence": 1,
+      "start": 16.82,
+      "text": "war,"
+    },
+    {
+      "end": 18.18,
+      "i": 39,
+      "norm": "testing",
+      "sentence": 1,
+      "start": 17.64,
+      "text": "testing"
+    },
+    {
+      "end": 18.52,
+      "i": 40,
+      "norm": "whether",
+      "sentence": 1,
+      "start": 18.27,
+      "text": "whether"
+    },
+    {
+      "end": 18.78,
+      "i": 41,
+      "norm": "that",
+      "sentence": 1,
+      "start": 18.52,
+      "text": "that"
+    },
+    {
+      "end": 19.26,
+      "i": 42,
+      "norm": "nation",
+      "sentence": 1,
+      "start": 18.78,
+      "text": "nation,"
+    },
+    {
+      "end": 19.89,
+      "i": 43,
+      "norm": "or",
+      "sentence": 1,
+      "start": 19.68,
+      "text": "or"
+    },
+    {
+      "end": 20.08,
+      "i": 44,
+      "norm": "any",
+      "sentence": 1,
+      "start": 19.89,
+      "text": "any"
+    },
+    {
+      "end": 20.52,
+      "i": 45,
+      "norm": "nation",
+      "sentence": 1,
+      "start": 20.08,
+      "text": "nation"
+    },
+    {
+      "end": 20.76,
+      "i": 46,
+      "norm": "so",
+      "sentence": 1,
+      "start": 20.52,
+      "text": "so"
+    },
+    {
+      "end": 21.39,
+      "i": 47,
+      "norm": "conceived",
+      "sentence": 1,
+      "start": 20.76,
+      "text": "conceived"
+    },
+    {
+      "end": 21.62,
+      "i": 48,
+      "norm": "and",
+      "sentence": 1,
+      "start": 21.48,
+      "text": "and"
+    },
+    {
+      "end": 21.9,
+      "i": 49,
+      "norm": "so",
+      "sentence": 1,
+      "start": 21.62,
+      "text": "so"
+    },
+    {
+      "end": 22.6,
+      "i": 50,
+      "norm": "dedicated",
+      "sentence": 1,
+      "start": 21.9,
+      "text": "dedicated,"
+    },
+    {
+      "end": 23.05,
+      "i": 51,
+      "norm": "can",
+      "sentence": 1,
+      "start": 22.83,
+      "text": "can"
+    },
+    {
+      "end": 23.33,
+      "i": 52,
+      "norm": "long",
+      "sentence": 1,
+      "start": 23.05,
+      "text": "long"
+    },
+    {
+      "end": 23.84,
+      "i": 53,
+      "norm": "endure",
+      "sentence": 1,
+      "start": 23.33,
+      "text": "endure."
+    },
+    {
+      "end": 24.79,
+      "i": 54,
+      "norm": "we",
+      "sentence": 2,
+      "start": 24.7,
+      "text": "We"
+    },
+    {
+      "end": 24.87,
+      "i": 55,
+      "norm": "are",
+      "sentence": 2,
+      "start": 24.79,
+      "text": "are"
+    },
+    {
+      "end": 25.27,
+      "i": 56,
+      "norm": "met",
+      "sentence": 2,
+      "start": 24.87,
+      "text": "met"
+    },
+    {
+      "end": 25.45,
+      "i": 57,
+      "norm": "on",
+      "sentence": 2,
+      "start": 25.35,
+      "text": "on"
+    },
+    {
+      "end": 25.51,
+      "i": 58,
+      "norm": "a",
+      "sentence": 2,
+      "start": 25.45,
+      "text": "a"
+    },
+    {
+      "end": 25.8,
+      "i": 59,
+      "norm": "great",
+      "sentence": 2,
+      "start": 25.51,
+      "text": "great"
+    },
+    {
+      "end": 26.38,
+      "i": 60,
+      "norm": "battlefield",
+      "sentence": 2,
+      "start": 25.8,
+      "text": "battle-field"
+    },
+    {
+      "end": 26.69,
+      "i": 61,
+      "norm": "of",
+      "sentence": 2,
+      "start": 26.49,
+      "text": "of"
+    },
+    {
+      "end": 26.88,
+      "i": 62,
+      "norm": "that",
+      "sentence": 2,
+      "start": 26.69,
+      "text": "that"
+    },
+    {
+      "end": 27.32,
+      "i": 63,
+      "norm": "war",
+      "sentence": 2,
+      "start": 26.88,
+      "text": "war."
+    },
+    {
+      "end": 28.63,
+      "i": 64,
+      "norm": "we",
+      "sentence": 3,
+      "start": 28.56,
+      "text": "We"
+    },
+    {
+      "end": 28.76,
+      "i": 65,
+      "norm": "have",
+      "sentence": 3,
+      "start": 28.63,
+      "text": "have"
+    },
+    {
+      "end": 29.05,
+      "i": 66,
+      "norm": "come",
+      "sentence": 3,
+      "start": 28.76,
+      "text": "come"
+    },
+    {
+      "end": 29.15,
+      "i": 67,
+      "norm": "to",
+      "sentence": 3,
+      "start": 29.05,
+      "text": "to"
+    },
+    {
+      "end": 29.81,
+      "i": 68,
+      "norm": "dedicate",
+      "sentence": 3,
+      "start": 29.15,
+      "text": "dedicate"
+    },
+    {
+      "end": 29.85,
+      "i": 69,
+      "norm": "a",
+      "sentence": 3,
+      "start": 29.81,
+      "text": "a"
+    },
+    {
+      "end": 30.34,
+      "i": 70,
+      "norm": "portion",
+      "sentence": 3,
+      "start": 29.85,
+      "text": "portion"
+    },
+    {
+      "end": 30.46,
+      "i": 71,
+      "norm": "of",
+      "sentence": 3,
+      "start": 30.34,
+      "text": "of"
+    },
+    {
+      "end": 30.63,
+      "i": 72,
+      "norm": "that",
+      "sentence": 3,
+      "start": 30.46,
+      "text": "that"
+    },
+    {
+      "end": 31.05,
+      "i": 73,
+      "norm": "field",
+      "sentence": 3,
+      "start": 30.63,
+      "text": "field,"
+    },
+    {
+      "end": 31.22,
+      "i": 74,
+      "norm": "as",
+      "sentence": 3,
+      "start": 31.08,
+      "text": "as"
+    },
+    {
+      "end": 31.27,
+      "i": 75,
+      "norm": "a",
+      "sentence": 3,
+      "start": 31.22,
+      "text": "a"
+    },
+    {
+      "end": 31.64,
+      "i": 76,
+      "norm": "final",
+      "sentence": 3,
+      "start": 31.27,
+      "text": "final"
+    },
+    {
+      "end": 32.03,
+      "i": 77,
+      "norm": "resting",
+      "sentence": 3,
+      "start": 31.64,
+      "text": "resting"
+    },
+    {
+      "end": 32.39,
+      "i": 78,
+      "norm": "place",
+      "sentence": 3,
+      "start": 32.03,
+      "text": "place"
+    },
+    {
+      "end": 32.56,
+      "i": 79,
+      "norm": "for",
+      "sentence": 3,
+      "start": 32.44,
+      "text": "for"
+    },
+    {
+      "end": 33.05,
+      "i": 80,
+      "norm": "those",
+      "sentence": 3,
+      "start": 32.56,
+      "text": "those"
+    },
+    {
+      "end": 33.56,
+      "i": 81,
+      "norm": "who",
+      "sentence": 3,
+      "start": 33.47,
+      "text": "who"
+    },
+    {
+      "end": 34.02,
+      "i": 82,
+      "norm": "here",
+      "sentence": 3,
+      "start": 33.56,
+      "text": "here"
+    },
+    {
+      "end": 34.32,
+      "i": 83,
+      "norm": "gave",
+      "sentence": 3,
+      "start": 34.09,
+      "text": "gave"
+    },
+    {
+      "end": 34.44,
+      "i": 84,
+      "norm": "their",
+      "sentence": 3,
+      "start": 34.32,
+      "text": "their"
+    },
+    {
+      "end": 35.0,
+      "i": 85,
+      "norm": "lives",
+      "sentence": 3,
+      "start": 34.44,
+      "text": "lives"
+    },
+    {
+      "end": 35.19,
+      "i": 86,
+      "norm": "that",
+      "sentence": 3,
+      "start": 35.0,
+      "text": "that"
+    },
+    {
+      "end": 35.39,
+      "i": 87,
+      "norm": "this",
+      "sentence": 3,
+      "start": 35.19,
+      "text": "this"
+    },
+    {
+      "end": 35.89,
+      "i": 88,
+      "norm": "nation",
+      "sentence": 3,
+      "start": 35.39,
+      "text": "nation"
+    },
+    {
+      "end": 36.18,
+      "i": 89,
+      "norm": "might",
+      "sentence": 3,
+      "start": 35.89,
+      "text": "might"
+    },
+    {
+      "end": 36.51,
+      "i": 90,
+      "norm": "live",
+      "sentence": 3,
+      "start": 36.18,
+      "text": "live."
+    },
+    {
+      "end": 37.25,
+      "i": 91,
+      "norm": "it",
+      "sentence": 4,
+      "start": 37.12,
+      "text": "It"
+    },
+    {
+      "end": 37.39,
+      "i": 92,
+      "norm": "is",
+      "sentence": 4,
+      "start": 37.25,
+      "text": "is"
+    },
+    {
+      "end": 38.16,
+      "i": 93,
+      "norm": "altogether",
+      "sentence": 4,
+      "start": 37.39,
+      "text": "altogether"
+    },
+    {
+      "end": 38.7,
+      "i": 94,
+      "norm": "fitting",
+      "sentence": 4,
+      "start": 38.25,
+      "text": "fitting"
+    },
+    {
+      "end": 38.93,
+      "i": 95,
+      "norm": "and",
+      "sentence": 4,
+      "start": 38.74,
+      "text": "and"
+    },
+    {
+      "end": 39.36,
+      "i": 96,
+      "norm": "proper",
+      "sentence": 4,
+      "start": 38.93,
+      "text": "proper"
+    },
+    {
+      "end": 39.65,
+      "i": 97,
+      "norm": "that",
+      "sentence": 4,
+      "start": 39.5,
+      "text": "that"
+    },
+    {
+      "end": 39.8,
+      "i": 98,
+      "norm": "we",
+      "sentence": 4,
+      "start": 39.65,
+      "text": "we"
+    },
+    {
+      "end": 40.01,
+      "i": 99,
+      "norm": "should",
+      "sentence": 4,
+      "start": 39.8,
+      "text": "should"
+    },
+    {
+      "end": 40.23,
+      "i": 100,
+      "norm": "do",
+      "sentence": 4,
+      "start": 40.01,
+      "text": "do"
+    },
+    {
+      "end": 40.59,
+      "i": 101,
+      "norm": "this",
+      "sentence": 4,
+      "start": 40.23,
+      "text": "this."
+    },
+    {
+      "end": 41.62,
+      "i": 102,
+      "norm": "but",
+      "sentence": 5,
+      "start": 41.31,
+      "text": "But,"
+    },
+    {
+      "end": 41.93,
+      "i": 103,
+      "norm": "in",
+      "sentence": 5,
+      "start": 41.8,
+      "text": "in"
+    },
+    {
+      "end": 41.98,
+      "i": 104,
+      "norm": "a",
+      "sentence": 5,
+      "start": 41.93,
+      "text": "a"
+    },
+    {
+      "end": 42.35,
+      "i": 105,
+      "norm": "larger",
+      "sentence": 5,
+      "start": 41.98,
+      "text": "larger"
+    },
+    {
+      "end": 42.85,
+      "i": 106,
+      "norm": "sense",
+      "sentence": 5,
+      "start": 42.35,
+      "text": "sense,"
+    },
+    {
+      "end": 43.11,
+      "i": 107,
+      "norm": "we",
+      "sentence": 5,
+      "start": 43.03,
+      "text": "we"
+    },
+    {
+      "end": 43.28,
+      "i": 108,
+      "norm": "can",
+      "sentence": 5,
+      "start": 43.11,
+      "text": "can"
+    },
+    {
+      "end": 43.41,
+      "i": 109,
+      "norm": "not",
+      "sentence": 5,
+      "start": 43.28,
+      "text": "not"
+    },
+    {
+      "end": 44.09,
+      "i": 110,
+      "norm": "dedicate",
+      "sentence": 5,
+      "start": 43.41,
+      "text": "dedicate"
+    },
+    {
+      "end": 44.71,
+      "i": 111,
+      "norm": "we",
+      "sentence": 5,
+      "start": 44.61,
+      "text": "we"
+    },
+    {
+      "end": 44.93,
+      "i": 112,
+      "norm": "can",
+      "sentence": 5,
+      "start": 44.71,
+      "text": "can"
+    },
+    {
+      "end": 45.1,
+      "i": 113,
+      "norm": "not",
+      "sentence": 5,
+      "start": 44.93,
+      "text": "not"
+    },
+    {
+      "end": 45.89,
+      "i": 114,
+      "norm": "consecrate",
+      "sentence": 5,
+      "start": 45.1,
+      "text": "consecrate"
+    },
+    {
+      "end": 46.44,
+      "i": 115,
+      "norm": "we",
+      "sentence": 5,
+      "start": 46.34,
+      "text": "we"
+    },
+    {
+      "end": 46.67,
+      "i": 116,
+      "norm": "can",
+      "sentence": 5,
+      "start": 46.44,
+      "text": "can"
+    },
+    {
+      "end": 46.8,
+      "i": 117,
+      "norm": "not",
+      "sentence": 5,
+      "start": 46.67,
+      "text": "not"
+    },
+    {
+      "end": 47.22,
+      "i": 118,
+      "norm": "hallow",
+      "sentence": 5,
+      "start": 46.8,
+      "text": "hallow"
+    },
+    {
+      "end": 47.57,
+      "i": 119,
+      "norm": "this",
+      "sentence": 5,
+      "start": 47.34,
+      "text": "this"
+    },
+    {
+      "end": 48.06,
+      "i": 120,
+      "norm": "ground",
+      "sentence": 5,
+      "start": 47.57,
+      "text": "ground."
+    },
+    {
+      "end": 48.92,
+      "i": 121,
+      "norm": "the",
+      "sentence": 6,
+      "start": 48.84,
+      "text": "The"
+    },
+    {
+      "end": 49.31,
+      "i": 122,
+      "norm": "brave",
+      "sentence": 6,
+      "start": 48.92,
+      "text": "brave"
+    },
+    {
+      "end": 49.74,
+      "i": 123,
+      "norm": "men",
+      "sentence": 6,
+      "start": 49.31,
+      "text": "men,"
+    },
+    {
+      "end": 50.27,
+      "i": 124,
+      "norm": "living",
+      "sentence": 6,
+      "start": 49.81,
+      "text": "living"
+    },
+    {
+      "end": 50.5,
+      "i": 125,
+      "norm": "and",
+      "sentence": 6,
+      "start": 50.31,
+      "text": "and"
+    },
+    {
+      "end": 50.89,
+      "i": 126,
+      "norm": "dead",
+      "sentence": 6,
+      "start": 50.5,
+      "text": "dead,"
+    },
+    {
+      "end": 51.39,
+      "i": 127,
+      "norm": "who",
+      "sentence": 6,
+      "start": 51.26,
+      "text": "who"
+    },
+    {
+      "end": 51.86,
+      "i": 128,
+      "norm": "struggled",
+      "sentence": 6,
+      "start": 51.39,
+      "text": "struggled"
+    },
+    {
+      "end": 52.28,
+      "i": 129,
+      "norm": "here",
+      "sentence": 6,
+      "start": 51.86,
+      "text": "here,"
+    },
+    {
+      "end": 52.57,
+      "i": 130,
+      "norm": "have",
+      "sentence": 6,
+      "start": 52.34,
+      "text": "have"
+    },
+    {
+      "end": 53.29,
+      "i": 131,
+      "norm": "consecrated",
+      "sentence": 6,
+      "start": 52.57,
+      "text": "consecrated"
+    },
+    {
+      "end": 53.6,
+      "i": 132,
+      "norm": "it",
+      "sentence": 6,
+      "start": 53.29,
+      "text": "it,"
+    },
+    {
+      "end": 54.33,
+      "i": 133,
+      "norm": "far",
+      "sentence": 6,
+      "start": 53.99,
+      "text": "far"
+    },
+    {
+      "end": 54.76,
+      "i": 134,
+      "norm": "above",
+      "sentence": 6,
+      "start": 54.33,
+      "text": "above"
+    },
+    {
+      "end": 55.12,
+      "i": 135,
+      "norm": "our",
+      "sentence": 6,
+      "start": 54.93,
+      "text": "our"
+    },
+    {
+      "end": 56.44,
+      "i": 136,
+      "norm": "poor",
+      "sentence": 6,
+      "start": 56.2,
+      "text": "poor"
+    },
+    {
+      "end": 56.82,
+      "i": 137,
+      "norm": "power",
+      "sentence": 6,
+      "start": 56.44,
+      "text": "power"
+    },
+    {
+      "end": 57.0,
+      "i": 138,
+      "norm": "to",
+      "sentence": 6,
+      "start": 56.82,
+      "text": "to"
+    },
+    {
+      "end": 57.34,
+      "i": 139,
+      "norm": "add",
+      "sentence": 6,
+      "start": 57.0,
+      "text": "add"
+    },
+    {
+      "end": 57.71,
+      "i": 140,
+      "norm": "or",
+      "sentence": 6,
+      "start": 57.54,
+      "text": "or"
+    },
+    {
+      "end": 58.26,
+      "i": 141,
+      "norm": "detract",
+      "sentence": 6,
+      "start": 57.71,
+      "text": "detract."
+    },
+    {
+      "end": 59.28,
+      "i": 142,
+      "norm": "the",
+      "sentence": 7,
+      "start": 59.18,
+      "text": "The"
+    },
+    {
+      "end": 59.69,
+      "i": 143,
+      "norm": "world",
+      "sentence": 7,
+      "start": 59.28,
+      "text": "world"
+    },
+    {
+      "end": 60.07,
+      "i": 144,
+      "norm": "will",
+      "sentence": 7,
+      "start": 59.87,
+      "text": "will"
+    },
+    {
+      "end": 60.26,
+      "i": 145,
+      "norm": "little",
+      "sentence": 7,
+      "start": 60.07,
+      "text": "little"
+    },
+    {
+      "end": 60.79,
+      "i": 146,
+      "norm": "note",
+      "sentence": 7,
+      "start": 60.26,
+      "text": "note,"
+    },
+    {
+      "end": 61.27,
+      "i": 147,
+      "norm": "nor",
+      "sentence": 7,
+      "start": 61.06,
+      "text": "nor"
+    },
+    {
+      "end": 61.53,
+      "i": 148,
+      "norm": "long",
+      "sentence": 7,
+      "start": 61.27,
+      "text": "long"
+    },
+    {
+      "end": 62.09,
+      "i": 149,
+      "norm": "remember",
+      "sentence": 7,
+      "start": 61.53,
+      "text": "remember"
+    },
+    {
+      "end": 62.49,
+      "i": 150,
+      "norm": "what",
+      "sentence": 7,
+      "start": 62.4,
+      "text": "what"
+    },
+    {
+      "end": 62.74,
+      "i": 151,
+      "norm": "we",
+      "sentence": 7,
+      "start": 62.49,
+      "text": "we"
+    },
+    {
+      "end": 63.01,
+      "i": 152,
+      "norm": "say",
+      "sentence": 7,
+      "start": 62.74,
+      "text": "say"
+    },
+    {
+      "end": 63.4,
+      "i": 153,
+      "norm": "here",
+      "sentence": 7,
+      "start": 63.01,
+      "text": "here,"
+    },
+    {
+      "end": 64.13,
+      "i": 154,
+      "norm": "but",
+      "sentence": 7,
+      "start": 63.98,
+      "text": "but"
+    },
+    {
+      "end": 64.23,
+      "i": 155,
+      "norm": "it",
+      "sentence": 7,
+      "start": 64.13,
+      "text": "it"
+    },
+    {
+      "end": 64.5,
+      "i": 156,
+      "norm": "can",
+      "sentence": 7,
+      "start": 64.23,
+      "text": "can"
+    },
+    {
+      "end": 64.76,
+      "i": 157,
+      "norm": "never",
+      "sentence": 7,
+      "start": 64.5,
+      "text": "never"
+    },
+    {
+      "end": 65.36,
+      "i": 158,
+      "norm": "forget",
+      "sentence": 7,
+      "start": 64.76,
+      "text": "forget"
+    },
+    {
+      "end": 65.7,
+      "i": 159,
+      "norm": "what",
+      "sentence": 7,
+      "start": 65.51,
+      "text": "what"
+    },
+    {
+      "end": 65.9,
+      "i": 160,
+      "norm": "they",
+      "sentence": 7,
+      "start": 65.7,
+      "text": "they"
+    },
+    {
+      "end": 66.22,
+      "i": 161,
+      "norm": "did",
+      "sentence": 7,
+      "start": 65.9,
+      "text": "did"
+    },
+    {
+      "end": 66.87,
+      "i": 162,
+      "norm": "here",
+      "sentence": 7,
+      "start": 66.44,
+      "text": "here."
+    },
+    {
+      "end": 68.4,
+      "i": 163,
+      "norm": "it",
+      "sentence": 8,
+      "start": 68.26,
+      "text": "It"
+    },
+    {
+      "end": 68.58,
+      "i": 164,
+      "norm": "is",
+      "sentence": 8,
+      "start": 68.4,
+      "text": "is"
+    },
+    {
+      "end": 68.8,
+      "i": 165,
+      "norm": "for",
+      "sentence": 8,
+      "start": 68.58,
+      "text": "for"
+    },
+    {
+      "end": 69.15,
+      "i": 166,
+      "norm": "us",
+      "sentence": 8,
+      "start": 68.8,
+      "text": "us"
+    },
+    {
+      "end": 69.27,
+      "i": 167,
+      "norm": "the",
+      "sentence": 8,
+      "start": 69.15,
+      "text": "the"
+    },
+    {
+      "end": 69.75,
+      "i": 168,
+      "norm": "living",
+      "sentence": 8,
+      "start": 69.27,
+      "text": "living,"
+    },
+    {
+      "end": 70.19,
+      "i": 169,
+      "norm": "rather",
+      "sentence": 8,
+      "start": 69.75,
+      "text": "rather,"
+    },
+    {
+      "end": 70.59,
+      "i": 170,
+      "norm": "to",
+      "sentence": 8,
+      "start": 70.48,
+      "text": "to"
+    },
+    {
+      "end": 70.7,
+      "i": 171,
+      "norm": "be",
+      "sentence": 8,
+      "start": 70.59,
+      "text": "be"
+    },
+    {
+      "end": 71.38,
+      "i": 172,
+      "norm": "dedicated",
+      "sentence": 8,
+      "start": 70.7,
+      "text": "dedicated"
+    },
+    {
+      "end": 71.82,
+      "i": 173,
+      "norm": "here",
+      "sentence": 8,
+      "start": 71.38,
+      "text": "here"
+    },
+    {
+      "end": 72.22,
+      "i": 174,
+      "norm": "to",
+      "sentence": 8,
+      "start": 72.14,
+      "text": "to"
+    },
+    {
+      "end": 72.41,
+      "i": 175,
+      "norm": "the",
+      "sentence": 8,
+      "start": 72.22,
+      "text": "the"
+    },
+    {
+      "end": 72.97,
+      "i": 176,
+      "norm": "unfinished",
+      "sentence": 8,
+      "start": 72.41,
+      "text": "unfinished"
+    },
+    {
+      "end": 73.45,
+      "i": 177,
+      "norm": "work",
+      "sentence": 8,
+      "start": 72.97,
+      "text": "work"
+    },
+    {
+      "end": 73.7,
+      "i": 178,
+      "norm": "which",
+      "sentence": 8,
+      "start": 73.45,
+      "text": "which"
+    },
+    {
+      "end": 74.15,
+      "i": 179,
+      "norm": "they",
+      "sentence": 8,
+      "start": 73.7,
+      "text": "they"
+    },
+    {
+      "end": 74.33,
+      "i": 180,
+      "norm": "who",
+      "sentence": 8,
+      "start": 74.26,
+      "text": "who"
+    },
+    {
+      "end": 74.66,
+      "i": 181,
+      "norm": "fought",
+      "sentence": 8,
+      "start": 74.33,
+      "text": "fought"
+    },
+    {
+      "end": 75.1,
+      "i": 182,
+      "norm": "here",
+      "sentence": 8,
+      "start": 74.66,
+      "text": "here"
+    },
+    {
+      "end": 75.53,
+      "i": 183,
+      "norm": "have",
+      "sentence": 8,
+      "start": 75.31,
+      "text": "have"
+    },
+    {
+      "end": 75.86,
+      "i": 184,
+      "norm": "thus",
+      "sentence": 8,
+      "start": 75.53,
+      "text": "thus"
+    },
+    {
+      "end": 76.33,
+      "i": 185,
+      "norm": "far",
+      "sentence": 8,
+      "start": 75.86,
+      "text": "far"
+    },
+    {
+      "end": 76.61,
+      "i": 186,
+      "norm": "so",
+      "sentence": 8,
+      "start": 76.45,
+      "text": "so"
+    },
+    {
+      "end": 77.0,
+      "i": 187,
+      "norm": "nobly",
+      "sentence": 8,
+      "start": 76.61,
+      "text": "nobly"
+    },
+    {
+      "end": 77.65,
+      "i": 188,
+      "norm": "advanced",
+      "sentence": 8,
+      "start": 77.0,
+      "text": "advanced."
+    },
+    {
+      "end": 78.42,
+      "i": 189,
+      "norm": "it",
+      "sentence": 9,
+      "start": 78.34,
+      "text": "It"
+    },
+    {
+      "end": 78.64,
+      "i": 190,
+      "norm": "is",
+      "sentence": 9,
+      "start": 78.42,
+      "text": "is"
+    },
+    {
+      "end": 78.98,
+      "i": 191,
+      "norm": "rather",
+      "sentence": 9,
+      "start": 78.64,
+      "text": "rather"
+    },
+    {
+      "end": 79.24,
+      "i": 192,
+      "norm": "for",
+      "sentence": 9,
+      "start": 78.98,
+      "text": "for"
+    },
+    {
+      "end": 79.59,
+      "i": 193,
+      "norm": "us",
+      "sentence": 9,
+      "start": 79.24,
+      "text": "us"
+    },
+    {
+      "end": 79.92,
+      "i": 194,
+      "norm": "to",
+      "sentence": 9,
+      "start": 79.84,
+      "text": "to"
+    },
+    {
+      "end": 80.09,
+      "i": 195,
+      "norm": "be",
+      "sentence": 9,
+      "start": 79.92,
+      "text": "be"
+    },
+    {
+      "end": 80.42,
+      "i": 196,
+      "norm": "here",
+      "sentence": 9,
+      "start": 80.09,
+      "text": "here"
+    },
+    {
+      "end": 81.24,
+      "i": 197,
+      "norm": "dedicated",
+      "sentence": 9,
+      "start": 80.42,
+      "text": "dedicated"
+    },
+    {
+      "end": 81.34,
+      "i": 198,
+      "norm": "to",
+      "sentence": 9,
+      "start": 81.24,
+      "text": "to"
+    },
+    {
+      "end": 81.44,
+      "i": 199,
+      "norm": "the",
+      "sentence": 9,
+      "start": 81.34,
+      "text": "the"
+    },
+    {
+      "end": 81.83,
+      "i": 200,
+      "norm": "great",
+      "sentence": 9,
+      "start": 81.44,
+      "text": "great"
+    },
+    {
+      "end": 82.26,
+      "i": 201,
+      "norm": "task",
+      "sentence": 9,
+      "start": 81.83,
+      "text": "task"
+    },
+    {
+      "end": 82.67,
+      "i": 202,
+      "norm": "remaining",
+      "sentence": 9,
+      "start": 82.26,
+      "text": "remaining"
+    },
+    {
+      "end": 83.1,
+      "i": 203,
+      "norm": "before",
+      "sentence": 9,
+      "start": 82.67,
+      "text": "before"
+    },
+    {
+      "end": 83.37,
+      "i": 204,
+      "norm": "us",
+      "sentence": 9,
+      "start": 83.1,
+      "text": "us"
+    },
+    {
+      "end": 83.98,
+      "i": 205,
+      "norm": "that",
+      "sentence": 9,
+      "start": 83.84,
+      "text": "that"
+    },
+    {
+      "end": 84.25,
+      "i": 206,
+      "norm": "from",
+      "sentence": 9,
+      "start": 83.98,
+      "text": "from"
+    },
+    {
+      "end": 84.59,
+      "i": 207,
+      "norm": "these",
+      "sentence": 9,
+      "start": 84.25,
+      "text": "these"
+    },
+    {
+      "end": 84.93,
+      "i": 208,
+      "norm": "honored",
+      "sentence": 9,
+      "start": 84.59,
+      "text": "honored"
+    },
+    {
+      "end": 85.35,
+      "i": 209,
+      "norm": "dead",
+      "sentence": 9,
+      "start": 84.93,
+      "text": "dead"
+    },
+    {
+      "end": 85.67,
+      "i": 210,
+      "norm": "we",
+      "sentence": 9,
+      "start": 85.57,
+      "text": "we"
+    },
+    {
+      "end": 85.91,
+      "i": 211,
+      "norm": "take",
+      "sentence": 9,
+      "start": 85.67,
+      "text": "take"
+    },
+    {
+      "end": 86.41,
+      "i": 212,
+      "norm": "increased",
+      "sentence": 9,
+      "start": 85.91,
+      "text": "increased"
+    },
+    {
+      "end": 86.99,
+      "i": 213,
+      "norm": "devotion",
+      "sentence": 9,
+      "start": 86.41,
+      "text": "devotion"
+    },
+    {
+      "end": 87.1,
+      "i": 214,
+      "norm": "to",
+      "sentence": 9,
+      "start": 86.99,
+      "text": "to"
+    },
+    {
+      "end": 87.32,
+      "i": 215,
+      "norm": "that",
+      "sentence": 9,
+      "start": 87.1,
+      "text": "that"
+    },
+    {
+      "end": 87.81,
+      "i": 216,
+      "norm": "cause",
+      "sentence": 9,
+      "start": 87.32,
+      "text": "cause"
+    },
+    {
+      "end": 88.15,
+      "i": 217,
+      "norm": "for",
+      "sentence": 9,
+      "start": 88.06,
+      "text": "for"
+    },
+    {
+      "end": 88.43,
+      "i": 218,
+      "norm": "which",
+      "sentence": 9,
+      "start": 88.15,
+      "text": "which"
+    },
+    {
+      "end": 88.66,
+      "i": 219,
+      "norm": "they",
+      "sentence": 9,
+      "start": 88.43,
+      "text": "they"
+    },
+    {
+      "end": 89.12,
+      "i": 220,
+      "norm": "gave",
+      "sentence": 9,
+      "start": 88.66,
+      "text": "gave"
+    },
+    {
+      "end": 89.3,
+      "i": 221,
+      "norm": "the",
+      "sentence": 9,
+      "start": 89.22,
+      "text": "the"
+    },
+    {
+      "end": 89.73,
+      "i": 222,
+      "norm": "last",
+      "sentence": 9,
+      "start": 89.3,
+      "text": "last"
+    },
+    {
+      "end": 90.02,
+      "i": 223,
+      "norm": "full",
+      "sentence": 9,
+      "start": 89.73,
+      "text": "full"
+    },
+    {
+      "end": 90.43,
+      "i": 224,
+      "norm": "measure",
+      "sentence": 9,
+      "start": 90.02,
+      "text": "measure"
+    },
+    {
+      "end": 90.72,
+      "i": 225,
+      "norm": "of",
+      "sentence": 9,
+      "start": 90.55,
+      "text": "of"
+    },
+    {
+      "end": 91.28,
+      "i": 226,
+      "norm": "devotion",
+      "sentence": 9,
+      "start": 90.72,
+      "text": "devotion"
+    },
+    {
+      "end": 92.18,
+      "i": 227,
+      "norm": "that",
+      "sentence": 9,
+      "start": 92.08,
+      "text": "that"
+    },
+    {
+      "end": 92.42,
+      "i": 228,
+      "norm": "we",
+      "sentence": 9,
+      "start": 92.18,
+      "text": "we"
+    },
+    {
+      "end": 92.86,
+      "i": 229,
+      "norm": "here",
+      "sentence": 9,
+      "start": 92.42,
+      "text": "here"
+    },
+    {
+      "end": 93.33,
+      "i": 230,
+      "norm": "highly",
+      "sentence": 9,
+      "start": 92.93,
+      "text": "highly"
+    },
+    {
+      "end": 93.97,
+      "i": 231,
+      "norm": "resolve",
+      "sentence": 9,
+      "start": 93.33,
+      "text": "resolve"
+    },
+    {
+      "end": 94.24,
+      "i": 232,
+      "norm": "that",
+      "sentence": 9,
+      "start": 94.16,
+      "text": "that"
+    },
+    {
+      "end": 94.65,
+      "i": 233,
+      "norm": "these",
+      "sentence": 9,
+      "start": 94.24,
+      "text": "these"
+    },
+    {
+      "end": 94.93,
+      "i": 234,
+      "norm": "dead",
+      "sentence": 9,
+      "start": 94.65,
+      "text": "dead"
+    },
+    {
+      "end": 95.26,
+      "i": 235,
+      "norm": "shall",
+      "sentence": 9,
+      "start": 95.05,
+      "text": "shall"
+    },
+    {
+      "end": 95.47,
+      "i": 236,
+      "norm": "not",
+      "sentence": 9,
+      "start": 95.26,
+      "text": "not"
+    },
+    {
+      "end": 95.64,
+      "i": 237,
+      "norm": "have",
+      "sentence": 9,
+      "start": 95.47,
+      "text": "have"
+    },
+    {
+      "end": 95.91,
+      "i": 238,
+      "norm": "died",
+      "sentence": 9,
+      "start": 95.64,
+      "text": "died"
+    },
+    {
+      "end": 96.06,
+      "i": 239,
+      "norm": "in",
+      "sentence": 9,
+      "start": 95.91,
+      "text": "in"
+    },
+    {
+      "end": 96.4,
+      "i": 240,
+      "norm": "vain",
+      "sentence": 9,
+      "start": 96.06,
+      "text": "vain"
+    },
+    {
+      "end": 96.98,
+      "i": 241,
+      "norm": "that",
+      "sentence": 9,
+      "start": 96.85,
+      "text": "that"
+    },
+    {
+      "end": 97.21,
+      "i": 242,
+      "norm": "this",
+      "sentence": 9,
+      "start": 96.98,
+      "text": "this"
+    },
+    {
+      "end": 97.78,
+      "i": 243,
+      "norm": "nation",
+      "sentence": 9,
+      "start": 97.21,
+      "text": "nation,"
+    },
+    {
+      "end": 98.09,
+      "i": 244,
+      "norm": "under",
+      "sentence": 9,
+      "start": 97.81,
+      "text": "under"
+    },
+    {
+      "end": 98.46,
+      "i": 245,
+      "norm": "god",
+      "sentence": 9,
+      "start": 98.09,
+      "text": "God,"
+    },
+    {
+      "end": 98.9,
+      "i": 246,
+      "norm": "shall",
+      "sentence": 9,
+      "start": 98.73,
+      "text": "shall"
+    },
+    {
+      "end": 99.12,
+      "i": 247,
+      "norm": "have",
+      "sentence": 9,
+      "start": 98.9,
+      "text": "have"
+    },
+    {
+      "end": 99.16,
+      "i": 248,
+      "norm": "a",
+      "sentence": 9,
+      "start": 99.12,
+      "text": "a"
+    },
+    {
+      "end": 99.51,
+      "i": 249,
+      "norm": "new",
+      "sentence": 9,
+      "start": 99.16,
+      "text": "new"
+    },
+    {
+      "end": 100.02,
+      "i": 250,
+      "norm": "birth",
+      "sentence": 9,
+      "start": 99.51,
+      "text": "birth"
+    },
+    {
+      "end": 100.06,
+      "i": 251,
+      "norm": "of",
+      "sentence": 9,
+      "start": 100.02,
+      "text": "of"
+    },
+    {
+      "end": 100.68,
+      "i": 252,
+      "norm": "freedom",
+      "sentence": 9,
+      "start": 100.06,
+      "text": "freedom"
+    },
+    {
+      "end": 101.25,
+      "i": 253,
+      "norm": "and",
+      "sentence": 9,
+      "start": 101.14,
+      "text": "and"
+    },
+    {
+      "end": 101.45,
+      "i": 254,
+      "norm": "that",
+      "sentence": 9,
+      "start": 101.25,
+      "text": "that"
+    },
+    {
+      "end": 102.04,
+      "i": 255,
+      "norm": "government",
+      "sentence": 9,
+      "start": 101.45,
+      "text": "government"
+    },
+    {
+      "end": 102.19,
+      "i": 256,
+      "norm": "of",
+      "sentence": 9,
+      "start": 102.04,
+      "text": "of"
+    },
+    {
+      "end": 102.27,
+      "i": 257,
+      "norm": "the",
+      "sentence": 9,
+      "start": 102.19,
+      "text": "the"
+    },
+    {
+      "end": 102.85,
+      "i": 258,
+      "norm": "people",
+      "sentence": 9,
+      "start": 102.27,
+      "text": "people,"
+    },
+    {
+      "end": 103.37,
+      "i": 259,
+      "norm": "by",
+      "sentence": 9,
+      "start": 103.18,
+      "text": "by"
+    },
+    {
+      "end": 103.47,
+      "i": 260,
+      "norm": "the",
+      "sentence": 9,
+      "start": 103.37,
+      "text": "the"
+    },
+    {
+      "end": 104.06,
+      "i": 261,
+      "norm": "people",
+      "sentence": 9,
+      "start": 103.47,
+      "text": "people,"
+    },
+    {
+      "end": 104.55,
+      "i": 262,
+      "norm": "for",
+      "sentence": 9,
+      "start": 104.32,
+      "text": "for"
+    },
+    {
+      "end": 104.64,
+      "i": 263,
+      "norm": "the",
+      "sentence": 9,
+      "start": 104.55,
+      "text": "the"
+    },
+    {
+      "end": 105.14,
+      "i": 264,
+      "norm": "people",
+      "sentence": 9,
+      "start": 104.64,
+      "text": "people,"
+    },
+    {
+      "end": 105.68,
+      "i": 265,
+      "norm": "shall",
+      "sentence": 9,
+      "start": 105.47,
+      "text": "shall"
+    },
+    {
+      "end": 105.97,
+      "i": 266,
+      "norm": "not",
+      "sentence": 9,
+      "start": 105.68,
+      "text": "not"
+    },
+    {
+      "end": 106.44,
+      "i": 267,
+      "norm": "perish",
+      "sentence": 9,
+      "start": 105.97,
+      "text": "perish"
+    },
+    {
+      "end": 106.75,
+      "i": 268,
+      "norm": "from",
+      "sentence": 9,
+      "start": 106.44,
+      "text": "from"
+    },
+    {
+      "end": 106.96,
+      "i": 269,
+      "norm": "this",
+      "sentence": 9,
+      "start": 106.75,
+      "text": "this"
+    },
+    {
+      "end": 107.34,
+      "i": 270,
+      "norm": "earth",
+      "sentence": 9,
+      "start": 106.96,
+      "text": "earth."
+    }
+  ]
+}

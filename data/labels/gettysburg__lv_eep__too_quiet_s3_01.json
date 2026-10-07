@@ -1,0 +1,23 @@
+{
+  "flaws": [
+    {
+      "end": 65.827,
+      "parameters": {
+        "edit_source_end_s": 65.829,
+        "edit_source_start_s": 63.766,
+        "gain_db": -9,
+        "shape": "flat"
+      },
+      "severity": 3,
+      "start": 63.767,
+      "type": "too_quiet",
+      "word_end": 125,
+      "word_start": 122
+    }
+  ],
+  "recording_id": "gettysburg__lv_eep__too_quiet_s3_01",
+  "reference_id": "gettysburg__lv_eep__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "gettysburg"
+}

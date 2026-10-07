@@ -1,0 +1,103 @@
+{
+  "fresh_replayed": [
+    "gettysburg__lv_dl__missing_pause_s3_01",
+    "o_captain__lv_sjs__dragging_s4_01",
+    "gettysburg__lv_mas__monotone_s4_01",
+    "gettysburg__lv_eep__too_quiet_s5_01",
+    "gettysburg__lv_law__missing_pause_s2_01",
+    "o_captain__lv_chip__monotone_s2_01",
+    "o_captain__lv_mac__dragging_s4_01",
+    "gettysburg__lv_mk__awkward_pause_s5_01",
+    "o_captain__lv_md__mumbling_s3_01",
+    "gettysburg__lv_fb__too_quiet_s1_01",
+    "o_captain__lv_foxits__missing_pause_s1_01",
+    "gettysburg__lv_dj__missing_pause_s3_01",
+    "gettysburg__lv_rk__monotone_s4_01",
+    "jfk_rice__jfk__mumbling_s3_01",
+    "o_captain__lv_sjs__missing_pause_s3_01",
+    "gettysburg__lv_rk__too_quiet_s3_01",
+    "o_captain__lv_md__too_quiet_s4_01",
+    "gettysburg__lv_pc__rushing_s3_01",
+    "o_captain__lv_foxits__dragging_s4_01",
+    "gettysburg__lv_sa__monotone_s2_01"
+  ],
+  "human_acceptance": "PENDING",
+  "index_rows": 1103,
+  "passed": true,
+  "quantized_step_ambiguities": [
+    {
+      "edge": "end",
+      "limitation": "Serialized millisecond map cannot determine insertion-step side for this edge.",
+      "point_error_s": 2.1999999999999993,
+      "recording_id": "gettysburg__lv_dj__mixed_02",
+      "word": 83
+    },
+    {
+      "edge": "end",
+      "limitation": "Serialized millisecond map cannot determine insertion-step side for this edge.",
+      "point_error_s": 1.0,
+      "recording_id": "gettysburg__lv_dl__mixed_02",
+      "word": 218
+    },
+    {
+      "edge": "end",
+      "limitation": "Serialized millisecond map cannot determine insertion-step side for this edge.",
+      "point_error_s": 1.0,
+      "recording_id": "gettysburg__lv_jn__mixed_01",
+      "word": 135
+    },
+    {
+      "edge": "end",
+      "limitation": "Serialized millisecond map cannot determine insertion-step side for this edge.",
+      "point_error_s": 1.0,
+      "recording_id": "gettysburg__lv_pc__mixed_01",
+      "word": 212
+    },
+    {
+      "edge": "start",
+      "limitation": "Serialized millisecond map cannot determine insertion-step side for this edge.",
+      "point_error_s": 3.0,
+      "recording_id": "gettysburg__lv_rk__mixed_01",
+      "word": 234
+    },
+    {
+      "edge": "end",
+      "limitation": "Serialized millisecond map cannot determine insertion-step side for this edge.",
+      "point_error_s": 2.1999999999999957,
+      "recording_id": "gettysburg__lv_tg__mixed_02",
+      "word": 113
+    },
+    {
+      "edge": "end",
+      "limitation": "Serialized millisecond map cannot determine insertion-step side for this edge.",
+      "point_error_s": 3.0,
+      "recording_id": "gettysburg__lv_wt__mixed_02",
+      "word": 221
+    },
+    {
+      "edge": "start",
+      "limitation": "Serialized millisecond map cannot determine insertion-step side for this edge.",
+      "point_error_s": 1.5,
+      "recording_id": "o_captain__lv_apc__mixed_02",
+      "word": 194
+    },
+    {
+      "edge": "end",
+      "limitation": "Serialized millisecond map cannot determine insertion-step side for this edge.",
+      "point_error_s": 1.5,
+      "recording_id": "o_captain__lv_foxits__mixed_02",
+      "word": 130
+    },
+    {
+      "edge": "start",
+      "limitation": "Serialized millisecond map cannot determine insertion-step side for this edge.",
+      "point_error_s": 1.5,
+      "recording_id": "o_captain__lv_md__mixed_01",
+      "word": 96
+    }
+  ],
+  "schema": "dataset_integrity/v1",
+  "skipped": 0,
+  "sources": 29,
+  "synthetic_files": 1073
+}

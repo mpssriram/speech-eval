@@ -1,0 +1,46 @@
+{
+  "flaws": [
+    {
+      "end": 33.1,
+      "parameters": {
+        "pause_kept_frac": 0.5,
+        "result_pause_s": 0.4,
+        "source_pause_s": 0.801
+      },
+      "severity": 2,
+      "start": 32.7,
+      "type": "missing_pause",
+      "word_end": 100,
+      "word_start": 99
+    },
+    {
+      "end": 45.949,
+      "parameters": {
+        "edit_source_end_s": 46.484,
+        "edit_source_start_s": 45.235,
+        "speed_factor": 1.75
+      },
+      "severity": 4,
+      "start": 45.234,
+      "type": "rushing",
+      "word_end": 137,
+      "word_start": 134
+    },
+    {
+      "end": 62.975,
+      "parameters": {
+        "inserted_pause_s": 1.0
+      },
+      "severity": 2,
+      "start": 61.975,
+      "type": "awkward_pause",
+      "word_end": 184,
+      "word_start": 183
+    }
+  ],
+  "recording_id": "o_captain__lv_mac__mixed_02",
+  "reference_id": "o_captain__lv_mac__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

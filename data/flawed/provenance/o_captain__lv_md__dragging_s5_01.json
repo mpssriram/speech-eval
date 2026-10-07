@@ -1,0 +1,119 @@
+{
+  "artifacts": {
+    "data/alignment/oracle/o_captain__lv_md__dragging_s5_01.json": "86c7b075e3a9d92277ffa6d297c85f1ce506638a6bb5a24e665bed45c86cd68a",
+    "data/flawed/align16k/o_captain__lv_md__dragging_s5_01.flac": "92e2c3537551640c8dffa2b000725fc32d3f197f866772ee9f9ca388a72bad46",
+    "data/flawed/hq/o_captain__lv_md__dragging_s5_01.flac": "3846ae72e5ba8196e514530bde29ed98bdf53d744279f37d0f2f238ead54507c",
+    "data/flawed/timemaps/o_captain__lv_md__dragging_s5_01.json": "270fa39321ffeab53d9e7f1f5bfa1f93a2cc02bdf21d46da413ab93632c94c31",
+    "data/labels/o_captain__lv_md__dragging_s5_01.json": "2daeba3c8c56750686fe6b57f18cad9105b322697e38b4da098701d8067fd641"
+  },
+  "inputs": {
+    "alignment_sha256": "9ab1d0c52b53af918a65159fb741119edbf1be707eeebbdd452cce98406ae4a6",
+    "audio_sha256": "7962483fc2e3cc045237a5e5921f2624ba7da13469b16926a7a569c1ecf527ed",
+    "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+    "config": {
+      "crossfade_ms": 20,
+      "keep_out_s": 1.0,
+      "min_gap_between_flaws_s": 2.0,
+      "region_words": {
+        "max": 12,
+        "min": 4
+      },
+      "seed": 20261001,
+      "types": {
+        "awkward_pause": {
+          "kind": "boundary",
+          "param": "inserted_pause_s",
+          "severity": [
+            0.6,
+            1.0,
+            1.5,
+            2.2,
+            3.0
+          ]
+        },
+        "dragging": {
+          "kind": "region",
+          "param": "speed_factor",
+          "severity": [
+            0.87,
+            0.77,
+            0.67,
+            0.58,
+            0.5
+          ]
+        },
+        "missing_pause": {
+          "kind": "boundary",
+          "param": "pause_kept_frac",
+          "severity": [
+            0.7,
+            0.5,
+            0.3,
+            0.15,
+            0.0
+          ]
+        },
+        "monotone": {
+          "kind": "region",
+          "param": "pitch_range_kept",
+          "severity": [
+            0.7,
+            0.5,
+            0.35,
+            0.2,
+            0.08
+          ]
+        },
+        "mumbling": {
+          "extra_gain_db_per_severity": -1.0,
+          "kind": "region",
+          "param": "lowpass_hz",
+          "severity": [
+            3500,
+            2800,
+            2200,
+            1700,
+            1300
+          ]
+        },
+        "rushing": {
+          "kind": "region",
+          "param": "speed_factor",
+          "severity": [
+            1.15,
+            1.3,
+            1.5,
+            1.75,
+            2.0
+          ]
+        },
+        "too_quiet": {
+          "kind": "region",
+          "param": "gain_db",
+          "severity": [
+            -3,
+            -6,
+            -9,
+            -12,
+            -18
+          ],
+          "shapes": [
+            "flat",
+            "trail"
+          ]
+        }
+      }
+    },
+    "rubberband": "3.3.0",
+    "shape": "flat",
+    "stats_sha256": "396e3a2b2f2614229793bbd4a579c6f45bd78e54de6f452e02564f2c5f64e277",
+    "versions": {
+      "numpy": "2.0.2",
+      "praat-parselmouth": "0.4.7",
+      "scipy": "1.17.1",
+      "soundfile": "0.14.0"
+    }
+  },
+  "recording_id": "o_captain__lv_md__dragging_s5_01",
+  "schema": "injection_provenance/v1"
+}

@@ -1,0 +1,48 @@
+{
+  "flaws": [
+    {
+      "end": 17.37,
+      "parameters": {
+        "pause_kept_frac": 0.0,
+        "result_pause_s": 0.03,
+        "source_pause_s": 1.221
+      },
+      "severity": 5,
+      "start": 17.34,
+      "type": "missing_pause",
+      "word_end": 30,
+      "word_start": 29
+    },
+    {
+      "end": 81.601,
+      "parameters": {
+        "edit_source_end_s": 81.601,
+        "edit_source_start_s": 79.441,
+        "pitch_range_kept": 0.5
+      },
+      "severity": 2,
+      "start": 79.441,
+      "type": "monotone",
+      "word_end": 204,
+      "word_start": 198
+    },
+    {
+      "end": 95.751,
+      "parameters": {
+        "edit_source_end_s": 97.461,
+        "edit_source_start_s": 94.042,
+        "speed_factor": 2.0
+      },
+      "severity": 5,
+      "start": 94.041,
+      "type": "rushing",
+      "word_end": 246,
+      "word_start": 240
+    }
+  ],
+  "recording_id": "gettysburg__lv_law__mixed_02",
+  "reference_id": "gettysburg__lv_law__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "gettysburg"
+}

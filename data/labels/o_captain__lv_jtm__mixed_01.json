@@ -1,0 +1,49 @@
+{
+  "flaws": [
+    {
+      "end": 14.281,
+      "parameters": {
+        "edit_source_end_s": 13.233,
+        "edit_source_start_s": 9.723,
+        "speed_factor": 0.77
+      },
+      "severity": 2,
+      "start": 9.723,
+      "type": "dragging",
+      "word_end": 32,
+      "word_start": 24
+    },
+    {
+      "end": 24.137,
+      "parameters": {
+        "edit_source_end_s": 24.137,
+        "edit_source_start_s": 20.357,
+        "gain_db": -12,
+        "shape": "trail"
+      },
+      "severity": 4,
+      "start": 20.357,
+      "type": "too_quiet",
+      "word_end": 48,
+      "word_start": 44
+    },
+    {
+      "end": 80.301,
+      "parameters": {
+        "edit_source_end_s": 80.305,
+        "edit_source_start_s": 76.871,
+        "pitch_range_kept": 0.08
+      },
+      "severity": 5,
+      "start": 76.871,
+      "type": "monotone",
+      "word_end": 166,
+      "word_start": 157
+    }
+  ],
+  "recording_id": "o_captain__lv_jtm__mixed_01",
+  "reference_id": "o_captain__lv_jtm__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

@@ -1,0 +1,22 @@
+{
+  "flaws": [
+    {
+      "end": 64.291,
+      "parameters": {
+        "pause_kept_frac": 0.5,
+        "result_pause_s": 0.28,
+        "source_pause_s": 0.56
+      },
+      "severity": 2,
+      "start": 64.011,
+      "type": "missing_pause",
+      "word_end": 154,
+      "word_start": 153
+    }
+  ],
+  "recording_id": "gettysburg__lv_law__missing_pause_s2_01",
+  "reference_id": "gettysburg__lv_law__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "gettysburg"
+}

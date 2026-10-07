@@ -1,0 +1,23 @@
+{
+  "flaws": [
+    {
+      "end": 70.099,
+      "parameters": {
+        "edit_source_end_s": 70.098,
+        "edit_source_start_s": 67.759,
+        "gain_db": -9,
+        "shape": "flat"
+      },
+      "severity": 3,
+      "start": 67.759,
+      "type": "too_quiet",
+      "word_end": 132,
+      "word_start": 128
+    }
+  ],
+  "recording_id": "o_captain__lv_chip__too_quiet_s3_01",
+  "reference_id": "o_captain__lv_chip__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}

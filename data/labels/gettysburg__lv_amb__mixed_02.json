@@ -1,0 +1,49 @@
+{
+  "flaws": [
+    {
+      "end": 23.664,
+      "parameters": {
+        "edit_source_end_s": 21.521,
+        "edit_source_start_s": 17.172,
+        "speed_factor": 0.67
+      },
+      "severity": 3,
+      "start": 17.172,
+      "type": "dragging",
+      "word_end": 48,
+      "word_start": 38
+    },
+    {
+      "end": 48.031,
+      "parameters": {
+        "edit_source_end_s": 48.031,
+        "edit_source_start_s": 45.231,
+        "gain_db": -18,
+        "shape": "flat"
+      },
+      "severity": 5,
+      "start": 45.231,
+      "type": "too_quiet",
+      "word_end": 114,
+      "word_start": 109
+    },
+    {
+      "end": 83.4,
+      "parameters": {
+        "edit_source_end_s": 83.4,
+        "edit_source_start_s": 80.66,
+        "pitch_range_kept": 0.5
+      },
+      "severity": 2,
+      "start": 80.66,
+      "type": "monotone",
+      "word_end": 208,
+      "word_start": 202
+    }
+  ],
+  "recording_id": "gettysburg__lv_amb__mixed_02",
+  "reference_id": "gettysburg__lv_amb__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "gettysburg"
+}

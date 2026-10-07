@@ -1,0 +1,46 @@
+{
+  "flaws": [
+    {
+      "end": 18.899,
+      "parameters": {
+        "edit_source_end_s": 18.9,
+        "edit_source_start_s": 17.216,
+        "lowpass_hz": 2800
+      },
+      "severity": 2,
+      "start": 17.216,
+      "type": "mumbling",
+      "word_end": 48,
+      "word_start": 45
+    },
+    {
+      "end": 24.003,
+      "parameters": {
+        "inserted_pause_s": 1.5
+      },
+      "severity": 3,
+      "start": 22.503,
+      "type": "awkward_pause",
+      "word_end": 60,
+      "word_start": 59
+    },
+    {
+      "end": 37.368,
+      "parameters": {
+        "edit_source_end_s": 37.986,
+        "edit_source_start_s": 36.545,
+        "speed_factor": 1.75
+      },
+      "severity": 4,
+      "start": 36.545,
+      "type": "rushing",
+      "word_end": 92,
+      "word_start": 89
+    }
+  ],
+  "recording_id": "o_captain__lv_mb__mixed_02",
+  "reference_id": "o_captain__lv_mb__orig",
+  "schema": "labels/v1",
+  "source": "synthetic",
+  "text_id": "o_captain"
+}
