@@ -87,3 +87,18 @@ The preview page is `data/flawed/preview/index.html`. Objective measurements for
 all seven effects and five severities on three readers are in
 `data/flawed/effect_checks.json`. They test parameter fidelity, not perceptual
 realism. The first audit is retained as `effect_checks_initial.json`.
+
+## Synthetic dataset and recording instructions
+
+```bash
+env -u PYTHONPATH UV_CACHE_DIR=$PWD/.uv-cache ~/.local/bin/uv run speecheval dataset build
+env -u PYTHONPATH UV_CACHE_DIR=$PWD/.uv-cache ~/.local/bin/uv run python scripts/check_dataset.py --fresh
+env -u PYTHONPATH UV_CACHE_DIR=$PWD/.uv-cache ~/.local/bin/uv run speecheval human script
+```
+
+Reader workers run actual MFA inference on complete flawed audio/transcripts,
+without oracle boundaries. Speaker splits are fixed in `configs/splits.yaml`.
+The dataset index and machine-readable checks are under `data/manifest/` and
+`data/review/`. Exact recording instructions/texts are in `data/human/`; user
+voice, listening labels and consent are not synthesized. Dataset v1 acceptance
+and tagging remain pending actual human recordings.

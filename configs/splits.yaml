@@ -1,0 +1,35 @@
+dev:
+- gettysburg__lv_pc__orig
+- gettysburg__lv_rk__orig
+- o_captain__lv_s__orig
+- o_captain__lv_sjs__orig
+excluded:
+  o_captain__lv_rg__orig: clipped source samples
+schema: splits/v1
+test:
+- gettysburg__lv_sa__orig
+- gettysburg__lv_tg__orig
+- gettysburg__lv_wt__orig
+- jfk_rice__jfk__orig
+- o_captain__lv_ss__orig
+- o_captain__lv_th__orig
+- reagan_challenger__reagan__orig
+train:
+- gettysburg__lv_amb__orig
+- gettysburg__lv_dj__orig
+- gettysburg__lv_dl__orig
+- gettysburg__lv_eep__orig
+- gettysburg__lv_fb__orig
+- gettysburg__lv_jn__orig
+- gettysburg__lv_law__orig
+- gettysburg__lv_lb__orig
+- gettysburg__lv_mas__orig
+- gettysburg__lv_mk__orig
+- o_captain__lv_apc__orig
+- o_captain__lv_chip__orig
+- o_captain__lv_foxits__orig
+- o_captain__lv_jtm__orig
+- o_captain__lv_mac__orig
+- o_captain__lv_mb__orig
+- o_captain__lv_md__orig
+- o_captain__lv_mrg__orig

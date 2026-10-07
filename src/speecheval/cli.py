@@ -13,6 +13,9 @@ evaluate_app = typer.Typer(help="Evaluate aligners and detectors.")
 report_app = typer.Typer(help="Generate quality-assurance reports.")
 features_app = typer.Typer(help="Extract acoustic features and speaker statistics.")
 inject_app = typer.Typer(help="Generate labelled synthetic speech flaws.")
+dataset_app = typer.Typer(help="Build the speaker-disjoint synthetic dataset.")
+human_app = typer.Typer(help="Prepare user recording instructions without synthesizing voice.")
+reference_app = typer.Typer(help="Build train-only robust reference distributions.")
 
 app.add_typer(transcripts_app, name="transcripts")
 app.add_typer(gold_app, name="gold")
@@ -20,6 +23,71 @@ app.add_typer(evaluate_app, name="evaluate")
 app.add_typer(report_app, name="report")
 app.add_typer(features_app, name="features")
 app.add_typer(inject_app, name="inject")
+app.add_typer(dataset_app, name="dataset")
+app.add_typer(human_app, name="human")
+app.add_typer(reference_app, name="reference")
+
+
+@app.command("calibrate")
+def calibrate() -> None:
+    from speecheval.calibration import calibrate as run
+    run()
+
+
+@evaluate_app.command("final")
+def evaluate_final() -> None:
+    from speecheval.calibration import evaluate_final as run
+    run()
+
+
+@reference_app.command("build")
+def reference_build() -> None:
+    from speecheval.reference import build_reference,build_baselines
+    for text in ('gettysburg','o_captain','jfk_rice','reagan_challenger'):build_reference(text)
+    build_baselines(Path.cwd())
+
+
+@app.command("analyze")
+def analyze(audio: Path = typer.Argument(...,exists=True,dir_okay=False),
+            text: str = typer.Option(...),mode: str = typer.Option('A'),
+            transcript: Path | None = typer.Option(None,exists=True,dir_okay=False),
+            exclude_speaker: str | None = typer.Option(None),
+            previous: Path | None = typer.Option(None,exists=True,dir_okay=False),plot: bool = typer.Option(False)) -> None:
+    from speecheval.pipeline import analyze as run
+    run(audio,text,mode,transcript,exclude_speaker,previous,plot)
+
+
+@app.command("analyze-batch")
+def analyze_batch(split: str = typer.Option('dev'),setting: str = typer.Option('A-LOSO')) -> None:
+    import csv
+    from speecheval.pipeline import analyze as run
+    if split not in ('train','dev','test'):raise typer.BadParameter('Unknown split')
+    if setting not in ('A-LOSO','B-same-speaker'):raise typer.BadParameter('Unknown evaluation setting')
+    root=Path.cwd()
+    rows=list(csv.DictReader((root/'data/manifest/dataset_index.csv').open()))
+    for row in rows:
+        if row['split']!=split:continue
+        if setting=='A-LOSO' and row['text_id'] in ('gettysburg','o_captain'):
+            run(root/row['audio_path'],row['text_id'],exclude_speaker=row['speaker_slug'])
+        elif setting=='B-same-speaker' and row['text_id'] in ('jfk_rice','reagan_challenger'):
+            rid=f"{row['text_id']}__{row['speaker_slug']}__orig"
+            run(root/row['audio_path'],row['text_id'],mode='B',previous=root/'data/audio/hq'/f'{rid}.wav')
+
+
+@human_app.command("script")
+def human_script() -> None:
+    """Write the twelve recording instructions independently of dataset construction."""
+    import yaml
+    from speecheval.dataset import human_script as prepare
+    root=Path.cwd()
+    prepare(root,yaml.safe_load((root/'configs/flaws.yaml').read_text())['seed'])
+
+
+@dataset_app.command("build")
+def dataset_build(stage: str = typer.Option('all'), limit_sources: int = typer.Option(0,min=0)) -> None:
+    """Generate, real-align and feature-extract reader batches; stages can resume."""
+    from speecheval.dataset import dataset_build as build
+    build(stage=stage,limit_sources=limit_sources)
 
 
 @inject_app.command("preview")

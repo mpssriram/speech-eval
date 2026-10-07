@@ -10,6 +10,9 @@ paths:
 features:
   pitch_ceiling_q3_factor: 1.5
   pause_threshold_s: 0.25
+dataset:
+  workers: 1
+  mixed_per_source: 2
 audio:
   hq_sample_rate: 44100
   align_sample_rate: 16000

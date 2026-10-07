@@ -1,5 +1,11 @@
 # Blockers
 
+## 2026-10-07 — User takes are not present in the WSL project
+
+- Read-only inspection of `data/human/raw/` found no files, including no `notes.md` or `CONSENT.md`.
+- User reports the takes exist. Requested their actual location; do not fabricate recordings, labels, or consent. Synthetic calibration/evaluation can continue independently.
+- Resolved location ambiguity: the user subsequently confirmed the takes have not been recorded yet. Actual human audio, notes, labels and consent are still pending.
+
 ## 2026-10-04 — Repeated O Captain ending selected too early (resolved)
 
 - Acoustic-verification preflight found 12 prepared clips ending after the first stanza. The original matcher chose the first highest-scoring instance of the repeated last six words.

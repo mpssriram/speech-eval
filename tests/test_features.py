@@ -76,3 +76,16 @@ def test_zero_duration_sentence_does_not_inflate_speaker_rate():
     assert np.isnan(windows.loc[0,'rate_syl_s'])
     assert np.isnan(sentences.loc[0,'n_syllables'])
     assert stats['articulation_rate_syl_s']==2.
+
+
+def test_extract_features_accepts_generated_audio_without_source_manifest(tmp_path):
+    import soundfile as sf
+    alignment={'schema':'alignment/v1','recording_id':'sample__reader__rushing_s3_01','duration_s':1.,
+        'audio':'input.flac','transcript':'text.txt','aligner':{'name':'mfa'},'warnings':[],
+        'words':[{'i':i,'text':w,'norm':w,'sentence':0,'start':.1+i*.2,'end':.2+i*.2} for i,w in enumerate(['one','two','three'])],
+        'sentences':[{'i':0,'start':.1,'end':.6,'word_start':0,'word_end':2}]}
+    path=tmp_path/'input.flac';sf.write(path,tone(),44100,subtype='PCM_16')
+    hashes=f.extract_features(tmp_path,path,alignment,{'pitch_ceiling_q3_factor':1.5,'pause_threshold_s':.25})
+    assert len(hashes)==5 and all((tmp_path/p).exists() for p in hashes)
+    words=pd.read_parquet(tmp_path/'data/features/words'/f"{alignment['recording_id']}.parquet")
+    assert words.i.tolist()==[0,1,2]

@@ -1,5 +1,43 @@
 # Execution decisions
 
+## 2026-10-07 — Resumed execution
+
+- Resumed the interrupted full dataset command with saved per-source caches, one worker and CPU affinity 0–3. The last completed source was 22/29; no completed audio was deleted or rebuilt intentionally. User reauthorized the main workload after the resource pause.
+- Ruling: result reports are now explicitly requested (Phases 6–8); retain machine audits and write result reports, not status reports. Learned detector stays deferred until the required pipeline is complete.
+- Evaluation corrections: pause eligibility uses centre distance but greedy ordering uses highest IoU; confusion counts wrong types only; predicted fragments overlapping excluded uncertain truth are excluded symmetrically; held-out cached reuse requires unchanged dataset/reference/measurement hashes. Four new regressions were observed RED then GREEN (10 evaluation/calibration tests).
+- Phase 6 final review: four Important findings fixed in one TDD pass: establish alarm-budget feasibility with improving intermediate coordinate moves; freeze train/dev inputs and detector/calibration code before opening test evidence; fingerprint actual source/synthetic audio in final reuse; reuse unchanged implementation results across report-only commits and refuse automatic reruns after implementation/data changes. Four regressions RED→GREEN; focused suite 15 passed. Final whole-suite verification follows.
+- Ruling: feasibility repair is deterministic coordinate descent, not exhaustive global search. If no improving move establishes the guard, report the unmet budget honestly; never claim global infeasibility. Cost if wrong: a feasible joint setting may be missed; reported budget status remains measured.
+- Final: minor (deferred): manually repeating calibration consumes the previously calibrated initial candidate configuration. Do not rerun completed calibration without checking its saved audit; the current execution resumes missing work only.
+- Final: Ruling: review did not establish actual DEV/test accuracy, corpus integrity, chart rendering, acoustic realism, human validation, learned quality, or commits/push. Executor verifies real artifacts and runs; absent human/learned results remain explicit. Cost if wrong: software tests could be mistaken for perceptual validation.
+- User confirmed takes have not yet been recorded; preparation can happen later. Human settings and listener-rating agreement remain pending, not waived evidence.
+
+## 2026-10-07 — Phase 5 review fix pass
+
+- Final: fixed reversed region evidence across merged gaps — retain the temporal span but aggregate only directional flags. The [3,-12,3,3] regression was RED before correction.
+- Final: fixed pause boundary mismatches — both endpoints must map to the same adjacent reference boundary, in reference collection and participant comparison. Inserted/skipped endpoint regressions were RED before correction.
+- Final: fixed measurement reuse — source, synthetic and incoming participant audio/alignment/feature hashes must match producing provenance. A changed-audio fixture was RED (accepted stale features) before the correction. Incoming caches now bind feature/alignment code, package versions, model/dictionary bytes; model hashing is streamed to avoid loading checkpoints into RAM.
+- Final: fixed train-speaker pool leakage — exclude the speaker from both direct reference readers and pooled spreads/provenance. The existing generated, uncommitted playback-baseline choices are regenerated once using corrected LOSO statistics.
+- Final: fixed reference path traversal — validate text/speaker/recording identifiers before any writes, and enforce output containment. The traversal regression was RED before correction.
+- Final: minor (deferred): plot region text is truncated to 250 characters; Mode B templates contain plural verb agreement. These do not change measured evidence or detection.
+- Final: Ruling: acoustic/ASR accuracy and human realism remain unverified by the code reviewer; actual CUDA transcription and supplied-transcript MFA ingress smoke checks ran, but neither is human validation. Cost if wrong: transcription/alignment errors affect downstream judgments.
+- Final: Ruling: dataset/smoke completion, plot usability, held-out accuracy and commit/push evidence are executor responsibilities, not implied by review. Human acceptance remains pending. Cost if wrong: engineering success could be confused with quality evidence.
+- Ruling: defer the one-time held-out accuracy run until detection/scoring integration is frozen, so later code changes are not silently scored against a stale evaluated commit. Calibration uses dev only. Cost if wrong: final accuracy remains unavailable until that freeze.
+- Ruling: drop the optional learned detector under PLAN cut line 2 to prioritize the complete rules pipeline/dashboard and resource budget. No learned-training or rules-vs-learned result is claimed.
+
+## 2026-10-07 — resource budget requested by user
+
+- Parallel CPU batches caused high system load. User requested GPU/VRAM preference. Stopped only our owned build process group and resumed cached work with one dataset worker, OMP/OpenBLAS/MKL/Numba threads=1, CPU affinity 0–3. No audio or completed artifacts were deleted.
+- Observed WSL used memory fell from 6.9 GiB to 1.5 GiB after serial restart; system memory figures include all WSL processes, not just this project.
+- Installed MFA is CPU Kaldi; Praat and current SciPy feature kernels are also CPU. Do not replace the validated aligner or pretend these stages run on GPU. New participant ASR uses configured WhisperX large-v3 on CUDA when available, batch one, fixed beam/temperature; the explicit earlier CPU transcript-calibration/secondary-ASR settings remain unchanged.
+
+## 2026-10-07 — Phase 4 final review and autonomous continuation
+
+- Important cache finding fixed: feature reuse binds HQ FLAC hashes as well as real alignment artifacts. A constant-boundary fixture with halved audio gain recomputes measured intensity by approximately -6.02 dB; cache replay is unchanged for unchanged audio.
+- Important CLI finding fixed: `human script` runs independently of dataset workers with the configured seed. Both behavior regressions were observed failing before implementation; the full suite passes 125 tests.
+- Minor findings deferred after the single final review: shard runtime telemetry changes on cold rebuild; the dataset card includes prospective manifest sources and lacks a label example. These do not alter audio/alignment/feature hashes; do not claim whole-shard byte determinism.
+- Human takes, listening labels and publication consent remain missing, not waived or invented. Synthetic engineering and independent downstream algorithms can advance under the latest autonomous scope, but Dataset v1 / human validation cannot be claimed accepted.
+- Phase 5 formula conflict: specified n=1,n0=5 shrinkage gives sqrt(5/6) times pooled sigma (about 0.913), not within 1 percent. Preserve the formula and test its exact result; zero pooled spread requires an explicit positive scale floor to avoid division by zero.
+
 ## 2026-10-07 — final Phase 1 analysis and autonomous continuation
 
 Current order: correct provenance/counts; signed/bias/bootstrap/breakdown diagnostics; deterministic committed G2P dictionary experiment; MFA promotion; QA, acceptance and tests; commit/push. The latest user then authorizes continuing later phases without approval pauses. Respect missing user-audio and human-evidence limits; never fabricate them.
@@ -93,3 +131,17 @@ Final: minor (deferred): repeated preview comparison clicks retain old playback
 callbacks. Single comparisons work; this demo-aid polish does not alter audio,
 labels or objective measurements. Listening realism/human acceptance and Phase 4
 mixed-file behavior are not established by the Phase 3 review.
+
+Ruling: intentional JFK excerpt coverage is compared against its best canonical
+substring (semiglobal token alignment), not the full 2,233-token address. Otherwise
+unrecorded bookends incorrectly exclude this required Mode B source. The initial,
+uncommitted draft split was manually corrected before any dataset was generated;
+subsequent split changes are rejected. Cost if wrong: an inaccurately chosen
+excerpt could underestimate deviation. The source transcript remains the frozen
+automatically verified as-spoken text, with uncertainty masks preserved.
+
+Ruling: the Phase 1 short/long-word flags are alignment risks, not automatic
+source exclusions. Apply the Phase 4 clipping, pitch and transcript-deviation
+criteria. O Captain reader lv_rg has clipped samples and is excluded. This yields
+29 usable sources: 18 train, 4 dev, 7 test. Cost if wrong: alignment-risk sources
+can reduce feature quality; their Phase 1 QA provenance is retained.

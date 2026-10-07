@@ -225,6 +225,20 @@ def aggregate_features(frames: pd.DataFrame, alignment: dict, ranges: dict, paus
     return words,pd.DataFrame(windows),sentence_table,stats
 
 
+def extract_features(root: Path, audio: Path, alignment: dict, settings: dict) -> dict[str,str]:
+    """Extract a full feature bundle for any real alignment, including synthetic FLAC."""
+    Alignment.model_validate(alignment)
+    y,sr=sf.read(audio,dtype='float64')
+    if sr!=44100 or y.ndim!=1:raise ValueError('Features require 44.1 kHz mono HQ audio')
+    rid=alignment['recording_id'];base=root/'data/features'
+    frames,ranges=frame_tracks(y,sr,settings['pitch_ceiling_q3_factor'])
+    words,windows,sentences,stats=aggregate_features(frames,alignment,ranges,settings['pause_threshold_s'])
+    paths=[base/folder/f'{rid}.parquet' for folder in ('frames','words','windows','sentences')]+[base/'speaker_stats'/f'{rid}.json']
+    for path,table in zip(paths,(frames,words,windows,sentences)):write_parquet(path,table)
+    _write_json(paths[-1],stats)
+    return {str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+
+
 def features_all(force: bool = False) -> None:
     """Generate all five feature outputs for promoted sources, with hash-bound caching."""
     root=Path.cwd();cfg=yaml.safe_load((root/'configs/default.yaml').read_text());settings=cfg['features']
@@ -244,11 +258,7 @@ def features_all(force: bool = False) -> None:
         cached=cached and all(p.exists() and old.get('artifacts',{}).get(str(p.relative_to(root)))==hashlib.sha256(p.read_bytes()).hexdigest() for p in paths)
         if not cached:
             LOGGER.info('Features: %s',rid)
-            alignment=json.loads(alignment_path.read_text());Alignment.model_validate(alignment)
-            y,sr=sf.read(audio,dtype='float64');frames,ranges=frame_tracks(y,sr,settings['pitch_ceiling_q3_factor'])
-            words,windows,sentences,stats=aggregate_features(frames,alignment,ranges,settings['pause_threshold_s'])
-            for path,table in zip(paths,(frames,words,windows,sentences)):write_parquet(path,table)
-            paths[-1].parent.mkdir(parents=True,exist_ok=True);_write_json(paths[-1],stats)
+            extract_features(root,audio,json.loads(alignment_path.read_text()),settings)
         artifacts.update({str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths})
     base.mkdir(parents=True,exist_ok=True)
     _write_json(manifest_path,{'schema':'features_provenance/v1','inputs':inputs,'artifacts':artifacts})

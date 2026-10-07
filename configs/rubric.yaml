@@ -1,0 +1,9 @@
+categories:
+  pace: {types: [rushing, dragging], kind: duration}
+  pitch: {types: [monotone], kind: duration}
+  volume: {types: [too_quiet], kind: duration}
+  clarity: {types: [mumbling], kind: duration}
+  pauses: {types: [awkward_pause, missing_pause], kind: event}
+weights: {pace: 0.25, pitch: 0.25, pauses: 0.20, volume: 0.15, clarity: 0.15}
+duration_weight: 10.0
+event_penalty: 0.4

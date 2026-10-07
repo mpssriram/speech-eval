@@ -25,6 +25,90 @@ from speecheval.verify import _hash_bytes, _write_json
 
 LOGGER=logging.getLogger(__name__)
 
+FLAW_TYPES=('rushing','dragging','monotone','too_quiet','mumbling','awkward_pause','missing_pause')
+
+
+def temporal_iou(a: dict,b: dict) -> float:
+    """Intersection/union of second-based intervals; two zero-duration intervals have no IoU."""
+    intersection=max(0.,min(a['end'],b['end'])-max(a['start'],b['start']))
+    union=max(a['end'],b['end'])-min(a['start'],b['start'])
+    return intersection/union if union>0 else 0.
+
+
+def match_regions(predicted: list[dict], truth: list[dict], iou_min: float = .3, pause_tolerance_s: float = .25) -> list[tuple[int,int]]:
+    """Greedy one-to-one highest IoU; pause eligibility uses centre distance."""
+    candidates=[]
+    for p,region in enumerate(predicted):
+        for t,target in enumerate(truth):
+            if region['type']!=target['type']:continue
+            iou=temporal_iou(region,target)
+            if region['type'] in ('awkward_pause','missing_pause'):
+                distance=abs((region['start']+region['end']-target['start']-target['end'])/2)
+                if distance<=pause_tolerance_s:candidates.append((-iou,p,t))
+            elif iou>=iou_min:candidates.append((-iou,p,t))
+    used_p=set();used_t=set();pairs=[]
+    for _,p,t in sorted(candidates):
+        if p not in used_p and t not in used_t:pairs.append((p,t));used_p.add(p);used_t.add(t)
+    return pairs
+
+
+def detection_metrics(items: list[dict], iou_min: float = .3, pause_tolerance_s: float = .25) -> dict:
+    """File-aggregated counts, matched boundary errors in ms and clean false alarms/minute."""
+    from scipy.stats import spearmanr
+    buckets={kind:{'predicted':0,'truth':0,'matched':0,'pairs':[],'severities':{str(i):[0,0] for i in range(1,6)},'clean_predictions':0,'clean_minutes':0.} for kind in (*FLAW_TYPES,'overall')}
+    confusion={true:{pred:0 for pred in FLAW_TYPES} for true in FLAW_TYPES}
+    for item in items:
+        predicted=item['predicted'];truth=item['truth'];pairs=match_regions(predicted,truth,iou_min,pause_tolerance_s)
+        for kind,bucket in buckets.items():
+            chosen_p=[p for p in predicted if kind=='overall' or p['type']==kind]
+            chosen_t=[t for t in truth if kind=='overall' or t['type']==kind]
+            chosen_pairs=[(predicted[p],truth[t]) for p,t in pairs if kind=='overall' or truth[t]['type']==kind]
+            bucket['predicted']+=len(chosen_p);bucket['truth']+=len(chosen_t);bucket['matched']+=len(chosen_pairs);bucket['pairs'].extend(chosen_pairs)
+            for t in chosen_t:bucket['severities'][str(t['severity'])][1]+=1
+            for p,t in chosen_pairs:bucket['severities'][str(t['severity'])][0]+=1
+            if item.get('clean',False):
+                bucket['clean_predictions']+=len(chosen_p);bucket['clean_minutes']+=item['duration_s']/60
+        for p in predicted:
+            overlaps=[(temporal_iou(p,t),i,t) for i,t in enumerate(truth)]
+            if not overlaps:continue
+            iou,_,t=max(overlaps,key=lambda x:(x[0],-x[1]))
+            if iou>=iou_min and t['type']!=p['type']:confusion[t['type']][p['type']]+=1
+    result={}
+    for kind,bucket in buckets.items():
+        n_p,n_t,tp=bucket['predicted'],bucket['truth'],bucket['matched'];pairs=bucket['pairs']
+        precision=tp/n_p if n_p else (0. if n_t else None);recall=tp/n_t if n_t else None
+        f1=2*tp/(n_p+n_t) if n_p+n_t else None
+        severity_rho=None
+        if len(pairs)>=2 and len({p['severity'] for p,t in pairs})>1 and len({t['severity'] for p,t in pairs})>1:
+            severity_rho=float(spearmanr([p['severity'] for p,t in pairs],[t['severity'] for p,t in pairs]).statistic)
+        result[kind]={'predicted':n_p,'truth':n_t,'matched':tp,'precision':precision,'recall':recall,'f1':f1,
+            'recall_by_severity':{i:tp_s/n_s if n_s else None for i,(tp_s,n_s) in bucket['severities'].items()},
+            'onset_median_ms':float(np.median([abs(p['start']-t['start'])*1000 for p,t in pairs])) if pairs else None,
+            'offset_median_ms':float(np.median([abs(p['end']-t['end'])*1000 for p,t in pairs])) if pairs else None,
+            'mean_iou':float(np.mean([temporal_iou(p,t) for p,t in pairs])) if pairs else None,
+            'false_alarms_per_minute':bucket['clean_predictions']/bucket['clean_minutes'] if bucket['clean_minutes'] else None,
+            'severity_spearman':severity_rho}
+    result['confusion']=confusion;return result
+
+
+def bootstrap_detection(items: list[dict],resamples: int = 1000,seed: int = 20261001,
+                        iou_min: float = .3,pause_tolerance_s: float = .25) -> dict:
+    """Paired file-level bootstrap for F1 and recall; absent truths have no invented CI."""
+    if not items:raise ValueError('Cannot bootstrap no files')
+    counts={kind:[] for kind in (*FLAW_TYPES,'overall')}
+    for item in items:
+        metrics=detection_metrics([item],iou_min,pause_tolerance_s)
+        for kind in counts:counts[kind].append([metrics[kind][k] for k in ('matched','predicted','truth')])
+    rng=np.random.default_rng(seed);indices=rng.integers(0,len(items),(resamples,len(items)));result={}
+    for kind,values in counts.items():
+        totals=np.asarray(values)[indices].sum(axis=1);tp,n_p,n_t=totals.T
+        with np.errstate(divide='ignore',invalid='ignore'):f1=2*tp/(n_p+n_t);recall=tp/n_t
+        def ci(values):
+            valid=values[np.isfinite(values)]
+            return np.quantile(valid,[.025,.975]).tolist() if len(valid) else None
+        result[kind]={'f1_95ci':ci(f1),'recall_95ci':ci(recall)}
+    return result
+
 
 def validate_dataset(root: Path, config: dict, recordings: list[dict]) -> dict[str,str]:
     """Reject stale or misfiled scored alignments and return hashes of actual artifacts."""
