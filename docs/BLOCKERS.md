@@ -1,5 +1,11 @@
 # Blockers
 
+## 2026-10-07 — Docker and Linux Node are unavailable in the current WSL session
+
+- `docker --version` returned the WSL integration message: Docker command could not be found in this distro. No Docker reinstall or system changes were attempted.
+- `command -v node` found no Linux Node executable; the only `npm` path is the Windows installation under `/mnt/c/Program Files/nodejs/`. Do not run project builds on Windows.
+- API source and project-only Python dependencies can proceed; Docker equivalence and the React build require the existing Docker integration/Linux build runtime to be available. Do not claim those checks pass.
+
 ## 2026-10-07 — User takes are not present in the WSL project
 
 - Read-only inspection of `data/human/raw/` found no files, including no `notes.md` or `CONSENT.md`.
