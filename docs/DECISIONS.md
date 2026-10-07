@@ -47,3 +47,23 @@ Final reviewer did not judge running inference, final report, full tests or comm
 Praatio's generated TextGrid format includes trailing spaces. Preserve supplied gold/todo bytes and generated alignment evidence rather than cosmetically rewriting them; run the whitespace diagnostic with `git -c core.whitespace=-blank-at-eol diff --check`. Other whitespace-error checks remain enabled. Hardware was read from `lscpu`: Intel Core Ultra 9 275HX, 24 CPUs visible in WSL. Both inference paths use one CPU thread/job; no GPU timing is claimed.
 
 Completed evidence: both independent three-recording hash pairs pass (MFA and WhisperX). Pooled medians are 52 and 72 ms respectively: recommend MFA by lower median, not the tie-break. Both fail the spec's 90% within 50 ms target (48.649% / 39.189%). Do not hide this or treat visual gold/spot-checks as error-free human truth. Current source/mask/window checks, cached report/alignment hash checks and 80 tests pass. Stop after the report; primary remains null and no promotion/QA or Phase 2 is attempted in this scope.
+
+## Autonomous continuation, 2026-10-07
+
+The preceding entries describe earlier scopes, not the current state. Phase 1
+promotion and engineering closure are committed in afa25f8. Human spot-checks
+remain pending and neither aligner meets the gold-boundary accuracy target.
+
+Ruling: use the existing phase specs directly, with approval gates and narrative
+phase reports waived by the user. Keep tests, artifact provenance, machine QA,
+and reproducible commands. Docker moves to Phase 9. Cost if wrong: less narrative
+handoff context, but no reduction in executable checks or evidence integrity.
+
+Phase 2 review: fixes exclude uncertain endpoints from adjacent pause features
+and use the same valid-sentence mask for syllable totals and speaking duration.
+Both regressions failed before the fixes. Current corpus has no zero-duration
+words. No human, Docker or downstream detector validity is claimed here.
+
+Final: minor (deferred): the feature unit determinism test serializes a single
+computed table twice. A separate fresh recomputation compared all 150 corpus
+artifacts byte-for-byte successfully; the regression can be strengthened later.

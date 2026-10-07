@@ -59,3 +59,19 @@ as-spoken transcript for actual speech changes, and add `# reviewed: yes` only
 if a human actually performed that review.
 Already reviewed recordings stay in the audit but are excluded from the
 active listen list. Triage does not mark recordings reviewed automatically.
+
+## Feature extraction (WSL)
+
+Run inside `/home/sriram/speech-eval`:
+
+```bash
+env -u PYTHONPATH ~/.local/bin/uv run speecheval features all
+env -u PYTHONPATH ~/.local/bin/uv run speecheval report features
+env -u PYTHONPATH ~/.local/bin/uv run python scripts/check_features.py
+make test
+```
+
+The `features frames` alias produces the complete five-file feature bundle.
+QA is machine-readable in `data/features/qa.json`; the Gettysburg overlay is
+`reports/img/phase02_gettysburg_overlay.png`. No narrative phase reports are
+generated under the current user override. Docker remains deferred to Phase 9.

@@ -11,11 +11,28 @@ transcripts_app = typer.Typer(help="Build and compare speech transcripts.")
 gold_app = typer.Typer(help="Prepare human-labelled alignment gold data.")
 evaluate_app = typer.Typer(help="Evaluate aligners and detectors.")
 report_app = typer.Typer(help="Generate quality-assurance reports.")
+features_app = typer.Typer(help="Extract acoustic features and speaker statistics.")
 
 app.add_typer(transcripts_app, name="transcripts")
 app.add_typer(gold_app, name="gold")
 app.add_typer(evaluate_app, name="evaluate")
 app.add_typer(report_app, name="report")
+app.add_typer(features_app, name="features")
+
+
+@features_app.command("all")
+@features_app.command("frames")
+def features_all(force: bool = typer.Option(False)) -> None:
+    """Extract the complete hash-bound feature bundle for promoted recordings."""
+    from speecheval.features import features_all as extract
+    extract(force=force)
+
+
+@report_app.command("features")
+def features_qa() -> None:
+    """Refresh machine-readable QA and the overlay; no narrative phase report."""
+    from speecheval.features import features_qa as qa
+    qa()
 
 
 @app.callback()

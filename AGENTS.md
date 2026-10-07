@@ -4,6 +4,12 @@ Read this file fully before every task. It is the contract for this repository.
 The phase-by-phase roadmap is `docs/PLAN.md`. Task specs live in `docs/specs/`.
 Do one spec at a time. Do not start work that no spec asks for.
 When a spec step is marked **USER**, stop and report; that step is done by the human.
+Current user override (2026-10-07): execute successive phases autonomously,
+without design/plan approval gates or separate narrative phase reports.
+Keep tests and machine-readable verification evidence; do not fabricate human
+recordings, listening, annotations or ratings. Docker is deferred to Phase 9.
+The overlay review and synthetic-flaw listening review are waived; synthetic
+effects still require objective checks. Commit and push verified work.
 Exception authorized by the user on 2026-10-04: Phase 1 Step 5b listening review
 is replaced by automatic acoustic transcript verification. Record its evidence,
 retain UNSURE cases, and never label automatic results as human-reviewed.
@@ -267,4 +273,5 @@ Generated and human audio is stored as **FLAC** (lossless). Source audio prepare
 1. All acceptance checks in the spec pass.
 2. `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 env -u PYTHONPATH uv run pytest` passes.
 3. Running the spec's commands a second time produces identical outputs (check with `sha256sum`).
-4. A short summary is appended to `docs/specs/PROGRESS.md`: what was done, commands to reproduce, open issues.
+4. Narrative per-phase reports and PROGRESS summaries are waived by the current
+   user override. Preserve reproducible commands, tests and artifact provenance.
