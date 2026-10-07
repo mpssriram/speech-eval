@@ -25,3 +25,9 @@ def test_empty_is_ten_clamping_and_invalid_duration():
     result=s.rubric_scores([{'type':'monotone','start':0.,'end':10.,'severity':5}],10.,config())
     assert result['pitch']==0.
     with pytest.raises(ValueError):s.rubric_scores([],0.,config())
+
+
+def test_negative_weights_cannot_produce_overall_above_ten():
+    settings=config();settings['weights']={'pace':2.,'pitch':-1.}
+    with pytest.raises(ValueError,match='weights'):
+        s.rubric_scores([{'type':'monotone','start':0.,'end':10.,'severity':5}],10.,settings)

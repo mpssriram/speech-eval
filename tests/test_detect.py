@@ -4,7 +4,12 @@ import yaml
 from speecheval import detect as d
 
 
-def config():return yaml.safe_load((Path(__file__).parents[1]/'configs/detector.yaml').read_text())
+def config():
+    """Fixed known-answer fixture; DEV calibration must not change unit-test inputs."""
+    settings=yaml.safe_load((Path(__file__).parents[1]/'configs/detector.yaml').read_text())
+    settings['k']={kind:2. for kind in settings['k']}
+    settings['severity_z_bins']=[2.,2.75,3.5,4.5,6.]
+    return settings
 
 
 def table(n=24):

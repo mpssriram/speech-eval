@@ -16,6 +16,8 @@ inject_app = typer.Typer(help="Generate labelled synthetic speech flaws.")
 dataset_app = typer.Typer(help="Build the speaker-disjoint synthetic dataset.")
 human_app = typer.Typer(help="Prepare user recording instructions without synthesizing voice.")
 reference_app = typer.Typer(help="Build train-only robust reference distributions.")
+validate_app = typer.Typer(help="Validate frozen rubric behavior and reproducibility.")
+norms_app = typer.Typer(help="Build train-only general speaker norms.")
 
 app.add_typer(transcripts_app, name="transcripts")
 app.add_typer(gold_app, name="gold")
@@ -26,6 +28,26 @@ app.add_typer(inject_app, name="inject")
 app.add_typer(dataset_app, name="dataset")
 app.add_typer(human_app, name="human")
 app.add_typer(reference_app, name="reference")
+app.add_typer(validate_app, name="validate")
+app.add_typer(norms_app, name="norms")
+
+
+@norms_app.command('build')
+def norms_build() -> None:
+    from speecheval.mode_c import build_norms
+    build_norms()
+
+
+@validate_app.command('severity')
+def validate_severity() -> None:
+    from speecheval.validation import validate_severity as run
+    run()
+
+
+@validate_app.command('repro')
+def validate_repro() -> None:
+    from speecheval.validation import validate_repro as run
+    run()
 
 
 @app.command("calibrate")
@@ -40,6 +62,12 @@ def evaluate_final() -> None:
     run()
 
 
+@evaluate_app.command('mode-c')
+def evaluate_mode_c() -> None:
+    from speecheval.mode_c import evaluate_mode_c as run
+    run()
+
+
 @reference_app.command("build")
 def reference_build() -> None:
     from speecheval.reference import build_reference,build_baselines
@@ -49,7 +77,7 @@ def reference_build() -> None:
 
 @app.command("analyze")
 def analyze(audio: Path = typer.Argument(...,exists=True,dir_okay=False),
-            text: str = typer.Option(...),mode: str = typer.Option('A'),
+            text: str = typer.Option('own_speech'),mode: str = typer.Option('A'),
             transcript: Path | None = typer.Option(None,exists=True,dir_okay=False),
             exclude_speaker: str | None = typer.Option(None),
             previous: Path | None = typer.Option(None,exists=True,dir_okay=False),plot: bool = typer.Option(False)) -> None:

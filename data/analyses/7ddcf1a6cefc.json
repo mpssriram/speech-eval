@@ -1,0 +1,270 @@
+{
+  "analysis_id": "7ddcf1a6cefc",
+  "detector": {
+    "config_hash": "a551364b8801406928eae8afd57510fb9366ad515d3ea152bd6c0fbdea8a01b2",
+    "engine": "rules"
+  },
+  "duration_s": 156.875,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "jfk_rice__jfk__rushing_s3_01",
+  "reference": {
+    "baseline_recording_id": "jfk_rice__jfk__orig",
+    "exclude_speaker": null,
+    "kind": "distribution",
+    "n_readers": 1,
+    "reference_version": "1fe516e0fc083642748df4c8b607d7477dd054f50892abb799b769de2bab50b1",
+    "text_id": "jfk_rice"
+  },
+  "regions": [
+    {
+      "end": 29.66,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.73,
+        "reference": 0.72,
+        "unit": "s",
+        "z": 14.13
+      },
+      "explanation": "28.9\u201329.7 s, \"best of\": a 0.73 s pause between \"best\" and \"of\" where good readers pause 0.72 s (0.01 s longer, 14 SD above). It breaks the sentence.",
+      "mean_abs_z": 14.13,
+      "severity": 5,
+      "start": 28.93,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 62,
+      "word_start": 61
+    },
+    {
+      "end": 35.66,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.77,
+        "reference": 0.76,
+        "unit": "s",
+        "z": 13.44
+      },
+      "explanation": "34.9\u201335.7 s, \"accept, one\": a 0.77 s pause between \"accept,\" and \"one\" where good readers pause 0.76 s (0.01 s longer, 13 SD above). It breaks the sentence. This phrase contains a number.",
+      "mean_abs_z": 13.44,
+      "severity": 5,
+      "start": 34.89,
+      "tags": [
+        "contains_number"
+      ],
+      "type": "awkward_pause",
+      "word_end": 78,
+      "word_start": 77
+    },
+    {
+      "end": 38.33,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.59,
+        "reference": 0.58,
+        "unit": "s",
+        "z": 17.25
+      },
+      "explanation": "37.7\u201338.3 s, \"postpone, and\": a 0.59 s pause between \"postpone,\" and \"and\" where good readers pause 0.58 s (0.01 s longer, 17 SD above). It breaks the sentence.",
+      "mean_abs_z": 17.25,
+      "severity": 5,
+      "start": 37.74,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 84,
+      "word_start": 83
+    },
+    {
+      "end": 48.95,
+      "evidence": {
+        "feature": "rate",
+        "participant": 0.5803,
+        "reference": 3.948,
+        "unit": "syllables/s",
+        "z": -12.85
+      },
+      "explanation": "39.5\u201349.0 s, \"win, and the others,\": you spoke at 0.58 vs 3.9 syllables/s for good readers (6.8\u00d7 slower, 13 SD below). The phrase loses momentum.",
+      "mean_abs_z": 12.85,
+      "severity": 5,
+      "start": 39.5,
+      "tags": [],
+      "type": "dragging",
+      "word_end": 92,
+      "word_start": 89
+    },
+    {
+      "end": 49.025,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 7.675,
+        "unit": "s",
+        "z": -5521.0
+      },
+      "explanation": "49.0\u201349.0 s, \"too. It\": you paused 6.9e-18 s after \"too.\" where good readers pause 7.7 s (7.7 s shorter, 5.5e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 5521.0,
+      "severity": 5,
+      "start": 48.995,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 94,
+      "word_start": 93
+    },
+    {
+      "end": 55.86,
+      "evidence": {
+        "feature": "rate",
+        "participant": 6.276,
+        "reference": 4.384,
+        "unit": "syllables/s",
+        "z": 2.405
+      },
+      "explanation": "54.6\u201355.9 s, \"in space from low\": you spoke at 6.3 syllables/s; good readers average 4.4 (1.4\u00d7 faster, 2.4 SD above). Rushing this phrase reduces its weight.",
+      "mean_abs_z": 2.405,
+      "severity": 1,
+      "start": 54.64,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 113,
+      "word_start": 110
+    },
+    {
+      "end": 63.79,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.95,
+        "reference": 0.452,
+        "unit": "s",
+        "z": 754.9
+      },
+      "explanation": "62.8\u201363.8 s, \"Presidency. In\": a 0.95 s pause between \"Presidency.\" and \"In\" where good readers pause 0.45 s (0.5 s longer, 7.5e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 754.9,
+      "severity": 5,
+      "start": 62.84,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 136,
+      "word_start": 135
+    },
+    {
+      "end": 74.14,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.03,
+        "reference": 0.661,
+        "unit": "s",
+        "z": 457.9
+      },
+      "explanation": "73.1\u201374.1 s, \"history. We\": a 1 s pause between \"history.\" and \"We\" where good readers pause 0.66 s (0.37 s longer, 4.6e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 457.9,
+      "severity": 5,
+      "start": 73.11,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 158,
+      "word_start": 157
+    },
+    {
+      "end": 113.85,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.67,
+        "reference": 0.66,
+        "unit": "s",
+        "z": 15.32
+      },
+      "explanation": "113.2\u2013113.8 s, \"Canaveral as\": a 0.67 s pause between \"Canaveral\" and \"as\" where good readers pause 0.66 s (0.01 s longer, 15 SD above). It breaks the sentence.",
+      "mean_abs_z": 15.32,
+      "severity": 5,
+      "start": 113.18,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 244,
+      "word_start": 243
+    },
+    {
+      "end": 123.74,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.99,
+        "reference": 0.7,
+        "unit": "s",
+        "z": 358.1
+      },
+      "explanation": "122.8\u2013123.7 s, \"field. Within\": a 0.99 s pause between \"field.\" and \"Within\" where good readers pause 0.7 s (0.29 s longer, 3.6e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 358.1,
+      "severity": 5,
+      "start": 122.75,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 266,
+      "word_start": 265
+    },
+    {
+      "end": 128.3,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.59,
+        "reference": 0.58,
+        "unit": "s",
+        "z": 17.25
+      },
+      "explanation": "127.7\u2013128.3 s, \"satellites have\": a 0.59 s pause between \"satellites\" and \"have\" where good readers pause 0.58 s (0.01 s longer, 17 SD above). It breaks the sentence.",
+      "mean_abs_z": 17.25,
+      "severity": 5,
+      "start": 127.71,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 275,
+      "word_start": 274
+    },
+    {
+      "end": 130.07,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.86,
+        "reference": 0.58,
+        "unit": "s",
+        "z": 402.8
+      },
+      "explanation": "129.2\u2013130.1 s, \"earth. Some\": a 0.86 s pause between \"earth.\" and \"Some\" where good readers pause 0.58 s (0.28 s longer, 4e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 402.8,
+      "severity": 5,
+      "start": 129.21,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 279,
+      "word_start": 278
+    },
+    {
+      "end": 141.325,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.541,
+        "unit": "s",
+        "z": -2706.0
+      },
+      "explanation": "141.3\u2013141.3 s, \"Union. The\": you paused 6.9e-18 s after \"Union.\" where good readers pause 0.54 s (0.54 s shorter, 2.7e+03 SD below). The listener gets no breathing space. This is the speech's final sentence.",
+      "mean_abs_z": 2706.0,
+      "severity": 5,
+      "start": 141.295,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 314,
+      "word_start": 313
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {},
+  "text_id": "jfk_rice",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "count": 12,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

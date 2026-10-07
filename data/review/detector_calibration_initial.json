@@ -1,0 +1,40 @@
+{
+  "config": {
+    "awkward_pause_min_s": 0.45,
+    "engine": "rules",
+    "k": {
+      "awkward_pause": 2.0,
+      "dragging": 2.0,
+      "missing_pause": 2.0,
+      "monotone": 2.0,
+      "mumbling": 2.0,
+      "rushing": 2.0,
+      "too_quiet": 2.0
+    },
+    "key_moments": {
+      "final_drop_min_db": -3.0,
+      "final_rate_max_z": 1.0,
+      "number_pause_min_s": 0.15,
+      "number_rate_multiplier": 1.0
+    },
+    "missing_pause_max_frac": 0.4,
+    "missing_pause_ref_min_s": 0.3,
+    "mode_c": {
+      "k": {
+        "end_pause": 2.0,
+        "final_drop": 2.0,
+        "pitchrange": 2.0,
+        "rate": 2.0
+      }
+    },
+    "region_max_gap_words": 1,
+    "region_min_words": 3,
+    "severity_z_bins": [
+      2.0,
+      2.75,
+      3.5,
+      4.5,
+      6.0
+    ]
+  }
+}

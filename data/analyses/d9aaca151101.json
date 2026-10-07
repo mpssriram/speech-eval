@@ -1,0 +1,173 @@
+{
+  "analysis_id": "d9aaca151101",
+  "detector": {
+    "config_hash": "67077a0f9b8f00728a99bb062a7844f7d47fd3e2a2665cba8d8473e2f56163d8",
+    "engine": "rules"
+  },
+  "duration_s": 126.235,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "gettysburg__lv_pc__awkward_pause_s3_01",
+  "reference": {
+    "baseline_recording_id": "gettysburg__lv_dj__orig",
+    "exclude_speaker": "lv_pc",
+    "kind": "distribution",
+    "n_readers": 10,
+    "reference_version": "58ad3fcafbe53ff6aa95fef42b5691f0bce9007e3de611d9bd46ae3555d70a85",
+    "text_id": "gettysburg"
+  },
+  "regions": [
+    {
+      "end": 9.27,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.51,
+        "reference": 6.939e-18,
+        "unit": "s",
+        "z": 5959.0
+      },
+      "explanation": "7.8\u20139.3 s, \"conceived in\": a 1.5 s pause between \"conceived\" and \"in\" where good readers pause 6.9e-18 s (1.5 s longer, 6e+03 SD above). It breaks the sentence. This is the opening sentence.",
+      "mean_abs_z": 5959.0,
+      "severity": 5,
+      "start": 7.76,
+      "tags": [
+        "first_sentence"
+      ],
+      "type": "awkward_pause",
+      "word_end": 17,
+      "word_start": 16
+    },
+    {
+      "end": 10.08,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.11,
+        "reference": 0.4248,
+        "unit": "s",
+        "z": -2.255
+      },
+      "explanation": "10.0\u201310.1 s, \"Liberty, and\": you paused 0.11 s after \"Liberty,\" where good readers pause 0.42 s (0.31 s shorter, 2.3 SD below). The listener gets no breathing space. This is the opening sentence.",
+      "mean_abs_z": 2.255,
+      "severity": 1,
+      "start": 9.97,
+      "tags": [
+        "first_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 19,
+      "word_start": 18
+    },
+    {
+      "end": 20.89,
+      "evidence": {
+        "feature": "rate",
+        "participant": 6.017,
+        "reference": 4.24,
+        "unit": "syllables/s",
+        "z": 2.586
+      },
+      "explanation": "19.9\u201320.9 s, \"that nation, or any\": you spoke at 6 syllables/s; good readers average 4.2 (1.4\u00d7 faster, 2.6 SD above). Rushing this phrase reduces its weight.",
+      "mean_abs_z": 2.586,
+      "severity": 1,
+      "start": 19.88,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 44,
+      "word_start": 41
+    },
+    {
+      "end": 46.05,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.54,
+        "reference": 0.02416,
+        "unit": "s",
+        "z": 4.346
+      },
+      "explanation": "45.5\u201346.0 s, \"But, in\": a 0.54 s pause between \"But,\" and \"in\" where good readers pause 0.024 s (0.52 s longer, 4.3 SD above). It breaks the sentence.",
+      "mean_abs_z": 4.346,
+      "severity": 3,
+      "start": 45.51,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 103,
+      "word_start": 102
+    },
+    {
+      "end": 80.14,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.07,
+        "reference": 0.3279,
+        "unit": "s",
+        "z": -2.729
+      },
+      "explanation": "80.1\u201380.1 s, \"work which\": you paused 0.07 s after \"work\" where good readers pause 0.33 s (0.26 s shorter, 2.7 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2.729,
+      "severity": 1,
+      "start": 80.07,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 177,
+      "word_start": 176
+    },
+    {
+      "end": 114.2,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.1,
+        "reference": 0.4275,
+        "unit": "s",
+        "z": -3.226
+      },
+      "explanation": "114.1\u2013114.2 s, \"people, by\": you paused 0.1 s after \"people,\" where good readers pause 0.43 s (0.33 s shorter, 3.2 SD below). The listener gets no breathing space. This is the speech's final sentence.",
+      "mean_abs_z": 3.226,
+      "severity": 2,
+      "start": 114.1,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 258,
+      "word_start": 257
+    },
+    {
+      "end": 120.77,
+      "evidence": {
+        "feature": "pause",
+        "participant": 2.81,
+        "reference": 0.1745,
+        "unit": "s",
+        "z": 3.196
+      },
+      "explanation": "118.0\u2013120.8 s, \"perish from\": a 2.8 s pause between \"perish\" and \"from\" where good readers pause 0.17 s (2.6 s longer, 3.2 SD above). It breaks the sentence. This is the speech's final sentence.",
+      "mean_abs_z": 3.196,
+      "severity": 2,
+      "start": 117.96,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "awkward_pause",
+      "word_end": 268,
+      "word_start": 267
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 8.9,
+    "pace": 9.9,
+    "pauses": 4.4,
+    "pitch": 10.0,
+    "volume": 10.0
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "count": 6,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

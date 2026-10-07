@@ -1,0 +1,315 @@
+{
+  "analysis_id": "3b780f3a9236",
+  "detector": {
+    "config_hash": "67077a0f9b8f00728a99bb062a7844f7d47fd3e2a2665cba8d8473e2f56163d8",
+    "engine": "rules"
+  },
+  "duration_s": 87.621,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "o_captain__lv_s__dragging_s2_01",
+  "reference": {
+    "baseline_recording_id": "o_captain__lv_mac__orig",
+    "exclude_speaker": "lv_s",
+    "kind": "distribution",
+    "n_readers": 8,
+    "reference_version": "3ce4cc030bcc92be2927420a5f0407f1f50cd9b0ea97085645410de2e05a3e75",
+    "text_id": "o_captain"
+  },
+  "regions": [
+    {
+      "end": 4.78,
+      "evidence": {
+        "feature": "rate",
+        "participant": 6.304,
+        "reference": 4.617,
+        "unit": "syllables/s",
+        "z": 2.782
+      },
+      "explanation": "3.9\u20134.8 s, \"The ship has weather\u2019d\": you spoke at 6.3 syllables/s; good readers average 4.6 (1.4\u00d7 faster, 2.8 SD above). Rushing this phrase reduces its weight.",
+      "mean_abs_z": 2.782,
+      "severity": 2,
+      "start": 3.93,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 12,
+      "word_start": 9
+    },
+    {
+      "end": 7.94,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.79,
+        "reference": 0.6069,
+        "unit": "s",
+        "z": 2.206
+      },
+      "explanation": "7.2\u20137.9 s, \"won, The\": a 0.79 s pause between \"won,\" and \"The\" where good readers pause 0.61 s (0.18 s longer, 2.2 SD above). It breaks the sentence.",
+      "mean_abs_z": 2.206,
+      "severity": 1,
+      "start": 7.15,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 21,
+      "word_start": 20
+    },
+    {
+      "end": 15.07,
+      "evidence": {
+        "feature": "loud",
+        "participant": -15.69,
+        "reference": -6.052,
+        "unit": "dB",
+        "z": -3.688
+      },
+      "explanation": "13.7\u201315.1 s, \"steady keel, the\": 9.6 dB quieter than good readers relative to your own average level (3.7 SD below).",
+      "mean_abs_z": 3.688,
+      "severity": 3,
+      "start": 13.72,
+      "tags": [],
+      "type": "too_quiet",
+      "word_end": 39,
+      "word_start": 37
+    },
+    {
+      "end": 24.14,
+      "evidence": {
+        "feature": "loud",
+        "participant": -9.535,
+        "reference": -3.768,
+        "unit": "dB",
+        "z": -2.814
+      },
+      "explanation": "23.4\u201324.1 s, \"on the deck\": 5.8 dB quieter than good readers relative to your own average level (2.8 SD below).",
+      "mean_abs_z": 2.814,
+      "severity": 2,
+      "start": 23.41,
+      "tags": [],
+      "type": "too_quiet",
+      "word_end": 58,
+      "word_start": 56
+    },
+    {
+      "end": 27.8,
+      "evidence": {
+        "feature": "loud",
+        "participant": -15.5,
+        "reference": -6.46,
+        "unit": "dB",
+        "z": -3.838
+      },
+      "explanation": "26.2\u201327.8 s, \"cold and dead.\": 9 dB quieter than good readers relative to your own average level (3.8 SD below). Your voice trails off at the end of the sentence. This region reaches a sentence ending.",
+      "mean_abs_z": 3.838,
+      "severity": 3,
+      "start": 26.24,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "too_quiet",
+      "word_end": 65,
+      "word_start": 63
+    },
+    {
+      "end": 31.76,
+      "evidence": {
+        "feature": "loud",
+        "participant": -9.793,
+        "reference": -2.582,
+        "unit": "dB",
+        "z": -2.822
+      },
+      "explanation": "30.2\u201331.8 s, \"Captain! rise up and\": 7.2 dB quieter than good readers relative to your own average level (2.8 SD below).",
+      "mean_abs_z": 2.822,
+      "severity": 2,
+      "start": 30.18,
+      "tags": [],
+      "type": "too_quiet",
+      "word_end": 72,
+      "word_start": 69
+    },
+    {
+      "end": 37.67,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.62,
+        "reference": 0.4105,
+        "unit": "s",
+        "z": 5.031
+      },
+      "explanation": "37.0\u201337.7 s, \"trills, For\": a 0.62 s pause between \"trills,\" and \"For\" where good readers pause 0.41 s (0.21 s longer, 5 SD above). It breaks the sentence.",
+      "mean_abs_z": 5.031,
+      "severity": 4,
+      "start": 37.05,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 89,
+      "word_start": 88
+    },
+    {
+      "end": 47.3,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.11,
+        "reference": 0.6729,
+        "unit": "s",
+        "z": 2.52
+      },
+      "explanation": "46.2\u201347.3 s, \"turning; Here\": a 1.1 s pause between \"turning;\" and \"Here\" where good readers pause 0.67 s (0.44 s longer, 2.5 SD above). It breaks the sentence.",
+      "mean_abs_z": 2.52,
+      "severity": 1,
+      "start": 46.19,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 111,
+      "word_start": 110
+    },
+    {
+      "end": 50.24,
+      "evidence": {
+        "feature": "loud",
+        "participant": -5.821,
+        "reference": -1.28,
+        "unit": "dB",
+        "z": -2.215
+      },
+      "explanation": "49.3\u201350.2 s, \"This arm beneath your\": 4.5 dB quieter than good readers relative to your own average level (2.2 SD below).",
+      "mean_abs_z": 2.215,
+      "severity": 1,
+      "start": 49.26,
+      "tags": [],
+      "type": "too_quiet",
+      "word_end": 118,
+      "word_start": 115
+    },
+    {
+      "end": 51.66,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.91,
+        "reference": 0.553,
+        "unit": "s",
+        "z": 10.26
+      },
+      "explanation": "50.8\u201351.7 s, \"head! It\": a 0.91 s pause between \"head!\" and \"It\" where good readers pause 0.55 s (0.36 s longer, 10 SD above). It breaks the sentence.",
+      "mean_abs_z": 10.26,
+      "severity": 5,
+      "start": 50.75,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 120,
+      "word_start": 119
+    },
+    {
+      "end": 55.19,
+      "evidence": {
+        "feature": "loud",
+        "participant": -14.72,
+        "reference": -5.412,
+        "unit": "dB",
+        "z": -4.277
+      },
+      "explanation": "53.7\u201355.2 s, \"You\u2019ve fallen cold\": 9.3 dB quieter than good readers relative to your own average level (4.3 SD below).",
+      "mean_abs_z": 4.277,
+      "severity": 3,
+      "start": 53.72,
+      "tags": [],
+      "type": "too_quiet",
+      "word_end": 130,
+      "word_start": 128
+    },
+    {
+      "end": 67.58,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.09,
+        "reference": 0.7249,
+        "unit": "s",
+        "z": 2.904
+      },
+      "explanation": "66.5\u201367.6 s, \"will, The\": a 1.1 s pause between \"will,\" and \"The\" where good readers pause 0.72 s (0.37 s longer, 2.9 SD above). It breaks the sentence.",
+      "mean_abs_z": 2.904,
+      "severity": 2,
+      "start": 66.49,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 157,
+      "word_start": 156
+    },
+    {
+      "end": 70.8,
+      "evidence": {
+        "feature": "loud",
+        "participant": -10.52,
+        "reference": -5.32,
+        "unit": "dB",
+        "z": -2.227
+      },
+      "explanation": "69.6\u201370.8 s, \"voyage closed and\": 5.2 dB quieter than good readers relative to your own average level (2.2 SD below).",
+      "mean_abs_z": 2.227,
+      "severity": 1,
+      "start": 69.62,
+      "tags": [],
+      "type": "too_quiet",
+      "word_end": 167,
+      "word_start": 165
+    },
+    {
+      "end": 81.45,
+      "evidence": {
+        "feature": "loud",
+        "participant": -12.56,
+        "reference": -3.892,
+        "unit": "dB",
+        "z": -3.445
+      },
+      "explanation": "79.2\u201381.5 s, \"But I with mournful tread,\": 8.7 dB quieter than good readers relative to your own average level (3.4 SD below). Your voice trails off at the end of the sentence. This region reaches a sentence ending.",
+      "mean_abs_z": 3.445,
+      "severity": 2,
+      "start": 79.23,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "too_quiet",
+      "word_end": 191,
+      "word_start": 187
+    },
+    {
+      "end": 84.68,
+      "evidence": {
+        "feature": "loud",
+        "participant": -16.43,
+        "reference": -9.184,
+        "unit": "dB",
+        "z": -2.854
+      },
+      "explanation": "82.6\u201384.7 s, \"the deck my Captain lies,\": 7.2 dB quieter than good readers relative to your own average level (2.9 SD below). Your voice trails off at the end of the sentence. This region reaches a sentence ending.",
+      "mean_abs_z": 2.854,
+      "severity": 2,
+      "start": 82.6,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "too_quiet",
+      "word_end": 197,
+      "word_start": 193
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 8.4,
+    "pace": 9.8,
+    "pauses": 4.8,
+    "pitch": 10.0,
+    "volume": 6.7
+  },
+  "text_id": "o_captain",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "count": 0,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

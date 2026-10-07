@@ -150,7 +150,10 @@ def analyze(audio: Path, text_id: str, mode: str = 'A', transcript: Path | None 
     from speecheval.explain import explanation
     from speecheval.verify import _write_json
     root=root or Path.cwd();audio=audio.resolve()
-    if mode not in ('A','B'):raise ValueError('Supported modes are A and B')
+    if mode=='C':
+        from speecheval.mode_c import analyze_mode_c
+        return analyze_mode_c(audio,text_id,transcript,root)
+    if mode not in ('A','B'):raise ValueError('Supported modes are A, B and C')
     if mode=='B' and previous is None:raise ValueError('Mode B requires --previous')
     rid,source=prepare_participant(audio,text_id,root,transcript)
     previous_id=prepare_participant(previous.resolve(),text_id,root)[0] if previous else None
@@ -175,15 +178,21 @@ def analyze(audio: Path, text_id: str, mode: str = 'A', transcript: Path | None 
         region['evidence']=rounded(region['evidence'])
     # Bind actual measured alignment/features as well as the specified identity fields:
     # alternate as-read transcripts must not collide for identical input audio.
-    measured=json.dumps({'alignment':alignment,'values':rounded(values),'code':{name:hashlib.sha256((Path(__file__).parent/name).read_bytes()).hexdigest() for name in ('pipeline.py','detect.py','explain.py')}},sort_keys=True).encode()
+    rubric_path=root/'configs/rubric.yaml';rubric=yaml.safe_load(rubric_path.read_text())
+    measured=json.dumps({'alignment':alignment,'values':rounded(values),'rubric_sha256':hashlib.sha256(rubric_path.read_bytes()).hexdigest(),
+                         'code':{name:hashlib.sha256((Path(__file__).parent/name).read_bytes()).hexdigest() for name in ('pipeline.py','detect.py','explain.py','score.py')}},sort_keys=True).encode()
     analysis_id=hashlib.sha256(audio.read_bytes()+mode.encode()+reference['reference_version'].encode()+config_hash.encode()+measured).hexdigest()[:12]
     baselines=yaml.safe_load((root/'configs/baselines.yaml').read_text()) if (root/'configs/baselines.yaml').exists() else {}
+    from decimal import Decimal
+    from speecheval.score import rubric_scores
+    speech_duration=Decimal(str(words[-1]['end']))-Decimal(str(words[0]['start']))
     result={'schema':'analysis/v1','analysis_id':analysis_id,'recording_id':rid,'text_id':text_id,'mode':mode,
             'reference':{'kind':'previous_take' if mode=='B' else 'distribution','text_id':text_id,'exclude_speaker':exclude_speaker,
                          'n_readers':reference['n_readers'],'reference_version':reference['reference_version'],
                          'baseline_recording_id':previous_id if mode=='B' else baselines.get(text_id)},
             'transcript_source':source,'detector':{'engine':'rules','config_hash':config_hash},
-            'duration_s':alignment['duration_s'],'regions':regions,'key_moments':[],'scores':{},'progress':None,
+            'duration_s':alignment['duration_s'],'regions':regions,'key_moments':[],
+            'scores':rubric_scores(regions,speech_duration,rubric),'progress':None,
             'warnings':alignment['warnings']+[{'type':'unmatched_reference_words','count':mapping.count(None)}]}
     if mode=='B':
         from speecheval.detect import TYPES

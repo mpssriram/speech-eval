@@ -1,0 +1,377 @@
+{
+  "analysis_id": "50e67a0c09a9",
+  "detector": {
+    "config_hash": "67077a0f9b8f00728a99bb062a7844f7d47fd3e2a2665cba8d8473e2f56163d8",
+    "engine": "rules"
+  },
+  "duration_s": 131.566,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "gettysburg__lv_rk__awkward_pause_s4_01",
+  "reference": {
+    "baseline_recording_id": "gettysburg__lv_dj__orig",
+    "exclude_speaker": "lv_rk",
+    "kind": "distribution",
+    "n_readers": 10,
+    "reference_version": "0fe716ebad5ffdacaa21e37896b0b125d10ebeb5284db050fa87870f9607c3f6",
+    "text_id": "gettysburg"
+  },
+  "regions": [
+    {
+      "end": 42.45,
+      "evidence": {
+        "feature": "loud",
+        "participant": -9.253,
+        "reference": -2.765,
+        "unit": "dB",
+        "z": -2.791
+      },
+      "explanation": "40.8\u201342.5 s, \"It is altogether fitting\": 6.5 dB quieter than good readers relative to your own average level (2.8 SD below).",
+      "mean_abs_z": 2.791,
+      "severity": 2,
+      "start": 40.79,
+      "tags": [],
+      "type": "too_quiet",
+      "word_end": 93,
+      "word_start": 90
+    },
+    {
+      "end": 50.44,
+      "evidence": {
+        "feature": "pitchvar",
+        "participant": 1.267,
+        "reference": 2.767,
+        "unit": "semitones",
+        "z": -2.6
+      },
+      "explanation": "48.8\u201350.4 s, \"we can not consecrate\": your pitch varied by 1.3 semitones; good readers vary by 2.8 (54% less variation, 2.6 SD below). The phrase sounds flat.",
+      "mean_abs_z": 2.6,
+      "severity": 1,
+      "start": 48.75,
+      "tags": [],
+      "type": "monotone",
+      "word_end": 113,
+      "word_start": 110
+    },
+    {
+      "end": 61.56,
+      "evidence": {
+        "feature": "clarity",
+        "participant": -31.09,
+        "reference": -20.04,
+        "unit": "dB",
+        "z": -2.566
+      },
+      "explanation": "60.5\u201361.6 s, \"power to add\": high-frequency energy (consonant clarity) is 11 dB lower than good readers (2.6 SD below). Words may sound muffled.",
+      "mean_abs_z": 2.566,
+      "severity": 1,
+      "start": 60.45,
+      "tags": [],
+      "type": "mumbling",
+      "word_end": 138,
+      "word_start": 136
+    },
+    {
+      "end": 61.76,
+      "evidence": {
+        "feature": "pitchvar",
+        "participant": 0.8245,
+        "reference": 1.978,
+        "unit": "semitones",
+        "z": -3.053
+      },
+      "explanation": "60.5\u201361.8 s, \"power to add or\": your pitch varied by 0.82 semitones; good readers vary by 2 (58% less variation, 3.1 SD below). The phrase sounds flat.",
+      "mean_abs_z": 3.053,
+      "severity": 2,
+      "start": 60.45,
+      "tags": [],
+      "type": "monotone",
+      "word_end": 139,
+      "word_start": 136
+    },
+    {
+      "end": 67.69,
+      "evidence": {
+        "feature": "rate",
+        "participant": 2.972,
+        "reference": 4.716,
+        "unit": "syllables/s",
+        "z": -2.129
+      },
+      "explanation": "66.1\u201367.7 s, \"remember what we\": you spoke at 3 vs 4.7 syllables/s for good readers (1.6\u00d7 slower, 2.1 SD below). The phrase loses momentum.",
+      "mean_abs_z": 2.129,
+      "severity": 1,
+      "start": 66.13,
+      "tags": [],
+      "type": "dragging",
+      "word_end": 150,
+      "word_start": 148
+    },
+    {
+      "end": 69.73,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.07,
+        "reference": 0.5997,
+        "unit": "s",
+        "z": 2.089
+      },
+      "explanation": "68.7\u201369.7 s, \"here, but\": a 1.1 s pause between \"here,\" and \"but\" where good readers pause 0.6 s (0.47 s longer, 2.1 SD above). It breaks the sentence.",
+      "mean_abs_z": 2.089,
+      "severity": 1,
+      "start": 68.66,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 153,
+      "word_start": 152
+    },
+    {
+      "end": 72.77,
+      "evidence": {
+        "feature": "loud",
+        "participant": -32.08,
+        "reference": -4.628,
+        "unit": "dB",
+        "z": -11.65
+      },
+      "explanation": "69.9\u201372.8 s, \"it can never\": 27 dB quieter than good readers relative to your own average level (12 SD below).",
+      "mean_abs_z": 11.65,
+      "severity": 5,
+      "start": 69.87,
+      "tags": [],
+      "type": "too_quiet",
+      "word_end": 156,
+      "word_start": 154
+    },
+    {
+      "end": 72.43,
+      "evidence": {
+        "feature": "pause",
+        "participant": 2.15,
+        "reference": 6.939e-18,
+        "unit": "s",
+        "z": 6554.0
+      },
+      "explanation": "70.3\u201372.4 s, \"can never\": a 2.1 s pause between \"can\" and \"never\" where good readers pause 6.9e-18 s (2.1 s longer, 6.6e+03 SD above). It breaks the sentence.",
+      "mean_abs_z": 6554.0,
+      "severity": 5,
+      "start": 70.28,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 156,
+      "word_start": 155
+    },
+    {
+      "end": 77.99,
+      "evidence": {
+        "feature": "clarity",
+        "participant": -28.89,
+        "reference": -17.79,
+        "unit": "dB",
+        "z": -3.027
+      },
+      "explanation": "77.3\u201378.0 s, \"rather, to be\": high-frequency energy (consonant clarity) is 11 dB lower than good readers (3 SD below). Words may sound muffled.",
+      "mean_abs_z": 3.027,
+      "severity": 2,
+      "start": 77.28,
+      "tags": [],
+      "type": "mumbling",
+      "word_end": 170,
+      "word_start": 168
+    },
+    {
+      "end": 77.725,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.3641,
+        "unit": "s",
+        "z": -2.762
+      },
+      "explanation": "77.7\u201377.7 s, \"rather, to\": you paused 6.9e-18 s after \"rather,\" where good readers pause 0.36 s (0.36 s shorter, 2.8 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2.762,
+      "severity": 2,
+      "start": 77.695,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 169,
+      "word_start": 168
+    },
+    {
+      "end": 80.87,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.1,
+        "reference": 0.3279,
+        "unit": "s",
+        "z": -2.198
+      },
+      "explanation": "80.8\u201380.9 s, \"work which\": you paused 0.1 s after \"work\" where good readers pause 0.33 s (0.23 s shorter, 2.2 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2.198,
+      "severity": 1,
+      "start": 80.77,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 177,
+      "word_start": 176
+    },
+    {
+      "end": 95.6,
+      "evidence": {
+        "feature": "pitchvar",
+        "participant": 0.9065,
+        "reference": 2.584,
+        "unit": "semitones",
+        "z": -2.836
+      },
+      "explanation": "94.6\u201395.6 s, \"honored dead we\": your pitch varied by 0.91 semitones; good readers vary by 2.6 (65% less variation, 2.8 SD below). The phrase sounds flat. This is the speech's final sentence.",
+      "mean_abs_z": 2.836,
+      "severity": 2,
+      "start": 94.62,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "monotone",
+      "word_end": 209,
+      "word_start": 207
+    },
+    {
+      "end": 98.24,
+      "evidence": {
+        "feature": "loud",
+        "participant": -18.62,
+        "reference": -8.106,
+        "unit": "dB",
+        "z": -3.329
+      },
+      "explanation": "96.0\u201398.2 s, \"increased devotion to\": 11 dB quieter than good readers relative to your own average level (3.3 SD below). This is the speech's final sentence.",
+      "mean_abs_z": 3.329,
+      "severity": 2,
+      "start": 96.0,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "too_quiet",
+      "word_end": 213,
+      "word_start": 211
+    },
+    {
+      "end": 107.34,
+      "evidence": {
+        "feature": "pitchvar",
+        "participant": 1.177,
+        "reference": 2.452,
+        "unit": "semitones",
+        "z": -2.163
+      },
+      "explanation": "106.5\u2013107.3 s, \"that these dead\": your pitch varied by 1.2 semitones; good readers vary by 2.5 (52% less variation, 2.2 SD below). The phrase sounds flat. This is the speech's final sentence.",
+      "mean_abs_z": 2.163,
+      "severity": 1,
+      "start": 106.48,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "monotone",
+      "word_end": 233,
+      "word_start": 231
+    },
+    {
+      "end": 112.87,
+      "evidence": {
+        "feature": "pitchvar",
+        "participant": 1.053,
+        "reference": 2.032,
+        "unit": "semitones",
+        "z": -2.373
+      },
+      "explanation": "108.5\u2013112.9 s, \"in vain that this nation, under God, shall have\": your pitch varied by 1.1 semitones; good readers vary by 2 (48% less variation, 2.4 SD below). The phrase sounds flat. This is the speech's final sentence.",
+      "mean_abs_z": 2.373,
+      "severity": 1,
+      "start": 108.52,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "monotone",
+      "word_end": 246,
+      "word_start": 238
+    },
+    {
+      "end": 118.65,
+      "evidence": {
+        "feature": "rate",
+        "participant": 2.911,
+        "reference": 4.504,
+        "unit": "syllables/s",
+        "z": -2.863
+      },
+      "explanation": "116.9\u2013118.7 s, \"the people, by the\": you spoke at 2.9 vs 4.5 syllables/s for good readers (1.5\u00d7 slower, 2.9 SD below). The phrase loses momentum. This is the speech's final sentence.",
+      "mean_abs_z": 2.863,
+      "severity": 2,
+      "start": 116.86,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "dragging",
+      "word_end": 259,
+      "word_start": 256
+    },
+    {
+      "end": 118.07,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.03,
+        "reference": 0.4275,
+        "unit": "s",
+        "z": -4.977
+      },
+      "explanation": "118.0\u2013118.1 s, \"people, by\": you paused 0.03 s after \"people,\" where good readers pause 0.43 s (0.4 s shorter, 5 SD below). The listener gets no breathing space. This is the speech's final sentence.",
+      "mean_abs_z": 4.977,
+      "severity": 4,
+      "start": 118.04,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 258,
+      "word_start": 257
+    },
+    {
+      "end": 119.4,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.12,
+        "reference": 0.4544,
+        "unit": "s",
+        "z": -2.4
+      },
+      "explanation": "119.3\u2013119.4 s, \"people, for\": you paused 0.12 s after \"people,\" where good readers pause 0.45 s (0.33 s shorter, 2.4 SD below). The listener gets no breathing space. This is the speech's final sentence.",
+      "mean_abs_z": 2.4,
+      "severity": 1,
+      "start": 119.28,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 261,
+      "word_start": 260
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 9.8,
+    "overall": 8.3,
+    "pace": 9.6,
+    "pauses": 4.4,
+    "pitch": 9.1,
+    "volume": 8.3
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "count": 3,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

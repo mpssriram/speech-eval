@@ -7,7 +7,8 @@ def rubric_scores(regions: list[dict], duration_s: float | Decimal, config: dict
     duration=Decimal(str(duration_s))
     if not duration.is_finite() or duration<=0:raise ValueError('Speech duration must be positive')
     weights={key:Decimal(str(value)) for key,value in config['weights'].items()}
-    if sum(weights.values())!=1:raise ValueError('Rubric weights must sum to one')
+    if (set(weights)!=set(config['categories']) or any(not value.is_finite() or value<0 for value in weights.values())
+            or sum(weights.values())!=1):raise ValueError('Rubric weights must be finite, nonnegative, cover categories, and sum to one')
     values={}
     for category,spec in config['categories'].items():
         penalty=Decimal(0)

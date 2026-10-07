@@ -35,6 +35,8 @@ def test_analysis_json_replays_identically_on_real_features(tmp_path):
     from speecheval import features as feature_module
     (tmp_path/'configs').mkdir()
     (tmp_path/'configs/detector.yaml').write_text(yaml.safe_dump(config()))
+    from test_score import config as rubric_config
+    (tmp_path/'configs/rubric.yaml').write_text(yaml.safe_dump(rubric_config()))
     settings={'pitch_ceiling_q3_factor':1.5,'pause_threshold_s':.25}
     (tmp_path/'configs/default.yaml').write_text(yaml.safe_dump({'features':settings}))
     proof={'inputs':{'recordings':{},'settings':settings,
@@ -60,6 +62,7 @@ def test_analysis_json_replays_identically_on_real_features(tmp_path):
     result=p.analyze(target,'gettysburg',exclude_speaker='alice',root=tmp_path)
     output=tmp_path/'data/analyses'/f"{result['analysis_id']}.json";before=output.read_bytes()
     assert result['reference']['n_readers']==1 and result['schema']=='analysis/v1'
+    assert set(result['scores'])=={'pace','pitch','volume','clarity','pauses','overall'}
     assert p.analyze(target,'gettysburg',exclude_speaker='alice',root=tmp_path)==result
     assert output.read_bytes()==before
     sf.write(target,.05*np.sin(2*np.pi*150*np.arange(44100)/44100),44100)
