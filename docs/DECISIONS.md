@@ -1,5 +1,50 @@
 # Execution decisions
 
+## 2026-10-07 — Phase 9 HTTP boundary and visual brief
+
+The API uses one sequential worker and atomic JSON job states. Request IDs bind
+audio bytes, mode/text/transcript/previous take, actual train reference inputs,
+canonical transcripts, configs, pipeline code, installed scientific versions and
+model/dictionary hashes. Request IDs and the nested pipeline analysis IDs are
+both content-addressed, but name different artifacts. Job creation order is
+telemetry only and never enters scores or deterministic analysis JSON.
+
+New A/B uploads without a supplied as-read transcript align the canonical text
+on CPU; the UI must state this assumption. Exact byte-matching stored corpus
+audio reuses its verified as-spoken transcript. Mode C without a transcript
+for a selected text may use GPU ASR; arbitrary speeches require pasted text.
+No stored waveform is loudness-normalized. Streaming WebM duration is measured
+from decoded samples, bounded at 601 seconds before applying the 600 s limit.
+
+API review Important findings were accepted: decode streaming containers;
+bind canonical/runtime/model inputs to HTTP cache identity; reject tracks when
+their reference version no longer matches the result; enforce CPU-only A/B;
+include active expert-reference versions in health; order history chronologically.
+Eight API contract tests pass after the fix pass. Minor upload/intermediate
+retention is deferred: these private files stay git-ignored under data/app/;
+disk cleanup remains necessary on a long-lived server.
+Declined review areas remain explicit: human accuracy/annotations pending;
+Docker equivalence and frontend/Compose/browser smoke require execution;
+two-minute new-upload latency is not measured; successful fresh-input alignment,
+Mode B/C, transcript mismatch, interrupted-job recovery need expanded evidence.
+Runtime compatibility is supported by the full suite, not the reviewer's own run.
+
+Frontend brief: audio-first analysis workbench, left-aligned transcript and
+timeline, score summary followed by selectable evidence. Base navy #081422,
+surface #102337, border #294159, text #e5eff7, muted #a8bacb, accent cyan #55d5e8.
+System humanist sans-serif for readable narrative, tabular numerals for scores.
+Seven labeled colors encode flaw types; no decorative gradients or color-only
+signals. Mantine supplies accessible chrome; WaveSurfer 7 handles the shared
+timeline, Plotly physical-unit curves and reference bands. Screenshot critique
+follows a real WSL build. Linux Node 22.23.0 is checksum-verified and extracted
+only inside data/.cache/node-runtime/, never installed system-wide.
+
+The requested rating pack is now 12 clips, overriding the old 18-clip spec.
+Without human takes, use 6 clean held-out sources and 6 held-out synthetic files
+spread over available flaw types and severities 2–5, fixed seed and shuffled
+anonymous names. It is a synthetic-only pilot, not human validation. No ratings
+or agreement values will be fabricated.
+
 ## 2026-10-07 — Resumed execution
 
 - Resumed the interrupted full dataset command with saved per-source caches, one worker and CPU affinity 0–3. The last completed source was 22/29; no completed audio was deleted or rebuilt intentionally. User reauthorized the main workload after the resource pause.

@@ -1,0 +1,1 @@
+"""FastAPI deployment entry point."""

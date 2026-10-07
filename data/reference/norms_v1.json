@@ -1,0 +1,122 @@
+{
+  "features": {
+    "end_pause": {
+      "median": -0.2744368457017603,
+      "n": 274,
+      "percentiles": {
+        "25": -0.6463501300328317,
+        "5": -1.7888275775681326,
+        "50": -0.2744368457017603,
+        "75": 0.12288105603154988,
+        "95": 0.6271095427689731
+      },
+      "robust_sd": 0.5855356770428114
+    },
+    "final_drop": {
+      "median": 0.5852999999999999,
+      "n": 290,
+      "percentiles": {
+        "25": -2.1835,
+        "5": -6.96155,
+        "50": 0.5852999999999999,
+        "75": 3.26475,
+        "95": 11.439000000000002
+      },
+      "robust_sd": 4.080856499999999
+    },
+    "pitchrange": {
+      "median": 1.9225680859142942,
+      "n": 290,
+      "percentiles": {
+        "25": 1.698534284656766,
+        "5": 1.1903167571788462,
+        "50": 1.9225680859142942,
+        "75": 2.1533015623064413,
+        "95": 2.377813695813171
+      },
+      "robust_sd": 0.33966127990990475
+    },
+    "rate": {
+      "median": 1.303183531870536,
+      "n": 290,
+      "percentiles": {
+        "25": 1.142389138735545,
+        "5": 0.9585163419803692,
+        "50": 1.303183531870536,
+        "75": 1.4078112045821403,
+        "95": 1.5871410480333172
+      },
+      "robust_sd": 0.18378766296749785
+    }
+  },
+  "inputs": {
+    "code": "b69a97c19518b7a5cb6d9d07c9950966452a1edfb38eb7db3ce180a16c4aa992",
+    "inputs": {
+      "configs/splits.yaml": "1bcd501d7e4b5d890788f858c637e59b4e522f527d61bbe330c54a108683a4c7",
+      "data/features/sentences/gettysburg__lv_amb__orig.parquet": "28a8d91dd544f0a5efb253efd53b01e26d95ed8eef2893dfbb31db3152d34f59",
+      "data/features/sentences/gettysburg__lv_dj__orig.parquet": "90e8a4a012b02d6dfa930a8b1efcb989340df2b615106e1c10cc06b3c404a72f",
+      "data/features/sentences/gettysburg__lv_dl__orig.parquet": "ccb8ab52471cefe4c8fefe725c43406fe32a4ad4c668733ba8b9d6308ef9c8e6",
+      "data/features/sentences/gettysburg__lv_eep__orig.parquet": "7b7b9c95614580c111533584a3cf4003be8b8f812a5141f30cca083d2b60d2b8",
+      "data/features/sentences/gettysburg__lv_fb__orig.parquet": "319e6227045bcccd70f9e595bf188324543e210012b8f810d36b6ebc0135241d",
+      "data/features/sentences/gettysburg__lv_jn__orig.parquet": "54cdeff314116952fc41bc73463cb7cf9757b29c35cfed4ae5c7792d6df0f723",
+      "data/features/sentences/gettysburg__lv_law__orig.parquet": "ec0f6e42c1ed7244f310d4e01160af46a8ebd3a37d4a99bec978937a3d06ff6b",
+      "data/features/sentences/gettysburg__lv_lb__orig.parquet": "175429c5930cea654030c11e1a2c6791e875fd8b271b36a1e4b9b4f3c6e31939",
+      "data/features/sentences/gettysburg__lv_mas__orig.parquet": "d33d2469aa4466317b3b5f7c7cfe377fea15057095cae97c75e659c4762acd56",
+      "data/features/sentences/gettysburg__lv_mk__orig.parquet": "311b87231d467925c708c65cbfb9f6162b0bbe742b260f1d227f8a17c58f9b60",
+      "data/features/sentences/o_captain__lv_apc__orig.parquet": "54b9216dc957f9b324b050be0fba81579f3309006016a6fef03ee5e7d38d31c4",
+      "data/features/sentences/o_captain__lv_chip__orig.parquet": "81553d26dc218777a955d75ca91a84daf4e30204a3b81e91c744187248862db9",
+      "data/features/sentences/o_captain__lv_foxits__orig.parquet": "e8ed1556d912ca882195baa4fbbbb28dd1c2989e79b5d01c5c3ec0a43d94aa74",
+      "data/features/sentences/o_captain__lv_jtm__orig.parquet": "38d654f27c7cc49615f64afd4590201662cdf38c10b21fee19540705c257b8a1",
+      "data/features/sentences/o_captain__lv_mac__orig.parquet": "81af062ba076b5cbd6544fc64cf8d152c25d0a8fed934b8c411870a0ccc2545d",
+      "data/features/sentences/o_captain__lv_mb__orig.parquet": "2752857249d4422e89a483d308cc7e9c45371338255102b1cdbd513a4fa998bb",
+      "data/features/sentences/o_captain__lv_md__orig.parquet": "3950af0392e61c625f08801e17e7660a841a59cf1684cb0477e55202d4b5e2f0",
+      "data/features/sentences/o_captain__lv_mrg__orig.parquet": "0a392e010940362958129ef5abdd5722acbd62d1303ddbba011d0a44f687a886"
+    }
+  },
+  "limitations": [
+    "Sentence-level, weaker than same-text comparison. Zero-spread features are not scored."
+  ],
+  "readers": [
+    "gettysburg__lv_amb__orig",
+    "gettysburg__lv_dj__orig",
+    "gettysburg__lv_dl__orig",
+    "gettysburg__lv_eep__orig",
+    "gettysburg__lv_fb__orig",
+    "gettysburg__lv_jn__orig",
+    "gettysburg__lv_law__orig",
+    "gettysburg__lv_lb__orig",
+    "gettysburg__lv_mas__orig",
+    "gettysburg__lv_mk__orig",
+    "o_captain__lv_apc__orig",
+    "o_captain__lv_chip__orig",
+    "o_captain__lv_foxits__orig",
+    "o_captain__lv_jtm__orig",
+    "o_captain__lv_mac__orig",
+    "o_captain__lv_mb__orig",
+    "o_captain__lv_md__orig",
+    "o_captain__lv_mrg__orig"
+  ],
+  "reference_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+  "schema": "norms/v1",
+  "source": "clean train sentences >=4 words",
+  "speaker_rate_medians_log": {
+    "lv_amb": 1.3896623671424684,
+    "lv_apc": 1.1477148268949953,
+    "lv_chip": 1.1426640214825479,
+    "lv_dj": 1.6485054956321163,
+    "lv_dl": 1.3613587213127967,
+    "lv_eep": 1.3407738458180813,
+    "lv_fb": 1.4865920824352545,
+    "lv_foxits": 1.359937209348392,
+    "lv_jn": 1.4589239591472682,
+    "lv_jtm": 1.1954844888319724,
+    "lv_law": 1.4432795829307863,
+    "lv_lb": 1.08425511921756,
+    "lv_mac": 1.4224804470603178,
+    "lv_mas": 1.0634161373605955,
+    "lv_mb": 1.2941736618642536,
+    "lv_md": 1.1098622719659448,
+    "lv_mk": 1.451313730070268,
+    "lv_mrg": 1.2814882833174446
+  }
+}

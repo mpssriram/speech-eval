@@ -1,0 +1,146 @@
+{
+  "between_speaker_rate_syl_s": {
+    "lv_amb": 4.013494736510812,
+    "lv_apc": 3.1509841319816263,
+    "lv_chip": 3.135109248495178,
+    "lv_dj": 5.199203785196345,
+    "lv_dl": 3.901490740729754,
+    "lv_eep": 3.822,
+    "lv_fb": 4.422,
+    "lv_foxits": 3.8959486649595374,
+    "lv_jn": 4.301328631946181,
+    "lv_jtm": 3.305158695130992,
+    "lv_law": 4.234560661981359,
+    "lv_lb": 2.957236209706624,
+    "lv_mac": 4.147395086075113,
+    "lv_mas": 2.896248090202219,
+    "lv_mb": 3.647980263104503,
+    "lv_md": 3.0339405069974594,
+    "lv_mk": 4.268718777338231,
+    "lv_mrg": 3.601996529704048
+  },
+  "files": 175,
+  "freeze": {
+    "phase6_sha256": "6392ff8ee0706afe21fca06d3373666c358910ee66558a3a4aa6d0b811d1d794",
+    "rubric_sha256": "4e8af3b16ef79889763f542471748ade7b127cee299a916542ce5d47f35abfaf",
+    "score_code_sha256": "7a49b5d16eaa580d2faca040897d85f6ad88de5bd262ee51faadc22a26b5e5ed",
+    "validation_code_sha256": "a75f1dec10b795b4ffab959145aa96b551a89af0fb33f9fd4f697e9890449e55"
+  },
+  "granularity": "type/sentence; at most one per type per sentence",
+  "human_takes": "PENDING actual recordings",
+  "mode_C": {
+    "dragging": {
+      "clean_alarms_per_minute": 0.21891977684777408,
+      "f1": 0.0,
+      "matched": 0,
+      "precision": 0.0,
+      "predicted": 98,
+      "recall": 0.0,
+      "truth": 38
+    },
+    "missing_pause": {
+      "clean_alarms_per_minute": 0.6567593305433223,
+      "f1": 0.04716981132075472,
+      "matched": 10,
+      "precision": 0.02610966057441253,
+      "predicted": 383,
+      "recall": 0.24390243902439024,
+      "truth": 41
+    },
+    "monotone": {
+      "clean_alarms_per_minute": 1.4594651789851605,
+      "f1": 0.030100334448160536,
+      "matched": 9,
+      "precision": 0.0162748643761302,
+      "predicted": 553,
+      "recall": 0.2,
+      "truth": 45
+    },
+    "overall": {
+      "clean_alarms_per_minute": 4.159475760107708,
+      "f1": 0.03621958121109225,
+      "matched": 32,
+      "precision": 0.020151133501259445,
+      "predicted": 1588,
+      "recall": 0.1787709497206704,
+      "truth": 179
+    },
+    "rushing": {
+      "clean_alarms_per_minute": 1.3135186610866445,
+      "f1": 0.023622047244094488,
+      "matched": 6,
+      "precision": 0.01284796573875803,
+      "predicted": 467,
+      "recall": 0.14634146341463414,
+      "truth": 41
+    },
+    "too_quiet": {
+      "clean_alarms_per_minute": 0.5108128126448062,
+      "f1": 0.13861386138613863,
+      "matched": 7,
+      "precision": 0.08045977011494253,
+      "predicted": 87,
+      "recall": 0.5,
+      "truth": 14
+    }
+  },
+  "norms_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+  "reference_informed": {
+    "dragging": {
+      "clean_alarms_per_minute": 0.0,
+      "f1": 0.22535211267605634,
+      "matched": 8,
+      "precision": 0.24242424242424243,
+      "predicted": 33,
+      "recall": 0.21052631578947367,
+      "truth": 38
+    },
+    "missing_pause": {
+      "clean_alarms_per_minute": 0.3648662947462901,
+      "f1": 0.09821428571428571,
+      "matched": 22,
+      "precision": 0.05405405405405406,
+      "predicted": 407,
+      "recall": 0.5365853658536586,
+      "truth": 41
+    },
+    "monotone": {
+      "clean_alarms_per_minute": 0.21891977684777408,
+      "f1": 0.28368794326241137,
+      "matched": 20,
+      "precision": 0.20833333333333334,
+      "predicted": 96,
+      "recall": 0.4444444444444444,
+      "truth": 45
+    },
+    "overall": {
+      "clean_alarms_per_minute": 0.5837860715940643,
+      "f1": 0.16022099447513813,
+      "matched": 58,
+      "precision": 0.10642201834862386,
+      "predicted": 545,
+      "recall": 0.3240223463687151,
+      "truth": 179
+    },
+    "rushing": {
+      "clean_alarms_per_minute": 0.0,
+      "f1": 0.32,
+      "matched": 8,
+      "precision": 0.8888888888888888,
+      "predicted": 9,
+      "recall": 0.1951219512195122,
+      "truth": 41
+    },
+    "too_quiet": {
+      "clean_alarms_per_minute": 0.0,
+      "f1": 0.0,
+      "matched": 0,
+      "precision": 0.0,
+      "predicted": 0,
+      "recall": 0.0,
+      "truth": 14
+    }
+  },
+  "reference_setting": "A-LOSO Gettysburg/O Captain; B-same-speaker JFK/Reagan",
+  "schema": "mode_c_evaluation/v1"
+}
