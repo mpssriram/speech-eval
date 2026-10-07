@@ -1,0 +1,959 @@
+{
+  "checks": [
+    {
+      "expected": 1.15,
+      "measured": 1.1499956698709621,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__rushing_s1_01",
+      "severity": 1,
+      "type": "rushing"
+    },
+    {
+      "expected": 1.3,
+      "measured": 1.2999586549062845,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__rushing_s2_01",
+      "severity": 2,
+      "type": "rushing"
+    },
+    {
+      "expected": 1.5,
+      "measured": 1.4999481404652542,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__rushing_s3_01",
+      "severity": 3,
+      "type": "rushing"
+    },
+    {
+      "expected": 1.75,
+      "measured": 1.7499589095775905,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__rushing_s4_01",
+      "severity": 4,
+      "type": "rushing"
+    },
+    {
+      "expected": 2.0,
+      "measured": 1.9999783009656071,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__rushing_s5_01",
+      "severity": 5,
+      "type": "rushing"
+    },
+    {
+      "expected": 0.87,
+      "measured": 0.8699631608986665,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__dragging_s1_01",
+      "severity": 1,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.77,
+      "measured": 0.7699851815793429,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__dragging_s2_01",
+      "severity": 2,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.67,
+      "measured": 0.6699998370751735,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__dragging_s3_01",
+      "severity": 3,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.58,
+      "measured": 0.5800311041990669,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__dragging_s4_01",
+      "severity": 4,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.5,
+      "measured": 0.49994578639840975,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__dragging_s5_01",
+      "severity": 5,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.7,
+      "measured": 0.6712531035559901,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__monotone_s1_01",
+      "severity": 1,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.5,
+      "measured": 0.4937055904023955,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__monotone_s2_01",
+      "severity": 2,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.35,
+      "measured": 0.34205279989538345,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__monotone_s3_01",
+      "severity": 3,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.2,
+      "measured": 0.197792160473615,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__monotone_s4_01",
+      "severity": 4,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.08,
+      "measured": 0.08241840932323945,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__monotone_s5_01",
+      "severity": 5,
+      "type": "monotone"
+    },
+    {
+      "expected": -3.0,
+      "measured": -3.00000364617559,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__too_quiet_s1_01",
+      "severity": 1,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -6.0,
+      "measured": -6.000561300220707,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__too_quiet_s2_01",
+      "severity": 2,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -9.0,
+      "measured": -9.000014433791076,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__too_quiet_s3_01",
+      "severity": 3,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -12.0,
+      "measured": -12.00011918440141,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__too_quiet_s4_01",
+      "severity": 4,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -18.0,
+      "measured": -18.000009721235667,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__too_quiet_s5_01",
+      "severity": 5,
+      "type": "too_quiet"
+    },
+    {
+      "expected": 0.6,
+      "measured": 0.6,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__awkward_pause_s1_01",
+      "severity": 1,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 1.0,
+      "measured": 1.0,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__awkward_pause_s2_01",
+      "severity": 2,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 1.5,
+      "measured": 1.5,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__awkward_pause_s3_01",
+      "severity": 3,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 2.2,
+      "measured": 2.2,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__awkward_pause_s4_01",
+      "severity": 4,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 3.0,
+      "measured": 3.0,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__awkward_pause_s5_01",
+      "severity": 5,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 0.36,
+      "measured": 0.36048752834467124,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__missing_pause_s1_01",
+      "severity": 1,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.18,
+      "measured": 0.18050113378684807,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__missing_pause_s2_01",
+      "severity": 2,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.201,
+      "measured": 0.20099773242630392,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__missing_pause_s3_01",
+      "severity": 3,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.054,
+      "measured": 0.05399092970521541,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__missing_pause_s4_01",
+      "severity": 4,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.03,
+      "measured": 0.030002267573696173,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__missing_pause_s5_01",
+      "severity": 5,
+      "type": "missing_pause"
+    },
+    {
+      "expected": -4.640243594353542,
+      "measured": -4.639948566917269,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__mumbling_s1_01",
+      "severity": 1,
+      "type": "mumbling"
+    },
+    {
+      "expected": -3.9604389229854213,
+      "measured": -3.958628835391611,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__mumbling_s2_01",
+      "severity": 2,
+      "type": "mumbling"
+    },
+    {
+      "expected": -10.514571768523474,
+      "measured": -10.487383210247174,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__mumbling_s3_01",
+      "severity": 3,
+      "type": "mumbling"
+    },
+    {
+      "expected": -19.4868885363359,
+      "measured": -19.44164670629976,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__mumbling_s4_01",
+      "severity": 4,
+      "type": "mumbling"
+    },
+    {
+      "expected": -42.957361881241496,
+      "measured": -42.812628661502885,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_amb__mumbling_s5_01",
+      "severity": 5,
+      "type": "mumbling"
+    },
+    {
+      "expected": 1.15,
+      "measured": 1.1500011538550297,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__rushing_s1_01",
+      "severity": 1,
+      "type": "rushing"
+    },
+    {
+      "expected": 1.3,
+      "measured": 1.2999737473747375,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__rushing_s2_01",
+      "severity": 2,
+      "type": "rushing"
+    },
+    {
+      "expected": 1.5,
+      "measured": 1.5001074509563135,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__rushing_s3_01",
+      "severity": 3,
+      "type": "rushing"
+    },
+    {
+      "expected": 1.75,
+      "measured": 1.7500907817606475,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__rushing_s4_01",
+      "severity": 4,
+      "type": "rushing"
+    },
+    {
+      "expected": 2.0,
+      "measured": 1.9973608036778479,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__rushing_s5_01",
+      "severity": 5,
+      "type": "rushing"
+    },
+    {
+      "expected": 0.87,
+      "measured": 0.8699726031465546,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__dragging_s1_01",
+      "severity": 1,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.77,
+      "measured": 0.770021125940548,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__dragging_s2_01",
+      "severity": 2,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.67,
+      "measured": 0.6700026990083321,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__dragging_s3_01",
+      "severity": 3,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.58,
+      "measured": 0.580049605444252,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__dragging_s4_01",
+      "severity": 4,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.5,
+      "measured": 0.5000240666646611,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__dragging_s5_01",
+      "severity": 5,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.7,
+      "measured": 0.7195291098464499,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__monotone_s1_01",
+      "severity": 1,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.5,
+      "measured": 0.4846384771389567,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__monotone_s2_01",
+      "severity": 2,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.35,
+      "measured": 0.35754368228870903,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__monotone_s3_01",
+      "severity": 3,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.2,
+      "measured": 0.19310747092897668,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__monotone_s4_01",
+      "severity": 4,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.08,
+      "measured": 0.08261516145971075,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__monotone_s5_01",
+      "severity": 5,
+      "type": "monotone"
+    },
+    {
+      "expected": -3.0,
+      "measured": -2.999998558536599,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__too_quiet_s1_01",
+      "severity": 1,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -6.0,
+      "measured": -5.999921625194863,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__too_quiet_s2_01",
+      "severity": 2,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -9.0,
+      "measured": -9.000003736726553,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__too_quiet_s3_01",
+      "severity": 3,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -12.0,
+      "measured": -11.999994232621042,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__too_quiet_s4_01",
+      "severity": 4,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -18.0,
+      "measured": -18.00004771574965,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__too_quiet_s5_01",
+      "severity": 5,
+      "type": "too_quiet"
+    },
+    {
+      "expected": 0.6,
+      "measured": 0.6,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__awkward_pause_s1_01",
+      "severity": 1,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 1.0,
+      "measured": 1.0,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__awkward_pause_s2_01",
+      "severity": 2,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 1.5,
+      "measured": 1.5,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__awkward_pause_s3_01",
+      "severity": 3,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 2.2,
+      "measured": 2.2,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__awkward_pause_s4_01",
+      "severity": 4,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 3.0,
+      "measured": 3.0,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__awkward_pause_s5_01",
+      "severity": 5,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 0.725,
+      "measured": 0.724501133786848,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__missing_pause_s1_01",
+      "severity": 1,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.35,
+      "measured": 0.35,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__missing_pause_s2_01",
+      "severity": 2,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.186,
+      "measured": 0.18600907029478458,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__missing_pause_s3_01",
+      "severity": 3,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.151,
+      "measured": 0.15135827664399082,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__missing_pause_s4_01",
+      "severity": 4,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.03,
+      "measured": 0.030000000000000027,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__missing_pause_s5_01",
+      "severity": 5,
+      "type": "missing_pause"
+    },
+    {
+      "expected": -5.653087299003008,
+      "measured": -5.653125801247082,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__mumbling_s1_01",
+      "severity": 1,
+      "type": "mumbling"
+    },
+    {
+      "expected": -4.32924223099138,
+      "measured": -4.32777023798894,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__mumbling_s2_01",
+      "severity": 2,
+      "type": "mumbling"
+    },
+    {
+      "expected": -16.65492508054063,
+      "measured": -16.651925674299342,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__mumbling_s3_01",
+      "severity": 3,
+      "type": "mumbling"
+    },
+    {
+      "expected": -20.698951834250753,
+      "measured": -20.677268874811784,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__mumbling_s4_01",
+      "severity": 4,
+      "type": "mumbling"
+    },
+    {
+      "expected": -39.71578904975989,
+      "measured": -39.67529584801293,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dj__mumbling_s5_01",
+      "severity": 5,
+      "type": "mumbling"
+    },
+    {
+      "expected": 1.15,
+      "measured": 1.1499667762765577,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__rushing_s1_01",
+      "severity": 1,
+      "type": "rushing"
+    },
+    {
+      "expected": 1.3,
+      "measured": 1.3000494071146245,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__rushing_s2_01",
+      "severity": 2,
+      "type": "rushing"
+    },
+    {
+      "expected": 1.5,
+      "measured": 1.5000414003245786,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__rushing_s3_01",
+      "severity": 3,
+      "type": "rushing"
+    },
+    {
+      "expected": 1.75,
+      "measured": 1.7499313683895281,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__rushing_s4_01",
+      "severity": 4,
+      "type": "rushing"
+    },
+    {
+      "expected": 2.0,
+      "measured": 2.0005266061487537,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__rushing_s5_01",
+      "severity": 5,
+      "type": "rushing"
+    },
+    {
+      "expected": 0.87,
+      "measured": 0.8699359314032468,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__dragging_s1_01",
+      "severity": 1,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.77,
+      "measured": 0.7699672173927226,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__dragging_s2_01",
+      "severity": 2,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.67,
+      "measured": 0.6699797865355152,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__dragging_s3_01",
+      "severity": 3,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.58,
+      "measured": 0.579977890727323,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__dragging_s4_01",
+      "severity": 4,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.5,
+      "measured": 0.5000228596508874,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__dragging_s5_01",
+      "severity": 5,
+      "type": "dragging"
+    },
+    {
+      "expected": 0.7,
+      "measured": 0.708746801501794,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__monotone_s1_01",
+      "severity": 1,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.5,
+      "measured": 0.4971240544707281,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__monotone_s2_01",
+      "severity": 2,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.35,
+      "measured": 0.3529563091543136,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__monotone_s3_01",
+      "severity": 3,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.2,
+      "measured": 0.20271125139960666,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__monotone_s4_01",
+      "severity": 4,
+      "type": "monotone"
+    },
+    {
+      "expected": 0.08,
+      "measured": 0.07807863455026824,
+      "metric": "acoustic semitone p90-p10 ratio",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__monotone_s5_01",
+      "severity": 5,
+      "type": "monotone"
+    },
+    {
+      "expected": -3.0,
+      "measured": -2.9999966393503987,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__too_quiet_s1_01",
+      "severity": 1,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -6.0,
+      "measured": -6.001108237337278,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__too_quiet_s2_01",
+      "severity": 2,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -9.0,
+      "measured": -8.999986700344387,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__too_quiet_s3_01",
+      "severity": 3,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -12.0,
+      "measured": -11.999458155380127,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__too_quiet_s4_01",
+      "severity": 4,
+      "type": "too_quiet"
+    },
+    {
+      "expected": -18.0,
+      "measured": -18.000009138655273,
+      "metric": "gain dB (flat RMS or trail slope)",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__too_quiet_s5_01",
+      "severity": 5,
+      "type": "too_quiet"
+    },
+    {
+      "expected": 0.6,
+      "measured": 0.6,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__awkward_pause_s1_01",
+      "severity": 1,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 1.0,
+      "measured": 1.0,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__awkward_pause_s2_01",
+      "severity": 2,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 1.5,
+      "measured": 1.5,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__awkward_pause_s3_01",
+      "severity": 3,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 2.2,
+      "measured": 2.2,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__awkward_pause_s4_01",
+      "severity": 4,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 3.0,
+      "measured": 3.0,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__awkward_pause_s5_01",
+      "severity": 5,
+      "type": "awkward_pause"
+    },
+    {
+      "expected": 0.308,
+      "measured": 0.3080045351473923,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__missing_pause_s1_01",
+      "severity": 1,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.25,
+      "measured": 0.25,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__missing_pause_s2_01",
+      "severity": 2,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.264,
+      "measured": 0.2639909297052154,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__missing_pause_s3_01",
+      "severity": 3,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.075,
+      "measured": 0.07501133786848074,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__missing_pause_s4_01",
+      "severity": 4,
+      "type": "missing_pause"
+    },
+    {
+      "expected": 0.03,
+      "measured": 0.030000000000000027,
+      "metric": "duration-derived tempo ratio or pause seconds",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__missing_pause_s5_01",
+      "severity": 5,
+      "type": "missing_pause"
+    },
+    {
+      "expected": -2.385428759900968,
+      "measured": -2.3851712366687465,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__mumbling_s1_01",
+      "severity": 1,
+      "type": "mumbling"
+    },
+    {
+      "expected": -2.854191396115187,
+      "measured": -2.85353404041242,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__mumbling_s2_01",
+      "severity": 2,
+      "type": "mumbling"
+    },
+    {
+      "expected": -10.08557265776798,
+      "measured": -10.082532464368423,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__mumbling_s3_01",
+      "severity": 3,
+      "type": "mumbling"
+    },
+    {
+      "expected": -21.215070619775766,
+      "measured": -21.19910386100741,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__mumbling_s4_01",
+      "severity": 4,
+      "type": "mumbling"
+    },
+    {
+      "expected": -37.00301868077713,
+      "measured": -36.814676728991664,
+      "metric": "high-band ratio drop (dB), analytic filter prediction",
+      "passed": true,
+      "recording_id": "gettysburg__lv_dl__mumbling_s5_01",
+      "severity": 5,
+      "type": "mumbling"
+    }
+  ],
+  "failed": [],
+  "limitations": [
+    "Objective parameter checks do not establish listening quality or realism."
+  ],
+  "n_readers": 3,
+  "passed": true,
+  "pitch_measurement": "Identical source speaker_stats floor/ceiling for source and rendered audio; semitone p90-p10 over voiced frames excluding 100 ms edges.",
+  "relative_tolerance": 0.1,
+  "schema": "effect_checks/v1",
+  "skipped": []
+}

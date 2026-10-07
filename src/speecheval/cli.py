@@ -12,12 +12,21 @@ gold_app = typer.Typer(help="Prepare human-labelled alignment gold data.")
 evaluate_app = typer.Typer(help="Evaluate aligners and detectors.")
 report_app = typer.Typer(help="Generate quality-assurance reports.")
 features_app = typer.Typer(help="Extract acoustic features and speaker statistics.")
+inject_app = typer.Typer(help="Generate labelled synthetic speech flaws.")
 
 app.add_typer(transcripts_app, name="transcripts")
 app.add_typer(gold_app, name="gold")
 app.add_typer(evaluate_app, name="evaluate")
 app.add_typer(report_app, name="report")
 app.add_typer(features_app, name="features")
+app.add_typer(inject_app, name="inject")
+
+
+@inject_app.command("preview")
+def inject_preview(force: bool = typer.Option(False)) -> None:
+    """Generate the preview plus the three-reader objective-effect matrix."""
+    from speecheval.inject import inject_preview as generate
+    generate(force=force)
 
 
 @features_app.command("all")

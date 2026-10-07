@@ -67,3 +67,29 @@ words. No human, Docker or downstream detector validity is claimed here.
 Final: minor (deferred): the feature unit determinism test serializes a single
 computed table twice. A separate fresh recomputation compared all 150 corpus
 artifacts byte-for-byte successfully; the regression can be strengthened later.
+
+Ruling: effect checks use the same fixed source-speaker pitch bounds on both
+audio candidates, not a wide search that introduces octave errors. The initial
+wide-search audit is retained (104/105 passed); corrected bounds gave 105/105.
+Cost if wrong: pitch-range fidelity remains model-measured, not human realism.
+
+Ruling: insert pauses strictly inside the inter-word gap; zero/sub-sample gaps
+use their exact semantic boundary instead of unsafe zero-crossing snapping.
+The physical cut is within half a sample. Cost if wrong: tiny seam artifacts;
+crossfade/zero-gap regression tests enforce continuity and correct word ownership.
+
+Ruling: serialized maps use the required 1 ms time rounding. Replay verification
+uses the derived quantization bound (1 ms plus 0.5 ms times local maximum stretch
+slope), not an impossible fixed 1 ms bound on three separately rounded values.
+Cost if wrong: sub-3 ms mapping differences could be missed, never whole-word
+or inserted-pause errors. The 10% effect threshold is unchanged.
+
+Phase 3 review fixes: shared post-resample attenuation protects both exported
+sample rates and is recorded in labels; optional real-audio tests skip when any
+audio/stat fixture is missing. Both failure cases reproduced before fixing.
+Re-graded ignored small artifacts as an Important reproducibility issue: only
+generated audio directories remain ignored, so maps, labels and evidence commit.
+Final: minor (deferred): repeated preview comparison clicks retain old playback
+callbacks. Single comparisons work; this demo-aid polish does not alter audio,
+labels or objective measurements. Listening realism/human acceptance and Phase 4
+mixed-file behavior are not established by the Phase 3 review.

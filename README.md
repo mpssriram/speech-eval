@@ -75,3 +75,15 @@ The `features frames` alias produces the complete five-file feature bundle.
 QA is machine-readable in `data/features/qa.json`; the Gettysburg overlay is
 `reports/img/phase02_gettysburg_overlay.png`. No narrative phase reports are
 generated under the current user override. Docker remains deferred to Phase 9.
+
+## Synthetic flaw preview
+
+```bash
+env -u PYTHONPATH ~/.local/bin/uv run speecheval inject preview
+env -u PYTHONPATH ~/.local/bin/uv run python scripts/check_injection.py --fresh
+```
+
+The preview page is `data/flawed/preview/index.html`. Objective measurements for
+all seven effects and five severities on three readers are in
+`data/flawed/effect_checks.json`. They test parameter fidelity, not perceptual
+realism. The first audit is retained as `effect_checks_initial.json`.

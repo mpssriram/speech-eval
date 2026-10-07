@@ -1,0 +1,119 @@
+{
+  "artifacts": {
+    "data/alignment/oracle/gettysburg__lv_dj__rushing_s1_01.json": "209f102aa8218e770f8ab7d47d87faac3d9c86ca2da7a80d98b7fdb8aa029829",
+    "data/flawed/align16k/gettysburg__lv_dj__rushing_s1_01.flac": "aa2d9ff3382e01325e3c9fe5e92d4eab4ea2701bccc0fc3edce37b458023ffd8",
+    "data/flawed/hq/gettysburg__lv_dj__rushing_s1_01.flac": "5bbbabf779429f462db7e187c0fd3630355f6210ccabdd605fe0b03a6657542e",
+    "data/flawed/timemaps/gettysburg__lv_dj__rushing_s1_01.json": "a78b7e1f74235f7aa2a44c4856a20ddef06f53426873ee93a8bfc3f2ba511ab7",
+    "data/labels/gettysburg__lv_dj__rushing_s1_01.json": "89491a2cd9003e315fa48ef6195e494f88a59cf880debdf452b846e611fd59b1"
+  },
+  "inputs": {
+    "alignment_sha256": "88ff517141cf648d4f761543a4406142c94dae6f2708cb145a5bcc2a15e2b594",
+    "audio_sha256": "d66cbe45318f41571010cba682952a0b7cbadf32328a37b349ed90cc23597c42",
+    "code_sha256": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+    "config": {
+      "crossfade_ms": 20,
+      "keep_out_s": 1.0,
+      "min_gap_between_flaws_s": 2.0,
+      "region_words": {
+        "max": 12,
+        "min": 4
+      },
+      "seed": 20261001,
+      "types": {
+        "awkward_pause": {
+          "kind": "boundary",
+          "param": "inserted_pause_s",
+          "severity": [
+            0.6,
+            1.0,
+            1.5,
+            2.2,
+            3.0
+          ]
+        },
+        "dragging": {
+          "kind": "region",
+          "param": "speed_factor",
+          "severity": [
+            0.87,
+            0.77,
+            0.67,
+            0.58,
+            0.5
+          ]
+        },
+        "missing_pause": {
+          "kind": "boundary",
+          "param": "pause_kept_frac",
+          "severity": [
+            0.7,
+            0.5,
+            0.3,
+            0.15,
+            0.0
+          ]
+        },
+        "monotone": {
+          "kind": "region",
+          "param": "pitch_range_kept",
+          "severity": [
+            0.7,
+            0.5,
+            0.35,
+            0.2,
+            0.08
+          ]
+        },
+        "mumbling": {
+          "extra_gain_db_per_severity": -1.0,
+          "kind": "region",
+          "param": "lowpass_hz",
+          "severity": [
+            3500,
+            2800,
+            2200,
+            1700,
+            1300
+          ]
+        },
+        "rushing": {
+          "kind": "region",
+          "param": "speed_factor",
+          "severity": [
+            1.15,
+            1.3,
+            1.5,
+            1.75,
+            2.0
+          ]
+        },
+        "too_quiet": {
+          "kind": "region",
+          "param": "gain_db",
+          "severity": [
+            -3,
+            -6,
+            -9,
+            -12,
+            -18
+          ],
+          "shapes": [
+            "flat",
+            "trail"
+          ]
+        }
+      }
+    },
+    "rubberband": "3.3.0",
+    "shape": "flat",
+    "stats_sha256": "3727bfb864b0f2a252bb1971a1685364391741fad553158c6062d5e7c3d64cc3",
+    "versions": {
+      "numpy": "2.0.2",
+      "praat-parselmouth": "0.4.7",
+      "scipy": "1.17.1",
+      "soundfile": "0.14.0"
+    }
+  },
+  "recording_id": "gettysburg__lv_dj__rushing_s1_01",
+  "schema": "injection_provenance/v1"
+}
