@@ -1,0 +1,59 @@
+{
+  "analysis": {
+    "duration_s": 120.0,
+    "mode": "A",
+    "recording_id": "gettysburg__user__input_71955aeb3490",
+    "text_id": "gettysburg",
+    "transcript_source": "supplied"
+  },
+  "api_image": "sha256:505cae74d9429d2496da217d8d3c584272fb2ec98e68ffecb3d03588c4bd8ab5",
+  "base_url": "http://localhost:8080",
+  "cold_alignment": {
+    "analysis_id": "4d0d31847d4c03aa59f88651",
+    "audio_duration_seconds": 120.0,
+    "elapsed_seconds": 50.568,
+    "fixture": "licensed Gettysburg 120-second clip",
+    "mode": "A",
+    "source_audio_sha256": "3bb1db549021b13753e03186d4f0795aa4012582bf5ba1298232d4f46bfc4f3c",
+    "status": "done",
+    "submitted_audio_sha256": "1d51fd90f286024c73bf95fa8156a39d218919c42f35bfaf418fc4fb17d0ab61",
+    "word_count": 271
+  },
+  "collected_at_utc": "2026-10-10T11:37:25.857973+00:00",
+  "content_range": "bytes 0-99/10670330",
+  "dashboard_status": 200,
+  "health": {
+    "detector_config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "git_commit": null,
+    "reference_version": {
+      "gettysburg__excl-none": "746a5ef0d4f2ad2eb999a85dc58eed970ddd266438c98da4543938485fdbeabe",
+      "norms_v1": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+      "o_captain__excl-none": "b7f6a47216851cc39bd91f786997912580808acca1bb30c406c1edadb944c8fa",
+      "pooled_sigma": null
+    },
+    "version": "0.1.0"
+  },
+  "latency_acceptance": {
+    "passed": true,
+    "target_seconds": 60
+  },
+  "limits": [
+    "One licensed Gettysburg clip with its automatically verified as-read transcript; not a user recording or human review.",
+    "This is the main checkout production CPU image, not the earlier fresh-clone numeric reproduction run.",
+    "One successful CPU latency sample is not a bound for every recording, transcript or machine."
+  ],
+  "measurement": "POST-to-done including upload and one-second polling; initial job was queued/running, not a completed job.",
+  "range_bytes": 100,
+  "range_status": 206,
+  "runtime": {
+    "cuda_available": false,
+    "cuda_visible_devices": "",
+    "python": "3.11.16",
+    "torch": "2.11.0+cu128",
+    "torch_threads": 1
+  },
+  "schema": "container-http-verification/v1",
+  "spa_status": 200,
+  "tested_commit": "e08cc730805245766089168370c05e66455b697b",
+  "texts_count": 4
+}

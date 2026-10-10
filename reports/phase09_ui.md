@@ -70,6 +70,9 @@ activated: the recording test uses Chromium's isolated fake audio device.
 This prepared recording reuses existing alignment/features; its elapsed UI time
 is not a cold-alignment latency benchmark. Real microphone quality, the user's
 new recordings and independent human ratings remain separate checks.
+Separately, a new licensed 120-second upload completed through the production CPU
+API in 50.568 seconds; [full-length latency evidence](full_length_latency.json)
+records this single cold sample, not human validation or a general latency bound.
 The production-proxy rerun and cross-environment CPU identity are now recorded
 in [Docker verification](docker_verification.json) and [Docker instructions](../docs/DOCKER.md).
 The production rerun passed all three browser tests and all 200 Python tests,

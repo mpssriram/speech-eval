@@ -103,7 +103,7 @@ across host/container and the seven cold CPU source feature bundles. HTTP probes
 confirmed the SPA route, four available texts, health and 100-byte `206` audio
 range responses. A new licensed 30-word excerpt was CPU-aligned through the API,
 separately from the prepared-fixture UI path. This is not a human recording.
-It does not establish the two-minute cold-recording latency acceptance check.
+That short excerpt alone does not establish full-length latency.
 The same licensed excerpt also completed own-speech Mode C with its supplied
 transcript in 33.328 seconds, producing six guideline checks and no baseline.
 
@@ -112,3 +112,12 @@ report retains its historical pending-Docker statement; the new evidence resolve
 that check without editing its frozen inputs. Git metadata is not baked into the
 image, so `/api/health` honestly returns `git_commit: null`; the verification
 artifact records the tested clone commit and image identities instead.
+
+After the fresh-clone run, the main checkout's production CPU image also analyzed
+a new 120.000-second licensed Gettysburg clip (271 supplied as-read words) in
+50.568 seconds, including upload and one-second status polling. The initial job
+was queued/running, not a reused completed job; its input hash differs from the
+prepared source. This meets the Phase 9 two-minute/<60-second target for this one
+sample. [Full-length latency evidence](../reports/full_length_latency.json) records
+the input hashes, analysis ID, image identity and CPU runtime. It is not a user
+recording, human review or a latency guarantee for every recording/machine.
