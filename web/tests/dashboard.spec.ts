@@ -15,6 +15,14 @@ test('new analysis exposes upload, recording and all three modes',async({page})=
   await expect(page.getByLabel('Comparison').locator('option')).toHaveText([
     'Compare with expert readers','Compare with my previous take','Compare with good-speaker norms',
   ]);
+  await page.getByLabel('Audio file',{exact:true}).setInputFiles(speechFixture().audio);
+  await expect(page.getByRole('button',{name:'Analyse recording',exact:true})).toBeEnabled();
+  await page.getByLabel('Speech text').selectOption('own_speech');
+  await expect(page.getByLabel('Comparison')).toHaveCount(0);
+  await expect(page.getByLabel('Your transcript')).toHaveAttribute('required','');
+  await expect(page.getByRole('button',{name:'Analyse recording',exact:true})).toBeDisabled();
+  await page.getByLabel('Your transcript').fill('Four score and seven years ago.');
+  await expect(page.getByRole('button',{name:'Analyse recording',exact:true})).toBeEnabled();
 });
 
 test('browser recording yields an uploadable take and releases the meter',async({page,context})=>{
@@ -64,11 +72,12 @@ test('real API upload, evidence, exact phrase playback and Modes A B C',async({p
   await page.getByRole('button',{name:'New analysis',exact:true}).click();
   await page.getByLabel('Comparison').selectOption('B');
   await expect(page.getByLabel('Previous take').locator('option')).not.toHaveCount(1);
-  const previous=await page.getByLabel('Previous take').locator('option').nth(1).getAttribute('value');
-  await page.getByLabel('Previous take').selectOption(previous!);
+  // Existing history may include other recordings; compare this fixture to its own A take.
+  await page.getByLabel('Previous take').selectOption(completed[0]);
   await submit(page);
   completed.push(page.url().split('/').pop()!);
   await expect(page.getByTestId('rehearsal-progress')).toBeVisible();
+  await expect(page.locator('.empty')).toContainText('against your earlier take');
   await expect(page.getByTestId('progress-chart').locator('.main-svg').first()).toBeVisible();
   await expect(page.getByTestId('waveform')).toHaveAttribute('data-ready','true');
   await page.screenshot({path:reportPath('img/ui_modeB.png'),fullPage:true});

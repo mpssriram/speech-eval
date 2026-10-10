@@ -2,20 +2,34 @@
 
 Deterministic speech-delivery evaluation for the Multimodal AI Hackathon 2026.
 
+## Dashboard and CPU release checks
+
+```sh
+make up                 # http://localhost:8080 (API + dashboard)
+make test               # tests in Docker
+make reproduce-quick    # Gettysburg, three held-out readers, CPU
+make reproduce          # recompute every Phase 6/7/8 report number
+```
+
+Audio and Parquet are not in Git. Restore the prepared measured dataset before
+analysis/reproduction; see [Docker setup and input requirements](docs/DOCKER.md).
+The public dataset archive and genuine human ratings are still pending.
+See [browser verification and screenshots](reports/phase09_ui.md).
+
 The project runs in WSL Ubuntu at `/home/sriram/speech-eval`.
 
 ```bash
 cd /home/sriram/speech-eval
 env -u PYTHONPATH ~/.local/bin/uv run speecheval transcripts triage
 env -u PYTHONPATH ~/.local/bin/uv run speecheval transcripts verify
-make test
+make test-host
 # Equivalent direct test command:
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 env -u PYTHONPATH ~/.local/bin/uv run pytest
 # Wrapper also accepts pytest arguments:
 scripts/test.sh tests/test_triage.py
 ```
 
-The Makefile and test wrapper remove inherited `PYTHONPATH` (including ROS 2
+The host test target and test wrapper remove inherited `PYTHONPATH` (including ROS 2
 paths) and disable external pytest plugin autoloading. The CLI warns when a
 non-empty `PYTHONPATH` is present.
 

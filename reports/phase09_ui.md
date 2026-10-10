@@ -69,6 +69,10 @@ activated: the recording test uses Chromium's isolated fake audio device.
 
 This prepared recording reuses existing alignment/features; its elapsed UI time
 is not a cold-alignment latency benchmark. Real microphone quality, the user's
-new recordings, independent human ratings and cross-environment Docker score
-identity remain separate checks. The frontend build warns about its Plotly-heavy
+new recordings and independent human ratings remain separate checks.
+The production-proxy rerun and cross-environment CPU identity are now recorded
+in [Docker verification](docker_verification.json) and [Docker instructions](../docs/DOCKER.md).
+The production rerun passed all three browser tests and all 200 Python tests,
+including own-speech transcript gating and canonical Mode C upload coverage.
+The frontend build warns about its Plotly-heavy
 bundle size; that warning does not prevent the build or browser functionality.

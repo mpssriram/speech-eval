@@ -5,6 +5,13 @@
 - `docker --version` returned the WSL integration message: Docker command could not be found in this distro. No Docker reinstall or system changes were attempted.
 - `command -v node` found no Linux Node executable; the only `npm` path is the Windows installation under `/mnt/c/Program Files/nodejs/`. Do not run project builds on Windows.
 - API source and project-only Python dependencies can proceed; Docker equivalence and the React build require the existing Docker integration/Linux build runtime to be available. Do not claim those checks pass.
+- Release resolution on 2026-10-10: Docker Desktop WSL integration is available (Engine 29.1.3, Compose 2.40.3-desktop.1). A separate temporary clone built the dashboard with Linux Node inside its pinned image, served the real API/UI on port 8080, passed 200 container tests and three browser tests, and reproduced all Phase 6/7/8 report numbers and ten host/container analysis hashes. Host Linux Node is still absent but is not required by this flow. Evidence: `reports/docker_verification.json`.
+
+## 2026-10-10 — Public dataset archive and raw reconstruction are still pending
+
+- Git intentionally excludes audio and Parquet. No published dataset archive URL/checksum exists in the project; an external clone cannot download an unpublished release.
+- Fresh-clone Docker verification used `scripts/restore_local_data.py` to copy only the frozen measured inputs/provenance from the prepared local checkout. It copied no host environment, ASR models or application state.
+- `make reproduce-quick` and `make reproduce` successfully recompute the frozen numeric evaluation from these measurements. They do not claim full raw download/ASR/excerpt-window reconstruction. That separate Phase 10 release flow still needs a published licensed archive with checksums and its raw-regeneration work; no new hosting account or personal-data publication was attempted.
 
 ## 2026-10-07 — User takes are not present in the WSL project
 

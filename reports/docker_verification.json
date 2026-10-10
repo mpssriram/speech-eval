@@ -1,0 +1,503 @@
+{
+  "browser": {
+    "browser": "145.0.7632.6",
+    "elapsed_seconds": 9.82,
+    "fixture": {
+      "recording_id": "gettysburg__lv_mk__orig",
+      "sha256": "3bb1db549021b13753e03186d4f0795aa4012582bf5ba1298232d4f46bfc4f3c"
+    },
+    "mobile": {
+      "height": 844,
+      "width": 390
+    },
+    "modes": [
+      {
+        "analysis_id": "72fb06d6e6b122b43877fa21",
+        "mode": "A",
+        "regions": 2,
+        "score": 9.4,
+        "status": "done"
+      },
+      {
+        "analysis_id": "351cd8651cc24ba2b2886943",
+        "mode": "B",
+        "regions": 0,
+        "score": 10,
+        "status": "done"
+      },
+      {
+        "analysis_id": "d21120bad67431eb6d8e8577",
+        "mode": "C",
+        "regions": 0,
+        "score": 10,
+        "status": "done"
+      }
+    ],
+    "page_errors": [],
+    "schema": "ui-verification/v1",
+    "screenshots": [
+      "ui_upload.png",
+      "ui_results.png",
+      "ui_region.png",
+      "ui_modeB.png",
+      "ui_modeC.png"
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    }
+  },
+  "browser_test_driver_sha256": "addbb1df7d96f0b3985af3dccdc1aeb081878ee313cd37504fbfee1897dc6933",
+  "clone": {
+    "host_environment_or_asr_models_copied": false,
+    "measured_data_restored_locally": true,
+    "path": "/tmp/speech-eval-release-a8lSKY",
+    "tested_commit": "71006b9bb4d2fada84377c7ff0bec56f18320f86"
+  },
+  "commands": {
+    "browser": "UI_BASE_URL=http://localhost:8080 npm test",
+    "full": "COMPOSE_PROJECT_NAME=speech-eval-release-check make reproduce",
+    "quick": "COMPOSE_PROJECT_NAME=speech-eval-release-check make reproduce-quick",
+    "startup": "docker compose -p speech-eval-release-check up -d --build --wait",
+    "tests": "COMPOSE_PROJECT_NAME=speech-eval-release-check make test"
+  },
+  "empty_clone_test": {
+    "measured_data_restored": false,
+    "output_gid": 1000,
+    "output_uid": 1000,
+    "path": "/tmp/speech-eval-empty-check-0mm2Vn",
+    "pytest": {
+      "errors": "0",
+      "failures": "0",
+      "hostname": "45c63a58cd13",
+      "name": "pytest",
+      "skipped": "1",
+      "tests": "200",
+      "time": "15.151",
+      "timestamp": "2026-10-10T11:27:35.380837+00:00"
+    },
+    "skips": [
+      {
+        "message": "Optional real-audio regression; synthetic DSP tests always run",
+        "type": "pytest.skip"
+      }
+    ],
+    "tested_commit": "0da2379972832ce0bcdf8510e745236796102830"
+  },
+  "environment": {
+    "compose": "2.40.3-desktop.1",
+    "cpu_count": 24,
+    "cuda_available": false,
+    "cuda_visible_devices": "",
+    "docker_engine": "29.1.3",
+    "memory_bytes": 16466989056,
+    "python": "3.11.16",
+    "torch": "2.11.0+cu128",
+    "torch_threads": 1
+  },
+  "full": {
+    "artifact_sha256": "e11412e9c0a6ccae4b0e4a556ed3d857bb73e61441bf0ae22733d3223ca95749",
+    "cold_cpu_features": [
+      {
+        "artifacts": {
+          "data/features/frames/gettysburg__lv_sa__orig.parquet": "91f7931cd519f4ad5f98e48741f96400c0cb1b16b8ade66b5e0e9d05641edc15",
+          "data/features/sentences/gettysburg__lv_sa__orig.parquet": "92763947900b6f812cc2b7258d04bdfa0955ff9f9ec5998d9436cf2b7279763c",
+          "data/features/speaker_stats/gettysburg__lv_sa__orig.json": "52929fd3cdf27111617d982b1604c7b034ebf131aef219be870e3e3d4b00cf9b",
+          "data/features/windows/gettysburg__lv_sa__orig.parquet": "67761d2c874b34f67826f461cd188d467ca43b6202dd49273b1841b4f6e7f559",
+          "data/features/words/gettysburg__lv_sa__orig.parquet": "4f0afe4673a3432a5db7b14200c1ded6ad7993b3fa8f6274f3d42682d796f883"
+        },
+        "recording_id": "gettysburg__lv_sa__orig"
+      },
+      {
+        "artifacts": {
+          "data/features/frames/gettysburg__lv_tg__orig.parquet": "d2f76bc50bbca4ec4fbe6795b00e7ae9d7d2a86dfa59bddd6e807ed140182090",
+          "data/features/sentences/gettysburg__lv_tg__orig.parquet": "dd3f70a83f8bbd3c6ebf573bf36d754a4a21b58e18b3ed385f0c11ecc82a23b5",
+          "data/features/speaker_stats/gettysburg__lv_tg__orig.json": "45aa562c3ef512d511d815cb2f4b6c7d6adc2e459a057b906040adcb18fa1d4b",
+          "data/features/windows/gettysburg__lv_tg__orig.parquet": "973f7c3564e678fc9c06f72911f30a470e70898498a979faf41014a01cd4a9b6",
+          "data/features/words/gettysburg__lv_tg__orig.parquet": "dcf0d97df641130778cea3332757e61d8f505fecad5abdb4888aef0955159ff0"
+        },
+        "recording_id": "gettysburg__lv_tg__orig"
+      },
+      {
+        "artifacts": {
+          "data/features/frames/gettysburg__lv_wt__orig.parquet": "8249f439ff89741bfbd394f31367ccaf739ec1fb4f92c3146f05f39f316eea81",
+          "data/features/sentences/gettysburg__lv_wt__orig.parquet": "6bece32b3f1c3b5f6e9295f23e10c3cc4941b62fd8bef7a037bb7885a621e6f1",
+          "data/features/speaker_stats/gettysburg__lv_wt__orig.json": "ab2cc10c83d50899dc51c115dd358e3e8347f71c2c24d346a5f5681325bf9ef6",
+          "data/features/windows/gettysburg__lv_wt__orig.parquet": "ffbf81db39d622dd11ca8a71ce15a230119f06d30f9a81aed24b0d24c7aab44e",
+          "data/features/words/gettysburg__lv_wt__orig.parquet": "b280136003201b41bcb5b17e0ae8e96b078157588230183ff423001e7e15c1d0"
+        },
+        "recording_id": "gettysburg__lv_wt__orig"
+      },
+      {
+        "artifacts": {
+          "data/features/frames/jfk_rice__jfk__orig.parquet": "a701391d4f9bdae6e59b5901f5d217cacf3e6f3741ac315b11b4a0e318c77e3e",
+          "data/features/sentences/jfk_rice__jfk__orig.parquet": "b30b17617dda9bca6b5936bac3885e79ed059b21268e96f2abb99c1738137bb5",
+          "data/features/speaker_stats/jfk_rice__jfk__orig.json": "d11065877600861f2cfe6e0becbdf31be937d35eb99b7205f113c6e31d873e72",
+          "data/features/windows/jfk_rice__jfk__orig.parquet": "95f70413679f507dec58d1857c20caf2f854091964e2a34baf613f5b39d27d3a",
+          "data/features/words/jfk_rice__jfk__orig.parquet": "e608b39f69b4b5993cc51bece486d88e030d5941b6f847236304ca6c30978491"
+        },
+        "recording_id": "jfk_rice__jfk__orig"
+      },
+      {
+        "artifacts": {
+          "data/features/frames/o_captain__lv_ss__orig.parquet": "51b1391eb8fe9792decd3a007e424455be129f7a50e1d11e2c885e99642133bd",
+          "data/features/sentences/o_captain__lv_ss__orig.parquet": "0685f9028479f0891348f4a45f505fd834dfcf947daf0a82223cf8a68cc21da2",
+          "data/features/speaker_stats/o_captain__lv_ss__orig.json": "ec285a0c81c272fe67357b04132206c85ffa322e45242db2ff9af1d4e708ad59",
+          "data/features/windows/o_captain__lv_ss__orig.parquet": "91fe1d3875af8553738095176ac9e8c86038304c4f20ba5d0809772ea0eff9f3",
+          "data/features/words/o_captain__lv_ss__orig.parquet": "318a5e556bccf74f92dc646c8a008c6f67f353404b50c3a2a5b0aec1c0e6db96"
+        },
+        "recording_id": "o_captain__lv_ss__orig"
+      },
+      {
+        "artifacts": {
+          "data/features/frames/o_captain__lv_th__orig.parquet": "8ff6061e140186fc94cda31fdcfb881e9720db055110d4b5bca6d61b38eba432",
+          "data/features/sentences/o_captain__lv_th__orig.parquet": "dd76f9891542dcb5bf61ffb13dc1b4617a1d53a5401722e69dea3e530fc06e83",
+          "data/features/speaker_stats/o_captain__lv_th__orig.json": "42747f3f76d668f7cb210a59bb3e67e5063264551e0cd9f196192d09f3128ebb",
+          "data/features/windows/o_captain__lv_th__orig.parquet": "3db3f842a765e49032f546edc956216e5c2d203d338d0e5a581aee4004ba5661",
+          "data/features/words/o_captain__lv_th__orig.parquet": "ac5728663e90a02486e1c5dbcb9ea35f66945659dc647a9609bb2d974cede337"
+        },
+        "recording_id": "o_captain__lv_th__orig"
+      },
+      {
+        "artifacts": {
+          "data/features/frames/reagan_challenger__reagan__orig.parquet": "01eb249f847a660629b7afdc9158976b273c19bcd42b88d6f8bf81562449ebc3",
+          "data/features/sentences/reagan_challenger__reagan__orig.parquet": "29e5beb91da65d23e0b83311bd86f6f0852611f66cef45fb965fb8dad1762279",
+          "data/features/speaker_stats/reagan_challenger__reagan__orig.json": "8caa33eb45be05c09e4e9b30ca984876612fc3b1438af1cdce70185f290b0c3a",
+          "data/features/windows/reagan_challenger__reagan__orig.parquet": "03488b47bdeca984544c672924a67b41665dd03c618e633b4e0f6a305aaa924e",
+          "data/features/words/reagan_challenger__reagan__orig.parquet": "880164501cb910641d4c90fff34ad0c52c0ecfd524c94fccd789bf49f07ad822"
+        },
+        "recording_id": "reagan_challenger__reagan__orig"
+      }
+    ],
+    "cpu_only": true,
+    "elapsed_seconds": 239.969,
+    "host_container_identity_files": [
+      {
+        "analysis_id": "b1c7b01c6d1d",
+        "first_difference": null,
+        "first_sha256": "8efb7109b5c0ace406799cc7c30e913f4c114ea0d52a10e79c4c8ca17eb2b0e1",
+        "identical": true,
+        "recording_id": "o_captain__lv_th__mixed_02",
+        "second_analysis_id": "b1c7b01c6d1d",
+        "second_sha256": "8efb7109b5c0ace406799cc7c30e913f4c114ea0d52a10e79c4c8ca17eb2b0e1"
+      },
+      {
+        "analysis_id": "7230d932cfa6",
+        "first_difference": null,
+        "first_sha256": "e153fc5d26880f4bc52762891fe7c37b11c06f857aced2b3d62e7d920f07be4e",
+        "identical": true,
+        "recording_id": "gettysburg__lv_sa__missing_pause_s3_01",
+        "second_analysis_id": "7230d932cfa6",
+        "second_sha256": "e153fc5d26880f4bc52762891fe7c37b11c06f857aced2b3d62e7d920f07be4e"
+      },
+      {
+        "analysis_id": "35c57f53ff52",
+        "first_difference": null,
+        "first_sha256": "7dcc672481294be47987ba38189073840100f924e6da9c5253f27229789a24f5",
+        "identical": true,
+        "recording_id": "o_captain__lv_ss__mixed_01",
+        "second_analysis_id": "35c57f53ff52",
+        "second_sha256": "7dcc672481294be47987ba38189073840100f924e6da9c5253f27229789a24f5"
+      },
+      {
+        "analysis_id": "7fe18acef7dc",
+        "first_difference": null,
+        "first_sha256": "907f64c8cbf64a803f4a7fa88c7b82863235e06a53e8a9595522fe356f71ff96",
+        "identical": true,
+        "recording_id": "gettysburg__lv_wt__rushing_s2_01",
+        "second_analysis_id": "7fe18acef7dc",
+        "second_sha256": "907f64c8cbf64a803f4a7fa88c7b82863235e06a53e8a9595522fe356f71ff96"
+      },
+      {
+        "analysis_id": "58d7ba3acae4",
+        "first_difference": null,
+        "first_sha256": "d8d85b5bb1222e22d2507aee5d5714764c177587023b4c7385264da1932d3039",
+        "identical": true,
+        "recording_id": "o_captain__lv_ss__missing_pause_s4_01",
+        "second_analysis_id": "58d7ba3acae4",
+        "second_sha256": "d8d85b5bb1222e22d2507aee5d5714764c177587023b4c7385264da1932d3039"
+      },
+      {
+        "analysis_id": "db6e4e910d08",
+        "first_difference": null,
+        "first_sha256": "b5b631abcebce82dfff06b81712767ecdb45c0117c7015ce45ed79cde24f2f74",
+        "identical": true,
+        "recording_id": "o_captain__lv_ss__dragging_s5_01",
+        "second_analysis_id": "db6e4e910d08",
+        "second_sha256": "b5b631abcebce82dfff06b81712767ecdb45c0117c7015ce45ed79cde24f2f74"
+      },
+      {
+        "analysis_id": "f8b9f8e69a1d",
+        "first_difference": null,
+        "first_sha256": "d5e7b697b99352ee279e3bc39ca3352931ec6ac18fe01b89355fda2f3a0ca156",
+        "identical": true,
+        "recording_id": "gettysburg__lv_tg__dragging_s2_01",
+        "second_analysis_id": "f8b9f8e69a1d",
+        "second_sha256": "d5e7b697b99352ee279e3bc39ca3352931ec6ac18fe01b89355fda2f3a0ca156"
+      },
+      {
+        "analysis_id": "137242233692",
+        "first_difference": null,
+        "first_sha256": "3168187b014715dfcc4370ae825647c6d5266273e2ba1fbf84f97197b6e30ddd",
+        "identical": true,
+        "recording_id": "gettysburg__lv_wt__too_quiet_s5_01",
+        "second_analysis_id": "137242233692",
+        "second_sha256": "3168187b014715dfcc4370ae825647c6d5266273e2ba1fbf84f97197b6e30ddd"
+      },
+      {
+        "analysis_id": "3f8178650c84",
+        "first_difference": null,
+        "first_sha256": "13b214c51fbe541aebab964cb0a0e8cc4a6362322644466f8f1c00f102d5d901",
+        "identical": true,
+        "recording_id": "gettysburg__lv_wt__dragging_s4_01",
+        "second_analysis_id": "3f8178650c84",
+        "second_sha256": "13b214c51fbe541aebab964cb0a0e8cc4a6362322644466f8f1c00f102d5d901"
+      },
+      {
+        "analysis_id": "c406dc288f39",
+        "first_difference": null,
+        "first_sha256": "5479cece00ced69c4c19714c1bfbd24e1d17c5df2549bbd5afd4069fd6c48359",
+        "identical": true,
+        "recording_id": "gettysburg__lv_tg__monotone_s3_01",
+        "second_analysis_id": "c406dc288f39",
+        "second_sha256": "5479cece00ced69c4c19714c1bfbd24e1d17c5df2549bbd5afd4069fd6c48359"
+      }
+    ],
+    "mode_C_files": 175,
+    "reports": {
+      "phase06_results.md": {
+        "numeric_literals_matched": 179,
+        "published_sha256": "8d2abac937904461bf7ed1dddf26a31d0d45568f06d3eff1a5cb6fccd6003b2f",
+        "regenerated_sha256": "8d2abac937904461bf7ed1dddf26a31d0d45568f06d3eff1a5cb6fccd6003b2f"
+      },
+      "phase07_validation.md": {
+        "numeric_literals_matched": 43,
+        "published_sha256": "7a9c891ead95f3ab63a1fbdec796efd7900946cbfe5e53e0dab1e24a0771fd0c",
+        "regenerated_sha256": "7a9c891ead95f3ab63a1fbdec796efd7900946cbfe5e53e0dab1e24a0771fd0c"
+      },
+      "phase08_mode_c.md": {
+        "numeric_literals_matched": 62,
+        "published_sha256": "9c491b9a1958519a3579ef50761e617a7338606c77e9652c1e76ac7dc712b397",
+        "regenerated_sha256": "9c491b9a1958519a3579ef50761e617a7338606c77e9652c1e76ac7dc712b397"
+      }
+    },
+    "setting_files": {
+      "A-LOSO": 190,
+      "B-same-speaker": 76
+    },
+    "test_rows": 266
+  },
+  "http": {
+    "base_url": "http://localhost:8080",
+    "cold_alignment": {
+      "analysis_id": "24c4a1b06ef009afaf918929",
+      "elapsed_seconds": 45.998,
+      "fixture": "licensed Gettysburg first sentence",
+      "status": "done",
+      "word_count": 30
+    },
+    "content_range": "bytes 0-99/10670330",
+    "dashboard_status": 200,
+    "health": {
+      "detector_config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+      "git_commit": null,
+      "reference_version": {
+        "gettysburg__excl-none": "746a5ef0d4f2ad2eb999a85dc58eed970ddd266438c98da4543938485fdbeabe",
+        "norms_v1": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+        "o_captain__excl-none": "b7f6a47216851cc39bd91f786997912580808acca1bb30c406c1edadb944c8fa",
+        "pooled_sigma": null
+      },
+      "version": "0.1.0"
+    },
+    "range_bytes": 100,
+    "range_status": 206,
+    "schema": "container-http-verification/v1",
+    "spa_status": 200,
+    "texts_count": 4
+  },
+  "limits": [
+    "Measured-input numerical reproduction, not end-to-end raw reconstruction.",
+    "Public dataset archive URL/checksums are pending.",
+    "Licensed fixture/cold excerpts are not user recordings or human validation."
+  ],
+  "own_speech_mode_C": {
+    "analysis": {
+      "key_moments": 6,
+      "mode": "C",
+      "recording_id": "own_speech__user__input_8863aef0b2ab",
+      "text_id": "own_speech",
+      "transcript_source": "supplied"
+    },
+    "base_url": "http://localhost:8080",
+    "cold_alignment": {
+      "analysis_id": "4ac78e126bb5e9f7d8c57aa1",
+      "elapsed_seconds": 33.328,
+      "fixture": "licensed Gettysburg first sentence",
+      "mode": "C",
+      "status": "done",
+      "word_count": 30
+    },
+    "content_range": "bytes 0-99/10670330",
+    "dashboard_status": 200,
+    "health": {
+      "detector_config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+      "git_commit": null,
+      "reference_version": {
+        "gettysburg__excl-none": "746a5ef0d4f2ad2eb999a85dc58eed970ddd266438c98da4543938485fdbeabe",
+        "norms_v1": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+        "o_captain__excl-none": "b7f6a47216851cc39bd91f786997912580808acca1bb30c406c1edadb944c8fa",
+        "pooled_sigma": null
+      },
+      "version": "0.1.0"
+    },
+    "range_bytes": 100,
+    "range_status": 206,
+    "schema": "container-http-verification/v1",
+    "spa_status": 200,
+    "texts_count": 4
+  },
+  "pytest": {
+    "errors": "0",
+    "failures": "0",
+    "hostname": "08f40c241224",
+    "name": "pytest",
+    "skipped": "0",
+    "tests": "200",
+    "time": "14.583",
+    "timestamp": "2026-10-10T11:27:41.796161+00:00"
+  },
+  "quick": {
+    "artifact_sha256": "ea1f85f862117810fd1d84d0e6c4a23012d8dbf94e9cbe635c736408a274fcaa",
+    "cpu_only": true,
+    "elapsed_seconds": 12.779,
+    "test_readers": [
+      "lv_sa",
+      "lv_tg",
+      "lv_wt"
+    ],
+    "test_rows": 114,
+    "text_id": "gettysburg"
+  },
+  "schema": "docker-verification/v1",
+  "screenshots_sha256": {
+    "ui_modeB.png": "2b593037a81f1ec2deccb2cdeacd22271d580b9e4baf6ffea6c2c601b36d072b",
+    "ui_modeC.png": "c33e286be790c24cd1357c9b03e3b1b2d85f895f58e528eb578c0303423e021b",
+    "ui_region.png": "7df5f77b3f94f1856a40b38d54f9a99eedf4994cd686e8c9322df1c00e758e4b",
+    "ui_results.png": "6ece425e127faa40e7e6eaf5b7d493fe894114bd948f988b661f86010d138c9b",
+    "ui_upload.png": "c9d6404651e950b1d5c7e0da0901e2e75643a30413dfad7212ce546dfea806cf"
+  },
+  "source_sha256": {
+    "Dockerfile": "e01cc9f3c0c2044af2e048dc38639c0c740218b7f94e25d182b9b61b9eb1ea80",
+    "Makefile": "eedb879b0b471273deb308e9ffebc2ab9cdde6558c9591c436652a405dbca891",
+    "api/.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "api/__init__.py": "0a2901d77f164079a1458418247ed648e7b6642aec61ec2e9903f07dd97ab20e",
+    "api/main.py": "5b0341e8ab8627c7913b1c04b35af3b3ac19b456f17e7e7205a80b65f34ba0f3",
+    "configs/baselines.yaml": "42dc40b2e2f84fe7fa122fdbb966440dd69227a39693a3315f8b2523f81785eb",
+    "configs/default.yaml": "d5b4d3f24c15f598fe84552dbb7ca34b7722cced4c1b46f383d2c752e7041710",
+    "configs/detector.yaml": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "configs/flaws.yaml": "531b4d5305a083a892d1bb02ef132579e46fcb4836e80e2514c20a16dd86e83d",
+    "configs/rubric.yaml": "4e8af3b16ef79889763f542471748ade7b127cee299a916542ce5d47f35abfaf",
+    "configs/splits.yaml": "1bcd501d7e4b5d890788f858c637e59b4e522f527d61bbe330c54a108683a4c7",
+    "configs/text_equiv.yaml": "2fab993c9fc2ad9731f7c9fe95bec3fda03f404a72e5d2b3510f41a5380afe26",
+    "docker-compose.yml": "ae5103eb892b58e35e9d519815cc2683fd2aa346d3bc68300c5366fda0abf1bf",
+    "pyproject.toml": "3d85d2959ebc25907181b256d117577bbade15cf3a576571d6b9223f3bc9fd07",
+    "scripts/check_alignment.py": "c942bdf89d8eea9bcbaf2ca21055f55e5cf5abdde5e4e237557eb91a4bb7e1b4",
+    "scripts/check_analysis.py": "2563745d7cbc53f387e229e115db4f0cc2ce8fac7b3dda594047d050f2870a5a",
+    "scripts/check_bakeoff.py": "e4c70fef1162248683208b08cd9c39bb1171f76eeb5c582b2fecc3cf745c2f2b",
+    "scripts/check_calibration.py": "a5d8b77ae02304631d50a7233f7b37cb05f65661dc61400987e9fd07b06b82cd",
+    "scripts/check_dataset.py": "d2e4f6b65fe488360a8a258d1a8c69cad387cf6c011345aab54752ca62ba5d7d",
+    "scripts/check_features.py": "876df4de2a38c2232bbf1d4847cb592c1969d1e148390ccc0dc2514ad47e3a96",
+    "scripts/check_gold.py": "b72cf7b4f046a2f78e82d8f47bb474d091402c3808e9ac8c7b0b26c628ee9e2c",
+    "scripts/check_injection.py": "8b498a3ba912f581f04bc0ca5f21fbe31ed58f899dfcc7a48522bf50aab7284e",
+    "scripts/check_phase1.py": "0362f196c684ab0f416c861e483db01e53f32286fe52089cf1ad5bbedddee120",
+    "scripts/compare_custom_dictionary.py": "e8091fdd96fdbc2e6b29e7751e96f5e043f0ceecb65ea32623708c00d703856f",
+    "scripts/custom_dictionary.py": "dfb29f7cfaabe79288d87c7317d280db9517649425d7fb4de2fa82ab68ef6662",
+    "scripts/refresh_asr.py": "b55d3115dabb9e9a9c17f3fde4b2f4ac13d7b573a9e56addf8b07a0e70aaf777",
+    "scripts/refresh_number_metadata.py": "544a797d68b3db5aef5cc3d313f604c31fdb97b6559f67a1fcc08f682267abf7",
+    "scripts/restore_local_data.py": "bf9895ad70ac43ab88f5b4c8dadbb588d3facb8344c7cd9c8a39842fc7cde758",
+    "scripts/test.sh": "b3cb84bcd93c10817e69409a9c5e2f884c6f35f855a6f62f84653bf951e92b6d",
+    "scripts/update_alignment_report.py": "beffa6114efeaffdd77f6114bb416acbd35c6e655f699c0db8fac2c3f3c3b44a",
+    "src/speecheval/__init__.py": "d94212d5faa62622cf99f345f8cfa54697813aed5d8f0565799f6b440ffbb850",
+    "src/speecheval/align/__init__.py": "70efe6d3f466f7a8fe09c419d914515da2e170a9655643d8542d503bd7860dfa",
+    "src/speecheval/align/base.py": "994dc16583cc442b5ec6520e6c7069e4a5ba8f9bf0a5db0bb547cf985d05529f",
+    "src/speecheval/align/mfa.py": "889d7fa27cab72ead0d5df87c1fc0a0f66d3a89d6a978abd9f9b5ed1685a4366",
+    "src/speecheval/align/pipeline.py": "2104972bba1d5f0e7e14bdd4286d0bac2ee8e77aeff3cc4044ef6e2ab03e7fdc",
+    "src/speecheval/align/whisperx_align.py": "8fabd1b0a7c4dc40191acc5160e7ac1f89b5924bf413e3665239bd8ebe235ceb",
+    "src/speecheval/alignment_analysis.py": "6675e8a56f60e7b268b3a684e1f96fecccdd9f231bc97835a012830194b76479",
+    "src/speecheval/alignment_qa.py": "7fe0ad1234cd499b2bc7775f1fb0dca7933c62b66ed21c314104fe19741c0bb1",
+    "src/speecheval/calibrated.py": "81281d9b8ef5776b049a3c26f296600dc121b69d8bba9f7de7adaee624e355d1",
+    "src/speecheval/calibration.py": "e18212d57adcd9854b728fe6496bef3e7db2c5532cd93582cc0007b6343fd66f",
+    "src/speecheval/cli.py": "c0fa79b942703fd03fe24f5b5adc2744fe6fc8ce27abdb6ff92e8ff758e2adaa",
+    "src/speecheval/config.py": "ff1f4971ea16245a45f63e70cf066fc8e347678d66bcaf6514ffc20f6292a6b5",
+    "src/speecheval/ctc_worker.py": "4b883e7bc298276a874b104473aa658cea0f30b0834abb114722fc2c4b74f34a",
+    "src/speecheval/dataset.py": "73ce6bee4be9ffc63b7ed6c638625d3e53165605f6e3464dd3107ded0aa653a3",
+    "src/speecheval/detect.py": "95c9d9cdc48673013f018ff1f3026a919b88474a342b08a644802d3c92bd74b9",
+    "src/speecheval/evaluate.py": "32a665b7bf82e2ade0894d06ad3c09eb8623abbb2a3719592a18cce6974bae1b",
+    "src/speecheval/explain.py": "465c8cd527e177ef8de1f4b43f4b6983f22017ae71ab6d0e7c456d0a67419af9",
+    "src/speecheval/features.py": "e34045ca86ed32d57aa893495bf22d96800f9faa26950aa4b22f2dad0a1f167f",
+    "src/speecheval/gold.py": "2f190372ecab90b8d51e281a5bb650b7d541a976f69659b72bf2177781b5eb47",
+    "src/speecheval/human.py": "9cccaeea8ec1bc40f5ce104b832bb5582c1465f2c32d958061aab9b3204c812b",
+    "src/speecheval/inject.py": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+    "src/speecheval/io.py": "4a57df3fba568a6067b13d3027ef37d823bc38c684da2bff2a85985ec78a6bb8",
+    "src/speecheval/learned.py": "25d5e60b3f9ee675fdd645c983ee1574ad4f6f115349c9242094d017adf062f7",
+    "src/speecheval/mode_c.py": "b69a97c19518b7a5cb6d9d07c9950966452a1edfb38eb7db3ce180a16c4aa992",
+    "src/speecheval/normalize.py": "450da07c18761bb3e167b03c2c400039ebdc1dab0c397dfe106429688a32fe94",
+    "src/speecheval/pipeline.py": "f85aae5ed9156ebb84b326b6118e25cd50abe4914994855d4c6125cc42367079",
+    "src/speecheval/prepare.py": "2414c27b0ca3d55d8e91a0fbba8f3f6a9db976f64e0da19fd2aa4e0c67fbd842",
+    "src/speecheval/reference.py": "abc9230cb6d4cd234a44035c39fb6eaa4348cb9aa641ac14e736718d5597e031",
+    "src/speecheval/reproduce.py": "b0bd1ae981857f303568686222b4040b4db53df16c33bbc55ea6e07889974777",
+    "src/speecheval/score.py": "7a49b5d16eaa580d2faca040897d85f6ad88de5bd262ee51faadc22a26b5e5ed",
+    "src/speecheval/service.py": "c59ba8787f9c9ec1357048e17dc55c88bb3bd779ef60749dcaa862d70b10229e",
+    "src/speecheval/service_tracks.py": "3be0a168161264c4cc146206d4486a43d97eaa3468f63da39ca8d0269694c49a",
+    "src/speecheval/sources.py": "9cc3a7fc2f06083170dba6757577da7bd00bf2525f225b0850413ed71ec6112c",
+    "src/speecheval/transcripts.py": "9f61b340cd609f52cd141083dc00810091abbfbbe6ed3b4c405e70d7c777796d",
+    "src/speecheval/triage.py": "3491a79fd051341049d01680bed7a32e78701c69c933c3dc143c7def392f2169",
+    "src/speecheval/validation.py": "a75f1dec10b795b4ffab959145aa96b551a89af0fb33f9fd4f697e9890449e55",
+    "src/speecheval/verify.py": "eb9c8d484e11e7321bbf8d41f4e492060970a68a2fbb4aedc24eaa63b8d25860",
+    "tests/test_alignment.py": "c3ff80ec0e200e80086cd007df342512fad006f1d7ce0fd7bcb91ec7c5790965",
+    "tests/test_alignment_analysis.py": "ef5dcccdf385c9ef563cda9b1fcf12a7689e64dd3f856480a9bdbbe3e2480c55",
+    "tests/test_api.py": "f69845be8040d288aff8a3f08af435cc9e053070eac2acbda4ac91a9e20eaf96",
+    "tests/test_calibrated.py": "15dad7645b4d06d6e54bfcd9d7aa5405e12db65b9975484be98613c5d04ba7b7",
+    "tests/test_cli.py": "959415c6ee68a605fdd23f91248718bcd81faeb459ca67f7b8da3e6b69c55365",
+    "tests/test_dataset.py": "a783ec60333db1a787a9149854e1a577c79b4ca3b4af611f30953a1a288b0225",
+    "tests/test_dataset_integrity.py": "9dd2367bdd0f6c0972f7a5332140ba525e747b7160c0f85defd8ccd22b0599ec",
+    "tests/test_detect.py": "d81874d12262867eebbb598142d7a6db484eef7c92b4b51f1b0fa34ea671d3e5",
+    "tests/test_detection_evaluation.py": "0374f22c40c930ecb9e45e6f80cbea435d7016e5c92ed5d0a3b44d813fb2b61a",
+    "tests/test_detector_calibration.py": "2f16daba6fd48508737dcfb1d2e36172ecc4075bad7542fd127462421a57c0f4",
+    "tests/test_evaluate.py": "4dacd2753e776396ea7639ea9621f5cadaf078d7ba4a63821d16d50890c17092",
+    "tests/test_explain.py": "28ddfb416a30ddbe3a4f4f84dd047d616bfa7ec161063a687f682654a9c05432",
+    "tests/test_features.py": "945804edca6217cbc8e460486ad764b66c742220ee6f96f930171845ac9731b3",
+    "tests/test_gold.py": "8dd7051cddc00d293e47fe68c2c417decb25babcd854a12336af940be52aab63",
+    "tests/test_human.py": "029ad0b2195483951381131b540d7fc0dff74a1d6a9715bedc5f94c8a93cbb1b",
+    "tests/test_inject.py": "a855abeb35f0f390367cb9512f52203145215646483fa07de354896a2096de75",
+    "tests/test_mode_c.py": "da912b9077371400cc9de8fa8aac994df94e21bddff8f6b72aad5b0d6b60b8b7",
+    "tests/test_pipeline.py": "2bee185de4548b0df35ad9df6a0d72ba4e987549b94f7b16b0c48f3698f624ed",
+    "tests/test_prepare.py": "3a881979b08a0e028f64352b0aa045f6c76934016b4f201dd43fa571b19d611c",
+    "tests/test_reference.py": "75fe3725025acc79a7f1f55a295a5b4a62dc90eb9a9931017848c4604bb3b8a3",
+    "tests/test_release_commands.py": "d0a1706924df9fc28a77b0b0a70f3af298c4c26a00eaaf1d590149683496debb",
+    "tests/test_score.py": "0281e6adeac1462a916e38a039b678ca9e2495ef1bbd4d0362ea8e27dce30fcd",
+    "tests/test_scoring_validation.py": "5fd9693ed3508ad9b8ea1037ea8b6efc65290911384534cad4e09ae106208499",
+    "tests/test_sources.py": "7dcadbe41cd36af90987af3c467e13c4874d0562bd8a1c1829b34ea3c335e2e4",
+    "tests/test_transcripts.py": "388c330c7a0368457b1246a06987df463a573848f8a4aea65637657dc14b93df",
+    "tests/test_triage.py": "cd10c2f195b197c2aa0186690e3c33b94aa77b5ed1656646b8640241b7bd5af9",
+    "tests/test_verify.py": "f08d02eb3130bd1ea1f3672f4de28beeb7d5966b1065ab36c4749d56ec8349ee",
+    "uv.lock": "8f648d045bcd6f0fa8698121f57b52b388dcc6da7040f2213ee0d77a9e76756e",
+    "web/Dockerfile": "83da2c3bb2c7050b3b8db68309763ca43fb180ca21e06f8bdf773ed68368590d",
+    "web/nginx.conf": "377cef86db8418a0662d6a233cfe2255d71e1a83bfa8b471c7f4a8c9bc316599",
+    "web/package-lock.json": "4e07fb7f61a65edeaa86dd3b3258b6b6dbdfe9a41605373b8e9c32cd5a94b655",
+    "web/package.json": "0858c79d35a522d60c872c85e32c7dca2755a9ac8f944281c4d3770f0be88365",
+    "web/src/App.tsx": "1e1d5420c2581abaeba417dc332e8894792dd9ecc7fa470c7bdeac9a55249699",
+    "web/src/Evidence.tsx": "e3e5051f5289e981605998dd126c494e4fe74ca35c02af245ee0f25480f6928f",
+    "web/src/Recorder.tsx": "5720a09b8ce4617480937263947abe9645229657879219a77a0f8c184b11b2f7",
+    "web/src/main.tsx": "08d54d01c2c4bd5036327840eb5a3c9905cb3290483fc2f5d916b81cb717c041",
+    "web/src/plotly.d.ts": "1cc351b19dd8ab13dbc83d231524c71811c058b202e3c169a8c5160cf1037ad7",
+    "web/src/style.css": "b94fdb833da96e0526f1ec0eb2c96c8b0b59a839de3a3dd53fb5cd98592220d4",
+    "web/src/types.ts": "625b029a883f270df4fb07d19a85d4a6540d80bb96e19c3066acd0ff382cf065"
+  },
+  "verification_images": {
+    "api_running_config": "sha256:83f9c495591aebdf3865da4ba6391d1e33aeeb12d5d551765349b04a4445bfca",
+    "tools_image": "sha256:761cbf6d88c83332178f70be364f1242c3ae74b300d7989153dbbf32d77eb82a",
+    "web_image": "sha256:45b1980256f46f6279db3420f72ae6857952d4b62df2e4865fadc03ef79d25c0"
+  },
+  "verified_at_utc": "2026-10-10T11:32:44.604766+00:00"
+}

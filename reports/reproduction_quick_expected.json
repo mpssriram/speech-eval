@@ -1,0 +1,560 @@
+{
+  "cold_cpu_features": [
+    {
+      "artifacts": {
+        "data/features/frames/gettysburg__lv_sa__orig.parquet": "91f7931cd519f4ad5f98e48741f96400c0cb1b16b8ade66b5e0e9d05641edc15",
+        "data/features/sentences/gettysburg__lv_sa__orig.parquet": "92763947900b6f812cc2b7258d04bdfa0955ff9f9ec5998d9436cf2b7279763c",
+        "data/features/speaker_stats/gettysburg__lv_sa__orig.json": "52929fd3cdf27111617d982b1604c7b034ebf131aef219be870e3e3d4b00cf9b",
+        "data/features/windows/gettysburg__lv_sa__orig.parquet": "67761d2c874b34f67826f461cd188d467ca43b6202dd49273b1841b4f6e7f559",
+        "data/features/words/gettysburg__lv_sa__orig.parquet": "4f0afe4673a3432a5db7b14200c1ded6ad7993b3fa8f6274f3d42682d796f883"
+      },
+      "recording_id": "gettysburg__lv_sa__orig"
+    },
+    {
+      "artifacts": {
+        "data/features/frames/gettysburg__lv_tg__orig.parquet": "d2f76bc50bbca4ec4fbe6795b00e7ae9d7d2a86dfa59bddd6e807ed140182090",
+        "data/features/sentences/gettysburg__lv_tg__orig.parquet": "dd3f70a83f8bbd3c6ebf573bf36d754a4a21b58e18b3ed385f0c11ecc82a23b5",
+        "data/features/speaker_stats/gettysburg__lv_tg__orig.json": "45aa562c3ef512d511d815cb2f4b6c7d6adc2e459a057b906040adcb18fa1d4b",
+        "data/features/windows/gettysburg__lv_tg__orig.parquet": "973f7c3564e678fc9c06f72911f30a470e70898498a979faf41014a01cd4a9b6",
+        "data/features/words/gettysburg__lv_tg__orig.parquet": "dcf0d97df641130778cea3332757e61d8f505fecad5abdb4888aef0955159ff0"
+      },
+      "recording_id": "gettysburg__lv_tg__orig"
+    },
+    {
+      "artifacts": {
+        "data/features/frames/gettysburg__lv_wt__orig.parquet": "8249f439ff89741bfbd394f31367ccaf739ec1fb4f92c3146f05f39f316eea81",
+        "data/features/sentences/gettysburg__lv_wt__orig.parquet": "6bece32b3f1c3b5f6e9295f23e10c3cc4941b62fd8bef7a037bb7885a621e6f1",
+        "data/features/speaker_stats/gettysburg__lv_wt__orig.json": "ab2cc10c83d50899dc51c115dd358e3e8347f71c2c24d346a5f5681325bf9ef6",
+        "data/features/windows/gettysburg__lv_wt__orig.parquet": "ffbf81db39d622dd11ca8a71ce15a230119f06d30f9a81aed24b0d24c7aab44e",
+        "data/features/words/gettysburg__lv_wt__orig.parquet": "b280136003201b41bcb5b17e0ae8e96b078157588230183ff423001e7e15c1d0"
+      },
+      "recording_id": "gettysburg__lv_wt__orig"
+    }
+  ],
+  "schema": "numeric-reproduction/v1",
+  "settings": {
+    "A-LOSO": {
+      "confidence_intervals": {
+        "awkward_pause": {
+          "f1_95ci": [
+            0.21776839448650748,
+            0.41232506361323146
+          ],
+          "recall_95ci": [
+            0.8233957219251337,
+            1.0
+          ]
+        },
+        "dragging": {
+          "f1_95ci": [
+            0.1,
+            0.6363636363636364
+          ],
+          "recall_95ci": [
+            0.05263157894736842,
+            0.4666666666666667
+          ]
+        },
+        "missing_pause": {
+          "f1_95ci": [
+            0.0163901106224177,
+            0.13699914383561643
+          ],
+          "recall_95ci": [
+            0.09071969696969698,
+            0.562723214285714
+          ]
+        },
+        "monotone": {
+          "f1_95ci": [
+            0.11538461538461539,
+            0.39287177985948474
+          ],
+          "recall_95ci": [
+            0.2173136645962733,
+            0.6666666666666666
+          ]
+        },
+        "mumbling": {
+          "f1_95ci": [
+            0.2857142857142857,
+            0.7777777777777778
+          ],
+          "recall_95ci": [
+            0.16666666666666666,
+            0.6363636363636364
+          ]
+        },
+        "overall": {
+          "f1_95ci": [
+            0.17071873378308253,
+            0.27882386122361025
+          ],
+          "recall_95ci": [
+            0.27999152542372885,
+            0.45456393200295636
+          ]
+        },
+        "rushing": {
+          "f1_95ci": [
+            0.0,
+            0.2727272727272727
+          ],
+          "recall_95ci": [
+            0.0,
+            0.16666666666666666
+          ]
+        },
+        "too_quiet": {
+          "f1_95ci": [
+            0.0,
+            0.3157894736842105
+          ],
+          "recall_95ci": [
+            0.0,
+            0.21052631578947367
+          ]
+        }
+      },
+      "excluded_uncertain_truth": 0,
+      "files": 114,
+      "metrics": {
+        "awkward_pause": {
+          "f1": 0.3220338983050847,
+          "false_alarms_per_minute": 0.3234466474754989,
+          "matched": 19,
+          "mean_iou": 0.9696279230485119,
+          "offset_median_ms": 33.00000000000125,
+          "onset_median_ms": 10.000000000005116,
+          "precision": 0.19387755102040816,
+          "predicted": 98,
+          "recall": 0.95,
+          "recall_by_severity": {
+            "1": 0.6666666666666666,
+            "2": 1.0,
+            "3": 1.0,
+            "4": 1.0,
+            "5": 1.0
+          },
+          "severity_spearman": 0.8877040234108009,
+          "truth": 20
+        },
+        "confusion": {
+          "awkward_pause": {
+            "awkward_pause": 0,
+            "dragging": 0,
+            "missing_pause": 0,
+            "monotone": 0,
+            "mumbling": 0,
+            "rushing": 0,
+            "too_quiet": 1
+          },
+          "dragging": {
+            "awkward_pause": 0,
+            "dragging": 0,
+            "missing_pause": 0,
+            "monotone": 0,
+            "mumbling": 0,
+            "rushing": 0,
+            "too_quiet": 0
+          },
+          "missing_pause": {
+            "awkward_pause": 0,
+            "dragging": 0,
+            "missing_pause": 0,
+            "monotone": 0,
+            "mumbling": 0,
+            "rushing": 0,
+            "too_quiet": 0
+          },
+          "monotone": {
+            "awkward_pause": 0,
+            "dragging": 0,
+            "missing_pause": 0,
+            "monotone": 0,
+            "mumbling": 0,
+            "rushing": 0,
+            "too_quiet": 0
+          },
+          "mumbling": {
+            "awkward_pause": 0,
+            "dragging": 0,
+            "missing_pause": 0,
+            "monotone": 0,
+            "mumbling": 0,
+            "rushing": 0,
+            "too_quiet": 0
+          },
+          "rushing": {
+            "awkward_pause": 0,
+            "dragging": 0,
+            "missing_pause": 0,
+            "monotone": 0,
+            "mumbling": 0,
+            "rushing": 0,
+            "too_quiet": 0
+          },
+          "too_quiet": {
+            "awkward_pause": 0,
+            "dragging": 0,
+            "missing_pause": 0,
+            "monotone": 1,
+            "mumbling": 0,
+            "rushing": 0,
+            "too_quiet": 0
+          }
+        },
+        "dragging": {
+          "f1": 0.38095238095238093,
+          "false_alarms_per_minute": 0.0,
+          "matched": 4,
+          "mean_iou": 0.7507907489875473,
+          "offset_median_ms": 138.5000000000005,
+          "onset_median_ms": 868.9999999999998,
+          "precision": 1.0,
+          "predicted": 4,
+          "recall": 0.23529411764705882,
+          "recall_by_severity": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.4,
+            "5": 0.6666666666666666
+          },
+          "severity_spearman": null,
+          "truth": 17
+        },
+        "missing_pause": {
+          "f1": 0.07407407407407407,
+          "false_alarms_per_minute": 0.3234466474754989,
+          "matched": 5,
+          "mean_iou": 0.8421480903455303,
+          "offset_median_ms": 8.000000000000007,
+          "onset_median_ms": 5.999999999996675,
+          "precision": 0.04201680672268908,
+          "predicted": 119,
+          "recall": 0.3125,
+          "recall_by_severity": {
+            "1": 0.0,
+            "2": 0.3333333333333333,
+            "3": 0.3333333333333333,
+            "4": 0.25,
+            "5": 0.6666666666666666
+          },
+          "severity_spearman": null,
+          "truth": 16
+        },
+        "monotone": {
+          "f1": 0.25396825396825395,
+          "false_alarms_per_minute": 0.16172332373774945,
+          "matched": 8,
+          "mean_iou": 0.6954050511228203,
+          "offset_median_ms": 783.5000000000001,
+          "onset_median_ms": 55.5000000000021,
+          "precision": 0.17777777777777778,
+          "predicted": 45,
+          "recall": 0.4444444444444444,
+          "recall_by_severity": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.3333333333333333,
+            "4": 1.0,
+            "5": 0.6
+          },
+          "severity_spearman": 0.6324555320336758,
+          "truth": 18
+        },
+        "mumbling": {
+          "f1": 0.5833333333333334,
+          "false_alarms_per_minute": 0.0,
+          "matched": 7,
+          "mean_iou": 0.8509197263372056,
+          "offset_median_ms": 141.00000000000534,
+          "onset_median_ms": 25.99999999999625,
+          "precision": 1.0,
+          "predicted": 7,
+          "recall": 0.4117647058823529,
+          "recall_by_severity": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.2,
+            "4": 1.0,
+            "5": 1.0
+          },
+          "severity_spearman": null,
+          "truth": 17
+        },
+        "overall": {
+          "f1": 0.22388059701492538,
+          "false_alarms_per_minute": 0.8086166186887472,
+          "matched": 45,
+          "mean_iou": 0.8513116172152665,
+          "offset_median_ms": 40.99999999999682,
+          "onset_median_ms": 10.99999999999568,
+          "precision": 0.16129032258064516,
+          "predicted": 279,
+          "recall": 0.36585365853658536,
+          "recall_by_severity": {
+            "1": 0.09523809523809523,
+            "2": 0.17391304347826086,
+            "3": 0.34615384615384615,
+            "4": 0.5185185185185185,
+            "5": 0.6153846153846154
+          },
+          "severity_spearman": 0.3366494853381078,
+          "truth": 123
+        },
+        "rushing": {
+          "f1": 0.09090909090909091,
+          "false_alarms_per_minute": 0.0,
+          "matched": 1,
+          "mean_iou": 0.8516746411483243,
+          "offset_median_ms": 75.00000000000107,
+          "onset_median_ms": 80.00000000000007,
+          "precision": 0.3333333333333333,
+          "predicted": 3,
+          "recall": 0.05263157894736842,
+          "recall_by_severity": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.25
+          },
+          "severity_spearman": null,
+          "truth": 19
+        },
+        "too_quiet": {
+          "f1": 0.10526315789473684,
+          "false_alarms_per_minute": 0.0,
+          "matched": 1,
+          "mean_iou": 0.3008356545961001,
+          "offset_median_ms": 1281.9999999999964,
+          "onset_median_ms": 1228.0000000000016,
+          "precision": 0.3333333333333333,
+          "predicted": 3,
+          "recall": 0.0625,
+          "recall_by_severity": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.25,
+            "4": 0.0,
+            "5": 0.0
+          },
+          "severity_spearman": null,
+          "truth": 16
+        }
+      }
+    }
+  },
+  "severity": {
+    "incomplete_series": [],
+    "series": {
+      "awkward_pause": [
+        [
+          6.8,
+          6.8,
+          6.8,
+          6.4,
+          6.4
+        ],
+        [
+          6.8,
+          6.8,
+          6.8,
+          6.4,
+          6.4
+        ],
+        [
+          5.2,
+          3.6,
+          3.6,
+          3.2,
+          3.2
+        ]
+      ],
+      "dragging": [
+        [
+          10.0,
+          10.0,
+          10.0,
+          8.7,
+          7.6
+        ],
+        [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0
+        ],
+        [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          8.6
+        ]
+      ],
+      "missing_pause": [
+        [
+          8.4,
+          8.4,
+          8.4,
+          8.4,
+          8.4
+        ],
+        [
+          8.4,
+          6.8,
+          6.8,
+          6.8,
+          6.8
+        ],
+        [
+          5.2,
+          5.2,
+          5.2,
+          5.2,
+          5.2
+        ]
+      ],
+      "monotone": [
+        [
+          10.0,
+          10.0,
+          9.4,
+          8.3,
+          8.7
+        ],
+        [
+          10.0,
+          10.0,
+          9.6,
+          9.4,
+          9.3
+        ],
+        [
+          9.6,
+          9.6,
+          9.6,
+          8.7,
+          9.6
+        ]
+      ],
+      "mumbling": [
+        [
+          10.0,
+          10.0,
+          10.0,
+          9.4,
+          9.0
+        ],
+        [
+          10.0,
+          10.0,
+          10.0,
+          8.6,
+          8.1
+        ],
+        [
+          10.0,
+          10.0,
+          10.0,
+          9.4,
+          9.5
+        ]
+      ],
+      "rushing": [
+        [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          9.8
+        ],
+        [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          9.6
+        ],
+        [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0
+        ]
+      ],
+      "too_quiet": [
+        [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          9.6
+        ],
+        [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0
+        ],
+        [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0
+        ]
+      ]
+    },
+    "types": {
+      "awkward_pause": {
+        "constant_series": 0,
+        "median_spearman": -0.8660254037844386,
+        "non_increasing_percent": 100.0,
+        "series": 3
+      },
+      "dragging": {
+        "constant_series": 1,
+        "median_spearman": -0.8007669860932316,
+        "non_increasing_percent": 100.0,
+        "series": 3
+      },
+      "missing_pause": {
+        "constant_series": 2,
+        "median_spearman": -0.7071067811865475,
+        "non_increasing_percent": 100.0,
+        "series": 3
+      },
+      "monotone": {
+        "constant_series": 0,
+        "median_spearman": -0.8720815992723809,
+        "non_increasing_percent": 33.333333333333336,
+        "series": 3
+      },
+      "mumbling": {
+        "constant_series": 0,
+        "median_spearman": -0.8944271909999157,
+        "non_increasing_percent": 66.66666666666667,
+        "series": 3
+      },
+      "rushing": {
+        "constant_series": 1,
+        "median_spearman": -0.7071067811865475,
+        "non_increasing_percent": 100.0,
+        "series": 3
+      },
+      "too_quiet": {
+        "constant_series": 2,
+        "median_spearman": -0.7071067811865475,
+        "non_increasing_percent": 100.0,
+        "series": 3
+      }
+    }
+  }
+}

@@ -35,37 +35,37 @@
 - Modify: `web/src/Evidence.tsx`
 - Modify: `web/src/types.ts`
 - Modify: `web/src/style.css`
-- Test: `web/tests/smoke.spec.ts`
+- Test: `web/tests/dashboard.spec.ts`
 
 **Interfaces:**
 - Consumes: Phase 9 API routes in `src/speecheval/service.py` and `analysis/v1` results.
 - Produces: Accessible upload/results controls, synchronized region selection, score/category reasons, two-source phrase playback, and working Mode A/B/C selection.
 
-- [ ] **Step 1: Start FastAPI and Vite, open the rendered dashboard in Chromium, and capture console/network failures.**
+- [x] **Step 1: Start FastAPI and Vite, open the rendered dashboard in Chromium, and capture console/network failures.**
 
 Run: `uv run uvicorn api.main:app --host 0.0.0.0 --port 8000` and `cd web && npm run dev`, then inspect `http://localhost:5173`.
 
 Expected: the new-analysis page loads, `/api/texts` returns 200, and every visible failure is reproducible.
 
-- [ ] **Step 2: Add browser assertions for every broken interaction before changing production code.**
+- [x] **Step 2: Add browser assertions for every broken interaction before changing production code.**
 
 Add Playwright assertions for upload state, Mode A/B/C selectors, score card, region/card synchronization, explanation content, and both playback controls.
 
 Expected: the new assertions fail on the specific broken behavior rather than setup or selector errors.
 
-- [ ] **Step 3: Implement the minimum dashboard fixes.**
+- [x] **Step 3: Implement the minimum dashboard fixes.**
 
-Keep one selected region index, make empty-region selection safe, expose stable accessible/test identifiers, stop phrase audio at its selected end, disable baseline playback only when the result has no baseline, and render Mode B progress and Mode C guidelines.
+Keep one selected region index, make empty-region selection safe, expose stable accessible/test identifiers, stop phrase audio at its selected end, disable baseline playback when unavailable or words do not match exactly, and render Mode B progress and Mode C guidelines.
 
 Expected: the focused Playwright assertions pass and the browser console has no page errors.
 
-- [ ] **Step 4: Verify build and the real-browser flow.**
+- [x] **Step 4: Verify build and the real-browser flow.**
 
 Run: `cd web && npm run build` and the focused Playwright dashboard test.
 
 Expected: TypeScript/Vite exit 0 and Chromium completes upload, results, waveform, regions, explanations, playback, scores, and Modes A/B/C.
 
-- [ ] **Step 5: Commit and push item 1.**
+- [x] **Step 5: Commit and push item 1.**
 
 Commit only the dashboard source/configuration and this plan with message `phase9: finish browser-verified dashboard`, then push `origin main`.
 
@@ -73,7 +73,7 @@ Commit only the dashboard source/configuration and this plan with message `phase
 
 **Files:**
 - Modify: `web/playwright.config.ts`
-- Modify: `web/tests/smoke.spec.ts`
+- Modify: `web/tests/dashboard.spec.ts`
 - Create: `web/tests/fixtures.ts`
 - Create: `reports/img/ui_upload.png`
 - Create: `reports/img/ui_results.png`
@@ -86,31 +86,31 @@ Commit only the dashboard source/configuration and this plan with message `phase
 - Consumes: Task 1's accessible controls and real API behavior.
 - Produces: A one-command Playwright smoke with five stable evidence screenshots and a provenance report.
 
-- [ ] **Step 1: Make fixture preparation deterministic and fail clearly when corpus inputs are absent.**
+- [x] **Step 1: Make fixture preparation deterministic and fail clearly when corpus inputs are absent.**
 
-Use a known generated flawed recording, convert it losslessly to a temporary WAV with ffmpeg, and derive the Mode C transcript from the matching committed transcript.
+Use the prepared licensed Gettysburg WAV with its verified SHA-256. It yields two real Mode A regions and exercises both an exact baseline phrase and a phrase whose words differ. Canonical Mode C uses its existing verified corpus transcript.
 
 Expected: fixture setup names every required local input and exits before browser launch if one is missing.
 
-- [ ] **Step 2: Run the expanded smoke and observe its first real failure.**
+- [x] **Step 2: Run the expanded smoke and observe its first real failure.**
 
 Run: `cd web && npm test` with FastAPI and Vite running.
 
 Expected: RED at the first unimplemented or broken acceptance behavior, not at page bootstrap.
 
-- [ ] **Step 3: Complete the A/B/C smoke and exact screenshot names.**
+- [x] **Step 3: Complete the A/B/C smoke and exact screenshot names.**
 
 Assert score numbers, Plotly SVG, WaveSurfer regions, region selection, Yours and Baseline playback progress, Mode B progress, and Mode C guideline labeling; save exactly the five requested PNGs.
 
 Expected: all assertions pass with no collected page errors or failed `/api` responses.
 
-- [ ] **Step 4: Write the UI verification report.**
+- [x] **Step 4: Write the UI verification report.**
 
 Document browser/version, commands, fixture provenance, Mode A/B/C coverage, screenshot paths, and remaining USER-only MediaRecorder/human-listening acceptance.
 
 Expected: `reports/phase09_ui.md` distinguishes automated evidence from unperformed human review.
 
-- [ ] **Step 5: Commit and push item 2.**
+- [x] **Step 5: Commit and push item 2.**
 
 Commit the smoke test, screenshots, and report with message `phase9: add deterministic UI smoke evidence`, then push `origin main`.
 
@@ -123,32 +123,33 @@ Commit the smoke test, screenshots, and report with message `phase9: add determi
 - Create: `web/nginx.conf`
 - Create: `docker-compose.yml`
 - Modify: `Makefile`
-- Create or modify: `scripts/reproduce.sh`
+- Create: `src/speecheval/reproduce.py`
+- Create: `scripts/restore_local_data.py`
 - Test: `tests/test_release_commands.py`
 
 **Interfaces:**
 - Consumes: the Python package, `api.main:app`, Task 1's Vite application, and published/local dataset artifacts.
 - Produces: `make up`, `make test`, `make reproduce-quick`, and `make reproduce`; dashboard/API served through port 8080.
 
-- [ ] **Step 1: Write executable release-command tests first.**
+- [x] **Step 1: Write executable release-command tests first.**
 
 Create tests that run the Make targets in dry-run or controlled fixture mode and verify that quick reproduction selects one text/three test readers while full reproduction invokes every published report-number check.
 
 Expected: tests fail because the Compose files and targets do not yet exist.
 
-- [ ] **Step 2: Add production container definitions.**
+- [x] **Step 2: Add production container definitions.**
 
 Build the API from Python 3.11 with system audio tools, build the web client in Node, serve it from nginx, proxy `/api`, preserve range headers, and mount `./data` for API state and corpus access.
 
 Expected: `docker compose config` exits 0 and exposes only web port 8080 to the host.
 
-- [ ] **Step 3: Add Make targets and reproducibility scripts.**
+- [x] **Step 3: Add Make targets and reproducibility scripts.**
 
 Keep `test` equivalent to the repository contract, make `up` invoke `docker compose up --build`, define a CPU-only quick path for one text/three test readers, and define the full report-number reproduction path.
 
 Expected: command tests pass and target help/output makes scope explicit.
 
-- [ ] **Step 4: Verify from a fresh temporary clone.**
+- [x] **Step 4: Verify from a fresh temporary clone.**
 
 Clone the local repository to a new temporary directory, copy or mount only the required ignored `data/` inputs, run `docker compose build`, `docker compose up -d`, query `http://localhost:8080/api/health` and `/`, then tear down the temporary stack.
 

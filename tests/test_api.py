@@ -177,3 +177,44 @@ def test_baseline_segment_rejects_partial_phrase_and_plays_exact_matching_words(
         'start': 4.0,
         'end': 4.4,
     }
+
+
+def test_known_text_mode_c_does_not_require_unused_asr_models(corpus, monkeypatch):
+    """The API guarantees a supplied/canonical transcript; no ASR cache is needed."""
+    import yaml
+    settings_path=corpus/'configs/default.yaml'
+    settings=yaml.safe_load(settings_path.read_text());settings['alignment']={}
+    settings_path.write_text(yaml.safe_dump(settings))
+    def model_identity(root, settings, include_asr):
+        assert not include_asr, 'Unused ASR checkpoint requested'
+        return {}
+    monkeypatch.setattr('speecheval.pipeline.participant_model_identity',model_identity)
+    monkeypatch.setattr(s.JobRunner,'submit',lambda self,identity,request:
+                        {'analysis_id':'canonical_c','status':'queued'})
+    with TestClient(s.create_app(corpus)) as client:
+        response=client.post('/api/analyses',data={'text_id':'gettysburg','mode':'C'},
+                             files={'audio':('known.wav',wav_bytes(),'audio/wav')})
+    assert response.status_code==200
+
+
+def test_new_known_text_mode_c_is_aligned_to_canonical_transcript(corpus, monkeypatch):
+    """New bytes, unlike the measured fixture, must get canonical CPU alignment."""
+    import hashlib
+    source=corpus/'data/app/uploads/new.wav';source.parent.mkdir(parents=True)
+    source.write_bytes(wav_bytes(5))
+    decoded=source.with_suffix('.decoded.wav');decoded.write_bytes(source.read_bytes())
+    def analyze(audio,text_id,**kwargs):
+        assert kwargs['transcript'] is not None, 'Canonical transcript was not supplied'
+        assert kwargs['transcript'].read_text().strip()=='One two three. Four five six.'
+        return {'recording_id':'gettysburg__alice__orig'}
+    monkeypatch.setattr('speecheval.pipeline.analyze',analyze)
+    runner=s.JobRunner(corpus)
+    job={'analysis_id':'new_c','identity':{'audio_sha256':hashlib.sha256(source.read_bytes()).hexdigest()},
+         'request':{'audio':str(source.relative_to(corpus)),
+                    'decoded_audio':str(decoded.relative_to(corpus)), 'text_id':'gettysburg',
+                    'mode':'C','transcript':'','previous_analysis_id':''}}
+    try:
+        runner.process(job)
+        assert s.read_json(runner.folder/'new_c.json')['status']=='done'
+    finally:
+        runner.pool.shutdown(wait=True)

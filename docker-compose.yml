@@ -1,0 +1,41 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: speech-eval-api:local
+    init: true
+    environment:
+      SPEECHEVAL_ROOT: /app
+      CUDA_VISIBLE_DEVICES: ""
+    volumes:
+      - ./data:/app/data
+    expose:
+      - "8000"
+  web:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+    init: true
+    ports:
+      - "127.0.0.1:8080:80"
+    depends_on:
+      api:
+        condition: service_healthy
+  tools:
+    profiles: [tools]
+    image: speech-eval-api:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    environment:
+      CUDA_VISIBLE_DEVICES: ""
+    volumes:
+      - ./data:/app/data
+      - type: bind
+        source: ./reports/reproduced
+        target: /app/reports/reproduced
+        bind:
+          create_host_path: false
+    command: ["python", "-m", "speecheval.reproduce"]

@@ -96,7 +96,7 @@ class JobRunner:
                 source = decoded
             transcript = None
             text = request['transcript']
-            if not text and source == decoded and request['mode'] in ('A', 'B'):
+            if not text and source == decoded:
                 from speecheval.transcripts import _body_text
                 text = _body_text((self.root / 'data/transcripts/canonical' / f"{request['text_id']}.txt").read_text())
             if text:
@@ -260,7 +260,9 @@ def create_app(root: Path | None = None) -> FastAPI:
                         for pattern in ('data/features/provenance.json', 'data/manifest/dataset_shards/*.json', 'data/reference/norms_v1.json',
                                         'data/transcripts/canonical/*.txt') for p in root.glob(pattern)},
                     'runtime': participant_code_identity(),
-                    'models': participant_model_identity(root, settings, mode == 'C' and not transcript.strip()) if 'alignment' in settings else {},
+                    # API requests always have a supplied/canonical transcript, or
+                    # reuse an exact measured recording. They never invoke ASR.
+                    'models': participant_model_identity(root, settings, False) if 'alignment' in settings else {},
                     'code': {str(p.relative_to(producer)): hashlib.sha256(p.read_bytes()).hexdigest() for p in producer.rglob('*.py')}}
         # Bind actual reference measurements too: provenance may be stale or not
         # regenerated yet, which must not make a completed HTTP cache hit valid.
