@@ -30,23 +30,37 @@ and end-to-end raw reconstruction are not included in this packaging claim.
 An empty clone can serve the dashboard, but actual analysis requires the prepared
 reference corpus and measurement provenance.
 
-## Measured inputs
+## Licensed release import
 
-Audio/Parquet are intentionally ignored by Git. The dataset is not yet publicly
-hosted, so do not claim a clone can download an unpublished release. Until the
-archive is published, restore the measured inputs from a local prepared checkout:
+Audio/Parquet and release ZIPs are intentionally ignored by Git. The release URL
+in `configs/dataset.yaml` is pending the user's upload. Until then use the built
+archive, not the unpublished development checkout:
 
 ```sh
-python scripts/restore_local_data.py /path/to/prepared/repo /path/to/fresh/clone
+make reproduce-quick DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip
+make reproduce DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip
+# Or import only, with no host Python:
+mkdir -p reports/reproduced
+docker compose run --rm --build --no-deps \
+  --volume /absolute/path/speech-eval-dataset-v1.zip:/dataset-release.zip:ro \
+  tools python scripts/fetch_data.py --from-local /dataset-release.zip
 ```
 
-This copies dataset-indexed HQ audio, the four feature tables, speaker stats,
-small dataset feature-producer JSONs, and the additional source/16 kHz artifacts
-bound by the published evaluation freeze. It rejects missing input files and any
-different existing target file. It does not copy raw downloads, models, the
-Python environment, application jobs or the 13 GB intermediate alignment cache.
-The destination must be a separate Git clone. Committed transcripts, alignments,
-labels, split/config freezes and source feature provenance come from Git.
+Both reproduction targets run `fetch-data` first. Once all installed files verify,
+no download is needed. After publication fill only the URL in dataset.yaml; the
+archive SHA and committed inventory pin the content. `--from-local` verifies the
+same outer SHA, complete inventory and all payload SHA-256s. Unsafe ZIP paths,
+symlinks, duplicates and differing existing files are rejected before installing
+anything. Identical existing files (including immutable raw audio) are untouched.
+
+The archive includes licensed raw originals, indexed prepared/synthetic audio,
+transcripts, alignments, time maps, labels, feature bundles and frozen reference/
+evaluation provenance. It excludes models, environments, application uploads,
+unconsented human takes and an unverified legacy participant fixture. Rights and
+source associations are in `data/release/licences.json` and `inventory.json`.
+The LibriVox public-domain statement applies to the USA, not every jurisdiction.
+For maintainers: `python scripts/build_release.py` deterministically rebuilds the
+archive from the measured corpus without changing any detector/scoring settings.
 
 ## Commands
 
@@ -79,8 +93,8 @@ inputs or the first differing field/number cause a nonzero exit. Evidence goes t
 `reports/reproduced/`; success prints `REPRODUCED OK`.
 
 This is numerical reproduction from the frozen measured dataset, not a claim of
-end-to-end raw-data reconstruction. The separate Phase 10 flow still needs a
-published archive with SHA-256s and frozen raw excerpt/window regeneration. Human
+end-to-end raw download/ASR reconstruction. Publication of the built archive still
+requires its user-provided URL. Human
 agreement remains pending genuine recordings, consent, labels and independent
 ratings; there are no human numbers to reproduce yet.
 

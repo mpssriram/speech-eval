@@ -1,5 +1,11 @@
 # Blockers
 
+## 2026-10-10 — Release exclusions and publication
+
+- Legacy participant fixture `gettysburg__user__input_246ca9e90194` appears in the old input freeze but has no verified source licence or consent. Its audio, transcript, alignment and features stay out of the public archive. It is not an indexed dataset row or an input consumed by numeric reproduction. No private application uploads or human takes are packaged.
+- Inactive `jfk_inaugural_1961` and unspecified `harris_vp_tbd` lack recording-specific verified rights evidence and are excluded. Eleanor Roosevelt and Obama entries are inactive and outside the measured release; neither is packaged.
+- Archive hosting/upload remains a user action. The URL is intentionally `UPLOAD_URL_PENDING`; local import must work without publishing or creating an account.
+
 ## 2026-10-10 — Item 4: genuine user recordings are not available yet
 
 - Fresh read-only inspection of `/home/sriram/speech-eval/data/human/raw/` found no files: no `{text_id}__user__takeNN.wav` and no `notes.md`. Neither `data/human/CONSENT.md` nor a consent file under `raw/` exists.

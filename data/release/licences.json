@@ -1,0 +1,19 @@
+{
+  "schema": "release-licences/v1",
+  "checked_on": "2026-10-10",
+  "verification": "Automated read of primary institutional rights pages, not a claimed human legal review.",
+  "jurisdiction": "Public-domain evidence applies to the United States. Check local rights elsewhere. Video material is not included.",
+  "included": [
+    {"source_id": "lv_gettysburg_150", "rights": "Public domain in the USA", "evidence_urls": ["https://librivox.org/pages/public-domain/"], "collection": "https://archive.org/details/gettysburgaddress_150anniv_1311_librivox"},
+    {"source_id": "lv_o_captain", "rights": "Public domain in the USA", "evidence_urls": ["https://librivox.org/pages/public-domain/"], "collection": "https://archive.org/details/o_captain_librivox"},
+    {"source_id": "jfk_rice_1962", "rights": "Public Domain, institutional item copyright status", "evidence_urls": ["https://www.jfklibrary.org/asset-viewer/archives/jfkwha-127-002"], "catalogue_id": "JFKWHA-127-002"},
+    {"source_id": "reagan_challenger_1986", "rights": "Public domain WHCA audiotape collection (NOT the separately restricted video collection)", "evidence_urls": ["https://www.reaganlibrary.gov/archives/audiovisual/white-house-communications-agency", "https://www.reaganlibrary.gov/archives/whca-presidential-audio-collection-1981-89", "https://www.reaganlibrary.gov/archives/audio/remarks-president-reagan-during-address-nation-space-shuttle-challenger-oval-office"], "catalogue_id": "PP6028B / 7087577"}
+  ],
+  "excluded": [
+    {"source_id": "jfk_inaugural_1961", "reason": "Inactive, no verified rights evidence for a release recording."},
+    {"source_id": "eleanor_roosevelt_1948", "reason": "Inactive; no measured recording in the frozen dataset, not selected for this release."},
+    {"source_id": "obama_selma_2015", "reason": "Inactive; no measured recording in the frozen dataset, not selected for this release."},
+    {"source_id": "harris_vp_tbd", "reason": "No specific recording or source-level licence evidence."},
+    {"source_id": "private_uploads_and_human_takes", "reason": "Not frozen corpus; no user consented recordings are available. Never include application jobs."}
+  ]
+}
