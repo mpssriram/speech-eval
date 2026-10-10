@@ -1,0 +1,48 @@
+{
+  "schema": "ui-verification/v1",
+  "browser": "145.0.7632.6",
+  "fixture": {
+    "recording_id": "gettysburg__lv_mk__orig",
+    "sha256": "3bb1db549021b13753e03186d4f0795aa4012582bf5ba1298232d4f46bfc4f3c"
+  },
+  "modes": [
+    {
+      "mode": "A",
+      "analysis_id": "33ab622f54192c78bbbcc5bd",
+      "score": 9.4,
+      "regions": 2,
+      "status": "done"
+    },
+    {
+      "mode": "B",
+      "analysis_id": "3d2bb42e092c7babe7e040bb",
+      "score": 10,
+      "regions": 0,
+      "status": "done"
+    },
+    {
+      "mode": "C",
+      "analysis_id": "c2976ec07fe111f1ef91aa97",
+      "score": 10,
+      "regions": 0,
+      "status": "done"
+    }
+  ],
+  "screenshots": [
+    "ui_upload.png",
+    "ui_results.png",
+    "ui_region.png",
+    "ui_modeB.png",
+    "ui_modeC.png"
+  ],
+  "page_errors": [],
+  "elapsed_seconds": 15.62,
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "mobile": {
+    "width": 390,
+    "height": 844
+  }
+}

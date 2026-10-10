@@ -11,6 +11,7 @@ function Results({analysis,tracks,aid,onError}:{analysis:Analysis;tracks:Tracks;
   const [selected,setSelected]=useState(0),[feature,setFeature]=useState('rate'),[seek,setSeek]=useState<number|null>(null);
   const player=useRef<HTMLAudioElement>(null),end=useRef<number>(Infinity);
   const playback=useRef(0);
+  const [hasPlayback,setHasPlayback]=useState(false);
   const [segments,setSegments]=useState<Record<number,Segment|null>>({}),[takes,setTakes]=useState<Take[]>([]);
   useEffect(()=>{
     let cancelled=false;
@@ -26,8 +27,9 @@ function Results({analysis,tracks,aid,onError}:{analysis:Analysis;tracks:Tracks;
   const select=useCallback((index:number)=>{setSelected(index);},[]);
   const region=analysis.regions[selected];
   async function play(index:number,baseline:boolean){
+    const token=++playback.current;
     try{
-      const token=++playback.current,r=analysis.regions[index];setSelected(index);
+      const r=analysis.regions[index];setSelected(index);setHasPlayback(true);
       const first=tracks.words.find(w=>w.i===r.word_start),last=tracks.words.find(w=>w.i===r.word_end);
       const segment=baseline?segments[index]:{recording_id:analysis.recording_id,start:first?.start??r.start,end:last?.end??r.end};
       if(!segment)throw new Error('No exact same-word segment is available in this baseline.');
@@ -35,7 +37,7 @@ function Results({analysis,tracks,aid,onError}:{analysis:Analysis;tracks:Tracks;
       await new Promise<void>((resolve,reject)=>{media.onloadedmetadata=()=>resolve();media.onerror=()=>reject(new Error('Could not load playback audio'));media.load();});
       if(token!==playback.current)return;
       media.currentTime=Math.max(0,segment.start);await media.play();
-    }catch(e){onError((e as Error).message);}
+    }catch(e){if(token===playback.current)onError((e as Error).message);}
   }
   const categories=['pace','pitch','pauses','volume','clarity'];
   const categoryTypes:Record<string,string[]>={pace:['rushing','dragging'],pitch:['monotone'],pauses:['awkward_pause','missing_pause'],volume:['too_quiet'],clarity:['mumbling']};
@@ -62,7 +64,7 @@ function Results({analysis,tracks,aid,onError}:{analysis:Analysis;tracks:Tracks;
           <div className="playback"><Button variant="light" onClick={()=>void play(i,false)}>Yours</Button><Button variant="subtle" disabled={!segments[i]} onClick={()=>void play(i,true)}>Baseline (same words)</Button></div>
           {!analysis.reference.baseline_recording_id?<small>Mode C has no same-text baseline.</small>:segments[i]===null?<small>Baseline words differ here; an exact phrase match is unavailable.</small>:!segments[i]?<small>Checking baseline word matches…</small>:null}
         </article>)}</div>}
-      <audio className="comparison-player" data-testid="phrase-player" ref={player} controls aria-label="Selected phrase playback" onTimeUpdate={()=>{if(player.current&&player.current.currentTime>=end.current)player.current.pause();}}/>
+      <audio hidden={!hasPlayback} className="comparison-player" data-testid="phrase-player" ref={player} controls aria-label="Selected phrase playback" onTimeUpdate={()=>{if(player.current&&player.current.currentTime>=end.current)player.current.pause();}}/>
     </section>
     {!!analysis.key_moments.length&&<section><h2>Key moments <small>Guidelines, not scoring penalties</small></h2>{analysis.key_moments.map((k,i)=><p className="guideline" key={i}><strong>{k.passed?'Within guideline':'Check this moment'}</strong> · {k.message}</p>)}</section>}
     {analysis.progress&&<section data-testid="rehearsal-progress"><h2>Changes since your earlier take</h2><p className="subtle">Both takes are checked against expert readers for these counts. The score above compares this take with your earlier delivery.</p>

@@ -9,13 +9,15 @@ export function Waveform({analysis,onSelect,seek,selected}:{analysis:Analysis;on
   const box=useRef<HTMLDivElement>(null);const audio=useRef<HTMLAudioElement>(null);const wave=useRef<WaveSurfer|null>(null);
   const regionPlugin=useRef<ReturnType<typeof Regions.create>|null>(null);
   const [error,setError]=useState('');
+  const [ready,setReady]=useState(false);
   useEffect(()=>{
     if(!box.current||!audio.current)return;
     const regions=Regions.create();
-    regionPlugin.current=regions;setError('');
+    regionPlugin.current=regions;setError('');setReady(false);
     const instance=WaveSurfer.create({container:box.current,media:audio.current,url:`/api/audio/${analysis.recording_id}`,
       waveColor:'#63869f',progressColor:'#55d5e8',cursorColor:'#e5eff7',height:116,barWidth:2,barGap:2,normalize:false,plugins:[regions]});
     wave.current=instance;
+    instance.on('ready',()=>setReady(true));
     instance.on('decode',()=>analysis.regions.forEach((r,i)=>regions.addRegion({id:String(i),start:r.start,end:r.end,
       color:flaws[r.type].color+'55',content:flaws[r.type].label,drag:false,resize:false})));
     regions.on('region-clicked',(r,event)=>{event.stopPropagation();onSelect(Number(r.id));instance.setTime(r.start);});
@@ -34,7 +36,7 @@ export function Waveform({analysis,onSelect,seek,selected}:{analysis:Analysis;on
   },[selected,analysis]);
   useEffect(()=>{if(seek!==null)wave.current?.setTime(seek);},[seek]);
   return <section className="timeline"><div className="section-heading"><h2>Your recording</h2><span>{analysis.duration_s.toFixed(1)} seconds · click a marked phrase</span></div>
-    {error&&<p role="alert">Could not load the waveform: {error}</p>}<div ref={box} data-testid="waveform"/><audio ref={audio} controls preload="metadata" aria-label="Recording playback"/></section>;
+    {error&&<p role="alert">Could not load the waveform: {error}</p>}<div ref={box} data-testid="waveform" data-ready={ready}/><audio ref={audio} controls preload="metadata" aria-label="Recording playback"/></section>;
 }
 
 export const featureOptions=[{id:'rate',label:'Speed',unit:'syllables/s'},{id:'pitchvar',label:'Pitch variation',unit:'semitones'},
