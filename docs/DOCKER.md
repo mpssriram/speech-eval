@@ -100,6 +100,15 @@ ratings; there are no human numbers to reproduce yet.
 
 ## Verified fresh-clone run
 
+Latest release verification: a direct GitHub clone at `f35585a` imported only the
+licensed ZIP via `--from-local`, passed 219 container tests, and ran quick/full
+reproduction twice. Quick: 11.829 / 11.954 seconds. Full: 225.204 / 223.142 seconds.
+All five scientific report/metric files and 558 analysis JSONs have identical
+two-run SHA-256s. See [release reproducibility](../reports/reproducibility.md) for
+archive hashes, per-file evidence and the explicit legacy-fixture licence
+exclusion used by the release validation harness. Historical verification below
+predates that archive and is retained for the browser/latency evidence.
+
 On 2026-10-10, the stack was built and started from a separate temporary Git clone
 with locally restored measured inputs, not the development checkout/environment.
 The CPU image passed all 200 Python tests. A second empty clone, with no measured

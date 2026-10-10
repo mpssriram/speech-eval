@@ -10,7 +10,7 @@
 
 - Fresh read-only inspection of `/home/sriram/speech-eval/data/human/raw/` found no files: no `{text_id}__user__takeNN.wav` and no `notes.md`. Neither `data/human/CONSENT.md` nor a consent file under `raw/` exists.
 - The user is recording later. Human-take analysis, intended-flaw/slip checks, annotation and independent human agreement cannot proceed without the actual recordings, notes and consent. Licensed browser/runtime fixtures are explicitly not substitutes for user takes.
-- Item 4's instruction ends after “notes.md (the intended flaws and slips per take) and”; its remaining requirements were not supplied. No unspecified workflow, recording, label, consent or rating was fabricated. Continue once the actual inputs and remaining analysis requirements are available.
+- The instruction truncation is resolved: full item B and `codex_tasks_C_D_E.md` are now available. Actual recordings, notes and consent remain pending; no recording, label, consent or rating was fabricated.
 
 ## 2026-10-07 — Docker and Linux Node are unavailable in the current WSL session
 
@@ -24,6 +24,7 @@
 - Git intentionally excludes audio and Parquet. No published dataset archive URL/checksum exists in the project; an external clone cannot download an unpublished release.
 - Fresh-clone Docker verification used `scripts/restore_local_data.py` to copy only the frozen measured inputs/provenance from the prepared local checkout. It copied no host environment, ASR models or application state.
 - `make reproduce-quick` and `make reproduce` successfully recompute the frozen numeric evaluation from these measurements. They do not claim full raw download/ASR/excerpt-window reconstruction. That separate Phase 10 release flow still needs a published licensed archive with checksums and its raw-regeneration work; no new hosting account or personal-data publication was attempted.
+- Release resolution: a licensed checksum-pinned archive is now built under `data/release/`; Docker fetch/import runs before both reproduction targets. `reports/reproducibility.md` records the new GitHub-clone verification. Only hosting and filling its URL remain pending; this release intentionally reproduces frozen measurements rather than historical raw ASR/manual excerpt decisions.
 
 ## 2026-10-07 — User takes are not present in the WSL project
 
