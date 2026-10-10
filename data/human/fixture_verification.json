@@ -1,0 +1,189 @@
+{
+  "blockers": [
+    "No requested WAVs, notes.md or consent have been supplied in data/human/."
+  ],
+  "genuine_takes_processed": 0,
+  "results": [
+    {
+      "aligner": {
+        "device": "cpu",
+        "name": "mfa",
+        "version": "3.4.2"
+      },
+      "comparison": {
+        "strict_iou": {
+          "false_positives": 0,
+          "hits": 0,
+          "misses": 0
+        },
+        "synthetic_policy": {
+          "false_positives": 0,
+          "hits": 0,
+          "misses": 0
+        }
+      },
+      "dashboard_url": "http://localhost:8080/results/86cb86dc2e9402d769f5a14c",
+      "expert_readers": 10,
+      "intended_regions": [],
+      "job_id": "86cb86dc2e9402d769f5a14c",
+      "mode": "A",
+      "notes_basis": [],
+      "qa": {
+        "gain_normalization": false,
+        "original_channels": 1,
+        "original_sample_rate": 44100,
+        "raw_duration_s": 4.17,
+        "raw_sha256": "ad6a61368ff1e52513dfe9add0e165bdb8fa083fef8e0d03fe9134a1eb993eb0",
+        "upload_sample_rate": 44100,
+        "upload_sha256": "fed17ccb427077b5af2c417ebda817a4d93f2e8162a7faf889ea03c5b3e47f8a"
+      },
+      "recording_id": "gettysburg__user__input_d090873ced7a",
+      "scores": {
+        "clarity": 10.0,
+        "overall": 10.0,
+        "pace": 10.0,
+        "pauses": 10.0,
+        "pitch": 10.0,
+        "volume": 10.0
+      },
+      "slips": "synthetic fixture; not a user take",
+      "source": "synthetic workflow fixture",
+      "take_id": "workflow_fixture_1",
+      "trim_end_s": 4.17,
+      "trim_start_s": 0.0,
+      "warnings": [
+        {
+          "count": 2,
+          "type": "unmatched_reference_words"
+        }
+      ]
+    },
+    {
+      "aligner": {
+        "device": "cpu",
+        "name": "mfa",
+        "version": "3.4.2"
+      },
+      "comparison": {
+        "strict_iou": {
+          "false_positives": 0,
+          "hits": 0,
+          "misses": 1
+        },
+        "synthetic_policy": {
+          "false_positives": 0,
+          "hits": 0,
+          "misses": 1
+        }
+      },
+      "dashboard_url": "http://localhost:8080/results/90e5cbba14d9486b41c32754",
+      "expert_readers": 10,
+      "intended_regions": [
+        {
+          "end": 1.928,
+          "start": 0.441,
+          "type": "rushing"
+        }
+      ],
+      "job_id": "90e5cbba14d9486b41c32754",
+      "mode": "A",
+      "notes_basis": [
+        "raw-time note"
+      ],
+      "qa": {
+        "gain_normalization": false,
+        "original_channels": 1,
+        "original_sample_rate": 44100,
+        "raw_duration_s": 3.38,
+        "raw_sha256": "0def1b47b82475da018ec7701fcf940e76ea82f755016275b772a773dac45c8a",
+        "upload_sample_rate": 44100,
+        "upload_sha256": "2e1c19f9fb6b1ebe5f474312583a68e13d8084b82b0ab5584a5e347a3dcafe1c"
+      },
+      "recording_id": "gettysburg__user__input_05e28c982c93",
+      "scores": {
+        "clarity": 10.0,
+        "overall": 10.0,
+        "pace": 10.0,
+        "pauses": 10.0,
+        "pitch": 10.0,
+        "volume": 10.0
+      },
+      "slips": "synthetic fixture; not a user take",
+      "source": "synthetic workflow fixture",
+      "take_id": "workflow_fixture_2",
+      "trim_end_s": 3.38,
+      "trim_start_s": 0.0,
+      "warnings": [
+        {
+          "count": 2,
+          "type": "unmatched_reference_words"
+        }
+      ]
+    },
+    {
+      "aligner": {
+        "device": "cpu",
+        "name": "mfa",
+        "version": "3.4.2"
+      },
+      "comparison": {
+        "strict_iou": {
+          "false_positives": 0,
+          "hits": 0,
+          "misses": 1
+        },
+        "synthetic_policy": {
+          "false_positives": 0,
+          "hits": 0,
+          "misses": 1
+        }
+      },
+      "dashboard_url": "http://localhost:8080/results/2f439711be18c1451466e9e1",
+      "expert_readers": 1,
+      "intended_regions": [
+        {
+          "end": 1.928,
+          "start": 0.441,
+          "type": "rushing"
+        }
+      ],
+      "job_id": "2f439711be18c1451466e9e1",
+      "mode": "B",
+      "notes_basis": [
+        "raw-time note"
+      ],
+      "qa": {
+        "gain_normalization": false,
+        "original_channels": 1,
+        "original_sample_rate": 44100,
+        "raw_duration_s": 3.38,
+        "raw_sha256": "0def1b47b82475da018ec7701fcf940e76ea82f755016275b772a773dac45c8a",
+        "upload_sample_rate": 44100,
+        "upload_sha256": "2e1c19f9fb6b1ebe5f474312583a68e13d8084b82b0ab5584a5e347a3dcafe1c"
+      },
+      "recording_id": "gettysburg__user__input_05e28c982c93",
+      "scores": {
+        "clarity": 10.0,
+        "overall": 10.0,
+        "pace": 10.0,
+        "pauses": 10.0,
+        "pitch": 10.0,
+        "volume": 10.0
+      },
+      "slips": "synthetic fixture; not a user take",
+      "source": "synthetic workflow fixture",
+      "take_id": "workflow_fixture_2",
+      "trim_end_s": 3.38,
+      "trim_start_s": 0.0,
+      "warnings": [
+        {
+          "count": 2,
+          "type": "unmatched_reference_words"
+        }
+      ]
+    }
+  ],
+  "schema": "human-takes-workflow/v1",
+  "source": "synthetic fixture",
+  "threshold_tuning": false
+}

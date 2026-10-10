@@ -56,3 +56,7 @@
 - `data/review/index.html` is generated and references the prepared WAVs with relative paths.
 - The browser tool rejected its `file://wsl.localhost/Ubuntu/home/sriram/speech-eval/data/review/index.html` URL because the tool permits only HTTP/HTTPS protocols.
 - Open `\\wsl$\Ubuntu\home\sriram\speech-eval\data\review\index.html` manually in a browser. No server or protocol workaround was used.
+
+## Item B — genuine take analysis inputs
+
+- No requested WAVs, notes.md or consent have been supplied in data/human/.
