@@ -207,3 +207,18 @@ def test_missing_required_measurement_provenance_blocks_archive(tmp_path, monkey
                                                 ('sentences', 'parquet'), ('speaker_stats', 'json')]}}
     (data / 'features/provenance.json').write_text(json.dumps(proof))
     assert module.build(tmp_path, tmp_path / 'covered.zip', write_metadata=False)['payload_files'] >= 9
+
+
+def test_release_freeze_exempts_only_named_unlicensed_fixture(tmp_path):
+    from speecheval.reproduce import verify_released_frozen_inputs
+    source = tmp_path / 'data/audio/hq/gettysburg__lv_fb__orig.wav'
+    source.parent.mkdir(parents=True); source.write_bytes(b'licensed')
+    frozen = {'inputs': {
+        str(source.relative_to(tmp_path)): hashlib.sha256(b'licensed').hexdigest(),
+        'data/audio/hq/gettysburg__user__input_246ca9e90194.flac': 'excluded-unverified'}}
+    assert verify_released_frozen_inputs(tmp_path, frozen) == ['data/audio/hq/gettysburg__user__input_246ca9e90194.flac']
+    source.write_bytes(b'tampered')
+    with pytest.raises(ValueError, match='Frozen'): verify_released_frozen_inputs(tmp_path, frozen)
+    source.write_bytes(b'licensed')
+    frozen['inputs']['data/audio/hq/gettysburg__user__other.wav'] = 'not-an-exemption'
+    with pytest.raises(ValueError, match='Frozen'): verify_released_frozen_inputs(tmp_path, frozen)

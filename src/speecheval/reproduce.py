@@ -21,6 +21,48 @@ import yaml
 
 LOGGER=logging.getLogger(__name__)
 QUICK_SPEAKERS=('lv_sa','lv_tg','lv_wt')
+UNLICENSED_LEGACY_FIXTURE='gettysburg__user__input_246ca9e90194'
+
+
+def verify_released_frozen_inputs(root: Path, frozen: dict) -> list[str]:
+    """Check every historical input except one explicitly excluded unused fixture.
+
+    Do not claim its bytes were verified or fabricate them. This is release-only
+    bookkeeping; the original scorer/calibration/evaluator source stays frozen.
+    """
+    excluded=[]
+    for name, expected in frozen['inputs'].items():
+        if Path(name).stem==UNLICENSED_LEGACY_FIXTURE:
+            excluded.append(name);continue
+        path=root/name
+        if not path.is_file() or file_sha(path)!=expected:
+            raise ValueError(f'Frozen licensed input differs or is missing: {name}')
+    return sorted(excluded)
+
+
+def release_phase7_evidence(root: Path) -> dict:
+    """Phase 7 gate for the licensed release, explicitly excluding legacy fixture.
+
+    Same immutable code/config/audit fingerprints; all scientific input hashes
+    checked. The historical audit itself is neither rewritten nor rehashed.
+    """
+    from speecheval.calibration import implementation_identity
+    saved=json.loads((root/'data/review/final_evaluation.json').read_text())
+    if saved['implementation']!=implementation_identity(root):
+        raise ValueError('Frozen detector implementation changed')
+    if saved['config']!=yaml.safe_load((root/'configs/detector.yaml').read_text()):
+        raise ValueError('Frozen detector configuration changed')
+    exclusions=verify_released_frozen_inputs(root,saved)
+    LOGGER.info('Reproduction-only licence exclusion: %s', exclusions)
+    freeze={'phase6_sha256':file_sha(root/'data/review/final_evaluation.json'),
+            'rubric_sha256':file_sha(root/'configs/rubric.yaml'),
+            'score_code_sha256':file_sha(root/'src/speecheval/score.py'),
+            'validation_code_sha256':file_sha(root/'src/speecheval/validation.py')}
+    for name,schema in (('severity_validation','severity_validation/v1'),('repro_validation','repro_validation/v1')):
+        audit=json.loads((root/'data/review'/f'{name}.json').read_text())
+        if audit.get('schema')!=schema or audit.get('freeze')!=freeze:
+            raise ValueError('Stale Phase 7 evidence')
+    return freeze
 
 
 def selected_rows(rows: list[dict], quick: bool) -> list[dict]:
@@ -190,14 +232,18 @@ def rerun_identity(root: Path) -> dict:
 
 def rerun_mode_c(root: Path, output: Path) -> dict:
     """Recompute the published no-reference comparison using its unchanged evaluator."""
-    from speecheval.mode_c import evaluate_mode_c
+    from speecheval import mode_c
     from speecheval.validation import first_difference
     saved_path=root/'data/review/mode_c_evaluation.json'
     report=root/'reports/phase08_mode_c.md'
     saved_bytes=saved_path.read_bytes();report_bytes=report.read_bytes()
+    historical_gate=mode_c.validate_phase7_evidence
     # The evaluator writes its normal artifacts. Restore the originals even on failure.
     try:
-        actual=evaluate_mode_c(root)
+        # Narrow release-only validation hook, restored even on error. Nothing in
+        # the scientific evaluator, norms, detector or thresholds is modified.
+        mode_c.validate_phase7_evidence=release_phase7_evidence
+        actual=mode_c.evaluate_mode_c(root)
         difference=first_difference(json.loads(saved_bytes),actual)
         if difference:raise ValueError(f'Mode C comparison differs: {difference}')
         reproduced=output/'phase08_mode_c.md';reproduced.write_bytes(report.read_bytes())
@@ -206,6 +252,7 @@ def rerun_mode_c(root: Path, output: Path) -> dict:
             compare_report_numbers(expected,reproduced)
         return actual
     finally:
+        mode_c.validate_phase7_evidence=historical_gate
         saved_path.write_bytes(saved_bytes);report.write_bytes(report_bytes)
 
 
