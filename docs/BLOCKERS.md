@@ -1,5 +1,11 @@
 # Blockers
 
+## 2026-10-10 — Item 4: genuine user recordings are not available yet
+
+- Fresh read-only inspection of `/home/sriram/speech-eval/data/human/raw/` found no files: no `{text_id}__user__takeNN.wav` and no `notes.md`. Neither `data/human/CONSENT.md` nor a consent file under `raw/` exists.
+- The user is recording later. Human-take analysis, intended-flaw/slip checks, annotation and independent human agreement cannot proceed without the actual recordings, notes and consent. Licensed browser/runtime fixtures are explicitly not substitutes for user takes.
+- Item 4's instruction ends after “notes.md (the intended flaws and slips per take) and”; its remaining requirements were not supplied. No unspecified workflow, recording, label, consent or rating was fabricated. Continue once the actual inputs and remaining analysis requirements are available.
+
 ## 2026-10-07 — Docker and Linux Node are unavailable in the current WSL session
 
 - `docker --version` returned the WSL integration message: Docker command could not be found in this distro. No Docker reinstall or system changes were attempted.

@@ -155,7 +155,7 @@ Clone the local repository to a new temporary directory, copy or mount only the 
 
 Expected: health returns 200 JSON, the dashboard HTML returns 200, and no working-tree-only file is required.
 
-- [ ] **Step 5: Run the complete test suite, commit, and push item 3.**
+- [x] **Step 5: Run the complete test suite, commit, and push item 3.**
 
 Run: `make test`, `docker compose config`, and the fresh-clone smoke; commit with message `phase9: add compose and reproduction entrypoints`, then push `origin main`.
 
