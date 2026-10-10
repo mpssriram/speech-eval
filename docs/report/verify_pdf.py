@@ -20,7 +20,12 @@ def verify(font_dir: Path) -> dict:
         hashes.append(hashlib.sha256((folder / "report.pdf").read_bytes()).hexdigest())
     assert hashes[0] == hashes[1], "Repeated PDF renders differ"
     reader = PdfReader(folder / "report.pdf")
-    assert len(reader.pages) == 6, "Expected six pages"
+    assert 1 <= len(reader.pages) <= 6, "Exceeded six-page budget"
+    full_text = "\n".join(page.extract_text() for page in reader.pages)
+    assert "[Pending:" not in full_text, "Body contains unresolved pending markers"
+    assert full_text.count("Pending items") == 1, "Expected one consolidated pending box"
+    assert "Frozen A:" in reader.pages[0].extract_text(), "Summary missing from first page"
+    assert "Dashboard results:" in full_text and "Selected flaw region" in full_text
     for page in reader.pages:
         assert abs(float(page.mediabox.width) - 595.2756) < 0.01
         assert abs(float(page.mediabox.height) - 841.8898) < 0.01
@@ -32,8 +37,8 @@ def verify(font_dir: Path) -> dict:
         "pages": len(reader.pages),
         "page_format": "A4",
         "body_font_pt": 11,
-        "checks": "repeat bytes; six A4 pages; readable pending placeholders; pending author",
-        "visual_check": "All six pages inspected after final render; no clipping or overlap",
+        "checks": "repeat bytes; A4; at most six pages; page-one summary; screenshots; one pending box",
+        "visual_check": "See last final-render inspection; structural checks alone do not establish layout quality",
     }
 
 

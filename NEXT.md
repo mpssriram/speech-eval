@@ -1,5 +1,10 @@
 # Next
 
+Phase 11: Task 1 report fixes verified (five-page PDF, rounded display values,
+real correct-hit explanation, dashboard screenshots, consolidated pending box).
+Task 2 post-hoc v2 dev-only work is next; v1 remains frozen. No v2 test evaluation
+has occurred. See `reports/phase11_v2.md` for the predeclared promotion gate.
+
 Done: A licensed archive/fetcher, fresh GitHub-clone CPU Docker numerical
 reproduction twice with identical hashes; B consent-gated real-MFA A/B driver
 tested on an explicitly synthetic fixture; C twelve-clip blind pack and agreement

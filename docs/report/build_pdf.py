@@ -1,4 +1,4 @@
-"""Render report.md as six-page A4/11pt PDF; optional authoring dependencies only.
+"""Render report.md as a compact A4/11pt PDF; optional authoring dependencies only.
 
 Usage: python docs/report/build_pdf.py --font-dir /path/to/dejavu
 Requires reportlab, Pillow and pypdf (not part of scientific reproduction).
@@ -9,32 +9,52 @@ import html
 import re
 from urllib.parse import quote
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,Table,TableStyle,PageBreak,Image,KeepTogether
+from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,Table,TableStyle,Image,KeepTogether,Flowable
 from pypdf import PdfReader
 
 
+class ScreenshotExcerpt(Flowable):
+    """Lay out a viewport of the original screenshot without rewriting its pixels."""
+    def __init__(self,path: Path,width: float,top_px: int,bottom_px: int):
+        from PIL import Image as PILImage
+        super().__init__()
+        self.path=path
+        self.source_width,self.source_height=PILImage.open(path).size
+        self.width=width;self.scale=width/self.source_width
+        self.top_px=top_px;self.bottom_px=bottom_px
+        self.height=(bottom_px-top_px)*self.scale
+
+    def draw(self):
+        self.canv.saveState()
+        clip=self.canv.beginPath();clip.rect(0,0,self.width,self.height)
+        self.canv.clipPath(clip,stroke=0,fill=0)
+        self.canv.drawImage(str(self.path),0,-(self.source_height-self.bottom_px)*self.scale,
+            width=self.width,height=self.source_height*self.scale)
+        self.canv.restoreState()
+
+
 def render(font_dir: Path) -> Path:
-    """Use source text, fixed metadata, explicit page groups and embedded Unicode fonts."""
+    """Use source text, fixed metadata, natural pagination and embedded Unicode fonts."""
     folder=Path(__file__).resolve().parent;root=folder.parent.parent
     pdfmetrics.registerFont(TTFont('Body',str(font_dir/'DejaVuSans.ttf')))
     pdfmetrics.registerFont(TTFont('BodyBold',str(font_dir/'DejaVuSans-Bold.ttf')))
     pdfmetrics.registerFontFamily('Body',normal='Body',bold='BodyBold',italic='Body',boldItalic='BodyBold')
     ink=colors.HexColor('#173451');accent=colors.HexColor('#B35335')
     body=ParagraphStyle('body',fontName='Body',fontSize=11,leading=13,spaceAfter=5,textColor=colors.HexColor('#27313B'))
-    head=ParagraphStyle('heading',parent=body,fontName='BodyBold',fontSize=14,leading=17,spaceBefore=4,spaceAfter=8,textColor=ink)
+    head=ParagraphStyle('heading',parent=body,fontName='BodyBold',fontSize=14,leading=17,spaceBefore=8,spaceAfter=8,textColor=ink,keepWithNext=True)
     small=ParagraphStyle('small',parent=body,fontSize=8,leading=10,spaceAfter=4)
     cell=ParagraphStyle('cell',parent=body,fontSize=9,leading=11,spaceAfter=0)
     title=ParagraphStyle('title',parent=head,fontSize=18,leading=22,spaceAfter=6)
+    quote_style=ParagraphStyle('quote',parent=body,leftIndent=12,rightIndent=8,textColor=ink)
     story=[]
 
     def inline(text):
-        text=text.replace('–','-').replace('—','-').replace('‑','-')
-        text=re.sub(r'\{\{(.*?)\}\}',lambda m:'[Pending: '+m.group(1)+']',text)
+        if '{{' in text or '[Pending:' in text:
+            raise ValueError('Move unresolved placeholders to the final Pending items box')
         text=html.escape(text)
         text=re.sub(r'\*\*(.*?)\*\*',r'<b>\1</b>',text)
         text=re.sub(r'`(.*?)`',r'\1',text)
@@ -49,17 +69,29 @@ def render(font_dir: Path) -> Path:
     def paragraph(text,style=body):return Paragraph(inline(text),style)
     story += [paragraph('Speech-Eval',title),paragraph('Contrastive Speech Delivery Analytics with Temporal Flaw Grounding',head),
               paragraph('Multimodal AI Hackathon 2026 - Track C | October 2026',small),
-              paragraph('Author pending confirmation; with Claude and Codex. Genuine user takes and independent ratings pending.',small),
               Spacer(1,8)]
     text=(folder/'report.md').read_text(encoding='utf-8')
     text=re.sub(r'^---\n.*?\n---\n','',text,flags=re.S)
-    lines=text.splitlines();i=0;page5=False
+    lines=text.splitlines();i=0
     while i<len(lines):
         line=lines[i].strip()
         if not line:i+=1;continue
+        if line.startswith('::: '):
+            kind=line[4:];i+=1;box=[]
+            while i<len(lines) and lines[i].strip()!=':::':
+                if lines[i].strip():box.append(paragraph(lines[i].strip(),cell if kind=='summary' else body))
+                i+=1
+            if i==len(lines):raise ValueError('Unclosed report box')
+            visual=Table([[box]],colWidths=[A4[0]-112])
+            visual.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,-1),colors.HexColor('#EAF0F3')),
+                ('BOX',(0,0),(-1,-1),.7,ink),('LEFTPADDING',(0,0),(-1,-1),10),
+                ('RIGHTPADDING',(0,0),(-1,-1),10),('TOPPADDING',(0,0),(-1,-1),8),
+                ('BOTTOMPADDING',(0,0),(-1,-1),8)]))
+            story.extend([visual,Spacer(1,9)]);i+=1;continue
         if line.startswith('# '):
-            if line.startswith(('# 3.','# 5.','# 6.','# 7.')):story.append(PageBreak())
             story.append(paragraph(line[2:],head));i+=1;continue
+        if line.startswith('> '):
+            story.append(paragraph(line[2:],quote_style));i+=1;continue
         if line.startswith('|'):
             table=[]
             while i<len(lines) and lines[i].strip().startswith('|'):
@@ -87,16 +119,19 @@ def render(font_dir: Path) -> Path:
             story.append(paragraph(plain));i+=1;continue
         if line.startswith('!['):
             match=re.fullmatch(r'!\[(.*?)\]\((.*?)\)',line)
-            image=Image(str((folder/match.group(2)).resolve()))
-            scale=min((A4[0]-112)/image.imageWidth,300/image.imageHeight)
-            image.drawWidth=image.imageWidth*scale;image.drawHeight=image.imageHeight*scale
-            story.extend([image,paragraph(match.group(1),small)]);i+=1;continue
+            path=(folder/match.group(2)).resolve()
+            viewport={'ui_results.png':(180,780),'ui_region.png':(1560,1950)}.get(path.name)
+            if viewport:image=ScreenshotExcerpt(path,A4[0]-112,*viewport)
+            else:
+                image=Image(str(path))
+                scale=min((A4[0]-112)/image.imageWidth,240/image.imageHeight)
+                image.drawWidth=image.imageWidth*scale;image.drawHeight=image.imageHeight*scale
+            caption=f'[{match.group(1)}'+(' (excerpt; full screenshot)' if viewport else '')+f']({match.group(2)})'
+            story.append(KeepTogether([image,paragraph(caption,small)]));i+=1;continue
         chunk=[line];i+=1
-        while i<len(lines) and lines[i].strip() and not lines[i].startswith(('#','|','$$','![')):
+        while i<len(lines) and lines[i].strip() and not lines[i].startswith(('#','|','$$','![',':::','> ')):
             chunk.append(lines[i].strip());i+=1
         joined=' '.join(chunk)
-        if joined.startswith('C uses **different eligibility') and not page5:
-            story.extend([PageBreak(),paragraph('6. Results - no-reference comparison',head)]);page5=True
         story.append(paragraph(joined))
 
     def footer(canvas,doc):
@@ -109,8 +144,8 @@ def render(font_dir: Path) -> Path:
         title='Speech-Eval: Contrastive Speech Delivery Analytics',author='Author pending; Claude and Codex assistance')
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
     count=len(PdfReader(output).pages)
-    if count!=6:raise ValueError(f'Six-page budget not met: {count} pages')
-    print(f'Six A4 pages created: {output}')
+    if count>6:raise ValueError(f'Six-page budget exceeded: {count} pages')
+    print(f'{count} compact A4 pages created: {output}')
     return output
 
 
