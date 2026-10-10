@@ -60,3 +60,8 @@
 ## Item B — genuine take analysis inputs
 
 - No requested WAVs, notes.md or consent have been supplied in data/human/.
+## Item C — independent rating responses
+
+The blind pack and agreement script are available, but no actual independent
+rater responses exist. Collect separate CSVs from real raters; blank forms and
+temporary unit-test ratings cannot establish system–human or inter-rater agreement.

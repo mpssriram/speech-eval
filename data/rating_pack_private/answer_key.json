@@ -1,0 +1,526 @@
+{
+  "clean_definition": "no injected flaw, not a guarantee of ideal perceptual delivery",
+  "clips": {
+    "15cb923f0f031ca3.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_o_captain",
+      "recording_id": "o_captain__lv_apc__monotone_s5_01",
+      "sample_rate": 44100,
+      "sha256": "85751323c00401f123d784a9784d1044e356df4f15d60aed207ecc6db0d9ab52",
+      "source_end_s": 23.887,
+      "source_sha256": "5341be0a6a714d7fce020140726a079ce1212e636a79fcef9246509ca8ddf89a",
+      "source_start_s": 3.887,
+      "split": "train",
+      "system": {
+        "analysis_id": "783122e302fc",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [
+          {
+            "end": 10.683,
+            "severity": 4,
+            "start": 9.603,
+            "type": "monotone"
+          }
+        ],
+        "scores": {
+          "clarity": 10.0,
+          "overall": 9.5,
+          "pace": 10.0,
+          "pauses": 10.0,
+          "pitch": 7.8,
+          "volume": 10.0
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": [
+        {
+          "end": 10.83,
+          "severity": 5,
+          "start": 9.17,
+          "type": "monotone"
+        }
+      ]
+    },
+    "2b9ee5f6c82ebb07.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_gettysburg_150",
+      "recording_id": "gettysburg__lv_dl__rushing_s5_01",
+      "sample_rate": 44100,
+      "sha256": "837d840a79fa0bcecfa490179d8cd3bcc3c2b82c604129a01388c0d72d65c5a9",
+      "source_end_s": 24.689,
+      "source_sha256": "97f98f85e991106e508e14993825bd6d4cd70cecd1bd4f3996332b41c1ac0c11",
+      "source_start_s": 4.689,
+      "split": "train",
+      "system": {
+        "analysis_id": "94e99b9c10b9",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [
+          {
+            "end": 10.251,
+            "severity": 3,
+            "start": 9.811,
+            "type": "rushing"
+          }
+        ],
+        "scores": {
+          "clarity": 10.0,
+          "overall": 9.8,
+          "pace": 9.3,
+          "pauses": 10.0,
+          "pitch": 10.0,
+          "volume": 10.0
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": [
+        {
+          "end": 10.453,
+          "severity": 5,
+          "start": 9.548,
+          "type": "rushing"
+        }
+      ]
+    },
+    "4c8e55e04a710556.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_gettysburg_150",
+      "recording_id": "gettysburg__lv_dl__dragging_s3_01",
+      "sample_rate": 44100,
+      "sha256": "f5af6c698abe3d901fb4ed646a3c4d31d65dd2fac9fe6ac418682e65704d82a7",
+      "source_end_s": 114.111,
+      "source_sha256": "dde583ef8b455e1a037a556a580abbd3deb809256a665551258c823ee0ed6c6c",
+      "source_start_s": 94.111,
+      "split": "train",
+      "system": {
+        "analysis_id": "b4a1015d4d15",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [
+          {
+            "end": 20.0,
+            "severity": 4,
+            "start": 19.039,
+            "type": "too_quiet"
+          },
+          {
+            "end": 20.0,
+            "severity": 3,
+            "start": 19.909,
+            "type": "awkward_pause"
+          }
+        ],
+        "scores": {
+          "clarity": 10.0,
+          "overall": 9.5,
+          "pace": 10.0,
+          "pauses": 8.8,
+          "pitch": 10.0,
+          "volume": 8.1
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": [
+        {
+          "end": 11.761,
+          "severity": 3,
+          "start": 8.239,
+          "type": "dragging"
+        }
+      ]
+    },
+    "53dcdb724b6ea9f7.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_gettysburg_150",
+      "recording_id": "gettysburg__lv_dl__mumbling_s4_01",
+      "sample_rate": 44100,
+      "sha256": "3ce4f81cf2f7ae807adda2f9069f4bd4cc31ff208bca66fab7cf81ea65f2294f",
+      "source_end_s": 26.347,
+      "source_sha256": "aafda10b08ae6d62da46c0bb0128201dbb2229de3f3fa07377099721c2be0dbd",
+      "source_start_s": 6.347,
+      "split": "train",
+      "system": {
+        "analysis_id": "d1efb8943a76",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [
+          {
+            "end": 12.023,
+            "severity": 4,
+            "start": 7.893,
+            "type": "mumbling"
+          }
+        ],
+        "scores": {
+          "clarity": 1.7,
+          "overall": 8.8,
+          "pace": 10.0,
+          "pauses": 10.0,
+          "pitch": 10.0,
+          "volume": 10.0
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": [
+        {
+          "end": 12.11,
+          "severity": 4,
+          "start": 7.89,
+          "type": "mumbling"
+        }
+      ]
+    },
+    "585988c53131091b.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_o_captain",
+      "recording_id": "o_captain__lv_apc__monotone_s2_01",
+      "sample_rate": 44100,
+      "sha256": "ec2e17a9bfa8488d3fbc7bf88e4bb16fd3e4b45b29fc987d2afaa4e6c97fa4a6",
+      "source_end_s": 24.457,
+      "source_sha256": "21c673600fb85c9c23affcdef3ec3dcf5fb82c5965c4311b61e08ca272cd6039",
+      "source_start_s": 4.457,
+      "split": "train",
+      "system": {
+        "analysis_id": "00f8a629fee1",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [],
+        "scores": {
+          "clarity": 10.0,
+          "overall": 10.0,
+          "pace": 10.0,
+          "pauses": 10.0,
+          "pitch": 10.0,
+          "volume": 10.0
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": [
+        {
+          "end": 10.79,
+          "severity": 2,
+          "start": 9.21,
+          "type": "monotone"
+        }
+      ]
+    },
+    "64897a542a93d748.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_gettysburg_150",
+      "recording_id": "gettysburg__lv_dl__orig",
+      "sample_rate": 44100,
+      "sha256": "ae3794aa7a81f6daa04ba449cc0658fd5f5daec95d7275847b3f6ca4af28d81f",
+      "source_end_s": 72.739,
+      "source_sha256": "60710373eef13456f2f49e3b528795aecfa206bf6f590284e25024082fd65fbd",
+      "source_start_s": 52.739,
+      "split": "train",
+      "system": {
+        "analysis_id": "36d0d44a2623",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [],
+        "scores": {
+          "clarity": 10.0,
+          "overall": 10.0,
+          "pace": 10.0,
+          "pauses": 10.0,
+          "pitch": 10.0,
+          "volume": 10.0
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": []
+    },
+    "74038ff5c3b4845e.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_gettysburg_150",
+      "recording_id": "gettysburg__lv_fb__missing_pause_s4_01",
+      "sample_rate": 44100,
+      "sha256": "743ba2742612cfb1bbd2c639b7671c84171680b3d495901370d11dc55d8d5b57",
+      "source_end_s": 67.694,
+      "source_sha256": "3eff5ca721fb03914f19d5a218d5c29d1a7aaf04cbc191c3a4c3c2232f241ec3",
+      "source_start_s": 47.694,
+      "split": "train",
+      "system": {
+        "analysis_id": "165c1751e7e9",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [
+          {
+            "end": 3.501,
+            "severity": 3,
+            "start": 3.471,
+            "type": "missing_pause"
+          },
+          {
+            "end": 10.076,
+            "severity": 3,
+            "start": 9.926,
+            "type": "missing_pause"
+          },
+          {
+            "end": 12.981,
+            "severity": 4,
+            "start": 12.951,
+            "type": "missing_pause"
+          },
+          {
+            "end": 19.861,
+            "severity": 3,
+            "start": 19.831,
+            "type": "missing_pause"
+          }
+        ],
+        "scores": {
+          "clarity": 10.0,
+          "overall": 9.0,
+          "pace": 10.0,
+          "pauses": 4.8,
+          "pitch": 10.0,
+          "volume": 10.0
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": [
+        {
+          "end": 10.081,
+          "severity": 4,
+          "start": 9.918,
+          "type": "missing_pause"
+        }
+      ]
+    },
+    "835ed4a7907b516b.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_o_captain",
+      "recording_id": "o_captain__lv_apc__awkward_pause_s3_01",
+      "sample_rate": 44100,
+      "sha256": "6c71ab8e229582309c20018967082ae415728b157790a03d8151ed1ec7b6194e",
+      "source_end_s": 92.342,
+      "source_sha256": "3d034ec62edec21392af69663d9a6789d8db75c966b001c1e23b57de4bf72b8e",
+      "source_start_s": 72.342,
+      "split": "train",
+      "system": {
+        "analysis_id": "83930b956eb6",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [
+          {
+            "end": 2.388,
+            "severity": 4,
+            "start": 1.228,
+            "type": "awkward_pause"
+          },
+          {
+            "end": 9.158,
+            "severity": 4,
+            "start": 8.028,
+            "type": "awkward_pause"
+          },
+          {
+            "end": 10.728,
+            "severity": 4,
+            "start": 9.278,
+            "type": "awkward_pause"
+          },
+          {
+            "end": 14.238,
+            "severity": 4,
+            "start": 13.638,
+            "type": "awkward_pause"
+          }
+        ],
+        "scores": {
+          "clarity": 10.0,
+          "overall": 8.7,
+          "pace": 10.0,
+          "pauses": 3.6,
+          "pitch": 10.0,
+          "volume": 10.0
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": [
+        {
+          "end": 10.75,
+          "severity": 3,
+          "start": 9.25,
+          "type": "awkward_pause"
+        }
+      ]
+    },
+    "9ada6ee870d82dff.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_o_captain",
+      "recording_id": "o_captain__lv_apc__orig",
+      "sample_rate": 44100,
+      "sha256": "2e1516087c6c045b707dc296b6c0c0bb50cba9eed9532126df2556fb8c2f5693",
+      "source_end_s": 64.652,
+      "source_sha256": "346d06b5d7d569fb60aa3d8fa47681b7789719609359d07a29a3e02c4144d4bd",
+      "source_start_s": 44.652,
+      "split": "train",
+      "system": {
+        "analysis_id": "894446a87517",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [
+          {
+            "end": 16.02,
+            "severity": 4,
+            "start": 15.294,
+            "type": "awkward_pause"
+          },
+          {
+            "end": 19.485,
+            "severity": 3,
+            "start": 18.82,
+            "type": "awkward_pause"
+          }
+        ],
+        "scores": {
+          "clarity": 10.0,
+          "overall": 9.4,
+          "pace": 10.0,
+          "pauses": 7.2,
+          "pitch": 10.0,
+          "volume": 10.0
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": []
+    },
+    "adfdf86a17aebafc.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_gettysburg_150",
+      "recording_id": "gettysburg__lv_fb__rushing_s1_01",
+      "sample_rate": 44100,
+      "sha256": "a18dca5b6b38d6cbf9b390d31292aae328ac3ed029ce5059cf929b170e654f95",
+      "source_end_s": 79.641,
+      "source_sha256": "ea41bc37214ae748b2a8ee475becd9a742ad07d69c8c187dda2d989c14370878",
+      "source_start_s": 59.641,
+      "split": "train",
+      "system": {
+        "analysis_id": "2025685ba0ce",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [
+          {
+            "end": 1.974,
+            "severity": 4,
+            "start": 1.944,
+            "type": "missing_pause"
+          },
+          {
+            "end": 8.794,
+            "severity": 3,
+            "start": 8.764,
+            "type": "missing_pause"
+          }
+        ],
+        "scores": {
+          "clarity": 10.0,
+          "overall": 9.4,
+          "pace": 10.0,
+          "pauses": 7.2,
+          "pitch": 10.0,
+          "volume": 10.0
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": [
+        {
+          "end": 11.517,
+          "severity": 1,
+          "start": 8.482,
+          "type": "rushing"
+        }
+      ]
+    },
+    "c1f248201bacde37.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_gettysburg_150",
+      "recording_id": "gettysburg__lv_fb__orig",
+      "sample_rate": 44100,
+      "sha256": "04f46f34fd45069d788155a26f1583c34135f379b36ab3190ca4a2b7aa168af9",
+      "source_end_s": 67.464,
+      "source_sha256": "94a631141fe82bbea0ccf2dbf27a93e3689d7b60efeff1d2b744bd1fe03be427",
+      "source_start_s": 47.464,
+      "split": "train",
+      "system": {
+        "analysis_id": "40012fc1d0c5",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [
+          {
+            "end": 3.733,
+            "severity": 3,
+            "start": 3.703,
+            "type": "missing_pause"
+          },
+          {
+            "end": 14.151,
+            "severity": 4,
+            "start": 14.121,
+            "type": "missing_pause"
+          }
+        ],
+        "scores": {
+          "clarity": 10.0,
+          "overall": 9.4,
+          "pace": 10.0,
+          "pauses": 7.2,
+          "pitch": 10.0,
+          "volume": 10.0
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": []
+    },
+    "c9297e0f00a854c6.flac": {
+      "duration_s": 20.0,
+      "licence_source": "lv_gettysburg_150",
+      "recording_id": "gettysburg__lv_fb__too_quiet_s2_01",
+      "sample_rate": 44100,
+      "sha256": "24982660793616da8758511a94f863d6b05d2a7066124f434881ffdc85b93fca",
+      "source_end_s": 66.617,
+      "source_sha256": "53c243acbfe2e5a8b5afb923ed5195f0039d8da4fa68ff259a1769933a0df42b",
+      "source_start_s": 46.617,
+      "split": "train",
+      "system": {
+        "analysis_id": "66ac5b5ce554",
+        "context": "frozen full-source Mode A, speaker excluded; visible-span rescore",
+        "regions": [
+          {
+            "end": 4.578,
+            "severity": 3,
+            "start": 4.548,
+            "type": "missing_pause"
+          },
+          {
+            "end": 14.998,
+            "severity": 4,
+            "start": 14.968,
+            "type": "missing_pause"
+          }
+        ],
+        "scores": {
+          "clarity": 10.0,
+          "overall": 9.4,
+          "pace": 10.0,
+          "pauses": 7.2,
+          "pitch": 10.0,
+          "volume": 10.0
+        },
+        "speech_duration_s": 20.0
+      },
+      "truth": [
+        {
+          "end": 10.995,
+          "severity": 2,
+          "start": 9.005,
+          "type": "too_quiet"
+        }
+      ]
+    }
+  },
+  "frozen_configuration_sha256": {
+    "default.yaml": "d5b4d3f24c15f598fe84552dbb7ca34b7722cced4c1b46f383d2c752e7041710",
+    "detector.yaml": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "rubric.yaml": "4e8af3b16ef79889763f542471748ade7b127cee299a916542ce5d47f35abfaf",
+    "splits.yaml": "1bcd501d7e4b5d890788f858c637e59b4e522f527d61bbe330c54a108683a4c7"
+  },
+  "schema": "blind-rating-pack/v1",
+  "seed": 20261010,
+  "selection": "fixed convenience sample from three training speakers; not selected by detection accuracy",
+  "system_context": "Full-source frozen Mode A detections with source speaker excluded, clipped and rescored on visible speech duration. No detector tuning."
+}
