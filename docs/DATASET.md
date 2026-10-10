@@ -1,358 +1,169 @@
-# Speech-eval dataset card
+# Speech-Eval dataset card
 
-Status: all eligible sources, stage `all`. Human takes, consent and labels are PENDING; Dataset v1 is not fully accepted or tagged.
+Release: `speech-eval-dataset-v1.zip`, built and verified 2026-10-10.
+Purpose: English speech **delivery** stress testing and temporal grounding,
+not content assessment, accent grading or a validated perceptual-quality scale.
+Public upload is pending. The exact archive can already be imported locally;
+see [reproduction evidence](../reports/reproducibility.md) and [Docker guide](DOCKER.md).
+The archive is **not in Git**. Until its owner uploads it and fills the URL in
+`configs/dataset.yaml`, a fresh clone requires the separately supplied ZIP via
+`make reproduce-quick DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip`.
+A clone alone cannot manufacture or download the unpublished corpus.
 
-## Purpose and contrastive design
+## Sources, rights and attribution
 
-English speech delivery, not content quality. Same-text clean and synthetically flawed recordings support graded, temporally grounded comparisons.
+| Text / source | Original recordings | Attribution and evidence |
+|---|---:|---|
+| Gettysburg Address | 15 | Abraham Lincoln text; LibriVox 150th-anniversary volunteer-reader collection, [catalogue](https://archive.org/details/gettysburgaddress_150anniv_1311_librivox), [LibriVox rights](https://librivox.org/pages/public-domain/) |
+| O Captain! My Captain! | 13 | Walt Whitman text; LibriVox volunteer readers, [catalogue](https://archive.org/details/o_captain_librivox), [LibriVox rights](https://librivox.org/pages/public-domain/) |
+| JFK Rice University address | 1 | John F. Kennedy Presidential Library, item JFKWHA-127-002, [item rights: Public Domain](https://www.jfklibrary.org/asset-viewer/archives/jfkwha-127-002) |
+| Reagan Challenger address | 1 | Ronald Reagan Presidential Library, WHCA audiotape PP6028B / 7087577, [audio item](https://www.reaganlibrary.gov/archives/audio/remarks-president-reagan-during-address-nation-space-shuttle-challenger-oval-office), [collection rights](https://www.reaganlibrary.gov/archives/audiovisual/white-house-communications-agency), [audio inventory](https://www.reaganlibrary.gov/archives/whca-presidential-audio-collection-1981-89) |
 
-## Sources and supplied license evidence
+Public-domain evidence applies in the **USA**. It was checked by reading primary
+institutional pages automatically, not by an independent human legal review.
+Rights elsewhere may differ. Reagan **audio** rights are used; separately
+restricted WHCA video is not included. Internet Archive is a host, not a blanket
+licence for everything on the site.
 
-| Source | License metadata | Evidence |
+Per-recording identifiers, download URLs, hashes, reader slugs and durations:
+`data/manifest/sources.yaml` and `raw_files.csv`. Release-specific evidence:
+`data/release/licences.json`; every audio member maps to its approved source in
+`inventory.json`. Unverified/inactive sources, the legacy participant fixture,
+application uploads and unconsented voice data are excluded; [blockers](BLOCKERS.md)
+name the exact cases. Code and annotation/documentation licence grants are not
+invented by this card; formal repository licence files remain an owner decision.
+
+## Counts and duration
+
+The unit is an **indexed recording variant**, not each physical sample-rate copy.
+The archived index has **1,103 recordings / 36.26268833333334 hours**:
+30 original sources and 1,073 injected variants. Raw full downloads and duplicate
+sample-rate files are not counted again. This includes the single clipped source
+retained for audit but excluded from generation and evaluation.
+
+| Text | Indexed variants | Indexed hours | Original prepared hours |
+|---|---:|---:|---:|
+| Gettysburg | 570 | 20.191151666666666 | 0.530258888888889 |
+| O Captain | 457 | 11.773672222222222 | 0.3340641666666667 |
+| JFK Rice excerpt | 38 | 1.6662786111111112 | 0.04378666666666667 |
+| Reagan Challenger | 38 | 2.631585833333333 | 0.06920222222222222 |
+
+These are sums of `duration_s / 3600` from `data/manifest/dataset_index.csv`;
+original prepared hours include only `kind=source` rows. Durations describe
+prepared excerpts, not full historical source speeches. Each of 29 eligible
+originals has 35 single-effect variants (seven types × five severities) and
+two three-effect mixed variants. The excluded `o_captain__lv_rg__orig` has no
+synthetic derivatives because of clipped source samples.
+
+The release physically contains 2,206 audio members: 30 raw downloads,
+30 prepared HQ originals, and both HQ/alignment-rate versions of 1,073 generated
+files. Overall payload: 13,812 files; archive size 7,586,867,457 bytes. Inventory
+hashes bind all contents, including frozen measurement provenance. This is a
+frozen experimental release, not a large independent-speaker benchmark.
+
+## Flaws, severity and labels
+
+| Type | Controlled edit | Severity 1 → 5 parameter |
 |---|---|---|
-| lv_gettysburg_150 | Public domain (LibriVox recording; text by Lincoln, d. 1865) | https://librivox.org/pages/public-domain/ |
-| lv_o_captain | Public domain (LibriVox recording; text by Whitman, d. 1892) | https://librivox.org/pages/public-domain/ |
-| jfk_rice_1962 | Public domain (prepared by US officials as part of official duties) | https://www.jfklibrary.org/asset-viewer/archives/jfkwha-127-002 |
-| reagan_challenger_1986 | Public domain (NARA presidential record) — page does not state it explicitly; confirm before publishing | https://www.reaganlibrary.gov/archives/audio/remarks-president-reagan-during-address-nation-space-shuttle-challenger-oval-office |
-| jfk_inaugural_1961 | TO CONFIRM on page | https://www.jfklibrary.org/asset-viewer/archives/usg-17 |
-| eleanor_roosevelt_1948 | CC0 1.0 (Internet Archive item, FDR Library material) | https://archive.org/details/gov.fdr.309 |
-| obama_selma_2015 | Government-produced material, not copyright protected | https://obamawhitehouse.archives.gov/copyright |
-| harris_vp_tbd | Government-produced material, not copyright protected | https://bidenwhitehouse.archives.gov/copyright/ |
+| rushing | Pitch-preserving rubberband time stretch | speed 1.15, 1.30, 1.50, 1.75, 2.00 |
+| dragging | Pitch-preserving rubberband time stretch | speed 0.87, 0.77, 0.67, 0.58, 0.50 |
+| monotone | PSOLA pitch-range compression | retained range 0.70, 0.50, 0.35, 0.20, 0.08 |
+| too_quiet | Flat/trailing gain envelope | −3, −6, −9, −12, −18 dB |
+| awkward_pause | Phrase-internal room-tone insertion | 0.6, 1.0, 1.5, 2.2, 3.0 seconds |
+| missing_pause | Shorten an existing gap | retained fraction 0.70, 0.50, 0.30, 0.15, 0 |
+| mumbling | Zero-phase low-pass plus gain reduction | cutoff 3500, 2800, 2200, 1700, 1300 Hz; gain −1 dB per severity |
 
-## Construction
+Parameters, seed, placement constraints and crossfades are in `configs/flaws.yaml`.
+Severity is an **edit-strength level**, not a human-rated severity category.
+Single effects cover each severity equally per eligible source. Counting mixed
+files by their maximum severity, the synthetic row counts are: level 1: 203;
+2: 204; 3: 212; 4: 221; 5: 233. This is not a count of individual flaw instances.
 
-Source audio remains untouched. Prepared mono PCM16 HQ audio is 44.1 kHz, with 16 kHz alignment copies. Source excerpts and transcripts retain Phase 1 provenance. Feature normalisation never changes stored audio.
-Injection sites are seeded contiguous 4–12-word within-sentence regions or eligible boundaries, with one-second edge keep-outs. Unknown words are excluded from required evidence. Two mixed files per source contain three distinct effects separated by at least two seconds when eligible sites exist.
-Tempo uses Rubber Band fine mode; pitch-range compression uses Praat PSOLA; quietness uses gain envelopes; pauses use looped room tone or central removal with a 30 ms minimum; muffling uses a zero-phase fourth-order Butterworth filter plus gain. Crossfades and common HQ/16 kHz peak attenuation are recorded.
-Oracle timestamps use monotone piecewise-linear source-to-flawed maps. The detector MUST use separately computed real MFA alignments and their features. Full-utterance MFA inference uses transcripts, not oracle boundaries. Sentence membership is recovered from text word indices.
+Labels are generated from actual edit placement and piecewise-linear time maps,
+expressed in the **flawed** timeline: type, severity, start/end seconds,
+inclusive word indices and edit parameters. Oracle alignments are transported
+for label construction/QA only. Detectors consume separately produced **real
+MFA alignments** and features, not oracle boundaries. Edit labels tell us where
+an operation occurred; audible/perceptual boundaries and acoustic spillover are
+not guaranteed to coincide exactly.
 
-| Type | Parameter | Severities 1–5 |
-|---|---|---|
-| rushing | speed_factor | [1.15, 1.3, 1.5, 1.75, 2.0] |
-| dragging | speed_factor | [0.87, 0.77, 0.67, 0.58, 0.5] |
-| monotone | pitch_range_kept | [0.7, 0.5, 0.35, 0.2, 0.08] |
-| too_quiet | gain_db | [-3, -6, -9, -12, -18] |
-| awkward_pause | inserted_pause_s | [0.6, 1.0, 1.5, 2.2, 3.0] |
-| missing_pause | pause_kept_frac | [0.7, 0.5, 0.3, 0.15, 0.0] |
-| mumbling | lowpass_hz | [3500, 2800, 2200, 1700, 1300] |
+Original transcripts are canonical-to-as-spoken variants with acoustic-model
+verification and explicit unresolved word masks. Written numbers are expanded
+with mappings retained. Automatic verification is not human listening. Masked
+words and dependent uncertain evidence are excluded from reference statistics
+and evaluation; see [transcript audit](../reports/day01_acoustic_verification.md).
 
-## Labels
+## Frozen speaker splits
 
-`labels/v1` stores recording/reference/text IDs, source=synthetic, and flaw type, severity, flawed-timeline start/end, inclusive word bounds and exact parameters. Mixed files contain three flaw entries. Human labels will be explicitly source=human and must not be inferred from intended instructions.
+| Split | Speakers / rows | Speaker slugs |
+|---|---:|---|
+| Train | 18 / 684 | Gettysburg: lv_amb, lv_dj, lv_dl, lv_eep, lv_fb, lv_jn, lv_law, lv_lb, lv_mas, lv_mk; O Captain: lv_apc, lv_chip, lv_foxits, lv_jtm, lv_mac, lv_mb, lv_md, lv_mrg |
+| Dev | 4 / 152 | lv_pc, lv_rk, lv_s, lv_sjs |
+| Test | 7 / 266 | lv_sa, lv_tg, lv_wt, lv_ss, lv_th, jfk, reagan |
+| Excluded | 1 / 1 | lv_rg (source clipping) |
 
-## Splits and evaluation
+`configs/splits.yaml` is authoritative. All derivatives remain with their source
+speaker. Mode A populations and pooled spreads, and Mode C norms, use clean
+train sources only. Thresholds/severity bins were selected on dev only; the test
+evaluation is frozen. Mode B's JFK/Reagan test pairs deliberately use their own
+original as a within-speaker rehearsal reference; this is not a train population
+or use of test speakers for calibration. The published Mode C comparison uses
+different sentence/type matching and eligibility from Phase6; do not combine
+their aggregate metrics as if they were a single identical benchmark.
+The [Mode C results](../reports/phase08_mode_c.md) specify supported-type
+eligibility and sentence-level matching for that paired comparison.
 
-Sources: 18 train, 4 dev, 7 test. Speaker membership is frozen in configs/splits.yaml. Excluded: {'o_captain__lv_rg__orig': 'clipped source samples'}.
-A-LOSO compares Gettysburg/O Captain against other train readers, excluding the source speaker. B-same-speaker uses original JFK/Reagan recordings. C uses good-speaker norms without same-text reference. Test speakers never calibrate thresholds or reference statistics. Human evaluation is pending.
+## Formats and layout
 
-## Observed composition
+- Immutable original MP3 downloads: `data/raw/`, SHA-256 in raw manifest.
+- Prepared HQ sources: mono PCM16 WAV at 44.1 kHz; no gain normalisation.
+- Synthetic audio: lossless mono PCM16 FLAC at 44.1 kHz and 16 kHz.
+- Alignment: `alignment/v1` JSON and TextGrid; seconds, inclusive final word index,
+  real aligner/model versions, warnings and uncertain-word masks.
+- Labels: `labels/v1` JSON, source `synthetic`, seconds rounded to milliseconds.
+- Features: frame/word/window/sentence Parquet plus speaker-statistics JSON.
+- Time maps: `data/flawed/timemaps/`; oracle alignments: `data/alignment/oracle/`;
+  frozen producer/config/measurement
+  audits under `data/review/` and `data/.cache/dataset/` as included by inventory.
 
-1103 HQ audio files, 1073 synthetic; 36.263 hours (16 kHz copies are not double-counted).
+The release includes HQ originals needed by frozen numerical reproduction; it
+does not promise every historical intermediate or raw-to-ASR rerun. Additional
+16 kHz source WAVs can be regenerated for alignment from licensed originals.
 
-| Text | Split | Kind | Files |
-|---|---|---|---:|
-| gettysburg | dev | source | 2 |
-| gettysburg | dev | synthetic | 74 |
-| gettysburg | test | source | 3 |
-| gettysburg | test | synthetic | 111 |
-| gettysburg | train | source | 10 |
-| gettysburg | train | synthetic | 370 |
-| jfk_rice | test | source | 1 |
-| jfk_rice | test | synthetic | 37 |
-| o_captain | dev | source | 2 |
-| o_captain | dev | synthetic | 74 |
-| o_captain | excluded | source | 1 |
-| o_captain | test | source | 2 |
-| o_captain | test | synthetic | 74 |
-| o_captain | train | source | 8 |
-| o_captain | train | synthetic | 296 |
-| reagan_challenger | test | source | 1 |
-| reagan_challenger | test | synthetic | 37 |
+## Human data and rating pack
 
-| Text | Split | Type | Severity | Events |
-|---|---|---|---:|---:|
-| gettysburg | dev | awkward_pause | 1 | 2 |
-| gettysburg | dev | awkward_pause | 2 | 3 |
-| gettysburg | dev | awkward_pause | 3 | 2 |
-| gettysburg | dev | awkward_pause | 4 | 2 |
-| gettysburg | dev | awkward_pause | 5 | 3 |
-| gettysburg | dev | dragging | 1 | 2 |
-| gettysburg | dev | dragging | 2 | 3 |
-| gettysburg | dev | dragging | 3 | 2 |
-| gettysburg | dev | dragging | 4 | 2 |
-| gettysburg | dev | dragging | 5 | 2 |
-| gettysburg | dev | missing_pause | 1 | 2 |
-| gettysburg | dev | missing_pause | 2 | 2 |
-| gettysburg | dev | missing_pause | 3 | 3 |
-| gettysburg | dev | missing_pause | 4 | 2 |
-| gettysburg | dev | missing_pause | 5 | 2 |
-| gettysburg | dev | monotone | 1 | 2 |
-| gettysburg | dev | monotone | 2 | 2 |
-| gettysburg | dev | monotone | 3 | 2 |
-| gettysburg | dev | monotone | 4 | 4 |
-| gettysburg | dev | monotone | 5 | 2 |
-| gettysburg | dev | mumbling | 1 | 2 |
-| gettysburg | dev | mumbling | 2 | 2 |
-| gettysburg | dev | mumbling | 3 | 2 |
-| gettysburg | dev | mumbling | 4 | 3 |
-| gettysburg | dev | mumbling | 5 | 2 |
-| gettysburg | dev | rushing | 1 | 2 |
-| gettysburg | dev | rushing | 2 | 2 |
-| gettysburg | dev | rushing | 3 | 3 |
-| gettysburg | dev | rushing | 4 | 2 |
-| gettysburg | dev | rushing | 5 | 3 |
-| gettysburg | dev | too_quiet | 1 | 2 |
-| gettysburg | dev | too_quiet | 2 | 4 |
-| gettysburg | dev | too_quiet | 3 | 2 |
-| gettysburg | dev | too_quiet | 4 | 2 |
-| gettysburg | dev | too_quiet | 5 | 3 |
-| gettysburg | test | awkward_pause | 1 | 3 |
-| gettysburg | test | awkward_pause | 2 | 3 |
-| gettysburg | test | awkward_pause | 3 | 5 |
-| gettysburg | test | awkward_pause | 4 | 4 |
-| gettysburg | test | awkward_pause | 5 | 5 |
-| gettysburg | test | dragging | 1 | 3 |
-| gettysburg | test | dragging | 2 | 3 |
-| gettysburg | test | dragging | 3 | 3 |
-| gettysburg | test | dragging | 4 | 5 |
-| gettysburg | test | dragging | 5 | 3 |
-| gettysburg | test | missing_pause | 1 | 3 |
-| gettysburg | test | missing_pause | 2 | 3 |
-| gettysburg | test | missing_pause | 3 | 3 |
-| gettysburg | test | missing_pause | 4 | 4 |
-| gettysburg | test | missing_pause | 5 | 3 |
-| gettysburg | test | monotone | 1 | 3 |
-| gettysburg | test | monotone | 2 | 3 |
-| gettysburg | test | monotone | 3 | 3 |
-| gettysburg | test | monotone | 4 | 4 |
-| gettysburg | test | monotone | 5 | 5 |
-| gettysburg | test | mumbling | 1 | 3 |
-| gettysburg | test | mumbling | 2 | 3 |
-| gettysburg | test | mumbling | 3 | 5 |
-| gettysburg | test | mumbling | 4 | 3 |
-| gettysburg | test | mumbling | 5 | 3 |
-| gettysburg | test | rushing | 1 | 3 |
-| gettysburg | test | rushing | 2 | 5 |
-| gettysburg | test | rushing | 3 | 3 |
-| gettysburg | test | rushing | 4 | 4 |
-| gettysburg | test | rushing | 5 | 4 |
-| gettysburg | test | too_quiet | 1 | 3 |
-| gettysburg | test | too_quiet | 2 | 3 |
-| gettysburg | test | too_quiet | 3 | 4 |
-| gettysburg | test | too_quiet | 4 | 3 |
-| gettysburg | test | too_quiet | 5 | 3 |
-| gettysburg | train | awkward_pause | 1 | 10 |
-| gettysburg | train | awkward_pause | 2 | 12 |
-| gettysburg | train | awkward_pause | 3 | 10 |
-| gettysburg | train | awkward_pause | 4 | 14 |
-| gettysburg | train | awkward_pause | 5 | 10 |
-| gettysburg | train | dragging | 1 | 10 |
-| gettysburg | train | dragging | 2 | 11 |
-| gettysburg | train | dragging | 3 | 13 |
-| gettysburg | train | dragging | 4 | 13 |
-| gettysburg | train | dragging | 5 | 11 |
-| gettysburg | train | missing_pause | 1 | 10 |
-| gettysburg | train | missing_pause | 2 | 14 |
-| gettysburg | train | missing_pause | 3 | 14 |
-| gettysburg | train | missing_pause | 4 | 13 |
-| gettysburg | train | missing_pause | 5 | 13 |
-| gettysburg | train | monotone | 1 | 10 |
-| gettysburg | train | monotone | 2 | 13 |
-| gettysburg | train | monotone | 3 | 13 |
-| gettysburg | train | monotone | 4 | 10 |
-| gettysburg | train | monotone | 5 | 13 |
-| gettysburg | train | mumbling | 1 | 10 |
-| gettysburg | train | mumbling | 2 | 10 |
-| gettysburg | train | mumbling | 3 | 12 |
-| gettysburg | train | mumbling | 4 | 11 |
-| gettysburg | train | mumbling | 5 | 14 |
-| gettysburg | train | rushing | 1 | 10 |
-| gettysburg | train | rushing | 2 | 12 |
-| gettysburg | train | rushing | 3 | 12 |
-| gettysburg | train | rushing | 4 | 12 |
-| gettysburg | train | rushing | 5 | 14 |
-| gettysburg | train | too_quiet | 1 | 10 |
-| gettysburg | train | too_quiet | 2 | 11 |
-| gettysburg | train | too_quiet | 3 | 14 |
-| gettysburg | train | too_quiet | 4 | 10 |
-| gettysburg | train | too_quiet | 5 | 11 |
-| jfk_rice | test | awkward_pause | 1 | 1 |
-| jfk_rice | test | awkward_pause | 2 | 3 |
-| jfk_rice | test | awkward_pause | 3 | 1 |
-| jfk_rice | test | awkward_pause | 4 | 1 |
-| jfk_rice | test | awkward_pause | 5 | 1 |
-| jfk_rice | test | dragging | 1 | 1 |
-| jfk_rice | test | dragging | 2 | 1 |
-| jfk_rice | test | dragging | 3 | 1 |
-| jfk_rice | test | dragging | 4 | 1 |
-| jfk_rice | test | dragging | 5 | 1 |
-| jfk_rice | test | missing_pause | 1 | 1 |
-| jfk_rice | test | missing_pause | 2 | 2 |
-| jfk_rice | test | missing_pause | 3 | 1 |
-| jfk_rice | test | missing_pause | 4 | 1 |
-| jfk_rice | test | missing_pause | 5 | 1 |
-| jfk_rice | test | monotone | 1 | 1 |
-| jfk_rice | test | monotone | 2 | 1 |
-| jfk_rice | test | monotone | 3 | 2 |
-| jfk_rice | test | monotone | 4 | 1 |
-| jfk_rice | test | monotone | 5 | 2 |
-| jfk_rice | test | mumbling | 1 | 1 |
-| jfk_rice | test | mumbling | 2 | 1 |
-| jfk_rice | test | mumbling | 3 | 2 |
-| jfk_rice | test | mumbling | 4 | 1 |
-| jfk_rice | test | mumbling | 5 | 1 |
-| jfk_rice | test | rushing | 1 | 1 |
-| jfk_rice | test | rushing | 2 | 1 |
-| jfk_rice | test | rushing | 3 | 1 |
-| jfk_rice | test | rushing | 4 | 1 |
-| jfk_rice | test | rushing | 5 | 1 |
-| jfk_rice | test | too_quiet | 1 | 1 |
-| jfk_rice | test | too_quiet | 2 | 1 |
-| jfk_rice | test | too_quiet | 3 | 1 |
-| jfk_rice | test | too_quiet | 4 | 1 |
-| jfk_rice | test | too_quiet | 5 | 1 |
-| o_captain | dev | awkward_pause | 1 | 2 |
-| o_captain | dev | awkward_pause | 2 | 3 |
-| o_captain | dev | awkward_pause | 3 | 2 |
-| o_captain | dev | awkward_pause | 4 | 2 |
-| o_captain | dev | awkward_pause | 5 | 2 |
-| o_captain | dev | dragging | 1 | 2 |
-| o_captain | dev | dragging | 2 | 3 |
-| o_captain | dev | dragging | 3 | 2 |
-| o_captain | dev | dragging | 4 | 2 |
-| o_captain | dev | dragging | 5 | 3 |
-| o_captain | dev | missing_pause | 1 | 2 |
-| o_captain | dev | missing_pause | 2 | 3 |
-| o_captain | dev | missing_pause | 3 | 2 |
-| o_captain | dev | missing_pause | 4 | 2 |
-| o_captain | dev | missing_pause | 5 | 3 |
-| o_captain | dev | monotone | 1 | 2 |
-| o_captain | dev | monotone | 2 | 2 |
-| o_captain | dev | monotone | 3 | 2 |
-| o_captain | dev | monotone | 4 | 2 |
-| o_captain | dev | monotone | 5 | 3 |
-| o_captain | dev | mumbling | 1 | 2 |
-| o_captain | dev | mumbling | 2 | 3 |
-| o_captain | dev | mumbling | 3 | 3 |
-| o_captain | dev | mumbling | 4 | 2 |
-| o_captain | dev | mumbling | 5 | 3 |
-| o_captain | dev | rushing | 1 | 2 |
-| o_captain | dev | rushing | 2 | 4 |
-| o_captain | dev | rushing | 3 | 2 |
-| o_captain | dev | rushing | 4 | 2 |
-| o_captain | dev | rushing | 5 | 2 |
-| o_captain | dev | too_quiet | 1 | 2 |
-| o_captain | dev | too_quiet | 2 | 2 |
-| o_captain | dev | too_quiet | 3 | 3 |
-| o_captain | dev | too_quiet | 4 | 2 |
-| o_captain | dev | too_quiet | 5 | 2 |
-| o_captain | test | awkward_pause | 1 | 2 |
-| o_captain | test | awkward_pause | 2 | 3 |
-| o_captain | test | awkward_pause | 3 | 2 |
-| o_captain | test | awkward_pause | 4 | 2 |
-| o_captain | test | awkward_pause | 5 | 2 |
-| o_captain | test | dragging | 1 | 2 |
-| o_captain | test | dragging | 2 | 2 |
-| o_captain | test | dragging | 3 | 2 |
-| o_captain | test | dragging | 4 | 2 |
-| o_captain | test | dragging | 5 | 2 |
-| o_captain | test | missing_pause | 1 | 2 |
-| o_captain | test | missing_pause | 2 | 3 |
-| o_captain | test | missing_pause | 3 | 3 |
-| o_captain | test | missing_pause | 4 | 2 |
-| o_captain | test | missing_pause | 5 | 3 |
-| o_captain | test | monotone | 1 | 2 |
-| o_captain | test | monotone | 2 | 4 |
-| o_captain | test | monotone | 3 | 2 |
-| o_captain | test | monotone | 4 | 2 |
-| o_captain | test | monotone | 5 | 3 |
-| o_captain | test | mumbling | 1 | 2 |
-| o_captain | test | mumbling | 2 | 2 |
-| o_captain | test | mumbling | 3 | 2 |
-| o_captain | test | mumbling | 4 | 3 |
-| o_captain | test | mumbling | 5 | 3 |
-| o_captain | test | rushing | 1 | 2 |
-| o_captain | test | rushing | 2 | 2 |
-| o_captain | test | rushing | 3 | 3 |
-| o_captain | test | rushing | 4 | 2 |
-| o_captain | test | rushing | 5 | 2 |
-| o_captain | test | too_quiet | 1 | 2 |
-| o_captain | test | too_quiet | 2 | 2 |
-| o_captain | test | too_quiet | 3 | 3 |
-| o_captain | test | too_quiet | 4 | 2 |
-| o_captain | test | too_quiet | 5 | 3 |
-| o_captain | train | awkward_pause | 1 | 8 |
-| o_captain | train | awkward_pause | 2 | 10 |
-| o_captain | train | awkward_pause | 3 | 12 |
-| o_captain | train | awkward_pause | 4 | 9 |
-| o_captain | train | awkward_pause | 5 | 8 |
-| o_captain | train | dragging | 1 | 8 |
-| o_captain | train | dragging | 2 | 12 |
-| o_captain | train | dragging | 3 | 8 |
-| o_captain | train | dragging | 4 | 9 |
-| o_captain | train | dragging | 5 | 8 |
-| o_captain | train | missing_pause | 1 | 8 |
-| o_captain | train | missing_pause | 2 | 10 |
-| o_captain | train | missing_pause | 3 | 8 |
-| o_captain | train | missing_pause | 4 | 10 |
-| o_captain | train | missing_pause | 5 | 10 |
-| o_captain | train | monotone | 1 | 8 |
-| o_captain | train | monotone | 2 | 10 |
-| o_captain | train | monotone | 3 | 12 |
-| o_captain | train | monotone | 4 | 8 |
-| o_captain | train | monotone | 5 | 9 |
-| o_captain | train | mumbling | 1 | 8 |
-| o_captain | train | mumbling | 2 | 9 |
-| o_captain | train | mumbling | 3 | 11 |
-| o_captain | train | mumbling | 4 | 10 |
-| o_captain | train | mumbling | 5 | 9 |
-| o_captain | train | rushing | 1 | 8 |
-| o_captain | train | rushing | 2 | 9 |
-| o_captain | train | rushing | 3 | 9 |
-| o_captain | train | rushing | 4 | 12 |
-| o_captain | train | rushing | 5 | 9 |
-| o_captain | train | too_quiet | 1 | 8 |
-| o_captain | train | too_quiet | 2 | 11 |
-| o_captain | train | too_quiet | 3 | 9 |
-| o_captain | train | too_quiet | 4 | 11 |
-| o_captain | train | too_quiet | 5 | 10 |
-| reagan_challenger | test | awkward_pause | 1 | 1 |
-| reagan_challenger | test | awkward_pause | 2 | 1 |
-| reagan_challenger | test | awkward_pause | 3 | 1 |
-| reagan_challenger | test | awkward_pause | 4 | 1 |
-| reagan_challenger | test | awkward_pause | 5 | 1 |
-| reagan_challenger | test | dragging | 1 | 1 |
-| reagan_challenger | test | dragging | 2 | 1 |
-| reagan_challenger | test | dragging | 3 | 2 |
-| reagan_challenger | test | dragging | 4 | 1 |
-| reagan_challenger | test | dragging | 5 | 1 |
-| reagan_challenger | test | missing_pause | 1 | 1 |
-| reagan_challenger | test | missing_pause | 2 | 2 |
-| reagan_challenger | test | missing_pause | 3 | 1 |
-| reagan_challenger | test | missing_pause | 4 | 1 |
-| reagan_challenger | test | missing_pause | 5 | 2 |
-| reagan_challenger | test | monotone | 1 | 1 |
-| reagan_challenger | test | monotone | 2 | 1 |
-| reagan_challenger | test | monotone | 3 | 2 |
-| reagan_challenger | test | monotone | 4 | 1 |
-| reagan_challenger | test | monotone | 5 | 2 |
-| reagan_challenger | test | mumbling | 1 | 1 |
-| reagan_challenger | test | mumbling | 2 | 1 |
-| reagan_challenger | test | mumbling | 3 | 1 |
-| reagan_challenger | test | mumbling | 4 | 1 |
-| reagan_challenger | test | mumbling | 5 | 1 |
-| reagan_challenger | test | rushing | 1 | 1 |
-| reagan_challenger | test | rushing | 2 | 2 |
-| reagan_challenger | test | rushing | 3 | 1 |
-| reagan_challenger | test | rushing | 4 | 1 |
-| reagan_challenger | test | rushing | 5 | 1 |
-| reagan_challenger | test | too_quiet | 1 | 1 |
-| reagan_challenger | test | too_quiet | 2 | 1 |
-| reagan_challenger | test | too_quiet | 3 | 1 |
-| reagan_challenger | test | too_quiet | 4 | 1 |
-| reagan_challenger | test | too_quiet | 5 | 1 |
+**No genuine user takes are included.** `data/human/CONSENT.md` and the requested
+WAVs are absent. The synthetic workflow-verification JSON is engineering evidence,
+not a human recording or human result. This excludes new user takes, not the
+licensed volunteer/historical human speech
+that constitutes the original source corpus. Future analysis requires explicit consent,
+as-spoken transcripts and intended notes; [human workflow](HUMAN_TAKES.md).
+Even after consent, a new human release requires explicit packaging/provenance;
+the frozen archive does not silently grow.
 
-## Known limitations and attributions
+The [blind rating pack](RATING_PACK.md) is a separately reproducible convenience
+sample of licensed train-source excerpts. It is not counted again as independent
+dataset recordings. Actual independent ratings remain pending; no synthetic
+rating substitutes or human-agreement claim are supplied.
 
-Synthetic parameter fidelity does not establish perceptual realism. LibriVox reading differs from oratory. English only. Human takes/ratings are missing. Gold boundaries were marked visually by Claude, without listening; the human spot-check is pending and neither aligner met the Phase 1 gold accuracy target. Uncertain word evidence is excluded. Real-vs-oracle errors and >60 ms risks are saved in data/review/dataset_alignment_qa.json.
-Required source attributions: LibriVox, US government works and Internet Archive, with evidence links above. User voice must not be published without explicit consent.
+## Known limitations and intended use
+
+- Synthetic operations approximate delivery problems; their strength/label timing
+  is not independently validated perception. Flaws in genuine speech co-vary.
+- LibriVox reading style is not an ideal-oratory standard. Few texts, historical
+  microphones and selected speakers limit generalisation; English-only features
+  and syllable lookup are not accent-fairness evidence.
+- Visual word reference was annotated by Claude without listening. The human
+  spot-check is pending, and model independence was asserted, not independently
+  established. Small unclear-word-excluded samples cannot support exact word-onset
+  truth; [alignment bake-off](../reports/day01_aligner_bakeoff.md).
+- Pitch/loudness normalisation reduces voice/microphone offsets but cannot remove
+  all speaker/domain differences. Clarity is a spectral proxy, not intelligibility.
+- The dev clean-alarm guard failed; low precision and non-monotonic score series
+  are disclosed in [Phase6](../reports/phase06_results.md) and
+  [Phase7](../reports/phase07_validation.md). No threshold was changed afterwards.
+- Mode C is a weaker sentence-norm prototype; unsupported flaw types and key-moment
+  heuristics are explicitly labelled. Rubric scores are designed penalties, not
+  validated perceptual ratings or causal proof.
+- Reproduction demonstrates frozen numerical/byte identity in the tested pinned
+  CPU environment, not universal bit identity on every platform/model release.
