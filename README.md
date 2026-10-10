@@ -1,118 +1,131 @@
-# speech-eval
+# speech-eval: speech delivery analytics with temporal flaw grounding
 
-Deterministic speech-delivery evaluation for the Multimodal AI Hackathon 2026.
+Speech-Eval flags **what** differs in delivery, **where** it happens and **why**:
+measured pace, pitch, loudness, clarity and pauses compared with a reference.
+It supports rushing, dragging, monotone, too quiet, mumbling, awkward pause and
+missing pause. Built for Track C of the Multimodal AI Hackathon 2026.
+This is an experimental delivery benchmark, not a validated judgment of speaking
+quality. The dev clean-alarm guard failed; genuine human validation is pending.
 
-## Dashboard and CPU release checks
+![Dashboard](reports/img/ui_results.png)
+
+## Quickstart
 
 ```sh
-make up                 # http://localhost:8080 (API + dashboard)
-make test               # tests in Docker
-make reproduce-quick    # Gettysburg, three held-out readers, CPU
-make reproduce          # recompute every Phase 6/7/8 report number
+git clone https://github.com/mpssriram/speech-eval.git
+cd speech-eval
+# Archive is not in Git. Until public upload, obtain the separately supplied ZIP:
+make reproduce-quick DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip
+make up                 # foreground server; run in a second terminal, http://localhost:8080
+make reproduce          # frozen Phase 6/7/8 numbers in Docker, CPU
+make test               # Python tests inside Docker
 ```
 
-Audio and Parquet are not in Git. Restore the prepared measured dataset before
-analysis/reproduction; see [Docker setup and input requirements](docs/DOCKER.md).
-The public dataset archive and genuine human ratings are still pending.
-See [browser verification and screenshots](reports/phase09_ui.md).
+Runtime dependencies are inside Docker/Compose: no host Python, Node, MFA or
+model installation. Shell examples also use Git and Make; direct Compose
+equivalents are in [Docker instructions](docs/DOCKER.md). First image/model
+downloads and import are separate from numerical run time. Measured quick:
+11.829 / 11.954 seconds; full: 225.204 / 223.142 seconds in the tested CPU
+environment, not a universal laptop bound. [Fresh-clone proof](reports/reproducibility.md).
+Required total free disk: **pending measured value** (`{{disk_gb}}`).
 
-The project runs in WSL Ubuntu at `/home/sriram/speech-eval`.
+Public dataset URL: **pending upload** (`{{dataset_url}}`). Fill
+`configs/dataset.yaml` with the URL for the **exact checksum-pinned ZIP** after
+uploading; then omit `DATA_ARCHIVE`. A clone without that archive cannot reproduce.
 
-```bash
-cd /home/sriram/speech-eval
-env -u PYTHONPATH ~/.local/bin/uv run speecheval transcripts triage
-env -u PYTHONPATH ~/.local/bin/uv run speecheval transcripts verify
-make test-host
-# Equivalent direct test command:
-PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 env -u PYTHONPATH ~/.local/bin/uv run pytest
-# Wrapper also accepts pytest arguments:
-scripts/test.sh tests/test_triage.py
+## Three modes
+
+| Mode | Reference | Use |
+|---|---|---|
+| A: same text | Train-reader distribution; institutional texts have a single original | Known-text comparison, not an ideal-speaker standard |
+| B: rehearsal | Your own earlier completed take of the same words | Per-flaw change, not automatically validated improvement |
+| C-lite | Train-speaker sentence norms; labelled key-moment heuristics | New-speech prototype, weaker and not every flaw type |
+
+Upload a WAV and select text/mode. Supply actual as-spoken words for slips,
+excerpts and arbitrary Mode C speech. A/B phrase playback requires the same words
+in the baseline; C has no invented same-text baseline. [Browser proof](reports/phase09_ui.md).
+
+## How it works
+
+```text
+audio -> format conversion/energy trim -> supplied or automatic words -> real MFA
+      -> frames/words/windows/sentences -> speaker-relative features
+      -> reference deviations -> regions/events -> numeric templates -> rubric -> API/UI
 ```
 
-The host test target and test wrapper remove inherited `PYTHONPATH` (including ROS 2
-paths) and disable external pytest plugin autoloading. The CLI warns when a
-non-empty `PYTHONPATH` is present.
+No LLM or sampling in scoring. JSON byte identity is verified for the pinned CPU
+pipeline, not every platform/automatic-ASR configuration. [Technical report](docs/report/report.md),
+[six-page PDF](docs/report/report.pdf).
 
-Triage freezes all five Gettysburg manuscript versions with source URLs,
-selects an alternative only when it saves at least three token edits over
-Bliss, and preserves files marked `# reviewed: yes`. Spelling equivalences
-live in `configs/text_equiv.yaml`. `data/review/triage.json` records every edit
-and classification, including items excluded from the listen list.
+## Dataset
 
-For LISTEN edits, independent WhisperX `medium.en` runs on CPU with beam 5
-on the full edit span plus one second on either side. It uses int8 computation
-and caches the result by audio SHA-256, clip bounds and model settings in
-`data/review/secondary_asr.json`. LIKELY_REAL requires both ASRs to agree on
-the entire normalized clip context; it remains a human-review suggestion.
+The frozen release contains **1,103 indexed variants / 36.26268833333334 hours**:
+30 originals and 1,073 injected recordings. Duplicate rates/raw downloads are not
+counted again. Original readers: 15 Gettysburg, 13 O Captain, plus JFK and Reagan.
+One clipped source is audit-only; eligible originals have seven effects at five
+severities and mixed variants. Seeded labels/time maps describe controlled edits,
+not independent perceptual truth. Detection uses real MFA, not oracle alignment.
 
-Step 5b human listening review has been replaced, at the user's request, by
-`speecheval transcripts verify`. It freezes the original listen-list items and
-transcripts, repairs repeated-ending poem cuts if needed, builds sentence/poem-line
-windows, and compares candidate A (ORIGINAL pre-verification transcript) with B (ASR substitution), including reassessment of all six earlier applied edits.
-The cached WhisperX wav2vec2 model runs on CPU with seed 0, evaluation mode, one
-thread and deterministic algorithms. Each score is the total CTC log-likelihood
-summed over all valid alignment paths. Identical LOCAL audio covers disputed words plus one neighbour on each side, with 0.2 s padding; total likelihoods are compared without per-frame averaging.
-The model checkpoint, audio, inference settings and candidate texts identify caches.
+Speakers stay separate across splits. A/C populations use train only; B test pairs
+deliberately compare an edited JFK/Reagan take with their own original.
+[Dataset card](docs/DATASET.md), [rights and archive proof](reports/reproducibility.md).
 
-The total-nats margin is calibrated using 300 fixed-seed substitution/deletion/insertion controls, proportionally allocated to eligible words across all 30 recordings. Eligible sentences require exact normalized transcript/large-v3/medium.en agreement and exclude previously uncertain words. Independent full-recording medium.en context is used when sentence-clipped ASR provides no eligible pool. This is unprompted decoding, not transcript-conditioned ASR. The smallest positive margin giving inclusive empirical fake acceptance <=2% is saved in config. A finite B advantage above that margin applies B, a finite A advantage
-keeps A, and other cases stay UNSURE. ASR agreement is recorded as supporting
-evidence. The score distribution and every decision appear in
-`reports/day01_acoustic_verification.md`; full candidate texts, window times, frame
-counts and evidence hashes appear in `data/review/acoustic_verification_calibrated.json`. The original audit remains in `data/review/acoustic_verification_legacy.json`.
-This is automatic model evidence, not human-verified ground truth. No
-`# reviewed: yes` marker is added; files use `# reviewed: auto-acoustic-calibrated`. Three-way agreement is a proxy label, not human ground truth, and the in-sample calibration rate is not guaranteed accuracy on real disagreements. New differences exposed by repaired audio and
-UNSURE items remain explicitly unresolved. An unchanged rerun validates provenance,
-reuses its audit and preserves applied edits; if transcripts/audio/model/settings
-have changed, it stops rather than overwriting that audit. Final zero-based unresolved word indices are saved in `data/transcripts/uncertain/*.json` and propagated as `uncertain_words` in alignments. Later reference statistics and evaluation must exclude them.
+## Results
 
-For optional inspection, open `\\wsl$\Ubuntu\home\sriram\speech-eval\data\review\index.html` in a browser.
-Its players reference `../audio/hq/*.wav` and play the four-second review
-window around each timestamp. Decisions typed into the HTML are temporary;
-save any later human decisions separately, update the corresponding
-as-spoken transcript for actual speech changes, and add `# reviewed: yes` only
-if a human actually performed that review.
-Already reviewed recordings stay in the audit but are excluded from the
-active listen list. Triage does not mark recordings reviewed automatically.
+Copied from [frozen Phase6](reports/phase06_results.md); synthetic labels, not
+human speaking-quality judgments:
 
-## Feature extraction (WSL)
+| Setting | Files | Precision | Recall | F1 [95% CI] | Clean alarms/min |
+|---|---:|---:|---:|---|---:|
+| A-LOSO | 190 | 0.125 | 0.400 | 0.190 [0.156, 0.223] | 1.341 |
+| B-same-speaker | 76 | 0.018 | 0.390 | 0.035 [0.026, 0.045] | 0.000 |
 
-Run inside `/home/sriram/speech-eval`:
+Dev clean-alarm guard **not met**: 1.777 alarms/min versus ≤0.5. Low precision
+and misses are limitations. Learned detector was not trained. [Calibration](reports/phase06_calibration.md).
 
-```bash
-env -u PYTHONPATH ~/.local/bin/uv run speecheval features all
-env -u PYTHONPATH ~/.local/bin/uv run speecheval report features
-env -u PYTHONPATH ~/.local/bin/uv run python scripts/check_features.py
-make test
+![Recall versus severity](reports/img/recall_vs_severity_A-LOSO.png)
+
+Mode C's separate sentence/type comparison uses 175 eligible files: reference
+recall 0.324 versus C 0.179. Do **not** compare directly with the Phase6 word-region
+aggregate. [Mode C eligibility/results](reports/phase08_mode_c.md).
+
+Scores were checked for monotonicity and reproducibility, **not yet against human
+raters**. Constant/non-monotonic series are disclosed in [Phase7](reports/phase07_validation.md).
+Fresh GitHub-clone Docker reproduction matched all 563 scientific outputs
+byte-for-byte twice; [scope and hashes](reports/reproducibility.md).
+
+## Human takes and blind ratings
+
+The eight-take workflow is ready but genuine recordings, consent, notes and
+as-spoken transcripts are absent. A real-MFA synthetic smoke check is strictly
+workflow evidence and missed its injected region; no tuning followed.
+[Instructions](docs/HUMAN_TAKES.md), [Phase10](reports/phase10_human_takes.md).
+
+The twelve-clip [rating pack](docs/RATING_PACK.md) and agreement script are ready.
+Distribute only `data/rating_pack/`, never the private key or repository.
+Actual independent responses/human correlations remain pending.
+
+## Repository layout
+
+```text
+src/speecheval/   deterministic features, edits, references, detector, scoring
+api/             FastAPI and real job runner
+web/             React/Vite dashboard
+configs/         locked flaws, splits, detector, rubric, release URL/SHA
+data/            manifests, metadata, git-ignored audio; blind/private pack separated
+reports/         frozen results, authorised workflow/reproduction evidence
+docs/            dataset card, technical report, guides, blockers
 ```
 
-The `features frames` alias produces the complete five-file feature bundle.
-QA is machine-readable in `data/features/qa.json`; the Gettysburg overlay is
-`reports/img/phase02_gettysburg_overlay.png`. No narrative phase reports are
-generated under the current user override. Docker remains deferred to Phase 9.
+## Limitations and attributions
 
-## Synthetic flaw preview
+Synthetic edits approximate real flaws; LibriVox readers are not ideal orators;
+English-only proxies do not establish accent fairness; Mode C is heuristic.
+Claude annotated the visual alignment reference without listening; human
+spot-check/error quantification remain pending. Rubric scores are designed
+penalties, not a validated perceptual scale or causal proof. [Next actions](NEXT.md).
 
-```bash
-env -u PYTHONPATH ~/.local/bin/uv run speecheval inject preview
-env -u PYTHONPATH ~/.local/bin/uv run python scripts/check_injection.py --fresh
-```
-
-The preview page is `data/flawed/preview/index.html`. Objective measurements for
-all seven effects and five severities on three readers are in
-`data/flawed/effect_checks.json`. They test parameter fidelity, not perceptual
-realism. The first audit is retained as `effect_checks_initial.json`.
-
-## Synthetic dataset and recording instructions
-
-```bash
-env -u PYTHONPATH UV_CACHE_DIR=$PWD/.uv-cache ~/.local/bin/uv run speecheval dataset build
-env -u PYTHONPATH UV_CACHE_DIR=$PWD/.uv-cache ~/.local/bin/uv run python scripts/check_dataset.py --fresh
-env -u PYTHONPATH UV_CACHE_DIR=$PWD/.uv-cache ~/.local/bin/uv run speecheval human script
-```
-
-Reader workers run actual MFA inference on complete flawed audio/transcripts,
-without oracle boundaries. Speaker splits are fixed in `configs/splits.yaml`.
-The dataset index and machine-readable checks are under `data/manifest/` and
-`data/review/`. Exact recording instructions/texts are in `data/human/`; user
-voice, listening labels and consent are not synthesized. Dataset v1 acceptance
-and tagging remain pending actual human recordings.
+Audio has source-specific public-domain evidence **in the USA**, not a blanket
+worldwide licence. [Evidence](data/release/licences.json), [card](docs/DATASET.md).
+Draft MIT code and CC BY 4.0 annotation/documentation grants await formal owner
+licence files and attribution, so those grants are not asserted here.

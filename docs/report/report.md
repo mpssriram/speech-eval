@@ -1,0 +1,191 @@
+---
+title: "Speech-Eval: Contrastive Speech Delivery Analytics with Temporal Flaw Grounding"
+subtitle: "Multimodal AI Hackathon 2026, Track C"
+author: "{{author name}} (with Claude and Codex)"
+date: "October 2026"
+---
+
+# 1. Problem and approach
+
+Speech-Eval asks what delivery pattern differs, where it happens and what measured
+evidence supports the flag. It compares deliveries and reports time intervals,
+quoted words and numeric template explanations. Content quality is out of scope.
+Controlled edits supply reproducible operation labels, not independent judgments
+of good speaking. A uses same-text train readers; B uses the speaker's earlier
+take; C-lite uses sentence norms without a same-text reference. Key-moment
+messages are labelled heuristics, not scored judgments.
+
+# 2. Contrastive dataset construction
+
+Sources: 15 Gettysburg and 13 O Captain LibriVox readings, plus one JFK Rice and
+one Reagan Challenger recording. USA public-domain evidence is recorded in the
+release manifests and [dataset card](../DATASET.md); automatic evidence checks
+are not human legal review. Raw hashes remain immutable.
+
+Canonical/as-spoken differences were checked with local CTC candidate likelihoods
+calibrated on 300 controls, empirical fake acceptance ≤2%. This in-sample proxy
+is not listening or guaranteed accuracy on real disagreements. Unsettled words
+and dependent evidence remain masked. Number expansion retains index mappings.
+[Acoustic audit](../../reports/day01_acoustic_verification.md).
+
+MFA/WhisperX were compared on 37 words / 74 edges after 23 unclear-word exclusions.
+**Claude placed visual boundaries without listening**; independence from model
+templates was asserted, not independently established. Human spot-check is pending.
+Pooled median differences: MFA 52.0 ms, WhisperX 72.0 ms; MFA is primary. Both
+passed independent CPU rerun identity. These are differences from a limited visual
+reference, not established human accuracy. [Bake-off](../../reports/day01_aligner_bakeoff.md).
+
+Eligible sources receive seven effects at five edit strengths plus mixed variants,
+with seeded placement. One clipped O Captain source is audit-only. The release
+has 1,103 indexed variants / 36.26268833333334 hours: 30 originals and 1,073 edited
+recordings. Raw downloads/duplicate rates are not counted again. Train/dev/test
+have 18 / 4 / 7 speakers. [Measured counts](../../reports/reproducibility.md).
+
+| Type | Controlled operation | Increasing edit strength |
+|---|---|---|
+| rushing / dragging | Pitch-preserving stretch | Raise / lower speed factor |
+| monotone | PSOLA around median pitch | Retain less pitch range |
+| too_quiet | Flat/trailing gain | More attenuation |
+| awkward_pause | Phrase-internal room tone | Longer inserted gap |
+| missing_pause | Shorten existing gap | Lower retained fraction |
+| mumbling | Zero-phase low-pass plus gain | Lower cutoff/gain |
+
+Parameters are in `configs/flaws.yaml`. Time maps transport source indices into
+the flawed timeline; labels bind type, edit-strength severity and interval.
+Real MFA is run separately for detection. Oracle alignments serve label/QA only;
+edit boundaries are not guaranteed perceptual boundaries. Genuine takes are pending.
+
+# 3. Features and speaker normalisation
+
+Praat pitch/intensity/HNR and spectral/MFCC tracks feed word, short-window and
+sentence aggregates. Speaker-relative transformations reduce voice/microphone
+offsets, not all differences:
+
+$$\mathrm{st}(t)=12\log_2[f_0(t)/\widetilde f_0],\qquad
+L_{\mathrm{rel}}(t)=L(t)-\widetilde L.$$
+
+Medians use voiced frames inside aligned words. Rate (syllables/second) is not
+speaker-normalised. Clarity is a high-band energy ratio, not intelligibility.
+Comparison rate/pitch-variation/pause features are log-transformed; loudness and
+clarity remain dB. Uncertain-word masks exclude dependent aggregates.
+Feature normalisation does not silently edit stored loudness.
+
+# 4. Detection, grounding and explanations
+
+Clean train readers give word/feature median mu and robust spread
+s = 1.4826 median(|x - mu|). Pooled train spread and shrinkage n0 = 5 give:
+
+$$\sigma_{i,f}^2=(n s_{i,f}^2+n_0\sigma_{\mathrm{pool},f}^2)/(n+n_0),\qquad
+z_{j,f}=(x_{j,f}-\mu_{i,f})/\sigma_{i,f}.$$
+
+Whole-word mapping excludes unmatched/partial correspondences. Runs within
+sentences become regions; pauses are boundary events. Directional feature rules
+and contradictory-pair suppression are explicit. Frozen selected k is **3.50
+for every type**, not the draft default 2.0. Dev severity cut points are
+[2.0, 2.75, 3.5, 4.059, 6591.0]; matched dev Spearman is 0.1572985835046175.
+The unusual final cut point/weak correlation are retained, not repaired with test
+or user takes. [Calibration](../../reports/phase06_calibration.md).
+
+Templates quote measured participant/reference deviations and flagged words.
+Exact publication example is pending (`{{example_explanation}}`): no supplied
+result report contains the numeric explanation allowed by the report-only rule.
+Measured rule explanations are **not causal proof**.
+
+B uses the own earlier take; JFK/Reagan test originals are within-speaker references,
+not population training/calibration. C checks sentence rate, pitch range, final
+loudness drop and non-final end pause; mumbling/awkward pause are unsupported.
+Number/end guidelines never alter scores.
+
+# 5. Scoring and validation
+
+For first-to-last-word duration D, duration penalty is sum(v × d/D × 10);
+pause penalty is sum(0.4 × v). Clip 10 - penalty to [0,10], decimal half-up round,
+then weight rounded categories: pace/pitch 0.25 each, pauses 0.20, volume/clarity
+0.15 each. These are configurable design choices, not an external standard.
+Severity-3 rushing over 10% gives pace 7.0. [Validation](../../reports/phase07_validation.md).
+
+The report gives per-type, not aggregate, monotonicity:
+
+| Type | Median severity-score Spearman | Non-increasing % | Constant series |
+|---|---:|---:|---:|
+| awkward_pause | -0.8660254037844386 | 85.71428571428571 | 3 |
+| dragging | -0.7071067811865475 | 71.42857142857143 | 2 |
+| missing_pause | -0.7071067811865475 | 100.0 | 4 |
+| monotone | -0.7071067811865475 | 28.571428571428573 | 0 |
+| mumbling | -0.8944271909999157 | 71.42857142857143 | 0 |
+| rushing | -0.7071067811865475 | 71.42857142857143 | 1 |
+| too_quiet | -0.7071067811865475 | 85.71428571428571 | 3 |
+
+Each type has seven complete series. Constant ranks have undefined Spearman;
+non-increasing alone is not sensitivity. **Human agreement is pending.** The
+blind pack/scripts exist but no real rater responses. The form asks overall
+delivery 1–5, flaw type(s) and approximate time, not five category ratings. Scripts
+compute system–mean-human/per-rater Spearman, mean defined pairwise human Spearman
+and exact flaw-set agreement with denominators; no fabricated responses or CIs.
+
+Frozen host two-run identity: 10/10. Later fresh-clone CPU Docker reproductions
+matched all 563 scientific outputs twice, including cross-environment checks.
+[Scope and SHA manifests](../../reports/reproducibility.md).
+
+# 6. Results across settings
+
+Thresholds used dev only. Original final test commit:
+`aaf1832fe24a193d4c90f9e7a2ff9537b753335c`. Later test runs are **reproductions**,
+not tuning. Same-type one-to-one region IoU ≥0.3; pause centre distance ≤0.25 s.
+[Frozen results](../../reports/phase06_results.md).
+
+| Setting | Files | Precision | Recall | F1 [95% CI] | Clean alarms/min |
+|---|---:|---:|---:|---|---:|
+| A-LOSO | 190 | 0.125 | 0.400 | 0.190 [0.156, 0.223] | 1.341 |
+| B-same-speaker | 76 | 0.018 | 0.390 | 0.035 [0.026, 0.045] | 0.000 |
+
+A highest recall: awkward_pause 0.903; lowest: rushing 0.167. Matched overall
+onset/offset differences are 26.000 / 40.500 ms (A), 31.000 / 35.500 ms (B),
+conditional on matches, not all truth regions. Dev clean-alarm guard **failed**:
+1.777 versus ≤0.5. Learned detector was not trained. No pooled severity-1/2 or
+severity-4/5 recall is inferred from the chart without a reported numeric summary.
+
+![A-LOSO recall versus injected severity](../../reports/img/recall_vs_severity_A-LOSO.png)
+
+C uses **different eligibility and sentence/type matching**. Its paired comparison
+on 175 files stays separate from Phase6:
+
+| Paired setting | Precision | Recall | Clean alarms/min |
+|---|---:|---:|---:|
+| Same-text / own-original reference | 0.106 | 0.324 | 0.584 |
+| C-lite norms | 0.020 | 0.179 | 4.159 |
+
+C too-quiet truth is trailing-only; unsupported single effects are omitted and
+mixed files score supported types only. Lower aggregate recall/more clean alarms
+describe controlled edits, not humans. [Mode C](../../reports/phase08_mode_c.md).
+Genuine take accuracy remains pending. The real-MFA **synthetic workflow fixture**
+missed its injected region in A and B; no tuning followed. [Phase10](../../reports/phase10_human_takes.md).
+
+# 7. Limitations and future work
+
+Edits approximate real flaws, which co-vary. Neutral reading is not ideal oratory.
+Few texts, microphones/speakers and English-only proxies limit generalisation.
+Visual reference was placed without listening; human spot-check/error estimates
+remain pending and unclear-word exclusion induces selection bias. Model-to-visual
+median is not annotation error; no 20–40 ms annotation-error claim is supported.
+C is a weaker norm prototype with unvalidated key-moment heuristics. Scores have
+constant/non-monotonic series and no human agreement yet. Low precision, failed
+dev guard and the fixture miss stay visible. Future work requires consented real
+recordings, independent labels and actual ratings; post-hoc detector changes must
+be labelled, not presented as frozen evaluation.
+
+# 8. Reproducibility and attributions
+
+`make reproduce-quick DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip`
+imports the separately supplied archive and runs one text/three test readers.
+`make reproduce` re-verifies inputs and reproduces frozen Phase6/7/8 numbers in
+pinned CPU Docker, not every historical ASR/excerpt decision or human/video work.
+Quick: 11.829 / 11.954 seconds; full: 225.204 / 223.142 seconds after import/build.
+Hashes: `data/release/reproduction_hashes.json` and reproduction report. The narrow
+legacy-fixture gate exemption is a disclosed post-hoc release adapter, not a
+detector change; other historical inputs/code are verified.
+
+Audio attribution: LibriVox volunteers and JFK/Reagan institutional collections;
+source-specific USA public-domain evidence. Archive: pending `{{dataset_url}}`;
+author: `{{author name}}`; video: `{{video_url}}`. Draft MIT / CC BY 4.0 grants
+await formal owner licence files. Remaining publication/human actions: `NEXT.md`.

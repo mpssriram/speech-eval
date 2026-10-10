@@ -65,3 +65,12 @@
 The blind pack and agreement script are available, but no actual independent
 rater responses exist. Collect separate CSVs from real raters; blank forms and
 temporary unit-test ratings cannot establish system–human or inter-rater agreement.
+## Item E — publication and unsupported draft claims
+
+README/report/video drafts were read successfully from the supplied Windows
+folder. Measured numbers have been copied only from result Markdown reports.
+Actual takes/ratings, human alignment spot-check, publication author, archive URL,
+video URL, disk requirement and exact numeric explanation examples remain pending;
+all unresolved draft fields are in docs/TODO_PLACEHOLDERS.md. The proposed MIT
+code / CC BY 4.0 annotation grants lack formal owner licence files. No grants,
+human-performance claims, pitch progress or rater confidence intervals were invented.
