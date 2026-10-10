@@ -138,3 +138,42 @@ def test_health_reports_active_reference_and_history_is_chronological(tmp_path):
     with TestClient(s.create_app(tmp_path)) as client:
         assert client.get('/api/health').json()['reference_version']['gettysburg__excl-none']=='active-version'
         assert [r['analysis_id'] for r in client.get('/api/history').json()]==['zzzz','aaaa']
+
+
+def test_baseline_segment_rejects_partial_phrase_and_plays_exact_matching_words(tmp_path):
+    """Same-words playback must never silently drop an unmatched participant word."""
+    alignments = tmp_path / 'data/alignment'
+    alignments.mkdir(parents=True)
+    participant_words = [
+        {'norm': 'it', 'start': 1.0, 'end': 1.2},
+        {'norm': 'far', 'start': 1.2, 'end': 1.5},
+    ]
+    baseline_words = [{'norm': 'far', 'start': 4.0, 'end': 4.4}]
+    (alignments / 'speech__user__take01.json').write_text(json.dumps({
+        'audio': 'data/audio/hq/speech__user__take01.wav',
+        'words': participant_words,
+    }))
+    (alignments / 'speech__reader__orig.json').write_text(json.dumps({
+        'audio': 'data/audio/hq/speech__reader__orig.wav',
+        'words': baseline_words,
+    }))
+    jobs = tmp_path / 'data/app/jobs'
+    jobs.mkdir(parents=True)
+    (jobs / 'partial.json').write_text(json.dumps({
+        'analysis_id': 'partial',
+        'status': 'done',
+        'analysis': {
+            'recording_id': 'speech__user__take01',
+            'reference': {'baseline_recording_id': 'speech__reader__orig'},
+        },
+    }))
+    with TestClient(s.create_app(tmp_path)) as client:
+        response = client.get('/api/analyses/partial/baseline-segment?word_start=0&word_end=1')
+        exact = client.get('/api/analyses/partial/baseline-segment?word_start=1&word_end=1')
+    assert response.status_code == 404
+    assert exact.status_code == 200
+    assert exact.json() == {
+        'recording_id': 'speech__reader__orig',
+        'start': 4.0,
+        'end': 4.4,
+    }
