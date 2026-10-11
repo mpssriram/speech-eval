@@ -124,3 +124,35 @@ Two further diagnostic runs produced byte-identical JSON stdout, SHA256
 two-run computation took 78.630 s. Investigation stayed within the two-hour
 timebox (under one hour including verification). Frozen scientific hashes and
 the original v2 one-shot marker remain unchanged. Full suite: 277 tests passed.
+
+## 3. Genuine-take review / confirmation gate
+
+Created `data/human/review/TAKES_REVIEW.md`: all eight actual ASR drafts paired
+with canonical units, marked suggested word differences, complete editable
+transcript blocks, verbatim recorder notes and reference word-span locations.
+The PDF plans are separate and unconfirmed, not inferred performed labels.
+Gettysburg04 / Reagan04 (global08) are spontaneous mixed readings; types and
+locations remain unspecified. "No issues" on global06 is not silently replaced
+by the PDF plan. ASR is not ground truth or listening.
+
+An independent document-reader check found no obvious out-of-order ASR row
+assignment. Its actionable clarifications were applied: exact splitter rules,
+review-form-to-validator notes conversion, validation-only command, and the
+scope of "No issues". The duplicate "or" reference match was narrowed to the
+recorder's specified unit2. Canonical punctuation is preserved in the reference
+column. This is AI document review, NOT independent speech ratings/annotations.
+
+BLOCKED: none of the eight take sections has recorder `CONFIRMED`. Existing
+prose notes lack the required explicit complete JSON annotations and confirmed
+as-spoken files are still absent. No raw/original audio, consent, source drafts,
+user notes or transcripts were changed. Real human A/B evaluation, dashboard
+jobs and hits/misses/FP remain unrun/unclaimed. After confirmation: v1 primary;
+Mode A all available takes, B02/B03 versus same-text A01, primary all-type
+IoU>=0.3; frozen v2 separately labelled post-hoc. Never tune on these takes.
+
+Verification: all eight editable transcript blocks match their actual ASR
+draft bodies exactly; all sixteen original/raw hashes still match the import
+manifest. The existing validator rejects the missing explicit notes JSON, and
+all eight final transcript paths are absent. All frozen v2 code/config hashes
+and its one-shot marker pass read-only verification. Review document SHA256:
+`ef7289d8f313610ab9ee5b84dff80e485b187515a26876679edd4b06a9ce8de2`.

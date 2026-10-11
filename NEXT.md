@@ -11,6 +11,9 @@ Display item committed/pushed as `23e6ec5` (277 Python tests, three browser
 tests). DEV-only B diagnosis found tiny pause differences amplified by reference
 spread, not a demonstrated detector timing bug; no test rerun or tuning.
 See Phase12 for FP breakdown and the two rounded oracle-step QA limitations.
+B diagnosis committed/pushed as `a305075`. Take review is now at
+`data/human/review/TAKES_REVIEW.md`; correct each transcript/actual flaw list and
+write `CONFIRMED` under each take. No ASR/PDF plan has been promoted to labels.
 
 Phase 11: Task 1 report fixes verified (five-page PDF, rounded display values,
 real correct-hit explanation, dashboard screenshots, consolidated pending box).
