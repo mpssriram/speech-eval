@@ -64,7 +64,8 @@ have 18 / 4 / 7 speakers. [Measured counts](../../reports/reproducibility.md).
 Parameters are in `configs/flaws.yaml`. Time maps transport source indices into
 the flawed timeline; labels bind type, edit-strength severity and interval.
 Real MFA is run separately for detection. Oracle alignments serve label/QA only;
-edit boundaries are not guaranteed perceptual boundaries. Genuine takes are pending.
+edit boundaries are not guaranteed perceptual boundaries. Genuine recordings
+are supplied; their validated evaluation remains pending.
 
 # 3. Features and speaker normalisation
 
@@ -138,8 +139,9 @@ The report gives per-type, not aggregate, monotonicity:
 | too_quiet | -0.71 | 85.7 | 3 |
 
 Each type has seven complete series. Constant ranks have undefined Spearman;
-non-increasing alone is not sensitivity. **Human agreement is pending.** The
-blind pack/scripts exist but no real rater responses. The form asks overall
+non-increasing alone is not sensitivity. **Human agreement is unavailable before
+the deadline: zero independent responses.** The blind pack/scripts are ready;
+AI and recorder self-ratings are not used as independent rater data. The form asks overall
 delivery 1–5, flaw type(s) and approximate time, not five category ratings. Scripts
 compute system–mean-human/per-rater Spearman, mean defined pairwise human Spearman
 and exact flaw-set agreement with denominators; no fabricated responses or CIs.
@@ -211,7 +213,11 @@ on 175 files stays separate from Phase6:
 C too-quiet truth is trailing-only; unsupported single effects are omitted and
 mixed files score supported types only. Lower aggregate recall/more clean alarms
 describe controlled edits, not humans. [Mode C](../../reports/phase08_mode_c.md).
-Genuine take accuracy remains pending. The real-MFA **synthetic workflow fixture**
+Eight genuine recordings, recorder consent and prose notes are supplied. Local
+ASR drafts are unconfirmed; complete delivery labels/confirmed transcripts are
+still required. No genuine A/B hit/miss/false-positive counts or dashboard jobs
+are claimed. V1 remains primary and v2 separately post-hoc; neither is tuned on
+these takes. Genuine take accuracy remains pending. The real-MFA **synthetic workflow fixture**
 missed its injected region in A and B; no tuning followed. [Phase10](../../reports/phase10_human_takes.md).
 
 # 8. Dashboard
@@ -253,7 +259,8 @@ in the original JSON; display rounding does not change them.
 
 ::: pending
 Pending items
-Genuine takes, consent/as-spoken notes, independent ratings and human alignment spot-check.
+Confirmed as-spoken transcripts/complete delivery labels and genuine A/B evaluation.
+Independent agreement unavailable (zero responses); human alignment spot-check.
 Archive upload URL, author confirmation and recorded/published video URL.
 Owner-confirmed formal code/annotation licence files; total disk requirement.
 Unreported aggregate human/severity/C-F1 and pitch-improvement values remain unclaimed.

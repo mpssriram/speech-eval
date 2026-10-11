@@ -48,13 +48,23 @@ Highest measured recall: awkward_pause (0.833); lowest: rushing (0.182). This is
 
 ## Human-A
 
-PENDING recordings and actual labels
-No recordings, labels, or scores were invented.
+Eight genuine recordings and actual recorder consent/prose notes are supplied.
+Local ASR drafts are explicitly unconfirmed; confirmed as-spoken transcripts and
+complete supported-type/time or sentence annotations are not available. The
+validator stops at the missing fenced JSON annotation block. Human-A v1 primary
+and separately labelled post-hoc v2 have not run; hits/misses/false positives are
+not estimable, not zero. See `phase10_human_takes.md` and `phase10_asr_review.md`.
+No recordings, labels, listening, scores or rater data were invented; no tuning.
 
 ## Human-B
 
-PENDING recordings and actual labels
-No recordings, labels, or scores were invented.
+Own take01 baselines exist for both texts, but the same annotation/transcript
+gate blocks B02–04 comparisons. No genuine dashboard jobs or accuracy counts
+are claimed. V1 remains primary and frozen; v2 is secondary/post-hoc. Future
+workflow execution must include take04 rather than silently omitting it.
+No labels or rehearsal improvement were inferred from "random flaws" or the
+recorder's subjective assessment. Independent rater responses remain zero;
+human agreement is a disclosed limitation, not replaced by AI or self-ratings.
 
 ## Limitations
 

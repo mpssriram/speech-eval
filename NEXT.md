@@ -41,10 +41,14 @@ under `data/human/original/`; all eight native 48 kHz mono PCM16 WAVs are under
 counts are in `data/human/import_manifest.json` and `reports/phase10_human_takes.md`.
 All pass technical size/duration checks; samples match native original decoding
 exactly and repeat conversions are byte-identical. These checks are not human
-annotation validation or detection results. No ASR/evaluation has run: the
-consent gate rejects missing consent. Notes and all eight transcripts are absent
-from both the supplied ZIP and the repository. The user must supply these and
-confirm before real-MFA processing. Preserve v1/v2 and the one-shot marker;
+annotation validation or detection results. Actual consent/prose notes supplied
+in chat are now saved verbatim; the global 01–08 mapping is confirmed. Existing
+local ASR ran on all eight takes and wrote explicitly unconfirmed drafts plus
+canonical-text word diffs (`reports/phase10_asr_review.md`). No draft was promoted
+to the validator input folder. Validation now stops on the missing fenced notes
+JSON; confirmed transcripts and complete supported-type/location labels are
+still required. No genuine MFA/scoring/counts/dashboard jobs are claimed. The
+user must confirm these inputs before processing. Preserve v1/v2 and the one-shot marker;
 never tune on human takes. Future workflow coverage must include B04 and
 separately labelled frozen v2 output, which the existing v1 B02/B03 driver lacks.
 
@@ -53,12 +57,12 @@ separately labelled frozen v2 output, which the existing v1 B02/B03 driver lacks
 1. Upload `data/release/speech-eval-dataset-v1.zip` unchanged and supply its URL.
    Exact size: 7,586,867,457 bytes = 7.586867457 decimal GB. SHA256:
    `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b`.
-2. Supply `data/human/CONSENT.md`, `data/human/raw/notes.md` and all eight
-   `data/human/transcripts/{text_id}__user__takeNN.txt` files following
-   `docs/HUMAN_TAKES.md` (include actual spoken slips and the Reagan excerpt).
-   Audio is already imported. Remove any `FILL`/sentence 0 in actual notes and
-   confirm ASR suggestions/evaluation when ready; the agent must not decide
-   actual flaws, slips or consent for the recorder.
+2. Review/correct the eight actual ASR drafts and confirm the as-spoken text
+   (including repetitions/slips and the recorded Reagan excerpt). Supply explicit
+   supported delivery-flaw types and sentence/raw-time locations for every take,
+   or explicitly declare none only when true. Prose notes and actual consent are
+   already saved; neither transcription nor ground truth will be invented.
+   `data/human/input_validation.json` lists all remaining validation problems.
 3. Restore Docker Desktop (inaccessible `dockerInference` socket; no reset/data
    deletion attempted). This unblocks the frozen fresh-clone v2 reproduction,
    two-run hashes, exact Docker-inclusive installation/build measurement and

@@ -1,6 +1,6 @@
 # Phase 10 human takes
 
-**Eight genuine recordings imported; consent, transcripts, notes and evaluation pending.**
+**Eight genuine recordings imported; recorder consent and prose notes saved; confirmed transcripts, evaluable labels and analysis pending.**
 
 No detector thresholds, bins, rubric weights or frozen scientific implementation were tuned.
 The approved import preserves originals byte-for-byte and converts to mono PCM16 WAV at the native 48 kHz rate. No gain/loudness normalisation, filtering or trimming was performed.
@@ -11,12 +11,33 @@ Sentence-only notes are intended intervals, not independent time-labelled percep
 
 ## Pending inputs
 
-- `data/human/CONSENT.md`: missing; the existing validator rejects these inputs with `Missing nonempty data/human/CONSENT.md; no genuine takes processed`. Only the user can supply their actual consent. Import approval does not imply publication consent.
-- `data/human/raw/notes.md`: missing. The user must supply actual intended flaws and slips for all eight take IDs in the fenced JSON format in `docs/HUMAN_TAKES.md`. No actual labels were inferred from the recording instructions. The absent notes cannot be checked for `FILL` or sentence 0.
-- All eight as-spoken transcripts listed below are missing. The user must write the actual words spoken, including slips and only the Reagan excerpt actually recorded. Neither canonical text nor another reader's deviations were copied into these files.
-- Read-only inspection of the supplied `Hackathon-20261011T161050Z-1-001.zip` found only the eight `.m4a` entries: no TXT, notes or consent. The extracted folder has the same eight audio files and no annotation documents.
-- No ASR word diffs, listening, genuine MFA alignment, human detection counts or dashboard jobs have been produced. Processing stops at the requested consent/input gate, pending user completion and confirmation.
+- `data/human/CONSENT.md` now contains the recorder's exact chat statement: `i fully agree for usage o my voice`. This is actual supplied consent, not generated consent. No public audio licence or public-release inclusion is inferred.
+- `data/human/raw/notes.md` now preserves the recorder's supplied prose. They confirmed global takes 01–04 mean Gettysburg 01–04 and 05–08 mean Reagan 01–04. It does not yet contain the required fenced JSON annotation block: the existing validator now stops with `notes.md needs an explicit JSON annotation block; see docs/HUMAN_TAKES.md`. It is not a missing-consent failure anymore. No `FILL` or sentence-0 label was inserted.
+- All eight **recorder-confirmed** as-spoken transcripts listed below are absent. Real local ASR drafts are in `data/human/asr_drafts/`, explicitly unconfirmed; none was automatically promoted to `data/human/transcripts/` or marked human-reviewed. Neither canonical text nor another reader's deviations were copied into the required input files.
+- The supplied ZIP contained audio only. The recorder clarified that notes/consent were supplied as chat content, not existing Markdown files. That content has now been saved without invented wording or labels.
+- ASR draft/word-diff preparation has run; genuine MFA analysis, human detection counts and dashboard jobs have **not**. Full input validation fails on incomplete annotations and confirmed transcripts. Validation evidence: `data/human/input_validation.json`.
 - The frozen driver currently executes B02/B03 only and submits v1 only. The current request additionally requires B04 and separately labelled frozen v2 results. These workflow-coverage gaps must be addressed and tested after input confirmation; no detector, threshold or matching rule may change.
+
+## Recorder notes and ASR review — not evaluation results
+
+The supplied notes report repetitions near "government" (Gettysburg 01), an "or" slip and "they who have fought" (Gettysburg 02), slowing near "have thus far" and a pronunciation problem with "Died" (Gettysburg 03), and pronunciation/self-correction around "Terrible", "truths" and "special spirit" (Reagan 01). Reagan 02 has the recorder's explicit "No issues" statement. For the remaining takes they said: `yes, the flaws are random but i felt they were good ot me.` This does not establish supported types, time intervals or clean labels. Repetition/word slips and pronunciation reports are not automatically relabelled as mumbling or other detector types; recorder statements are not independent rater data.
+
+[ASR review](phase10_asr_review.md) contains the eight full drafts and every suggested word edit. Because no complete recorder transcript was supplied, these are **canonical-versus-ASR** differences, not the originally requested ASR-versus-user-transcript comparison. ASR can omit repetitions, mishear proper names and impose incorrect punctuation. The same existing large-v3 / beam-5 / temperature-0 / Silero settings were used locally, with no detector/configuration changes. Approximate word times are ASR/CTC outputs, not human boundaries or real-MFA evaluation. The recorder must confirm actual wording and sentence punctuation before alignment.
+
+| Take | Suggested canonical/ASR edit groups | Confirmed transcript | v1 primary A/B counts | post-hoc v2 A/B counts |
+|---|---:|---|---|---|
+| gettysburg__user__take01 | 15 | pending | not run / not estimable | not run / not estimable |
+| gettysburg__user__take02 | 18 | pending | not run / not estimable | not run / not estimable |
+| gettysburg__user__take03 | 10 | pending | not run / not estimable | not run / not estimable |
+| gettysburg__user__take04 | 16 | pending | not run / not estimable | not run / not estimable |
+| reagan_challenger__user__take01 | 17 | pending | not run / not estimable | not run / not estimable |
+| reagan_challenger__user__take02 | 18 | pending | not run / not estimable | not run / not estimable |
+| reagan_challenger__user__take03 | 16 | pending | not run / not estimable | not run / not estimable |
+| reagan_challenger__user__take04 | 16 | pending | not run / not estimable | not run / not estimable |
+
+These edit-group counts are suggestions, **not** numbers of actual slips, flaws or detector hits. No genuine dashboard links exist yet; the links below are still synthetic fixtures only. V1 stays the frozen primary result. Future v2 output must remain separately labelled **post-hoc v2; test split was seen with v1, so results are optimistic**. No one-shot test evaluation was rerun and no thresholds, bins, weights or rules were tuned on these recordings.
+
+Verification of this input-preparation item: the full unchanged-code suite passed **275 tests**; cached ASR draft/review regeneration preserved all 21 draft/review/consent/notes/validation artifact hashes and all 16 original/WAV hashes. This proves cache idempotence, not an independent fresh-ASR accuracy check. The updated technical report rendered twice to identical six-page PDF bytes (SHA256 `2174954c9ee99dcaf9f04f167978488dafaf6f74d634637de7e646fedbe3ec1b`); all six final page images were visually inspected. Frozen v1 detector/pipeline and v2 configuration/one-shot-marker hashes remain unchanged.
 
 ## Verified audio import — 2026-10-11
 
@@ -63,7 +84,7 @@ data/human/transcripts/reagan_challenger__user__take03.txt
 data/human/transcripts/reagan_challenger__user__take04.txt
 ```
 
-Only the user supplies actual text, flaws, slips and consent. After they are supplied, ASR-versus-transcript differences are suggestions for the user to confirm, not ground truth; neither transcripts nor notes will be edited automatically. Real-MFA evaluation remains gated on the user's confirmation.
+Only the user confirms actual text, flaws and slips. Their actual consent/prose notes were saved from chat. ASR drafts remain separate and unconfirmed; no automatic transcript corrections or inferred labels are made. Real-MFA evaluation remains gated on complete validated inputs and the user's confirmation.
 
 ## Synthetic workflow verification — not human results
 
@@ -76,4 +97,4 @@ Only the user supplies actual text, flaws, slips and consent. After they are sup
 QA, hashes, exact declared label basis, trim bounds, aligner and score evidence: `data/human/fixture_verification.json` (explicitly synthetic).
 Jobs are real completed API jobs, visible via their dashboard links and the existing previous-take history. Fixture jobs must not be presented as the user's recordings.
 
-Actual notes, consent and as-spoken transcripts remain user actions; the eight genuine audio recordings are now imported. Independent rating responses: **zero**. No independent raters are available before the deadline; the ready pack/scripts do not establish agreement. AI or self-ratings will not substitute for independent rater data. No human accuracy, rehearsal improvement or agreement claim is available from this import.
+Confirmed as-spoken transcripts and complete delivery-flaw annotations remain user actions; genuine audio, actual consent and prose notes are supplied. Independent rating responses: **zero**. No independent raters are available before the deadline; the ready pack/scripts do not establish agreement. AI or self-ratings will not substitute for independent rater data. No human accuracy, rehearsal improvement or agreement claim is available from this import/ASR preparation.

@@ -1,5 +1,31 @@
 # Blockers
 
+## 2026-10-11 — Recorder chat saved; incomplete labels and transcripts block evaluation
+
+The recorder clarified that consent/notes were supplied in chat, not existing
+files. `data/human/CONSENT.md` now preserves their actual statement, verbatim:
+`i fully agree for usage o my voice`. `data/human/raw/notes.md` preserves their
+reported slips and subjective observations without inferred delivery labels.
+They confirmed global takes 01–04 map to Gettysburg 01–04 and 05–08 to Reagan
+01–04. Their remaining wording, "the flaws are random but i felt they were good
+ot me", does not establish precise types, locations or clean-take ground truth.
+No public audio licence or archive inclusion is inferred from the consent.
+
+Existing validation now rejects the missing fenced notes JSON, not consent:
+`notes.md needs an explicit JSON annotation block; see docs/HUMAN_TAKES.md`.
+All eight recorder-confirmed transcript files are absent. Existing local ASR
+ran on all eight recordings; drafts/timestamps are explicitly unconfirmed under
+`data/human/asr_drafts/`, with canonical-versus-ASR suggestions in
+`reports/phase10_asr_review.md`. These are not human transcript corrections,
+listening, labels, MFA evaluation, detector counts or independent rater data.
+Evidence: `data/human/input_validation.json`. Audio hashes remain unchanged.
+
+Real-MFA A/B and separately labelled v2 are gated on complete confirmed inputs.
+Partial prose/slip descriptions cannot supply per-take hits/misses/false positives;
+do not treat missing labels as empty truth or detector output as annotations.
+V1/v2 remain frozen; no thresholds, bins, weights or rules are tuned. Independent
+rater responses remain zero and unavailable before the deadline.
+
 ## 2026-10-11 — Genuine audio imported; human-input gate blocks analysis
 
 The user approved the eight source-to-canonical filename mappings. Originals
@@ -111,7 +137,7 @@ DEV-selected detector source/provenance; no claim of generic-text Mode B support
 
 ## Item B — genuine take analysis inputs
 
-- Audio resolved 2026-10-11: all eight genuine WAVs are imported and technically verified. Analysis still awaits the user's consent, notes, eight as-spoken transcripts and confirmation; see the dated blocker above.
+- Audio, actual consent and prose notes are supplied. Confirmed as-spoken transcripts and complete evaluable labels still block analysis; see the latest dated blocker above. Earlier missing-consent/audio entries are historical, not the current state.
 ## Item C — independent rating responses
 
 The blind pack and agreement script are available, but no actual independent
