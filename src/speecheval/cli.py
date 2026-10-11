@@ -80,8 +80,13 @@ def analyze(audio: Path = typer.Argument(...,exists=True,dir_okay=False),
             text: str = typer.Option('own_speech'),mode: str = typer.Option('A'),
             transcript: Path | None = typer.Option(None,exists=True,dir_okay=False),
             exclude_speaker: str | None = typer.Option(None),
-            previous: Path | None = typer.Option(None,exists=True,dir_okay=False),plot: bool = typer.Option(False)) -> None:
-    from speecheval.pipeline import analyze as run
+            previous: Path | None = typer.Option(None,exists=True,dir_okay=False),plot: bool = typer.Option(False),
+            detector: str = typer.Option('v1',help='Frozen v1 or explicitly post-hoc v2.')) -> None:
+    if detector=='v1':
+        from speecheval.pipeline import analyze as run
+    elif detector=='v2':
+        from speecheval.detector_v2 import analyze_v2 as run
+    else:raise typer.BadParameter('Detector must be v1 or v2')
     run(audio,text,mode,transcript,exclude_speaker,previous,plot)
 
 

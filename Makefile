@@ -6,7 +6,7 @@ DATA_ARCHIVE ?=
 FETCH_VOLUME = $(if $(DATA_ARCHIVE),--volume "$(abspath $(DATA_ARCHIVE)):/dataset-release.zip:ro",)
 FETCH_ARGS = $(if $(DATA_ARCHIVE),--from-local /dataset-release.zip,)
 
-.PHONY: up down test test-host fetch-data reproduce-quick reproduce
+.PHONY: up down test test-host fetch-data reproduce-quick reproduce reproduce-v2
 up:
 	docker compose up --build
 
@@ -33,3 +33,6 @@ reproduce-quick: fetch-data
 reproduce: fetch-data
 	mkdir -p reports/reproduced
 	docker compose run --rm --build --no-deps tools python -m speecheval.reproduce
+
+reproduce-v2: fetch-data
+	docker compose run --rm --build --no-deps tools python -m speecheval.evaluate_v2 --reproduce

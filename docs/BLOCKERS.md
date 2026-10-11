@@ -1,5 +1,14 @@
 # Blockers
 
+## 2026-10-11 — Inherited Mode B progress limitation
+
+V1 and v2 inference compute Mode B progress via Mode A summaries of both takes.
+For a custom text without a same-text train/expert reference, this fails with
+`No eligible reference readers`, even though a previous-take comparison exists.
+The requested Gettysburg/Reagan takes have references. The frozen test evaluator
+does not invoke this wrapper. Retained and disclosed rather than changing the
+DEV-selected detector source/provenance; no claim of generic-text Mode B support.
+
 ## 2026-10-10 — Release exclusions and publication
 
 - Legacy participant fixture `gettysburg__user__input_246ca9e90194` appears in the old input freeze but has no verified source licence or consent. Its audio, transcript, alignment and features stay out of the public archive. It is not an indexed dataset row or an input consumed by numeric reproduction. No private application uploads or human takes are packaged.

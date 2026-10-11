@@ -2,8 +2,14 @@
 
 Phase 11: Task 1 report fixes verified (five-page PDF, rounded display values,
 real correct-hit explanation, dashboard screenshots, consolidated pending box).
-Task 2 post-hoc v2 dev-only work is next; v1 remains frozen. No v2 test evaluation
-has occurred. See `reports/phase11_v2.md` for the predeclared promotion gate.
+The corrected canonical eight-take recording sheet is ready at
+`docs/recording_script.pdf` (one page), committed/pushed as `3dd043c`.
+Task 2 post-hoc v2 DEV search is complete: exactly 30 configurations, selected
+YAML SHA256 `3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538`.
+Independent review and pre-test gate regression checks are complete; v1 remains
+frozen. No v2 test evaluation has occurred yet. Next: commit this freeze, consume
+the one-shot marker once, then report without changing the detector or thresholds.
+See `reports/phase11_v2.md` for the protocol and inherited Mode B limitation.
 
 Done: A licensed archive/fetcher, fresh GitHub-clone CPU Docker numerical
 reproduction twice with identical hashes; B consent-gated real-MFA A/B driver
