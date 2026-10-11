@@ -157,3 +157,205 @@ Reagan workflow have references; arbitrary custom texts do not. This is recorded
 in `docs/BLOCKERS.md`, not silently fixed after DEV selection. The test comparison
 path directly uses the earlier same-speaker recording and does not use that
 inference progress wrapper. V2 does not claim new custom-text Mode B support.
+
+## One-shot post-hoc v2 test results
+
+Test JSON SHA256: `e770969c2d44e97cff3ee0d58b318d81edb8264356004070f6edfa4aa9f9c754`.
+The exclusive marker records one decision-bearing evaluation. Frozen v1 metrics,
+confidence intervals, file counts and uncertainty exclusions match the published
+JSON exactly. No detector, evaluator or configuration changes follow this result.
+
+A F1 changes only 0.190 to 0.193; recall falls 0.400 to 0.288. Clean alarms halve
+but 0.671/min still fails the 0.5 guard on test. B F1 rises 0.035 to 0.070 and
+precision 0.018 to 0.042, while recall falls 0.390 to 0.207. Neither setting
+supports a claim of universal improvement. V1 remains the primary frozen result.
+
+The six-page A4 report adds a secondary v2 section with the exact disclaimer;
+all six rendered pages were visually inspected. Two renders are byte-identical:
+SHA256 `5f4ab454589d77d43f146715dddb77a49f896363ce05125b12ace339e81a8cea`.
+This is authoring evidence, not another scientific evaluation.
+
+**post-hoc v2; test split was seen with v1, so results are optimistic.**
+
+Frozen commit before test: `95c8f334faf4c134fcbf5b4fa31fda4635f336ea`. One decision-bearing test run; any later numerical runs are requested frozen reproductions, not additional tuning/evaluation decisions.
+
+### A-LOSO
+
+Files: 190; excluded uncertain truth: 0.
+
+| Type | Version | Precision | Recall | F1 [95% CI] | Onset ms | Offset ms | Clean/min | Severity rho |
+|---|---|---:|---:|---|---:|---:|---:|---:|
+| rushing | frozen v1 | 0.625 | 0.167 | 0.263 [0.067, 0.450] | 80.0 | 12.0 | 0.000 | 0.19 |
+| rushing | post-hoc v2 | 0.800 | 0.133 | 0.229 [0.054, 0.417] | 73.5 | 43.5 | 0.000 | 0.27 |
+| dragging | frozen v1 | 1.000 | 0.185 | 0.312 [0.105, 0.511] | 479.0 | 7.0 | 0.000 | N/A |
+| dragging | post-hoc v2 | 1.000 | 0.148 | 0.258 [0.069, 0.462] | 1554.0 | 139.0 | 0.000 | N/A |
+| monotone | frozen v1 | 0.100 | 0.419 | 0.161 [0.087, 0.242] | 105.0 | 619.0 | 0.335 | 0.68 |
+| monotone | post-hoc v2 | 1.000 | 0.129 | 0.229 [0.056, 0.400] | 56.5 | 13.0 | 0.000 | N/A |
+| too_quiet | frozen v1 | 0.714 | 0.179 | 0.286 [0.069, 0.487] | 215.0 | 205.0 | 0.000 | N/A |
+| too_quiet | post-hoc v2 | 1.000 | 0.143 | 0.250 [0.062, 0.462] | 188.5 | 135.0 | 0.000 | N/A |
+| mumbling | frozen v1 | 1.000 | 0.483 | 0.651 [0.467, 0.800] | 119.0 | 74.0 | 0.000 | N/A |
+| mumbling | post-hoc v2 | 0.750 | 0.414 | 0.533 [0.345, 0.703] | 150.0 | 107.5 | 0.000 | N/A |
+| awkward_pause | frozen v1 | 0.156 | 0.903 | 0.265 [0.197, 0.332] | 15.5 | 39.0 | 0.447 | 0.75 |
+| awkward_pause | post-hoc v2 | 0.322 | 0.613 | 0.422 [0.296, 0.528] | 16.0 | 40.0 | 0.112 | 0.69 |
+| missing_pause | frozen v1 | 0.038 | 0.414 | 0.070 [0.037, 0.108] | 6.0 | 6.5 | 0.559 | N/A |
+| missing_pause | post-hoc v2 | 0.038 | 0.414 | 0.070 [0.037, 0.108] | 6.0 | 6.5 | 0.559 | N/A |
+| overall | frozen v1 | 0.125 | 0.400 | 0.190 [0.156, 0.223] | 26.0 | 40.5 | 1.341 | 0.28 |
+| overall | post-hoc v2 | 0.145 | 0.288 | 0.193 [0.154, 0.232] | 26.0 | 34.0 | 0.671 | 0.21 |
+
+### Same-file severity cohorts
+
+Shared clean controls repeated; only homogeneous eligible truth strengths; mixed strengths excluded. Full-set recall_by_severity includes every eligible truth region instead.
+
+| Severity | Type | v1 P | v2 P | v1 R | v2 R | v1 F1 | v2 F1 |
+|---:|---|---:|---:|---:|---:|---:|---:|
+| 1 | rushing | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | dragging | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | monotone | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | too_quiet | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | mumbling | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | awkward_pause | 0.111 | 0.000 | 0.800 | 0.000 | 0.195 | 0.000 |
+| 1 | missing_pause | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | overall | 0.033 | 0.000 | 0.114 | 0.000 | 0.051 | 0.000 |
+| 2 | rushing | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 2 | dragging | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 2 | monotone | 0.042 | 0.000 | 0.200 | 0.000 | 0.069 | 0.000 |
+| 2 | too_quiet | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 2 | mumbling | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 2 | awkward_pause | 0.132 | 0.000 | 1.000 | 0.000 | 0.233 | 0.000 |
+| 2 | missing_pause | 0.032 | 0.032 | 0.400 | 0.400 | 0.059 | 0.059 |
+| 2 | overall | 0.064 | 0.028 | 0.229 | 0.057 | 0.100 | 0.037 |
+| 3 | rushing | 1.000 | 1.000 | 0.200 | 0.200 | 0.333 | 0.333 |
+| 3 | dragging | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 3 | monotone | 0.037 | 0.000 | 0.200 | 0.000 | 0.062 | 0.000 |
+| 3 | too_quiet | 1.000 | 1.000 | 0.200 | 0.200 | 0.333 | 0.333 |
+| 3 | mumbling | 1.000 | 1.000 | 0.200 | 0.200 | 0.333 | 0.333 |
+| 3 | awkward_pause | 0.111 | 0.333 | 0.800 | 0.800 | 0.195 | 0.471 |
+| 3 | missing_pause | 0.032 | 0.032 | 0.400 | 0.400 | 0.059 | 0.059 |
+| 3 | overall | 0.078 | 0.115 | 0.286 | 0.257 | 0.122 | 0.159 |
+| 4 | rushing | 1.000 | 1.000 | 0.400 | 0.200 | 0.571 | 0.333 |
+| 4 | dragging | 1.000 | 1.000 | 0.200 | 0.200 | 0.333 | 0.333 |
+| 4 | monotone | 0.148 | 1.000 | 0.800 | 0.200 | 0.250 | 0.333 |
+| 4 | too_quiet | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 4 | mumbling | 1.000 | 0.833 | 1.000 | 1.000 | 1.000 | 0.909 |
+| 4 | awkward_pause | 0.132 | 0.385 | 1.000 | 1.000 | 0.233 | 0.556 |
+| 4 | missing_pause | 0.046 | 0.046 | 0.600 | 0.600 | 0.086 | 0.086 |
+| 4 | overall | 0.145 | 0.184 | 0.571 | 0.457 | 0.231 | 0.262 |
+| 5 | rushing | 0.400 | 0.667 | 0.400 | 0.400 | 0.400 | 0.500 |
+| 5 | dragging | 1.000 | 1.000 | 0.600 | 0.400 | 0.750 | 0.571 |
+| 5 | monotone | 0.156 | 1.000 | 0.833 | 0.333 | 0.263 | 0.500 |
+| 5 | too_quiet | 0.500 | 1.000 | 0.333 | 0.333 | 0.400 | 0.500 |
+| 5 | mumbling | 1.000 | 0.667 | 1.000 | 0.800 | 1.000 | 0.727 |
+| 5 | awkward_pause | 0.143 | 0.385 | 1.000 | 1.000 | 0.250 | 0.556 |
+| 5 | missing_pause | 0.071 | 0.071 | 0.833 | 0.833 | 0.132 | 0.132 |
+| 5 | overall | 0.175 | 0.224 | 0.711 | 0.579 | 0.281 | 0.324 |
+
+Full-set severity recall (all eligible truth regions, including mixed files):
+
+| Type | Version | S1 | S2 | S3 | S4 | S5 |
+|---|---|---:|---:|---:|---:|---:|
+| rushing | v1 | 0.000 | 0.000 | 0.167 | 0.333 | 0.333 |
+| rushing | v2 | 0.000 | 0.000 | 0.167 | 0.167 | 0.333 |
+| dragging | v1 | 0.000 | 0.000 | 0.000 | 0.286 | 0.600 |
+| dragging | v2 | 0.000 | 0.000 | 0.000 | 0.286 | 0.400 |
+| monotone | v1 | 0.000 | 0.143 | 0.200 | 0.833 | 0.750 |
+| monotone | v2 | 0.000 | 0.000 | 0.000 | 0.167 | 0.375 |
+| too_quiet | v1 | 0.000 | 0.000 | 0.429 | 0.000 | 0.333 |
+| too_quiet | v2 | 0.000 | 0.000 | 0.286 | 0.000 | 0.333 |
+| mumbling | v1 | 0.000 | 0.000 | 0.286 | 1.000 | 1.000 |
+| mumbling | v2 | 0.000 | 0.000 | 0.143 | 1.000 | 0.833 |
+| awkward_pause | v1 | 0.800 | 0.833 | 0.857 | 1.000 | 1.000 |
+| awkward_pause | v2 | 0.000 | 0.000 | 0.857 | 1.000 | 1.000 |
+| missing_pause | v1 | 0.000 | 0.333 | 0.333 | 0.500 | 0.833 |
+| missing_pause | v2 | 0.000 | 0.333 | 0.333 | 0.500 | 0.833 |
+| overall | v1 | 0.114 | 0.195 | 0.349 | 0.571 | 0.705 |
+| overall | v2 | 0.000 | 0.049 | 0.279 | 0.452 | 0.591 |
+### B-same-speaker
+
+Files: 76; excluded uncertain truth: 0.
+
+| Type | Version | Precision | Recall | F1 [95% CI] | Onset ms | Offset ms | Clean/min | Severity rho |
+|---|---|---:|---:|---|---:|---:|---:|---:|
+| rushing | frozen v1 | 0.500 | 0.182 | 0.267 [0.000, 0.556] | 57.5 | 5.0 | 0.000 | N/A |
+| rushing | post-hoc v2 | 0.000 | 0.000 | 0.000 [0.000, 0.000] | N/A | N/A | 0.000 | N/A |
+| dragging | frozen v1 | 0.059 | 0.273 | 0.097 [0.000, 0.197] | 84.0 | 510.0 | 0.000 | 1.00 |
+| dragging | post-hoc v2 | 0.023 | 0.091 | 0.036 [0.000, 0.107] | 1.0 | 510.0 | 0.000 | N/A |
+| monotone | frozen v1 | 1.000 | 0.357 | 0.526 [0.182, 0.769] | 325.0 | 660.0 | 0.000 | 1.00 |
+| monotone | post-hoc v2 | 0.500 | 0.071 | 0.125 [0.000, 0.316] | 2435.0 | 455.0 | 0.000 | N/A |
+| too_quiet | frozen v1 | 0.667 | 0.200 | 0.308 [0.000, 0.615] | 10.5 | 307.5 | 0.000 | N/A |
+| too_quiet | post-hoc v2 | 0.500 | 0.100 | 0.167 [0.000, 0.400] | 8.0 | 2502.0 | 0.000 | N/A |
+| mumbling | frozen v1 | 0.800 | 0.364 | 0.500 [0.125, 0.800] | 136.0 | 229.0 | 0.000 | N/A |
+| mumbling | post-hoc v2 | 0.571 | 0.364 | 0.444 [0.125, 0.667] | 136.0 | 778.0 | 0.000 | N/A |
+| awkward_pause | frozen v1 | 0.007 | 0.833 | 0.014 [0.007, 0.024] | 37.5 | 32.5 | 0.000 | N/A |
+| awkward_pause | post-hoc v2 | 0.118 | 0.333 | 0.174 [0.043, 0.320] | 30.5 | 25.5 | 0.000 | N/A |
+| missing_pause | frozen v1 | 0.019 | 0.462 | 0.037 [0.012, 0.065] | 10.0 | 3.5 | 0.000 | N/A |
+| missing_pause | post-hoc v2 | 0.019 | 0.462 | 0.037 [0.012, 0.065] | 10.0 | 3.5 | 0.000 | N/A |
+| overall | frozen v1 | 0.018 | 0.390 | 0.035 [0.026, 0.045] | 31.0 | 35.5 | 0.000 | 0.09 |
+| overall | post-hoc v2 | 0.042 | 0.207 | 0.070 [0.043, 0.099] | 16.0 | 37.0 | 0.000 | 0.11 |
+
+### Same-file severity cohorts
+
+Shared clean controls repeated; only homogeneous eligible truth strengths; mixed strengths excluded. Full-set recall_by_severity includes every eligible truth region instead.
+
+| Severity | Type | v1 P | v2 P | v1 R | v2 R | v1 F1 | v2 F1 |
+|---:|---|---:|---:|---:|---:|---:|---:|
+| 1 | rushing | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | dragging | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | monotone | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | too_quiet | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | mumbling | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | awkward_pause | 0.007 | 0.000 | 1.000 | 0.000 | 0.015 | 0.000 |
+| 1 | missing_pause | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 1 | overall | 0.006 | 0.000 | 0.143 | 0.000 | 0.012 | 0.000 |
+| 2 | rushing | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 2 | dragging | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 2 | monotone | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 2 | too_quiet | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 2 | mumbling | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 2 | awkward_pause | 0.008 | 0.000 | 1.000 | 0.000 | 0.015 | 0.000 |
+| 2 | missing_pause | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 2 | overall | 0.006 | 0.000 | 0.143 | 0.000 | 0.012 | 0.000 |
+| 3 | rushing | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 3 | dragging | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 3 | monotone | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 3 | too_quiet | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 3 | mumbling | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 3 | awkward_pause | 0.004 | 0.167 | 0.500 | 0.500 | 0.007 | 0.250 |
+| 3 | missing_pause | 0.033 | 0.033 | 1.000 | 1.000 | 0.065 | 0.065 |
+| 3 | overall | 0.009 | 0.040 | 0.214 | 0.214 | 0.017 | 0.067 |
+| 4 | rushing | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 4 | dragging | 0.167 | 0.100 | 1.000 | 0.500 | 0.286 | 0.167 |
+| 4 | monotone | 1.000 | 0.000 | 1.000 | 0.000 | 1.000 | 0.000 |
+| 4 | too_quiet | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 4 | mumbling | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| 4 | awkward_pause | 0.008 | 0.250 | 1.000 | 1.000 | 0.015 | 0.400 |
+| 4 | missing_pause | 0.033 | 0.033 | 1.000 | 1.000 | 0.063 | 0.063 |
+| 4 | overall | 0.030 | 0.086 | 0.714 | 0.500 | 0.057 | 0.147 |
+| 5 | rushing | 1.000 | 0.000 | 1.000 | 0.000 | 1.000 | 0.000 |
+| 5 | dragging | 0.091 | 0.000 | 0.500 | 0.000 | 0.154 | 0.000 |
+| 5 | monotone | 1.000 | 0.000 | 0.500 | 0.000 | 0.667 | 0.000 |
+| 5 | too_quiet | 1.000 | 0.500 | 1.000 | 0.500 | 1.000 | 0.500 |
+| 5 | mumbling | 1.000 | 0.500 | 1.000 | 1.000 | 1.000 | 0.667 |
+| 5 | awkward_pause | 0.004 | 0.143 | 0.500 | 0.500 | 0.008 | 0.222 |
+| 5 | missing_pause | 0.033 | 0.033 | 1.000 | 1.000 | 0.063 | 0.063 |
+| 5 | overall | 0.032 | 0.073 | 0.786 | 0.429 | 0.062 | 0.125 |
+
+Full-set severity recall (all eligible truth regions, including mixed files):
+
+| Type | Version | S1 | S2 | S3 | S4 | S5 |
+|---|---|---:|---:|---:|---:|---:|
+| rushing | v1 | 0.000 | 0.000 | 0.000 | 0.000 | 1.000 |
+| rushing | v2 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| dragging | v1 | 0.000 | 0.000 | 0.000 | 1.000 | 0.500 |
+| dragging | v2 | 0.000 | 0.000 | 0.000 | 0.500 | 0.000 |
+| monotone | v1 | 0.000 | 0.000 | 0.000 | 1.000 | 0.750 |
+| monotone | v2 | 0.000 | 0.000 | 0.000 | 0.000 | 0.250 |
+| too_quiet | v1 | 0.000 | 0.000 | 0.000 | 0.000 | 1.000 |
+| too_quiet | v2 | 0.000 | 0.000 | 0.000 | 0.000 | 0.500 |
+| mumbling | v1 | 0.000 | 0.000 | 0.000 | 1.000 | 1.000 |
+| mumbling | v2 | 0.000 | 0.000 | 0.000 | 1.000 | 1.000 |
+| awkward_pause | v1 | 1.000 | 1.000 | 0.500 | 1.000 | 0.500 |
+| awkward_pause | v2 | 0.000 | 0.000 | 0.500 | 1.000 | 0.500 |
+| missing_pause | v1 | 0.000 | 0.000 | 1.000 | 1.000 | 0.667 |
+| missing_pause | v2 | 0.000 | 0.000 | 1.000 | 1.000 | 0.667 |
+| overall | v1 | 0.143 | 0.211 | 0.167 | 0.714 | 0.765 |
+| overall | v2 | 0.000 | 0.000 | 0.167 | 0.500 | 0.412 |

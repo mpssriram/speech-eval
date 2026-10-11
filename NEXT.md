@@ -6,9 +6,13 @@ The corrected canonical eight-take recording sheet is ready at
 `docs/recording_script.pdf` (one page), committed/pushed as `3dd043c`.
 Task 2 post-hoc v2 DEV search is complete: exactly 30 configurations, selected
 YAML SHA256 `3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538`.
-Independent review and pre-test gate regression checks are complete; v1 remains
-frozen. No v2 test evaluation has occurred yet. Next: commit this freeze, consume
-the one-shot marker once, then report without changing the detector or thresholds.
+Independent review and 267 tests passed. Freeze commit `95c8f33` was pushed before
+the exactly-one marker-protected test evaluation. V1 stays primary; v2 is secondary
+and post-hoc. A F1 0.190 -> 0.193, recall 0.400 -> 0.288, clean/min 1.341 -> 0.671
+(test guard still fails); B F1 0.035 -> 0.070 with lower recall. No detector,
+evaluator or threshold edits follow test results. Report/PDF verification and
+fresh-clone frozen v2 reproduction are in progress, followed by measured disk
+documentation and tested health metadata.
 See `reports/phase11_v2.md` for the protocol and inherited Mode B limitation.
 
 Done: A licensed archive/fetcher, fresh GitHub-clone CPU Docker numerical

@@ -168,6 +168,36 @@ severity-4/5 recall is inferred from the chart without a reported numeric summar
 
 ![A-LOSO recall versus injected severity](../../reports/img/recall_vs_severity_A-LOSO.png)
 
+# 6.1 Secondary detector v2
+
+**post-hoc v2; test split was seen with v1, so results are optimistic**.
+V1 above remains the primary frozen result. V2 was selected from exactly 30 DEV
+configurations and frozen at `95c8f334faf4c134fcbf5b4fa31fda4635f336ea` before
+one marker-protected test evaluation. No detector/configuration changes followed.
+Within-recording sentence contrast, practical effect minima and region constraints
+raised DEV F1 from 0.150 to 0.219 with 0.410 clean alarms/min, passing the declared
+promotion gate. The selected configuration SHA is `3496a9c3...`.
+
+| Setting / version | Files | Precision | Recall | F1 [95% CI] | Clean/min |
+|---|---:|---:|---:|---|---:|
+| A frozen v1 | 190 | 0.125 | 0.400 | 0.190 [0.156, 0.223] | 1.341 |
+| A post-hoc v2 | 190 | 0.145 | 0.288 | 0.193 [0.154, 0.232] | 0.671 |
+| B frozen v1 | 76 | 0.018 | 0.390 | 0.035 [0.026, 0.045] | 0.000 |
+| B post-hoc v2 | 76 | 0.042 | 0.207 | 0.070 [0.043, 0.099] | 0.000 |
+
+Rows, same-type IoU/pause-centre matcher, uncertainty exclusions and denominators
+are identical; no uncertain truth regions were excluded on these test rows.
+[Full per-type and severity comparison](../../reports/phase11_v2.md) reports
+precision/recall/F1, boundary differences, clean alarms and severity Spearman for
+both detectors. Strength-cohort precision/F1 uses shared clean controls and
+homogeneous eligible truth strengths; mixed-strength files are excluded from
+those cohorts but included in full-set recall by severity. Full precision and
+frozen hashes remain in [v2 JSON](../../data/review/detector_v2_test.json).
+A F1 barely changes, recall falls and the test clean-alarm guard still fails.
+B precision/F1 rise but remain low, with recall falling. V2 is a precision/recall
+trade-off, not established general improvement; uniform recording-wide problems
+can be missed by within-recording contrast. Human takes/ratings were not used.
+
 # 7. No-reference comparison
 
 C uses **different eligibility and sentence/type matching**. Its paired comparison
