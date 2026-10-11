@@ -1,5 +1,33 @@
 # Blockers
 
+## 2026-10-11 — Genuine audio imported; human-input gate blocks analysis
+
+The user approved the eight source-to-canonical filename mappings. Originals
+were copied unchanged to `data/human/original/`, SHA256-verified, and converted
+without gain changes, filtering or trimming to native 48 kHz mono PCM16 WAVs
+under `data/human/raw/`. All eight pass the API's <=600 s / <=25 MiB limits.
+Every original's native decoded PCM16 samples match its WAV exactly; repeated
+conversions produce identical hashes. Audio is git-ignored; public release
+inclusion and publication consent are not inferred from import approval.
+
+Both the supplied ZIP and its extracted folder contain only the eight M4As.
+Missing: `data/human/CONSENT.md`, `data/human/raw/notes.md` and the eight
+`data/human/transcripts/{gettysburg,reagan_challenger}__user__take01..04.txt`.
+Read-only invocation of `validate_human_inputs` stops with
+`Missing nonempty data/human/CONSENT.md; no genuine takes processed`.
+Absent notes cannot be inspected for `FILL` or sentence 0. The user must supply
+actual as-spoken text, intended flaws/slips and their own consent, then confirm
+processing. No ASR, listening, annotations, ratings, MFA or scoring of these
+recordings was fabricated or run. Evidence: `data/human/import_manifest.json`
+and `reports/phase10_human_takes.md`.
+
+The existing frozen human driver covers B02/B03 and submits v1 only; the user's
+current request requires B02–04 plus separately labelled frozen v2 output.
+This is a workflow-coverage gap to test after confirmation, not permission to
+change the frozen detector, thresholds, matching rule or one-shot test marker.
+Independent rater responses remain zero and are unavailable before the
+deadline. Disclose the limitation; do not use AI or self-ratings as substitutes.
+
 ## 2026-10-11 — V2 fresh-clone Docker rerun and image-size measurement
 
 Docker Desktop startup failed before the Linux engine started. Backend log:
@@ -83,7 +111,7 @@ DEV-selected detector source/provenance; no claim of generic-text Mode B support
 
 ## Item B — genuine take analysis inputs
 
-- No requested WAVs, notes.md or consent have been supplied in data/human/.
+- Audio resolved 2026-10-11: all eight genuine WAVs are imported and technically verified. Analysis still awaits the user's consent, notes, eight as-spoken transcripts and confirmation; see the dated blocker above.
 ## Item C — independent rating responses
 
 The blind pack and agreement script are available, but no actual independent

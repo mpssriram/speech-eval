@@ -35,13 +35,30 @@ Not done: genuine human-take evaluation, actual independent rater agreement,
 human alignment spot-check, public archive upload and recorded/published video.
 These cannot be replaced by generated recordings or ratings.
 
+Human audio update (2026-10-11): all eight approved M4As are copied unchanged
+under `data/human/original/`; all eight native 48 kHz mono PCM16 WAVs are under
+`data/human/raw/`. Hashes, decoded duration, exact bytes, peaks and saturation
+counts are in `data/human/import_manifest.json` and `reports/phase10_human_takes.md`.
+All pass technical size/duration checks; samples match native original decoding
+exactly and repeat conversions are byte-identical. These checks are not human
+annotation validation or detection results. No ASR/evaluation has run: the
+consent gate rejects missing consent. Notes and all eight transcripts are absent
+from both the supplied ZIP and the repository. The user must supply these and
+confirm before real-MFA processing. Preserve v1/v2 and the one-shot marker;
+never tune on human takes. Future workflow coverage must include B04 and
+separately labelled frozen v2 output, which the existing v1 B02/B03 driver lacks.
+
 ## Needs user
 
 1. Upload `data/release/speech-eval-dataset-v1.zip` unchanged and supply its URL.
    Exact size: 7,586,867,457 bytes = 7.586867457 decimal GB. SHA256:
    `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b`.
-2. Supply eight requested WAVs, consent, actual notes and as-spoken transcripts
-   following `docs/HUMAN_TAKES.md` (include spoken slips and the Reagan excerpt).
+2. Supply `data/human/CONSENT.md`, `data/human/raw/notes.md` and all eight
+   `data/human/transcripts/{text_id}__user__takeNN.txt` files following
+   `docs/HUMAN_TAKES.md` (include actual spoken slips and the Reagan excerpt).
+   Audio is already imported. Remove any `FILL`/sentence 0 in actual notes and
+   confirm ASR suggestions/evaluation when ready; the agent must not decide
+   actual flaws, slips or consent for the recorder.
 3. Restore Docker Desktop (inaccessible `dockerInference` socket; no reset/data
    deletion attempted). This unblocks the frozen fresh-clone v2 reproduction,
    two-run hashes, exact Docker-inclusive installation/build measurement and
@@ -53,9 +70,11 @@ These cannot be replaced by generated recordings or ratings.
 
 ## Needs other people
 
-1. At least three independent raters: complete separate CSVs for all twelve blind
-   clips. Distribute only `data/rating_pack/`, never the answer key/repository or
-   system scores. Actual agreement can be computed only after responses arrive.
+1. Independent rater agreement is unavailable before the deadline (zero responses).
+   Disclose this limitation in the submission; pack and scripts are ready. Future
+   measurement needs at least three independent raters with separate CSVs for
+   all twelve blind clips. Distribute only `data/rating_pack/`, never the answer
+   key/repository or system scores. Do not substitute AI or self-ratings.
 2. A human alignment spot-check/listening and boundary corrections for the
    visually annotated reference. This cannot be claimed from the existing
    automatic/Claude visual evidence. Genuine-take notes/annotations also need
