@@ -59,12 +59,19 @@ def validate_human_inputs(root: Path) -> tuple[list[dict],dict]:
         raise ValueError('Notes JSON must be a dictionary with a dictionary-valued takes field')
     for case in cases:
         detail=notes.get('takes',{}).get(case['take_id'])
-        if not isinstance(detail,dict) or not isinstance(detail.get('flaws'),list) or 'slips' not in detail:
+        excluded=isinstance(detail,dict) and detail.get('excluded_from_scoring') is True
+        if not isinstance(detail,dict) or 'slips' not in detail or (not excluded and not isinstance(detail.get('flaws'),list)):
             raise ValueError(f'Explicit intended flaws and slips missing for {case["take_id"]}')
+        if excluded and (detail.get('flaws') is not None or not detail.get('exclusion_reason')):
+            raise ValueError('Excluded takes require unknown flaws (null) and an explicit exclusion reason')
         if not case['transcript'].is_file() or not expanded_transcript(case['transcript'].read_text()).strip():
             raise ValueError(f'Missing as-spoken transcript: {case["transcript"]}')
-        duration=sf.info(case['audio']).duration
-        for note in detail['flaws']:
+        info=sf.info(case['audio']);duration=info.duration
+        if not 0<duration<=600 or case['audio'].stat().st_size>25*1024*1024:
+            raise ValueError('Human WAV exceeds duration/size limits (600 seconds, 25 MiB)')
+        if info.format!='WAV' or info.subtype!='PCM_16' or info.channels!=1:
+            raise ValueError('Human raw input must be mono PCM16 WAV')
+        for note in detail['flaws'] or []:
             if not isinstance(note,dict) or note.get('type') not in TYPES:
                 raise ValueError('Invalid intended flaw note type')
             if 'sentence' in note:

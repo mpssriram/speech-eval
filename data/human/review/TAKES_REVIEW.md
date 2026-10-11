@@ -1,5 +1,10 @@
 # Eight takes: recorder review required
 
+Historical review sheet: superseded by the recorder's explicit chat confirmation
+on 2026-10-12. Do not require/edit CONFIRMED markers here. The active fixed rules
+and supplied notes are in CONFIRMED_PROTOCOL.md and ../raw/notes.md; generated
+transcripts follow the recorder's canonical/ASR rule, not independent listening.
+
 ASR is a suggestion, not ground truth. No listening, annotation confirmation or ratings are claimed.
 Reference columns come only from canonical files, never lv_fb. Bold marks a WORD difference suggested by ASR, not a confirmed slip; punctuation/case-only differences are ignored.
 Word spans below are one-based REFERENCE whitespace-word indices excluding punctuation-only tokens, not final as-spoken/MFA indices or measured flaw boundaries.

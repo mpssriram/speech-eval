@@ -1,0 +1,55 @@
+{
+  "audio_hashes_verified": 16,
+  "confirmation_source": "recorder chat; replaces manual TAKES_REVIEW markers",
+  "excluded_takes": [
+    "gettysburg__user__take04",
+    "reagan_challenger__user__take04"
+  ],
+  "frozen_code_and_config_hashes": {
+    "configs/detector.yaml": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "configs/detector_v2.yaml": "3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538",
+    "configs/rubric.yaml": "4e8af3b16ef79889763f542471748ade7b127cee299a916542ce5d47f35abfaf",
+    "data/review/detector_v2_dev.json": "016cb05da10eac8e2037bce6ace19270497fd9b269cd85bbf3844b3167af5577",
+    "data/review/final_evaluation.json": "6392ff8ee0706afe21fca06d3373666c358910ee66558a3a4aa6d0b811d1d794",
+    "src/speecheval/calibration.py": "e18212d57adcd9854b728fe6496bef3e7db2c5532cd93582cc0007b6343fd66f",
+    "src/speecheval/cli.py": "a9f917ae6ac63f43ce3db81f427cf1d0b45e0be20f609586279a48426931eb10",
+    "src/speecheval/detect.py": "95c9d9cdc48673013f018ff1f3026a919b88474a342b08a644802d3c92bd74b9",
+    "src/speecheval/detector_v2.py": "9745fccdcc046d016597e77516632c16b54ecd95642b5cd294835b54114801b7",
+    "src/speecheval/evaluate.py": "32a665b7bf82e2ade0894d06ad3c09eb8623abbb2a3719592a18cce6974bae1b",
+    "src/speecheval/evaluate_v2.py": "040d0c4d3358332a1e4ca128705859151cd9fa29412ad0451751a1ba749382fc",
+    "src/speecheval/explain.py": "465c8cd527e177ef8de1f4b43f4b6983f22017ae71ab6d0e7c456d0a67419af9",
+    "src/speecheval/pipeline.py": "f85aae5ed9156ebb84b326b6118e25cd50abe4914994855d4c6125cc42367079",
+    "src/speecheval/reference.py": "abc9230cb6d4cd234a44035c39fb6eaa4348cb9aa641ac14e736718d5597e031",
+    "src/speecheval/reproduce.py": "f5c797444d2a53cfdddce006c49e029682003ddd10721a048f574e9b07b5036b",
+    "src/speecheval/score.py": "7a49b5d16eaa580d2faca040897d85f6ad88de5bd262ee51faadc22a26b5e5ed",
+    "src/speecheval/tune_v2.py": "f8012aad7c6edfb56aaf5cbbba37f0f3e7882532053cfe85ee0e1de7de5062dc"
+  },
+  "independent_annotation": false,
+  "independent_transcript_verification": false,
+  "label_protocol_sha256": "78ccfb2c132e1f5ff229bf89b38da95eaa6b6d51d26501d416ea6f6f5425a3d8",
+  "notes_sha256": "6f73a16cee3ed76a3b4116b007d8853daf2f7ac6e51727bfd0673e97462458ee",
+  "one_shot_marker_sha256": "e05e0bbe789fff7fc9d29747a456165e7171091c735363a9b2d3a397917b2e9a",
+  "problems": [],
+  "recorder_confirmation_date": "2026-10-12",
+  "schema": "human-recorder-confirmation/v1",
+  "scored_takes": [
+    "gettysburg__user__take01",
+    "gettysburg__user__take02",
+    "gettysburg__user__take03",
+    "reagan_challenger__user__take01",
+    "reagan_challenger__user__take02",
+    "reagan_challenger__user__take03"
+  ],
+  "threshold_tuning": false,
+  "transcript_hashes": {
+    "gettysburg__user__take01": "2cf93a8636c139dbd6032bd0aca07b40a49eb05ee11c27180c09fc0af5746afc",
+    "gettysburg__user__take02": "cd379199dd1fd5bc05c3c87e9dc7b5d16f81a8b560039bb4590aafbf255ba003",
+    "gettysburg__user__take03": "9b71ddc3d14162ea8a6a402848be909502fd7f185f784eeaef5164ca52ec508a",
+    "gettysburg__user__take04": "fee84fe9bb57d8eeaff67ca7470341a5b49d4d8d0916025d0f906e5bfb9ea9dc",
+    "reagan_challenger__user__take01": "eafddeb70c43f5b5583ac115359cb7d4849e1b166a8227a3c6f715353fd28d41",
+    "reagan_challenger__user__take02": "ded5c8096c930698ab05721ac56742dfe9ef83b4c1546c55ba327e8d5d28e679",
+    "reagan_challenger__user__take03": "93685a00b2a75b27e9da084a30dbdcbef2392885ef05aa595c22af56e0b15c34",
+    "reagan_challenger__user__take04": "6651062da4cbab5a5a1c04cf74b8b88b1183b328b62647f7340df41ace1fac5d"
+  },
+  "validated_takes": 8
+}
