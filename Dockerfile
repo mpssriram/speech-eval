@@ -43,6 +43,8 @@ COPY tests ./tests
 COPY scripts ./scripts
 COPY reports ./reports
 COPY Makefile Dockerfile docker-compose.yml ./
+ARG GIT_COMMIT=""
+ENV SPEECHEVAL_GIT_COMMIT=${GIT_COMMIT}
 RUN uv sync --frozen --extra dev \
     && mkdir -p data .pytest_work/tmp reports/reproduced \
     && chown -R sriram:sriram /app

@@ -3,11 +3,14 @@
 Run from a Linux/WSL checkout with Docker Desktop's WSL integration enabled:
 
 ```sh
+export SPEECHEVAL_GIT_COMMIT=$(git rev-parse HEAD)
 docker compose up --build
 # dashboard + same-origin API: http://localhost:8080
 ```
 
-`make up` is the same command. `make down` stops this stack without deleting data.
+`make up` defaults that Git value to the checkout commit before the same command;
+an explicit environment/Make value overrides it. `make down` stops this stack
+without deleting data.
 Only the dashboard proxy is published, bound to localhost. Nginx serves client-side
 `/results/<id>` routes and forwards API/audio range requests to FastAPI. Startup
 waits for API health. The image includes ffmpeg, Rubber Band, SoX, Python 3.11,
@@ -132,9 +135,19 @@ transcript in 33.328 seconds, producing six guideline checks and no baseline.
 
 Machine evidence is in `reports/docker_verification.json`. The original Phase 7
 report retains its historical pending-Docker statement; the new evidence resolves
-that check without editing its frozen inputs. Git metadata is not baked into the
-image, so `/api/health` honestly returns `git_commit: null`; the verification
-artifact records the tested clone commit and image identities instead.
+that check without editing its frozen inputs. At that historical run, Git metadata
+was not baked into the image, so `/api/health` returned `git_commit: null`;
+the verification artifact records the tested clone commit and image identities.
+The later tested metadata fix stores build arg `GIT_COMMIT` as environment
+variable `SPEECHEVAL_GIT_COMMIT`. Make targets default to the checkout commit
+(explicit environment/Make values override it); direct
+Compose uses the export above, or pass `--build-arg GIT_COMMIT=<actual commit>`
+to `docker compose build`. Runtime `-e SPEECHEVAL_GIT_COMMIT=<actual commit>` also
+works. A real checkout HEAD takes precedence. Missing Git and metadata remain
+explicitly `null`; rebuild before expecting an older image to expose the new
+value. Docker startup is currently blocked, so the metadata fix's HTTP and
+configuration tests do not claim a newly running production container; see
+`BLOCKERS.md`.
 
 After the fresh-clone run, the main checkout's production CPU image also analyzed
 a new 120.000-second licensed Gettysburg clip (271 supplied as-read words) in

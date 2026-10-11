@@ -3,6 +3,8 @@ export PYTEST_DISABLE_PLUGIN_AUTOLOAD := 1
 TMPDIR := $(CURDIR)/.pytest_work/tmp
 
 DATA_ARCHIVE ?=
+SPEECHEVAL_GIT_COMMIT ?= $(shell git rev-parse HEAD)
+export SPEECHEVAL_GIT_COMMIT
 FETCH_VOLUME = $(if $(DATA_ARCHIVE),--volume "$(abspath $(DATA_ARCHIVE)):/dataset-release.zip:ro",)
 FETCH_ARGS = $(if $(DATA_ARCHIVE),--from-local /dataset-release.zip,)
 

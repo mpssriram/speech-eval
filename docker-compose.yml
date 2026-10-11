@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        GIT_COMMIT: ${SPEECHEVAL_GIT_COMMIT:-}
     image: speech-eval-api:local
     init: true
     environment:
@@ -28,6 +30,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        GIT_COMMIT: ${SPEECHEVAL_GIT_COMMIT:-}
     init: true
     environment:
       CUDA_VISIBLE_DEVICES: ""

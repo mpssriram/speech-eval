@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import subprocess
 import threading
@@ -136,8 +137,14 @@ def create_app(root: Path | None = None) -> FastAPI:
 
     @app.get('/api/health')
     def health() -> dict:
-        commit = subprocess.run(['git', '-C', str(root), 'rev-parse', 'HEAD'],
-                                capture_output=True, text=True).stdout.strip() or None
+        commit = os.environ.get('SPEECHEVAL_GIT_COMMIT', '').strip() or None
+        try:
+            checkout = subprocess.run(['git', '-C', str(root), 'rev-parse', 'HEAD'],
+                                      capture_output=True, text=True)
+            if checkout.returncode == 0:
+                commit = checkout.stdout.strip() or commit
+        except OSError:
+            pass  # Git metadata/executable is optional in a built image.
         config = root / 'configs/detector.yaml'
         return {'version': '0.1.0', 'git_commit': commit,
                 'detector_config_hash': hashlib.sha256(config.read_bytes()).hexdigest() if config.exists() else None,
