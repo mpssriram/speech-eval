@@ -7,11 +7,11 @@ leaving a misleading sentence around a blank number.
 
 | Original placeholder | Why not filled / action |
 |---|---|
-| `{{disk_gb}}` | No report measures total required free disk including image, staging and corpus. Archive bytes are not total disk. |
+| `{{disk_gb}}` | Local components and whole-engine VHDX snapshot measured in reports/disk_usage.json; complete fresh-install/build requirement remains blocked by Docker startup. No estimated total. |
 | `{{dataset_url}}` | Owner must upload exact checksum-pinned archive, then set configs/dataset.yaml URL. |
 | `{{author name}}` | Owner attribution/name is not confirmed. |
 | `{{video_url}}` | Video recording/publication not supplied. |
-| `{{example_explanation}}` | Reports lack an exact numeric example; do not invent or silently pull unreported analysis values. |
+| `{{example_explanation}}` | Resolved by the explicitly requested verbatim correct-hit example from analysis 86964ad39ead in report section 4, with file ID and measured values. |
 | `{{rho_severity}}`, `{{pct_nonincreasing}}` | No single aggregate defined/reported. Replaced with exact per-type Phase7 table. |
 | `{{n_human_takes}}` | Requested genuine takes absent; synthetic workflow is not a substitute. |
 | `{{n_raters}}`, `{{n_clips}}` in rated-clips claim | No real rater responses. Planned twelve clips are not twelve rated clips; minimum requested raters is not an observed count. |

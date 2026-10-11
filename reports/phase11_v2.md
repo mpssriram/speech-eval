@@ -197,6 +197,54 @@ non-sparse Docker VHDX lengths are 39,405,486,080 bytes. Their combined snapshot
 is 96,862,130,176 bytes, explicitly not the fresh project minimum. The complete
 Docker-inclusive installation requirement remains blocked/unmeasured, not guessed.
 
+### Task 4: tested small fixes
+
+Health now prefers successful real Git HEAD, otherwise the supplied
+`SPEECHEVAL_GIT_COMMIT`; missing metadata stays null. Failed Git no longer reports
+the literal `HEAD`, and missing executable is handled. Docker build arg
+`GIT_COMMIT` becomes that environment value; api/tools Compose builds receive it.
+Make defaults to actual checkout HEAD, respecting explicit environment/Make
+overrides. Five tests cover real unborn/committed Git fixtures, absent executable
+and configuration wiring. Four failed before the fix; all five pass afterwards.
+Health fix committed/pushed separately as `99cf2fc`.
+
+README documents the known Plotly bundle advisory as harmless for correctness,
+while acknowledging initial download/parse time; no refactor or suppression.
+The GitHub clone at `ae2a301` passed locked `npm ci` and `npm run build` with
+checksum-verified Linux Node 22.14.0, matching the Docker build version. Vite
+8.3.3 emitted the actual >500-kB warning and returned success. The development
+checkout's platform-specific node_modules did not build under Linux; they were
+left unchanged, and the clean clone was used instead.
+
+Interpolation/MFA behavior is retained and tested/documented, not silently fixed:
+the per-word extra flag is dropped by Word validation, but its indexed warning
+survives and the API uses warnings. The producer's user-specific MFA model path
+remains; Docker supplies the compatibility paths. Three characterization/doc
+tests cover these claims. Missing README documentation first failed its test,
+then passed after documentation. No frozen aligner/producer edits were made.
+
+Full suite: 275 passed in 14.31 s; repeat before final commit: 275 in 12.52 s.
+All scientific code/config hashes in the v2
+payload still verify unchanged after test. Compose client `--profile tools`
+resolved actual checkout commit `2783f1e24ae83b3211648fc6b6322718e3f54ffc` into
+both build arguments without a daemon. Independent read-only review found no
+critical/important issues; its Make override wording correction was applied.
+Machine evidence: `reports/phase11_small_fixes.json`. Live rebuilt-container
+health remains unverified while Docker startup is blocked; no deployed fix is
+claimed. Only the requested service metadata/deployment/docs/tests changed.
+
+### Frozen host reproduction (not fresh-clone Docker proof)
+
+`uv run python -m speecheval.evaluate_v2 --reproduce` succeeded after the service
+metadata fix. It checks frozen scientific inputs/code/config and recomputes only
+the frozen expected result, with no tuning, selection or new marker. Reproduced
+JSON SHA256 equals the published one exactly:
+`e770969c2d44e97cff3ee0d58b318d81edb8264356004070f6edfa4aa9f9c754`.
+Marker SHA256 remains
+`e05e0bbe789fff7fc9d29747a456165e7171091c735363a9b2d3a397917b2e9a`.
+This is explicitly a host byte-identity check, not the blocked fresh-clone Docker
+requirement and not an additional decision-bearing test evaluation.
+
 **post-hoc v2; test split was seen with v1, so results are optimistic.**
 
 Frozen commit before test: `95c8f334faf4c134fcbf5b4fa31fda4635f336ea`. One decision-bearing test run; any later numerical runs are requested frozen reproductions, not additional tuning/evaluation decisions.

@@ -39,6 +39,13 @@ fresh import cannot be measured. No requirement is estimated.
 [Component measurements and method](docs/DATASET.md#measured-disk-footprint),
 [machine evidence](reports/disk_usage.json), [blocker](docs/BLOCKERS.md).
 
+`make up` defaults to the checkout commit for image metadata; an explicit
+`SPEECHEVAL_GIT_COMMIT` environment/Make value overrides it. For
+direct Compose, first run `export SPEECHEVAL_GIT_COMMIT=$(git rev-parse HEAD)`;
+the `GIT_COMMIT` build arg is stored as `SPEECHEVAL_GIT_COMMIT`. `/api/health`
+prefers an actual checkout HEAD, otherwise this build/runtime value. Without
+either source it still reports `null` honestly, never an invented commit.
+
 Upload ZIP: **7,586,867,457 bytes / 7.586867457 decimal GB**; SHA256
 `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b`.
 
@@ -131,6 +138,25 @@ docs/            dataset card, technical report, guides, blockers
 ```
 
 ## Limitations and attributions
+
+Known **Plotly bundle-size warning**: Vite warns that the bundled chart library
+exceeds its chunk-size advisory. It is harmless for correctness: it is not a
+build error and does not change audio, detections or scores. It can increase
+initial download/parse time. Accepted browser checks are linked above; no refactor
+or warning suppression is applied.
+
+Retained interpolation-flag schema limitation: the mapper temporarily sets
+`interpolated: true` on words, but the validated Word schema omits that extra
+field. The persistent `warnings` entry `{type: interpolated, word: i}` survives
+and drives the API's interpolation guard. Consumers must read that warning list,
+not assume a per-word flag. A characterization test records this behavior;
+the frozen aligner/schema was not changed.
+
+Retained MFA portability limitation: participant model identity uses
+`/home/sriram/Documents/MFA/pretrained_models`, with the existing conda path
+`/home/sriram/miniforge3`. The Dockerfile deliberately supplies those compatibility
+paths. A differently named host account is not automatically supported; use the
+documented Docker workflow. No post-test producer-path change was made.
 
 Synthetic edits approximate real flaws; LibriVox readers are not ideal orators;
 English-only proxies do not establish accent fairness; Mode C is heuristic.

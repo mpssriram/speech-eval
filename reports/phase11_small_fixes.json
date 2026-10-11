@@ -1,0 +1,39 @@
+{
+  "measured_date": "2026-10-11",
+  "full_suite": {"passed": 275, "seconds": 14.31},
+  "full_suite_repeat_before_final_commit": {"passed": 275, "seconds": 12.52},
+  "targeted_health_and_limitation_tests": {"passed": 8},
+  "health_red_green": "Before production fix: four failures and one pass; after fix: five passed",
+  "documentation_red_green": "Missing README warning failed before edit; three characterization/documentation tests passed after edit",
+  "compose_client_validation": {
+    "profile": "tools",
+    "actual_checkout_commit": "2783f1e24ae83b3211648fc6b6322718e3f54ffc",
+    "api_build_arg_git_commit": "2783f1e24ae83b3211648fc6b6322718e3f54ffc",
+    "tools_build_arg_git_commit": "2783f1e24ae83b3211648fc6b6322718e3f54ffc",
+    "daemon_or_container_build_claimed": false
+  },
+  "fresh_clone_dashboard_build": {
+    "path": "/tmp/speech-eval-v2-3AIBAv/clone/web",
+    "commit": "ae2a30150328ae1f155312999c4a9a9a08f79270",
+    "linux_node_version": "22.14.0",
+    "node_archive_sha256_verified_against_official_shasums": "69b09dba5c8dcb05c4e4273a4340db1005abeafe3927efda2bc5b249e80437ec",
+    "commands": ["npm ci", "npm run build"],
+    "exit_code": 0,
+    "vite_version": "8.3.3",
+    "observed_warning": "Some chunks are larger than 500 kB after minification",
+    "refactor_or_warning_suppression": false,
+    "live_browser_rerun_claimed": false
+  },
+  "retained_limitations": ["Word schema drops per-word interpolated extra; warnings list survives", "User-specific MFA producer paths retained with Docker compatibility paths", "Inherited Mode B progress requires Mode A same-text reference"],
+  "frozen_scientific_payload_hashes_verified_unchanged": true,
+  "frozen_host_reproduction": {
+    "command": "uv run python -m speecheval.evaluate_v2 --reproduce",
+    "exit_code": 0,
+    "reproduced_json_sha256": "e770969c2d44e97cff3ee0d58b318d81edb8264356004070f6edfa4aa9f9c754",
+    "one_shot_marker_sha256_unchanged": "e05e0bbe789fff7fc9d29747a456165e7171091c735363a9b2d3a397917b2e9a",
+    "fresh_clone_docker_proof": false,
+    "additional_decision_bearing_test_evaluation": false
+  },
+  "independent_read_only_review": "No critical/important issues; clarify Make environment override wording (addressed)",
+  "docker_container_rebuild_and_live_health": "BLOCKED: Docker Desktop startup fails; HTTP fixture and Compose client tests do not substitute for deployment verification"
+}

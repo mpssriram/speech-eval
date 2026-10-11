@@ -13,8 +13,13 @@ and post-hoc. A F1 0.190 -> 0.193, recall 0.400 -> 0.288, clean/min 1.341 -> 0.6
 evaluator or threshold edits follow test results. Report/PDF verification is
 complete (six pages, repeated identical render, every page inspected).
 Fresh-clone frozen v2 reproduction is blocked by Docker Desktop failing to start;
-see `docs/BLOCKERS.md`. Continuing measured disk documentation and tested health
-metadata without claiming unavailable Docker evidence.
+see `docs/BLOCKERS.md`. Health build/runtime metadata is tested and pushed as
+`99cf2fc`; Plotly warning and retained schema/MFA limitations are documented and
+tested. All 275 tests pass; frozen scientific code/config hashes still match.
+Live rebuilt-container health is blocked, not claimed verified.
+Frozen host v2 reproduction passed byte-for-byte (published SHA
+`e770969c2d44e97cff3ee0d58b318d81edb8264356004070f6edfa4aa9f9c754`);
+the one-shot marker is unchanged. This does not substitute for fresh-clone Docker.
 Archive upload size/hash and measured local disk components are now documented
 in README, `docs/DATASET.md` and `reports/disk_usage.json`. Full Docker-inclusive
 installation/peak-build requirement remains unmeasured until Docker is restored.
@@ -30,15 +35,31 @@ Not done: genuine human-take evaluation, actual independent rater agreement,
 human alignment spot-check, public archive upload and recorded/published video.
 These cannot be replaced by generated recordings or ratings.
 
-Needs you:
+## Needs user
 
 1. Upload `data/release/speech-eval-dataset-v1.zip` unchanged and supply its URL.
+   Exact size: 7,586,867,457 bytes = 7.586867457 decimal GB. SHA256:
+   `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b`.
 2. Supply eight requested WAVs, consent, actual notes and as-spoken transcripts
    following `docs/HUMAN_TAKES.md` (include spoken slips and the Reagan excerpt).
-3. Give only `data/rating_pack/` to independent raters and return their separate
-   CSVs; never share the private answer key or repository with them.
-4. Confirm author and formal code/annotation licences; record/publish the demo.
+3. Restore Docker Desktop (inaccessible `dockerInference` socket; no reset/data
+   deletion attempted). This unblocks the frozen fresh-clone v2 reproduction,
+   two-run hashes, exact Docker-inclusive installation/build measurement and
+   a rebuilt-container `/api/health` check. Agent can finish these after recovery;
+   do not consume a second one-shot test evaluation or retune.
+4. Confirm author and formal code/annotation licence files; record/publish the demo.
+   Final submission is due October 13.
    Review `docs/TODO_PLACEHOLDERS.md` and `docs/BLOCKERS.md` before submission.
+
+## Needs other people
+
+1. At least three independent raters: complete separate CSVs for all twelve blind
+   clips. Distribute only `data/rating_pack/`, never the answer key/repository or
+   system scores. Actual agreement can be computed only after responses arrive.
+2. A human alignment spot-check/listening and boundary corrections for the
+   visually annotated reference. This cannot be claimed from the existing
+   automatic/Claude visual evidence. Genuine-take notes/annotations also need
+   actual listening by the recorder/annotator, not invented labels.
 
 Submission deadline: October 13. No thresholds were tuned on test reproductions,
 fixture takes, absent genuine takes or ratings.
