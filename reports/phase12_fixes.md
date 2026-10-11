@@ -31,3 +31,96 @@ The report example is the exact new display string generated from unchanged
 analysis `86964ad39ead`; it is not a new evaluation or a rewritten frozen output.
 Docker startup was retried non-destructively; the Linux-engine pipe is still
 missing. Live tests used WSL API + Node 22.14.0 dashboard, not Docker.
+
+## 2. Mode B precision diagnosis (DEV only)
+
+The published B cohort contains only JFK/Reagan test speakers; there are no
+JFK/Reagan DEV B rows. I did not open those test files. Instead this investigation
+used all 152 DEV Gettysburg/O Captain variants (four original readers), each
+edited file against its own original, with frozen v1 settings and the existing
+same-type IoU >=0.3 / pause-centre <=0.25 s matcher and uncertainty exclusions.
+This is a DEV diagnostic cohort, not a replacement for published B precision.
+No human input was used and no threshold was selected.
+
+DEV: 624 predictions, 164 eligible truths, 70 hits, 94 misses, 554 false
+positives; precision 0.112, recall 0.427, F1 0.178. The four exact self-comparison
+controls produce zero flags (0.000 clean alarms/min); edited files still have
+many false positives. Per-type counts:
+
+| Type | Predicted | Truth | Hits | FP | Precision | Recall | F1 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| rushing | 12 | 24 | 6 | 6 | 0.500 | 0.250 | 0.333 |
+| dragging | 6 | 23 | 5 | 1 | 0.833 | 0.217 | 0.345 |
+| monotone | 9 | 23 | 9 | 0 | 1.000 | 0.391 | 0.563 |
+| too_quiet | 4 | 24 | 4 | 0 | 1.000 | 0.167 | 0.286 |
+| mumbling | 11 | 24 | 11 | 0 | 1.000 | 0.458 | 0.629 |
+| awkward_pause | 569 | 23 | 23 | 546 | 0.040 | 1.000 | 0.078 |
+| missing_pause | 13 | 23 | 12 | 1 | 0.923 | 0.522 | 0.667 |
+
+Position is relative to the nearest injected interval of any type; an inside
+wrong-type flag is still a false positive. Distances are edge-to-edge seconds:
+
+| FP type | Position | Count | Distance median s | p95 s | Maximum s |
+|---|---|---:|---:|---:|---:|
+| awkward_pause | before | 284 | 30.06 | 69.87 | 98.90 |
+| awkward_pause | after | 232 | 22.72 | 71.34 | 87.42 |
+| awkward_pause | inside | 19 | 0.00 | 0.00 | 0.00 |
+| awkward_pause | overlap | 11 | 0.00 | 0.00 | 0.00 |
+| rushing | inside | 5 | 0.00 | 0.00 | 0.00 |
+| rushing | overlap | 1 | 0.00 | 0.00 | 0.00 |
+| dragging | inside | 1 | 0.00 | 0.00 | 0.00 |
+| missing_pause | inside | 1 | 0.00 | 0.00 | 0.00 |
+
+Awkward-pause FP by injected variant: awkward_pause 62, dragging 81,
+missing_pause 64, mixed_01 13, mixed_02 16, monotone 78, mumbling 86, rushing 72,
+too_quiet 74. There are 374 outside-edit awkward-pause alarms on files with
+zero global gain. The median absolute participant/reference pause difference
+among pause false positives is only 0.008 s (p95 0.690 s; max 0.930 s).
+Awkward-pause FP absolute z median 7.967, p95 2952.000, max 3260.000.
+
+Checks and conclusions:
+
+- After the last edit, actual real-MFA word-start residual versus the mapped
+  original has median 0.003 s / p95 0.009 s / max 1.153 s. Against the UNshifted
+  original it is 0.287 / 2.204 / 4.153 s. The shift is being handled; independent
+  MFA reruns have nonzero jitter and some large local outliers. There is no
+  evidence of a systematic forgotten post-edit shift.
+- Detection reads independently rerun MFA/features, not oracle time maps.
+  Stored oracle edge checks have median zero / p95 0.000301 s, but two insertion
+  discontinuities differ by 1 or 3 seconds when replaying rounded map knots:
+  Gettysburg lv_pc mixed_01 word212 end and lv_rk mixed_01 word234 start (zero-
+  based). Millisecond serialization loses side ownership at a rounded insertion
+  knot. This is an oracle/map QA limitation, not an identified cause of live B
+  false positives; the detector does not consume those oracle edges. Do not
+  claim every oracle edge passed or silently repair the frozen corpus.
+- HQ prefix/suffix samples outside edits match the time-shifted source after
+  accounting for logged global attenuation: maximum difference 0.596 PCM16 LSB;
+  no file exceeds two LSB. HQ sample rate is unchanged at 44.1 kHz. PSOLA/stretch
+  operate on local crops; 16 kHz resampling is for separate MFA copies. Common
+  anti-clipping gain is applied to 37 edited files and is logged, not hidden.
+  Mixed labels repeat the TOTAL recording gain on each of their three flaws;
+  summing that repeated value would incorrectly triple attenuation.
+- Map/output duration differences are below 0.000499 s. Exact duplicate
+  predictions: zero. Overlapping distinct types are not duplicate regions.
+
+The evidence points to independent alignment jitter amplified by a tiny pause
+spread, plus the lack of a minimum practical pause excess in v1, rather than a
+demonstrated B timing/processing implementation bug. Adding an effect minimum
+would be a detector change, not a display or bug fix. Investigation stops here:
+no scientific code/configuration changes, no new test evaluation, no claim that
+the published test cohort has been diagnosed from its measurements.
+
+Reproduce from the root in WSL:
+
+```sh
+env -u PYTHONPATH ~/.local/bin/uv run python scripts/diagnose_mode_b_dev.py
+# Add --rows to also print every FP recording/type/interval/position/distance.
+```
+
+The sorted per-FP rows SHA256 is
+`96eb127dcf0139541ddc7e5c8af87b0d6433e26b1c46f341fd0fe722011f7a27`.
+Two further diagnostic runs produced byte-identical JSON stdout, SHA256
+`442603fc4c358a952b6e6371768f68cee6cba305280b491505121e0388fec96c`;
+two-run computation took 78.630 s. Investigation stayed within the two-hour
+timebox (under one hour including verification). Frozen scientific hashes and
+the original v2 one-shot marker remain unchanged. Full suite: 277 tests passed.

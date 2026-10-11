@@ -7,6 +7,10 @@ instructions and the requested report wording. Results: `reports/phase12_fixes.m
 Latest human instruction: Gettysburg04 and Reagan04 (global08) were spontaneous
 mixed readings; types/locations remain unspecified, not clean or invented labels.
 Latest Mode B scope is take02/03 versus take01, not take04.
+Display item committed/pushed as `23e6ec5` (277 Python tests, three browser
+tests). DEV-only B diagnosis found tiny pause differences amplified by reference
+spread, not a demonstrated detector timing bug; no test rerun or tuning.
+See Phase12 for FP breakdown and the two rounded oracle-step QA limitations.
 
 Phase 11: Task 1 report fixes verified (five-page PDF, rounded display values,
 real correct-hit explanation, dashboard screenshots, consolidated pending box).
