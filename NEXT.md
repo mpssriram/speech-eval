@@ -32,8 +32,12 @@ Full and quick CPU reproduction now match all 563 published release-output
 hashes. A separate post-hoc REPORT adapter excludes only unpublished Human-A/B
 status paragraphs from the textual number gate; frozen scientific JSON/code and
 all synthetic/Limitations numbers remain strictly checked. Four adapter tests
-pass; independent code review found no important issue. Post-push GitHub-clone
-repeat remains to verify the final published command.
+pass; independent code review found no important issue. Adapter/artifacts pushed
+as `4ac23e8`; the unedited GitHub-clone full repeat passed in 228.69 s total.
+The quick repeat passed in 20.32 s total. All 563 output hashes match the
+published release manifest and both runs, with zero mismatches. Only our temp
+test containers/network were removed; clone/evidence/data are retained and the
+main app remains running at 8080. Final checks/limitations are in Phase12.
 
 ## Local application testing
 

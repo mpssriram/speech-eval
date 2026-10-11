@@ -223,8 +223,9 @@ not useful sensitivity. No tuning followed. Synthetic-only completed jobs:
 Browser recording used its synthetic test device; the user's real microphone
 permissions and recording experience are not claimed verified. Genuine A/B
 counts remain gated on the eight recorder confirmations and complete inputs.
-Docker-dependent fresh-clone v2 reproduction/total-disk measurement remain
-blocked; host tests do not substitute for those. Restart/test steps are in NEXT.
+At this earlier checkpoint, Docker-dependent fresh-clone v2 reproduction and
+Docker disk measurements were blocked; recovery and verification below
+supersede that startup blocker. Host tests alone did not establish them.
 
 ## Docker recovery / documentation packaging regression
 
@@ -349,5 +350,34 @@ rows, 289.660 s computation, 322.18 s total command time. All 563 published
 release-output hashes matched (558 analysis files plus five report/JSON files).
 Full JSON SHA256: `e11412e9c0a6ccae4b0e4a556ed3d857bb73e61441bf0ae22733d3223ca95749`.
 Quick JSON SHA256: `ea1f85f862117810fd1d84d0e6c4a23012d8dbf94e9cbe635c736408a274fcaa`.
-These are reproduced published bytes, not new detector results. A post-push
-GitHub-clone repeat is next; its outcome is not presumed here.
+These are reproduced published bytes, not new detector results.
+
+Adapter/artifacts committed and pushed as `4ac23e8`. Our own clone-only patch
+and browser artifacts were saved recoverably in an explicit-path Git stash;
+the clone then fast-forwarded from GitHub to `4ac23e8704b801e974d931eff02fd458a327a5dd`.
+No tracked source edits remained. The first post-push build failed with a Docker
+extraction snapshot parent-not-found error before evaluation (3.41 s). A retry
+without reset/pruning succeeded: full CPU reproduction 219.663 s computation,
+228.69 s total, same 266 rows and strict frozen checks. The main 8080 application
+remained healthy throughout.
+
+The post-push quick repeat also passed: 114 rows, 11.647 s computation,
+20.32 s total. A final byte-hash check verified **563/563** published outputs,
+zero mismatches: full/quick JSON hashes above are identical across both runs
+and match the release manifest. Runtime metadata is kept separate from those
+deterministic scientific outputs. The two frozen v2 repeats above likewise
+match the published v2 JSON; no decision-bearing evaluation was repeated.
+
+Only our `speech-eval-phase12-check` containers/network were stopped/removed.
+The temp clone, imported licensed data, outputs and recoverable explicit-path
+stash remain; no audio, datasets, images, caches or unrelated services were
+deleted. Main API/web remain healthy at 8080, build `33e392a`, with the verified
+display fix. `4ac23e8` adds only the report adapter/artifacts, not application or
+scientific changes. Genuine input validation still stops on notes JSON and
+eight missing confirmed transcripts; no `CONFIRMED` marker was fabricated.
+
+Remaining: recorder confirmation then genuine A/B evaluation/report update;
+separately labelled frozen-v2 human-workflow extension; archive upload/URL;
+author/formal licence confirmation; actual demo recording; independent ratings
+(zero responses) and human alignment spot-check; isolated clean-install
+peak/minimum footprint measurement. Nothing here claims these completed.
