@@ -1,0 +1,106 @@
+{
+  "consent": {
+    "present": true,
+    "public_audio_license_inferred": false,
+    "source": "verbatim recorder consent in chat",
+    "text": "i fully agree for usage o my voice"
+  },
+  "detector_evaluation_run": false,
+  "global_take_mapping": {
+    "01": "gettysburg__user__take01",
+    "02": "gettysburg__user__take02",
+    "03": "gettysburg__user__take03",
+    "04": "gettysburg__user__take04",
+    "05": "reagan_challenger__user__take01",
+    "06": "reagan_challenger__user__take02",
+    "07": "reagan_challenger__user__take03",
+    "08": "reagan_challenger__user__take04"
+  },
+  "global_take_mapping_confirmed": true,
+  "independent_rater_responses": 0,
+  "mfa_evaluation_run": false,
+  "notes_present": true,
+  "notes_source": "verbatim recorder prose in chat; no inferred labels",
+  "problems": [
+    "notes.md has recorder prose but lacks the required fenced JSON takes/flaws/slips block.",
+    "Missing recorder-confirmed transcript: data/human/transcripts/gettysburg__user__take01.txt",
+    "Missing recorder-confirmed transcript: data/human/transcripts/gettysburg__user__take02.txt",
+    "Missing recorder-confirmed transcript: data/human/transcripts/gettysburg__user__take03.txt",
+    "Missing recorder-confirmed transcript: data/human/transcripts/gettysburg__user__take04.txt",
+    "Missing recorder-confirmed transcript: data/human/transcripts/reagan_challenger__user__take01.txt",
+    "Missing recorder-confirmed transcript: data/human/transcripts/reagan_challenger__user__take02.txt",
+    "Missing recorder-confirmed transcript: data/human/transcripts/reagan_challenger__user__take03.txt",
+    "Missing recorder-confirmed transcript: data/human/transcripts/reagan_challenger__user__take04.txt",
+    "No supported type/location labels were supplied for every take; random flaws is not ground truth."
+  ],
+  "schema": "human-input-validation/v1",
+  "takes": [
+    {
+      "asr_draft_human_confirmed": false,
+      "asr_draft_present": true,
+      "confirmed_transcript_present": false,
+      "take_id": "gettysburg__user__take01",
+      "technical_audio_checks_pass": true,
+      "wav_sha256": "82a8394510633176c6e250fc3277c60ac4d9297797023131c4bd2c9e11b5ef4c"
+    },
+    {
+      "asr_draft_human_confirmed": false,
+      "asr_draft_present": true,
+      "confirmed_transcript_present": false,
+      "take_id": "gettysburg__user__take02",
+      "technical_audio_checks_pass": true,
+      "wav_sha256": "a889f28475f52532bfb1368f5310466d5c3ab925a6a0dc14664c124cfc42817f"
+    },
+    {
+      "asr_draft_human_confirmed": false,
+      "asr_draft_present": true,
+      "confirmed_transcript_present": false,
+      "take_id": "gettysburg__user__take03",
+      "technical_audio_checks_pass": true,
+      "wav_sha256": "98b94348eae5fa1203dcd93745cd082f7343409404429d2b02b110ec420ca672"
+    },
+    {
+      "asr_draft_human_confirmed": false,
+      "asr_draft_present": true,
+      "confirmed_transcript_present": false,
+      "take_id": "gettysburg__user__take04",
+      "technical_audio_checks_pass": true,
+      "wav_sha256": "3afe56f47890f2077c43e1d5bf73c5a60ea8b3e9af411ff8cae9a2c98dd1636c"
+    },
+    {
+      "asr_draft_human_confirmed": false,
+      "asr_draft_present": true,
+      "confirmed_transcript_present": false,
+      "take_id": "reagan_challenger__user__take01",
+      "technical_audio_checks_pass": true,
+      "wav_sha256": "0b1e3905b8971743fd3f468bbca33a07c738826be1461949ddcd4886d62b7975"
+    },
+    {
+      "asr_draft_human_confirmed": false,
+      "asr_draft_present": true,
+      "confirmed_transcript_present": false,
+      "take_id": "reagan_challenger__user__take02",
+      "technical_audio_checks_pass": true,
+      "wav_sha256": "b4164a3f8d1f43b9c3af2277f7f1adeb57eb21d6a29ed00a87c2b089f43214c9"
+    },
+    {
+      "asr_draft_human_confirmed": false,
+      "asr_draft_present": true,
+      "confirmed_transcript_present": false,
+      "take_id": "reagan_challenger__user__take03",
+      "technical_audio_checks_pass": true,
+      "wav_sha256": "29549ecfe7a70a8ac0aa0d76d4902b6841135758d3af37155cfca141adb8cfca"
+    },
+    {
+      "asr_draft_human_confirmed": false,
+      "asr_draft_present": true,
+      "confirmed_transcript_present": false,
+      "take_id": "reagan_challenger__user__take04",
+      "technical_audio_checks_pass": true,
+      "wav_sha256": "2dc1f2c03fdf040d9fba081ddf616662b0ca23541f2fa113885ac81f3851b714"
+    }
+  ],
+  "threshold_tuning": false,
+  "validator_error": "notes.md needs an explicit JSON annotation block; see docs/HUMAN_TAKES.md",
+  "validator_passed": false
+}

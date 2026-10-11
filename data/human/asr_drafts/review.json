@@ -1,0 +1,837 @@
+{
+  "asr_vs_human_transcript": false,
+  "human_reviewed": false,
+  "schema": "human-asr-review-index/v1",
+  "source": "ASR suggestions, not ground truth",
+  "takes": [
+    {
+      "comparison_source": "canonical Gettysburg / declared Reagan excerpt units 1\u201317; NOT a supplied human transcript",
+      "difference_groups": 15,
+      "differences": [
+        {
+          "asr": "the",
+          "kind": "replace",
+          "start_s": 23.916,
+          "transcript": "that"
+        },
+        {
+          "asr": "leave",
+          "kind": "replace",
+          "start_s": 24.517,
+          "transcript": "live"
+        },
+        {
+          "asr": "all to get a",
+          "kind": "replace",
+          "start_s": 25.478,
+          "transcript": "altogether"
+        },
+        {
+          "asr": "cannot",
+          "kind": "replace",
+          "start_s": 29.208,
+          "transcript": "can not"
+        },
+        {
+          "asr": "cannot concentrate",
+          "kind": "replace",
+          "start_s": 30.269,
+          "transcript": "can not consecrate"
+        },
+        {
+          "asr": "cannot",
+          "kind": "replace",
+          "start_s": 31.531,
+          "transcript": "can not"
+        },
+        {
+          "asr": "struggle",
+          "kind": "replace",
+          "start_s": 35.036,
+          "transcript": "struggled"
+        },
+        {
+          "asr": "concentrated",
+          "kind": "replace",
+          "start_s": 35.918,
+          "transcript": "consecrated"
+        },
+        {
+          "asr": "brought",
+          "kind": "replace",
+          "start_s": 51.901,
+          "transcript": "fought"
+        },
+        {
+          "asr": "this honor",
+          "kind": "replace",
+          "start_s": 60.469,
+          "transcript": "these honored"
+        },
+        {
+          "asr": "can",
+          "kind": "insert",
+          "start_s": 61.411,
+          "transcript": ""
+        },
+        {
+          "asr": "receive",
+          "kind": "replace",
+          "start_s": 68.761,
+          "transcript": "resolve"
+        },
+        {
+          "asr": "this",
+          "kind": "replace",
+          "start_s": 70.083,
+          "transcript": "these"
+        },
+        {
+          "asr": "die",
+          "kind": "replace",
+          "start_s": 71.806,
+          "transcript": "have died"
+        },
+        {
+          "asr": "and the",
+          "kind": "replace",
+          "start_s": 74.25,
+          "transcript": "under"
+        }
+      ],
+      "draft": "data/human/asr_drafts/gettysburg__user__take01.txt",
+      "human_reviewed": false,
+      "take_id": "gettysburg__user__take01"
+    },
+    {
+      "comparison_source": "canonical Gettysburg / declared Reagan excerpt units 1\u201317; NOT a supplied human transcript",
+      "difference_groups": 18,
+      "differences": [
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 13.486,
+          "transcript": "or"
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 20.254,
+          "transcript": "dedicate"
+        },
+        {
+          "asr": "dedicated",
+          "kind": "insert",
+          "start_s": 20.334,
+          "transcript": ""
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 23.899,
+          "transcript": "that"
+        },
+        {
+          "asr": "cannot",
+          "kind": "replace",
+          "start_s": 32.091,
+          "transcript": "can not"
+        },
+        {
+          "asr": "cannot concentrate",
+          "kind": "replace",
+          "start_s": 33.233,
+          "transcript": "can not consecrate"
+        },
+        {
+          "asr": "cannot",
+          "kind": "replace",
+          "start_s": 34.495,
+          "transcript": "can not"
+        },
+        {
+          "asr": "struggle",
+          "kind": "replace",
+          "start_s": 37.639,
+          "transcript": "struggled"
+        },
+        {
+          "asr": "concentrated",
+          "kind": "replace",
+          "start_s": 38.561,
+          "transcript": "consecrated"
+        },
+        {
+          "asr": "see",
+          "kind": "replace",
+          "start_s": 45.532,
+          "transcript": "say"
+        },
+        {
+          "asr": "have",
+          "kind": "insert",
+          "start_s": 53.324,
+          "transcript": ""
+        },
+        {
+          "asr": "have",
+          "kind": "insert",
+          "start_s": 53.925,
+          "transcript": ""
+        },
+        {
+          "asr": "from",
+          "kind": "insert",
+          "start_s": 61.929,
+          "transcript": ""
+        },
+        {
+          "asr": "this haunted",
+          "kind": "replace",
+          "start_s": 62.45,
+          "transcript": "from these honored"
+        },
+        {
+          "asr": "reclude",
+          "kind": "replace",
+          "start_s": 70.943,
+          "transcript": "resolve"
+        },
+        {
+          "asr": "this",
+          "kind": "replace",
+          "start_s": 71.965,
+          "transcript": "these"
+        },
+        {
+          "asr": "the",
+          "kind": "replace",
+          "start_s": 78.195,
+          "transcript": "that"
+        },
+        {
+          "asr": "this",
+          "kind": "replace",
+          "start_s": 82.561,
+          "transcript": "the"
+        }
+      ],
+      "draft": "data/human/asr_drafts/gettysburg__user__take02.txt",
+      "human_reviewed": false,
+      "take_id": "gettysburg__user__take02"
+    },
+    {
+      "comparison_source": "canonical Gettysburg / declared Reagan excerpt units 1\u201317; NOT a supplied human transcript",
+      "difference_groups": 10,
+      "differences": [
+        {
+          "asr": "the",
+          "kind": "replace",
+          "start_s": 24.158,
+          "transcript": "that"
+        },
+        {
+          "asr": "cannot",
+          "kind": "replace",
+          "start_s": 30.552,
+          "transcript": "can not"
+        },
+        {
+          "asr": "cannot concentrate",
+          "kind": "replace",
+          "start_s": 31.473,
+          "transcript": "can not consecrate"
+        },
+        {
+          "asr": "cannot",
+          "kind": "replace",
+          "start_s": 32.634,
+          "transcript": "can not"
+        },
+        {
+          "asr": "concentrated its hard work or",
+          "kind": "replace",
+          "start_s": 36.958,
+          "transcript": "consecrated it far above our"
+        },
+        {
+          "asr": "to this track",
+          "kind": "replace",
+          "start_s": 40.122,
+          "transcript": "or detract"
+        },
+        {
+          "asr": "so",
+          "kind": "insert",
+          "start_s": 54.297,
+          "transcript": ""
+        },
+        {
+          "asr": "this haunted",
+          "kind": "replace",
+          "start_s": 62.264,
+          "transcript": "these honored"
+        },
+        {
+          "asr": "receive you",
+          "kind": "replace",
+          "start_s": 69.776,
+          "transcript": "resolve"
+        },
+        {
+          "asr": "remain",
+          "kind": "replace",
+          "start_s": 72.34,
+          "transcript": "in vain"
+        }
+      ],
+      "draft": "data/human/asr_drafts/gettysburg__user__take03.txt",
+      "human_reviewed": false,
+      "take_id": "gettysburg__user__take03"
+    },
+    {
+      "comparison_source": "canonical Gettysburg / declared Reagan excerpt units 1\u201317; NOT a supplied human transcript",
+      "difference_groups": 16,
+      "differences": [
+        {
+          "asr": "the",
+          "kind": "replace",
+          "start_s": 25.524,
+          "transcript": "that"
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 27.202,
+          "transcript": "it"
+        },
+        {
+          "asr": "large",
+          "kind": "replace",
+          "start_s": 31.087,
+          "transcript": "larger"
+        },
+        {
+          "asr": "cannot",
+          "kind": "replace",
+          "start_s": 32.068,
+          "transcript": "can not"
+        },
+        {
+          "asr": "cannot concentrate",
+          "kind": "replace",
+          "start_s": 33.21,
+          "transcript": "can not consecrate"
+        },
+        {
+          "asr": "cannot",
+          "kind": "replace",
+          "start_s": 34.471,
+          "transcript": "can not"
+        },
+        {
+          "asr": "crowd",
+          "kind": "replace",
+          "start_s": 35.573,
+          "transcript": "ground"
+        },
+        {
+          "asr": "concentrated",
+          "kind": "replace",
+          "start_s": 39.678,
+          "transcript": "consecrated"
+        },
+        {
+          "asr": "arrow",
+          "kind": "replace",
+          "start_s": 42.661,
+          "transcript": "add or"
+        },
+        {
+          "asr": "know",
+          "kind": "replace",
+          "start_s": 44.824,
+          "transcript": "note"
+        },
+        {
+          "asr": "see",
+          "kind": "replace",
+          "start_s": 46.646,
+          "transcript": "say"
+        },
+        {
+          "asr": "this haunted",
+          "kind": "replace",
+          "start_s": 63.611,
+          "transcript": "these honored"
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 67.817,
+          "transcript": "last"
+        },
+        {
+          "asr": "this",
+          "kind": "replace",
+          "start_s": 72.944,
+          "transcript": "these"
+        },
+        {
+          "asr": "the government",
+          "kind": "insert",
+          "start_s": 79.132,
+          "transcript": ""
+        },
+        {
+          "asr": "that",
+          "kind": "replace",
+          "start_s": 82.837,
+          "transcript": "the"
+        }
+      ],
+      "draft": "data/human/asr_drafts/gettysburg__user__take04.txt",
+      "human_reviewed": false,
+      "take_id": "gettysburg__user__take04"
+    },
+    {
+      "comparison_source": "canonical Gettysburg / declared Reagan excerpt units 1\u201317; NOT a supplied human transcript",
+      "difference_groups": 17,
+      "differences": [
+        {
+          "asr": "i have",
+          "kind": "replace",
+          "start_s": 1.219,
+          "transcript": "id"
+        },
+        {
+          "asr": "paying",
+          "kind": "replace",
+          "start_s": 12.271,
+          "transcript": "pained"
+        },
+        {
+          "asr": "code",
+          "kind": "replace",
+          "start_s": 12.992,
+          "transcript": "core"
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 17.357,
+          "transcript": "of"
+        },
+        {
+          "asr": "nations",
+          "kind": "replace",
+          "start_s": 19.559,
+          "transcript": "national"
+        },
+        {
+          "asr": "date",
+          "kind": "replace",
+          "start_s": 22.342,
+          "transcript": "day"
+        },
+        {
+          "asr": "we",
+          "kind": "replace",
+          "start_s": 26.146,
+          "transcript": "weve"
+        },
+        {
+          "asr": "we",
+          "kind": "replace",
+          "start_s": 28.388,
+          "transcript": "weve"
+        },
+        {
+          "asr": "we have",
+          "kind": "replace",
+          "start_s": 30.911,
+          "transcript": "weve"
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 38.142,
+          "transcript": "them"
+        },
+        {
+          "asr": "the",
+          "kind": "insert",
+          "start_s": 40.565,
+          "transcript": ""
+        },
+        {
+          "asr": "scobie junot rysnik",
+          "kind": "replace",
+          "start_s": 42.969,
+          "transcript": "scobee judith resnik"
+        },
+        {
+          "asr": "christian",
+          "kind": "replace",
+          "start_s": 49.238,
+          "transcript": "christa"
+        },
+        {
+          "asr": "we are",
+          "kind": "replace",
+          "start_s": 59.458,
+          "transcript": "were"
+        },
+        {
+          "asr": "and the",
+          "kind": "replace",
+          "start_s": 68.457,
+          "transcript": "that"
+        },
+        {
+          "asr": "they say",
+          "kind": "replace",
+          "start_s": 70.702,
+          "transcript": "says"
+        },
+        {
+          "asr": "truth",
+          "kind": "replace",
+          "start_s": 75.893,
+          "transcript": "truths"
+        }
+      ],
+      "draft": "data/human/asr_drafts/reagan_challenger__user__take01.txt",
+      "human_reviewed": false,
+      "take_id": "reagan_challenger__user__take01"
+    },
+    {
+      "comparison_source": "canonical Gettysburg / declared Reagan excerpt units 1\u201317; NOT a supplied human transcript",
+      "difference_groups": 18,
+      "differences": [
+        {
+          "asr": "i have",
+          "kind": "replace",
+          "start_s": 0.775,
+          "transcript": "id"
+        },
+        {
+          "asr": "the",
+          "kind": "insert",
+          "start_s": 4.801,
+          "transcript": ""
+        },
+        {
+          "asr": "this schedule challenging",
+          "kind": "replace",
+          "start_s": 12.353,
+          "transcript": "the shuttle challenger"
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 15.277,
+          "transcript": "of"
+        },
+        {
+          "asr": "nations",
+          "kind": "replace",
+          "start_s": 17.721,
+          "transcript": "national"
+        },
+        {
+          "asr": "we",
+          "kind": "replace",
+          "start_s": 24.351,
+          "transcript": "weve"
+        },
+        {
+          "asr": "a",
+          "kind": "insert",
+          "start_s": 25.933,
+          "transcript": ""
+        },
+        {
+          "asr": "we",
+          "kind": "replace",
+          "start_s": 26.818,
+          "transcript": "weve"
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 28.66,
+          "transcript": "and"
+        },
+        {
+          "asr": "we are forgetting",
+          "kind": "replace",
+          "start_s": 29.061,
+          "transcript": "weve forgotten"
+        },
+        {
+          "asr": "this danger",
+          "kind": "replace",
+          "start_s": 35.208,
+          "transcript": "the dangers"
+        },
+        {
+          "asr": "the",
+          "kind": "insert",
+          "start_s": 39.073,
+          "transcript": ""
+        },
+        {
+          "asr": "scobie junot riznik",
+          "kind": "replace",
+          "start_s": 41.576,
+          "transcript": "scobee judith resnik"
+        },
+        {
+          "asr": "alison",
+          "kind": "replace",
+          "start_s": 44.52,
+          "transcript": "ellison"
+        },
+        {
+          "asr": "christina",
+          "kind": "replace",
+          "start_s": 47.063,
+          "transcript": "christa"
+        },
+        {
+          "asr": "we are",
+          "kind": "replace",
+          "start_s": 58.461,
+          "transcript": "were"
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 60.364,
+          "transcript": "very"
+        },
+        {
+          "asr": "the",
+          "kind": "replace",
+          "start_s": 73.065,
+          "transcript": "a"
+        }
+      ],
+      "draft": "data/human/asr_drafts/reagan_challenger__user__take02.txt",
+      "human_reviewed": false,
+      "take_id": "reagan_challenger__user__take02"
+    },
+    {
+      "comparison_source": "canonical Gettysburg / declared Reagan excerpt units 1\u201317; NOT a supplied human transcript",
+      "difference_groups": 16,
+      "differences": [
+        {
+          "asr": "i had",
+          "kind": "replace",
+          "start_s": 1.355,
+          "transcript": "id"
+        },
+        {
+          "asr": "the",
+          "kind": "insert",
+          "start_s": 6.26,
+          "transcript": ""
+        },
+        {
+          "asr": "pinned",
+          "kind": "replace",
+          "start_s": 12.846,
+          "transcript": "pained"
+        },
+        {
+          "asr": "court",
+          "kind": "replace",
+          "start_s": 13.467,
+          "transcript": "core"
+        },
+        {
+          "asr": "shared",
+          "kind": "replace",
+          "start_s": 17.01,
+          "transcript": "share"
+        },
+        {
+          "asr": "nations",
+          "kind": "replace",
+          "start_s": 20.774,
+          "transcript": "national"
+        },
+        {
+          "asr": "we",
+          "kind": "replace",
+          "start_s": 27.06,
+          "transcript": "but weve"
+        },
+        {
+          "asr": "a",
+          "kind": "insert",
+          "start_s": 28.562,
+          "transcript": ""
+        },
+        {
+          "asr": "we",
+          "kind": "replace",
+          "start_s": 29.666,
+          "transcript": "weve"
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 38.214,
+          "transcript": "and perhaps weve forgotten the courage it took for the crew of the shuttle"
+        },
+        {
+          "asr": "the",
+          "kind": "insert",
+          "start_s": 45.401,
+          "transcript": ""
+        },
+        {
+          "asr": "scobie junior resnick",
+          "kind": "replace",
+          "start_s": 47.604,
+          "transcript": "scobee judith resnik"
+        },
+        {
+          "asr": "alison",
+          "kind": "replace",
+          "start_s": 51.808,
+          "transcript": "ellison"
+        },
+        {
+          "asr": "christina",
+          "kind": "replace",
+          "start_s": 54.25,
+          "transcript": "christa"
+        },
+        {
+          "asr": "we are",
+          "kind": "replace",
+          "start_s": 64.529,
+          "transcript": "were"
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 65.631,
+          "transcript": "very"
+        }
+      ],
+      "draft": "data/human/asr_drafts/reagan_challenger__user__take03.txt",
+      "human_reviewed": false,
+      "take_id": "reagan_challenger__user__take03"
+    },
+    {
+      "comparison_source": "canonical Gettysburg / declared Reagan excerpt units 1\u201317; NOT a supplied human transcript",
+      "difference_groups": 16,
+      "differences": [
+        {
+          "asr": "i had",
+          "kind": "replace",
+          "start_s": 1.431,
+          "transcript": "id"
+        },
+        {
+          "asr": "the",
+          "kind": "insert",
+          "start_s": 5.897,
+          "transcript": ""
+        },
+        {
+          "asr": "paying",
+          "kind": "replace",
+          "start_s": 12.846,
+          "transcript": "pained"
+        },
+        {
+          "asr": "court",
+          "kind": "replace",
+          "start_s": 13.527,
+          "transcript": "core"
+        },
+        {
+          "asr": "churchill",
+          "kind": "replace",
+          "start_s": 15.069,
+          "transcript": "shuttle"
+        },
+        {
+          "asr": "nations",
+          "kind": "replace",
+          "start_s": 21.478,
+          "transcript": "national"
+        },
+        {
+          "asr": "we",
+          "kind": "replace",
+          "start_s": 28.458,
+          "transcript": "weve"
+        },
+        {
+          "asr": "a",
+          "kind": "insert",
+          "start_s": 29.9,
+          "transcript": ""
+        },
+        {
+          "asr": "we",
+          "kind": "replace",
+          "start_s": 31.102,
+          "transcript": "weve"
+        },
+        {
+          "asr": "we have",
+          "kind": "replace",
+          "start_s": 33.766,
+          "transcript": "weve"
+        },
+        {
+          "asr": "the",
+          "kind": "insert",
+          "start_s": 43.479,
+          "transcript": ""
+        },
+        {
+          "asr": "scobie junot resnick",
+          "kind": "replace",
+          "start_s": 45.763,
+          "transcript": "scobee judith resnik"
+        },
+        {
+          "asr": "alison",
+          "kind": "replace",
+          "start_s": 48.667,
+          "transcript": "ellison"
+        },
+        {
+          "asr": "christina",
+          "kind": "replace",
+          "start_s": 50.97,
+          "transcript": "christa"
+        },
+        {
+          "asr": "we are",
+          "kind": "replace",
+          "start_s": 62.656,
+          "transcript": "were"
+        },
+        {
+          "asr": "",
+          "kind": "delete",
+          "start_s": 63.638,
+          "transcript": "very"
+        }
+      ],
+      "draft": "data/human/asr_drafts/reagan_challenger__user__take04.txt",
+      "human_reviewed": false,
+      "take_id": "reagan_challenger__user__take04"
+    }
+  ],
+  "threshold_tuning": false
+}
