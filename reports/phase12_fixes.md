@@ -225,3 +225,18 @@ permissions and recording experience are not claimed verified. Genuine A/B
 counts remain gated on the eight recorder confirmations and complete inputs.
 Docker-dependent fresh-clone v2 reproduction/total-disk measurement remain
 blocked; host tests do not substitute for those. Restart/test steps are in NEXT.
+
+## Docker recovery / documentation packaging regression
+
+Docker Desktop's Linux engine and WSL integration became available during the
+final read-only retry. This supersedes the earlier startup blocker; no reset,
+data deletion, pruning or settings rewrite was performed.
+
+A new GitHub clone at `/tmp/speech-eval-phase12-AiGgHp/clone` exposed a real
+packaging problem: the image omitted README/docs required by documentation
+regression tests. Three tests failed with missing `/app/README.md`, report
+source and PDF renderer. Fixed only Dockerfile COPY instructions to include
+README/docs, rather than skipping those tests. The complete rebuilt CPU image
+suite passes: 279 tests in 41.71 s. No scientific code/configuration change.
+The first frozen v2 reproduction also matched the published JSON hash; repeated
+post-commit verification and container browser/disk checks follow below.

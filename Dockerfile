@@ -42,6 +42,8 @@ COPY configs ./configs
 COPY tests ./tests
 COPY scripts ./scripts
 COPY reports ./reports
+COPY README.md ./
+COPY docs ./docs
 COPY Makefile Dockerfile docker-compose.yml ./
 ARG GIT_COMMIT=""
 ENV SPEECHEVAL_GIT_COMMIT=${GIT_COMMIT}

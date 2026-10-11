@@ -18,6 +18,11 @@ B diagnosis committed/pushed as `a305075`. Take review is now at
 write `CONFIRMED` under each take. No ASR/PDF plan has been promoted to labels.
 Review committed/pushed as `0ebfd70`; rating instructions and pending-agreement
 wording as `23f0548`. Independent rating responses remain zero.
+Report wording/footer and host application verification pushed as `0630caf`.
+Docker recovered during the final retry. Fresh-clone testing exposed omitted
+README/docs in the image; including them fixes three missing-file failures.
+All 279 rebuilt-container tests pass. Frozen Docker v2 and disk checks are
+being completed; the older startup blocker below is historical.
 
 ## Local application testing (without Docker)
 
