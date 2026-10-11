@@ -1,6 +1,7 @@
 """Fixed recorder-confirmed label geometry and matching, separate from detectors."""
 from __future__ import annotations
 import math
+from itertools import product
 from speecheval.human_recording_inputs import norm
 
 
@@ -39,8 +40,13 @@ def grounded_regions(take_id: str, detail: dict, alignment: dict,
             if len(local)<4:raise ValueError('Trail-off unit contains fewer than four words')
             start=local[-4]['start'];first=local[-4]['i'];description=f'fixed last four words of canonical unit {number}'
         elif kind=='dragging' and take_id=='gettysburg__user__take03':
-            part=phrase(local,['have','thus','far']);start,end=part[0]['start'],part[-1]['end']
-            first,last=part[0]['i'],part[-1]['i'];description='fixed word span have thus far'
+            positions=[[i for i,w in enumerate(local) if norm(w['norm'])==target]
+                       for target in ('have','thus','far')]
+            matches=[p for p in product(*positions) if p[0]<p[1]<p[2]]
+            if len(matches)!=1:raise ValueError(f'Missing/ambiguous fixed anchor have|thus|far in {take_id}')
+            part=[local[matches[0][0]],local[matches[0][-1]]]
+            start,end=part[0]['start'],part[-1]['end']
+            first,last=part[0]['i'],part[-1]['i'];description='fixed ordered word span have thus far, including intervening ASR insertions'
         if kind in ('awkward_pause','missing_pause') and end-start<.03:
             centre=(start+end)/2;start=max(0.,centre-.015);end=min(alignment['duration_s'],centre+.015)
             description+='; 30 ms event representation for sub-30 ms MFA gap'

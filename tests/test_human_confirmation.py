@@ -110,3 +110,14 @@ def test_trailing_four_words_and_dragging_phrase_are_localized():
     b,_,_=grounded_regions('gettysburg__user__take03',{'flaws':[{'type':'dragging','sentence':9}]},
                           {'words':words,'duration_s':10},units)
     assert (b[0]['start'],b[0]['end'])==(6,8.5)
+
+
+def test_dragging_anchors_span_authorised_asr_insertion():
+    from speecheval.human_grounding import grounded_regions
+    tokens=['have','thus','so','far']
+    words=[{'i':i,'text':w,'norm':w,'start':i,'end':i+.5,'sentence':8} for i,w in enumerate(tokens)]
+    truth,_,_=grounded_regions('gettysburg__user__take03',
+        {'flaws':[{'type':'dragging','sentence':9}]},{'words':words,'duration_s':5},
+        [{'canonical_unit':9,'word_start':0,'word_end':3}])
+    assert (truth[0]['start'],truth[0]['end'])==(0,3.5)
+    assert (truth[0]['word_start'],truth[0]['word_end'])==(0,3)

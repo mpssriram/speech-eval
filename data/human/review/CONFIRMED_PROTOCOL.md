@@ -20,6 +20,8 @@ G02 awkward gap larger|sense in unit6; R02 were|daring in unit16.
 G03 missing boundary units8/9; R03 units14/15.
 G02 too_quiet last four words of unit8; R02 last four of unit15.
 G03 dragging words have thus far in unit9.
+The fixed dragging anchors span ordered have → thus → far; authorised ASR
+insertions between them remain in the transcript and inside that anchored span.
 Rushing, monotone and mumbling use the whole canonical unit's aligned interval.
 Times come from real MFA, in trimmed participant seconds; raw offsets are saved.
 A missing/very short gap is represented by a 30 ms boundary event centred on the

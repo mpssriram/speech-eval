@@ -25,6 +25,8 @@ def main() -> None:
         'independent_annotation':False,'independent_transcript_verification':False,
         'audio_hashes_verified':16,'problems':[],
         'notes_sha256':digest(root/'data/human/raw/notes.md'),
+        'consent_sha256':digest(root/'data/human/CONSENT.md'),
+        'transcript_units_sha256':digest(root/'data/human/review/transcript_units.json'),
         'label_protocol_sha256':digest(root/'data/human/review/CONFIRMED_PROTOCOL.md'),
         'transcript_hashes':{k:v['transcript_sha256'] for k,v in records.items()},
         'frozen_code_and_config_hashes':frozen,
