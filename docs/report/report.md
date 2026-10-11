@@ -99,14 +99,16 @@ The unusual final cut point/weak correlation are retained, not repaired with tes
 or user takes. [Calibration](../../reports/phase06_calibration.md).
 
 Templates quote measured participant/reference deviations and flagged words.
-The following is **an example of real system output**, quoted verbatim from
+The following is **an example of real system output**, quoted verbatim from the
+presentation layer using the unchanged numeric evidence in
 [analysis 86964ad39ead](../../data/analyses/86964ad39ead.json), Mode A test file
 `gettysburg__lv_sa__awkward_pause_s3_01`:
 
-> 76.0–77.6 s, "it can": a 1.6 s pause between "it" and "can" where good readers pause 6.9e-18 s (1.6 s longer, 6e+03 SD above). It breaks the sentence.
+> 75.99–77.58 s, "it can": you paused 1.59 s between "it" and "can", where good readers do not pause (1.59 s longer, more than 10 SD above). It breaks the sentence.
 
 The detected interval is 75.990-77.580 s, participant pause 1.590 s,
-reference pause 6.939e-18 s, z = 6046.0. Its matching injected label spans
+reference shown as no pause (less than 0.02 s), deviation shown as more than
+10 SD. Full-precision reference/z remain in the JSON. Its matching injected label spans
 76.035-77.535 s in the [label file](../../data/labels/gettysburg__lv_sa__awkward_pause_s3_01.json).
 It is a correct hit under the frozen pause-centre rule. The extreme z reflects
 near-zero reference spread; it is not evidence of that much perceptual severity.

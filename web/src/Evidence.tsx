@@ -35,7 +35,7 @@ export function Waveform({analysis,onSelect,seek,selected}:{analysis:Analysis;on
     update();return wave.current?.on('ready',update);
   },[selected,analysis]);
   useEffect(()=>{if(seek!==null)wave.current?.setTime(seek);},[seek]);
-  return <section className="timeline"><div className="section-heading"><h2>Your recording</h2><span>{analysis.duration_s.toFixed(1)} seconds · click a marked phrase</span></div>
+  return <section className="timeline"><div className="section-heading"><h2>Your recording</h2><span>{analysis.duration_s.toFixed(2)} seconds · click a marked phrase</span></div>
     {error&&<p role="alert">Could not load the waveform: {error}</p>}<div ref={box} data-testid="waveform" data-ready={ready}/><audio ref={audio} controls preload="metadata" aria-label="Recording playback"/></section>;
 }
 
@@ -50,12 +50,12 @@ export function FeatureChart({tracks,feature,selected}:{tracks:Tracks;feature:st
     const data:Data[]=[
       {x,y:tracks.words.map(w=>w.reference[feature]?.low??null),type:'scatter',mode:'lines',line:{width:0},name:'Reference lower',showlegend:false,hoverinfo:'skip'},
       {x,y:tracks.words.map(w=>w.reference[feature]?.high??null),type:'scatter',mode:'lines',fill:'tonexty',fillcolor:'rgba(96,153,200,.20)',line:{width:0},name:'Reference ±2σ',hoverinfo:'skip'},
-      {x,y:tracks.words.map(w=>w.reference[feature]?.mu??null),text,type:'scatter',mode:'lines',line:{color:'#93aec2',width:1,dash:'dot'},name:'Reference median'},
-      {x,y:tracks.words.map(w=>w.features[feature]??null),text,type:'scatter',mode:'lines+markers',line:{color:'#55d5e8',width:2},marker:{size:4},name:'Yours',hovertemplate:'%{text}<br>%{y:.2f}<extra>Yours</extra>'},
+      {x,y:tracks.words.map(w=>w.reference[feature]?.mu??null),text,type:'scatter',mode:'lines',line:{color:'#93aec2',width:1,dash:'dot'},name:'Reference median',hovertemplate:`%{text}<br>%{y:${feature==='rate'?'.1f':'.2f'}}<extra>Reference median</extra>`},
+      {x,y:tracks.words.map(w=>w.features[feature]??null),text,type:'scatter',mode:'lines+markers',line:{color:'#55d5e8',width:2},marker:{size:4},name:'Yours',hovertemplate:`%{text}<br>%{y:${feature==='rate'?'.1f':'.2f'}}<extra>Yours</extra>`},
     ];
     const layout:Partial<Layout>={height:320,autosize:true,paper_bgcolor:'transparent',plot_bgcolor:'transparent',font:{color:'#b9ccdc',family:'system-ui'},
       margin:{l:64,r:20,t:26,b:58},legend:{orientation:'h',y:1.18},xaxis:{title:{text:'Word in your transcript'},gridcolor:'#20384d',zeroline:false},
-      yaxis:{title:{text:featureOptions.find(f=>f.id===feature)?.unit},gridcolor:'#20384d',zeroline:false},
+      yaxis:{title:{text:featureOptions.find(f=>f.id===feature)?.unit},gridcolor:'#20384d',zeroline:false,tickformat:feature==='rate'?'.1f':'.2f',exponentformat:'none',showexponent:'none'},
       shapes:selected?[{type:'rect',xref:'x',yref:'paper',x0:selected.word_start-.5,x1:selected.word_end+.5,y0:0,y1:1,
         fillcolor:flaws[selected.type].color+'22',line:{width:0},layer:'below'}]:[]};
     const available=tracks.words.some(w=>w.reference[feature]);

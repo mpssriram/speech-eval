@@ -164,6 +164,15 @@ def create_app(root: Path | None = None) -> FastAPI:
     def analysis(analysis_id: str) -> dict:
         identifier(analysis_id)
         job = read_json(root / 'data/app/jobs' / f'{analysis_id}.json')
+        # A response-only display layer also fixes cached jobs. Keep the stored
+        # explanation/evidence (including extreme raw z) byte-unchanged.
+        result = job.get('analysis')
+        if job['status'] == 'done' and result and result.get('regions'):
+            from speecheval.display import explanation
+            alignment = read_json(root / 'data/alignment' / f"{identifier(result['recording_id'])}.json")
+            words = [w['text'] for w in alignment['words']]
+            for region in result['regions']:
+                region['display_explanation'] = explanation(region, words, result['mode'])
         return {k: v for k, v in job.items() if k not in ('identity', 'request')}
 
     def completed(aid: str) -> dict:

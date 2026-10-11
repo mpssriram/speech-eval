@@ -51,6 +51,14 @@ test('real API upload, evidence, exact phrase playback and Modes A B C',async({p
   await page.screenshot({path:reportPath('img/ui_results.png'),fullPage:true});
   const cards=page.getByTestId('flaw-card');
   await expect(cards.first().locator('p')).toContainText(/\d.*s/);
+  // Real API presentation must not leak scientific notation or uncapped SD.
+  const explanations=await cards.locator('p').allTextContents();
+  expect(explanations.length).toBeGreaterThan(0);
+  for(const text of explanations){
+    expect(text).not.toMatch(/\d[eE][+-]\d/);
+    for(const sd of text.matchAll(/(?<![\d.])(\d+(?:\.\d+)?) SD/g))expect(Number(sd[1])).toBeLessThanOrEqual(10);
+    expect(text).toMatch(/\d+\.\d{2}–\d+\.\d{2} s/);
+  }
   await page.getByTestId('waveform').locator('[part~="region"]').nth(1).click();
   await expect(cards.nth(1)).toHaveAttribute('aria-current','true');
   await expect(page.getByTestId('waveform').locator('[part~="region"]').nth(1)).toHaveAttribute('data-selected','true');

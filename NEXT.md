@@ -1,5 +1,13 @@
 # Next
 
+Phase12 active (2026-10-11): display-only correction verified with regression
+tests, all three browser tests, five new screenshots and six-page PDF inspection. Continue
+with DEV-only B diagnosis, the recorder-confirmation review sheet, rating-pack
+instructions and the requested report wording. Results: `reports/phase12_fixes.md`.
+Latest human instruction: Gettysburg04 and Reagan04 (global08) were spontaneous
+mixed readings; types/locations remain unspecified, not clean or invented labels.
+Latest Mode B scope is take02/03 versus take01, not take04.
+
 Phase 11: Task 1 report fixes verified (five-page PDF, rounded display values,
 real correct-hit explanation, dashboard screenshots, consolidated pending box).
 The corrected canonical eight-take recording sheet is ready at

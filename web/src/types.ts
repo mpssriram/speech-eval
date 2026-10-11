@@ -5,7 +5,7 @@ export const flaws = {
   mumbling:{label:'Mumbling',color:'#74d6a4'},
 };
 export type FlawType=keyof typeof flaws;
-export type Region={type:FlawType;start:number;end:number;word_start:number;word_end:number;severity:number;explanation:string};
+export type Region={type:FlawType;start:number;end:number;word_start:number;word_end:number;severity:number;explanation:string;display_explanation?:string};
 export type Analysis={analysis_id:string;recording_id:string;text_id:string;mode:string;duration_s:number;regions:Region[];
   reference:{baseline_recording_id?:string;kind:string};scores:Record<string,number>;warnings:unknown[];
   key_moments:{kind:string;passed:boolean;message:string}[];
