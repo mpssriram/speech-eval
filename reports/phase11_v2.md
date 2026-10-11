@@ -183,6 +183,20 @@ no reset/deletion or settings change was attempted. The GitHub-clone target is
 `/tmp/speech-eval-v2-3AIBAv/clone`; exact blocker and rerun command are in
 `docs/BLOCKERS.md`. No fresh-clone v2 hash or successful run is claimed yet.
 
+### Task 3: archive and disk measurements
+
+Fresh ZIP measurements: 7,586,867,457 bytes = 7.586867457 decimal GB;
+SHA256 `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b`.
+The GitHub clone at `ae2a301` completed (208,314,368 allocated bytes);
+`make reproduce-v2 DATA_ARCHIVE=/home/sriram/speech-eval/data/release/speech-eval-dataset-v1.zip`
+failed at its first Docker fetch command. No imported-data or reproduced hash is
+claimed. README/dataset card now document measured components with hard-link
+de-duplication and exact units; machine evidence is `reports/disk_usage.json`.
+Linux development footprint is 57,456,644,096 allocated bytes; whole-engine
+non-sparse Docker VHDX lengths are 39,405,486,080 bytes. Their combined snapshot
+is 96,862,130,176 bytes, explicitly not the fresh project minimum. The complete
+Docker-inclusive installation requirement remains blocked/unmeasured, not guessed.
+
 **post-hoc v2; test split was seen with v1, so results are optimistic.**
 
 Frozen commit before test: `95c8f334faf4c134fcbf5b4fa31fda4635f336ea`. One decision-bearing test run; any later numerical runs are requested frozen reproductions, not additional tuning/evaluation decisions.

@@ -27,7 +27,20 @@ equivalents are in [Docker instructions](docs/DOCKER.md). First image/model
 downloads and import are separate from numerical run time. Measured quick:
 11.829 / 11.954 seconds; full: 225.204 / 223.142 seconds in the tested CPU
 environment, not a universal laptop bound. [Fresh-clone proof](reports/reproducibility.md).
-Required total free disk: **pending measured value** (`{{disk_gb}}`).
+Disk measurement (2026-10-11): the current development checkout plus external
+UV/MFA environment/models uses **57,456,644,096 allocated bytes (57.456644096 GB)**.
+Docker Desktop's two non-sparse VHDX files total **39,405,486,080 bytes** for
+**all Docker projects**. Combined measured snapshot: **96,862,130,176 bytes
+(96.862130176 GB)**, not this project's fresh-install minimum. Historical caches,
+two archive copies and the host GPU environment are included. The exact
+Docker-inclusive fresh-install/peak-build requirement is **NOT MEASURED**:
+Docker currently fails to start, so project image/layer/cache attribution and
+fresh import cannot be measured. No requirement is estimated.
+[Component measurements and method](docs/DATASET.md#measured-disk-footprint),
+[machine evidence](reports/disk_usage.json), [blocker](docs/BLOCKERS.md).
+
+Upload ZIP: **7,586,867,457 bytes / 7.586867457 decimal GB**; SHA256
+`a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b`.
 
 Public dataset URL: **pending upload** (`{{dataset_url}}`). Fill
 `configs/dataset.yaml` with the URL for the **exact checksum-pinned ZIP** after

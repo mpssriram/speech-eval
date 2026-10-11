@@ -15,6 +15,9 @@ complete (six pages, repeated identical render, every page inspected).
 Fresh-clone frozen v2 reproduction is blocked by Docker Desktop failing to start;
 see `docs/BLOCKERS.md`. Continuing measured disk documentation and tested health
 metadata without claiming unavailable Docker evidence.
+Archive upload size/hash and measured local disk components are now documented
+in README, `docs/DATASET.md` and `reports/disk_usage.json`. Full Docker-inclusive
+installation/peak-build requirement remains unmeasured until Docker is restored.
 See `reports/phase11_v2.md` for the protocol and inherited Mode B limitation.
 
 Done: A licensed archive/fetcher, fresh GitHub-clone CPU Docker numerical

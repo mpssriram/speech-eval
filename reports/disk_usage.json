@@ -1,0 +1,41 @@
+{
+  "measured_date": "2026-10-11",
+  "checkout_commit": "917f3d9",
+  "method": "GNU du -B1 one inode-deduplicated traversal; Windows Get-Item VHDX length with fsutil sparse queryflag (both not sparse); ZIP stat, sha256sum and ZipInfo.file_size sums",
+  "archive": {
+    "path": "data/release/speech-eval-dataset-v1.zip",
+    "bytes": 7586867457,
+    "decimal_gb": 7.586867457,
+    "sha256": "a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b",
+    "zip_members_including_inventory": 13813,
+    "uncompressed_logical_bytes": 7781531513
+  },
+  "development_checkout_allocated_bytes": 55449268224,
+  "checkout_components_assigned_by_first_inode_encounter": {
+    "data_including_two_release_zips_and_pipeline_caches": 44495196160,
+    "project_uv_cache": 10481917952,
+    "venv_nonshared_remainder": 172298240,
+    "other_repo_git_web_tests_reports_models": 299855872
+  },
+  "external_components_nonoverlapping_with_checkout": {
+    "home_uv_cache": 48521216,
+    "mfa_conda_environment": 1852719104,
+    "mfa_pretrained_models": 106135552
+  },
+  "development_linux_total_allocated_bytes": 57456644096,
+  "docker_desktop_vhdx_lengths_bytes_all_projects": {
+    "disk/docker_data.vhdx": 39304822784,
+    "main/ext4.vhdx": 100663296
+  },
+  "docker_desktop_all_projects_vhdx_total_bytes": 39405486080,
+  "measured_development_plus_all_docker_vhdx_snapshot_bytes": 96862130176,
+  "fresh_github_clone": {
+    "path": "/tmp/speech-eval-v2-3AIBAv/clone",
+    "commit": "ae2a30150328ae1f155312999c4a9a9a08f79270",
+    "allocated_bytes": 208314368,
+    "docker_reproduction": "BLOCKED at make fetch-data: Docker unavailable"
+  },
+  "project_docker_image_and_build_cache_bytes": null,
+  "complete_fresh_installation_requirement_bytes": null,
+  "limitations": "Docker daemon unavailable. VHDX includes all Docker projects, layer caches and unused space; it is not project image size. The measured development snapshot includes historical caches, two ZIP copies and a host GPU Python environment; not a fresh CPU installation minimum or peak build requirement. Hard-linked venv/cache files counted once. No Docker-inclusive minimum is estimated. Models within repo caches/image must not be counted again. Missing home HuggingFace/Torch cache directories are not assumed model-free; models also live inside pipeline caches."
+}
