@@ -34,7 +34,7 @@ reproduce-quick: fetch-data
 
 reproduce: fetch-data
 	mkdir -p reports/reproduced
-	docker compose run --rm --build --no-deps tools python -m speecheval.reproduce
+	docker compose run --rm --build --no-deps tools python scripts/reproduce_release.py
 
 reproduce-v2: fetch-data
 	docker compose run --rm --build --no-deps tools python -m speecheval.evaluate_v2 --reproduce

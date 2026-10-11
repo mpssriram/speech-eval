@@ -3,7 +3,8 @@
 Phase12 update (2026-10-12): display correction, DEV-only B diagnosis,
 recorder-confirmation review sheet, rating instructions and report wording are
 verified. Genuine human evaluation is still confirmation-gated, not complete.
-Results: `reports/phase12_fixes.md`. Latest full suite: 279 passed; all three
+Results: `reports/phase12_fixes.md`. Latest full suites: 283 passed on host and
+in Docker; all three
 real browser tests pass at port 8080; six PDF pages inspected, repeated renders
 byte-identical. No frozen detector change or new test-split evaluation.
 Latest human instruction: Gettysburg04 and Reagan04 (global08) were spontaneous
@@ -19,22 +20,40 @@ write `CONFIRMED` under each take. No ASR/PDF plan has been promoted to labels.
 Review committed/pushed as `0ebfd70`; rating instructions and pending-agreement
 wording as `23f0548`. Independent rating responses remain zero.
 Report wording/footer and host application verification pushed as `0630caf`.
-Docker recovered during the final retry. Fresh-clone testing exposed omitted
-README/docs in the image; including them fixes three missing-file failures.
-All 279 rebuilt-container tests pass. Frozen Docker v2 and disk checks are
-being completed; the older startup blocker below is historical.
+Docker recovered during the final retry. Packaging fix `33e392a` includes missing
+README/docs, fixing three container failures. All 279 rebuilt-container tests
+pass. Two frozen v2 Docker runs from a GitHub clone imported only the licensed
+ZIP and match the published JSON bytes; marker unchanged.
+Current Docker-inclusive retained-path snapshot: 55,037,300,736 bytes (55.037300736
+decimal GB), including whole-engine VHDX and other Docker projects, NOT a project
+minimum or peak-build requirement. See Phase12 for exact components/limitations.
+An isolated clean-install peak/minimum remains unmeasured; do not guess it.
+Full and quick CPU reproduction now match all 563 published release-output
+hashes. A separate post-hoc REPORT adapter excludes only unpublished Human-A/B
+status paragraphs from the textual number gate; frozen scientific JSON/code and
+all synthetic/Limitations numbers remain strictly checked. Four adapter tests
+pass; independent code review found no important issue. Post-push GitHub-clone
+repeat remains to verify the final published command.
 
-## Local application testing (without Docker)
+## Local application testing
 
-The API and dashboard are running at `http://localhost:8080` in WSL host mode,
-not Docker. `/api/health` reports a real git commit and the frozen v1 hash.
+The production API/nginx dashboard are running at `http://localhost:8080` in
+Docker, both healthy. All three browser tests pass there (46.1 s).
+`/api/health` reports a real build commit (`33e392a`) and the frozen v1 hash.
 Browser checks cover upload, recording controls (synthetic browser device, not
 your microphone), waveform, score/explanation, selected regions, Yours/Baseline
 playback, Modes A/B/C and mobile overflow. A separate synthetic-only upload
 check completed real CPU MFA 3.4.2 in A/B; it missed the injected rushing region,
 which remains an honest detector limitation. This is not human accuracy evidence.
 
-If the machine is restarted, start two WSL terminals:
+After restarting the machine, start Docker Desktop, then in WSL:
+
+```sh
+cd ~/speech-eval
+make up
+```
+
+If Docker fails again, the separately verified WSL fallback uses two terminals:
 
 ```sh
 # Terminal 1
@@ -66,17 +85,18 @@ and post-hoc. A F1 0.190 -> 0.193, recall 0.400 -> 0.288, clean/min 1.341 -> 0.6
 (test guard still fails); B F1 0.035 -> 0.070 with lower recall. No detector,
 evaluator or threshold edits follow test results. Report/PDF verification is
 complete (six pages, repeated identical render, every page inspected).
-Fresh-clone frozen v2 reproduction is blocked by Docker Desktop failing to start;
-see `docs/BLOCKERS.md`. Health build/runtime metadata is tested and pushed as
+The earlier fresh-clone Docker startup failure is resolved in Phase12 above;
+`docs/BLOCKERS.md` retains its historical account. Health build/runtime metadata is tested and pushed as
 `99cf2fc`; Plotly warning and retained schema/MFA limitations are documented and
 tested. All 275 tests pass; frozen scientific code/config hashes still match.
-Live rebuilt-container health is blocked, not claimed verified.
+Live rebuilt-container health is now verified in Phase12, not in this older snapshot.
 Frozen host v2 reproduction passed byte-for-byte (published SHA
 `e770969c2d44e97cff3ee0d58b318d81edb8264356004070f6edfa4aa9f9c754`);
 the one-shot marker is unchanged. This does not substitute for fresh-clone Docker.
 Archive upload size/hash and measured local disk components are now documented
-in README, `docs/DATASET.md` and `reports/disk_usage.json`. Full Docker-inclusive
-installation/peak-build requirement remains unmeasured until Docker is restored.
+in README, `docs/DATASET.md` and `reports/disk_usage.json`. An isolated fresh-
+installation/peak-build requirement remains unmeasured; updated Docker-inclusive
+retained-path measurements are in Phase12 above.
 See `reports/phase11_v2.md` for the protocol and inherited Mode B limitation.
 
 Done: A licensed archive/fetcher, fresh GitHub-clone CPU Docker numerical
@@ -118,12 +138,7 @@ requires the workflow extension, which the existing v1 driver lacks.
    or explicitly declare none only when true. Prose notes and actual consent are
    already saved; neither transcription nor ground truth will be invented.
    `data/human/input_validation.json` lists all remaining validation problems.
-3. Restore Docker Desktop (inaccessible `dockerInference` socket; no reset/data
-   deletion attempted). This unblocks the frozen fresh-clone v2 reproduction,
-   two-run hashes, exact Docker-inclusive installation/build measurement and
-   a rebuilt-container `/api/health` check. Agent can finish these after recovery;
-   do not consume a second one-shot test evaluation or retune.
-4. Confirm author and formal code/annotation licence files; record/publish the demo.
+3. Confirm author and formal code/annotation licence files; record/publish the demo.
    Final submission is due October 13.
    Review `docs/TODO_PLACEHOLDERS.md` and `docs/BLOCKERS.md` before submission.
 

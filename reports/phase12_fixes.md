@@ -240,3 +240,114 @@ README/docs, rather than skipping those tests. The complete rebuilt CPU image
 suite passes: 279 tests in 41.71 s. No scientific code/configuration change.
 The first frozen v2 reproduction also matched the published JSON hash; repeated
 post-commit verification and container browser/disk checks follow below.
+
+### Verified fresh-clone frozen v2 and production deployment
+
+Clone: GitHub main, initially `0630caf`, fast-forwarded to published packaging
+fix `33e392a9cc565805e6e62a509fb5ff04d8157adc`. No host Python environment,
+unpublished corpus, human audio, ASR models or application state was copied.
+Only the checksum-pinned licensed ZIP was supplied read-only. The Docker
+fetcher verified all 13,812 payload files and installed 7,730 absent members;
+subsequent targets re-verified the complete inventory before computation.
+
+Two post-commit `make reproduce-v2` runs succeeded with byte-identical output,
+matching published JSON SHA256
+`e770969c2d44e97cff3ee0d58b318d81edb8264356004070f6edfa4aa9f9c754`.
+The last fetch/build/reproduction command took 67.30 seconds. This is explicitly
+a frozen reproduction, not a new decision-bearing test evaluation. The sole
+marker SHA remains
+`e05e0bbe789fff7fc9d29747a456165e7171091c735363a9b2d3a397917b2e9a`.
+Frozen source/config hashes also pass read-only verification in the working
+checkout. Reproduce the verified flow:
+
+```sh
+git clone https://github.com/mpssriram/speech-eval.git clone
+cd clone
+make reproduce-v2 DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip
+make reproduce-v2  # inventory already installed; verifies it before running
+```
+
+The isolated clone's production API/nginx dashboard passed all three browser
+tests on temporary port 18080 (37.3 s). Its health reports the real build commit,
+not null. Then the working checkout's production containers were rebuilt and
+started on port 8080, replacing ONLY this turn's own Vite-8080 process. Both
+containers are healthy. All three browser tests passed there (46.1 s), including
+waveform, fixed display, both playback paths, scores, A/B/C and mobile overflow;
+zero page errors. Live `/api/health` reports build commit `33e392a9...` and frozen
+v1 config SHA `f0759b1d...`. Current browser IDs are recorded in
+`reports/ui_verification.json`; refreshed screenshots are actual production UI.
+
+The final PDF embeds those production screenshots: six pages, every page
+visually inspected again, two renders byte-identical, SHA256
+`e09a466f4e7b0630194b51f6f29167ddebce92108980ab1580cc8d1d78f83f90`.
+
+### Measured disk snapshot (not a guessed minimum)
+
+Exact bytes measured on 2026-10-12, immediately after the first production
+deployment. GNU `du -B1` counted clone data first and remaining clone files in
+one traversal to avoid hard-link double counting. Docker Engine
+`/v1.52/system/df` supplies image/cache counters, not rounded CLI GB strings;
+Windows file length plus `fsutil sparse queryflag` checks the whole-engine VHDX
+files. These are a retained installation snapshot, not peak build/import demand
+or a new-machine minimum.
+
+| Component | Exact bytes | Scope |
+|---|---:|---|
+| Clone data after import/reproduction/browser test | 7,850,315,776 | includes measured outputs/caches |
+| Remaining clone files / Git / reports | 26,853,376 | data counted first |
+| Supplied ZIP allocated blocks | 7,586,873,344 | content is 7,586,867,457 bytes |
+| API image Engine Size counter | 16,808,249,317 | includes Python/conda/MFA/models |
+| Production web image Engine Size counter | 76,045,705 | compiled UI/nginx |
+| MFA model directory inside API | 106,053,632 | already in image; do NOT add again |
+| Daemon-wide build cache counters | 17,706,378,781 | shared/historical; do NOT add blindly to images |
+| Docker data VHDX length | 39,472,594,944 | all projects/images/cache/unused filesystem space |
+| Docker system VHDX length | 100,663,296 | whole engine |
+
+Both VHDX files are non-sparse. Clone plus supplied ZIP plus whole-engine VHDX
+lengths total **55,037,300,736 bytes = 55.037300736 decimal GB**. This is the
+measured retained snapshot for these paths, including other Docker projects;
+not 55 GB required for every user and not the complete developer workstation.
+An image-counter-plus-clone-plus-ZIP component sum is 32,348,337,518 bytes,
+but mixes filesystem allocations with Engine counters and excludes build/cache
+overhead: it is NOT a complete disk requirement. No minimum/peak is fabricated.
+The requested isolated clean-install peak measurement remains unverified; shared
+engine cache attribution cannot establish it, and no unrelated images/caches
+were pruned to manufacture a clean measurement. Per the latest result-location
+rule, updated measurements are here and in NEXT, not rewritten into the
+historical README/DATASET snapshot or phase11 report.
+
+### Full report reproduction: post-hoc narrative adapter
+
+Quick reproduction passed: 114 variants from exactly three Gettysburg test
+readers, including cold CPU feature extraction; computation took 26.747 s.
+The original full target passed the frozen synthetic detection/scoring JSON
+checks and ten two-run analysis identity checks, then failed its report-number
+gate: Phase6 numeric token 177, expected `04`, regenerated `1`. Current pending
+Human-B prose mentions take04; the original generated human-status paragraph
+contains a different number. Neither is an evaluated human metric. This is a
+report-scope mismatch, not changed benchmark evidence or a reason to restore
+the user's old status paragraphs. The failed command took 98.58 s.
+
+A separately labelled post-hoc release REPORT adapter excludes only exact
+Phase6 Human-A/Human-B sections from that textual number comparison. Their
+unpublished audio/results are outside the licensed archive. Every synthetic
+metric/table, Limitations number, other report, frozen JSON, cold feature and
+analysis identity check remains strict. Make's full target invokes this adapter;
+quick and v2 targets are unchanged. It restores the original report checker
+after execution, including on error. Frozen `reproduce.py`, calibration,
+detector, scoring, evaluator and v1/v2 provenance are byte-unchanged. No second
+one-shot test was consumed and no human metric/label was created.
+
+Three regression tests first failed then passed; a fourth exercises checker
+restoration on failure. Changing a synthetic F1, Limitations resample count or a
+different report's number still fails. Final full suites: host 283 passed in
+21.65 s; container 283 passed in 16.63 s. Independent read-only code review found
+no Critical or Important issue.
+
+The full Docker run with this adapter passed all Phase6/7/8 checks: 266 test
+rows, 289.660 s computation, 322.18 s total command time. All 563 published
+release-output hashes matched (558 analysis files plus five report/JSON files).
+Full JSON SHA256: `e11412e9c0a6ccae4b0e4a556ed3d857bb73e61441bf0ae22733d3223ca95749`.
+Quick JSON SHA256: `ea1f85f862117810fd1d84d0e6c4a23012d8dbf94e9cbe635c736408a274fcaa`.
+These are reproduced published bytes, not new detector results. A post-push
+GitHub-clone repeat is next; its outcome is not presumed here.
