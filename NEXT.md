@@ -89,11 +89,13 @@ separately labelled frozen v2 output, which the existing v1 B02/B03 driver lacks
 
 ## Needs other people
 
-1. Independent rater agreement is unavailable before the deadline (zero responses).
+1. Independent rater agreement is pending (zero responses).
    Disclose this limitation in the submission; pack and scripts are ready. Future
    measurement needs at least three independent raters with separate CSVs for
    all twelve blind clips. Distribute only `data/rating_pack/`, never the answer
    key/repository or system scores. Do not substitute AI or self-ratings.
+   Plain-English instructions and CSV return steps are in
+   `data/rating_pack/INSTRUCTIONS.md` (allow about 15 minutes).
 2. A human alignment spot-check/listening and boundary corrections for the
    visually annotated reference. This cannot be claimed from the existing
    automatic/Claude visual evidence. Genuine-take notes/annotations also need

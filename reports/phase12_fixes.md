@@ -156,3 +156,27 @@ manifest. The existing validator rejects the missing explicit notes JSON, and
 all eight final transcript paths are absent. All frozen v2 code/config hashes
 and its one-shot marker pass read-only verification. Review document SHA256:
 `ef7289d8f313610ab9ee5b84dff80e485b187515a26876679edd4b06a9ce8de2`.
+
+## 4. Independent rating pack
+
+Added one-page plain-English `data/rating_pack/INSTRUCTIONS.md`, allowing about
+15 minutes: listen independently to the twelve randomized clips in CSV order,
+score overall delivery 1–5, enter only supported flaw names and corresponding
+times, save a separately named CSV and return it through the sender's channel.
+This matches the actual five-column form. No answer key, system scores or
+ratings are supplied. The blank form remains unchanged; zero independent
+responses. Report and pending box now say agreement is pending, not unavailable
+before the deadline. AI or recorder self-ratings are not rater data.
+
+Document-reader checks clarified skipped rows (preserve clip names; other fields
+empty) and uncertainty (replay or skip, never use `none` to mean unsure). Exact
+CSV fields and all twelve clip names were checked; all responses remain blank.
+Instructions fit one printable A4 page; SHA256
+`b17e011ba84aa2438ba561fed7477caaa265ad070b7abc5647139c7d9e9b9f50`.
+Updated report rendered twice byte-identically as six A4 pages, every page
+visually inspected, PDF SHA256
+`221b408343e9094b769a34360660dbfca5f547244772821996e87a4a2d371f8c`.
+The real browser suite also passed all three tests at `http://localhost:8080`
+(34.9 s), including A/B/C, phrase playback and mobile layout with zero page
+errors. Its screenshots and machine verification were refreshed; this is
+functional evidence, not new detector-performance or human-rating evidence.

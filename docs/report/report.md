@@ -141,8 +141,8 @@ The report gives per-type, not aggregate, monotonicity:
 | too_quiet | -0.71 | 85.7 | 3 |
 
 Each type has seven complete series. Constant ranks have undefined Spearman;
-non-increasing alone is not sensitivity. **Human agreement is unavailable before
-the deadline: zero independent responses.** The blind pack/scripts are ready;
+non-increasing alone is not sensitivity. Human agreement is pending: zero
+independent responses. The blind pack/scripts are ready;
 AI and recorder self-ratings are not used as independent rater data. The form asks overall
 delivery 1–5, flaw type(s) and approximate time, not five category ratings. Scripts
 compute system–mean-human/per-rater Spearman, mean defined pairwise human Spearman
@@ -262,7 +262,7 @@ in the original JSON; display rounding does not change them.
 ::: pending
 Pending items
 Confirmed as-spoken transcripts/complete delivery labels and genuine A/B evaluation.
-Independent agreement unavailable (zero responses); human alignment spot-check.
+Independent agreement pending (zero responses); human alignment spot-check.
 Archive upload URL, author confirmation and recorded/published video URL.
 Owner-confirmed formal code/annotation licence files; total disk requirement.
 Unreported aggregate human/severity/C-F1 and pitch-improvement values remain unclaimed.
