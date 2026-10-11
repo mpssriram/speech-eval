@@ -1,9 +1,11 @@
 # Next
 
-Phase12 active (2026-10-11): display-only correction verified with regression
-tests, all three browser tests, five new screenshots and six-page PDF inspection. Continue
-with DEV-only B diagnosis, the recorder-confirmation review sheet, rating-pack
-instructions and the requested report wording. Results: `reports/phase12_fixes.md`.
+Phase12 update (2026-10-12): display correction, DEV-only B diagnosis,
+recorder-confirmation review sheet, rating instructions and report wording are
+verified. Genuine human evaluation is still confirmation-gated, not complete.
+Results: `reports/phase12_fixes.md`. Latest full suite: 279 passed; all three
+real browser tests pass at port 8080; six PDF pages inspected, repeated renders
+byte-identical. No frozen detector change or new test-split evaluation.
 Latest human instruction: Gettysburg04 and Reagan04 (global08) were spontaneous
 mixed readings; types/locations remain unspecified, not clean or invented labels.
 Latest Mode B scope is take02/03 versus take01, not take04.
@@ -14,6 +16,38 @@ See Phase12 for FP breakdown and the two rounded oracle-step QA limitations.
 B diagnosis committed/pushed as `a305075`. Take review is now at
 `data/human/review/TAKES_REVIEW.md`; correct each transcript/actual flaw list and
 write `CONFIRMED` under each take. No ASR/PDF plan has been promoted to labels.
+Review committed/pushed as `0ebfd70`; rating instructions and pending-agreement
+wording as `23f0548`. Independent rating responses remain zero.
+
+## Local application testing (without Docker)
+
+The API and dashboard are running at `http://localhost:8080` in WSL host mode,
+not Docker. `/api/health` reports a real git commit and the frozen v1 hash.
+Browser checks cover upload, recording controls (synthetic browser device, not
+your microphone), waveform, score/explanation, selected regions, Yours/Baseline
+playback, Modes A/B/C and mobile overflow. A separate synthetic-only upload
+check completed real CPU MFA 3.4.2 in A/B; it missed the injected rushing region,
+which remains an honest detector limitation. This is not human accuracy evidence.
+
+If the machine is restarted, start two WSL terminals:
+
+```sh
+# Terminal 1
+cd ~/speech-eval
+env -u PYTHONPATH ~/.local/bin/uv run uvicorn api.main:app --host 0.0.0.0 --port 8000
+# Terminal 2: clean Linux frontend dependencies, verified from current source
+cd ~/.cache/speech-eval-web
+env PATH=/home/sriram/.cache/speech-eval-node/node-v22.14.0-linux-x64/bin:/usr/bin:/bin npm run dev -- --port 8080
+```
+
+Open `http://localhost:8080`. For A choose the matching text and upload audio;
+for B select an earlier completed same-text take; C accepts a supplied transcript
+without a same-text reference. For an uploaded recording containing slips, supply
+the actual words, not a corrected canonical reading. Click a flag to inspect its
+region/explanation and try both playback buttons. Baseline playback is disabled
+when those exact words are unavailable; that is disclosed, not silently substituted.
+Your own microphone permission/audio and genuine take correctness still need
+your testing/review. Do not present synthetic fixture jobs as your recordings.
 
 Phase 11: Task 1 report fixes verified (five-page PDF, rounded display values,
 real correct-hit explanation, dashboard screenshots, consolidated pending box).
@@ -64,8 +98,9 @@ to the validator input folder. Validation now stops on the missing fenced notes
 JSON; confirmed transcripts and complete supported-type/location labels are
 still required. No genuine MFA/scoring/counts/dashboard jobs are claimed. The
 user must confirm these inputs before processing. Preserve v1/v2 and the one-shot marker;
-never tune on human takes. Future workflow coverage must include B04 and
-separately labelled frozen v2 output, which the existing v1 B02/B03 driver lacks.
+never tune on human takes. Latest requested B scope is B02/B03 versus A01;
+the earlier B04 scope is superseded. Separately labelled frozen v2 output still
+requires the workflow extension, which the existing v1 driver lacks.
 
 ## Needs user
 

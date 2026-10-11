@@ -180,3 +180,48 @@ The real browser suite also passed all three tests at `http://localhost:8080`
 (34.9 s), including A/B/C, phrase playback and mobile layout with zero page
 errors. Its screenshots and machine verification were refreshed; this is
 functional evidence, not new detector-performance or human-rating evidence.
+
+## 5. Report wording / footer
+
+Replaced the bold Claude shorthand with the requested unbolded disclosure:
+"Boundaries were placed visually from waveform and spectrogram by an AI
+assistant (Claude), without listening; a human spot-check is pending."
+Retained the independence limitation. Section 6.1 now plainly states that v2
+halves A clean alarms (1.341 to 0.671/min) but lowers recall (0.400 to 0.288);
+F1 is effectively unchanged (0.190 to 0.193), not literally identical. V1 stays
+primary. All values were already published; no new scientific numbers or test
+evaluation. Removed "human evidence pending" only from the page footer;
+the honest limitations and final pending box remain.
+
+Two presentation regression tests first failed on the old wording/footer,
+then passed after these edits. No detector/configuration/threshold changes.
+
+Full suite: 279 passed in 26.84 s. Updated PDF rendered twice byte-identically,
+six A4 pages; every final page visually inspected. SHA256:
+`4e6d7fd4f6018e57baeb718bb61b2f3c798a882c5c6b28633926636d1fd6909a`.
+
+## Application readiness for local testing
+
+Live dashboard/API: `http://localhost:8080` (WSL API plus clean Linux Node
+22.14.0/Vite frontend, NOT Docker). All three real-browser tests pass, with no
+page errors, on desktop and mobile viewports. Production bundle builds; the
+known large Plotly bundle warning remains. Live health returns nonnull git
+metadata and the unchanged frozen v1 detector config hash.
+
+The existing fixture helpers were exercised directly, without the report-writing
+driver: real CPU MFA 3.4.2, licensed clean/injected crops only, A for both crops
+and B for the injected crop against the clean one. The genuine human folder,
+consent, notes and Phase10 report hashes were checked unchanged. No human take
+was processed. The injected rushing region was missed in A and B (each: zero
+hits, one miss, zero FP); clean A has no flags. This proves functional completion,
+not useful sensitivity. No tuning followed. Synthetic-only completed jobs:
+
+- [Clean fixture A](http://localhost:8080/results/c8094811702e1bb057799eb2)
+- [Injected fixture A](http://localhost:8080/results/62ed557c7f38790be77c43e2)
+- [Injected fixture B](http://localhost:8080/results/7b661cf50588fec352dba93a)
+
+Browser recording used its synthetic test device; the user's real microphone
+permissions and recording experience are not claimed verified. Genuine A/B
+counts remain gated on the eight recorder confirmations and complete inputs.
+Docker-dependent fresh-clone v2 reproduction/total-disk measurement remain
+blocked; host tests do not substitute for those. Restart/test steps are in NEXT.

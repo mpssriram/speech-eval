@@ -40,8 +40,8 @@ and dependent evidence remain masked. Number expansion retains index mappings.
 [Acoustic audit](../../reports/day01_acoustic_verification.md).
 
 MFA/WhisperX were compared on 37 words / 74 edges after 23 unclear-word exclusions.
-**Claude placed visual boundaries without listening**; independence from model
-templates was asserted, not independently established. Human spot-check is pending.
+Boundaries were placed visually from waveform and spectrogram by an AI assistant (Claude), without listening; a human spot-check is pending.
+Independence from model templates was asserted, not independently established.
 Pooled median differences: MFA 52.0 ms, WhisperX 72.0 ms; MFA is primary. Both
 passed independent CPU rerun identity. These are differences from a limited visual
 reference, not established human accuracy. [Bake-off](../../reports/day01_aligner_bakeoff.md).
@@ -197,7 +197,9 @@ both detectors. Strength-cohort precision/F1 uses shared clean controls and
 homogeneous eligible truth strengths; mixed-strength files are excluded from
 those cohorts but included in full-set recall by severity. Full precision and
 frozen hashes remain in [v2 JSON](../../data/review/detector_v2_test.json).
-A F1 barely changes, recall falls and the test clean-alarm guard still fails.
+For A, v2 halves clean alarms (1.341 to 0.671 per min) but
+lowers recall (0.400 to 0.288). F1 is effectively unchanged (0.190 to 0.193); v1 stays primary.
+The test clean-alarm guard still fails.
 B precision/F1 rise but remain low, with recall falling. V2 is a precision/recall
 trade-off, not established general improvement; uniform recording-wide problems
 can be missed by within-recording contrast. Human takes/ratings were not used.

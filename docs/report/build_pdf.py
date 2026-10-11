@@ -137,7 +137,7 @@ def render(font_dir: Path) -> Path:
     def footer(canvas,doc):
         canvas.setStrokeColor(accent);canvas.line(56,40,A4[0]-56,40)
         canvas.setFont('Body',8);canvas.setFillColor(ink)
-        canvas.drawString(56,27,'Frozen synthetic benchmark - human evidence pending')
+        canvas.drawString(56,27,'Frozen synthetic benchmark')
         canvas.drawRightString(A4[0]-56,27,str(doc.page))
     output=folder/'report.pdf'
     doc=SimpleDocTemplate(str(output),pagesize=A4,invariant=1,leftMargin=56,rightMargin=56,topMargin=48,bottomMargin=55,
