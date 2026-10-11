@@ -1,5 +1,7 @@
 """Confirmed orchestration uses synthetic dictionaries, never recorder ratings."""
 import json
+from pathlib import Path
+import pytest
 from speecheval import human_confirmed_workflow as flow
 
 
@@ -53,3 +55,14 @@ def test_partial_workflow_report_does_not_claim_complete_eight_take_evaluation()
     assert 'INCOMPLETE' in report
     assert 'Eight genuine Voice Memos analysed' not in report
     assert '1 distinct take' in report
+
+
+def test_docker_v2_command_uses_relative_audio_and_frozen_function(tmp_path):
+    audio=tmp_path/'data/audio/hq/current.flac';old=tmp_path/'data/audio/hq/previous.flac'
+    command=flow.v2_docker_command(tmp_path,audio,'gettysburg','B',old,{})
+    assert command[:6]==['docker','compose','exec','-T','api','python']
+    args=json.loads(command[-1])
+    assert args['audio']=='data/audio/hq/current.flac'
+    assert args['previous']=='data/audio/hq/previous.flac'
+    assert 'verify_hashes' in command[-2] and 'analyze_v2' in command[-2]
+    with pytest.raises(ValueError):flow.v2_docker_command(tmp_path,Path('/outside.flac'),'gettysburg','A',None,{})

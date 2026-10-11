@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import logging
+import subprocess
 from pathlib import Path
 import httpx
 import soundfile as sf
@@ -35,6 +36,23 @@ def publish_v2(root: Path, result: dict, source: dict) -> dict:
         if json.loads(path.read_text())!=job:raise ValueError('Existing v2 completed job differs')
     else:save_json(path,job)
     return job
+
+
+def v2_docker_command(root: Path, audio: Path, text_id: str, mode: str,
+                      previous: Path | None, frozen: dict) -> list[str]:
+    """Use the API producer environment, with provenance checks intact, not bypassed."""
+    args={'audio':str(audio.resolve().relative_to(root.resolve())),
+          'text_id':text_id,'mode':mode,
+          'previous':str(previous.resolve().relative_to(root.resolve())) if previous else None,
+          'frozen':frozen}
+    code=('import json,sys; from pathlib import Path; '
+          'from speecheval.evaluate_v2 import verify_hashes; '
+          'from speecheval.detector_v2 import analyze_v2; '
+          'a=json.loads(sys.argv[1]); r=Path.cwd(); verify_hashes(r,a["frozen"]); '
+          'result=analyze_v2(r/a["audio"],a["text_id"],a["mode"],'
+          'previous=r/a["previous"] if a["previous"] else None,root=r); '
+          'print(json.dumps(result,allow_nan=False))')
+    return ['docker','compose','exec','-T','api','python','-c',code,json.dumps(args)]
 
 
 def make_row(root: Path, case: dict, detail: dict, job: dict, alignment: dict,
@@ -131,10 +149,11 @@ def report_text(payload: dict) -> str:
 
 
 def run_confirmed(root: Path, base_url: str, dashboard_url: str | None,
-                  detector: str='both') -> dict:
+                  detector: str='both', v2_runtime: str='host') -> dict:
     """Validate fixed inputs, run real v1 MFA A/B/C, then frozen post-hoc v2 A/B."""
     from speecheval.detector_v2 import analyze_v2
     if detector not in ('v1','v2','both'):raise ValueError('Detector must be v1, v2 or both')
+    if v2_runtime not in ('host','docker'):raise ValueError('V2 runtime must match feature producer: host or docker')
     root=root.resolve();cases,notes=validate_human_inputs(root)
     confirmation_path=root/'data/human/review/confirmation.json'
     confirmation=json.loads(confirmation_path.read_text());verify_inputs(root,confirmation)
@@ -169,13 +188,17 @@ def run_confirmed(root: Path, base_url: str, dashboard_url: str | None,
                         if mode=='B':
                             previous_id=baseline[case['text_id']]['analysis']['recording_id']
                             previous=root/json.loads((root/'data/alignment'/f'{previous_id}.json').read_text())['audio']
-                        v2=analyze_v2(root/alignment['audio'],case['text_id'],mode,previous=previous,root=root)
+                        if v2_runtime=='docker':
+                            v2=json.loads(subprocess.check_output(v2_docker_command(root,root/alignment['audio'],
+                                case['text_id'],mode,previous,confirmation['frozen_code_and_config_hashes']),
+                                cwd=root,text=True,timeout=900))
+                        else:v2=analyze_v2(root/alignment['audio'],case['text_id'],mode,previous=previous,root=root)
                         if v2['recording_id']!=rid:raise ValueError('v2 did not reuse the same MFA evidence')
                         rows.append(make_row(root,case,detail,publish_v2(root,v2,stored),alignment,units,state,qa,'v2',dashboard))
                     prepared=root/'data/human/prepared'/f'{case["take_id"]}.flac';prepared.parent.mkdir(parents=True,exist_ok=True)
                     wave,sr=sf.read(root/alignment['audio']);sf.write(prepared,wave,sr,subtype='PCM_16')
                     _write_json(progress_path,{'results':rows,'blockers':blockers})
-                except (ValueError,TimeoutError,httpx.HTTPError) as exc:
+                except (ValueError,TimeoutError,httpx.HTTPError,subprocess.SubprocessError) as exc:
                     message=f'{case["take_id"]} Mode {mode}: {exc}';LOGGER.exception(message);blockers.append(message)
                     _write_json(progress_path,{'results':rows,'blockers':blockers})
                     path=root/'docs/BLOCKERS.md';entry='\n- Human confirmed workflow: '+message+'\n'
@@ -186,6 +209,7 @@ def run_confirmed(root: Path, base_url: str, dashboard_url: str | None,
     payload={'schema':'human-recorder-confirmed-evaluation/v1','status':'incomplete' if blockers else 'complete',
         'genuine_takes_processed':len({r['take_id'] for r in rows}),
         'input_freeze_commit':'c1a6a02','confirmation_sha256':digest(confirmation_path),
+        'v2_runtime':v2_runtime,
         'threshold_tuning':False,'independent_annotation':False,'rater_responses':0,
         'results':rows,'pooled':pooled(rows),'blockers':blockers}
     _write_json(root/'data/human/evaluation.json',payload)
