@@ -1,5 +1,20 @@
 # Blockers
 
+## 2026-10-11 — V2 fresh-clone Docker rerun and image-size measurement
+
+Docker Desktop startup failed before the Linux engine started. Backend log:
+`initializing Inference manager ... Docker/run/dockerInference: The file cannot
+be accessed by the system`. The endpoint is a zero-length reparse-point socket;
+a recoverable rename also failed with the same access error. No factory reset,
+Docker data deletion, settings rewrite or image pruning was attempted.
+Both WSL `docker version` and Windows `docker.exe version` confirm no usable
+daemon; `docker desktop start` did not restore it. The exact one-shot v2 result
+is safely committed; a frozen reproduction will not consume another test decision.
+Fresh GitHub clone path: `/tmp/speech-eval-v2-3AIBAv/clone`. Restore Docker Desktop
+before rerunning `make reproduce-v2 DATA_ARCHIVE=/absolute/path/to/the/zip` there.
+Live project-image/cache sizes and the complete Docker-inclusive installation
+requirement cannot be measured while the daemon is unavailable; do not estimate.
+
 ## 2026-10-11 — Inherited Mode B progress limitation
 
 V1 and v2 inference compute Mode B progress via Mode A summaries of both takes.

@@ -175,6 +175,14 @@ all six rendered pages were visually inspected. Two renders are byte-identical:
 SHA256 `5f4ab454589d77d43f146715dddb77a49f896363ce05125b12ace339e81a8cea`.
 This is authoring evidence, not another scientific evaluation.
 
+Fresh-clone v2 Docker reproduction is blocked by a Docker Desktop startup failure,
+not a second scientific decision. WSL has no Docker command integration; Windows
+Docker has no Linux-engine pipe. Startup logs identify an inaccessible stale
+`dockerInference` endpoint. Startup and a recoverable endpoint rename failed;
+no reset/deletion or settings change was attempted. The GitHub-clone target is
+`/tmp/speech-eval-v2-3AIBAv/clone`; exact blocker and rerun command are in
+`docs/BLOCKERS.md`. No fresh-clone v2 hash or successful run is claimed yet.
+
 **post-hoc v2; test split was seen with v1, so results are optimistic.**
 
 Frozen commit before test: `95c8f334faf4c134fcbf5b4fa31fda4635f336ea`. One decision-bearing test run; any later numerical runs are requested frozen reproductions, not additional tuning/evaluation decisions.

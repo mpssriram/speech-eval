@@ -10,9 +10,11 @@ Independent review and 267 tests passed. Freeze commit `95c8f33` was pushed befo
 the exactly-one marker-protected test evaluation. V1 stays primary; v2 is secondary
 and post-hoc. A F1 0.190 -> 0.193, recall 0.400 -> 0.288, clean/min 1.341 -> 0.671
 (test guard still fails); B F1 0.035 -> 0.070 with lower recall. No detector,
-evaluator or threshold edits follow test results. Report/PDF verification and
-fresh-clone frozen v2 reproduction are in progress, followed by measured disk
-documentation and tested health metadata.
+evaluator or threshold edits follow test results. Report/PDF verification is
+complete (six pages, repeated identical render, every page inspected).
+Fresh-clone frozen v2 reproduction is blocked by Docker Desktop failing to start;
+see `docs/BLOCKERS.md`. Continuing measured disk documentation and tested health
+metadata without claiming unavailable Docker evidence.
 See `reports/phase11_v2.md` for the protocol and inherited Mode B limitation.
 
 Done: A licensed archive/fetcher, fresh GitHub-clone CPU Docker numerical
