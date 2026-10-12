@@ -1,0 +1,45 @@
+{
+  "alignment_recording_id": "gettysburg__user__input_4b7c30271b2f",
+  "excluded_from_scoring": false,
+  "flaws": [
+    {
+      "canonical_unit": 2,
+      "end": 15.75,
+      "start": 9.68,
+      "type": "monotone",
+      "word_end": 53,
+      "word_start": 30
+    },
+    {
+      "canonical_unit": 7,
+      "end": 40.84,
+      "start": 34.16,
+      "type": "mumbling",
+      "word_end": 138,
+      "word_start": 118
+    },
+    {
+      "canonical_unit": 8,
+      "end": 47.085,
+      "start": 47.055,
+      "type": "missing_pause",
+      "word_end": 160,
+      "word_start": 159
+    },
+    {
+      "canonical_unit": 9,
+      "end": 54.97,
+      "start": 53.71,
+      "type": "dragging",
+      "word_end": 183,
+      "word_start": 180
+    }
+  ],
+  "independent_annotation": false,
+  "raw_offset_s": 0.0,
+  "schema": "human-release-labels/v1",
+  "source": "frozen data/human/evaluation.json; v1 A intended_regions",
+  "take_id": "gettysburg__user__take03",
+  "timeline": "trimmed participant seconds",
+  "unknown_flaws": false
+}

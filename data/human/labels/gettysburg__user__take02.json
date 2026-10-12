@@ -1,0 +1,37 @@
+{
+  "alignment_recording_id": "gettysburg__user__input_91e74acbc922",
+  "excluded_from_scoring": false,
+  "flaws": [
+    {
+      "canonical_unit": 4,
+      "end": 25.01,
+      "start": 19.66,
+      "type": "rushing",
+      "word_end": 88,
+      "word_start": 63
+    },
+    {
+      "canonical_unit": 6,
+      "end": 31.47,
+      "start": 29.9,
+      "type": "awkward_pause",
+      "word_end": 104,
+      "word_start": 103
+    },
+    {
+      "canonical_unit": 8,
+      "end": 47.87,
+      "start": 47.13,
+      "type": "too_quiet",
+      "word_end": 157,
+      "word_start": 154
+    }
+  ],
+  "independent_annotation": false,
+  "raw_offset_s": 0.0,
+  "schema": "human-release-labels/v1",
+  "source": "frozen data/human/evaluation.json; v1 A intended_regions",
+  "take_id": "gettysburg__user__take02",
+  "timeline": "trimmed participant seconds",
+  "unknown_flaws": false
+}

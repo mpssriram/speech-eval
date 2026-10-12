@@ -1,5 +1,19 @@
 # Blockers
 
+## 2026-10-12 — supplied human takes upload is the main dataset
+
+Full anonymous gdown download of the supplied takes ID has 7,586,867,457 bytes
+and SHA256 a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b:
+exactly the immutable main archive. It contains no human WAVs, consent, notes,
+transcripts, labels or human SHA256 list. That link is not a valid takes release
+and is excluded from published download metadata. Upload the separately built
+`data/release/speech-eval-human-takes-v1.zip` (62,520,905 bytes; SHA256
+33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd), copied to
+`C:\python_practice\Speech\data\release\speech-eval-human-takes-v1.zip`.
+Every member matches the repo; repeated archive bytes match. See
+`reports/human_release_verification.json`. Browser download plus
+`--human-from-local` is supported. Main archive bytes are unchanged.
+
 ## Pre-video Docker Desktop startup — resolved 2026-10-12
 
 Docker/WSL were stopped at the start of the pre-video request. Starting the

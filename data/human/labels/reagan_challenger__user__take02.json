@@ -1,0 +1,37 @@
+{
+  "alignment_recording_id": "reagan_challenger__user__input_cf63338562c6",
+  "excluded_from_scoring": false,
+  "flaws": [
+    {
+      "canonical_unit": 10,
+      "end": 37.64,
+      "start": 32.88,
+      "type": "rushing",
+      "word_end": 138,
+      "word_start": 121
+    },
+    {
+      "canonical_unit": 15,
+      "end": 60.89,
+      "start": 59.02,
+      "type": "too_quiet",
+      "word_end": 197,
+      "word_start": 194
+    },
+    {
+      "canonical_unit": 16,
+      "end": 64.69,
+      "start": 63.13,
+      "type": "awkward_pause",
+      "word_end": 202,
+      "word_start": 201
+    }
+  ],
+  "independent_annotation": false,
+  "raw_offset_s": 0.0,
+  "schema": "human-release-labels/v1",
+  "source": "frozen data/human/evaluation.json; v1 A intended_regions",
+  "take_id": "reagan_challenger__user__take02",
+  "timeline": "trimmed participant seconds",
+  "unknown_flaws": false
+}

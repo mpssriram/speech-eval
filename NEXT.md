@@ -10,6 +10,17 @@ Submission deadline: October 13.
    sampled 1 MiB; complete local import verifies the frozen ZIP and payload.
    Human download link withheld pending correction; prepared ZIP metadata is
    published. README/dataset/submission docs contain manual browser fallback.
+2. Takes ZIP verification: downloaded the supplied file with gdown to /tmp.
+   It is byte-identical to the main dataset ZIP (a41a1848..., 7,586,867,457 bytes),
+   with zero human WAVs; all required human-release members are missing.
+   Its link is deliberately withheld. Upload the correct file:
+   `C:\python_practice\Speech\data\release\speech-eval-human-takes-v1.zip`
+   (62,520,905 bytes; SHA256 33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd).
+   Separate builder repeated byte-identically; eight WAVs/transcripts/label files,
+   notes, unchanged consent, review protocol/evaluation and SHA256 list all match
+   repo bytes. Local human import verifies all 33 payloads. Main archive unchanged.
+   Evidence: reports/human_release_verification.json. Builder regression test
+   prevents accidentally targeting the main ZIP. Original consent is retained.
 
 ## Pre-video fixes
 
