@@ -13,7 +13,13 @@ Submission deadline: October 13.
 2. Exact primary hit/demo table: added four A hits and three B hits per version,
    with labelled/detected intervals and actual live API display explanations.
    Video candidate: G02 B larger|sense, 29.900-31.470 s, IoU 1.0.
-3. Replace report screenshots and add genuine results to summary: next.
+3. Report/README screenshots now use genuine G02 B versus own01, selecting
+   the declared larger|sense hit. The old 120.98 s screenshot was licensed
+   LibriVox lv_mk, not an excluded legacy upload; audit is recorded separately.
+   Smoke fixture captures no longer overwrite genuine report screenshots.
+   Page-one summary now includes genuine A/B counts. Six-page PDF repeated
+   byte-identically and all pages inspected. Docker startup resolved by retaining
+   only stale zero-byte IPC directories; no Docker/project data deleted.
 4. Fix waveform label overlap without widening scientific intervals: next.
 5. Final no-spot-check/no-independent-raters wording: next.
 

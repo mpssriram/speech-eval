@@ -1,0 +1,23 @@
+{
+  "schema": "report-screenshot-audit/v1",
+  "previous_report_screenshot": {
+    "job_id": "aaa5f411caf8c68d1f2b6c4e",
+    "recording_id": "gettysburg__lv_mk__orig",
+    "duration_display_s": 120.98,
+    "source": "licensed prepared LibriVox smoke fixture, not recorder audio",
+    "excluded_legacy_upload": false,
+    "evidence": "Live completed API job plus reports/ui_verification.json fixture identity; historical pixels are retained in Git history."
+  },
+  "replacement": {
+    "take_id": "gettysburg__user__take02",
+    "reference_take_id": "gettysburg__user__take01",
+    "job_id": "6d8cbd6dec22ffc8f7827ebc",
+    "mode": "B",
+    "detector": "frozen v1; primary",
+    "hit_type": "awkward_pause",
+    "detected_interval_s": [29.9, 31.47],
+    "label_interval_s": [29.9, 31.47],
+    "screenshots": ["reports/img/ui_results.png", "reports/img/ui_region.png"],
+    "live_verification": "reports/human_ui_verification.json"
+  }
+}

@@ -14,7 +14,7 @@ reference readers or your earlier take.
 
 ::: summary
 Frozen A: precision 0.125, recall 0.400, F1 0.190.
-Frozen B: precision 0.018, recall 0.390, F1 0.035.
+Frozen B: precision 0.018, recall 0.390, F1 0.035. Genuine v1: A 4/13 hits, 77 FP; B 3/13 hits, 60 FP.
 A clean alarms: 1.341/min; dev guard failed (1.777 versus <=0.5/min).
 Release: 1,103 indexed recordings, 36.3 h; repeated scientific hashes match.
 Limits: low precision; genuine labels are recorder-confirmed, not independent; zero rater responses.
@@ -250,14 +250,14 @@ reader differences, counted as false alarms because unlabelled, never hits.
 
 # 8. Dashboard
 
-The results view combines the waveform, flagged spans, rubric scores and generated
-explanations. Selecting a region isolates its words and supports participant and
-same-words baseline playback. Screenshots are from the verified real dashboard,
-not new performance measurements. [Browser checks](../../reports/phase09_ui.md).
+Both screenshots show genuine Gettysburg take02 in frozen v1 Mode B versus
+own take01: the declared larger|sense hit at 29.90-31.47 s, with waveform,
+scores, measured explanation and same-words playback.
+[Genuine browser provenance](../../reports/human_ui_verification.json).
 
-![Selected flaw region and same-words playback controls](../../reports/img/ui_region.png)
+![Selected flaw region: genuine take02 vs take01, declared pause hit](../../reports/img/ui_region.png)
 
-![Dashboard results: waveform and score card](../../reports/img/ui_results.png)
+![Dashboard results: genuine Gettysburg take02 Mode B, waveform and score card](../../reports/img/ui_results.png)
 
 # 9. Limitations and future work
 

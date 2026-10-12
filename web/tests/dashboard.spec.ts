@@ -48,7 +48,7 @@ test('real API upload, evidence, exact phrase playback and Modes A B C',async({p
   await expect(page.getByTestId('waveform').locator('[part~="region"]').first()).toBeVisible();
   await expect(page.locator('.results-heading')).toContainText('Mode A');
   await expect(page.getByTestId('feature-chart').locator('.main-svg').first()).toBeVisible();
-  await page.screenshot({path:reportPath('img/ui_results.png'),fullPage:true});
+  await page.screenshot({path:reportPath('img/smoke_results.png'),fullPage:true});
   const cards=page.getByTestId('flaw-card');
   await expect(cards.first().locator('p')).toContainText(/\d.*s/);
   // Real API presentation must not leak scientific notation or uncapped SD.
@@ -76,7 +76,7 @@ test('real API upload, evidence, exact phrase playback and Modes A B C',async({p
   await expect(page.getByRole('alert')).toHaveCount(0);
   await page.getByRole('tab',{name:'Pauses',exact:true}).click();
   await page.getByRole('banner').scrollIntoViewIfNeeded();
-  await page.screenshot({path:reportPath('img/ui_region.png'),fullPage:true});
+  await page.screenshot({path:reportPath('img/smoke_region.png'),fullPage:true});
   await page.getByRole('button',{name:'New analysis',exact:true}).click();
   await page.getByLabel('Comparison').selectOption('B');
   await expect(page.getByLabel('Previous take').locator('option')).not.toHaveCount(1);
@@ -106,7 +106,7 @@ test('real API upload, evidence, exact phrase playback and Modes A B C',async({p
   fs.writeFileSync(reportPath('ui_verification.json'),JSON.stringify({
     schema:'ui-verification/v1',browser:browser.version(),fixture:{recording_id:'gettysburg__lv_mk__orig',sha256:speechFixture().sha256},
     modes:results.map(j=>({mode:j.analysis.mode,analysis_id:j.analysis_id,score:j.analysis.scores.overall,regions:j.analysis.regions.length,status:j.status})),
-    screenshots:['ui_upload.png','ui_results.png','ui_region.png','ui_modeB.png','ui_modeC.png'],page_errors:errors,
+    screenshots:['ui_upload.png','smoke_results.png','smoke_region.png','ui_modeB.png','ui_modeC.png'],page_errors:errors,
     elapsed_seconds:Number(((Date.now()-started)/1000).toFixed(2)),viewport:{width:1440,height:1000},mobile:{width:390,height:844},
   },null,2)+'\n');
 });

@@ -7,7 +7,11 @@ missing pause. Built for Track C of the Multimodal AI Hackathon 2026.
 This is an experimental delivery benchmark, not a validated judgment of speaking
 quality. The dev clean-alarm guard failed; genuine human validation is pending.
 
-![Dashboard](reports/img/ui_results.png)
+![Genuine Gettysburg take02 versus own take01, Mode B](reports/img/ui_results.png)
+
+This screenshot uses the recorder's genuine take02 in frozen v1 Mode B against
+take01, not a LibriVox smoke-test upload. The selected declared awkward pause is
+29.90-31.47 s at larger|sense. [Screenshot provenance](reports/human_ui_verification.json).
 
 ## Quickstart
 

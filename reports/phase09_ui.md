@@ -60,8 +60,14 @@ activated: the recording test uses Chromium's isolated fake audio device.
 ## Screenshots
 
 ![Upload](img/ui_upload.png)
-![Mode A results](img/ui_results.png)
-![Selected region and exact baseline playback](img/ui_region.png)
+The current report/README screenshots below now show genuine recorder
+Gettysburg take02 versus own take01 in frozen v1 Mode B, not this historical
+Mode-A LibriVox smoke fixture. [Current provenance](human_ui_verification.json).
+The smoke test saves its fixture screenshots separately as smoke_results.png
+and smoke_region.png so it cannot overwrite genuine evidence.
+
+![Genuine Mode B results](img/ui_results.png)
+![Genuine declared pause hit and own-take baseline playback](img/ui_region.png)
 ![Mode B](img/ui_modeB.png)
 ![Mode C](img/ui_modeC.png)
 

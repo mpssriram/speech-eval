@@ -120,11 +120,12 @@ def render(font_dir: Path) -> Path:
         if line.startswith('!['):
             match=re.fullmatch(r'!\[(.*?)\]\((.*?)\)',line)
             path=(folder/match.group(2)).resolve()
-            viewport={'ui_results.png':(180,780),'ui_region.png':(1560,1950)}.get(path.name)
+            viewport={'ui_results.png':(180,780)}.get(path.name)
             if viewport:image=ScreenshotExcerpt(path,A4[0]-112,*viewport)
             else:
                 image=Image(str(path))
-                scale=min((A4[0]-112)/image.imageWidth,240/image.imageHeight)
+                max_height=120 if path.name=='ui_region.png' else 240
+                scale=min((A4[0]-112)/image.imageWidth,max_height/image.imageHeight)
                 image.drawWidth=image.imageWidth*scale;image.drawHeight=image.imageHeight*scale
             caption=f'[{match.group(1)}'+(' (excerpt; full screenshot)' if viewport else '')+f']({match.group(2)})'
             story.append(KeepTogether([image,paragraph(caption,small)]));i+=1;continue

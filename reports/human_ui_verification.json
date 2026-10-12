@@ -1,0 +1,24 @@
+{
+  "schema": "human-ui-verification/v1",
+  "source": "genuine recorder take02 vs own take01",
+  "job_id": "6d8cbd6dec22ffc8f7827ebc",
+  "recording_id": "gettysburg__user__input_91e74acbc922",
+  "mode": "B",
+  "duration_s": 83.03,
+  "detected_interval_s": [
+    29.9,
+    31.47
+  ],
+  "label_interval_s": [
+    29.9,
+    31.47
+  ],
+  "primary_iou": 1,
+  "explanation": "29.90–31.47 s, \"larger sense,\": you paused 1.57 s between \"larger\" and \"sense,\", where your previous take had no pause (1.57 s longer, more than 10 SD above). It breaks the sentence.",
+  "api_raw_audio_sha256": "a889f28475f52532bfb1368f5310466d5c3ab925a6a0dc14664c124cfc42817f",
+  "screenshots": {
+    "ui_results.png": "ae84fc20d414e358ae0fc526521e92e0ef106f2166c4a921383cf1ca27722ebb",
+    "ui_region.png": "bc9106233d5db4f415b07252f4d03e0630cbea07568c393c395c9d9b07c75f10"
+  },
+  "page_errors": []
+}
