@@ -40,7 +40,7 @@ and dependent evidence remain masked. Number expansion retains index mappings.
 [Acoustic audit](../../reports/day01_acoustic_verification.md).
 
 MFA/WhisperX were compared on 37 words / 74 edges after 23 unclear-word exclusions.
-Boundaries were placed visually from waveform and spectrogram by an AI assistant (Claude), without listening; a human spot-check is pending.
+Boundaries were placed visually from waveform and spectrogram by an AI assistant (Claude), without listening; no human spot-check was done.
 Independence from model templates was asserted, not independently established.
 Pooled median differences: MFA 52.0 ms, WhisperX 72.0 ms; MFA is primary. Both
 passed independent CPU rerun identity. These are differences from a limited visual
@@ -141,9 +141,9 @@ The report gives per-type, not aggregate, monotonicity:
 | too_quiet | -0.71 | 85.7 | 3 |
 
 Each type has seven complete series. Constant ranks have undefined Spearman;
-non-increasing alone is not sensitivity. Human agreement is pending: zero
-independent responses. The blind pack/scripts are ready;
-AI and recorder self-ratings are not used as independent rater data. The form asks overall
+non-increasing alone is not sensitivity. Human agreement was not measured: no
+independent raters were available; no AI or self-ratings were used.
+The blind pack/scripts are ready. The form asks overall
 delivery 1–5, flaw type(s) and approximate time, not five category ratings. Scripts
 compute system–mean-human/per-rater Spearman, mean defined pairwise human Spearman
 and exact flaw-set agreement with denominators; no fabricated responses or CIs.
@@ -287,7 +287,6 @@ in the original JSON; display rounding does not change them.
 
 ::: pending
 Pending items
-Independent agreement pending (zero responses); human alignment spot-check.
 Archive upload URL, author confirmation and recorded/published video URL.
 Owner-confirmed formal code/annotation licence files; total disk requirement.
 Unreported aggregate severity/C-F1 and pitch-improvement values remain unclaimed.

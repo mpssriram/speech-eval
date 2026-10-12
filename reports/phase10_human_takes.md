@@ -9,7 +9,7 @@ The predeclared six scored takes contain 13 declared flaws. Both spontaneous tak
 Localized spans are fixed from MFA word times: larger|sense, were|daring; units 8/9 and 14/15; last four words for trail-off; have thus far for dragging; whole unit otherwise. Gaps below 30 ms use a centred 30 ms event, declared before inference to match the frozen detector event representation. No detection results are used to place labels.
 Primary: same type, one-to-one greedy IoU ≥ 0.3 for all types. Historical pause policy additionally uses pause-centre distance ≤ 0.25 s. Secondary: same type, any positive overlap with the labelled canonical unit, one-to-one. Raw/trim offsets and exact spans are in `data/human/evaluation.json`.
 Native 48 kHz mono PCM16 raw WAVs and original ALAC files remain byte-unchanged. Upload conversion is 44.1 kHz mono PCM16, without gain, loudness normalization or filtering; prepared audio is lossless FLAC. Import QA: `data/human/import_manifest.json`. No detector thresholds, bins, weights or rules were tuned on these takes.
-Independent human agreement is pending: the rating pack and scripts are ready, zero responses. No AI or self-ratings are rater data. Reagan has one expert reader, not a multi-reader empirical distribution.
+Human agreement was not measured: no independent raters were available; no AI or self-ratings were used. The rating pack/scripts are ready for future independent collection, with zero responses. Reagan has one expert reader, not a multi-reader empirical distribution.
 
 ## Frozen v1 — primary
 
@@ -81,6 +81,7 @@ Re-run from WSL `~/speech-eval` with the existing Docker API healthy:
 ```sh
 env -u PYTHONPATH ~/.local/bin/uv run python scripts/prepare_human_confirmation.py
 env -u PYTHONPATH ~/.local/bin/uv run python scripts/analyze_human.py --detector both --v2-runtime docker
+env -u PYTHONPATH ~/.local/bin/uv run python scripts/report_human_demo.py --hits
 ```
 
 ## False-alarm breakdown (primary IoU >=0.3)

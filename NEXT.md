@@ -28,7 +28,14 @@ Submission deadline: October 13.
    Fresh read-only review: no Critical/Important issues. Deferred minor:
    the 390px test's proof output currently assumes the desktop-width test ran
    first; use the full suite to refresh both entries, rather than a selected test.
-5. Final no-spot-check/no-independent-raters wording: next.
+5. Final wording now states no human spot-check was done and human agreement
+   was not measured: no independent raters were available; no AI/self-ratings.
+   Active report, README, dataset/rating/Docker docs, genuine reports and video
+   script are consistent. Historic frozen reports/protocol/hash manifests remain
+   unchanged; they describe their original state, not new human validation.
+   New diagnostics/extended Phase10 report repeated byte-identically. All133
+   original non-document workflow artifacts still match the frozen hash map;
+   only the narrative Phase10 document was intentionally supplemented.
 
 ## Genuine takes — complete
 
@@ -78,7 +85,7 @@ spans, score/flag evidence and 26 dashboard links: `data/human/evaluation.json`.
 Applied transcript insertions/omissions: `data/human/review/TRANSCRIPT_DIFFS.md`.
 Private audio stays git-ignored and outside the public archive.
 
-Repeated genuine workflow artifacts are byte-identical (134 outputs; retained
+Original genuine workflow artifacts repeated byte-identically (134 outputs; retained
 MFA cache, not independent alignment-accuracy evidence). All 26 completed jobs
 are in API history with working tracks; eight genuine participant audio
 endpoints work. `data/human/verification.json` contains the hashes/checks.
@@ -109,6 +116,7 @@ With the API healthy, repeat the genuine workflow without editing inputs:
 cd ~/speech-eval
 env -u PYTHONPATH ~/.local/bin/uv run python scripts/prepare_human_confirmation.py
 env -u PYTHONPATH ~/.local/bin/uv run python scripts/analyze_human.py --detector both --v2-runtime docker
+env -u PYTHONPATH ~/.local/bin/uv run python scripts/report_human_demo.py --hits
 ```
 
 ## Previously verified
@@ -135,12 +143,13 @@ Docker reproduction. The human evidence is separate and private.
 
 ## Needs other people
 
-1. Independent human agreement is pending: zero responses. Pack/scripts and
+1. Human agreement was not measured: no independent raters were available;
+   no AI or self-ratings were used. Zero responses. Pack/scripts and
    `data/rating_pack/INSTRUCTIONS.md` are ready (about 15 minutes). Future
    agreement measurement needs independent raters' CSVs. Share only the blind
    pack, not answer keys/system scores. Never use AI or self-ratings as rater data.
-2. Human listening/spot-check of the visually placed alignment reference and,
-   if stronger genuine evidence is needed, independent flaw/transcript review.
+2. No human spot-check was done on the visually placed alignment reference.
+   Future stronger genuine evidence needs independent flaw/transcript review.
    Recorder confirmation is not independent annotation.
 
 ## Remaining technical limitations

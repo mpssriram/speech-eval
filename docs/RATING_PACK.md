@@ -57,4 +57,6 @@ limitation, not independent short-clip inference. Tiny convenience sampling,
 synthetic edits and correlated excerpts cannot establish population validity.
 
 Actual export repeat/hash evidence is in
-`data/rating_pack_private/verification.json`. Real agreement remains pending.
+`data/rating_pack_private/verification.json`. Human agreement was not measured:
+no independent raters were available; no AI or self-ratings were used. The pack
+remains ready for future independent collection, not evidence of agreement.

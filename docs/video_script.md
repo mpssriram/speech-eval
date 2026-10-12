@@ -57,17 +57,20 @@ human performance.” [Mode C](../reports/phase08_mode_c.md).
 
 ## 5:00–6:00 — rehearsal workflow
 
-Own takes: show actual A/B jobs and supported changes only. Until then:
-“Real CPU MFA and the rehearsal workflow have completed on a synthetic example;
-this is not my improvement.” Show B comparison and C's labelled number/end
-guidelines. Do not claim investor-pitch progress or own-take flag counts:
-`{{n_flags_take1}}`, `{{k}}`, `{{n_flags_takek}}` pending.
+Show genuine Gettysburg take02 Mode B versus take01, job
+`6d8cbd6dec22ffc8f7827ebc`. Select the larger|sense awkward pause at
+29.90-31.47 s and show Yours / Baseline (same words) playback.
+“This matches the pause I confirmed performing. It is not independent annotation
+or proof of overall improvement. Across six scored takes, frozen v1 Mode A hit
+4 of 13 labels with 77 unmatched flags; Mode B hit 3 of 13 with 60 unmatched flags.”
+Both mixed take04s are unknown and excluded from scoring, not clean negatives.
 [Phase10](../reports/phase10_human_takes.md).
 
 ## 6:00–6:30 — limits and reproduction
 
 “Edits approximate real flaws. Our visual alignment reference was placed without
-listening; its human spot-check is pending. C is heuristic. Fresh GitHub-clone
+listening; no human spot-check was done. Human agreement was not measured: no
+independent raters were available; no AI or self-ratings were used. C is heuristic. Fresh GitHub-clone
 Docker reproduction matched 563 scientific outputs byte-for-byte twice. The
 archive is built but public upload is pending; local import and hashes are documented.”
 [Scope](../reports/reproducibility.md).

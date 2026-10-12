@@ -169,8 +169,9 @@ documented Docker workflow. No post-test producer-path change was made.
 
 Synthetic edits approximate real flaws; LibriVox readers are not ideal orators;
 English-only proxies do not establish accent fairness; Mode C is heuristic.
-Claude annotated the visual alignment reference without listening; human
-spot-check/error quantification remain pending. Rubric scores are designed
+Claude annotated the visual alignment reference without listening; no human
+spot-check was done. Human agreement was not measured: no independent raters
+were available; no AI or self-ratings were used. Rubric scores are designed
 penalties, not a validated perceptual scale or causal proof. [Next actions](NEXT.md).
 
 Audio has source-specific public-domain evidence **in the USA**, not a blanket

@@ -183,8 +183,8 @@ the frozen archive does not silently grow.
 
 The [blind rating pack](RATING_PACK.md) is a separately reproducible convenience
 sample of licensed train-source excerpts. It is not counted again as independent
-dataset recordings. Actual independent ratings remain pending; no synthetic
-rating substitutes or human-agreement claim are supplied.
+dataset recordings. Human agreement was not measured: no independent raters
+were available; no AI or self-ratings were used.
 
 ## Known limitations and intended use
 
@@ -194,7 +194,7 @@ rating substitutes or human-agreement claim are supplied.
   microphones and selected speakers limit generalisation; English-only features
   and syllable lookup are not accent-fairness evidence.
 - Visual word reference was annotated by Claude without listening. The human
-  spot-check is pending, and model independence was asserted, not independently
+  spot-check was not done, and model independence was asserted, not independently
   established. Small unclear-word-excluded samples cannot support exact word-onset
   truth; [alignment bake-off](../reports/day01_aligner_bakeoff.md).
 - Pitch/loudness normalisation reduces voice/microphone offsets but cannot remove

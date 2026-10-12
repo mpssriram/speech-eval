@@ -97,9 +97,10 @@ inputs or the first differing field/number cause a nonzero exit. Evidence goes t
 
 This is numerical reproduction from the frozen measured dataset, not a claim of
 end-to-end raw download/ASR reconstruction. Publication of the built archive still
-requires its user-provided URL. Human
-agreement remains pending genuine recordings, consent, labels and independent
-ratings; there are no human numbers to reproduce yet.
+requires its user-provided URL. Genuine consented recorder-confirmed A/B counts
+are now in Phase10, separate from this public-dataset reproduction; private audio
+is not included in the archive. Human agreement was not measured: no independent
+raters were available; no AI or self-ratings were used.
 
 ## Verified fresh-clone run
 

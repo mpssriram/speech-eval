@@ -89,8 +89,8 @@ V1 stays primary. post-hoc v2; test split was seen with v1, so results are optim
 Counts and all 26 genuine result links are in `phase10_human_takes.md`;
 full precision/provenance is in `data/human/evaluation.json`. No rehearsal
 improvement or independently perceived quality is established by these counts.
-Independent agreement is pending, with zero responses; no AI/self-ratings.
+Human agreement was not measured: no independent raters were available; no AI or self-ratings were used.
 
 ## Limitations
 
-File-level bootstrap CIs above use 1,000 resamples with a fixed seed. Reference models use train speakers only. Uncertain truth regions and overlapping predictions are excluded symmetrically. Visual gold boundaries have a pending human spot-check. Genuine labels are recorder confirmation, not independent annotation; independent human agreement remains pending. No human CIs or invented severity strata are reported.
+File-level bootstrap CIs above use 1,000 resamples with a fixed seed. Reference models use train speakers only. Uncertain truth regions and overlapping predictions are excluded symmetrically. Visual gold boundaries were placed without listening; no human spot-check was done. Genuine labels are recorder confirmation, not independent annotation. Human agreement was not measured: no independent raters were available; no AI or self-ratings were used. No human CIs or invented severity strata are reported.
