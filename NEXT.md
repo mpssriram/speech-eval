@@ -21,6 +21,12 @@ Submission deadline: October 13.
    repo bytes. Local human import verifies all 33 payloads. Main archive unchanged.
    Evidence: reports/human_release_verification.json. Builder regression test
    prevents accidentally targeting the main ZIP. Original consent is retained.
+3. Author/licences: Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic)
+   and Codex (OpenAI). LICENSE grants MIT for code; LICENSE-DATA grants CC BY 4.0
+   for labels, annotations, documentation and the author's recordings, with the
+   original consent unchanged. Source audio remains public domain per source.
+   README, dataset card and report source updated. PDF renderer now reads the
+   source author for visible credit and PDF metadata; final regeneration is item 6.
 
 ## Pre-video fixes
 

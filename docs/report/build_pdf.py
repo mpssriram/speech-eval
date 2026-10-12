@@ -67,10 +67,14 @@ def render(font_dir: Path) -> Path:
         return re.sub(r'\[([^\[\]]+)\]\(([^)]+)\)',link,text)
 
     def paragraph(text,style=body):return Paragraph(inline(text),style)
+    text=(folder/'report.md').read_text(encoding='utf-8')
+    author_match=re.search(r'^author: "([^"]+)"$',text,re.M)
+    if author_match is None:raise ValueError('Report author metadata is required')
+    author=author_match.group(1)
     story += [paragraph('Speech-Eval',title),paragraph('Contrastive Speech Delivery Analytics with Temporal Flaw Grounding',head),
               paragraph('Multimodal AI Hackathon 2026 - Track C | October 2026',small),
+              paragraph(author,small),
               Spacer(1,8)]
-    text=(folder/'report.md').read_text(encoding='utf-8')
     text=re.sub(r'^---\n.*?\n---\n','',text,flags=re.S)
     lines=text.splitlines();i=0
     while i<len(lines):
@@ -142,7 +146,7 @@ def render(font_dir: Path) -> Path:
         canvas.drawRightString(A4[0]-56,27,str(doc.page))
     output=folder/'report.pdf'
     doc=SimpleDocTemplate(str(output),pagesize=A4,invariant=1,leftMargin=56,rightMargin=56,topMargin=48,bottomMargin=55,
-        title='Speech-Eval: Contrastive Speech Delivery Analytics',author='Author pending; Claude and Codex assistance')
+        title='Speech-Eval: Contrastive Speech Delivery Analytics',author=author)
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
     count=len(PdfReader(output).pages)
     if count>6:raise ValueError(f'Six-page budget exceeded: {count} pages')

@@ -215,5 +215,8 @@ penalties, not a validated perceptual scale or causal proof. [Next actions](NEXT
 
 Audio has source-specific public-domain evidence **in the USA**, not a blanket
 worldwide licence. [Evidence](data/release/licences.json), [card](docs/DATASET.md).
-Draft MIT code and CC BY 4.0 annotation/documentation grants await formal owner
-licence files and attribution, so those grants are not asserted here.
+Author: **Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic) and Codex (OpenAI)**.
+Code: [MIT](LICENSE). Labels, annotations, docs and the author's recordings:
+[CC BY 4.0](LICENSE-DATA), with original [recording consent](data/human/CONSENT.md).
+Source audio retains its public-domain status per source. These grants were
+explicitly authorised by the owner on 2026-10-12.

@@ -71,8 +71,10 @@ Per-recording identifiers, download URLs, hashes, reader slugs and durations:
 `data/release/licences.json`; every audio member maps to its approved source in
 `inventory.json`. Unverified/inactive sources, the legacy participant fixture,
 application uploads and unconsented voice data are excluded; [blockers](BLOCKERS.md)
-name the exact cases. Code and annotation/documentation licence grants are not
-invented by this card; formal repository licence files remain an owner decision.
+name the exact cases. Author: **Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic) and Codex (OpenAI)**.
+Project code is [MIT](../LICENSE); labels, annotations, documentation and the
+author's recordings are [CC BY 4.0](../LICENSE-DATA), with
+[consent](../data/human/CONSENT.md). Source audio remains public domain per source.
 
 ## Counts and duration
 
@@ -213,14 +215,14 @@ does not promise every historical intermediate or raw-to-ASR rerun. Additional
 
 ## Human data and rating pack
 
-**No genuine user takes are included.** `data/human/CONSENT.md` and the requested
-WAVs are absent. The synthetic workflow-verification JSON is engineering evidence,
-not a human recording or human result. This excludes new user takes, not the
-licensed volunteer/historical human speech
-that constitutes the original source corpus. Future analysis requires explicit consent,
-as-spoken transcripts and intended notes; [human workflow](HUMAN_TAKES.md).
-Even after consent, a new human release requires explicit packaging/provenance;
-the frozen archive does not silently grow.
+The immutable main archive excludes genuine user takes. Eight consented WAVs,
+notes, transcripts, copied frozen timed labels and their SHA256 list are packaged
+separately in `speech-eval-human-takes-v1.zip` (see Download releases above).
+Take04 flaws are unknown and excluded from hit/miss/FP scoring. Labels are
+recorder-confirmed, not independently annotated; transcript fidelity was not
+independently checked. The original consent and all input hashes are preserved.
+The supplied takes link contains the main dataset, so a corrected upload is
+required. The frozen main ZIP has not been changed. [Human workflow](HUMAN_TAKES.md).
 
 The [blind rating pack](RATING_PACK.md) is a separately reproducible convenience
 sample of licensed train-source excerpts. It is not counted again as independent

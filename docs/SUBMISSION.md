@@ -55,7 +55,7 @@ different file. Evidence: `reports/drive_download_probe.json` and
 - [ ] Confirm repository is public at submission time.
 - [ ] Record/publish a 3–10 minute video and supply its working link.
 - [ ] Regenerate final PDF (at most six pages) after all metadata updates.
-- [ ] Final author and licence files present.
+- [x] Author Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic) and Codex (OpenAI); MIT code and CC BY 4.0 data/docs/recordings; consent retained.
 
 Prior fresh-clone CPU Docker quick/full reproduction and repeated 563 scientific
 hash checks are recorded in `reports/reproducibility.md`; the published numbers

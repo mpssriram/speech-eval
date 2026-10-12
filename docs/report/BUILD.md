@@ -20,5 +20,6 @@ source change, render all pages with a PDF viewer or Poppler and inspect every
 page for clipping, overlap and chart readability; the structural check cannot
 replace that inspection. `verification.json` describes the last checked build.
 
-The author and independent human evidence remain pending. See
+Author/affiliation and formal licences are confirmed. Independent ratings and
+alignment spot-check remain absent; the human upload needs correction. See
 `../TODO_PLACEHOLDERS.md` and `../../NEXT.md` before publication.

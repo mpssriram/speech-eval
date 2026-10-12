@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 import subprocess
 import sys
@@ -30,13 +31,17 @@ def verify(font_dir: Path) -> dict:
         assert abs(float(page.mediabox.width) - 595.2756) < 0.01
         assert abs(float(page.mediabox.height) - 841.8898) < 0.01
         assert "{{" not in page.extract_text(), "Unrendered placeholder"
-    assert "pending" in reader.metadata.author.lower(), "Unconfirmed author presented as final"
+    expected_author = re.search(r'^author: "([^"]+)"$',
+        (folder / 'report.md').read_text(encoding='utf-8'), re.M).group(1)
+    assert reader.metadata.author == expected_author, "PDF author differs from report source"
+    assert expected_author in reader.pages[0].extract_text(), "Visible author missing"
     return {
         "pdf_sha256": hashes[0],
         "repeat_sha256": hashes[1],
         "pages": len(reader.pages),
         "page_format": "A4",
         "body_font_pt": 11,
+        "author": reader.metadata.author,
         "checks": "repeat bytes; A4; at most six pages; page-one summary; screenshots; one pending box",
         "visual_check": "See last final-render inspection; structural checks alone do not establish layout quality",
     }

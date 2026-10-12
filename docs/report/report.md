@@ -1,7 +1,7 @@
 ---
 title: "Speech-Eval: Contrastive Speech Delivery Analytics with Temporal Flaw Grounding"
 subtitle: "Multimodal AI Hackathon 2026, Track C"
-author: "Author pending confirmation; with Claude and Codex"
+author: "Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic) and Codex (OpenAI)"
 date: "October 2026"
 ---
 
@@ -281,14 +281,19 @@ Hashes: `data/release/reproduction_hashes.json` and reproduction report. The nar
 legacy-fixture gate exemption is a disclosed post-hoc release adapter, not a
 detector change; other historical inputs/code are verified.
 
+Author: Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic) and Codex (OpenAI).
+Code: [MIT](../../LICENSE); labels, annotations, docs and my recordings:
+[CC BY 4.0](../../LICENSE-DATA), with [consent](../../data/human/CONSENT.md).
+Source audio remains public domain per source.
+
 Audio attribution: LibriVox volunteers and JFK/Reagan institutional collections;
 source-specific USA public-domain evidence. Full-precision scientific values remain
 in the original JSON; display rounding does not change them.
 
 ::: pending
 Pending items
-Archive upload URL, author confirmation and recorded/published video URL.
-Owner-confirmed formal code/annotation licence files; total disk requirement.
+Corrected human-takes upload and recorded/published video URL.
+Reproduction disk snapshot is reported; clean-build peak remains unmeasured.
 Unreported aggregate severity/C-F1 and pitch-improvement values remain unclaimed.
 See [NEXT](../../NEXT.md) and [placeholder inventory](../TODO_PLACEHOLDERS.md).
 :::
