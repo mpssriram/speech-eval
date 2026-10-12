@@ -1,5 +1,14 @@
 # Blockers
 
+## Human publication — owner-confirmed, 2026-10-12
+
+The owner supplied `1mKosHQuSM9WXM-x6HUyDOZRhACzDwIgP`, confirms the exact prepared human ZIP, and
+explicitly waived another download/remote checksum check. Config and public docs
+now use this link with status owner_confirmed and unchanged expected checksum
+pins; future downloads still fail on any mismatch. Takes publication is no longer
+pending. Earlier rejected uploads below are historical. Both ZIPs remain unchanged.
+No new remote verification is claimed. The replacement folder URL is optional.
+
 ## New Drive first link — resolved main file, 2026-10-12
 
 Full anonymous gdown download of `1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm` matches the immutable main

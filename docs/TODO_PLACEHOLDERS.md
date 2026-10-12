@@ -8,7 +8,7 @@ leaving a misleading sentence around a blank number.
 | Original placeholder | Why not filled / action |
 |---|---|
 | `{{disk_gb}}` | Resolved measured image + archive + unpacked payload snapshot: 32.170019620 GB in reports/reproduction_disk_usage.json. Clean-build peak remains unmeasured; no minimum is inferred. |
-| `{{dataset_url}}` | Resolved: verified new main Drive ID in configs/dataset.yaml. Old folder retired; matching human-takes and replacement folder links awaited. |
+| `{{dataset_url}}` | Resolved: verified new main Drive ID in configs/dataset.yaml. Owner-confirmed human-takes link also configured; old folder retired, replacement folder optional. |
 | `{{author name}}` | Resolved: Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic) and Codex (OpenAI). |
 | `{{video_url}}` | Video recording/publication not supplied. |
 | `{{example_explanation}}` | Resolved by the explicitly requested verbatim correct-hit example from analysis 86964ad39ead in report section 4, with file ID and measured values. |
@@ -38,5 +38,5 @@ leaving a misleading sentence around a blank number.
 
 Formal owner grants are now in LICENSE (MIT code) and LICENSE-DATA (CC BY 4.0
 labels, annotations, docs and consented recordings). Source audio remains public
-domain per source. Remaining publication items are the corrected human takes
-upload and recorded video. No independent rater data or spot-check is invented.
+domain per source. Both archive links are configured; the remaining publication item is
+the recorded video. No independent rater data or spot-check is invented.

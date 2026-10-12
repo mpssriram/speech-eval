@@ -53,7 +53,7 @@ docker compose run --rm --build --no-deps \
 Both reproduction targets run `fetch-data` first. Once all installed files verify,
 no download is needed. Drive file IDs are configured in dataset.yaml; the
 archive SHA and committed inventory pin the content. Main publication is complete;
-the separate human release awaits a corrected upload. `--from-local` verifies the
+the separate human release has an owner-confirmed link (--with-human-takes). `--from-local` verifies the
 same outer SHA, complete inventory and all payload SHA-256s. Unsafe ZIP paths,
 symlinks, duplicates and differing existing files are rejected before installing
 anything. Identical existing files (including immutable raw audio) are untouched.

@@ -2,6 +2,24 @@
 
 Submission deadline: October 13.
 
+## Human-takes Drive link — owner-confirmed
+
+Owner confirms the exact prepared ZIP at [1mKosHQuSM9WXM-x6HUyDOZRhACzDwIgP](https://drive.google.com/file/d/1mKosHQuSM9WXM-x6HUyDOZRhACzDwIgP/view?usp=drive_link) and explicitly
+waives re-download/remote verification. Config status is owner_confirmed,
+not a claim of an independently checked remote SHA256. Expected pins stay
+62,520,905 bytes / 33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd; neither ZIP changed.
+Fetcher accepts this publication status and still checks every future downloaded
+archive and payload before import. Config, README, dataset/submission docs and
+report updated; takes link removed from the report's Pending items. Evidence:
+reports/human_drive_owner_confirmation.json. Older failed-upload and main-link
+entries below are historical. Both direct archive links are now configured.
+314 host tests passed. `fetch_data.py --with-human-takes` succeeded on installed
+data (13,812 main + 33 human files; zero downloads or installs). New tiny-fixture
+tests prove owner-confirmed imports still reject wrong hashes. All 17 frozen
+code/config hashes unchanged. PDF: six A4 pages, two byte-identical renders,
+layout inspected; SHA256 `2cb6d9871ad2f4f7d8ba30be440bd40f07d2bbbb8e20fb1e177601188802e7ab`.
+Docker stays stopped; shut down WSL after push to release RAM.
+
 ## New Drive migration — first link verified
 
 The new Drive ID `1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm` is **speech-eval-dataset-v1.zip**:
@@ -213,17 +231,11 @@ does not change those frozen scientific outputs.
 
 ## Needs user
 
-1. Provide a new Drive link for the matching separate human release:
-   `C:/python_practice/Speech/data/release/speech-eval-human-takes-v1.zip`
-   (62,520,905 bytes; SHA256
-   33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd),
-   share as "Anyone with the link" and provide its replacement Drive ID.
-   Main ZIP publication and author/licence confirmation are DONE.
-2. Record/publish the final demo video and supply the working URL. Check the
-   replacement Drive folder once its new URL is supplied; the old folder is retired.
-3. Optional: try the app with your microphone/files. Transcript acoustic fidelity
-   can be reviewed later; rule-built texts and recorder-confirmed labels are
-   explicitly disclosed. Genuine analysis is complete.
+1. Record/publish the final demo video and supply the working URL.
+2. Optional: provide the new Drive folder URL. Both direct archive links work
+   through config; a folder URL is not required by the fetcher.
+3. Optional: try the app with your microphone/files. Genuine analysis is complete;
+   rule-built transcript and recorder-confirmed label limitations remain explicit.
 
 ## Needs other people
 

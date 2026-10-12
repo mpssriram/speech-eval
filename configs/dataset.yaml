@@ -7,13 +7,15 @@
   "human_takes": {
     "archive": "speech-eval-human-takes-v1.zip",
     "bytes": 62520905,
-    "drive_file_id": null,
+    "confirmation_source": "owner chat on 2026-10-12",
+    "drive_file_id": "1mKosHQuSM9WXM-x6HUyDOZRhACzDwIgP",
     "inventory": "data/release/human_takes_inventory.json",
     "payload_files": 33,
-    "reason": "New Drive human-takes link not yet supplied. Expected separate ZIP is verified locally; previous supplied takes upload was the main dataset.",
+    "reason": "Owner confirms the exact prepared ZIP was uploaded; remote re-download/check waived by owner.",
+    "remote_sha256_verified": false,
     "sha256": "33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd",
-    "status": "upload_required",
-    "url": null
+    "status": "owner_confirmed",
+    "url": "https://drive.google.com/file/d/1mKosHQuSM9WXM-x6HUyDOZRhACzDwIgP/view?usp=drive_link"
   },
   "inventory": "data/release/inventory.json",
   "payload_files": 13812,

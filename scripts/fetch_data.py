@@ -131,8 +131,10 @@ def fetch(root: Path, from_local: Path | None = None, *, with_human_takes: bool 
     config = json.loads((root / 'configs/dataset.yaml').read_text())
     human = config.get('human_takes', {})
     requested = with_human_takes or human_from_local is not None
-    if requested and human_from_local is None and human.get('status') != 'verified':
-        raise ValueError('Verified human takes upload is required. Use --human-from-local '
+    # Owner confirmation enables publication; every future download still passes
+    # the same archive size/SHA256 and payload-inventory checks before install.
+    if requested and human_from_local is None and human.get('status') not in ('verified', 'owner_confirmed'):
+        raise ValueError('Published human takes upload is required. Use --human-from-local '
                          'data/release/speech-eval-human-takes-v1.zip with --from-local for the main archive.')
     installed = fetch_release(root, config, from_local)
     if requested:
@@ -144,7 +146,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument('--from-local', type=Path)
-    parser.add_argument('--with-human-takes', action='store_true')
+    parser.add_argument('--with-human-takes', action='store_true',
+                        help='Include the separate human release linked in configs/dataset.yaml')
     parser.add_argument('--human-from-local', type=Path, help='Browser-downloaded human takes ZIP')
     args = parser.parse_args()
     fetch(args.root, args.from_local, with_human_takes=args.with_human_takes,

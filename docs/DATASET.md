@@ -10,23 +10,23 @@ The immutable main release is public on Drive; consented takes are separate.
 [Main dataset archive](https://drive.google.com/file/d/1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm/view)
 was downloaded in full anonymously with gdown 5.2.0 on 2026-10-12 and matches
 the local release by exact size and SHA256. The old Drive folder is retired;
-a new folder URL and separate human-takes link have not yet been supplied.
+an optional replacement folder URL has not been supplied.
 
 | File | Exact bytes | SHA256 | Download |
 |---|---:|---|---|
 | speech-eval-dataset-v1.zip | 7,586,867,457 | `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b` | Main link above; Drive ID `1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm` |
-| speech-eval-human-takes-v1.zip | 62,520,905 | `33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd` | Correct local file prepared; new Drive link awaited |
+| speech-eval-human-takes-v1.zip | 62,520,905 | `33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd` | [Human takes](https://drive.google.com/file/d/1mKosHQuSM9WXM-x6HUyDOZRhACzDwIgP/view?usp=drive_link); owner-confirmed exact upload |
 
-The new link is the main dataset, not the human release. A separate new
-Drive link is required for `data/release/speech-eval-human-takes-v1.zip`;
-the earlier rejected takes link is retired.
+[Human-takes archive](https://drive.google.com/file/d/1mKosHQuSM9WXM-x6HUyDOZRhACzDwIgP/view?usp=drive_link) is owner-confirmed as the exact prepared ZIP.
+Remote re-download/verification was skipped at the owner's request. The size and
+SHA256 above pin the expected release; future fetches retain all integrity checks.
 The main ZIP is immutable and contains no new human takes. Human takes are a
 separate optional release; the scientific corpus and frozen results stay fixed.
 
 ```sh
 make reproduce-quick   # anonymous Drive download, checksum verification, CPU Docker
 make reproduce
-# Optional takes, once a verified replacement upload is configured:
+# Import the optional consented human takes:
 uv run python scripts/fetch_data.py --with-human-takes
 ```
 
@@ -41,7 +41,7 @@ With host Python dependencies installed, the equivalent import is:
 
 ```sh
 uv run python scripts/fetch_data.py --from-local /absolute/path/speech-eval-dataset-v1.zip
-# The prepared human ZIP is usable now without a public upload:
+# Browser-download fallback for the separate human archive:
 uv run python scripts/fetch_data.py --from-local /absolute/path/speech-eval-dataset-v1.zip \
   --with-human-takes --human-from-local /absolute/path/speech-eval-human-takes-v1.zip
 ```
@@ -49,7 +49,8 @@ uv run python scripts/fetch_data.py --from-local /absolute/path/speech-eval-data
 Drive may impose quotas or a confirmation page. Browser downloads still undergo
 the same size/SHA256/member checks; do not replace the pinned hash to accept a
 different file. Evidence: `reports/drive_download_probe.json` and
-`reports/human_release_verification.json`.
+`reports/human_release_verification.json` (local packaging) and
+`reports/human_drive_owner_confirmation.json` (publication).
 
 ## Sources, rights and attribution
 
@@ -204,8 +205,7 @@ separately in `speech-eval-human-takes-v1.zip` (see Download releases above).
 Take04 flaws are unknown and excluded from hit/miss/FP scoring. Labels are
 recorder-confirmed, not independently annotated; transcript fidelity was not
 independently checked. The original consent and all input hashes are preserved.
-The earlier takes upload was rejected because it contained the main dataset;
-a matching human-takes link on the new Drive is pending. The main ZIP is unchanged.
+The new human-takes link is owner-confirmed; the main ZIP is unchanged.
 [Human workflow](HUMAN_TAKES.md).
 
 The [blind rating pack](RATING_PACK.md) is a separately reproducible convenience
