@@ -54,10 +54,15 @@ different file. Evidence: `reports/drive_download_probe.json` and
 - [ ] Verify both browser links from a logged-out browser at submission time.
 - [ ] Confirm repository is public at submission time.
 - [ ] Record/publish a 3–10 minute video and supply its working link.
-- [ ] Regenerate final PDF (at most six pages) after all metadata updates.
+- [x] Final PDF regenerated: six A4 pages, repeated bytes identical, every page inspected.
 - [x] Author Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic) and Codex (OpenAI); MIT code and CC BY 4.0 data/docs/recordings; consent retained.
 
 Prior fresh-clone CPU Docker quick/full reproduction and repeated 563 scientific
 hash checks are recorded in `reports/reproducibility.md`; the published numbers
 are frozen, not retuned for release. Remaining human agreement and alignment
 spot-check limitations are explicit in NEXT.md and the report.
+
+Final verification: 312 host tests passed; frozen code/config/audio/consent and
+main ZIP unchanged. Disk snapshot: 32,170,019,620 bytes for retained tools image,
+one archive and unpacked payload; clean-build peak remains unmeasured. Anonymous
+gdown folder listing failed; no successful logged-out folder check is claimed.

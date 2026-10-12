@@ -35,9 +35,10 @@ reference corpus and measurement provenance.
 
 ## Licensed release import
 
-Audio/Parquet and release ZIPs are intentionally ignored by Git. The release URL
-in `configs/dataset.yaml` is pending the user's upload. Until then use the built
-archive, not the unpublished development checkout:
+Audio/Parquet and release ZIPs are intentionally ignored by Git. The public main
+Drive file ID in `configs/dataset.yaml` is downloaded with pinned gdown 5.2.0.
+`make fetch-data` verifies SHA256/size/members before import. For browser-download
+fallback, use the exact checksum-pinned archive:
 
 ```sh
 make reproduce-quick DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip
@@ -50,8 +51,9 @@ docker compose run --rm --build --no-deps \
 ```
 
 Both reproduction targets run `fetch-data` first. Once all installed files verify,
-no download is needed. After publication fill only the URL in dataset.yaml; the
-archive SHA and committed inventory pin the content. `--from-local` verifies the
+no download is needed. Drive file IDs are configured in dataset.yaml; the
+archive SHA and committed inventory pin the content. Main publication is complete;
+the separate human release awaits a corrected upload. `--from-local` verifies the
 same outer SHA, complete inventory and all payload SHA-256s. Unsafe ZIP paths,
 symlinks, duplicates and differing existing files are rejected before installing
 anything. Identical existing files (including immutable raw audio) are untouched.
@@ -96,10 +98,9 @@ inputs or the first differing field/number cause a nonzero exit. Evidence goes t
 `reports/reproduced/`; success prints `REPRODUCED OK`.
 
 This is numerical reproduction from the frozen measured dataset, not a claim of
-end-to-end raw download/ASR reconstruction. Publication of the built archive still
-requires its user-provided URL. Genuine consented recorder-confirmed A/B counts
-are now in Phase10, separate from this public-dataset reproduction; private audio
-is not included in the archive. Human agreement was not measured: no independent
+end-to-end raw download/ASR reconstruction. The main archive is public on Drive.
+Genuine consented recorder-confirmed A/B counts are in Phase10, separate from
+this frozen-dataset reproduction; human audio is in an optional separate release. Human agreement was not measured: no independent
 raters were available; no AI or self-ratings were used.
 
 ## Verified fresh-clone run

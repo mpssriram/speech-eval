@@ -1,5 +1,17 @@
 # Blockers
 
+## Prompt B publication and runtime status — 2026-10-12
+
+Main Drive download, author/affiliation and licence files are resolved. The
+supplied human archive was verified as the main ZIP; the correction above is
+the remaining release blocker. Anonymous gdown folder listing returned no
+contents, so browser verification remains pending. Docker was restored by
+preserving only stale zero-byte IPC entries in the run/Secrets directories;
+images, volumes and data were not deleted. API/web are healthy. The exact
+retained tools-image/archive/unpacked snapshot is measured in
+`reports/reproduction_disk_usage.json`; clean-build peak remains unmeasured.
+Older missing-author/upload/consent entries below describe their historical state.
+
 ## 2026-10-12 — supplied human takes upload is the main dataset
 
 Full anonymous gdown download of the supplied takes ID has 7,586,867,457 bytes

@@ -44,8 +44,8 @@ def render(font_dir: Path) -> Path:
     pdfmetrics.registerFont(TTFont('BodyBold',str(font_dir/'DejaVuSans-Bold.ttf')))
     pdfmetrics.registerFontFamily('Body',normal='Body',bold='BodyBold',italic='Body',boldItalic='BodyBold')
     ink=colors.HexColor('#173451');accent=colors.HexColor('#B35335')
-    body=ParagraphStyle('body',fontName='Body',fontSize=11,leading=13,spaceAfter=5,textColor=colors.HexColor('#27313B'))
-    head=ParagraphStyle('heading',parent=body,fontName='BodyBold',fontSize=14,leading=17,spaceBefore=8,spaceAfter=8,textColor=ink,keepWithNext=True)
+    body=ParagraphStyle('body',fontName='Body',fontSize=11,leading=13,spaceAfter=4,textColor=colors.HexColor('#27313B'))
+    head=ParagraphStyle('heading',parent=body,fontName='BodyBold',fontSize=14,leading=17,spaceBefore=6,spaceAfter=6,textColor=ink,keepWithNext=True)
     small=ParagraphStyle('small',parent=body,fontSize=8,leading=10,spaceAfter=4)
     cell=ParagraphStyle('cell',parent=body,fontSize=9,leading=11,spaceAfter=0)
     title=ParagraphStyle('title',parent=head,fontSize=18,leading=22,spaceAfter=6)
@@ -128,7 +128,7 @@ def render(font_dir: Path) -> Path:
             if viewport:image=ScreenshotExcerpt(path,A4[0]-112,*viewport)
             else:
                 image=Image(str(path))
-                max_height=120 if path.name=='ui_region.png' else 240
+                max_height=120 if path.name=='ui_region.png' else 200
                 scale=min((A4[0]-112)/image.imageWidth,max_height/image.imageHeight)
                 image.drawWidth=image.imageWidth*scale;image.drawHeight=image.imageHeight*scale
             caption=f'[{match.group(1)}'+(' (excerpt; full screenshot)' if viewport else '')+f']({match.group(2)})'

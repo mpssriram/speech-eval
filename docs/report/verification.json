@@ -1,9 +1,10 @@
 {
-  "pdf_sha256": "2e707e91ba08be5f0dd5a30f869b60bafbf7b8ca6dfa1b62c187afb60122ec6c",
-  "repeat_sha256": "2e707e91ba08be5f0dd5a30f869b60bafbf7b8ca6dfa1b62c187afb60122ec6c",
+  "pdf_sha256": "d46a3ca3fa72f28de6937ac19b31deb775157a4d23fc99d7265ba707d54207c5",
+  "repeat_sha256": "d46a3ca3fa72f28de6937ac19b31deb775157a4d23fc99d7265ba707d54207c5",
   "pages": 6,
   "page_format": "A4",
   "body_font_pt": 11,
+  "author": "Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic) and Codex (OpenAI)",
   "checks": "repeat bytes; A4; at most six pages; page-one summary; screenshots; one pending box",
-  "visual_check": "All six final-render pages inspected 2026-10-12: genuine Mode-B hit and exact-width waveform, measured human summary, no-spot-check/no-independent-raters disclosure, no clipping/overlap or half-empty final page."
+  "visual_check": "All six final-render pages inspected; no clipping, overlap or unreadable chart"
 }

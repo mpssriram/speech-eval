@@ -7,10 +7,8 @@ date: "October 2026"
 
 # 1. Problem and approach
 
-Speech-Eval shows you delivery problems such as speaking too fast, too quietly,
-or pausing in an awkward place. It marks the affected words and times so you can
-listen to the exact part. It explains each flag using measured differences from
-reference readers or your earlier take.
+Speech-Eval locates delivery differences in pace, loudness and pauses, with
+word/time playback and explanations measured against readers or your earlier take.
 
 ::: summary
 Frozen A: precision 0.125, recall 0.400, F1 0.190.
@@ -20,11 +18,9 @@ Release: 1,103 indexed recordings, 36.3 h; repeated scientific hashes match.
 Limits: low precision; genuine labels are recorder-confirmed, not independent; zero rater responses.
 :::
 
-Content quality is out of scope.
-Controlled edits supply reproducible operation labels, not independent judgments
-of good speaking. A uses same-text train readers; B uses the speaker's earlier
-take; C-lite uses sentence norms without a same-text reference. Key-moment
-messages are labelled heuristics, not scored judgments.
+Content quality is out of scope. Controlled edits supply operation labels,
+not independent judgments. A uses same-text train readers, B the earlier take,
+C-lite sentence norms. Key-moment heuristics do not affect scores.
 
 # 2. Contrastive dataset construction
 
@@ -33,10 +29,9 @@ one Reagan Challenger recording. USA public-domain evidence is recorded in the
 release manifests and [dataset card](../DATASET.md); automatic evidence checks
 are not human legal review. Raw hashes remain immutable.
 
-Canonical/as-spoken differences were checked with local CTC candidate likelihoods
-calibrated on 300 controls, empirical fake acceptance ≤2.0%. This in-sample proxy
-is not listening or guaranteed accuracy on real disagreements. Unsettled words
-and dependent evidence remain masked. Number expansion retains index mappings.
+Local CTC transcript checks used 300 calibration controls (fake acceptance
+≤2.0%); this in-sample proxy is not listening or guaranteed accuracy. Unsettled
+words/dependent evidence remain masked; number expansion preserves indices.
 [Acoustic audit](../../reports/day01_acoustic_verification.md).
 
 MFA/WhisperX were compared on 37 words / 74 edges after 23 unclear-word exclusions.
@@ -99,21 +94,17 @@ The unusual final cut point/weak correlation are retained, not repaired with tes
 or user takes. [Calibration](../../reports/phase06_calibration.md).
 
 Templates quote measured participant/reference deviations and flagged words.
-The following is **an example of real system output**, quoted verbatim from the
-presentation layer using the unchanged numeric evidence in
-[analysis 86964ad39ead](../../data/analyses/86964ad39ead.json), Mode A test file
+Real presentation-layer output, unchanged evidence from Mode A test
+[analysis 86964ad39ead](../../data/analyses/86964ad39ead.json),
 `gettysburg__lv_sa__awkward_pause_s3_01`:
 
 > 75.99–77.58 s, "it can": you paused 1.59 s between "it" and "can", where good readers do not pause (1.59 s longer, more than 10 SD above). It breaks the sentence.
 
-The detected interval is 75.990-77.580 s, participant pause 1.590 s,
-reference shown as no pause (less than 0.02 s), deviation shown as more than
-10 SD. Full-precision reference/z remain in the JSON. Its matching injected label spans
-76.035-77.535 s in the [label file](../../data/labels/gettysburg__lv_sa__awkward_pause_s3_01.json).
-It is a correct hit under the frozen pause-centre rule. The extreme z reflects
-near-zero reference spread; it is not evidence of that much perceptual severity.
-This existing test example is for report illustration, not v2 tuning.
-Measured rule explanations are **not causal proof**.
+The matching [label](../../data/labels/gettysburg__lv_sa__awkward_pause_s3_01.json)
+is 76.035-77.535 s: a hit under the frozen pause-centre rule. Full-precision
+reference/z remain in JSON. Extreme z reflects near-zero spread, not perceptual
+severity. This existing illustration was not used for v2 tuning;
+measured explanations are **not causal proof**.
 
 B uses the own earlier take; JFK/Reagan test originals are within-speaker references,
 not population training/calibration. C checks sentence rate, pitch range, final
@@ -128,7 +119,7 @@ then weight rounded categories: pace/pitch 0.25 each, pauses 0.20, volume/clarit
 0.15 each. These are configurable design choices, not an external standard.
 Severity-3 rushing over 10.0% gives pace 7.0. [Validation](../../reports/phase07_validation.md).
 
-The report gives per-type, not aggregate, monotonicity:
+Per-type monotonicity (seven complete series each):
 
 | Type | Median severity-score Spearman | Non-increasing % | Constant series |
 |---|---:|---:|---:|
@@ -140,13 +131,11 @@ The report gives per-type, not aggregate, monotonicity:
 | rushing | -0.71 | 71.4 | 1 |
 | too_quiet | -0.71 | 85.7 | 3 |
 
-Each type has seven complete series. Constant ranks have undefined Spearman;
-non-increasing alone is not sensitivity. Human agreement was not measured: no
-independent raters were available; no AI or self-ratings were used.
-The blind pack/scripts are ready. The form asks overall
-delivery 1–5, flaw type(s) and approximate time, not five category ratings. Scripts
-compute system–mean-human/per-rater Spearman, mean defined pairwise human Spearman
-and exact flaw-set agreement with denominators; no fabricated responses or CIs.
+Constant ranks have undefined Spearman; non-increasing alone is not sensitivity.
+Human agreement was not measured: no independent raters were available; no AI or self-ratings were used.
+The blind pack asks overall delivery 1–5, flaw types and time. Scripts compute
+system/human and defined pairwise Spearman plus exact flaw-set agreement with
+denominators; no responses or CIs are fabricated.
 
 Frozen host two-run identity: 10/10. Later fresh-clone CPU Docker reproductions
 matched all 563 scientific outputs twice, including cross-environment checks.
@@ -189,14 +178,12 @@ promotion gate. The selected configuration SHA is `3496a9c3...`.
 | B frozen v1 | 76 | 0.018 | 0.390 | 0.035 [0.026, 0.045] | 0.000 |
 | B post-hoc v2 | 76 | 0.042 | 0.207 | 0.070 [0.043, 0.099] | 0.000 |
 
-Rows, same-type IoU/pause-centre matcher, uncertainty exclusions and denominators
-are identical; no uncertain truth regions were excluded on these test rows.
-[Full per-type and severity comparison](../../reports/phase11_v2.md) reports
-precision/recall/F1, boundary differences, clean alarms and severity Spearman for
-both detectors. Strength-cohort precision/F1 uses shared clean controls and
-homogeneous eligible truth strengths; mixed-strength files are excluded from
-those cohorts but included in full-set recall by severity. Full precision and
-frozen hashes remain in [v2 JSON](../../data/review/detector_v2_test.json).
+Rows, matcher, exclusions and denominators are identical; zero uncertain truth
+exclusions on these test rows. [Per-type/severity results](../../reports/phase11_v2.md)
+include boundaries, alarms and severity Spearman. Strength-cohort precision/F1
+uses shared clean controls and homogeneous truth strengths, excluding mixed
+strengths; full-set severity recall includes them. Full precision/hashes:
+[v2 JSON](../../data/review/detector_v2_test.json).
 For A, v2 halves clean alarms (1.341 to 0.671 per min) but
 lowers recall (0.400 to 0.288). F1 is effectively unchanged (0.190 to 0.193); v1 stays primary.
 The test clean-alarm guard still fails.
@@ -218,7 +205,7 @@ inside flags still count as FP. This is separate from the published B test cohor
 | dragging | 0 | 0 | 1 | 0 |
 | missing_pause | 0 | 0 | 1 | 0 |
 
-Median pause FP excess was 0.008 s. After rushing/dragging/pause edits, real-MFA
+Median absolute pause FP difference was 0.008 s. After rushing/dragging/pause edits, real-MFA
 start residuals versus mapped source were median 0.003 s / p95 0.009 s, versus
 0.287 / 2.204 s without mapping. Detection uses real MFA, not oracle time maps.
 Outside-edit HQ samples differed by at most 0.596 PCM16 LSB after recorded global
@@ -296,16 +283,17 @@ changes must be labelled post-hoc, not presented as frozen evaluation.
 
 # 10. Reproducibility and attributions
 
-`make reproduce-quick DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip`
-imports the separately supplied archive and runs one text/three test readers.
-`make reproduce` re-verifies inputs and reproduces frozen Phase6/7/8 numbers in
-pinned CPU Docker, not every historical ASR/excerpt decision or human/video work.
-Quick: 11.829 / 11.954 seconds; full: 225.204 / 223.142 seconds after import/build.
-Hashes: `data/release/reproduction_hashes.json` and reproduction report. The narrow
-legacy-fixture gate exemption is a disclosed post-hoc release adapter, not a
-detector change; other historical inputs/code are verified.
+`make reproduce-quick` downloads the [main archive](https://drive.google.com/file/d/18wOjIvKjvabN2hnUUH8y2k1I7dpOYDxV/view)
+by Drive ID with pinned gdown, verifies SHA256 and runs one text/three readers.
+Browser fallback uses `DATA_ARCHIVE`; [dataset card](../DATASET.md) has exact
+files/hashes/commands. The separate human release needs a corrected upload.
+`make reproduce` reproduces frozen Phase6/7/8 numbers in pinned CPU Docker,
+not historical ASR decisions or human/video work. Quick: 11.829 / 11.954 seconds;
+full: 225.204 / 223.142 after import/build. Hashes:
+`data/release/reproduction_hashes.json`. The disclosed legacy-fixture exemption
+is a post-hoc release adapter, not a detector change; other frozen inputs/code
+are verified.
 
-Author: Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic) and Codex (OpenAI).
 Code: [MIT](../../LICENSE); labels, annotations, docs and my recordings:
 [CC BY 4.0](../../LICENSE-DATA), with [consent](../../data/human/CONSENT.md).
 Source audio remains public domain per source.
@@ -316,14 +304,11 @@ This excludes build/extraction scratch and host caches; the retained image
 predates the gdown metadata layer, so it is a snapshot, not a clean-build peak.
 [Exact disk accounting](../../reports/reproduction_disk_usage.json).
 
-Audio attribution: LibriVox volunteers and JFK/Reagan institutional collections;
-source-specific USA public-domain evidence. Full-precision scientific values remain
-in the original JSON; display rounding does not change them.
+Audio credit: LibriVox volunteers and JFK/Reagan institutional collections,
+with source-specific USA public-domain evidence.
 
 ::: pending
 Pending items
-Corrected human-takes upload and recorded/published video URL.
-Reproduction disk snapshot is reported; clean-build peak remains unmeasured.
-Unreported aggregate severity/C-F1 and pitch-improvement values remain unclaimed.
-See [NEXT](../../NEXT.md) and [placeholder inventory](../TODO_PLACEHOLDERS.md).
+Corrected human-takes upload; recorded/published video URL.
+Clean-build peak unmeasured. Remaining actions: [NEXT](../../NEXT.md).
 :::

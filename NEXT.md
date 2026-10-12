@@ -14,7 +14,7 @@ Submission deadline: October 13.
    It is byte-identical to the main dataset ZIP (a41a1848..., 7,586,867,457 bytes),
    with zero human WAVs; all required human-release members are missing.
    Its link is deliberately withheld. Upload the correct file:
-   `C:\python_practice\Speech\data\release\speech-eval-human-takes-v1.zip`
+   `C:/python_practice/Speech/data/release/speech-eval-human-takes-v1.zip`
    (62,520,905 bytes; SHA256 33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd).
    Separate builder repeated byte-identically; eight WAVs/transcripts/label files,
    notes, unchanged consent, review protocol/evaluation and SHA256 list all match
@@ -45,6 +45,22 @@ Submission deadline: October 13.
    build cache and scratch. Not a clean-build peak; image predates gdown layer.
    Docker startup restored by preserving stale zero-byte run/Secrets IPC dirs;
    no images, volumes or data deleted. Existing API/web healthy again.
+6. Report PDF regenerated: six A4 pages, 11 pt body, confirmed visible author
+   and PDF metadata. Two renders matched SHA256
+   d46a3ca3fa72f28de6937ac19b31deb775157a4d23fc99d7265ba707d54207c5;
+   all six pages visually inspected. Condensed repeated prose/chart spacing to
+   keep the page budget while retaining results and limitations. Final host suite:
+   312 passed. Seventeen frozen code/config hashes, sixteen original/WAV hashes,
+   original consent, main ZIP and separate human ZIP verified unchanged.
+   Evidence: reports/release_metadata_verification.json and PDF verification.json.
+   All Prompt B work committed/pushed item by item, with the packaging review fix
+   in an additional commit. Only replacement human upload requires user action.
+
+Already completed work was retained: no main archive rebuild, no genuine-take
+inference rerun, no new Mode B DEV/test benchmark run or detector tuning.
+Main download is public; the supplied takes upload is the wrong file. Folder
+anonymous gdown listing failed, so a logged-out browser folder check remains
+pending rather than being claimed as verified.
 
 ## Pre-video fixes
 
@@ -127,7 +143,8 @@ Reports: `reports/phase10_human_takes.md`, Human-A/B in `phase06_results.md`,
 and genuine-takes section 7.1 of `docs/report/report.md`. Full precision, fixed
 spans, score/flag evidence and 26 dashboard links: `data/human/evaluation.json`.
 Applied transcript insertions/omissions: `data/human/review/TRANSCRIPT_DIFFS.md`.
-Private audio stays git-ignored and outside the public archive.
+Human WAVs stay git-ignored and outside the frozen main archive; the owner
+authorised a separate CC BY 4.0 human release in Prompt B.
 
 Original genuine workflow artifacts repeated byte-identically (134 outputs; retained
 MFA cache, not independent alignment-accuracy evidence). All 26 completed jobs
@@ -135,7 +152,7 @@ are in API history with working tracks; eight genuine participant audio
 endpoints work. `data/human/verification.json` contains the hashes/checks.
 Evaluation SHA256:
 `58c6f712059cea44051051466f56a7f8e1d65fa04b6503a8026197d8e8e65013`.
-Latest host suite: 303 tests passed. Report: six A4 pages, repeated PDF bytes
+Latest host suite: 312 tests passed (Prompt B). Report: six A4 pages, repeated PDF bytes
 identical, every page inspected. Frozen code/config/audio hashes remain intact.
 
 ## Open your voice in the dashboard
@@ -172,18 +189,22 @@ evidence is in `reports/phase12_fixes.md` and `reports/reproducibility.md`.
 The DEV-only Mode B diagnosis found amplified tiny pause differences, not a
 demonstrated timing bug; no new benchmark test run or detector tuning followed.
 All 563 published scientific release outputs matched repeated fresh-clone CPU
-Docker reproduction. The human evidence is separate and private.
+Docker reproduction. Human evidence is separate; the optional consented release
+does not change those frozen scientific outputs.
 
 ## Needs user
 
-1. Upload the unchanged `data/release/speech-eval-dataset-v1.zip` and supply its
-   URL. Exact size: 7,586,867,457 bytes = 7.586867457 decimal GB. SHA256:
-   `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b`.
-2. Confirm author and formal code/annotation licence files; record/publish the
-   final demo. Review `docs/TODO_PLACEHOLDERS.md` and remaining BLOCKERS.
-3. Try the full app tomorrow with your microphone/files. Transcript acoustic
-   fidelity can be reviewed later; the authorised rule-built texts are explicitly
-   disclosed, and confirmation-gated genuine analysis is no longer pending.
+1. Replace the supplied takes upload with
+   `C:/python_practice/Speech/data/release/speech-eval-human-takes-v1.zip`
+   (62,520,905 bytes; SHA256
+   33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd),
+   share as "Anyone with the link" and provide its replacement Drive ID.
+   Main ZIP publication and author/licence confirmation are DONE.
+2. Record/publish the final demo video and supply the working URL. Check the
+   release folder in a logged-out browser; gdown could not list it anonymously.
+3. Optional: try the app with your microphone/files. Transcript acoustic fidelity
+   can be reviewed later; rule-built texts and recorder-confirmed labels are
+   explicitly disclosed. Genuine analysis is complete.
 
 ## Needs other people
 
@@ -198,9 +219,10 @@ Docker reproduction. The human evidence is separate and private.
 
 ## Remaining technical limitations
 
-An isolated clean-install peak/minimum disk requirement is still unmeasured.
-The prior retained snapshot was 55.037300736 GB including shared Docker VHDX
-and other projects, not a project minimum. No estimate is substituted.
+Measured required retained Docker image + one archive + unpacked payload is
+32.170019620 GB; component evidence is in reports/reproduction_disk_usage.json.
+Clean-install/build peak remains unmeasured; the measured image predates the
+gdown metadata layer and the total excludes scratch/cache. No minimum is inferred.
 The interpolation-warning schema and user-specific MFA path remain disclosed
 limitations. Plotly's bundle-size warning is known and harmless. Low precision,
 failed synthetic clean-alarm guards and C-lite's limited types remain disclosed;

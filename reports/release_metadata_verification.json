@@ -1,0 +1,22 @@
+{
+  "schema": "release-metadata-verification/v1",
+  "date": "2026-10-12",
+  "host_tests": 312,
+  "frozen_code_and_config_hashes_verified": 17,
+  "human_original_and_wav_hashes_verified": 16,
+  "original_consent_unchanged": true,
+  "main_archive_sha256": "a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b",
+  "main_archive_unchanged": true,
+  "human_archive_sha256": "33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd",
+  "supplied_human_upload_status": "wrong file: exact main dataset ZIP",
+  "human_remote_download_disabled": true,
+  "folder_probe": "anonymous gdown skip_download could not retrieve contents; browser check remains pending",
+  "pdf_pages": 6,
+  "pdf_sha256": "d46a3ca3fa72f28de6937ac19b31deb775157a4d23fc99d7265ba707d54207c5",
+  "pdf_repeat_identical": true,
+  "pdf_visual_check": "All six final-render pages inspected; no clipping, overlap or unreadable chart",
+  "dev_mode_b_check": "already completed; rerun skipped; no new test benchmark evaluation",
+  "review": "Two package edge cases fixed with failing-then-passing regression tests; read-only reviewer verified fixes, no further Important findings",
+  "disk_bytes": 32170019620,
+  "clean_build_peak_measured": false
+}
