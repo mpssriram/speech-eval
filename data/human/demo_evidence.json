@@ -1,0 +1,1260 @@
+{
+  "detector_changes": false,
+  "evaluation_sha256": "58c6f712059cea44051051466f56a7f8e1d65fa04b6503a8026197d8e8e65013",
+  "matching": "same type, one-to-one strict IoU >=0.3; published pairs unchanged",
+  "pooled_false_alarms": [
+    {
+      "by_type": {
+        "awkward_pause": 14,
+        "dragging": 3,
+        "missing_pause": 53,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 7,
+        "too_quiet": 0
+      },
+      "combined_share": 0.7792207792207793,
+      "detector": "v1",
+      "false_positives": 77,
+      "missing_pause_share": 0.6883116883116883,
+      "mode": "A",
+      "rushing_share": 0.09090909090909091
+    },
+    {
+      "by_type": {
+        "awkward_pause": 32,
+        "dragging": 1,
+        "missing_pause": 26,
+        "monotone": 1,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "combined_share": 0.43333333333333335,
+      "detector": "v1",
+      "false_positives": 60,
+      "missing_pause_share": 0.43333333333333335,
+      "mode": "B",
+      "rushing_share": 0.0
+    },
+    {
+      "by_type": {
+        "awkward_pause": 0,
+        "dragging": 2,
+        "missing_pause": 54,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 2,
+        "too_quiet": 0
+      },
+      "combined_share": 0.9655172413793104,
+      "detector": "v2",
+      "false_positives": 58,
+      "missing_pause_share": 0.9310344827586207,
+      "mode": "A",
+      "rushing_share": 0.034482758620689655
+    },
+    {
+      "by_type": {
+        "awkward_pause": 0,
+        "dragging": 1,
+        "missing_pause": 25,
+        "monotone": 1,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "combined_share": 0.9259259259259259,
+      "detector": "v2",
+      "false_positives": 27,
+      "missing_pause_share": 0.9259259259259259,
+      "mode": "B",
+      "rushing_share": 0.0
+    }
+  ],
+  "reference_readers": {
+    "gettysburg": [
+      {
+        "aligned_span_s": 103.288,
+        "interword_pause_s": 11.784000000000027,
+        "pause_fraction": 0.11408876152118376,
+        "prepared_duration_s": 105.738,
+        "recording_id": "gettysburg__lv_amb__orig",
+        "word_count": 271,
+        "word_end": 270,
+        "word_start": 0
+      },
+      {
+        "aligned_span_s": 101.568,
+        "interword_pause_s": 26.33800000000005,
+        "pause_fraction": 0.25931395715185934,
+        "prepared_duration_s": 102.88,
+        "recording_id": "gettysburg__lv_dj__orig",
+        "word_count": 270,
+        "word_end": 269,
+        "word_start": 0
+      },
+      {
+        "aligned_span_s": 123.17,
+        "interword_pause_s": 32.40899999999998,
+        "pause_fraction": 0.2631241373711129,
+        "prepared_duration_s": 125.478,
+        "recording_id": "gettysburg__lv_dl__orig",
+        "word_count": 270,
+        "word_end": 269,
+        "word_start": 0
+      },
+      {
+        "aligned_span_s": 150.70000000000002,
+        "interword_pause_s": 55.04,
+        "pause_fraction": 0.36522893165228926,
+        "prepared_duration_s": 154.869,
+        "recording_id": "gettysburg__lv_eep__orig",
+        "word_count": 271,
+        "word_end": 270,
+        "word_start": 0
+      },
+      {
+        "aligned_span_s": 113.574,
+        "interword_pause_s": 29.626000000000044,
+        "pause_fraction": 0.260851955553208,
+        "prepared_duration_s": 114.928,
+        "recording_id": "gettysburg__lv_fb__orig",
+        "word_count": 270,
+        "word_end": 269,
+        "word_start": 0
+      },
+      {
+        "aligned_span_s": 106.044,
+        "interword_pause_s": 23.783000000000072,
+        "pause_fraction": 0.22427482931613363,
+        "prepared_duration_s": 106.541,
+        "recording_id": "gettysburg__lv_jn__orig",
+        "word_count": 271,
+        "word_end": 270,
+        "word_start": 0
+      },
+      {
+        "aligned_span_s": 105.532,
+        "interword_pause_s": 20.267999999999986,
+        "pause_fraction": 0.1920554902778303,
+        "prepared_duration_s": 106.404,
+        "recording_id": "gettysburg__lv_law__orig",
+        "word_count": 271,
+        "word_end": 270,
+        "word_start": 0
+      },
+      {
+        "aligned_span_s": 153.849,
+        "interword_pause_s": 33.41199999999997,
+        "pause_fraction": 0.21717398228132762,
+        "prepared_duration_s": 155.065,
+        "recording_id": "gettysburg__lv_lb__orig",
+        "word_count": 272,
+        "word_end": 271,
+        "word_start": 0
+      },
+      {
+        "aligned_span_s": 190.54999999999998,
+        "interword_pause_s": 68.26999999999995,
+        "pause_fraction": 0.3582786670165309,
+        "prepared_duration_s": 190.948,
+        "recording_id": "gettysburg__lv_mas__orig",
+        "word_count": 271,
+        "word_end": 270,
+        "word_start": 0
+      },
+      {
+        "aligned_span_s": 119.63199999999999,
+        "interword_pause_s": 34.13199999999999,
+        "pause_fraction": 0.2853082787214123,
+        "prepared_duration_s": 120.976,
+        "recording_id": "gettysburg__lv_mk__orig",
+        "word_count": 271,
+        "word_end": 270,
+        "word_start": 0
+      }
+    ],
+    "reagan_challenger": [
+      {
+        "aligned_span_s": 90.16799999999999,
+        "interword_pause_s": 27.007999999999996,
+        "pause_fraction": 0.2995297666577943,
+        "prepared_duration_s": 249.128,
+        "recording_id": "reagan_challenger__reagan__orig",
+        "word_count": 235,
+        "word_end": 234,
+        "word_start": 0
+      }
+    ]
+  },
+  "rows": [
+    {
+      "detector": "v1",
+      "duration_s": 83.21,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 1,
+        "dragging": 0,
+        "missing_pause": 7,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 1,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "flags_by_type": {
+        "awkward_pause": 1,
+        "dragging": 0,
+        "missing_pause": 7,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 1,
+        "too_quiet": 0
+      },
+      "job_id": "0aae3748f747b13e89697e17",
+      "matched_pairs": [],
+      "missing_pause_share": 0.7777777777777778,
+      "mode": "A",
+      "rushing_share": 0.1111111111111111,
+      "take_id": "gettysburg__user__take01"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 83.21,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 7,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "flags_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 7,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "a45acf09d05328fd5a2ed22f",
+      "matched_pairs": [],
+      "missing_pause_share": 1.0,
+      "mode": "A",
+      "rushing_share": 0.0,
+      "take_id": "gettysburg__user__take01"
+    },
+    {
+      "detector": "v1",
+      "duration_s": 83.03,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 4,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 2,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "flags_by_type": {
+        "awkward_pause": 1,
+        "dragging": 0,
+        "missing_pause": 4,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 2,
+        "too_quiet": 0
+      },
+      "job_id": "fef67fa2213341586f06ae19",
+      "matched_pairs": [
+        [
+          4,
+          1
+        ]
+      ],
+      "missing_pause_share": 0.6666666666666666,
+      "mode": "A",
+      "rushing_share": 0.3333333333333333,
+      "take_id": "gettysburg__user__take02"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 83.03,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 4,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 2,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "flags_by_type": {
+        "awkward_pause": 1,
+        "dragging": 0,
+        "missing_pause": 4,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 2,
+        "too_quiet": 0
+      },
+      "job_id": "79fa3bca5e4f0e628f68c248",
+      "matched_pairs": [
+        [
+          4,
+          1
+        ]
+      ],
+      "missing_pause_share": 0.6666666666666666,
+      "mode": "A",
+      "rushing_share": 0.3333333333333333,
+      "take_id": "gettysburg__user__take02"
+    },
+    {
+      "detector": "v1",
+      "duration_s": 83.03,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 4,
+        "dragging": 0,
+        "missing_pause": 8,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "flags_by_type": {
+        "awkward_pause": 5,
+        "dragging": 0,
+        "missing_pause": 8,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "6d8cbd6dec22ffc8f7827ebc",
+      "matched_pairs": [
+        [
+          4,
+          1
+        ]
+      ],
+      "missing_pause_share": 0.6666666666666666,
+      "mode": "B",
+      "rushing_share": 0.0,
+      "take_id": "gettysburg__user__take02"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 83.03,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 8,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "flags_by_type": {
+        "awkward_pause": 1,
+        "dragging": 0,
+        "missing_pause": 8,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "169576531217c5dd52c0218c",
+      "matched_pairs": [
+        [
+          1,
+          1
+        ]
+      ],
+      "missing_pause_share": 1.0,
+      "mode": "B",
+      "rushing_share": 0.0,
+      "take_id": "gettysburg__user__take02"
+    },
+    {
+      "detector": "v1",
+      "duration_s": 80.99,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 2,
+        "dragging": 0,
+        "missing_pause": 8,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 2,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "flags_by_type": {
+        "awkward_pause": 2,
+        "dragging": 0,
+        "missing_pause": 9,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 2,
+        "too_quiet": 0
+      },
+      "job_id": "48f109663821934f4d6dc880",
+      "matched_pairs": [
+        [
+          5,
+          2
+        ]
+      ],
+      "missing_pause_share": 0.6666666666666666,
+      "mode": "A",
+      "rushing_share": 0.16666666666666666,
+      "take_id": "gettysburg__user__take03"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 80.99,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 9,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "flags_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 10,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "6a6c2162a1d1dff873520eca",
+      "matched_pairs": [
+        [
+          4,
+          2
+        ]
+      ],
+      "missing_pause_share": 1.0,
+      "mode": "A",
+      "rushing_share": 0.0,
+      "take_id": "gettysburg__user__take03"
+    },
+    {
+      "detector": "v1",
+      "duration_s": 80.99,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 8,
+        "dragging": 0,
+        "missing_pause": 8,
+        "monotone": 1,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "flags_by_type": {
+        "awkward_pause": 8,
+        "dragging": 0,
+        "missing_pause": 8,
+        "monotone": 1,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "9a1e6c9b493bf38f97547c38",
+      "matched_pairs": [],
+      "missing_pause_share": 0.47058823529411764,
+      "mode": "B",
+      "rushing_share": 0.0,
+      "take_id": "gettysburg__user__take03"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 80.99,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 8,
+        "monotone": 1,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "flags_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 8,
+        "monotone": 1,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "505e99a3727fff0850ff3483",
+      "matched_pairs": [],
+      "missing_pause_share": 0.8888888888888888,
+      "mode": "B",
+      "rushing_share": 0.0,
+      "take_id": "gettysburg__user__take03"
+    },
+    {
+      "detector": "v1",
+      "duration_s": 86.81,
+      "excluded_from_scoring": true,
+      "false_alarms_by_type": null,
+      "false_positive_indices": null,
+      "flags_by_type": {
+        "awkward_pause": 1,
+        "dragging": 0,
+        "missing_pause": 6,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 1,
+        "too_quiet": 0
+      },
+      "job_id": "8e00a502dc970fc55000ec6a",
+      "matched_pairs": [],
+      "missing_pause_share": null,
+      "mode": "A",
+      "rushing_share": null,
+      "take_id": "gettysburg__user__take04"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 86.81,
+      "excluded_from_scoring": true,
+      "false_alarms_by_type": null,
+      "false_positive_indices": null,
+      "flags_by_type": {
+        "awkward_pause": 1,
+        "dragging": 0,
+        "missing_pause": 6,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "1974ba6e2bd01c54a225bb90",
+      "matched_pairs": [],
+      "missing_pause_share": null,
+      "mode": "A",
+      "rushing_share": null,
+      "take_id": "gettysburg__user__take04"
+    },
+    {
+      "detector": "v1",
+      "duration_s": 76.42,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 3,
+        "dragging": 0,
+        "missing_pause": 11,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "flags_by_type": {
+        "awkward_pause": 3,
+        "dragging": 0,
+        "missing_pause": 11,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "57a55f0d18b627cda376b6aa",
+      "matched_pairs": [],
+      "missing_pause_share": 0.7857142857142857,
+      "mode": "A",
+      "rushing_share": 0.0,
+      "take_id": "reagan_challenger__user__take01"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 76.42,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 11,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "flags_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 11,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "481650a2d25463ca2e6bf57a",
+      "matched_pairs": [],
+      "missing_pause_share": 1.0,
+      "mode": "A",
+      "rushing_share": 0.0,
+      "take_id": "reagan_challenger__user__take01"
+    },
+    {
+      "detector": "v1",
+      "duration_s": 76.936,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 5,
+        "dragging": 2,
+        "missing_pause": 13,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 1,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21
+      ],
+      "flags_by_type": {
+        "awkward_pause": 6,
+        "dragging": 2,
+        "missing_pause": 13,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 1,
+        "too_quiet": 0
+      },
+      "job_id": "f76f550c01af931b64ea839b",
+      "matched_pairs": [
+        [
+          17,
+          2
+        ]
+      ],
+      "missing_pause_share": 0.6190476190476191,
+      "mode": "A",
+      "rushing_share": 0.047619047619047616,
+      "take_id": "reagan_challenger__user__take02"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 76.936,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 0,
+        "dragging": 1,
+        "missing_pause": 13,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      "flags_by_type": {
+        "awkward_pause": 1,
+        "dragging": 1,
+        "missing_pause": 13,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "a319a08a897f396f43ddab40",
+      "matched_pairs": [
+        [
+          11,
+          2
+        ]
+      ],
+      "missing_pause_share": 0.9285714285714286,
+      "mode": "A",
+      "rushing_share": 0.0,
+      "take_id": "reagan_challenger__user__take02"
+    },
+    {
+      "detector": "v1",
+      "duration_s": 76.936,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 8,
+        "dragging": 1,
+        "missing_pause": 4,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13
+      ],
+      "flags_by_type": {
+        "awkward_pause": 9,
+        "dragging": 1,
+        "missing_pause": 4,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "d48bda35d22f96206a0ae2d7",
+      "matched_pairs": [
+        [
+          10,
+          2
+        ]
+      ],
+      "missing_pause_share": 0.3076923076923077,
+      "mode": "B",
+      "rushing_share": 0.0,
+      "take_id": "reagan_challenger__user__take02"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 76.936,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 0,
+        "dragging": 1,
+        "missing_pause": 3,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "flags_by_type": {
+        "awkward_pause": 1,
+        "dragging": 1,
+        "missing_pause": 3,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "3cf79b05b5f2cfd572fefd2d",
+      "matched_pairs": [
+        [
+          2,
+          2
+        ]
+      ],
+      "missing_pause_share": 0.75,
+      "mode": "B",
+      "rushing_share": 0.0,
+      "take_id": "reagan_challenger__user__take02"
+    },
+    {
+      "detector": "v1",
+      "duration_s": 79.43,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 3,
+        "dragging": 1,
+        "missing_pause": 10,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 1,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "flags_by_type": {
+        "awkward_pause": 3,
+        "dragging": 1,
+        "missing_pause": 11,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 1,
+        "too_quiet": 0
+      },
+      "job_id": "940ff757c37df7af5db66146",
+      "matched_pairs": [
+        [
+          14,
+          2
+        ]
+      ],
+      "missing_pause_share": 0.6666666666666666,
+      "mode": "A",
+      "rushing_share": 0.06666666666666667,
+      "take_id": "reagan_challenger__user__take03"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 79.43,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 0,
+        "dragging": 1,
+        "missing_pause": 10,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11
+      ],
+      "flags_by_type": {
+        "awkward_pause": 0,
+        "dragging": 1,
+        "missing_pause": 11,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "bd8cad248693bebc07331de1",
+      "matched_pairs": [
+        [
+          10,
+          2
+        ]
+      ],
+      "missing_pause_share": 0.9090909090909091,
+      "mode": "A",
+      "rushing_share": 0.0,
+      "take_id": "reagan_challenger__user__take03"
+    },
+    {
+      "detector": "v1",
+      "duration_s": 79.43,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 12,
+        "dragging": 0,
+        "missing_pause": 6,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18
+      ],
+      "flags_by_type": {
+        "awkward_pause": 12,
+        "dragging": 0,
+        "missing_pause": 7,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "b6890ffc341c98cd10d65a23",
+      "matched_pairs": [
+        [
+          14,
+          2
+        ]
+      ],
+      "missing_pause_share": 0.3333333333333333,
+      "mode": "B",
+      "rushing_share": 0.0,
+      "take_id": "reagan_challenger__user__take03"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 79.43,
+      "excluded_from_scoring": false,
+      "false_alarms_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 6,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "false_positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "flags_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 7,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "957a6bb4d47b5aed5800fc67",
+      "matched_pairs": [
+        [
+          4,
+          2
+        ]
+      ],
+      "missing_pause_share": 1.0,
+      "mode": "B",
+      "rushing_share": 0.0,
+      "take_id": "reagan_challenger__user__take03"
+    },
+    {
+      "detector": "v1",
+      "duration_s": 80.29,
+      "excluded_from_scoring": true,
+      "false_alarms_by_type": null,
+      "false_positive_indices": null,
+      "flags_by_type": {
+        "awkward_pause": 2,
+        "dragging": 0,
+        "missing_pause": 13,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "37e462f26a807a19c1dd4b2b",
+      "matched_pairs": [],
+      "missing_pause_share": null,
+      "mode": "A",
+      "rushing_share": null,
+      "take_id": "reagan_challenger__user__take04"
+    },
+    {
+      "detector": "v2",
+      "duration_s": 80.29,
+      "excluded_from_scoring": true,
+      "false_alarms_by_type": null,
+      "false_positive_indices": null,
+      "flags_by_type": {
+        "awkward_pause": 0,
+        "dragging": 0,
+        "missing_pause": 13,
+        "monotone": 0,
+        "mumbling": 0,
+        "rushing": 0,
+        "too_quiet": 0
+      },
+      "job_id": "ac8ebc3c73982f5047ac68c8",
+      "matched_pairs": [],
+      "missing_pause_share": null,
+      "mode": "A",
+      "rushing_share": null,
+      "take_id": "reagan_challenger__user__take04"
+    }
+  ],
+  "schema": "human-demo-evidence/v1",
+  "take_timings": [
+    {
+      "aligned_span_s": 82.21,
+      "duration_s": 83.21,
+      "interword_pause_s": 12.740000000000013,
+      "pause_fraction": 0.1549689818756844,
+      "take_id": "gettysburg__user__take01",
+      "word_count": 272
+    },
+    {
+      "aligned_span_s": 82.75,
+      "duration_s": 83.03,
+      "interword_pause_s": 14.060000000000013,
+      "pause_fraction": 0.16990936555891253,
+      "take_id": "gettysburg__user__take02",
+      "word_count": 268
+    },
+    {
+      "aligned_span_s": 80.56,
+      "duration_s": 80.99,
+      "interword_pause_s": 11.279999999999957,
+      "pause_fraction": 0.14001986097318714,
+      "take_id": "gettysburg__user__take03",
+      "word_count": 269
+    },
+    {
+      "aligned_span_s": 86.5,
+      "duration_s": 86.81,
+      "interword_pause_s": 19.42999999999996,
+      "pause_fraction": 0.22462427745664695,
+      "take_id": "gettysburg__user__take04",
+      "word_count": 267
+    },
+    {
+      "aligned_span_s": 76.05000000000001,
+      "duration_s": 76.42,
+      "interword_pause_s": 16.06000000000001,
+      "pause_fraction": 0.21117685733070357,
+      "take_id": "reagan_challenger__user__take01",
+      "word_count": 240
+    },
+    {
+      "aligned_span_s": 76.25,
+      "duration_s": 76.936,
+      "interword_pause_s": 16.809999999999953,
+      "pause_fraction": 0.220459016393442,
+      "take_id": "reagan_challenger__user__take02",
+      "word_count": 238
+    },
+    {
+      "aligned_span_s": 77.26,
+      "duration_s": 79.43,
+      "interword_pause_s": 15.030000000000014,
+      "pause_fraction": 0.19453792389334731,
+      "take_id": "reagan_challenger__user__take03",
+      "word_count": 240
+    },
+    {
+      "aligned_span_s": 78.84,
+      "duration_s": 80.29,
+      "interword_pause_s": 16.239999999999995,
+      "pause_fraction": 0.2059868087265347,
+      "take_id": "reagan_challenger__user__take04",
+      "word_count": 242
+    }
+  ]
+}

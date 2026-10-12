@@ -2,6 +2,19 @@
 
 Submission deadline: October 13.
 
+## Pre-video fixes
+
+1. False-alarm breakdown: added per-take/type v1/v2 A/B counts, take01 flags,
+   shares and same-text reference timing to Phase10. Mode-A v1 FP: 53/77 missing
+   pauses (68.8%), 7/77 rushing (9.1%). Source evaluation hash unchanged.
+   Ruling: do not claim less pausing than every reader: lv_amb has 11.78 s of
+   MFA gaps, below G01/G02/G04. All takes are shorter than every reference;
+   pause context uses Reagan's 90.17 s excerpt, not its full 249.13 s speech.
+2. Exact primary hit/demo table: next.
+3. Replace report screenshots and add genuine results to summary: next.
+4. Fix waveform label overlap without widening scientific intervals: next.
+5. Final no-spot-check/no-independent-raters wording: next.
+
 ## Genuine takes — complete
 
 The recorder's 2026-10-12 chat confirmation supersedes manual TAKES_REVIEW

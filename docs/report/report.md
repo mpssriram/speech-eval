@@ -220,13 +220,11 @@ describe controlled edits, not humans. [Mode C](../../reports/phase08_mode_c.md)
 
 # 7.1 Genuine recorder-confirmed takes
 
-Eight consented recordings completed real MFA analysis: A for all takes,
-B02/03 versus own01, plus C for the spontaneous take04s. Both take04s have
-unknown flaws and are excluded from accuracy pools. Labels are the recorder's
-confirmation of the script, not independent annotation. Canonical units and
-word anchors were fixed before results; ASR structural edits build the transcripts,
-while substitutions/mumbling retain canonical words. Verbatim acoustic fidelity
-has not been independently checked. No detector settings changed.
+Eight consented takes completed real MFA: A for all, B02/03 versus own01,
+C for both spontaneous take04s (unknown flaws, excluded from scoring).
+Labels are recorder-confirmed, not independent; word anchors were fixed before
+results. Transcripts apply ASR structural edits but keep canonical substitutions
+and mumbling words; verbatim fidelity is not independently verified. No tuning.
 
 | Version / mode | Labels | Hits / misses / FP | FP/min |
 |---|---:|---|---:|
@@ -238,13 +236,17 @@ has not been independently checked. No detector settings changed.
 Primary matching is same-type one-to-one IoU >=0.3, including pause events.
 A pools six scored takes (8.00 min); B pools four current takes (5.34 min),
 not their references. Take01 flags: Gettysburg/Reagan 9/14 (v1), 7/11 (v2).
-Historical pause-centre <=0.25 s and explicitly secondary unit-overlap counts,
-localized MFA spans, transcript provenance and every dashboard link are in
-[Phase10](../../reports/phase10_human_takes.md). V1 remains primary;
+Historical pause-centre <=0.25 s, secondary unit overlap, MFA spans, transcripts
+and dashboard links: [Phase10](../../reports/phase10_human_takes.md). V1 stays primary;
 post-hoc v2; test split was seen with v1, so results are optimistic.
-Hits are limited and false alarms high; these labels do not establish independent
-perceptual accuracy. The synthetic workflow fixture previously missed its edit;
-no tuning followed either fixture or genuine takes.
+Limited hits/high false alarms do not establish independent perceptual accuracy.
+
+Takes finish sooner than every same-text reference: Gettysburg 80.99-86.81 s
+versus 102.88-190.95 s; Reagan 76.42-80.29 s versus a 90.17 s excerpt. Total
+aligned gap seconds are lower than nine Gettysburg readers and Reagan; only
+Gettysburg take03 is below the tenth reader too. This is not every sentence or
+pause. Mode A's 53 unlabelled missing pauses (of 77 v1 false alarms) are measured
+reader differences, counted as false alarms because unlabelled, never hits.
 
 # 8. Dashboard
 

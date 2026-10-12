@@ -82,3 +82,67 @@ Re-run from WSL `~/speech-eval` with the existing Docker API healthy:
 env -u PYTHONPATH ~/.local/bin/uv run python scripts/prepare_human_confirmation.py
 env -u PYTHONPATH ~/.local/bin/uv run python scripts/analyze_human.py --detector both --v2-runtime docker
 ```
+
+## False-alarm breakdown (primary IoU >=0.3)
+
+Counts below are unmatched predictions, not independently verified delivery errors. No unlabelled difference is reclassified as a hit. Unknown take04s show flags only, with no false-alarm claim.
+
+| Detector | Take | Mode | Rushing | Dragging | Monotone | Too quiet | Mumbling | Awkward pause | Missing pause | FP | Missing-pause share | Rushing share |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| v1 | gettysburg__user__take01 | A | 1 | 0 | 0 | 0 | 0 | 1 | 7 | 9 | 77.8% | 11.1% |
+| v2 | gettysburg__user__take01 | A | 0 | 0 | 0 | 0 | 0 | 0 | 7 | 7 | 100.0% | 0.0% |
+| v1 | gettysburg__user__take02 | A | 2 | 0 | 0 | 0 | 0 | 0 | 4 | 6 | 66.7% | 33.3% |
+| v2 | gettysburg__user__take02 | A | 2 | 0 | 0 | 0 | 0 | 0 | 4 | 6 | 66.7% | 33.3% |
+| v1 | gettysburg__user__take02 | B | 0 | 0 | 0 | 0 | 0 | 4 | 8 | 12 | 66.7% | 0.0% |
+| v2 | gettysburg__user__take02 | B | 0 | 0 | 0 | 0 | 0 | 0 | 8 | 8 | 100.0% | 0.0% |
+| v1 | gettysburg__user__take03 | A | 2 | 0 | 0 | 0 | 0 | 2 | 8 | 12 | 66.7% | 16.7% |
+| v2 | gettysburg__user__take03 | A | 0 | 0 | 0 | 0 | 0 | 0 | 9 | 9 | 100.0% | 0.0% |
+| v1 | gettysburg__user__take03 | B | 0 | 0 | 1 | 0 | 0 | 8 | 8 | 17 | 47.1% | 0.0% |
+| v2 | gettysburg__user__take03 | B | 0 | 0 | 1 | 0 | 0 | 0 | 8 | 9 | 88.9% | 0.0% |
+| v1 | gettysburg__user__take04 | A | 1 | 0 | 0 | 0 | 0 | 1 | 6 | excluded; flags only | excluded | excluded |
+| v2 | gettysburg__user__take04 | A | 0 | 0 | 0 | 0 | 0 | 1 | 6 | excluded; flags only | excluded | excluded |
+| v1 | reagan_challenger__user__take01 | A | 0 | 0 | 0 | 0 | 0 | 3 | 11 | 14 | 78.6% | 0.0% |
+| v2 | reagan_challenger__user__take01 | A | 0 | 0 | 0 | 0 | 0 | 0 | 11 | 11 | 100.0% | 0.0% |
+| v1 | reagan_challenger__user__take02 | A | 1 | 2 | 0 | 0 | 0 | 5 | 13 | 21 | 61.9% | 4.8% |
+| v2 | reagan_challenger__user__take02 | A | 0 | 1 | 0 | 0 | 0 | 0 | 13 | 14 | 92.9% | 0.0% |
+| v1 | reagan_challenger__user__take02 | B | 0 | 1 | 0 | 0 | 0 | 8 | 4 | 13 | 30.8% | 0.0% |
+| v2 | reagan_challenger__user__take02 | B | 0 | 1 | 0 | 0 | 0 | 0 | 3 | 4 | 75.0% | 0.0% |
+| v1 | reagan_challenger__user__take03 | A | 1 | 1 | 0 | 0 | 0 | 3 | 10 | 15 | 66.7% | 6.7% |
+| v2 | reagan_challenger__user__take03 | A | 0 | 1 | 0 | 0 | 0 | 0 | 10 | 11 | 90.9% | 0.0% |
+| v1 | reagan_challenger__user__take03 | B | 0 | 0 | 0 | 0 | 0 | 12 | 6 | 18 | 33.3% | 0.0% |
+| v2 | reagan_challenger__user__take03 | B | 0 | 0 | 0 | 0 | 0 | 0 | 6 | 6 | 100.0% | 0.0% |
+| v1 | reagan_challenger__user__take04 | A | 0 | 0 | 0 | 0 | 0 | 2 | 13 | excluded; flags only | excluded | excluded |
+| v2 | reagan_challenger__user__take04 | A | 0 | 0 | 0 | 0 | 0 | 0 | 13 | excluded; flags only | excluded | excluded |
+
+Take01 rows give flags by type explicitly: all are unmatched because no delivery flaws were declared. Slips are not delivery labels.
+
+| Detector / mode | FP | Missing pause | Rushing | Combined share |
+|---|---:|---:|---:|---:|
+| v1 / A | 77 | 53 (68.8%) | 7 (9.1%) | 77.9% |
+| v1 / B | 60 | 26 (43.3%) | 0 (0.0%) | 43.3% |
+| v2 / A | 58 | 54 (93.1%) | 2 (3.4%) | 96.6% |
+| v2 / B | 27 | 25 (92.6%) | 0 (0.0%) | 92.6% |
+
+## Same-text reference duration and pause context
+
+Timing uses retained real MFA, not listening. Inter-word pause is the sum of positive gaps between consecutive aligned words; it is not a new detector feature. Compare the same excerpt, not the full 249.13 s Reagan speech.
+
+| Text | Reference readers | Prepared audio range (s) | Same-text aligned span range (s) | Inter-word pause range (s) |
+|---|---:|---:|---:|---:|
+| gettysburg | 10 | 102.88-190.95 | 101.57-190.55 | 11.78-68.27 |
+| reagan_challenger | 1 | 249.13-249.13 | 90.17-90.17 | 27.01-27.01 |
+
+| Take | Prepared duration (s) | Same-text aligned span (s) | Inter-word pause (s) |
+|---|---:|---:|---:|
+| gettysburg__user__take01 | 83.21 | 82.21 | 12.74 |
+| gettysburg__user__take02 | 83.03 | 82.75 | 14.06 |
+| gettysburg__user__take03 | 80.99 | 80.56 | 11.28 |
+| gettysburg__user__take04 | 86.81 | 86.50 | 19.43 |
+| reagan_challenger__user__take01 | 76.42 | 76.05 | 16.06 |
+| reagan_challenger__user__take02 | 76.94 | 76.25 | 16.81 |
+| reagan_challenger__user__take03 | 79.43 | 77.26 | 15.03 |
+| reagan_challenger__user__take04 | 80.29 | 78.84 | 16.24 |
+
+Gettysburg reference readers are the ten actual Mode-A train readers, not all fifteen available readers. Reagan has one reference: its first 17 canonical units, ending “discover its truths.”, are compared with the recordings. Duration alone does not establish faster delivery in every sentence, and fewer total gap seconds does not mean every individual pause is shorter.
+
+Machine-readable full precision and reference IDs: `data/human/demo_evidence.json`. Frozen genuine evaluation JSON is unchanged.
