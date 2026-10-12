@@ -27,6 +27,13 @@ Submission deadline: October 13.
    original consent unchanged. Source audio remains public domain per source.
    README, dataset card and report source updated. PDF renderer now reads the
    source author for visible credit and PDF metadata; final regeneration is item 6.
+4. Mode B precision check: SKIPPED rerun because already completed DEV-only in
+   scripts/diagnose_mode_b_dev.py and reports/phase12_fixes.md. Existing audit
+   covers before/after/inside/overlap FP positions, rushing/dragging/pause maps,
+   independent MFA jitter and gain-adjusted outside-edit PCM checks. Added the
+   554-FP breakdown and conclusions to report section 6.2. No demonstrated live
+   timing/processing bug; no detector fix or new benchmark test evaluation.
+   Rounded insertion-knot oracle QA outliers remain explicit, not silently fixed.
 
 ## Pre-video fixes
 

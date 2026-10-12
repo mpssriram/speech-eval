@@ -204,6 +204,30 @@ B precision/F1 rise but remain low, with recall falling. V2 is a precision/recal
 trade-off, not established general improvement; uniform recording-wide problems
 can be missed by within-recording contrast. Human takes/ratings were not used for tuning.
 
+# 6.2 Mode B precision diagnosis (already completed, DEV only)
+
+Frozen v1 compared 152 DEV Gettysburg/O Captain variants with their own originals:
+70 hits, 94 misses, 554 FP; precision 0.112, recall 0.427. Four self-controls
+had zero flags. FP positions use the nearest edit of any type; wrong-type
+inside flags still count as FP. This is separate from the published B test cohort.
+
+| FP type | Before | After | Inside | Overlap |
+|---|---:|---:|---:|---:|
+| awkward_pause | 284 | 232 | 19 | 11 |
+| rushing | 0 | 0 | 5 | 1 |
+| dragging | 0 | 0 | 1 | 0 |
+| missing_pause | 0 | 0 | 1 | 0 |
+
+Median pause FP excess was 0.008 s. After rushing/dragging/pause edits, real-MFA
+start residuals versus mapped source were median 0.003 s / p95 0.009 s, versus
+0.287 / 2.204 s without mapping. Detection uses real MFA, not oracle time maps.
+Outside-edit HQ samples differed by at most 0.596 PCM16 LSB after recorded global
+gain; 37 files had logged anti-clipping gain. Map duration error was <0.000499 s.
+Two rounded insertion-knot oracle edge outliers remain disclosed; they are not
+detector inputs. Tiny pause spread amplifies alignment jitter; no demonstrated
+live B timing/processing bug was found. No fix, retuning or new test run was made.
+[Detailed existing DEV audit](../../reports/phase12_fixes.md).
+
 # 7. No-reference comparison
 
 C uses **different eligibility and sentence/type matching**. Its paired comparison
