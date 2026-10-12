@@ -1,0 +1,203 @@
+{
+  "analysis_id": "7666395516fa",
+  "detector": {
+    "config_hash": "3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538",
+    "engine": "rules",
+    "version": "post-hoc-v2"
+  },
+  "duration_s": 83.03,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "gettysburg__user__input_91e74acbc922",
+  "reference": {
+    "baseline_recording_id": "gettysburg__lv_dj__orig",
+    "exclude_speaker": null,
+    "kind": "distribution",
+    "n_readers": 10,
+    "reference_version": "746a5ef0d4f2ad2eb999a85dc58eed970ddd266438c98da4543938485fdbeabe",
+    "text_id": "gettysburg"
+  },
+  "regions": [
+    {
+      "end": 4.9,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.1,
+        "reference": 0.6697,
+        "unit": "s",
+        "z": -7.298
+      },
+      "explanation": "4.8\u20134.9 s, \"nation, conceived\": you paused 0.1 s after \"nation,\" where good readers pause 0.67 s (0.57 s shorter, 7.3 SD below). The listener gets no breathing space. This is the opening sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 7.298,
+      "severity": 4,
+      "start": 4.8,
+      "tags": [
+        "first_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 16,
+      "word_start": 15
+    },
+    {
+      "end": 19.66,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.48,
+        "reference": 1.207,
+        "unit": "s",
+        "z": -5.722
+      },
+      "explanation": "19.2\u201319.7 s, \"war. We\": you paused 0.48 s after \"war.\" where good readers pause 1.2 s (0.73 s shorter, 5.7 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 5.722,
+      "severity": 4,
+      "start": 19.18,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 63,
+      "word_start": 62
+    },
+    {
+      "end": 21.32,
+      "evidence": {
+        "feature": "rate",
+        "participant": 7.877,
+        "reference": 4.74,
+        "unit": "syllables/s",
+        "z": 4.043
+      },
+      "explanation": "20.0\u201321.3 s, \"to dedicate a portion of that field,\": you spoke at 7.9 syllables/s; good readers average 4.7 (1.7\u00d7 faster, 4 SD above). Rushing this phrase reduces its weight. Post-hoc v2: practical effect and region constraints passed. Own-sentence robust z=2.",
+      "mean_abs_z": 4.043,
+      "severity": 3,
+      "start": 20.04,
+      "tags": [],
+      "type": "rushing",
+      "v2": {
+        "minimum_effect_met": true,
+        "sentence": 3,
+        "within_recording_z": 1.955
+      },
+      "word_end": 72,
+      "word_start": 66
+    },
+    {
+      "end": 23.54,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.156,
+        "reference": 3.221,
+        "unit": "syllables/s",
+        "z": 4.232
+      },
+      "explanation": "23.0\u201323.5 s, \"here gave their\": you spoke at 5.2 syllables/s; good readers average 3.2 (1.6\u00d7 faster, 4.2 SD above). Rushing this phrase reduces its weight. Post-hoc v2: practical effect and region constraints passed. Own-sentence robust z=2.",
+      "mean_abs_z": 4.232,
+      "severity": 4,
+      "start": 23.01,
+      "tags": [],
+      "type": "rushing",
+      "v2": {
+        "minimum_effect_met": true,
+        "sentence": 3,
+        "within_recording_z": 1.955
+      },
+      "word_end": 83,
+      "word_start": 81
+    },
+    {
+      "end": 31.47,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.57,
+        "reference": 6.939e-18,
+        "unit": "s",
+        "z": 6024.0
+      },
+      "explanation": "29.9\u201331.5 s, \"larger sense,\": a 1.6 s pause between \"larger\" and \"sense,\" where good readers pause 6.9e-18 s (1.6 s longer, 6e+03 SD above). It breaks the sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 6024.0,
+      "severity": 4,
+      "start": 29.9,
+      "tags": [],
+      "type": "awkward_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 104,
+      "word_start": 103
+    },
+    {
+      "end": 39.735,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.5,
+        "unit": "s",
+        "z": -7.125
+      },
+      "explanation": "39.7\u201339.7 s, \"it, far\": you paused 6.9e-18 s after \"it,\" where good readers pause 0.5 s (0.5 s shorter, 7.1 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 7.125,
+      "severity": 4,
+      "start": 39.705,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 128,
+      "word_start": 127
+    },
+    {
+      "end": 57.2,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.26,
+        "reference": 0.9658,
+        "unit": "s",
+        "z": -3.953
+      },
+      "explanation": "56.9\u201357.2 s, \"advanced. It\": you paused 0.26 s after \"advanced.\" where good readers pause 0.97 s (0.71 s shorter, 4 SD below). The listener gets no breathing space. This is the speech's final sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 3.953,
+      "severity": 3,
+      "start": 56.94,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 186,
+      "word_start": 185
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 8.3,
+    "pace": 9.3,
+    "pauses": 2.4,
+    "pitch": 10.0,
+    "volume": 10.0
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "type": "post_hoc_detector_v2"
+    },
+    {
+      "count": 5,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

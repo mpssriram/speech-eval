@@ -152,3 +152,37 @@ video URL, disk requirement and exact numeric explanation examples remain pendin
 all unresolved draft fields are in docs/TODO_PLACEHOLDERS.md. The proposed MIT
 code / CC BY 4.0 annotation grants lack formal owner licence files. No grants,
 human-performance claims, pitch progress or rater confidence intervals were invented.
+
+## Human workflow producer environment — resolved 2026-10-12
+
+The following entries describe the first host-side v2 attempt, not current
+missing inputs or unresolved failures. V1 produced real-MFA measurements inside
+Docker; host v2 rejected its absolute `/app` model-path identity. Adapter
+`036363c` runs unchanged v2 inside that same API container, verifying all frozen
+hashes without bypassing measurement provenance. The completed run has 26 rows
+and zero processing problems; labels, thresholds, bins and detector code stayed
+fixed. See `data/human/runtime_attempts.json` and `data/human/verification.json`.
+
+- Human confirmed workflow: gettysburg__user__take01 Mode A: Stale participant feature provenance: gettysburg__user__input_b7df9bd980c1; regenerate participant input
+
+- Human confirmed workflow: gettysburg__user__take02 Mode A: Stale participant feature provenance: gettysburg__user__input_91e74acbc922; regenerate participant input
+
+- Human confirmed workflow: gettysburg__user__take02 Mode B: Stale participant feature provenance: gettysburg__user__input_91e74acbc922; regenerate participant input
+
+- Human confirmed workflow: gettysburg__user__take03 Mode A: Stale participant feature provenance: gettysburg__user__input_4b7c30271b2f; regenerate participant input
+
+- Human confirmed workflow: gettysburg__user__take03 Mode B: Stale participant feature provenance: gettysburg__user__input_4b7c30271b2f; regenerate participant input
+
+- Human confirmed workflow: gettysburg__user__take04 Mode A: Stale participant feature provenance: gettysburg__user__input_b32e8ab739c4; regenerate participant input
+
+- Human confirmed workflow: reagan_challenger__user__take01 Mode A: Stale participant feature provenance: reagan_challenger__user__input_6b1ca5bc673c; regenerate participant input
+
+- Human confirmed workflow: reagan_challenger__user__take02 Mode A: Stale participant feature provenance: reagan_challenger__user__input_cf63338562c6; regenerate participant input
+
+- Human confirmed workflow: reagan_challenger__user__take02 Mode B: Stale participant feature provenance: reagan_challenger__user__input_cf63338562c6; regenerate participant input
+
+- Human confirmed workflow: reagan_challenger__user__take03 Mode A: Stale participant feature provenance: reagan_challenger__user__input_990df0a0f76b; regenerate participant input
+
+- Human confirmed workflow: reagan_challenger__user__take03 Mode B: Stale participant feature provenance: reagan_challenger__user__input_990df0a0f76b; regenerate participant input
+
+- Human confirmed workflow: reagan_challenger__user__take04 Mode A: Stale participant feature provenance: reagan_challenger__user__input_e002e6e7884a; regenerate participant input

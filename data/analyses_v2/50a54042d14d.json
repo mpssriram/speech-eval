@@ -1,0 +1,333 @@
+{
+  "analysis_id": "50a54042d14d",
+  "detector": {
+    "config_hash": "3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538",
+    "engine": "rules",
+    "version": "post-hoc-v2"
+  },
+  "duration_s": 80.29,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "reagan_challenger__user__input_e002e6e7884a",
+  "reference": {
+    "baseline_recording_id": "reagan_challenger__reagan__orig",
+    "exclude_speaker": null,
+    "kind": "distribution",
+    "n_readers": 1,
+    "reference_version": "cd657c109de938f682df9699c0b6eaf1aaf4e7565cad8d1b2e2d8c05578658ee",
+    "text_id": "reagan_challenger"
+  },
+  "regions": [
+    {
+      "end": 4.885,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.96,
+        "unit": "s",
+        "z": -3293.0
+      },
+      "explanation": "4.9\u20134.9 s, \"Union, but\": you paused 6.9e-18 s after \"Union,\" where good readers pause 0.96 s (0.96 s shorter, 3.3e+03 SD below). The listener gets no breathing space. This is the opening sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 3293.0,
+      "severity": 4,
+      "start": 4.855,
+      "tags": [
+        "first_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 19,
+      "word_start": 18
+    },
+    {
+      "end": 7.035,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.45,
+        "unit": "s",
+        "z": -2522.0
+      },
+      "explanation": "7.0\u20137.0 s, \"have led\": you paused 6.9e-18 s after \"have\" where good readers pause 0.45 s (0.45 s shorter, 2.5e+03 SD below). The listener gets no breathing space. This is the opening sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 2522.0,
+      "severity": 4,
+      "start": 7.005,
+      "tags": [
+        "first_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 27,
+      "word_start": 26
+    },
+    {
+      "end": 11.82,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.39,
+        "reference": 1.216,
+        "unit": "s",
+        "z": -1158.0
+      },
+      "explanation": "11.4\u201311.8 s, \"remembering. Nancy\": you paused 0.39 s after \"remembering.\" where good readers pause 1.2 s (0.83 s shorter, 1.2e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1158.0,
+      "severity": 4,
+      "start": 11.43,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 41,
+      "word_start": 40
+    },
+    {
+      "end": 18.38,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.05,
+        "reference": 0.32,
+        "unit": "s",
+        "z": -1433.0
+      },
+      "explanation": "18.3\u201318.4 s, \"with all\": you paused 0.05 s after \"with\" where good readers pause 0.32 s (0.27 s shorter, 1.4e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1433.0,
+      "severity": 4,
+      "start": 18.33,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 63,
+      "word_start": 62
+    },
+    {
+      "end": 33.0,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.3,
+        "reference": 0.875,
+        "unit": "s",
+        "z": -1065.0
+      },
+      "explanation": "32.7\u201333.0 s, \"this. And\": you paused 0.3 s after \"this.\" where good readers pause 0.88 s (0.58 s shorter, 1.1e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1065.0,
+      "severity": 4,
+      "start": 32.7,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 110,
+      "word_start": 109
+    },
+    {
+      "end": 37.07,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.39,
+        "reference": 1.026,
+        "unit": "s",
+        "z": -979.6
+      },
+      "explanation": "36.7\u201337.1 s, \"shuttle. But\": you paused 0.39 s after \"shuttle.\" where good readers pause 1 s (0.64 s shorter, 9.8e+02 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 979.6,
+      "severity": 4,
+      "start": 36.68,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 125,
+      "word_start": 124
+    },
+    {
+      "end": 39.97,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.12,
+        "reference": 0.64,
+        "unit": "s",
+        "z": -1535.0
+      },
+      "explanation": "39.9\u201340.0 s, \"dangers, but\": you paused 0.12 s after \"dangers,\" where good readers pause 0.64 s (0.52 s shorter, 1.5e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1535.0,
+      "severity": 4,
+      "start": 39.85,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 135,
+      "word_start": 134
+    },
+    {
+      "end": 45.5,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.15,
+        "reference": 0.87,
+        "unit": "s",
+        "z": -1672.0
+      },
+      "explanation": "45.4\u201345.5 s, \"Smith, Dick\": you paused 0.15 s after \"Smith,\" where good readers pause 0.87 s (0.72 s shorter, 1.7e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1672.0,
+      "severity": 4,
+      "start": 45.35,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 150,
+      "word_start": 149
+    },
+    {
+      "end": 46.36,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.15,
+        "reference": 0.8,
+        "unit": "s",
+        "z": -1585.0
+      },
+      "explanation": "46.2\u201346.4 s, \"Scobee, Judith\": you paused 0.15 s after \"Scobee,\" where good readers pause 0.8 s (0.65 s shorter, 1.6e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1585.0,
+      "severity": 4,
+      "start": 46.21,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 152,
+      "word_start": 151
+    },
+    {
+      "end": 48.52,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.15,
+        "reference": 0.87,
+        "unit": "s",
+        "z": -1672.0
+      },
+      "explanation": "48.4\u201348.5 s, \"McNair, Ellison\": you paused 0.15 s after \"McNair,\" where good readers pause 0.87 s (0.72 s shorter, 1.7e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1672.0,
+      "severity": 4,
+      "start": 48.37,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 156,
+      "word_start": 155
+    },
+    {
+      "end": 49.72,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.16,
+        "reference": 0.89,
+        "unit": "s",
+        "z": -1642.0
+      },
+      "explanation": "49.6\u201349.7 s, \"Onizuka, Gregory\": you paused 0.16 s after \"Onizuka,\" where good readers pause 0.89 s (0.73 s shorter, 1.6e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1642.0,
+      "severity": 4,
+      "start": 49.56,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 158,
+      "word_start": 157
+    },
+    {
+      "end": 52.58,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.53,
+        "reference": 1.451,
+        "unit": "s",
+        "z": -1042.0
+      },
+      "explanation": "52.0\u201352.6 s, \"McAuliffe. We\": you paused 0.53 s after \"McAuliffe.\" where good readers pause 1.5 s (0.92 s shorter, 1e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1042.0,
+      "severity": 4,
+      "start": 52.05,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 163,
+      "word_start": 162
+    },
+    {
+      "end": 73.52,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.08,
+        "reference": 0.56,
+        "unit": "s",
+        "z": -1693.0
+      },
+      "explanation": "73.4\u201373.5 s, \"challenge, and\": you paused 0.08 s after \"challenge,\" where good readers pause 0.56 s (0.48 s shorter, 1.7e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1693.0,
+      "severity": 4,
+      "start": 73.44,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 224,
+      "word_start": 223
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 8.0,
+    "pace": 10.0,
+    "pauses": 0.0,
+    "pitch": 10.0,
+    "volume": 10.0
+  },
+  "text_id": "reagan_challenger",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "type": "post_hoc_detector_v2"
+    },
+    {
+      "count": 9,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

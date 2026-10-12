@@ -1,0 +1,364 @@
+{
+  "analysis_id": "6ea97fd66515",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 76.936,
+  "key_moments": [],
+  "mode": "B",
+  "progress": {
+    "awkward_pause": {
+      "current": {
+        "count": 6,
+        "duration_s": 6.19
+      },
+      "previous": {
+        "count": 3,
+        "duration_s": 1.6
+      }
+    },
+    "dragging": {
+      "current": {
+        "count": 2,
+        "duration_s": 1.95
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "missing_pause": {
+      "current": {
+        "count": 13,
+        "duration_s": 2.06
+      },
+      "previous": {
+        "count": 11,
+        "duration_s": 2.19
+      }
+    },
+    "monotone": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "mumbling": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "rushing": {
+      "current": {
+        "count": 1,
+        "duration_s": 0.93
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "too_quiet": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    }
+  },
+  "recording_id": "reagan_challenger__user__input_cf63338562c6",
+  "reference": {
+    "baseline_recording_id": "reagan_challenger__user__input_6b1ca5bc673c",
+    "exclude_speaker": null,
+    "kind": "previous_take",
+    "n_readers": 1,
+    "reference_version": "dd16455692c4f03bed0905cae93c0b33e8ba627f0ba1a022c83cdd92741b92a5",
+    "text_id": "reagan_challenger"
+  },
+  "regions": [
+    {
+      "end": 13.75,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.53,
+        "reference": 0.48,
+        "unit": "s",
+        "z": 98.76
+      },
+      "explanation": "13.2\u201313.8 s, \"Challenger. We\": a 0.53 s pause between \"Challenger.\" and \"We\" where your previous take pause 0.48 s (0.05 s longer, 99 SD above). It breaks the sentence.",
+      "mean_abs_z": 98.76,
+      "severity": 4,
+      "start": 13.22,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 55,
+      "word_start": 54
+    },
+    {
+      "end": 16.9,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.56,
+        "reference": 0.49,
+        "unit": "s",
+        "z": 133.5
+      },
+      "explanation": "16.3\u201316.9 s, \"country. This\": a 0.56 s pause between \"country.\" and \"This\" where your previous take pause 0.49 s (0.07 s longer, 1.3e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 133.5,
+      "severity": 4,
+      "start": 16.34,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 68,
+      "word_start": 67
+    },
+    {
+      "end": 26.82,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.66,
+        "reference": 0.51,
+        "unit": "s",
+        "z": 260.0
+      },
+      "explanation": "26.2\u201326.8 s, \"flight; We've\": a 0.66 s pause between \"flight;\" and \"We've\" where your previous take pause 0.51 s (0.15 s longer, 2.6e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 260.0,
+      "severity": 4,
+      "start": 26.16,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 101,
+      "word_start": 100
+    },
+    {
+      "end": 32.88,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.11,
+        "reference": 0.43,
+        "unit": "s",
+        "z": 966.6
+      },
+      "explanation": "31.8\u201332.9 s, \"shuttle. But\": a 1.1 s pause between \"shuttle.\" and \"But\" where your previous take pause 0.43 s (0.68 s longer, 9.7e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 966.6,
+      "severity": 4,
+      "start": 31.77,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 121,
+      "word_start": 120
+    },
+    {
+      "end": 34.655,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.47,
+        "unit": "s",
+        "z": -2565.0
+      },
+      "explanation": "34.6\u201334.7 s, \"Seven, were\": you paused 6.9e-18 s after \"Seven,\" where your previous take pause 0.47 s (0.47 s shorter, 2.6e+03 SD below). The listener gets no breathing space. This phrase contains a number.",
+      "mean_abs_z": 2565.0,
+      "severity": 4,
+      "start": 34.625,
+      "tags": [
+        "contains_number"
+      ],
+      "type": "missing_pause",
+      "word_end": 126,
+      "word_start": 125
+    },
+    {
+      "end": 38.35,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.71,
+        "reference": 0.5,
+        "unit": "s",
+        "z": 354.3
+      },
+      "explanation": "37.6\u201338.4 s, \"brilliantly. We\": a 0.71 s pause between \"brilliantly.\" and \"We\" where your previous take pause 0.5 s (0.21 s longer, 3.5e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 354.3,
+      "severity": 4,
+      "start": 37.64,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 139,
+      "word_start": 138
+    },
+    {
+      "end": 45.66,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.24,
+        "reference": 0.73,
+        "unit": "s",
+        "z": -1084.0
+      },
+      "explanation": "45.4\u201345.7 s, \"Onizuka, Gregory\": you paused 0.24 s after \"Onizuka,\" where your previous take pause 0.73 s (0.49 s shorter, 1.1e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 1084.0,
+      "severity": 4,
+      "start": 45.42,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 154,
+      "word_start": 153
+    },
+    {
+      "end": 48.64,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.63,
+        "reference": 0.6,
+        "unit": "s",
+        "z": 49.43
+      },
+      "explanation": "48.0\u201348.6 s, \"McAuliffe. We\": a 0.63 s pause between \"McAuliffe.\" and \"We\" where your previous take pause 0.6 s (0.03 s longer, 49 SD above). It breaks the sentence.",
+      "mean_abs_z": 49.43,
+      "severity": 4,
+      "start": 48.01,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 159,
+      "word_start": 158
+    },
+    {
+      "end": 56.44,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.02,
+        "reference": 0.4,
+        "unit": "s",
+        "z": 948.8
+      },
+      "explanation": "55.4\u201356.4 s, \"tragedy. But\": a 1 s pause between \"tragedy.\" and \"But\" where your previous take pause 0.4 s (0.62 s longer, 9.5e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 948.8,
+      "severity": 4,
+      "start": 55.42,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 185,
+      "word_start": 184
+    },
+    {
+      "end": 62.12,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.23,
+        "reference": 0.74,
+        "unit": "s",
+        "z": 528.6
+      },
+      "explanation": "60.9\u201362.1 s, \"much. Your\": a 1.2 s pause between \"much.\" and \"Your\" where your previous take pause 0.74 s (0.49 s longer, 5.3e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 528.6,
+      "severity": 4,
+      "start": 60.89,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 198,
+      "word_start": 197
+    },
+    {
+      "end": 64.69,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.56,
+        "reference": 0.37,
+        "unit": "s",
+        "z": 1472.0
+      },
+      "explanation": "63.1\u201364.7 s, \"were daring\": a 1.6 s pause between \"were\" and \"daring\" where your previous take pause 0.37 s (1.2 s longer, 1.5e+03 SD above). It breaks the sentence.",
+      "mean_abs_z": 1472.0,
+      "severity": 4,
+      "start": 63.13,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 202,
+      "word_start": 201
+    },
+    {
+      "end": 65.72,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.13,
+        "reference": 0.37,
+        "unit": "s",
+        "z": -928.2
+      },
+      "explanation": "65.6\u201365.7 s, \"brave, and\": you paused 0.13 s after \"brave,\" where your previous take pause 0.37 s (0.24 s shorter, 9.3e+02 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 928.2,
+      "severity": 4,
+      "start": 65.59,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 205,
+      "word_start": 204
+    },
+    {
+      "end": 67.14,
+      "evidence": {
+        "feature": "rate",
+        "participant": 2.207,
+        "reference": 4.722,
+        "unit": "syllables/s",
+        "z": -5.097
+      },
+      "explanation": "65.7\u201367.1 s, \"and they had\": you spoke at 2.2 vs 4.7 syllables/s for your previous take (2.1\u00d7 slower, 5.1 SD below). The phrase loses momentum.",
+      "mean_abs_z": 5.097,
+      "severity": 4,
+      "start": 65.72,
+      "tags": [],
+      "type": "dragging",
+      "word_end": 207,
+      "word_start": 205
+    },
+    {
+      "end": 68.475,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.64,
+        "unit": "s",
+        "z": -2875.0
+      },
+      "explanation": "68.4\u201368.5 s, \"that special\": you paused 6.9e-18 s after \"that\" where your previous take pause 0.64 s (0.64 s shorter, 2.9e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2875.0,
+      "severity": 4,
+      "start": 68.445,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 212,
+      "word_start": 211
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 7.8,
+    "pace": 9.3,
+    "pauses": 0.0,
+    "pitch": 10.0,
+    "volume": 10.0
+  },
+  "text_id": "reagan_challenger",
+  "transcript_source": "supplied",
+  "warnings": [
+    {
+      "count": 5,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

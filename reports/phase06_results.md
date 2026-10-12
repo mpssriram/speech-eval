@@ -48,24 +48,49 @@ Highest measured recall: awkward_pause (0.833); lowest: rushing (0.182). This is
 
 ## Human-A
 
-Eight genuine recordings and actual recorder consent/prose notes are supplied.
-Local ASR drafts are explicitly unconfirmed; confirmed as-spoken transcripts and
-complete supported-type/time or sentence annotations are not available. The
-validator stops at the missing fenced JSON annotation block. Human-A v1 primary
-and separately labelled post-hoc v2 have not run; hits/misses/false positives are
-not estimable, not zero. See `phase10_human_takes.md` and `phase10_asr_review.md`.
-No recordings, labels, listening, scores or rater data were invented; no tuning.
+Eight genuine consented takes completed real CPU MFA and Mode A. Six scored
+takes (01–03 of both texts) contain 13 recorder-confirmed flaws and 8.00
+trimmed minutes. Spontaneous take04s have unknown flaws: analysed in A/C and
+visible in the dashboard, but excluded from all hit/miss/FP pools, not clean.
+Labels derive from recorder confirmation of the planned script, not independent
+annotation/listening. Transcript construction and fixed MFA word spans are in
+`phase10_human_takes.md`; no threshold, bin, weight or detector rule changed.
+
+| Version | Matcher | Labels | Hits | Misses | FP | FP/min |
+|---|---|---:|---:|---:|---:|---:|
+| Frozen v1 (primary) | IoU >=0.3 | 13 | 4 | 9 | 77 | 9.625 |
+| Frozen v1 | Historical pause-centre rule | 13 | 4 | 9 | 77 | 9.625 |
+| Frozen v1 | Secondary unit overlap | 13 | 6 | 7 | 75 | 9.375 |
+| Post-hoc v2 | IoU >=0.3 | 13 | 4 | 9 | 58 | 7.250 |
+| Post-hoc v2 | Historical pause-centre rule | 13 | 4 | 9 | 58 | 7.250 |
+| Post-hoc v2 | Secondary unit overlap | 13 | 5 | 8 | 57 | 7.125 |
+
+Take01 flags (no declared delivery flaws): Gettysburg 9, Reagan 14 for v1;
+Gettysburg 7, Reagan 11 for v2. These flags count as false positives, not hits
+on slips or mispronunciations. V1 is primary and frozen.
+post-hoc v2; test split was seen with v1, so results are optimistic.
 
 ## Human-B
 
-Own take01 baselines exist for both texts, but the same annotation/transcript
-gate blocks B02–04 comparisons. No genuine dashboard jobs or accuracy counts
-are claimed. V1 remains primary and frozen; v2 is secondary/post-hoc. Future
-workflow execution must include take04 rather than silently omitting it.
-No labels or rehearsal improvement were inferred from "random flaws" or the
-recorder's subjective assessment. Independent rater responses remain zero;
-human agreement is a disclosed limitation, not replaced by AI or self-ratings.
+Take02/03 versus own take01 completed for both texts, using the same 13 fixed
+labels. Four current recordings total 5.34 trimmed minutes; reference
+durations are not included. Both take04s are excluded, as explicitly requested.
+
+| Version | Matcher | Labels | Hits | Misses | FP | FP/min |
+|---|---|---:|---:|---:|---:|---:|
+| Frozen v1 (primary) | IoU >=0.3 | 13 | 3 | 10 | 60 | 11.236 |
+| Frozen v1 | Historical pause-centre rule | 13 | 3 | 10 | 60 | 11.236 |
+| Frozen v1 | Secondary unit overlap | 13 | 4 | 9 | 59 | 11.049 |
+| Post-hoc v2 | IoU >=0.3 | 13 | 3 | 10 | 27 | 5.056 |
+| Post-hoc v2 | Historical pause-centre rule | 13 | 3 | 10 | 27 | 5.056 |
+| Post-hoc v2 | Secondary unit overlap | 13 | 4 | 9 | 26 | 4.869 |
+
+V1 stays primary. post-hoc v2; test split was seen with v1, so results are optimistic.
+Counts and all 26 genuine result links are in `phase10_human_takes.md`;
+full precision/provenance is in `data/human/evaluation.json`. No rehearsal
+improvement or independently perceived quality is established by these counts.
+Independent agreement is pending, with zero responses; no AI/self-ratings.
 
 ## Limitations
 
-File-level bootstrap CIs use 1,000 resamples with a fixed seed. Reference models use train speakers only. Uncertain truth regions and overlapping predictions are excluded symmetrically. Visual gold boundaries have a pending human spot-check. Missing human settings prevent full Phase 6 acceptance.
+File-level bootstrap CIs above use 1,000 resamples with a fixed seed. Reference models use train speakers only. Uncertain truth regions and overlapping predictions are excluded symmetrically. Visual gold boundaries have a pending human spot-check. Genuine labels are recorder confirmation, not independent annotation; independent human agreement remains pending. No human CIs or invented severity strata are reported.

@@ -1,0 +1,283 @@
+{
+  "analysis_id": "ec90b3a0ba81",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 80.99,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "gettysburg__user__input_4b7c30271b2f",
+  "reference": {
+    "baseline_recording_id": "gettysburg__lv_dj__orig",
+    "exclude_speaker": null,
+    "kind": "distribution",
+    "n_readers": 10,
+    "reference_version": "746a5ef0d4f2ad2eb999a85dc58eed970ddd266438c98da4543938485fdbeabe",
+    "text_id": "gettysburg"
+  },
+  "regions": [
+    {
+      "end": 4.33,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.03,
+        "reference": 0.6697,
+        "unit": "s",
+        "z": -10.22
+      },
+      "explanation": "4.3\u20134.3 s, \"nation, conceived\": you paused 0.03 s after \"nation,\" where good readers pause 0.67 s (0.64 s shorter, 10 SD below). The listener gets no breathing space. This is the opening sentence.",
+      "mean_abs_z": 10.22,
+      "severity": 4,
+      "start": 4.3,
+      "tags": [
+        "first_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 16,
+      "word_start": 15
+    },
+    {
+      "end": 11.6,
+      "evidence": {
+        "feature": "rate",
+        "participant": 6.752,
+        "reference": 3.369,
+        "unit": "syllables/s",
+        "z": 4.3
+      },
+      "explanation": "10.8\u201311.6 s, \"civil war, testing\": you spoke at 6.8 syllables/s; good readers average 3.4 (2\u00d7 faster, 4.3 SD above). Rushing this phrase reduces its weight.",
+      "mean_abs_z": 4.3,
+      "severity": 4,
+      "start": 10.85,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 39,
+      "word_start": 37
+    },
+    {
+      "end": 24.04,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.024,
+        "reference": 2.982,
+        "unit": "syllables/s",
+        "z": 4.359
+      },
+      "explanation": "23.2\u201324.0 s, \"gave their lives that\": you spoke at 5 syllables/s; good readers average 3 (1.7\u00d7 faster, 4.4 SD above). Rushing this phrase reduces its weight.",
+      "mean_abs_z": 4.359,
+      "severity": 4,
+      "start": 23.19,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 86,
+      "word_start": 83
+    },
+    {
+      "end": 37.855,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.5,
+        "unit": "s",
+        "z": -7.125
+      },
+      "explanation": "37.8\u201337.9 s, \"it, far\": you paused 6.9e-18 s after \"it,\" where good readers pause 0.5 s (0.5 s shorter, 7.1 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 7.125,
+      "severity": 4,
+      "start": 37.825,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 130,
+      "word_start": 129
+    },
+    {
+      "end": 44.775,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.5997,
+        "unit": "s",
+        "z": -9.835
+      },
+      "explanation": "44.7\u201344.8 s, \"here, but\": you paused 6.9e-18 s after \"here,\" where good readers pause 0.6 s (0.6 s shorter, 9.8 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 9.835,
+      "severity": 4,
+      "start": 44.745,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 151,
+      "word_start": 150
+    },
+    {
+      "end": 47.085,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 1.387,
+        "unit": "s",
+        "z": -13.09
+      },
+      "explanation": "47.1\u201347.1 s, \"here. It\": you paused 6.9e-18 s after \"here.\" where good readers pause 1.4 s (1.4 s shorter, 13 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 13.09,
+      "severity": 4,
+      "start": 47.055,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 160,
+      "word_start": 159
+    },
+    {
+      "end": 51.185,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.3279,
+        "unit": "s",
+        "z": -4.811
+      },
+      "explanation": "51.2\u201351.2 s, \"work which\": you paused 6.9e-18 s after \"work\" where good readers pause 0.33 s (0.33 s shorter, 4.8 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 4.811,
+      "severity": 4,
+      "start": 51.155,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 175,
+      "word_start": 174
+    },
+    {
+      "end": 53.29,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.98,
+        "reference": 6.939e-18,
+        "unit": "s",
+        "z": 5240.0
+      },
+      "explanation": "52.3\u201353.3 s, \"fought here\": a 0.98 s pause between \"fought\" and \"here\" where good readers pause 6.9e-18 s (0.98 s longer, 5.2e+03 SD above). It breaks the sentence.",
+      "mean_abs_z": 5240.0,
+      "severity": 4,
+      "start": 52.31,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 179,
+      "word_start": 178
+    },
+    {
+      "end": 55.91,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.45,
+        "reference": 6.939e-18,
+        "unit": "s",
+        "z": 3988.0
+      },
+      "explanation": "55.5\u201355.9 s, \"so nobly\": a 0.45 s pause between \"so\" and \"nobly\" where good readers pause 6.9e-18 s (0.45 s longer, 4e+03 SD above). It breaks the sentence.",
+      "mean_abs_z": 3988.0,
+      "severity": 4,
+      "start": 55.46,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 185,
+      "word_start": 184
+    },
+    {
+      "end": 56.92,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.09,
+        "reference": 0.9658,
+        "unit": "s",
+        "z": -6.601
+      },
+      "explanation": "56.8\u201356.9 s, \"advanced. It\": you paused 0.09 s after \"advanced.\" where good readers pause 0.97 s (0.88 s shorter, 6.6 SD below). The listener gets no breathing space. This is the speech's final sentence.",
+      "mean_abs_z": 6.601,
+      "severity": 4,
+      "start": 56.83,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 187,
+      "word_start": 186
+    },
+    {
+      "end": 77.995,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.4275,
+        "unit": "s",
+        "z": -6.286
+      },
+      "explanation": "78.0\u201378.0 s, \"people, by\": you paused 6.9e-18 s after \"people,\" where good readers pause 0.43 s (0.43 s shorter, 6.3 SD below). The listener gets no breathing space. This is the speech's final sentence.",
+      "mean_abs_z": 6.286,
+      "severity": 4,
+      "start": 77.965,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 257,
+      "word_start": 256
+    },
+    {
+      "end": 78.725,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.4544,
+        "unit": "s",
+        "z": -5.1
+      },
+      "explanation": "78.7\u201378.7 s, \"people, for\": you paused 6.9e-18 s after \"people,\" where good readers pause 0.45 s (0.45 s shorter, 5.1 SD below). The listener gets no breathing space. This is the speech's final sentence.",
+      "mean_abs_z": 5.1,
+      "severity": 4,
+      "start": 78.695,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 260,
+      "word_start": 259
+    },
+    {
+      "end": 79.265,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.4999,
+        "unit": "s",
+        "z": -5.354
+      },
+      "explanation": "79.2\u201379.3 s, \"people, shall\": you paused 6.9e-18 s after \"people,\" where good readers pause 0.5 s (0.5 s shorter, 5.4 SD below). The listener gets no breathing space. This is the speech's final sentence.",
+      "mean_abs_z": 5.354,
+      "severity": 4,
+      "start": 79.235,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 263,
+      "word_start": 262
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 7.8,
+    "pace": 9.2,
+    "pauses": 0.0,
+    "pitch": 10.0,
+    "volume": 10.0
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "supplied",
+  "warnings": [
+    {
+      "count": 5,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

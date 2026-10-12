@@ -1,0 +1,227 @@
+{
+  "analysis_id": "ac64cca0b260",
+  "detector": {
+    "config_hash": "3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538",
+    "engine": "rules",
+    "version": "post-hoc-v2"
+  },
+  "duration_s": 76.936,
+  "key_moments": [],
+  "mode": "B",
+  "progress": {
+    "awkward_pause": {
+      "current": {
+        "count": 1,
+        "duration_s": 1.56
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "dragging": {
+      "current": {
+        "count": 1,
+        "duration_s": 1.42
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "missing_pause": {
+      "current": {
+        "count": 13,
+        "duration_s": 2.06
+      },
+      "previous": {
+        "count": 11,
+        "duration_s": 2.19
+      }
+    },
+    "monotone": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "mumbling": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "rushing": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "too_quiet": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    }
+  },
+  "recording_id": "reagan_challenger__user__input_cf63338562c6",
+  "reference": {
+    "baseline_recording_id": "reagan_challenger__user__input_6b1ca5bc673c",
+    "exclude_speaker": null,
+    "kind": "previous_take",
+    "n_readers": 1,
+    "reference_version": "dd16455692c4f03bed0905cae93c0b33e8ba627f0ba1a022c83cdd92741b92a5",
+    "text_id": "reagan_challenger"
+  },
+  "regions": [
+    {
+      "end": 34.655,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.47,
+        "unit": "s",
+        "z": -2565.0
+      },
+      "explanation": "34.6\u201334.7 s, \"Seven, were\": you paused 6.9e-18 s after \"Seven,\" where your previous take pause 0.47 s (0.47 s shorter, 2.6e+03 SD below). The listener gets no breathing space. This phrase contains a number. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 2565.0,
+      "severity": 4,
+      "start": 34.625,
+      "tags": [
+        "contains_number"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 126,
+      "word_start": 125
+    },
+    {
+      "end": 45.66,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.24,
+        "reference": 0.73,
+        "unit": "s",
+        "z": -1084.0
+      },
+      "explanation": "45.4\u201345.7 s, \"Onizuka, Gregory\": you paused 0.24 s after \"Onizuka,\" where your previous take pause 0.73 s (0.49 s shorter, 1.1e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1084.0,
+      "severity": 4,
+      "start": 45.42,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 154,
+      "word_start": 153
+    },
+    {
+      "end": 64.69,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.56,
+        "reference": 0.37,
+        "unit": "s",
+        "z": 1472.0
+      },
+      "explanation": "63.1\u201364.7 s, \"were daring\": a 1.6 s pause between \"were\" and \"daring\" where your previous take pause 0.37 s (1.2 s longer, 1.5e+03 SD above). It breaks the sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1472.0,
+      "severity": 4,
+      "start": 63.13,
+      "tags": [],
+      "type": "awkward_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 202,
+      "word_start": 201
+    },
+    {
+      "end": 67.14,
+      "evidence": {
+        "feature": "rate",
+        "participant": 2.207,
+        "reference": 4.722,
+        "unit": "syllables/s",
+        "z": -5.097
+      },
+      "explanation": "65.7\u201367.1 s, \"and they had\": you spoke at 2.2 vs 4.7 syllables/s for your previous take (2.1\u00d7 slower, 5.1 SD below). The phrase loses momentum. Post-hoc v2: practical effect and region constraints passed. Own-sentence robust z=-4.3.",
+      "mean_abs_z": 5.097,
+      "severity": 4,
+      "start": 65.72,
+      "tags": [],
+      "type": "dragging",
+      "v2": {
+        "minimum_effect_met": true,
+        "sentence": 15,
+        "within_recording_z": -4.271
+      },
+      "word_end": 207,
+      "word_start": 205
+    },
+    {
+      "end": 68.475,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.64,
+        "unit": "s",
+        "z": -2875.0
+      },
+      "explanation": "68.4\u201368.5 s, \"that special\": you paused 6.9e-18 s after \"that\" where your previous take pause 0.64 s (0.64 s shorter, 2.9e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 2875.0,
+      "severity": 4,
+      "start": 68.445,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 212,
+      "word_start": 211
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 8.5,
+    "pace": 9.3,
+    "pauses": 3.6,
+    "pitch": 10.0,
+    "volume": 10.0
+  },
+  "text_id": "reagan_challenger",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "type": "post_hoc_detector_v2"
+    },
+    {
+      "count": 5,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

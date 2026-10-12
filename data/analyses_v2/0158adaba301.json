@@ -1,0 +1,270 @@
+{
+  "analysis_id": "0158adaba301",
+  "detector": {
+    "config_hash": "3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538",
+    "engine": "rules",
+    "version": "post-hoc-v2"
+  },
+  "duration_s": 79.43,
+  "key_moments": [],
+  "mode": "B",
+  "progress": {
+    "awkward_pause": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "dragging": {
+      "current": {
+        "count": 1,
+        "duration_s": 2.13
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "missing_pause": {
+      "current": {
+        "count": 11,
+        "duration_s": 1.41
+      },
+      "previous": {
+        "count": 11,
+        "duration_s": 2.19
+      }
+    },
+    "monotone": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "mumbling": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "rushing": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "too_quiet": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    }
+  },
+  "recording_id": "reagan_challenger__user__input_990df0a0f76b",
+  "reference": {
+    "baseline_recording_id": "reagan_challenger__user__input_6b1ca5bc673c",
+    "exclude_speaker": null,
+    "kind": "previous_take",
+    "n_readers": 1,
+    "reference_version": "dd16455692c4f03bed0905cae93c0b33e8ba627f0ba1a022c83cdd92741b92a5",
+    "text_id": "reagan_challenger"
+  },
+  "regions": [
+    {
+      "end": 40.44,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.1,
+        "reference": 0.47,
+        "unit": "s",
+        "z": -1362.0
+      },
+      "explanation": "40.3\u201340.4 s, \"Seven, were\": you paused 0.1 s after \"Seven,\" where your previous take pause 0.47 s (0.37 s shorter, 1.4e+03 SD below). The listener gets no breathing space. This phrase contains a number. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1362.0,
+      "severity": 4,
+      "start": 40.34,
+      "tags": [
+        "contains_number"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 128,
+      "word_start": 127
+    },
+    {
+      "end": 50.1,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.06,
+        "reference": 0.31,
+        "unit": "s",
+        "z": -1299.0
+      },
+      "explanation": "50.0\u201350.1 s, \"Resnik, Ronald\": you paused 0.06 s after \"Resnik,\" where your previous take pause 0.31 s (0.25 s shorter, 1.3e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1299.0,
+      "severity": 4,
+      "start": 50.04,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 152,
+      "word_start": 151
+    },
+    {
+      "end": 53.07,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.28,
+        "reference": 0.73,
+        "unit": "s",
+        "z": -942.3
+      },
+      "explanation": "52.8\u201353.1 s, \"Onizuka, Gregory\": you paused 0.28 s after \"Onizuka,\" where your previous take pause 0.73 s (0.45 s shorter, 9.4e+02 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 942.3,
+      "severity": 4,
+      "start": 52.79,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 156,
+      "word_start": 155
+    },
+    {
+      "end": 60.72,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.04,
+        "reference": 0.31,
+        "unit": "s",
+        "z": -1519.0
+      },
+      "explanation": "60.7\u201360.7 s, \"bear, as\": you paused 0.04 s after \"bear,\" where your previous take pause 0.31 s (0.27 s shorter, 1.5e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1519.0,
+      "severity": 4,
+      "start": 60.68,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 178,
+      "word_start": 177
+    },
+    {
+      "end": 63.235,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.4,
+        "unit": "s",
+        "z": -2407.0
+      },
+      "explanation": "63.2\u201363.2 s, \"tragedy. But\": you paused 6.9e-18 s after \"tragedy.\" where your previous take pause 0.4 s (0.4 s shorter, 2.4e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 2407.0,
+      "severity": 4,
+      "start": 63.205,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 187,
+      "word_start": 186
+    },
+    {
+      "end": 67.465,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.37,
+        "unit": "s",
+        "z": -2331.0
+      },
+      "explanation": "67.4\u201367.5 s, \"were daring\": you paused 6.9e-18 s after \"were\" where your previous take pause 0.37 s (0.37 s shorter, 2.3e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 2331.0,
+      "severity": 4,
+      "start": 67.435,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 204,
+      "word_start": 203
+    },
+    {
+      "end": 70.655,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.64,
+        "unit": "s",
+        "z": -2875.0
+      },
+      "explanation": "70.6\u201370.7 s, \"that special\": you paused 6.9e-18 s after \"that\" where your previous take pause 0.64 s (0.64 s shorter, 2.9e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 2875.0,
+      "severity": 4,
+      "start": 70.625,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 214,
+      "word_start": 213
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 8.0,
+    "pace": 10.0,
+    "pauses": 0.0,
+    "pitch": 10.0,
+    "volume": 10.0
+  },
+  "text_id": "reagan_challenger",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "type": "post_hoc_detector_v2"
+    },
+    {
+      "count": 7,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

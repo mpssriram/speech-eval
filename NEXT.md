@@ -1,164 +1,126 @@
-# Next
+# Next — 2026-10-12
 
-Phase12 update (2026-10-12): display correction, DEV-only B diagnosis,
-recorder-confirmation review sheet, rating instructions and report wording are
-verified. Genuine human evaluation is still confirmation-gated, not complete.
-Results: `reports/phase12_fixes.md`. Latest full suites: 283 passed on host and
-in Docker; all three
-real browser tests pass at port 8080; six PDF pages inspected, repeated renders
-byte-identical. No frozen detector change or new test-split evaluation.
-Latest human instruction: Gettysburg04 and Reagan04 (global08) were spontaneous
-mixed readings; types/locations remain unspecified, not clean or invented labels.
-Latest Mode B scope is take02/03 versus take01, not take04.
-Display item committed/pushed as `23e6ec5` (277 Python tests, three browser
-tests). DEV-only B diagnosis found tiny pause differences amplified by reference
-spread, not a demonstrated detector timing bug; no test rerun or tuning.
-See Phase12 for FP breakdown and the two rounded oracle-step QA limitations.
-B diagnosis committed/pushed as `a305075`. Take review is now at
-`data/human/review/TAKES_REVIEW.md`; correct each transcript/actual flaw list and
-write `CONFIRMED` under each take. No ASR/PDF plan has been promoted to labels.
-Review committed/pushed as `0ebfd70`; rating instructions and pending-agreement
-wording as `23f0548`. Independent rating responses remain zero.
-Report wording/footer and host application verification pushed as `0630caf`.
-Docker recovered during the final retry. Packaging fix `33e392a` includes missing
-README/docs, fixing three container failures. All 279 rebuilt-container tests
-pass. Two frozen v2 Docker runs from a GitHub clone imported only the licensed
-ZIP and match the published JSON bytes; marker unchanged.
-Current Docker-inclusive retained-path snapshot: 55,037,300,736 bytes (55.037300736
-decimal GB), including whole-engine VHDX and other Docker projects, NOT a project
-minimum or peak-build requirement. See Phase12 for exact components/limitations.
-An isolated clean-install peak/minimum remains unmeasured; do not guess it.
-Full and quick CPU reproduction now match all 563 published release-output
-hashes. A separate post-hoc REPORT adapter excludes only unpublished Human-A/B
-status paragraphs from the textual number gate; frozen scientific JSON/code and
-all synthetic/Limitations numbers remain strictly checked. Four adapter tests
-pass; independent code review found no important issue. Adapter/artifacts pushed
-as `4ac23e8`; the unedited GitHub-clone full repeat passed in 228.69 s total.
-The quick repeat passed in 20.32 s total. All 563 output hashes match the
-published release manifest and both runs, with zero mismatches. Only our temp
-test containers/network were removed; clone/evidence/data are retained and the
-main app remains running at 8080. Final checks/limitations are in Phase12.
+Submission deadline: October 13.
 
-## Local application testing
+## Genuine takes — complete
 
-The production API/nginx dashboard are running at `http://localhost:8080` in
-Docker, both healthy. All three browser tests pass there (46.1 s).
-`/api/health` reports a real build commit (`33e392a`) and the frozen v1 hash.
-Browser checks cover upload, recording controls (synthetic browser device, not
-your microphone), waveform, score/explanation, selected regions, Yours/Baseline
-playback, Modes A/B/C and mobile overflow. A separate synthetic-only upload
-check completed real CPU MFA 3.4.2 in A/B; it missed the injected rushing region,
-which remains an honest detector limitation. This is not human accuracy evidence.
+The recorder's 2026-10-12 chat confirmation supersedes manual TAKES_REVIEW
+editing. Eight inputs validate, with actual consent and the supplied JSON notes.
+Transcripts follow the explicitly authorised canonical/ASR structural-edit rule,
+not independently verified verbatim transcription. Canonical units stay
+Gettysburg 1–10 and Reagan 1–17 (stop at “discover its truths.”).
 
-After restarting the machine, start Docker Desktop, then in WSL:
+Initial inputs were frozen/pushed as `c1a6a02`; final pre-inference unit-map and
+localized-label protocol as `a138825`. All original/raw hashes stayed unchanged.
+Take04s have unknown flaws, not clean labels: excluded from hit/miss/FP pools,
+but analysed in Modes A/C. Mode B is take02/03 versus own take01.
+
+Real CPU MFA completed all requested jobs: frozen v1 A8/B4/C2 and separately
+labelled post-hoc v2 A8/B4, 26 completed result rows, zero unresolved processing
+problems. No detector code, threshold, bin, weight or matching rule was tuned.
+The six scored takes contain 13 labels; B's four current recordings use those
+same labels and do not add reference duration to the denominator.
+
+| Version / mode | Primary hits / misses / FP | FP/min |
+|---|---|---:|
+| Frozen v1 / A | 4 / 9 / 77 | 9.625 |
+| Frozen v1 / B | 3 / 10 / 60 | 11.236 |
+| Post-hoc v2 / A | 4 / 9 / 58 | 7.250 |
+| Post-hoc v2 / B | 3 / 10 / 27 | 5.056 |
+
+Primary means same-type one-to-one IoU >=0.3. Historical pause-centre <=0.25 s
+and secondary positive unit overlap are separate tables in Phase10. Many misses
+and false alarms remain; recorder-confirmed planned labels are not independent
+perceptual annotation. Take01 flags (Gettysburg/Reagan): v1 9/14, v2 7/11.
+
+post-hoc v2; test split was seen with v1, so results are optimistic.
+V1 remains the primary published result. Frozen config SHA256:
+`3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538`.
+The existing benchmark one-shot marker was not rerun or changed.
+
+The initial host-side v2 attempt rejected Docker's absolute model-path
+provenance. Execution adapter `036363c` uses unchanged v2 inside the same API
+container, retaining every provenance check. Historical failures are disclosed
+in BLOCKERS/runtime_attempts; the complete run has none. This is an environment
+adapter, not a detector fix or post-result label change.
+
+Reports: `reports/phase10_human_takes.md`, Human-A/B in `phase06_results.md`,
+and genuine-takes section 7.1 of `docs/report/report.md`. Full precision, fixed
+spans, score/flag evidence and 26 dashboard links: `data/human/evaluation.json`.
+Applied transcript insertions/omissions: `data/human/review/TRANSCRIPT_DIFFS.md`.
+Private audio stays git-ignored and outside the public archive.
+
+Repeated genuine workflow artifacts are byte-identical (134 outputs; retained
+MFA cache, not independent alignment-accuracy evidence). All 26 completed jobs
+are in API history with working tracks; eight genuine participant audio
+endpoints work. `data/human/verification.json` contains the hashes/checks.
+Evaluation SHA256:
+`58c6f712059cea44051051466f56a7f8e1d65fa04b6503a8026197d8e8e65013`.
+Latest host suite: 299 tests passed. Report: six A4 pages, repeated PDF bytes
+identical, every page inspected. Frozen code/config/audio hashes remain intact.
+
+## Open your voice in the dashboard
+
+The existing Docker API and dashboard are running at http://localhost:8080.
+These are genuine participant recordings, not synthetic fixtures:
+
+- [Gettysburg take01, frozen v1](http://localhost:8080/results/0aae3748f747b13e89697e17)
+- [Reagan take01, frozen v1](http://localhost:8080/results/57a55f0d18b627cda376b6aa)
+- [Gettysburg take02 vs take01, frozen v1](http://localhost:8080/results/6d8cbd6dec22ffc8f7827ebc)
+- [Gettysburg take04, frozen C](http://localhost:8080/results/b77c9d634e3c6d1d954f9989)
+
+Every other take/mode and separately labelled v2 link is in Phase10. The
+participant player uses your aligned/trimmed recording. Baseline playback is a
+separate matching-word reference; it is disabled when no exact phrase matches.
+Automatic score/flag inspection is not listening or an independent rating.
+
+After restart, start Docker Desktop, then WSL `cd ~/speech-eval && make up`.
+With the API healthy, repeat the genuine workflow without editing inputs:
 
 ```sh
 cd ~/speech-eval
-make up
+env -u PYTHONPATH ~/.local/bin/uv run python scripts/prepare_human_confirmation.py
+env -u PYTHONPATH ~/.local/bin/uv run python scripts/analyze_human.py --detector both --v2-runtime docker
 ```
 
-If Docker fails again, the separately verified WSL fallback uses two terminals:
+## Previously verified
 
-```sh
-# Terminal 1
-cd ~/speech-eval
-env -u PYTHONPATH ~/.local/bin/uv run uvicorn api.main:app --host 0.0.0.0 --port 8000
-# Terminal 2: clean Linux frontend dependencies, verified from current source
-cd ~/.cache/speech-eval-web
-env PATH=/home/sriram/.cache/speech-eval-node/node-v22.14.0-linux-x64/bin:/usr/bin:/bin npm run dev -- --port 8080
-```
-
-Open `http://localhost:8080`. For A choose the matching text and upload audio;
-for B select an earlier completed same-text take; C accepts a supplied transcript
-without a same-text reference. For an uploaded recording containing slips, supply
-the actual words, not a corrected canonical reading. Click a flag to inspect its
-region/explanation and try both playback buttons. Baseline playback is disabled
-when those exact words are unavailable; that is disclosed, not silently substituted.
-Your own microphone permission/audio and genuine take correctness still need
-your testing/review. Do not present synthetic fixture jobs as your recordings.
-
-Phase 11: Task 1 report fixes verified (five-page PDF, rounded display values,
-real correct-hit explanation, dashboard screenshots, consolidated pending box).
-The corrected canonical eight-take recording sheet is ready at
-`docs/recording_script.pdf` (one page), committed/pushed as `3dd043c`.
-Task 2 post-hoc v2 DEV search is complete: exactly 30 configurations, selected
-YAML SHA256 `3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538`.
-Independent review and 267 tests passed. Freeze commit `95c8f33` was pushed before
-the exactly-one marker-protected test evaluation. V1 stays primary; v2 is secondary
-and post-hoc. A F1 0.190 -> 0.193, recall 0.400 -> 0.288, clean/min 1.341 -> 0.671
-(test guard still fails); B F1 0.035 -> 0.070 with lower recall. No detector,
-evaluator or threshold edits follow test results. Report/PDF verification is
-complete (six pages, repeated identical render, every page inspected).
-The earlier fresh-clone Docker startup failure is resolved in Phase12 above;
-`docs/BLOCKERS.md` retains its historical account. Health build/runtime metadata is tested and pushed as
-`99cf2fc`; Plotly warning and retained schema/MFA limitations are documented and
-tested. All 275 tests pass; frozen scientific code/config hashes still match.
-Live rebuilt-container health is now verified in Phase12, not in this older snapshot.
-Frozen host v2 reproduction passed byte-for-byte (published SHA
-`e770969c2d44e97cff3ee0d58b318d81edb8264356004070f6edfa4aa9f9c754`);
-the one-shot marker is unchanged. This does not substitute for fresh-clone Docker.
-Archive upload size/hash and measured local disk components are now documented
-in README, `docs/DATASET.md` and `reports/disk_usage.json`. An isolated fresh-
-installation/peak-build requirement remains unmeasured; updated Docker-inclusive
-retained-path measurements are in Phase12 above.
-See `reports/phase11_v2.md` for the protocol and inherited Mode B limitation.
-
-Done: A licensed archive/fetcher, fresh GitHub-clone CPU Docker numerical
-reproduction twice with identical hashes; B consent-gated real-MFA A/B driver
-tested on an explicitly synthetic fixture; C twelve-clip blind pack and agreement
-scripts; D measured dataset card; E evidence-based README, technical report and
-video script. Each item is committed/pushed after verification.
-
-Not done: genuine human-take evaluation, actual independent rater agreement,
-human alignment spot-check, public archive upload and recorded/published video.
-These cannot be replaced by generated recordings or ratings.
-
-Human audio update (2026-10-11): all eight approved M4As are copied unchanged
-under `data/human/original/`; all eight native 48 kHz mono PCM16 WAVs are under
-`data/human/raw/`. Hashes, decoded duration, exact bytes, peaks and saturation
-counts are in `data/human/import_manifest.json` and `reports/phase10_human_takes.md`.
-All pass technical size/duration checks; samples match native original decoding
-exactly and repeat conversions are byte-identical. These checks are not human
-annotation validation or detection results. Actual consent/prose notes supplied
-in chat are now saved verbatim; the global 01–08 mapping is confirmed. Existing
-local ASR ran on all eight takes and wrote explicitly unconfirmed drafts plus
-canonical-text word diffs (`reports/phase10_asr_review.md`). No draft was promoted
-to the validator input folder. Validation now stops on the missing fenced notes
-JSON; confirmed transcripts and complete supported-type/location labels are
-still required. No genuine MFA/scoring/counts/dashboard jobs are claimed. The
-user must confirm these inputs before processing. Preserve v1/v2 and the one-shot marker;
-never tune on human takes. Latest requested B scope is B02/B03 versus A01;
-the earlier B04 scope is superseded. Separately labelled frozen v2 output still
-requires the workflow extension, which the existing v1 driver lacks.
+Phases 1–9, Modes A/B/C prototype, API/dashboard, Playwright smoke tests,
+Docker packaging, licensed release/fetcher, blind rating pack/scripts and report
+display fixes remain complete. Earlier host/Docker/browser and fresh-clone
+evidence is in `reports/phase12_fixes.md` and `reports/reproducibility.md`.
+The DEV-only Mode B diagnosis found amplified tiny pause differences, not a
+demonstrated timing bug; no new benchmark test run or detector tuning followed.
+All 563 published scientific release outputs matched repeated fresh-clone CPU
+Docker reproduction. The human evidence is separate and private.
 
 ## Needs user
 
-1. Upload `data/release/speech-eval-dataset-v1.zip` unchanged and supply its URL.
-   Exact size: 7,586,867,457 bytes = 7.586867457 decimal GB. SHA256:
+1. Upload the unchanged `data/release/speech-eval-dataset-v1.zip` and supply its
+   URL. Exact size: 7,586,867,457 bytes = 7.586867457 decimal GB. SHA256:
    `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b`.
-2. Review/correct the eight actual ASR drafts and confirm the as-spoken text
-   (including repetitions/slips and the recorded Reagan excerpt). Supply explicit
-   supported delivery-flaw types and sentence/raw-time locations for every take,
-   or explicitly declare none only when true. Prose notes and actual consent are
-   already saved; neither transcription nor ground truth will be invented.
-   `data/human/input_validation.json` lists all remaining validation problems.
-3. Confirm author and formal code/annotation licence files; record/publish the demo.
-   Final submission is due October 13.
-   Review `docs/TODO_PLACEHOLDERS.md` and `docs/BLOCKERS.md` before submission.
+2. Confirm author and formal code/annotation licence files; record/publish the
+   final demo. Review `docs/TODO_PLACEHOLDERS.md` and remaining BLOCKERS.
+3. Try the full app tomorrow with your microphone/files. Transcript acoustic
+   fidelity can be reviewed later; the authorised rule-built texts are explicitly
+   disclosed, and confirmation-gated genuine analysis is no longer pending.
 
 ## Needs other people
 
-1. Independent rater agreement is pending (zero responses).
-   Disclose this limitation in the submission; pack and scripts are ready. Future
-   measurement needs at least three independent raters with separate CSVs for
-   all twelve blind clips. Distribute only `data/rating_pack/`, never the answer
-   key/repository or system scores. Do not substitute AI or self-ratings.
-   Plain-English instructions and CSV return steps are in
-   `data/rating_pack/INSTRUCTIONS.md` (allow about 15 minutes).
-2. A human alignment spot-check/listening and boundary corrections for the
-   visually annotated reference. This cannot be claimed from the existing
-   automatic/Claude visual evidence. Genuine-take notes/annotations also need
-   actual listening by the recorder/annotator, not invented labels.
+1. Independent human agreement is pending: zero responses. Pack/scripts and
+   `data/rating_pack/INSTRUCTIONS.md` are ready (about 15 minutes). Future
+   agreement measurement needs independent raters' CSVs. Share only the blind
+   pack, not answer keys/system scores. Never use AI or self-ratings as rater data.
+2. Human listening/spot-check of the visually placed alignment reference and,
+   if stronger genuine evidence is needed, independent flaw/transcript review.
+   Recorder confirmation is not independent annotation.
 
-Submission deadline: October 13. No thresholds were tuned on test reproductions,
-fixture takes, absent genuine takes or ratings.
+## Remaining technical limitations
+
+An isolated clean-install peak/minimum disk requirement is still unmeasured.
+The prior retained snapshot was 55.037300736 GB including shared Docker VHDX
+and other projects, not a project minimum. No estimate is substituted.
+The interpolation-warning schema and user-specific MFA path remain disclosed
+limitations. Plotly's bundle-size warning is known and harmless. Low precision,
+failed synthetic clean-alarm guards and C-lite's limited types remain disclosed;
+no human takes or ratings are used to repair them before submission.

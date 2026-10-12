@@ -1,0 +1,323 @@
+{
+  "analysis_id": "ac8f52dac2a3",
+  "detector": {
+    "config_hash": "3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538",
+    "engine": "rules",
+    "version": "post-hoc-v2"
+  },
+  "duration_s": 80.99,
+  "key_moments": [],
+  "mode": "B",
+  "progress": {
+    "awkward_pause": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "dragging": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "missing_pause": {
+      "current": {
+        "count": 10,
+        "duration_s": 0.36
+      },
+      "previous": {
+        "count": 7,
+        "duration_s": 0.93
+      }
+    },
+    "monotone": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "mumbling": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "rushing": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    },
+    "too_quiet": {
+      "current": {
+        "count": 0,
+        "duration_s": 0
+      },
+      "previous": {
+        "count": 0,
+        "duration_s": 0
+      }
+    }
+  },
+  "recording_id": "gettysburg__user__input_4b7c30271b2f",
+  "reference": {
+    "baseline_recording_id": "gettysburg__user__input_b7df9bd980c1",
+    "exclude_speaker": null,
+    "kind": "previous_take",
+    "n_readers": 1,
+    "reference_version": "32a5d37a0a3898fd1f7b438f34e96d413a05b2930ffc29905455e2b1b6f5418a",
+    "text_id": "gettysburg"
+  },
+  "regions": [
+    {
+      "end": 43.495,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.47,
+        "unit": "s",
+        "z": -2565.0
+      },
+      "explanation": "43.5\u201343.5 s, \"nor long\": you paused 6.9e-18 s after \"nor\" where your previous take pause 0.47 s (0.47 s shorter, 2.6e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 2565.0,
+      "severity": 4,
+      "start": 43.465,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 145,
+      "word_start": 144
+    },
+    {
+      "end": 44.98,
+      "evidence": {
+        "feature": "pitchvar",
+        "participant": 1.098,
+        "reference": 4.692,
+        "unit": "semitones",
+        "z": -4.635
+      },
+      "explanation": "44.3\u201345.0 s, \"we say here, but\": your pitch varied by 1.1 semitones; your previous take vary by 4.7 (77% less variation, 4.6 SD below). The phrase sounds flat. Post-hoc v2: practical effect and region constraints passed. Own-sentence robust z=-3.1.",
+      "mean_abs_z": 4.635,
+      "severity": 4,
+      "start": 44.28,
+      "tags": [],
+      "type": "monotone",
+      "v2": {
+        "minimum_effect_met": true,
+        "sentence": 7,
+        "within_recording_z": -3.052
+      },
+      "word_end": 151,
+      "word_start": 148
+    },
+    {
+      "end": 46.385,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.44,
+        "unit": "s",
+        "z": -2500.0
+      },
+      "explanation": "46.4\u201346.4 s, \"forget what\": you paused 6.9e-18 s after \"forget\" where your previous take pause 0.44 s (0.44 s shorter, 2.5e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 2500.0,
+      "severity": 4,
+      "start": 46.355,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 156,
+      "word_start": 155
+    },
+    {
+      "end": 47.93,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.09,
+        "reference": 0.34,
+        "unit": "s",
+        "z": -1122.0
+      },
+      "explanation": "47.8\u201347.9 s, \"us the\": you paused 0.09 s after \"us\" where your previous take pause 0.34 s (0.25 s shorter, 1.1e+03 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1122.0,
+      "severity": 4,
+      "start": 47.84,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 164,
+      "word_start": 163
+    },
+    {
+      "end": 56.92,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.09,
+        "reference": 0.46,
+        "unit": "s",
+        "z": -1416.0
+      },
+      "explanation": "56.8\u201356.9 s, \"advanced. It\": you paused 0.09 s after \"advanced.\" where your previous take pause 0.46 s (0.37 s shorter, 1.4e+03 SD below). The listener gets no breathing space. This is the speech's final sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1416.0,
+      "severity": 4,
+      "start": 56.83,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 187,
+      "word_start": 186
+    },
+    {
+      "end": 69.145,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.35,
+        "unit": "s",
+        "z": -2278.0
+      },
+      "explanation": "69.1\u201369.1 s, \"we here\": you paused 6.9e-18 s after \"we\" where your previous take pause 0.35 s (0.35 s shorter, 2.3e+03 SD below). The listener gets no breathing space. This is the speech's final sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 2278.0,
+      "severity": 4,
+      "start": 69.115,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 227,
+      "word_start": 226
+    },
+    {
+      "end": 70.3,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.07,
+        "reference": 0.38,
+        "unit": "s",
+        "z": -1398.0
+      },
+      "explanation": "70.2\u201370.3 s, \"resolve that\": you paused 0.07 s after \"resolve\" where your previous take pause 0.38 s (0.31 s shorter, 1.4e+03 SD below). The listener gets no breathing space. This is the speech's final sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 1398.0,
+      "severity": 4,
+      "start": 70.23,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 231,
+      "word_start": 230
+    },
+    {
+      "end": 71.395,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.37,
+        "unit": "s",
+        "z": -2331.0
+      },
+      "explanation": "71.4\u201371.4 s, \"shall not\": you paused 6.9e-18 s after \"shall\" where your previous take pause 0.37 s (0.37 s shorter, 2.3e+03 SD below). The listener gets no breathing space. This is the speech's final sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 2331.0,
+      "severity": 4,
+      "start": 71.365,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 235,
+      "word_start": 234
+    },
+    {
+      "end": 76.785,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.42,
+        "unit": "s",
+        "z": -2455.0
+      },
+      "explanation": "76.8\u201376.8 s, \"and that\": you paused 6.9e-18 s after \"and\" where your previous take pause 0.42 s (0.42 s shorter, 2.5e+03 SD below). The listener gets no breathing space. This is the speech's final sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 2455.0,
+      "severity": 4,
+      "start": 76.755,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 252,
+      "word_start": 251
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 7.9,
+    "pace": 10.0,
+    "pauses": 0.0,
+    "pitch": 9.7,
+    "volume": 10.0
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "type": "post_hoc_detector_v2"
+    },
+    {
+      "count": 5,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

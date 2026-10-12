@@ -141,9 +141,16 @@ def report_text(payload: dict) -> str:
         lines.append(f'| {p["detector"]} | {p["mode"]} | {p["matcher"]} | {p["current_takes"]} | {p["labelled_flaws"]} | {p["hits"]} | {p["misses"]} | {p["false_positives"]} | {p["duration_min"]:.2f} | {p["false_positives_per_min"]:.3f} |')
     lines.extend(['','Take01 flags are reported explicitly in the Flags column and count as false positives because those takes are declared natural readings with no delivery-flaw labels. Slips and mispronunciations are not automatically delivery flaws.',
         '', '## Provenance and reproducibility','',
-        f'Input/protocol freeze commit: `{payload["input_freeze_commit"]}`. Confirmation SHA256: `{payload["confirmation_sha256"]}`.',
+        f'Initial recorder-input freeze: `{payload["input_freeze_commit"]}`; final pre-inference unit-map/label protocol freeze: `a138825`; execution-environment adapter: `036363c`. Confirmation SHA256: `{payload["confirmation_sha256"]}`.',
         'Frozen code/config hashes, one-shot benchmark marker and all 16 original/raw hashes verified before and after inference. The existing v2 benchmark one-shot was not rerun. Genuine human inference is separate from the synthetic test benchmark. Human audio remains git-ignored and excluded from the public archive.',
-        'The real API jobs persist under data/app/jobs; v2 results are published as separately identified completed jobs without changing their scientific JSON. The dashboard displays the user\'s prepared waveform/audio, not reference audio; the same-words baseline is a separate playback.', ''])
+        'The real API jobs persist under data/app/jobs; v2 results are published as separately identified completed jobs without changing their scientific JSON. The dashboard displays the user\'s prepared waveform/audio, not reference audio; the same-words baseline is a separate playback.',
+        'The first host-side v2 attempt correctly rejected Docker-produced absolute model-path provenance. Running unchanged v2 in the existing API container resolved it without bypassing checks, regenerating labels or tuning. Historical attempt evidence: `data/human/runtime_attempts.json`; no unresolved processing problems remain in the completed run.',
+        'Repeat-output hashes and live API/history/tracks/audio checks: `data/human/verification.json`. This is byte-identity evidence using the retained real-MFA cache, not a second independent alignment-accuracy experiment.',
+        '', 'Re-run from WSL `~/speech-eval` with the existing Docker API healthy:',
+        '', '```sh',
+        'env -u PYTHONPATH ~/.local/bin/uv run python scripts/prepare_human_confirmation.py',
+        'env -u PYTHONPATH ~/.local/bin/uv run python scripts/analyze_human.py --detector both --v2-runtime docker',
+        '```', ''])
     if payload['blockers']:lines.extend(['## Processing problems','',*['- '+s for s in payload['blockers']],''])
     return '\n'.join(lines)
 

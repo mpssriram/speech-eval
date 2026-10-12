@@ -1,0 +1,309 @@
+{
+  "analysis_id": "622b2cca881e",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 80.29,
+  "key_moments": [
+    {
+      "end": 23.16,
+      "kind": "number_rate",
+      "message": "guideline: key figure \"Nineteen\" at 4.4 vs own median 5.4 syllables/s.",
+      "passed": true,
+      "start": 22.76,
+      "words": "Nineteen"
+    },
+    {
+      "end": 23.16,
+      "kind": "number_pause",
+      "message": "guideline: pause before \"Nineteen\" is 0.54 s (target \u22650.15 s).",
+      "passed": true,
+      "start": 22.76,
+      "words": "Nineteen"
+    },
+    {
+      "end": 25.52,
+      "kind": "number_rate",
+      "message": "guideline: key figure \"three\" at 5.1 vs own median 5.4 syllables/s.",
+      "passed": true,
+      "start": 25.35,
+      "words": "three"
+    },
+    {
+      "end": 25.52,
+      "kind": "number_pause",
+      "message": "guideline: pause before \"three\" is 0 s (target \u22650.15 s).",
+      "passed": false,
+      "start": 25.35,
+      "words": "three"
+    },
+    {
+      "end": 43.81,
+      "kind": "number_rate",
+      "message": "guideline: key figure \"seven\" at 5.8 vs own median 5.4 syllables/s.",
+      "passed": false,
+      "start": 43.53,
+      "words": "seven"
+    },
+    {
+      "end": 43.81,
+      "kind": "number_pause",
+      "message": "guideline: pause before \"seven\" is 0 s (target \u22650.15 s).",
+      "passed": false,
+      "start": 43.53,
+      "words": "seven"
+    },
+    {
+      "end": 56.52,
+      "kind": "number_rate",
+      "message": "guideline: key figure \"seven,\" at 5.7 vs own median 5.4 syllables/s.",
+      "passed": false,
+      "start": 56.05,
+      "words": "seven,"
+    },
+    {
+      "end": 56.52,
+      "kind": "number_pause",
+      "message": "guideline: pause before \"seven,\" is 0 s (target \u22650.15 s).",
+      "passed": false,
+      "start": 56.05,
+      "words": "seven,"
+    },
+    {
+      "end": 79.14,
+      "kind": "strong_ending",
+      "message": "guideline: final sentence drop -1.5 dB and rate z=1.6; targets \u2265\u22123 dB and z\u22641.",
+      "passed": false,
+      "start": 75.51,
+      "words": "They had a hunger to explore the universe and discover its truths."
+    },
+    {
+      "end": 8.46,
+      "kind": "first_sentence",
+      "message": "guideline: opening sentence identified; no additional numerical rule or penalty.",
+      "passed": null,
+      "start": 0.3,
+      "words": "Ladies and gentlemen, I had planned to speak to you tonight to report on the state of the Union, but the events of the earlier today have led me to change those plans."
+    }
+  ],
+  "mode": "C",
+  "progress": null,
+  "recording_id": "reagan_challenger__user__input_e002e6e7884a",
+  "reference": {
+    "baseline_recording_id": null,
+    "kind": "norms",
+    "n_readers": 18,
+    "reference_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28"
+  },
+  "regions": [
+    {
+      "end": 11.43,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.727,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.405
+      },
+      "explanation": "9.2\u201311.4 s, \"Today is a day for mourning and remembering.\": rushing; rate 5.7 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.4.",
+      "mean_abs_z": 2.405,
+      "sentence": 1,
+      "severity": 1,
+      "start": 9.16,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 40,
+      "word_start": 33
+    },
+    {
+      "end": 19.74,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.629,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.311
+      },
+      "explanation": "16.7\u201319.7 s, \"We know we share this pain with all of the people of our country.\": rushing; rate 5.6 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.3.",
+      "mean_abs_z": 2.311,
+      "sentence": 3,
+      "severity": 1,
+      "start": 16.72,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 69,
+      "word_start": 56
+    },
+    {
+      "end": 22.22,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.806,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.48
+      },
+      "explanation": "20.7\u201322.2 s, \"This is truly a national loss.\": rushing; rate 5.8 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.5.",
+      "mean_abs_z": 2.48,
+      "sentence": 4,
+      "severity": 1,
+      "start": 20.67,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 75,
+      "word_start": 70
+    },
+    {
+      "end": 30.3,
+      "evidence": {
+        "feature": "rate",
+        "participant": 6.404,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 3.013
+      },
+      "explanation": "28.3\u201330.3 s, \"But we've never lost an astronaut in a flight;\": rushing; rate 6.4 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=3.",
+      "mean_abs_z": 3.013,
+      "sentence": 6,
+      "severity": 2,
+      "start": 28.27,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 102,
+      "word_start": 94
+    },
+    {
+      "end": 32.7,
+      "evidence": {
+        "feature": "rate",
+        "participant": 6.667,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 3.232
+      },
+      "explanation": "31.1\u201332.7 s, \"We've never had a tragedy like this.\": rushing; rate 6.7 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=3.2.",
+      "mean_abs_z": 3.232,
+      "sentence": 7,
+      "severity": 2,
+      "start": 31.05,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 109,
+      "word_start": 103
+    },
+    {
+      "end": 36.68,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.435,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.12
+      },
+      "explanation": "33.0\u201336.7 s, \"And perhaps we have forgotten the courage it took for the crew of the shuttle.\": rushing; rate 5.4 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.1.",
+      "mean_abs_z": 2.12,
+      "sentence": 8,
+      "severity": 1,
+      "start": 33.0,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 124,
+      "word_start": 110
+    },
+    {
+      "end": 54.49,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.759,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.435
+      },
+      "explanation": "52.6\u201354.5 s, \"We mourn their loss as a nation together.\": rushing; rate 5.8 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.4.",
+      "mean_abs_z": 2.435,
+      "sentence": 12,
+      "severity": 1,
+      "start": 52.58,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 170,
+      "word_start": 163
+    },
+    {
+      "end": 61.01,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.388,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.073
+      },
+      "explanation": "55.2\u201361.0 s, \"For the families of the seven, we cannot bear, as you do, the full impact of this tragedy.\": rushing; rate 5.4 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.1.",
+      "mean_abs_z": 2.073,
+      "sentence": 13,
+      "severity": 1,
+      "start": 55.19,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 188,
+      "word_start": 171
+    },
+    {
+      "end": 64.03,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.618,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.3
+      },
+      "explanation": "61.4\u201364.0 s, \"But we feel the loss, and we are thinking about you so much.\": rushing; rate 5.6 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.3.",
+      "mean_abs_z": 2.3,
+      "sentence": 14,
+      "severity": 1,
+      "start": 61.36,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 201,
+      "word_start": 189
+    },
+    {
+      "end": 64.03,
+      "evidence": {
+        "feature": "final_drop",
+        "participant": -10.06,
+        "reference": 0.5853,
+        "unit": "dB",
+        "z": -2.609
+      },
+      "explanation": "63.4\u201364.0 s, \"so much.\": too quiet; final_drop -10 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.6.",
+      "mean_abs_z": 2.609,
+      "sentence": 14,
+      "severity": 1,
+      "start": 63.38,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "too_quiet",
+      "word_end": 201,
+      "word_start": 200
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 9.1,
+    "pace": 6.4,
+    "pauses": 10.0,
+    "pitch": 10.0,
+    "volume": 9.9
+  },
+  "text_id": "reagan_challenger",
+  "transcript_source": "supplied",
+  "warnings": [
+    {
+      "type": "limited_sentence_norms_mode"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "analysis_id": "41af2cf5f2a3",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 83.21,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "gettysburg__user__input_b7df9bd980c1",
+  "reference": {
+    "baseline_recording_id": "gettysburg__lv_dj__orig",
+    "exclude_speaker": null,
+    "kind": "distribution",
+    "n_readers": 10,
+    "reference_version": "746a5ef0d4f2ad2eb999a85dc58eed970ddd266438c98da4543938485fdbeabe",
+    "text_id": "gettysburg"
+  },
+  "regions": [
+    {
+      "end": 4.285,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.6697,
+        "unit": "s",
+        "z": -12.41
+      },
+      "explanation": "4.3\u20134.3 s, \"nation, conceived\": you paused 6.9e-18 s after \"nation,\" where good readers pause 0.67 s (0.67 s shorter, 12 SD below). The listener gets no breathing space. This is the opening sentence.",
+      "mean_abs_z": 12.41,
+      "severity": 4,
+      "start": 4.255,
+      "tags": [
+        "first_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 16,
+      "word_start": 15
+    },
+    {
+      "end": 10.645,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.4491,
+        "unit": "s",
+        "z": -4.355
+      },
+      "explanation": "10.6\u201310.6 s, \"war, testing\": you paused 6.9e-18 s after \"war,\" where good readers pause 0.45 s (0.45 s shorter, 4.4 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 4.355,
+      "severity": 4,
+      "start": 10.615,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 39,
+      "word_start": 38
+    },
+    {
+      "end": 17.98,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.41,
+        "reference": 1.207,
+        "unit": "s",
+        "z": -6.66
+      },
+      "explanation": "17.6\u201318.0 s, \"war. We\": you paused 0.41 s after \"war.\" where good readers pause 1.2 s (0.8 s shorter, 6.7 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 6.66,
+      "severity": 4,
+      "start": 17.57,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 64,
+      "word_start": 63
+    },
+    {
+      "end": 36.995,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.5,
+        "unit": "s",
+        "z": -7.125
+      },
+      "explanation": "37.0\u201337.0 s, \"it, far\": you paused 6.9e-18 s after \"it,\" where good readers pause 0.5 s (0.5 s shorter, 7.1 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 7.125,
+      "severity": 4,
+      "start": 36.965,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 133,
+      "word_start": 132
+    },
+    {
+      "end": 42.22,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.47,
+        "reference": 6.939e-18,
+        "unit": "s",
+        "z": 4056.0
+      },
+      "explanation": "41.8\u201342.2 s, \"nor long\": a 0.47 s pause between \"nor\" and \"long\" where good readers pause 6.9e-18 s (0.47 s longer, 4.1e+03 SD above). It breaks the sentence.",
+      "mean_abs_z": 4056.0,
+      "severity": 4,
+      "start": 41.75,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 148,
+      "word_start": 147
+    },
+    {
+      "end": 43.83,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.14,
+        "reference": 0.5997,
+        "unit": "s",
+        "z": -4.715
+      },
+      "explanation": "43.7\u201343.8 s, \"here, but\": you paused 0.14 s after \"here,\" where good readers pause 0.6 s (0.46 s shorter, 4.7 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 4.715,
+      "severity": 4,
+      "start": 43.69,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 154,
+      "word_start": 153
+    },
+    {
+      "end": 46.48,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.26,
+        "reference": 1.387,
+        "unit": "s",
+        "z": -5.977
+      },
+      "explanation": "46.2\u201346.5 s, \"here. It\": you paused 0.26 s after \"here.\" where good readers pause 1.4 s (1.1 s shorter, 6 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 5.977,
+      "severity": 4,
+      "start": 46.22,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 163,
+      "word_start": 162
+    },
+    {
+      "end": 61.36,
+      "evidence": {
+        "feature": "rate",
+        "participant": 6.142,
+        "reference": 3.361,
+        "unit": "syllables/s",
+        "z": 3.929
+      },
+      "explanation": "60.8\u201361.4 s, \"honored dead we\": you spoke at 6.1 syllables/s; good readers average 3.4 (1.8\u00d7 faster, 3.9 SD above). Rushing this phrase reduces its weight. This is the speech's final sentence.",
+      "mean_abs_z": 3.929,
+      "severity": 3,
+      "start": 60.8,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "rushing",
+      "word_end": 210,
+      "word_start": 208
+    },
+    {
+      "end": 79.225,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.4275,
+        "unit": "s",
+        "z": -6.286
+      },
+      "explanation": "79.2\u201379.2 s, \"people, by\": you paused 6.9e-18 s after \"people,\" where good readers pause 0.43 s (0.43 s shorter, 6.3 SD below). The listener gets no breathing space. This is the speech's final sentence.",
+      "mean_abs_z": 6.286,
+      "severity": 4,
+      "start": 79.195,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 260,
+      "word_start": 259
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 8.0,
+    "pace": 9.8,
+    "pauses": 0.0,
+    "pitch": 10.0,
+    "volume": 10.0
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "supplied",
+  "warnings": [
+    {
+      "count": 8,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

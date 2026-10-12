@@ -1,0 +1,24 @@
+{
+  "adapter_commit": "036363c",
+  "first_attempt": {
+    "blockers": [
+      "gettysburg__user__take01 Mode A: Stale participant feature provenance: gettysburg__user__input_b7df9bd980c1; regenerate participant input",
+      "gettysburg__user__take02 Mode A: Stale participant feature provenance: gettysburg__user__input_91e74acbc922; regenerate participant input",
+      "gettysburg__user__take02 Mode B: Stale participant feature provenance: gettysburg__user__input_91e74acbc922; regenerate participant input",
+      "gettysburg__user__take03 Mode A: Stale participant feature provenance: gettysburg__user__input_4b7c30271b2f; regenerate participant input",
+      "gettysburg__user__take03 Mode B: Stale participant feature provenance: gettysburg__user__input_4b7c30271b2f; regenerate participant input",
+      "gettysburg__user__take04 Mode A: Stale participant feature provenance: gettysburg__user__input_b32e8ab739c4; regenerate participant input",
+      "reagan_challenger__user__take01 Mode A: Stale participant feature provenance: reagan_challenger__user__input_6b1ca5bc673c; regenerate participant input",
+      "reagan_challenger__user__take02 Mode A: Stale participant feature provenance: reagan_challenger__user__input_cf63338562c6; regenerate participant input",
+      "reagan_challenger__user__take02 Mode B: Stale participant feature provenance: reagan_challenger__user__input_cf63338562c6; regenerate participant input",
+      "reagan_challenger__user__take03 Mode A: Stale participant feature provenance: reagan_challenger__user__input_990df0a0f76b; regenerate participant input",
+      "reagan_challenger__user__take03 Mode B: Stale participant feature provenance: reagan_challenger__user__input_990df0a0f76b; regenerate participant input",
+      "reagan_challenger__user__take04 Mode A: Stale participant feature provenance: reagan_challenger__user__input_e002e6e7884a; regenerate participant input",
+      "Incomplete requested cohort: 14 completed rows, expected 26"
+    ],
+    "completed_v1_rows": 14,
+    "evaluation_sha256": "536483da48ce53aac06558ae33c2a802f6bc6895ce6978a0c81f2ac521f0f7c2",
+    "status": "incomplete"
+  },
+  "resolution": "Run frozen v2 in the same API Docker producer environment; absolute model identity paths differ from host. No provenance bypass or detector/label changes."
+}

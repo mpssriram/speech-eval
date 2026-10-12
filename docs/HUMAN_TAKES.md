@@ -1,5 +1,26 @@
 # Genuine take analysis
 
+Current recorder authority (2026-10-12): the explicit chat confirmation replaces
+manual TAKES_REVIEW editing. Fixed inputs/provenance are in
+`data/human/review/CONFIRMED_PROTOCOL.md` and `confirmation.json`. Transcripts
+are built by the recorder's canonical/ASR structural-edit rule, not independently
+verified verbatim; use canonical splitter units Gettysburg 1–10/Reagan 1–17.
+Unknown spontaneous take04s have `flaws: null`, `excluded_from_scoring: true`
+and `exclusion_reason`; they are not clean negatives. They receive A/C analyses,
+while B is take02/03 versus own01. No severity labels were supplied or invented.
+
+With the Docker API already healthy, run in WSL from `~/speech-eval`:
+
+```sh
+env -u PYTHONPATH ~/.local/bin/uv run python scripts/prepare_human_confirmation.py
+env -u PYTHONPATH ~/.local/bin/uv run python scripts/analyze_human.py --detector both --v2-runtime docker
+```
+
+V2 must run in the environment that produced the measurements; absolute model
+paths are provenance inputs. The Docker option calls the unchanged frozen v2
+inside the existing API container, retaining every provenance check. V1 remains
+primary; v2 is labelled post-hoc. The older generic notes instructions follow.
+
 Expected inputs: Gettysburg and Reagan Challenger `take01`–`take04` WAVs in
 `data/human/raw/`, plus your `notes.md` there and `data/human/CONSENT.md`.
 Never put a synthetic fixture in this folder. Latest recording instructions are

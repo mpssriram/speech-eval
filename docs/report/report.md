@@ -17,7 +17,7 @@ Frozen A: precision 0.125, recall 0.400, F1 0.190.
 Frozen B: precision 0.018, recall 0.390, F1 0.035.
 A clean alarms: 1.341/min; dev guard failed (1.777 versus <=0.5/min).
 Release: 1,103 indexed recordings, 36.3 h; repeated scientific hashes match.
-Limits: synthetic edits, low precision, no genuine-take or independent-rater validation.
+Limits: low precision; genuine labels are recorder-confirmed, not independent; zero rater responses.
 :::
 
 Content quality is out of scope.
@@ -64,8 +64,8 @@ have 18 / 4 / 7 speakers. [Measured counts](../../reports/reproducibility.md).
 Parameters are in `configs/flaws.yaml`. Time maps transport source indices into
 the flawed timeline; labels bind type, edit-strength severity and interval.
 Real MFA is run separately for detection. Oracle alignments serve label/QA only;
-edit boundaries are not guaranteed perceptual boundaries. Genuine recordings
-are supplied; their validated evaluation remains pending.
+edit boundaries are not guaranteed perceptual boundaries. Genuine recorder-confirmed
+takes are evaluated separately below, without threshold tuning.
 
 # 3. Features and speaker normalisation
 
@@ -202,7 +202,7 @@ lowers recall (0.400 to 0.288). F1 is effectively unchanged (0.190 to 0.193); v1
 The test clean-alarm guard still fails.
 B precision/F1 rise but remain low, with recall falling. V2 is a precision/recall
 trade-off, not established general improvement; uniform recording-wide problems
-can be missed by within-recording contrast. Human takes/ratings were not used.
+can be missed by within-recording contrast. Human takes/ratings were not used for tuning.
 
 # 7. No-reference comparison
 
@@ -217,12 +217,34 @@ on 175 files stays separate from Phase6:
 C too-quiet truth is trailing-only; unsupported single effects are omitted and
 mixed files score supported types only. Lower aggregate recall/more clean alarms
 describe controlled edits, not humans. [Mode C](../../reports/phase08_mode_c.md).
-Eight genuine recordings, recorder consent and prose notes are supplied. Local
-ASR drafts are unconfirmed; complete delivery labels/confirmed transcripts are
-still required. No genuine A/B hit/miss/false-positive counts or dashboard jobs
-are claimed. V1 remains primary and v2 separately post-hoc; neither is tuned on
-these takes. Genuine take accuracy remains pending. The real-MFA **synthetic workflow fixture**
-missed its injected region in A and B; no tuning followed. [Phase10](../../reports/phase10_human_takes.md).
+
+# 7.1 Genuine recorder-confirmed takes
+
+Eight consented recordings completed real MFA analysis: A for all takes,
+B02/03 versus own01, plus C for the spontaneous take04s. Both take04s have
+unknown flaws and are excluded from accuracy pools. Labels are the recorder's
+confirmation of the script, not independent annotation. Canonical units and
+word anchors were fixed before results; ASR structural edits build the transcripts,
+while substitutions/mumbling retain canonical words. Verbatim acoustic fidelity
+has not been independently checked. No detector settings changed.
+
+| Version / mode | Labels | Hits / misses / FP | FP/min |
+|---|---:|---|---:|
+| Frozen v1 / A | 13 | 4 / 9 / 77 | 9.625 |
+| Frozen v1 / B | 13 | 3 / 10 / 60 | 11.236 |
+| Post-hoc v2 / A | 13 | 4 / 9 / 58 | 7.250 |
+| Post-hoc v2 / B | 13 | 3 / 10 / 27 | 5.056 |
+
+Primary matching is same-type one-to-one IoU >=0.3, including pause events.
+A pools six scored takes (8.00 min); B pools four current takes (5.34 min),
+not their references. Take01 flags: Gettysburg/Reagan 9/14 (v1), 7/11 (v2).
+Historical pause-centre <=0.25 s and explicitly secondary unit-overlap counts,
+localized MFA spans, transcript provenance and every dashboard link are in
+[Phase10](../../reports/phase10_human_takes.md). V1 remains primary;
+post-hoc v2; test split was seen with v1, so results are optimistic.
+Hits are limited and false alarms high; these labels do not establish independent
+perceptual accuracy. The synthetic workflow fixture previously missed its edit;
+no tuning followed either fixture or genuine takes.
 
 # 8. Dashboard
 
@@ -243,7 +265,7 @@ unheard visual reference and unclear-word exclusions introduce uncertainty and
 selection bias; model-to-visual differences do not establish annotation accuracy.
 C/key-moment heuristics and rubric scores lack human validation. Low precision,
 the failed dev guard, constant/non-monotonic series and fixture miss remain limits.
-Future work needs consented recordings and independent labels/ratings; detector
+Future work needs more consented recordings and independent labels/ratings; detector
 changes must be labelled post-hoc, not presented as frozen evaluation.
 
 # 10. Reproducibility and attributions
@@ -263,10 +285,9 @@ in the original JSON; display rounding does not change them.
 
 ::: pending
 Pending items
-Confirmed as-spoken transcripts/complete delivery labels and genuine A/B evaluation.
 Independent agreement pending (zero responses); human alignment spot-check.
 Archive upload URL, author confirmation and recorded/published video URL.
 Owner-confirmed formal code/annotation licence files; total disk requirement.
-Unreported aggregate human/severity/C-F1 and pitch-improvement values remain unclaimed.
+Unreported aggregate severity/C-F1 and pitch-improvement values remain unclaimed.
 See [NEXT](../../NEXT.md) and [placeholder inventory](../TODO_PLACEHOLDERS.md).
 :::

@@ -1,0 +1,207 @@
+{
+  "analysis_id": "a0df81f2c369",
+  "detector": {
+    "config_hash": "3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538",
+    "engine": "rules",
+    "version": "post-hoc-v2"
+  },
+  "duration_s": 86.81,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "gettysburg__user__input_b32e8ab739c4",
+  "reference": {
+    "baseline_recording_id": "gettysburg__lv_dj__orig",
+    "exclude_speaker": null,
+    "kind": "distribution",
+    "n_readers": 10,
+    "reference_version": "746a5ef0d4f2ad2eb999a85dc58eed970ddd266438c98da4543938485fdbeabe",
+    "text_id": "gettysburg"
+  },
+  "regions": [
+    {
+      "end": 1.455,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.3827,
+        "unit": "s",
+        "z": -4.746
+      },
+      "explanation": "1.4\u20131.5 s, \"ago our\": you paused 6.9e-18 s after \"ago\" where good readers pause 0.38 s (0.38 s shorter, 4.7 SD below). The listener gets no breathing space. This is the opening sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 4.746,
+      "severity": 4,
+      "start": 1.425,
+      "tags": [
+        "first_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 6,
+      "word_start": 5
+    },
+    {
+      "end": 3.99,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.04,
+        "reference": 0.6697,
+        "unit": "s",
+        "z": -9.675
+      },
+      "explanation": "4.0\u20134.0 s, \"nation, conceived\": you paused 0.04 s after \"nation,\" where good readers pause 0.67 s (0.63 s shorter, 9.7 SD below). The listener gets no breathing space. This is the opening sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 9.675,
+      "severity": 4,
+      "start": 3.95,
+      "tags": [
+        "first_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 16,
+      "word_start": 15
+    },
+    {
+      "end": 49.16,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.37,
+        "reference": 1.387,
+        "unit": "s",
+        "z": -4.793
+      },
+      "explanation": "48.8\u201349.2 s, \"here. It\": you paused 0.37 s after \"here.\" where good readers pause 1.4 s (1 s shorter, 4.8 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 4.793,
+      "severity": 4,
+      "start": 48.79,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 158,
+      "word_start": 157
+    },
+    {
+      "end": 52.435,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.3279,
+        "unit": "s",
+        "z": -4.811
+      },
+      "explanation": "52.4\u201352.4 s, \"work which\": you paused 6.9e-18 s after \"work\" where good readers pause 0.33 s (0.33 s shorter, 4.8 SD below). The listener gets no breathing space. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 4.811,
+      "severity": 4,
+      "start": 52.405,
+      "tags": [],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 173,
+      "word_start": 172
+    },
+    {
+      "end": 61.02,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.38,
+        "reference": 6.939e-18,
+        "unit": "s",
+        "z": 5611.0
+      },
+      "explanation": "59.6\u201361.0 s, \"task remaining\": a 1.4 s pause between \"task\" and \"remaining\" where good readers pause 6.9e-18 s (1.4 s longer, 5.6e+03 SD above). It breaks the sentence. This is the speech's final sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 5611.0,
+      "severity": 4,
+      "start": 59.64,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "awkward_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 197,
+      "word_start": 196
+    },
+    {
+      "end": 84.775,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.4544,
+        "unit": "s",
+        "z": -5.1
+      },
+      "explanation": "84.7\u201384.8 s, \"people, for\": you paused 6.9e-18 s after \"people,\" where good readers pause 0.45 s (0.45 s shorter, 5.1 SD below). The listener gets no breathing space. This is the speech's final sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 5.1,
+      "severity": 4,
+      "start": 84.745,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 258,
+      "word_start": 257
+    },
+    {
+      "end": 85.435,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.4999,
+        "unit": "s",
+        "z": -5.354
+      },
+      "explanation": "85.4\u201385.4 s, \"people, shall\": you paused 6.9e-18 s after \"people,\" where good readers pause 0.5 s (0.5 s shorter, 5.4 SD below). The listener gets no breathing space. This is the speech's final sentence. Post-hoc v2: practical effect and region constraints passed.",
+      "mean_abs_z": 5.354,
+      "severity": 4,
+      "start": 85.405,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "v2": {
+        "minimum_effect_met": true,
+        "within_recording_z": null
+      },
+      "word_end": 261,
+      "word_start": 260
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 8.0,
+    "pace": 10.0,
+    "pauses": 0.0,
+    "pitch": 10.0,
+    "volume": 10.0
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "type": "post_hoc_detector_v2"
+    },
+    {
+      "count": 5,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}
