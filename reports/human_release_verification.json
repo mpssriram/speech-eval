@@ -2,7 +2,6 @@
   "schema": "human-release-verification/v1",
   "date": "2026-10-12",
   "transport": "gdown==5.2.0 downloaded full uploaded ZIP into /tmp",
-  "supplied_drive_file_id": "1qR-RC1sZ02wuwVqzT9Er2Mj4rj2PO509",
   "uploaded_bytes": 7586867457,
   "uploaded_sha256": "a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b",
   "uploaded_members": 13813,
@@ -55,5 +54,7 @@
   "every_correct_payload_matches_repo": true,
   "repeat_archive_sha256": "33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd",
   "main_archive_sha256_after": "a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b",
-  "action": "Upload correct separate human takes ZIP; supplied ID is not used in docs or active fetch metadata."
+  "action": "Upload correct separate human takes ZIP; supplied ID is not used in docs or active fetch metadata.",
+  "retired_supplied_drive_file_id_sha256": "67d8689afb05ade3d665e3bb59a2e5d003031ffce7005d4ed00b7f1cacb767bc",
+  "retired_link_note": "Historical rejected upload; raw old Drive ID retired from current files. Original record remains in Git history. This is not verification of the new Drive link."
 }

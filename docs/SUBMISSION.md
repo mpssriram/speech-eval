@@ -2,19 +2,19 @@
 
 ## Download releases
 
-[Main dataset archive](https://drive.google.com/file/d/18wOjIvKjvabN2hnUUH8y2k1I7dpOYDxV/view)
-and [release folder](https://drive.google.com/drive/folders/140b1eGAVj7u0Tm0Q97Q5eNCA-fRt0-LI)
-are shared as "Anyone with the link" by the owner. Anonymous gdown main-file
-transport was checked with a 1 MiB ZIP response; full SHA256 was checked locally.
+[Main dataset archive](https://drive.google.com/file/d/1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm/view)
+was downloaded in full anonymously with gdown 5.2.0 on 2026-10-12 and matches
+the local release by exact size and SHA256. The old Drive folder is retired;
+a new folder URL and separate human-takes link have not yet been supplied.
 
 | File | Exact bytes | SHA256 | Download |
 |---|---:|---|---|
-| speech-eval-dataset-v1.zip | 7,586,867,457 | `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b` | Main link above; Drive ID `18wOjIvKjvabN2hnUUH8y2k1I7dpOYDxV` |
-| speech-eval-human-takes-v1.zip | 62,520,905 | `33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd` | Correct local file prepared; replacement upload required |
+| speech-eval-dataset-v1.zip | 7,586,867,457 | `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b` | Main link above; Drive ID `1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm` |
+| speech-eval-human-takes-v1.zip | 62,520,905 | `33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd` | Correct local file prepared; new Drive link awaited |
 
-The supplied takes file is a dataset-sized ZIP rather than this human release;
-its link is excluded from download metadata. Upload the exact local
-`data/release/speech-eval-human-takes-v1.zip`, then provide its new Drive ID.
+The new link is the main dataset, not the human release. A separate new
+Drive link is required for `data/release/speech-eval-human-takes-v1.zip`;
+the earlier rejected takes link is retired.
 The main ZIP is immutable and contains no new human takes. Human takes are a
 separate optional release; the scientific corpus and frozen results stay fixed.
 
@@ -49,7 +49,7 @@ different file. Evidence: `reports/drive_download_probe.json` and
 ## Checks
 
 - [x] Release download metadata, exact byte sizes and SHA256 pins published.
-- [x] Main Drive transport checked anonymously (partial); full local archive/payload verification.
+- [x] New main Drive archive downloaded fully and matched by exact size/SHA256; internal inventory also verified.
 - [ ] Upload the correct separate human takes ZIP and verify its replacement link.
 - [ ] Verify both browser links from a logged-out browser at submission time.
 - [ ] Confirm repository is public at submission time.
@@ -64,5 +64,5 @@ spot-check limitations are explicit in NEXT.md and the report.
 
 Final verification: 312 host tests passed; frozen code/config/audio/consent and
 main ZIP unchanged. Disk snapshot: 32,170,019,620 bytes for retained tools image,
-one archive and unpacked payload; clean-build peak remains unmeasured. Anonymous
-gdown folder listing failed; no successful logged-out folder check is claimed.
+one archive and unpacked payload; clean-build peak remains unmeasured.
+The old folder is retired; new folder/takes links are awaited.

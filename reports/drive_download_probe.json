@@ -1,11 +1,12 @@
 {
   "schema": "drive-download-probe/v1",
   "date": "2026-10-12",
-  "drive_file_id": "18wOjIvKjvabN2hnUUH8y2k1I7dpOYDxV",
+  "drive_file_id": "1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm",
   "gdown_version": "5.2.0",
-  "bytes_received": 1048576,
+  "bytes_received": 7586867457,
+  "sha256": "a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b",
   "zip_magic": true,
   "cookies": false,
-  "full_remote_sha256_verified": false,
-  "method": "Same gdown id transport as fetcher; stop after 1 MiB. Full main SHA256 via --from-local."
+  "full_remote_sha256_verified": true,
+  "method": "Full anonymous new-Drive download; exact size/SHA256 matches the local main ZIP and its internal inventory. Replaces historical partial probe; original evidence remains in Git history."
 }

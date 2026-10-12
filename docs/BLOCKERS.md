@@ -1,5 +1,13 @@
 # Blockers
 
+## New Drive first link — resolved main file, 2026-10-12
+
+Full anonymous gdown download of `1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm` matches the immutable main
+release by exact size/SHA256. Active main links are updated. The old folder and
+rejected takes links are retired. New folder/human-takes links are not supplied;
+human download metadata remains disabled until a matching file is verified.
+Earlier publication diagnostics below are historical. Neither ZIP changed.
+
 ## Prompt B publication and runtime status — 2026-10-12
 
 Main Drive download, author/affiliation and licence files are resolved. The

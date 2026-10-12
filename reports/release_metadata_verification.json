@@ -10,13 +10,14 @@
   "human_archive_sha256": "33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd",
   "supplied_human_upload_status": "wrong file: exact main dataset ZIP",
   "human_remote_download_disabled": true,
-  "folder_probe": "anonymous gdown skip_download could not retrieve contents; browser check remains pending",
+  "folder_probe": "Old folder retired during new Drive migration; replacement folder link not supplied",
   "pdf_pages": 6,
-  "pdf_sha256": "d46a3ca3fa72f28de6937ac19b31deb775157a4d23fc99d7265ba707d54207c5",
+  "pdf_sha256": "b8f6ecc1e360bedb825c215a03fcc4ef04d3bc3c0010994dc136818b368d1e26",
   "pdf_repeat_identical": true,
-  "pdf_visual_check": "All six final-render pages inspected; no clipping, overlap or unreadable chart",
+  "pdf_visual_check": "All six final-render pages inspected; changed page six inspected at full size; no clipping or overlap",
   "dev_mode_b_check": "already completed; rerun skipped; no new test benchmark evaluation",
   "review": "Two package edge cases fixed with failing-then-passing regression tests; read-only reviewer verified fixes, no further Important findings",
   "disk_bytes": 32170019620,
-  "clean_build_peak_measured": false
+  "clean_build_peak_measured": false,
+  "drive_migration_evidence": "reports/drive_release_migration.json"
 }

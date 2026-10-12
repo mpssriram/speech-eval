@@ -283,10 +283,10 @@ changes must be labelled post-hoc, not presented as frozen evaluation.
 
 # 10. Reproducibility and attributions
 
-`make reproduce-quick` downloads the [main archive](https://drive.google.com/file/d/18wOjIvKjvabN2hnUUH8y2k1I7dpOYDxV/view)
+`make reproduce-quick` downloads the [main archive](https://drive.google.com/file/d/1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm/view)
 by Drive ID with pinned gdown, verifies SHA256 and runs one text/three readers.
 Browser fallback uses `DATA_ARCHIVE`; [dataset card](../DATASET.md) has exact
-files/hashes/commands. The separate human release needs a corrected upload.
+files/hashes/commands. The separate human release awaits its new Drive link.
 `make reproduce` reproduces frozen Phase6/7/8 numbers in pinned CPU Docker,
 not historical ASR decisions or human/video work. Quick: 11.829 / 11.954 seconds;
 full: 225.204 / 223.142 after import/build. Hashes:
@@ -309,6 +309,6 @@ with source-specific USA public-domain evidence.
 
 ::: pending
 Pending items
-Corrected human-takes upload; recorded/published video URL.
+New human-takes link; recorded/published video URL.
 Clean-build peak unmeasured. Remaining actions: [NEXT](../../NEXT.md).
 :::

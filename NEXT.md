@@ -2,6 +2,25 @@
 
 Submission deadline: October 13.
 
+## New Drive migration — first link verified
+
+The new Drive ID `1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm` is **speech-eval-dataset-v1.zip**:
+7,586,867,457 bytes; SHA256 `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b`.
+Full anonymous gdown 5.2.0 download in /tmp matches the actual local ZIP;
+trusted internal inventory also matches. Neither release archive was modified.
+Updated config, README, dataset/submission docs, report source/PDF and current
+download evidence. Old folder retired; replacement folder and human-takes links
+are awaited. The new main ID is never assigned to the human release.
+`scripts/fetch_data.py` was already config-driven and had no old ID: skipped
+code edits; existing integrity checks and --from-local stay unchanged.
+Historical rejected-upload identity is retained as a digest; original raw-link
+evidence remains in Git history. Verification: reports/drive_release_migration.json.
+312 host tests passed; all 17 frozen code/config hashes still match. Report:
+six A4 pages, repeated bytes identical; final layout inspected. PDF SHA256:
+`b8f6ecc1e360bedb825c215a03fcc4ef04d3bc3c0010994dc136818b368d1e26`. No retired ID remains in current tracked files, including
+the PDF. Evidence: reports/drive_migration_verification.json.
+Docker stayed stopped; WSL will be shut down after push to release RAM.
+
 ## Prompt B release metadata
 
 1. Dataset links/fetcher: main Drive ID and folder published; gdown 5.2.0 pinned,
@@ -194,14 +213,14 @@ does not change those frozen scientific outputs.
 
 ## Needs user
 
-1. Replace the supplied takes upload with
+1. Provide a new Drive link for the matching separate human release:
    `C:/python_practice/Speech/data/release/speech-eval-human-takes-v1.zip`
    (62,520,905 bytes; SHA256
    33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd),
    share as "Anyone with the link" and provide its replacement Drive ID.
    Main ZIP publication and author/licence confirmation are DONE.
 2. Record/publish the final demo video and supply the working URL. Check the
-   release folder in a logged-out browser; gdown could not list it anonymously.
+   replacement Drive folder once its new URL is supplied; the old folder is retired.
 3. Optional: try the app with your microphone/files. Transcript acoustic fidelity
    can be reviewed later; rule-built texts and recorder-confirmed labels are
    explicitly disclosed. Genuine analysis is complete.
