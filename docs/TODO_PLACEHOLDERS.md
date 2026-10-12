@@ -7,7 +7,7 @@ leaving a misleading sentence around a blank number.
 
 | Original placeholder | Why not filled / action |
 |---|---|
-| `{{disk_gb}}` | Local components and whole-engine VHDX snapshot measured in reports/disk_usage.json; complete fresh-install/build requirement remains blocked by Docker startup. No estimated total. |
+| `{{disk_gb}}` | Resolved measured image + archive + unpacked payload snapshot: 32.170019620 GB in reports/reproduction_disk_usage.json. Clean-build peak remains unmeasured; no minimum is inferred. |
 | `{{dataset_url}}` | Resolved: main Drive ID and folder in configs/dataset.yaml. Supplied takes upload is the main ZIP; upload the prepared separate human release. |
 | `{{author name}}` | Resolved: Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic) and Codex (OpenAI). |
 | `{{video_url}}` | Video recording/publication not supplied. |

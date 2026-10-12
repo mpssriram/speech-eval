@@ -34,6 +34,13 @@ Submission deadline: October 13.
    554-FP breakdown and conclusions to report section 6.2. No demonstrated live
    timing/processing bug; no detector fix or new benchmark test evaluation.
    Rounded insertion-knot oracle QA outliers remain explicit, not silently fixed.
+5. Disk: measured 32,170,019,620 bytes (32.170 GB / 29.961 GiB): required
+   retained tools/API image 16,804,236,803 + main archive 7,586,867,457 + unpacked
+   inventory payload 7,778,915,360. README/card/report carry the number/method.
+   Excludes unrelated images, host environments, repeat archives, optional takes,
+   build cache and scratch. Not a clean-build peak; image predates gdown layer.
+   Docker startup restored by preserving stale zero-byte run/Secrets IPC dirs;
+   no images, volumes or data deleted. Existing API/web healthy again.
 
 ## Pre-video fixes
 

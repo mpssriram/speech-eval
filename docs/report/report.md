@@ -310,6 +310,12 @@ Code: [MIT](../../LICENSE); labels, annotations, docs and my recordings:
 [CC BY 4.0](../../LICENSE-DATA), with [consent](../../data/human/CONSENT.md).
 Source audio remains public domain per source.
 
+Measured retained reproduction image + one ZIP + unpacked payload:
+32,170,019,620 bytes (32.170 GB); 16.804 + 7.587 + 7.779 GB respectively.
+This excludes build/extraction scratch and host caches; the retained image
+predates the gdown metadata layer, so it is a snapshot, not a clean-build peak.
+[Exact disk accounting](../../reports/reproduction_disk_usage.json).
+
 Audio attribution: LibriVox volunteers and JFK/Reagan institutional collections;
 source-specific USA public-domain evidence. Full-precision scientific values remain
 in the original JSON; display rounding does not change them.

@@ -106,43 +106,26 @@ frozen experimental release, not a large independent-speaker benchmark.
 
 ## Measured disk footprint
 
-Measured 2026-10-11; decimal GB = bytes / 1,000,000,000. These are observations,
-not universal free-space recommendations or estimates. GNU `du -B1` counts
-allocated blocks and de-duplicates hard-linked cache/venv files in one traversal.
+Measured reproduction disk snapshot (2026-10-12): **32,170,019,620 bytes
+(32.170019620 decimal GB / 29.961 GiB)** for the retained required Docker
+tools/API image, one main archive and its unpacked 13,812-file payload:
 
-| Component | Measured bytes | Scope |
-|---|---:|---|
-| Development data | 44,495,196,160 | Includes pipeline caches and two identical release ZIP copies |
-| Project UV cache | 10,481,917,952 | First-encounter allocation of shared cache/venv inodes |
-| Host Python environment, nonshared remainder | 172,298,240 | Other venv inodes already counted in UV cache |
-| Rest of checkout | 299,855,872 | Git, web, code, tests, reports and project models |
-| External UV cache | 48,521,216 | Nonoverlapping with the checkout traversal |
-| Host MFA conda environment | 1,852,719,104 | Not needed separately by Docker users |
-| Host pretrained MFA models | 106,135,552 | Image also contains its own models; do not double-count image models |
-| Linux development total | 57,456,644,096 | 57.456644096 GB |
-| Docker Desktop VHDX files | 39,405,486,080 | Whole engine/all projects, not attributable project image bytes |
-| Combined measured development snapshot | 96,862,130,176 | 96.862130176 GB; not a fresh-install minimum |
-| Fresh GitHub clone at ae2a301 | 208,314,368 | Separate temporary checkout; not included in development total |
-| Single transfer ZIP | 7,586,867,457 | 7.586867457 GB / 7.065820933 GiB |
-| ZIP uncompressed logical contents | 7,781,531,513 | Sum of 13,813 ZIP members, including inventory; not allocated/import peak space |
+| Component | Bytes | Decimal GB |
+|---|---:|---:|
+| Required Docker tools/API image, uncompressed layers | 16,804,236,803 | 16.804236803 |
+| One speech-eval-dataset-v1.zip | 7,586,867,457 | 7.586867457 |
+| Unpacked frozen payload | 7,778,915,360 | 7.778915360 |
+| Total | 32,170,019,620 | 32.170019620 |
 
-ZIP SHA256:
-`a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b`.
-Fresh `stat`/`sha256sum` measurements match the release pin. Windows `Get-Item`
-measured `docker_data.vhdx` = 39,304,822,784 bytes and `ext4.vhdx` = 100,663,296
-bytes; `fsutil sparse queryflag` confirmed neither is sparse. Those files include
-other projects, caches and filesystem free space; they are not live image sizes.
-Host models also occur inside the already-counted pipeline caches. The absence
-of separate home HuggingFace/Torch directories does not imply absence of models.
-
-**Complete fresh-clone Docker installation/peak-build requirement: NOT MEASURED.**
-Docker Desktop's inaccessible `dockerInference` endpoint prevents daemon startup,
-image/cache inspection and the requested fresh-clone v2 import. The clone and
-`make reproduce-v2 ...` were actually attempted; fetch failed before execution.
-Restore Docker, then measure `docker system df -v` plus fresh imported-data usage
-and build peaks, accounting for shared layers. No estimated total substitutes
-for that missing measurement. [Machine evidence](../reports/disk_usage.json),
-[blocker](BLOCKERS.md).
+Docker Engine `/system/df` supplies exact image bytes; `stat` checks each trusted
+inventory member. The image includes its shared layers once; unrelated images,
+volumes, build cache, host UV/MFA/GPU environments, repeat archives and optional
+human takes are excluded. `make reproduce` needs no web image. The retained image
+predates the added gdown metadata layer; this is a measured snapshot, not a
+clean-build peak/minimum. Download/extraction scratch needs additional space;
+the importer stages the full payload before installing it. Filesystem allocation
+for archive/payload is recorded separately in
+[machine evidence](../reports/reproduction_disk_usage.json).
 
 ## Flaws, severity and labels
 

@@ -36,17 +36,26 @@ equivalents are in [Docker instructions](docs/DOCKER.md). First image/model
 downloads and import are separate from numerical run time. Measured quick:
 11.829 / 11.954 seconds; full: 225.204 / 223.142 seconds in the tested CPU
 environment, not a universal laptop bound. [Fresh-clone proof](reports/reproducibility.md).
-Disk measurement (2026-10-11): the current development checkout plus external
-UV/MFA environment/models uses **57,456,644,096 allocated bytes (57.456644096 GB)**.
-Docker Desktop's two non-sparse VHDX files total **39,405,486,080 bytes** for
-**all Docker projects**. Combined measured snapshot: **96,862,130,176 bytes
-(96.862130176 GB)**, not this project's fresh-install minimum. Historical caches,
-two archive copies and the host GPU environment are included. The exact
-Docker-inclusive fresh-install/peak-build requirement is **NOT MEASURED**:
-Docker currently fails to start, so project image/layer/cache attribution and
-fresh import cannot be measured. No requirement is estimated.
-[Component measurements and method](docs/DATASET.md#measured-disk-footprint),
-[machine evidence](reports/disk_usage.json), [blocker](docs/BLOCKERS.md).
+Measured reproduction disk snapshot (2026-10-12): **32,170,019,620 bytes
+(32.170019620 decimal GB / 29.961 GiB)** for the retained required Docker
+tools/API image, one main archive and its unpacked 13,812-file payload:
+
+| Component | Bytes | Decimal GB |
+|---|---:|---:|
+| Required Docker tools/API image, uncompressed layers | 16,804,236,803 | 16.804236803 |
+| One speech-eval-dataset-v1.zip | 7,586,867,457 | 7.586867457 |
+| Unpacked frozen payload | 7,778,915,360 | 7.778915360 |
+| Total | 32,170,019,620 | 32.170019620 |
+
+Docker Engine `/system/df` supplies exact image bytes; `stat` checks each trusted
+inventory member. The image includes its shared layers once; unrelated images,
+volumes, build cache, host UV/MFA/GPU environments, repeat archives and optional
+human takes are excluded. `make reproduce` needs no web image. The retained image
+predates the added gdown metadata layer; this is a measured snapshot, not a
+clean-build peak/minimum. Download/extraction scratch needs additional space;
+the importer stages the full payload before installing it. Filesystem allocation
+for archive/payload is recorded separately in
+[machine evidence](reports/reproduction_disk_usage.json).
 
 `make up` defaults to the checkout commit for image metadata; an explicit
 `SPEECHEVAL_GIT_COMMIT` environment/Make value overrides it. For

@@ -1,0 +1,31 @@
+{
+  "schema": "reproduction-disk/v1",
+  "date": "2026-10-12",
+  "method": "Docker Engine /system/df Images.Size (uncompressed including shared layers once for one required tools/API image); stat inventory payloads; one archive",
+  "docker_api_tools_image": {
+    "id": "sha256:520bf7897cdf8711c18e1fc33a7a717ad646fd95c7772ab284293b4da6f34783",
+    "tags": [
+      "speech-eval-api:local"
+    ],
+    "bytes": 16804236803,
+    "shared_with_other_images_bytes": 489697280
+  },
+  "archive_bytes": 7586867457,
+  "archive_allocated_bytes": 7586873344,
+  "unpacked_payload_files": 13812,
+  "unpacked_payload_bytes": 7778915360,
+  "unpacked_allocated_bytes": 7813275648,
+  "total_bytes": 32170019620,
+  "total_decimal_gb": 32.17001962,
+  "total_gib": 29.960665497928858,
+  "excludes": [
+    "build cache",
+    "download/extraction staging",
+    "host uv/conda/GPU environments",
+    "repeat archives",
+    "optional human takes",
+    "unrelated images/volumes",
+    "web image (not needed by make reproduce)"
+  ],
+  "scope": "Measured retained reproduction image + one ZIP + its unpacked payload; not clean-build peak or universal minimum. Image predates the release metadata/gdown layer."
+}
