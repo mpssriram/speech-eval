@@ -1,5 +1,17 @@
 # Blockers
 
+## Pre-video Docker Desktop startup, 2026-10-12
+
+Docker/WSL were stopped at the start of the pre-video request. Starting the
+installed Docker Desktop failed in its Inference manager on the transient
+Windows `AppData/Local/Docker/run/dockerInference` AF_UNIX reparse entry
+(“The file cannot be accessed by the system”). A recoverable rename of that
+one IPC entry also failed. No reset, image/volume deletion, settings change or
+detector change was attempted. Existing genuine artifacts are served by the
+same host API for live explanation/browser checks; Docker startup still needs
+repair before Docker-based cold-upload testing. This is not an inference or
+annotation failure, and no genuine detector workflow is rerun for this task.
+
 ## 2026-10-11 — Recorder chat saved; incomplete labels and transcripts block evaluation
 
 The recorder clarified that consent/notes were supplied in chat, not existing

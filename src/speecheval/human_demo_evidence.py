@@ -42,6 +42,35 @@ def pause_summary(alignment: dict, first: int, last: int) -> dict:
             'pause_fraction': pauses/span, 'word_count': len(words)}
 
 
+def hit_rows(row: dict, displayed_regions: list[dict]) -> list[dict]:
+    """Pair published strict hits with the exact API/dashboard presentation text."""
+    if [(r['type'],r['start'],r['end']) for r in row['regions']] != [
+            (r['type'],r['start'],r['end']) for r in displayed_regions]:
+        raise ValueError('Dashboard intervals differ from frozen genuine evidence')
+    hits = []
+    for prediction, target in row_breakdown(row)['matched_pairs']:
+        p, t = displayed_regions[prediction], row['intended_regions'][target]
+        hits.append({'take_id':row['take_id'],'detector':row['detector'],'mode':row['mode'],
+            'type':p['type'],'prediction_index':prediction,'label_index':target,
+            'detected_interval_s':[p['start'],p['end']], 'label_interval_s':[t['start'],t['end']],
+            'explanation':p['display_explanation'],'dashboard_url':row['dashboard_url'],'job_id':row['job_id']})
+    return hits
+
+
+def hits_markdown(hits: list[dict]) -> str:
+    """List four A hits per version and three B hits per version, not extra takes."""
+    lines = ['## Exact primary hits for the video', '',
+        'Four Mode-A hits for each version, plus three Mode-B hits for each version. A/B are separate comparisons of the same takes, not fourteen independent human events. Intervals are trimmed participant seconds. Explanations are quoted verbatim from the live API presentation shown in the dashboard; raw scientific explanation strings and z values remain unchanged.', '',
+        '| Version | Take | Mode | Type | Detected interval (s) | Label interval (s) | Dashboard explanation (verbatim) |',
+        '|---|---|---|---|---|---|---|']
+    for h in hits:
+        detected, labelled = h['detected_interval_s'], h['label_interval_s']
+        quote = h['explanation'].replace('|','&#124;').replace('\n',' ')
+        lines.append(f'| {h["detector"]} | [{h["take_id"]}]({h["dashboard_url"]}) | {h["mode"]} | {h["type"]} | {detected[0]:.3f}-{detected[1]:.3f} | {labelled[0]:.3f}-{labelled[1]:.3f} | {quote} |')
+    lines += ['', 'Suggested demonstrable primary hit: frozen v1 Gettysburg take02 Mode B, awkward pause at larger|sense, detected and labelled 29.900-31.470 s. This is a declared recorder-confirmed pause, not an independent perceptual rating.', '']
+    return '\n'.join(lines)
+
+
 def collect_evidence(root: Path) -> dict:
     """Read actual promoted reference readers and genuine jobs; preserve input bytes."""
     path = root/'data/human/evaluation.json'

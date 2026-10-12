@@ -10,7 +10,9 @@ Submission deadline: October 13.
    Ruling: do not claim less pausing than every reader: lv_amb has 11.78 s of
    MFA gaps, below G01/G02/G04. All takes are shorter than every reference;
    pause context uses Reagan's 90.17 s excerpt, not its full 249.13 s speech.
-2. Exact primary hit/demo table: next.
+2. Exact primary hit/demo table: added four A hits and three B hits per version,
+   with labelled/detected intervals and actual live API display explanations.
+   Video candidate: G02 B larger|sense, 29.900-31.470 s, IoU 1.0.
 3. Replace report screenshots and add genuine results to summary: next.
 4. Fix waveform label overlap without widening scientific intervals: next.
 5. Final no-spot-check/no-independent-raters wording: next.

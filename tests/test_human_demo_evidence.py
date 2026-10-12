@@ -1,6 +1,6 @@
 """Report diagnostics must preserve frozen matching and excluded unknown labels."""
 import pytest
-from speecheval.human_demo_evidence import row_breakdown, pause_summary
+from speecheval.human_demo_evidence import row_breakdown, pause_summary, hit_rows
 
 
 def test_breakdown_uses_matched_prediction_indices_and_same_type():
@@ -35,3 +35,20 @@ def test_pause_summary_uses_selected_excerpt_not_full_recording():
     result = pause_summary(alignment, 0, 2)
     assert result == {'aligned_span_s': 3., 'interword_pause_s': .5,
                       'pause_fraction': 1 / 6, 'word_count': 3}
+
+
+def test_hit_rows_quote_dashboard_explanation_not_raw_scientific_text():
+    row = {'take_id':'example','detector':'v1','mode':'B','job_id':'job',
+        'dashboard_url':'http://localhost/results/job','excluded_from_scoring':False,
+        'regions':[{'type':'awkward_pause','start':1.,'end':2.,'explanation':'raw 6e-18'}],
+        'intended_regions':[{'type':'awkward_pause','start':1.1,'end':2.1}],
+        'comparison':{'primary':{'hits':1,'misses':0,'false_positives':0}}}
+    shown = [{'type':'awkward_pause','start':1.,'end':2.,'explanation':'raw 6e-18',
+              'display_explanation':'where your previous take does not pause'}]
+    hits = hit_rows(row, shown)
+    assert len(hits) == 1
+    assert hits[0]['explanation'] == 'where your previous take does not pause'
+    assert hits[0]['detected_interval_s'] == [1.,2.]
+    assert hits[0]['label_interval_s'] == [1.1,2.1]
+    with pytest.raises(ValueError,match='Dashboard intervals differ'):
+        hit_rows(row, [{**shown[0],'end':3.}])
