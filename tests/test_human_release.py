@@ -24,6 +24,10 @@ def inputs(root):
                        'evaluation.json': json.dumps({'results': rows})}.items():
         (root / 'data/human' / name).write_text(body)
     (root / 'data/release').mkdir()
+    review = root / 'data/human/review'; review.mkdir()
+    for name in ('CONFIRMED_PROTOCOL.md', 'TAKES_REVIEW.md', 'TRANSCRIPT_DIFFS.md',
+                 'confirmation.json', 'transcript_units.json'):
+        (review / name).write_text('frozen review evidence')
 
 
 def test_takes_zip_contains_repo_inputs_and_repeats(tmp_path):
@@ -38,7 +42,7 @@ def test_takes_zip_contains_repo_inputs_and_repeats(tmp_path):
         assert len([n for n in z.namelist() if '/labels/' in n]) == 8
         assert z.read('human/CONSENT.md') == b'consent'
         assert 'human/hashes.sha256' in z.namelist()
-    assert result['payload_files'] == 28
+    assert result['payload_files'] == 33
 
 
 def test_missing_take_blocks_packaging(tmp_path):
@@ -56,3 +60,25 @@ def test_human_builder_cannot_replace_main_archive(tmp_path):
     with pytest.raises(ValueError, match='main'):
         script('build_human_release').build(tmp_path, main)
     assert main.read_bytes() == b'IMMUTABLE'
+
+
+@pytest.mark.parametrize('alias_kind', ['symlink', 'hardlink'])
+def test_human_builder_refuses_main_archive_alias(tmp_path, alias_kind):
+    inputs(tmp_path)
+    main = tmp_path / 'data/release/speech-eval-dataset-v1.zip'
+    main.write_bytes(b'IMMUTABLE')
+    alias = tmp_path / 'other.zip'
+    if alias_kind == 'symlink': alias.symlink_to(main)
+    else: alias.hardlink_to(main)
+    with pytest.raises(ValueError, match='main|alias'):
+        script('build_human_release').build(tmp_path, alias)
+    assert main.read_bytes() == b'IMMUTABLE'
+
+
+def test_human_builder_excludes_unrelated_review_files(tmp_path):
+    inputs(tmp_path)
+    (tmp_path / 'data/human/review/personal.txt').write_text('PRIVATE')
+    result = script('build_human_release').build(tmp_path, tmp_path / 'out.zip')
+    assert result['payload_files'] == 33
+    with zipfile.ZipFile(tmp_path / 'out.zip') as z:
+        assert 'human/review/personal.txt' not in z.namelist()

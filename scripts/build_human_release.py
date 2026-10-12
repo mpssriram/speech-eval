@@ -20,16 +20,22 @@ def sha(path: Path) -> str:
 
 def build(root: Path, output: Path) -> dict:
     """Package eight raw WAVs, transcripts, consent, notes and frozen timed labels."""
-    if output.name == 'speech-eval-dataset-v1.zip':
+    main = root / 'data/release/speech-eval-dataset-v1.zip'
+    if output.name == main.name or output.resolve() == main.resolve():
         raise ValueError('Never replace the immutable main dataset archive')
+    if output.is_symlink() or (output.exists() and output.stat().st_nlink > 1):
+        raise ValueError('Archive output alias is forbidden')
+    if output.suffix != '.zip':
+        raise ValueError('Archive output must be a .zip file')
     data = root / 'data'
     takes = [f'{text}__user__take{n:02}' for text in ('gettysburg', 'reagan_challenger')
              for n in range(1, 5)]
     names = ['human/CONSENT.md', 'human/raw/notes.md', 'human/evaluation.json']
     names += [f'human/{folder}/{rid}.{ext}' for rid in takes
               for folder, ext in (('raw', 'wav'), ('transcripts', 'txt'))]
-    names += [p.relative_to(data).as_posix() for p in sorted((data / 'human/review').glob('*'))
-              if p.is_file()]
+    names += [f'human/review/{name}' for name in (
+        'CONFIRMED_PROTOCOL.md', 'TAKES_REVIEW.md', 'TRANSCRIPT_DIFFS.md',
+        'confirmation.json', 'transcript_units.json')]
     # Verify all inputs before producing derived metadata or opening a ZIP.
     for name in names:
         path = data / name

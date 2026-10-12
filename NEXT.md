@@ -21,6 +21,10 @@ Submission deadline: October 13.
    repo bytes. Local human import verifies all 33 payloads. Main archive unchanged.
    Evidence: reports/human_release_verification.json. Builder regression test
    prevents accidentally targeting the main ZIP. Original consent is retained.
+   Read-only review follow-up: regression tests also reject symlink/hardlink
+   aliases to the main ZIP and exclude unrelated human/review files. The five
+   frozen review files are explicitly listed. Correct archive hash stayed exact;
+   reviewer verified both fixes and found no further Important issues.
 3. Author/licences: Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic)
    and Codex (OpenAI). LICENSE grants MIT for code; LICENSE-DATA grants CC BY 4.0
    for labels, annotations, documentation and the author's recordings, with the
