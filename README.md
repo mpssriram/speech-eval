@@ -23,8 +23,8 @@ overlap or wrap. [Desktop/mobile checks](reports/waveform_ui_verification.json).
 ```sh
 git clone https://github.com/mpssriram/speech-eval.git
 cd speech-eval
-# Archive is not in Git. Until public upload, obtain the separately supplied ZIP:
-make reproduce-quick DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip
+# Download the public checksum-pinned release (archive is not in Git):
+make reproduce-quick
 make up                 # foreground server; run in a second terminal, http://localhost:8080
 make reproduce          # frozen Phase 6/7/8 numbers in Docker, CPU
 make test               # Python tests inside Docker
@@ -55,12 +55,51 @@ the `GIT_COMMIT` build arg is stored as `SPEECHEVAL_GIT_COMMIT`. `/api/health`
 prefers an actual checkout HEAD, otherwise this build/runtime value. Without
 either source it still reports `null` honestly, never an invented commit.
 
-Upload ZIP: **7,586,867,457 bytes / 7.586867457 decimal GB**; SHA256
-`a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b`.
+## Download releases
 
-Public dataset URL: **pending upload** (`{{dataset_url}}`). Fill
-`configs/dataset.yaml` with the URL for the **exact checksum-pinned ZIP** after
-uploading; then omit `DATA_ARCHIVE`. A clone without that archive cannot reproduce.
+[Main dataset archive](https://drive.google.com/file/d/18wOjIvKjvabN2hnUUH8y2k1I7dpOYDxV/view)
+and [release folder](https://drive.google.com/drive/folders/140b1eGAVj7u0Tm0Q97Q5eNCA-fRt0-LI)
+are shared as "Anyone with the link" by the owner. Anonymous gdown main-file
+transport was checked with a 1 MiB ZIP response; full SHA256 was checked locally.
+
+| File | Exact bytes | SHA256 | Download |
+|---|---:|---|---|
+| speech-eval-dataset-v1.zip | 7,586,867,457 | `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b` | Main link above; Drive ID `18wOjIvKjvabN2hnUUH8y2k1I7dpOYDxV` |
+| speech-eval-human-takes-v1.zip | 62,520,905 | `33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd` | Correct local file prepared; replacement upload required |
+
+The supplied takes file is a dataset-sized ZIP rather than this human release;
+its link is excluded from download metadata. Upload the exact local
+`data/release/speech-eval-human-takes-v1.zip`, then provide its new Drive ID.
+The main ZIP is immutable and contains no new human takes. Human takes are a
+separate optional release; the scientific corpus and frozen results stay fixed.
+
+```sh
+make reproduce-quick   # anonymous Drive download, checksum verification, CPU Docker
+make reproduce
+# Optional takes, once a verified replacement upload is configured:
+uv run python scripts/fetch_data.py --with-human-takes
+```
+
+Downloader: [gdown](https://github.com/wkentaro/gdown), pinned to 5.2.0 in
+pyproject.toml/uv.lock. File IDs are used instead of downloading Drive HTML.
+Every archive and payload hash is checked before installation; conflicting
+existing files are refused. Optional takes do not enter `make reproduce` metrics.
+
+Manual fallback: open the main link in a browser, click Download and save the ZIP,
+then run `make reproduce DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip`.
+With host Python dependencies installed, the equivalent import is:
+
+```sh
+uv run python scripts/fetch_data.py --from-local /absolute/path/speech-eval-dataset-v1.zip
+# The prepared human ZIP is usable now without a public upload:
+uv run python scripts/fetch_data.py --from-local /absolute/path/speech-eval-dataset-v1.zip \
+  --with-human-takes --human-from-local /absolute/path/speech-eval-human-takes-v1.zip
+```
+
+Drive may impose quotas or a confirmation page. Browser downloads still undergo
+the same size/SHA256/member checks; do not replace the pinned hash to accept a
+different file. Evidence: `reports/drive_download_probe.json` and
+`reports/human_release_verification.json`.
 
 ## Three modes
 

@@ -1,9 +1,23 @@
 {
   "archive": "speech-eval-dataset-v1.zip",
   "bytes": 7586867457,
+  "downloader": "gdown==5.2.0",
+  "drive_file_id": "18wOjIvKjvabN2hnUUH8y2k1I7dpOYDxV",
+  "folder_url": "https://drive.google.com/drive/folders/140b1eGAVj7u0Tm0Q97Q5eNCA-fRt0-LI",
+  "human_takes": {
+    "archive": "speech-eval-human-takes-v1.zip",
+    "bytes": 62520905,
+    "drive_file_id": null,
+    "inventory": "data/release/human_takes_inventory.json",
+    "payload_files": 33,
+    "reason": "Supplied takes file is a 7.59 GB dataset ZIP, not the 62.52 MB human release; verification evidence in reports/human_release_verification.json.",
+    "sha256": "33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd",
+    "status": "upload_required",
+    "url": null
+  },
   "inventory": "data/release/inventory.json",
   "payload_files": 13812,
   "schema": "dataset-release/v1",
   "sha256": "a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b",
-  "url": "UPLOAD_URL_PENDING"
+  "url": "https://drive.google.com/file/d/18wOjIvKjvabN2hnUUH8y2k1I7dpOYDxV/view"
 }

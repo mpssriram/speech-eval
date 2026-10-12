@@ -1,4 +1,4 @@
-"""Import a checksum-pinned dataset; stdlib only, suitable for the Docker tools image."""
+"""Import checksum-pinned releases; public Drive downloads use pinned gdown."""
 from __future__ import annotations
 import argparse
 import hashlib
@@ -35,10 +35,34 @@ def safe_target(data: Path, name: str) -> Path:
     return target
 
 
-def fetch(root: Path, from_local: Path | None = None) -> int:
+def download_release(config: dict, archive: Path) -> None:
+    """Download to scratch only; callers verify size and SHA-256 before import."""
+    if config.get('drive_file_id'):
+        try:
+            import gdown
+            result = gdown.download(id=config['drive_file_id'], output=str(archive),
+                                    quiet=False, use_cookies=False)
+            if result is None or not archive.is_file():
+                raise ValueError('Drive returned no archive')
+        except Exception as exc:
+            raise ValueError('Drive download failed. Download in a browser, then use --from-local '
+                             '(and --human-from-local for human takes).') from exc
+    else:
+        url = config.get('url', '')
+        if not url.startswith(('https://', 'http://')):
+            raise ValueError('Dataset URL is pending upload. Use --from-local or make DATA_ARCHIVE=/path/release.zip')
+        with urllib.request.urlopen(url, timeout=60) as response, archive.open('xb') as output:
+            maximum = config.get('bytes', 64 * 1024**3)
+            total = 0
+            while chunk := response.read(1024 * 1024):
+                total += len(chunk)
+                if total > maximum: raise ValueError('Archive exceeds expected dataset size')
+                output.write(chunk)
+
+
+def fetch_release(root: Path, config: dict, from_local: Path | None = None) -> int:
     root = root.resolve()
     # JSON is a YAML subset: no third-party parser needed on the host or in tests.
-    config = json.loads((root / 'configs/dataset.yaml').read_text())
     inventory = json.loads((root / config['inventory']).read_text())
     data = root / 'data'
     files = inventory['files']
@@ -57,19 +81,11 @@ def fetch(root: Path, from_local: Path | None = None) -> int:
         if from_local is not None:
             archive = from_local.resolve()
         else:
-            url = config['url']
-            if not url.startswith(('https://', 'http://')):
-                raise ValueError('Dataset URL is pending upload. Use --from-local or make DATA_ARCHIVE=/path/release.zip')
             archive = scratch / 'download.zip'
-            with urllib.request.urlopen(url, timeout=60) as response, archive.open('xb') as output:
-                # Trusted inventory bounds the download, even when URL is misconfigured.
-                maximum = sum(m['bytes'] for m in files.values()) + len(files) * 2048 + 1048576
-                total = 0
-                while chunk := response.read(1024 * 1024):
-                    total += len(chunk)
-                    if total > maximum: raise ValueError('Archive exceeds expected dataset size')
-                    output.write(chunk)
+            download_release(config, archive)
         if sha(archive) != config['sha256']: raise ValueError('Archive SHA-256 mismatch')
+        if 'bytes' in config and archive.stat().st_size != config['bytes']:
+            raise ValueError('Archive size mismatch')
         with zipfile.ZipFile(archive) as z:
             infos = z.infolist(); names = [i.filename for i in infos]
             if len(names) != len(set(names)): raise ValueError('Duplicate archive members')
@@ -108,9 +124,28 @@ def fetch(root: Path, from_local: Path | None = None) -> int:
         return len(missing)
 
 
+def fetch(root: Path, from_local: Path | None = None, *, with_human_takes: bool = False,
+          human_from_local: Path | None = None) -> int:
+    """Verify/import the main release and optionally the separate consented takes."""
+    root = root.resolve()
+    config = json.loads((root / 'configs/dataset.yaml').read_text())
+    human = config.get('human_takes', {})
+    requested = with_human_takes or human_from_local is not None
+    if requested and human_from_local is None and human.get('status') != 'verified':
+        raise ValueError('Verified human takes upload is required. Use --human-from-local '
+                         'data/release/speech-eval-human-takes-v1.zip with --from-local for the main archive.')
+    installed = fetch_release(root, config, from_local)
+    if requested:
+        installed += fetch_release(root, human, human_from_local)
+    return installed
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument('--from-local', type=Path)
+    parser.add_argument('--with-human-takes', action='store_true')
+    parser.add_argument('--human-from-local', type=Path, help='Browser-downloaded human takes ZIP')
     args = parser.parse_args()
-    fetch(args.root, args.from_local)
+    fetch(args.root, args.from_local, with_human_takes=args.with_human_takes,
+          human_from_local=args.human_from_local)

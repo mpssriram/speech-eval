@@ -2,6 +2,15 @@
 
 Submission deadline: October 13.
 
+## Prompt B release metadata
+
+1. Dataset links/fetcher: main Drive ID and folder published; gdown 5.2.0 pinned,
+   SHA256/size/member verification retained, --from-local retained, optional
+   --with-human-takes and --human-from-local added. Anonymous main transport
+   sampled 1 MiB; complete local import verifies the frozen ZIP and payload.
+   Human download link withheld pending correction; prepared ZIP metadata is
+   published. README/dataset/submission docs contain manual browser fallback.
+
 ## Pre-video fixes
 
 1. False-alarm breakdown: added per-take/type v1/v2 A/B counts, take01 flags,
