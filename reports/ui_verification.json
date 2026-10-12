@@ -1,6 +1,6 @@
 {
   "schema": "ui-verification/v1",
-  "browser": "145.0.7632.6",
+  "browser": "153.0.8010.12",
   "fixture": {
     "recording_id": "gettysburg__lv_mk__orig",
     "sha256": "3bb1db549021b13753e03186d4f0795aa4012582bf5ba1298232d4f46bfc4f3c"
@@ -8,21 +8,21 @@
   "modes": [
     {
       "mode": "A",
-      "analysis_id": "aaa5f411caf8c68d1f2b6c4e",
+      "analysis_id": "0d3a66b5bbe9ab9636dd346b",
       "score": 9.4,
       "regions": 2,
       "status": "done"
     },
     {
       "mode": "B",
-      "analysis_id": "0a173214d978bd2b267fdad2",
+      "analysis_id": "a6d30ecbab47f00ed1e091b6",
       "score": 10,
       "regions": 0,
       "status": "done"
     },
     {
       "mode": "C",
-      "analysis_id": "fbe73c6eb441f9e986068ea7",
+      "analysis_id": "6848baa936207eab1687553e",
       "score": 10,
       "regions": 0,
       "status": "done"
@@ -30,13 +30,13 @@
   ],
   "screenshots": [
     "ui_upload.png",
-    "ui_results.png",
-    "ui_region.png",
+    "smoke_results.png",
+    "smoke_region.png",
     "ui_modeB.png",
     "ui_modeC.png"
   ],
   "page_errors": [],
-  "elapsed_seconds": 36.67,
+  "elapsed_seconds": 13.71,
   "viewport": {
     "width": 1440,
     "height": 1000

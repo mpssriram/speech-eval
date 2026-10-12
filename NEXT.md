@@ -20,7 +20,14 @@ Submission deadline: October 13.
    Page-one summary now includes genuine A/B counts. Six-page PDF repeated
    byte-identically and all pages inspected. Docker startup resolved by retaining
    only stale zero-byte IPC directories; no Docker/project data deleted.
-4. Fix waveform label overlap without widening scientific intervals: next.
+4. Waveform overlap fixed: type/time on hover and accessible labels; no text
+   inside intervals and no artificial minimum width. Legend colours retained,
+   keyboard Enter/Space selects flags. Exact widths/labels verified at1440/390px;
+   all six Playwright tests and 303 host tests pass. Web-only Docker rebuild;
+   genuine/scientific JSON, frozen detector/config and labels unchanged.
+   Fresh read-only review: no Critical/Important issues. Deferred minor:
+   the 390px test's proof output currently assumes the desktop-width test ran
+   first; use the full suite to refresh both entries, rather than a selected test.
 5. Final no-spot-check/no-independent-raters wording: next.
 
 ## Genuine takes — complete
@@ -77,7 +84,7 @@ are in API history with working tracks; eight genuine participant audio
 endpoints work. `data/human/verification.json` contains the hashes/checks.
 Evaluation SHA256:
 `58c6f712059cea44051051466f56a7f8e1d65fa04b6503a8026197d8e8e65013`.
-Latest host suite: 299 tests passed. Report: six A4 pages, repeated PDF bytes
+Latest host suite: 303 tests passed. Report: six A4 pages, repeated PDF bytes
 identical, every page inspected. Frozen code/config/audio hashes remain intact.
 
 ## Open your voice in the dashboard

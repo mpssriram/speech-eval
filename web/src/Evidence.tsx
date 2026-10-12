@@ -18,8 +18,19 @@ export function Waveform({analysis,onSelect,seek,selected}:{analysis:Analysis;on
       waveColor:'#63869f',progressColor:'#55d5e8',cursorColor:'#e5eff7',height:116,barWidth:2,barGap:2,normalize:false,plugins:[regions]});
     wave.current=instance;
     instance.on('ready',()=>setReady(true));
-    instance.on('decode',()=>analysis.regions.forEach((r,i)=>regions.addRegion({id:String(i),start:r.start,end:r.end,
-      color:flaws[r.type].color+'55',content:flaws[r.type].label,drag:false,resize:false})));
+    instance.on('decode',()=>analysis.regions.forEach((r,i)=>{
+      // Text inside narrow intervals wraps/overlaps. The coloured interval keeps
+      // its actual time width; its type and exact times are available on hover.
+      const region=regions.addRegion({id:String(i),start:r.start,end:r.end,
+        color:flaws[r.type].color+'55',drag:false,resize:false});
+      const element=region.element;if(!element)return;
+      const label=`${flaws[r.type].label} · ${r.start.toFixed(2)}–${r.end.toFixed(2)} s`;
+      element.title=label;element.setAttribute('aria-label',label);
+      element.setAttribute('role','button');element.tabIndex=0;
+      element.addEventListener('keydown',event=>{
+        if(event.key==='Enter'||event.key===' '){event.preventDefault();onSelect(i);instance.setTime(r.start);}
+      });
+    }));
     regions.on('region-clicked',(r,event)=>{event.stopPropagation();onSelect(Number(r.id));instance.setTime(r.start);});
     const error=(e:Error)=>{if(e.name!=='AbortError')setError(e.message);};
     instance.on('error',error);
@@ -30,7 +41,6 @@ export function Waveform({analysis,onSelect,seek,selected}:{analysis:Analysis;on
       if(!r.element)return;
       r.element.dataset.selected=String(Number(r.id)===selected);
       r.element.style.outline=Number(r.id)===selected?'2px solid #e5eff7':'';
-      r.element.style.minWidth='3px';
     });
     update();return wave.current?.on('ready',update);
   },[selected,analysis]);

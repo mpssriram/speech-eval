@@ -59,6 +59,12 @@ activated: the recording test uses Chromium's isolated fake audio device.
 
 ## Screenshots
 
+Pre-video rerun, 2026-10-12: six Playwright tests pass against production Docker
+port8080, including genuine Mode-B hit, exact waveform interval widths,
+non-overlapping hover labels and keyboard selection at1440px/390px.
+No real microphone was used (the recording test uses Chromium's fake device).
+Current width/label checks: `waveform_ui_verification.json`.
+
 ![Upload](img/ui_upload.png)
 The current report/README screenshots below now show genuine recorder
 Gettysburg take02 versus own take01 in frozen v1 Mode B, not this historical

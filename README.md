@@ -13,6 +13,11 @@ This screenshot uses the recorder's genuine take02 in frozen v1 Mode B against
 take01, not a LibriVox smoke-test upload. The selected declared awkward pause is
 29.90-31.47 s at larger|sense. [Screenshot provenance](reports/human_ui_verification.json).
 
+Waveform intervals use the legend colours and their actual start/end widths.
+Hover a coloured interval for its type/time label; Tab then Enter/Space selects
+it by keyboard. Labels are not printed inside narrow regions, so they cannot
+overlap or wrap. [Desktop/mobile checks](reports/waveform_ui_verification.json).
+
 ## Quickstart
 
 ```sh
