@@ -80,3 +80,9 @@ issue; this licence-scope clarification resolved its one Minor finding.
 ## Visual redesign verification — 2026-10-13
 
 The static dashboard was rebuilt and republished at Space commit `05ee58e439c3a3ebe033faf465b55bbad458218d`. The precomputed banner, frozen examples and audio are unchanged. All 38 JSON files match the manifest, stored sources and public host. Node phrase-span checks: 2 passed. Playwright: 3 passed locally (40.0 s), 3 passed publicly (1.7 min), all 19 examples, no page errors, failed responses or API calls. The public Hub loaded anonymously with HTTP 200 and the genuine Gettysburg take02 Mode B hit selected. Screenshots were refreshed. See [UI redesign](ui_redesign.md) and `ui_redesign_checks.json` for presentation and text-identity checks.
+
+## Embedded external-link fix — 2026-10-13
+
+GitHub, Dataset and Report links previously used the default iframe navigation, so GitHub refused to render inside the Space. They now use `target="_blank"` with `rel="noopener noreferrer"`. The regression test failed before the fix and passed afterward. Static Playwright: **4 passed** (44.5 s); Python: **314 passed** (20.39 s). All 38 build JSON files remain byte-identical to the manifest and stored sources.
+
+The actual public Space at commit `2d64d8645168d500a6d928e559b5b9411a47fd45` was checked: all three links opened separate tabs, the demo retained its selected genuine hit, and the opened tabs had no opener reference. `reports/hf_links_verification.json` records this check. The repository is still private; destination pages require a GitHub account with access until the owner completes the public-release action in NEXT.md. No repository visibility or report/data changes were made.
