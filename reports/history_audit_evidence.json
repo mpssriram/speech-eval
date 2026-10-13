@@ -1,0 +1,1013 @@
+{
+  "blob_bytes": 208021043,
+  "commits": 85,
+  "dotenv_paths": [],
+  "head": "7611bb97f9c623f700a5f11efc5eae9ac3afaf8d",
+  "historical_paths": 7779,
+  "largest_blobs": [
+    {
+      "blob": "e7e391dffc4e4fd068b278ebfecc8b9cff0dedbc",
+      "bytes": 3986956,
+      "path": "deploy/hf-static/public/audio/reagan_challenger__reagan__orig.mp3"
+    },
+    {
+      "blob": "4e96751510a88171d62d3fba62b1d5ab0e684fab",
+      "bytes": 2616153,
+      "path": "data/release/inventory.json"
+    },
+    {
+      "blob": "62d3142003d0e2fa4e6e0d3b40909222c56c7278",
+      "bytes": 2040938,
+      "path": "deploy/hf-static/public/audio/gettysburg__lv_wt__awkward_pause_s3_01.mp3"
+    },
+    {
+      "blob": "6a7c4b32d0b2b6259e1fc6607f14ebbfba14d95b",
+      "bytes": 2017115,
+      "path": "deploy/hf-static/public/audio/gettysburg__lv_wt__mumbling_s4_01.mp3"
+    },
+    {
+      "blob": "ce5369b1ddb6e845d724205f2ef17a5d1a0154b4",
+      "bytes": 1752964,
+      "path": "deploy/hf-static/public/audio/gettysburg__lv_tg__monotone_s5_01.mp3"
+    },
+    {
+      "blob": "1af4349546204ecc826c67a331ded16322976d27",
+      "bytes": 1737500,
+      "path": "deploy/hf-static/public/audio/gettysburg__lv_tg__rushing_s5_01.mp3"
+    },
+    {
+      "blob": "2122a1430e079f8e742fc13862093bf18cffb50d",
+      "bytes": 1647221,
+      "path": "deploy/hf-static/public/audio/gettysburg__lv_dj__orig.mp3"
+    },
+    {
+      "blob": "f113b48bdcc41e4f71dfa1c0befab31366413006",
+      "bytes": 1538681,
+      "path": "data/review/final_evaluation.json"
+    },
+    {
+      "blob": "428c703a44269dbfd0950268e29b200c4e062d2e",
+      "bytes": 1390176,
+      "path": "deploy/hf-static/public/audio/gettysburg__user__input_b32e8ab739c4.mp3"
+    },
+    {
+      "blob": "6f4641dba780c04689e28e5c8e6869e384abc93a",
+      "bytes": 1332497,
+      "path": "deploy/hf-static/public/audio/gettysburg__user__input_b7df9bd980c1.mp3"
+    }
+  ],
+  "legacy_blobs": [
+    {
+      "blob": "60b27247dd6f5081ebf752178a7922b79473e30e",
+      "path": "data/alignment/gettysburg__user__input_246ca9e90194.TextGrid"
+    },
+    {
+      "blob": "19748d7e14759fdedb75e74645a84edb33b87fa4",
+      "path": "data/alignment/gettysburg__user__input_246ca9e90194.json"
+    },
+    {
+      "blob": "f4b689ca6d4d630a55eded13be90d3f9bdbba812",
+      "path": "data/analyses/b6f935a82ff5.json"
+    },
+    {
+      "blob": "1a939f1c79ec3d3506ca5d245c058a209459a8fd",
+      "path": "data/review/detector_v2_test.json"
+    },
+    {
+      "blob": "f113b48bdcc41e4f71dfa1c0befab31366413006",
+      "path": "data/review/final_evaluation.json"
+    },
+    {
+      "blob": "a5ae394b4dc08cde94b7c08ff07fee5b4bf05c9a",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "fc6fd1009862d7aad9f9104d8c40ec3593ed01d3",
+      "path": "reports/reproducibility.md"
+    },
+    {
+      "blob": "01a7ca6c64207246cd9cf3b0db3ee33748108390",
+      "path": "src/speecheval/reproduce.py"
+    },
+    {
+      "blob": "73d1bd463f34dfe2d03d1a925d06e2a662d033e2",
+      "path": "tests/test_dataset_release.py"
+    },
+    {
+      "blob": "4fcec7ce702d14d7d9e81cfba40cb92e476a9624",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "ff6565392e772e25a00b9e41fd7e0b0a86dccfdf",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "0604849c3949511984e6833383c84c2904c96dae",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "21045e5b3eece9f332b4b4aa39360d5056aae8db",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "9e7c40ee7217625894192ce7a813d06e4c0d2392",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "aa8f7fb79f7e4f8e011686d28fba964eb38f399f",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "bf73839a53f9e710d2c9b214914744b25973ce62",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "bee727130510c5d60b39b5cb6982ec9f28248570",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "d10765f0e5dbe6f43191f6a9b81e22da83b881f6",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "4ed5cf2e098e89c2b045faa336c429d47e440a85",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "936f70337469d5adff7bb92b13072c8de0e4e1be",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "e3108af266b2b3f9971291572fa4bf37c6aaaae3",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "d3dbbfe1f684066362374764fef35721c9af52af",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "2f85c14e083acd7da494bd4224cfbe4d1fe1d861",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "c6607f7cb06a10aaad9aeba72368cbf31053a1a6",
+      "path": "docs/BLOCKERS.md"
+    },
+    {
+      "blob": "bb41ba16d7bedb9e324cf440e58f2948fd460cad",
+      "path": "tests/test_dataset_release.py"
+    }
+  ],
+  "media_blobs": [
+    {
+      "authorised_demo": true,
+      "blob": "2122a1430e079f8e742fc13862093bf18cffb50d",
+      "bytes": 1647221,
+      "path": "deploy/hf-static/public/audio/gettysburg__lv_dj__orig.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "ce5369b1ddb6e845d724205f2ef17a5d1a0154b4",
+      "bytes": 1752964,
+      "path": "deploy/hf-static/public/audio/gettysburg__lv_tg__monotone_s5_01.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "1af4349546204ecc826c67a331ded16322976d27",
+      "bytes": 1737500,
+      "path": "deploy/hf-static/public/audio/gettysburg__lv_tg__rushing_s5_01.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "62d3142003d0e2fa4e6e0d3b40909222c56c7278",
+      "bytes": 2040938,
+      "path": "deploy/hf-static/public/audio/gettysburg__lv_wt__awkward_pause_s3_01.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "6a7c4b32d0b2b6259e1fc6607f14ebbfba14d95b",
+      "bytes": 2017115,
+      "path": "deploy/hf-static/public/audio/gettysburg__lv_wt__mumbling_s4_01.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "3dd49bc9def6cd9da4a9c15432ad1c229865095c",
+      "bytes": 1296971,
+      "path": "deploy/hf-static/public/audio/gettysburg__user__input_4b7c30271b2f.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "5042027466527578e922494168bf458db6c1f692",
+      "bytes": 1329572,
+      "path": "deploy/hf-static/public/audio/gettysburg__user__input_91e74acbc922.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "428c703a44269dbfd0950268e29b200c4e062d2e",
+      "bytes": 1390176,
+      "path": "deploy/hf-static/public/audio/gettysburg__user__input_b32e8ab739c4.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "6f4641dba780c04689e28e5c8e6869e384abc93a",
+      "bytes": 1332497,
+      "path": "deploy/hf-static/public/audio/gettysburg__user__input_b7df9bd980c1.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "e7e391dffc4e4fd068b278ebfecc8b9cff0dedbc",
+      "bytes": 3986956,
+      "path": "deploy/hf-static/public/audio/reagan_challenger__reagan__orig.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "a1700c18db09c153df09294b7168addb859ce752",
+      "bytes": 1223828,
+      "path": "deploy/hf-static/public/audio/reagan_challenger__user__input_6b1ca5bc673c.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "21b056ed3d7a55ad977e4ab86918dfe7aa9acecf",
+      "bytes": 1271893,
+      "path": "deploy/hf-static/public/audio/reagan_challenger__user__input_990df0a0f76b.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "f3ff0e2adc1f10ae0ed37d5e6b0c075935685388",
+      "bytes": 1232187,
+      "path": "deploy/hf-static/public/audio/reagan_challenger__user__input_cf63338562c6.mp3"
+    },
+    {
+      "authorised_demo": true,
+      "blob": "5f65a75f71a0713b019f874fba98329b2173b4bc",
+      "bytes": 1285686,
+      "path": "deploy/hf-static/public/audio/reagan_challenger__user__input_e002e6e7884a.mp3"
+    }
+  ],
+  "oversized_blobs": [],
+  "private_path_blobs": [
+    {
+      "blob": "19d32ffea15f4b377dd9ea785f67c5fb82c3af39",
+      "path": "Dockerfile",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "e3fd66b1412c0456af89a0bcfef86e1bd419c3d0",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "99e9cf12aac41045f65fdba3981fd574d27002cf",
+      "path": "data/human/asr_drafts/gettysburg__user__take01.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "0a9aa1d18cf3e1e02913a4443938ec8e2c61823a",
+      "path": "data/human/asr_drafts/gettysburg__user__take02.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "ec8b546316133f178252dd53323dae438b39b2a8",
+      "path": "data/human/asr_drafts/gettysburg__user__take03.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "27001a1afaf9c2709a0b311e8a06f04988b4065d",
+      "path": "data/human/asr_drafts/gettysburg__user__take04.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "a3013197a30eebc3a3ccde80c4c8d5d11c5721fa",
+      "path": "data/human/asr_drafts/reagan_challenger__user__take01.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "aaa48ad6fb49e2f5b1fe4607176dfc5e1f08e487",
+      "path": "data/human/asr_drafts/reagan_challenger__user__take02.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "8c53beb5191d6963ca84e68094e38e0daa207e82",
+      "path": "data/human/asr_drafts/reagan_challenger__user__take03.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "b0e509d739e43691c854e4c9e1804e809082a06b",
+      "path": "data/human/asr_drafts/reagan_challenger__user__take04.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "cdd96b812f7d72e6f7dedeb73fca996d682ccf45",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_amb__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "6d4e9208dced21b888b14bb99bb3209cb97c8ff9",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_dj__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "ae821fd5311540e8f1af0104f8626a5454618728",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_dl__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "3bee4dd1dc77351ae0b8e324988f6628c0ce01f6",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_eep__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "00932cedae039ea6ae71c24ec4d80de384bafc4c",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_fb__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "a813b421435f49c62474a6c0ddd0887be788ba4b",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_jn__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "8e1c54d175b8e517009576cee3ab7349077cb6f3",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_law__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "28b964307b11d47a19f7f76052bd18e50fc8ab01",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_lb__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "33be0c377d157fb638404910b5f907fcfaf57f6d",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_mas__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "c1b7dc6f821736f54d2b0b7e9bec0242bf1f0e11",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_mk__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "513caa2dea8aa8b307bb718957dc06f156f3e96b",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_pc__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "de77c46da4dfa8dcefb5f122eee1b297cf752cfd",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_rk__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "82ef2661daa617900a7e0b05f0f4078abd1a3f33",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_sa__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "edcebc28d41b8641bb5a6df1aa569a1f05247fc1",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_tg__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "734f50d97205425ff1c8ac53cfa27f722e784c0d",
+      "path": "data/manifest/dataset_shards/gettysburg__lv_wt__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "17456d451a8e4f32115e0be61ae3076051b69bc9",
+      "path": "data/manifest/dataset_shards/jfk_rice__jfk__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "5fd0cd31cb4699a7cd1a52a46a0ffbddc5fd766b",
+      "path": "data/manifest/dataset_shards/o_captain__lv_apc__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "8312c0e6dbf9ef7e0c5eb03efcfdfd7e87150b2c",
+      "path": "data/manifest/dataset_shards/o_captain__lv_chip__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "4be19edde71e877c9a9fea98d8864735869d4fef",
+      "path": "data/manifest/dataset_shards/o_captain__lv_foxits__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "471f86d1fb0d8fd19e65b3887cc3b6122e318c42",
+      "path": "data/manifest/dataset_shards/o_captain__lv_jtm__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "094cc190084ff5eb3434707041c1a594115e9497",
+      "path": "data/manifest/dataset_shards/o_captain__lv_mac__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "cbab05dd18d3af9b9443e4a4c922a8dbb6fb0df2",
+      "path": "data/manifest/dataset_shards/o_captain__lv_mb__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "fdaa8f076c68e18b9ed3ffc0756b2d8e0c905ab1",
+      "path": "data/manifest/dataset_shards/o_captain__lv_md__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "eb9fe35c1a6180ccc64773982c0c4adbfdce71b3",
+      "path": "data/manifest/dataset_shards/o_captain__lv_mrg__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "095a3d11d2c92c1ed394094d9f78e46eeb4044dc",
+      "path": "data/manifest/dataset_shards/o_captain__lv_s__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "96b5d86868b8e6f784155a995ce3065cbee88026",
+      "path": "data/manifest/dataset_shards/o_captain__lv_sjs__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "7a511b04ef2dc4a92563edb0fb05dfd6027b5282",
+      "path": "data/manifest/dataset_shards/o_captain__lv_ss__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "a02225c1d7faa7af9f35897e9720edfebbde343e",
+      "path": "data/manifest/dataset_shards/o_captain__lv_th__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "53b896274d9a8e5c16294119577fa068f6fa2228",
+      "path": "data/manifest/dataset_shards/reagan_challenger__reagan__orig.json",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "2c82a13504d667bc87889c8811e9091be9e88f37",
+      "path": "docker/mfa_models.sha256",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "a5ae394b4dc08cde94b7c08ff07fee5b4bf05c9a",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "b1f0816e93588786f58d4005be4f533781fb4949",
+      "path": "docs/TASKS_C_D_E.md",
+      "patterns": [
+        1
+      ]
+    },
+    {
+      "blob": "c9b3014fe8ad6366b33e1a8dfe0c1c2640f871a7",
+      "path": "docs/specs/PROGRESS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "78f165351d64d78fd6bae043d8717f825e92f9f4",
+      "path": "reports/phase11_v2.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "2fc6805e1279be1a00c480ea79587557833ed96e",
+      "path": "scripts/custom_dictionary.py",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "7f670a496d0806d74818668915f568ba59cb5b21",
+      "path": "src/speecheval/align/mfa.py",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "673635a1965250a05951d5351c6d9259fcd525eb",
+      "path": "src/speecheval/dataset.py",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "1f4333a0828e50f83cc12750d84e73517a9c1161",
+      "path": "src/speecheval/evaluate.py",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "eb1a9d8dea0f53748c7e7fa08d7438da1f58e29e",
+      "path": "src/speecheval/pipeline.py",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "5765996ed606baa6ca086955d97ccc1cd066ff7b",
+      "path": "tests/test_release_limitations.py",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "7db7bf84ea10e7b504e826c0f13e4e5adc4e08ac",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "ed1fe773ea7f4e045e49260757780df6a9b1b662",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "9718c57948b719b3d32285e070baddac252de61f",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "a78f50bd60dfb4626f1a3856604c89e8b44ae1df",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "4fcec7ce702d14d7d9e81cfba40cb92e476a9624",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "a603f435e03e9303410ebe4b31a1068915ae2cb8",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "ff6565392e772e25a00b9e41fd7e0b0a86dccfdf",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "0604849c3949511984e6833383c84c2904c96dae",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "a28a6278c6f71db4a926d6dac861026afc2c1aca",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "40139e8149e8736ef744271ba7172dc5ce28b75f",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "21045e5b3eece9f332b4b4aa39360d5056aae8db",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "2dca1a580e6c5def0e474f8c68232d044942afdc",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "75a4d93f80a55995daf4c3cb4bbd2d88a7288d05",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "d0c7e5df162838c3dee282a2e900973e57e7040d",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "cda46ac46133c8d15806fa2442de59488e139d81",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "9e7c40ee7217625894192ce7a813d06e4c0d2392",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "aa8f7fb79f7e4f8e011686d28fba964eb38f399f",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "6202e3e73a7f374ff2a86235e265537fc92448bb",
+      "path": "NEXT.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "bf73839a53f9e710d2c9b214914744b25973ce62",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "123d06b89f70bb6c167a0c1ee0857c64db9ec06c",
+      "path": "NEXT.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "1340b91ab32915024972b5c9d32d79d97a5cae8f",
+      "path": "NEXT.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "84879744118d785070e7bb39dffedc06b52ca368",
+      "path": "Dockerfile",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "e179614c96d2116035d5c1165642b5d018a89e66",
+      "path": "NEXT.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "bee727130510c5d60b39b5cb6982ec9f28248570",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "d10765f0e5dbe6f43191f6a9b81e22da83b881f6",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "5bc61b966d1ff34becff17ce0cec73639e125b16",
+      "path": "reports/phase11_v2.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "c313b75b08aae01c321c44d67ebb519ddd1fc9b0",
+      "path": "Dockerfile",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "4ed5cf2e098e89c2b045faa336c429d47e440a85",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "936f70337469d5adff7bb92b13072c8de0e4e1be",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "30846a4231b909585d266bceed298f24f88443de",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "e3108af266b2b3f9971291572fa4bf37c6aaaae3",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "d3dbbfe1f684066362374764fef35721c9af52af",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "2f85c14e083acd7da494bd4224cfbe4d1fe1d861",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "c6607f7cb06a10aaad9aeba72368cbf31053a1a6",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "2609ce23607adf67bfdcaa9db807587f7f1ef5d9",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "eb9d39c2497679923a8fca7ffb8fcff686d2e104",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "3958b66126643ec3823c46a8b59896a570393161",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "b27fe3df709f046fd15018131b30c2beb4584cd3",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "e5b72a589b597226c5f6f5a77493dfb21bd76e00",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "78e4971f1659ee73bd0080d0c93dbecb293ba7de",
+      "path": "src/speecheval/pipeline.py",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "0e87a3570f87a5430758a46147f2c403ba0a634b",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "1ce4f57237d3c9f5fd3bebd09028175a78a2c60d",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "00dbb5226638cbc35e8db0d979bf8c2445d3432a",
+      "path": "src/speecheval/evaluate.py",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "1e691ae5fa37369554bce8f6c8d9784d4b24e11f",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "5259d631b7581cfcfff271545d40197678642c7b",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "22a5d9ca9bc36bbbcd9a8a5db9d38ea4acb34e80",
+      "path": "docs/specs/PROGRESS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "d2ec025d5908666cdd8287cda1e77ae82d0e8abc",
+      "path": "src/speecheval/align/mfa.py",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "40b275d6bd60ec8ae84428edbe2e9d00f897d9a8",
+      "path": "src/speecheval/evaluate.py",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "06e9f1e0303fa347eee27fe82edd09ab230075ee",
+      "path": "docs/specs/PROGRESS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "afc93c4b93211c4f113576b033982d3a93ae304c",
+      "path": "src/speecheval/align/mfa.py",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "fea7e9d447b4ffbeaf045236330b7cadf7de4dd6",
+      "path": "docs/specs/PROGRESS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "eb10009140648930feaf64d5d3cf6d5403df54fd",
+      "path": "docs/specs/PROGRESS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "56a37c611bca77654ced092f70fdc1cca6846063",
+      "path": "docs/specs/PROGRESS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "2b07a6c6e0bd442be1164d550bf533b4db4b7253",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "bbfb9009061b53f15a37ec7f11f65e9ef942657a",
+      "path": "docs/specs/PROGRESS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "0269014936d7272f58e288b4e3a7acf2a0d2fffd",
+      "path": "README.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "dd18f81d15fc747f1c6ddbf115699be85a21ee81",
+      "path": "docs/specs/PROGRESS.md",
+      "patterns": [
+        0
+      ]
+    },
+    {
+      "blob": "ef36d1eb750dd988b529915c1363af736266ba7f",
+      "path": "docs/BLOCKERS.md",
+      "patterns": [
+        0
+      ]
+    }
+  ],
+  "reachable_objects": 8729,
+  "refs": [
+    "refs/heads/main",
+    "refs/remotes/origin/main"
+  ],
+  "secret_candidates": [],
+  "unique_blobs": 8006
+}

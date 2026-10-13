@@ -263,3 +263,10 @@ no human takes or ratings are used to repair them before submission.
 
 Video URL remains pending. Publish the demo video and replace the clearly marked
 placeholder in README.md and docs/SUBMISSION.md before submission.
+
+## Final packaging: history review required
+
+Before making the repo public, review reports/history_audit.md: private workstation
+paths and excluded legacy-upload metadata remain in reachable history. No token
+candidates or legacy audio payloads were detected. No history rewrite was made;
+a cleanup, if desired, requires your explicit approval.
