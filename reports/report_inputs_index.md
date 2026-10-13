@@ -8,7 +8,7 @@ Copied files: **47**.
 
 | File in this folder / repository path | Bytes | SHA256 |
 |---|---:|---|
-| `NEXT.md` | 17,112 | `359e2b44f4f36d4f633a59ed2cbeb65e650adf6bb812e553dfaf2beb8d269cdc` |
+| `NEXT.md` | 1,081 | `33b54183c8fba8229552a4a10deb1e856beb2a912607a8eb58ab1352696fc3b7` |
 | `docs/DATASET.md` | 14,830 | `a411500f09b8fdc70c21b0eba5461a13db4960dd57fd7621579c7240ad931d1a` |
 | `docs/SUBMISSION.md` | 5,912 | `590c84dd53c37f64a18d0b7a063f3b7212373736cd4f11675ff887aba763b9e7` |
 | `docs/report/BUILD.md` | 1,364 | `83032f608624d87ec90e5237f2622c13ec42fe536fcc9d4cc8eecec8a287d30a` |
