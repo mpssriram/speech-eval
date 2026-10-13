@@ -5,7 +5,7 @@ import Plotly from 'plotly.js-basic-dist';
 import type {Data,Layout} from 'plotly.js';
 import {flaws,type Analysis,type Region,type Tracks,type Take} from './types';
 
-export function Waveform({analysis,onSelect,seek,selected}:{analysis:Analysis;onSelect:(index:number)=>void;seek:number|null;selected:number}){
+export function Waveform({analysis,onSelect,seek,selected,hidden=[]}:{analysis:Analysis;onSelect:(index:number)=>void;seek:number|null;selected:number;hidden?:string[]}){
   const box=useRef<HTMLDivElement>(null);const audio=useRef<HTMLAudioElement>(null);const wave=useRef<WaveSurfer|null>(null);
   const regionPlugin=useRef<ReturnType<typeof Regions.create>|null>(null);
   const [error,setError]=useState('');
@@ -15,7 +15,7 @@ export function Waveform({analysis,onSelect,seek,selected}:{analysis:Analysis;on
     const regions=Regions.create();
     regionPlugin.current=regions;setError('');setReady(false);
     const instance=WaveSurfer.create({container:box.current,media:audio.current,url:`/api/audio/${analysis.recording_id}`,
-      waveColor:'#63869f',progressColor:'#55d5e8',cursorColor:'#e5eff7',height:116,barWidth:2,barGap:2,normalize:false,plugins:[regions]});
+      waveColor:'#63869f',progressColor:'#55d5e8',cursorColor:'#e5eff7',height:180,barWidth:2,barGap:2,normalize:false,plugins:[regions]});
     wave.current=instance;
     instance.on('ready',()=>setReady(true));
     instance.on('decode',()=>analysis.regions.forEach((r,i)=>{
@@ -40,13 +40,15 @@ export function Waveform({analysis,onSelect,seek,selected}:{analysis:Analysis;on
     const update=()=>regionPlugin.current?.getRegions().forEach(r=>{
       if(!r.element)return;
       r.element.dataset.selected=String(Number(r.id)===selected);
+      r.element.style.visibility=hidden.includes(analysis.regions[Number(r.id)].type)?'hidden':'visible';
       r.element.style.outline=Number(r.id)===selected?'2px solid #e5eff7':'';
     });
     update();return wave.current?.on('ready',update);
-  },[selected,analysis]);
+  },[selected,analysis,hidden]);
   useEffect(()=>{if(seek!==null)wave.current?.setTime(seek);},[seek]);
   return <section className="timeline"><div className="section-heading"><h2>Your recording</h2><span>{analysis.duration_s.toFixed(2)} seconds · click a marked phrase</span></div>
-    {error&&<p role="alert">Could not load the waveform: {error}</p>}<div ref={box} data-testid="waveform" data-ready={ready}/><audio ref={audio} controls preload="metadata" aria-label="Recording playback"/></section>;
+    <div className="region-lanes" aria-label="Flag labels above waveform">{Object.entries(flaws).filter(([type])=>!hidden.includes(type)&&analysis.regions.some(r=>r.type===type)).map(([type,f])=><div className="lane" key={type}><span style={{color:f.color}}>{f.label}</span><div>{analysis.regions.map((r,i)=>r.type===type?<button key={i} aria-pressed={selected===i} title={`${f.label} · ${r.start.toFixed(2)}–${r.end.toFixed(2)} s`} style={{borderColor:f.color+'80',color:f.color}} onClick={()=>{onSelect(i);wave.current?.setTime(r.start);}}>{r.start.toFixed(2)}–{r.end.toFixed(2)} s</button>:null)}</div></div>)}</div>
+    {error&&<p role="alert">Could not load the waveform: {error}</p>}<div ref={box} data-testid="waveform" data-ready={ready}/><div className="time-axis">{Array.from({length:5},(_,i)=><span key={i}>{(analysis.duration_s*i/4).toFixed(0)} s</span>)}</div><audio ref={audio} controls preload="metadata" aria-label="Recording playback"><source src={`/api/audio/${analysis.recording_id}`}/></audio></section>;
 }
 
 export const featureOptions=[{id:'rate',label:'Speed',unit:'syllables/s'},{id:'pitchvar',label:'Pitch variation',unit:'semitones'},

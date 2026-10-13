@@ -20,7 +20,7 @@ test('genuine Gettysburg B hit and report screenshots use recorder take02 vs tak
   await expect(page.getByTestId('waveform')).toHaveAttribute('data-ready','true',{timeout:30000});
   await expect(page.getByTestId('feature-chart').locator('.main-svg').first()).toBeVisible();
   await expect(page.locator('.results-heading')).toContainText('Mode B');
-  await expect(page.getByLabel('Recording playback')).toHaveAttribute('src','/api/audio/gettysburg__user__input_91e74acbc922');
+  await expect(page.getByLabel('Recording playback').locator('source')).toHaveAttribute('src','/api/audio/gettysburg__user__input_91e74acbc922');
   await page.getByTestId('flaw-card').nth(region).getByRole('button',{name:/Awkward pause.*29.90/}).click();
   const hit=page.getByTestId('flaw-card').nth(region);
   await expect(hit).toHaveAttribute('aria-current','true');

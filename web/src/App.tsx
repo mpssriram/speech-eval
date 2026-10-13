@@ -4,10 +4,13 @@ import {flaws,request,type Analysis,type Job,type Take,type TextOption,type Trac
 import {Waveform,FeatureChart,ProgressChart,featureOptions} from './Evidence';
 import {Recorder} from './Recorder';
 import type {Segment} from './types';
+import {takeLabels} from './takeLabels';
 
-function Legend(){return <aside className="legend" data-testid="legend" aria-label="Flaw color legend">{Object.values(flaws).map(f=><span key={f.label}><i style={{background:f.color}}/>{f.label}</span>)}</aside>;}
+function Numbers({text}:{text:string}){return <>{text.split(/(>?[-+]?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?)/g).map((part,i)=>/\d/.test(part)?<strong className="number" key={i}>{part}</strong>:part)}</>;}
+function Legend({hidden,onToggle}:{hidden:string[];onToggle:(type:string)=>void}){return <div className="legend" data-testid="legend" aria-label="Filter flagged phrases">{Object.entries(flaws).map(([type,f])=><button key={type} aria-pressed={!hidden.includes(type)} onClick={()=>onToggle(type)}><i style={{background:f.color}}/>{f.label}</button>)}</div>;}
 
 function Results({analysis,tracks,aid,onError}:{analysis:Analysis;tracks:Tracks;aid:string;onError:(message:string)=>void}){
+  const [hidden,setHidden]=useState<string[]>([]);
   const [selected,setSelected]=useState(0),[feature,setFeature]=useState('rate'),[seek,setSeek]=useState<number|null>(null);
   const player=useRef<HTMLAudioElement>(null),end=useRef<number>(Infinity);
   const playback=useRef(0);
@@ -25,6 +28,7 @@ function Results({analysis,tracks,aid,onError}:{analysis:Analysis;tracks:Tracks;
     return ()=>{cancelled=true;playback.current++;};
   },[aid,analysis,onError]);
   const select=useCallback((index:number)=>{setSelected(index);},[]);
+  useEffect(()=>{const list=document.querySelector('.flaw-list'),card=list?.querySelector(`[data-region-index="${selected}"]`) as HTMLElement|null;if(list&&card)list.scrollTop=card.offsetTop;},[selected]);
   const region=analysis.regions[selected];
   async function play(index:number,baseline:boolean){
     const token=++playback.current;
@@ -42,11 +46,11 @@ function Results({analysis,tracks,aid,onError}:{analysis:Analysis;tracks:Tracks;
   const categories=['pace','pitch','pauses','volume','clarity'];
   const categoryTypes:Record<string,string[]>={pace:['rushing','dragging'],pitch:['monotone'],pauses:['awkward_pause','missing_pause'],volume:['too_quiet'],clarity:['mumbling']};
   return <>
-    <div className="results-heading"><div><h1>Delivery evidence</h1><p>{analysis.text_id.replaceAll('_',' ')} · Mode {analysis.mode} · {analysis.reference.kind.replaceAll('_',' ')}</p></div><span className="subtle">Scores describe detected delivery differences, not content quality.</span></div>
+    <div className="results-heading"><div><h1>Delivery evidence</h1><p>{takeLabels[analysis.recording_id]||analysis.text_id.replaceAll('_',' ')} · Mode {analysis.mode} · {analysis.reference.kind.replaceAll('_',' ')}</p></div><span className="subtle">Scores describe detected delivery differences, not content quality.</span></div>
     <section className="score-card" aria-label="Rubric scores"><div className="overall"><span>Overall</span><strong data-testid="overall-score">{analysis.scores.overall.toFixed(1)}<small>/10</small></strong></div><div className="categories">{categories.map(c=>{
       const count=analysis.regions.filter(r=>categoryTypes[c].includes(r.type)).length;
-      return <div key={c}><span>{c[0].toUpperCase()+c.slice(1)}</span><strong>{analysis.scores[c].toFixed(1)}</strong><p>{count?`${count} flagged ${count===1?'region':'regions'}`:'No detected penalty'}</p></div>;})}</div></section>
-    <Waveform analysis={analysis} onSelect={select} seek={seek} selected={selected}/>
+      return <div key={c}><span>{c[0].toUpperCase()+c.slice(1)}</span><meter min={0} max={10} value={analysis.scores[c]} aria-label={`${c} score`}/><strong>{analysis.scores[c].toFixed(1)}<small>/10</small></strong><p>{count?`${count} flagged ${count===1?'region':'regions'}`:'No detected penalty'}</p></div>;})}</div></section>
+    <div className="workspace"><div className="recording-column"><Waveform analysis={analysis} onSelect={select} seek={seek} selected={selected} hidden={hidden}/>
     <section className="transcript"><h2>Transcript</h2><p>Click a word to seek. Underlines mark detected regions.</p><div>{tracks.words.map(w=>{
       const idx=analysis.regions.findIndex(r=>r.word_start<=w.i&&w.i<=r.word_end);const f=idx>=0?analysis.regions[idx]:undefined;
       return <button className={idx===selected?'selected-word':''} key={w.i} title={`${w.start.toFixed(2)} s${f?' · '+flaws[f.type].label:''}`}
@@ -55,18 +59,19 @@ function Results({analysis,tracks,aid,onError}:{analysis:Analysis;tracks:Tracks;
     <section className="evidence"><div className="section-heading"><h2>Measured delivery</h2><span>{analysis.mode==='C'?'Per-word curves; no same-text reference band':'Shaded band: reference ±2σ in transformed space'}</span></div>
       <div role="tablist" aria-label="Delivery features" className="feature-tabs">{featureOptions.map(f=><button key={f.id} role="tab" aria-selected={feature===f.id} onClick={()=>setFeature(f.id)}>{f.label}</button>)}</div>
       <FeatureChart tracks={tracks} feature={feature} selected={region}/></section>
-    <section><div className="section-heading"><h2>Flagged phrases</h2><span>{analysis.regions.length} detected regions · sorted by time</span></div>
+    </div><section className="flag-panel"><div className="section-heading"><h2>Flagged phrases</h2><span>{analysis.regions.length} detected regions · sorted by time</span></div>
+      <Legend hidden={hidden} onToggle={type=>setHidden(old=>old.includes(type)?old.filter(t=>t!==type):[...old,type])}/>{analysis.regions.length>0&&analysis.regions.every(r=>hidden.includes(r.type))&&<p className="empty">All flaw types are hidden. Select a filter to show its phrases.</p>}
       {!analysis.regions.length?<div className="empty">{analysis.mode==='B'?'No delivery differences detected against your earlier take. A relative match is not an expert-quality rating.':analysis.mode==='C'?'No flaws detected against the four-feature norms. This is an automatic estimate, not a human rating.':'No flaws detected against the expert-reader reference. This is an automatic comparison, not a human rating.'}</div>:
-        <div className="flaw-list">{analysis.regions.map((r,i)=><article key={`${r.type}-${r.start}-${i}`} data-testid="flaw-card" data-region-index={i} aria-current={selected===i?'true':undefined} className={`flaw-card ${selected===i?'active':''}`} style={{borderLeftColor:flaws[r.type].color}}>
-          <button className="flaw-title" onClick={()=>{setSelected(i);setSeek(r.start);}}><span style={{color:flaws[r.type].color}}>{flaws[r.type].label}</span><span>{r.start.toFixed(2)}–{r.end.toFixed(2)} s</span></button>
+        <div className="flaw-list">{analysis.regions.map((r,i)=>({r,i})).sort((a,b)=>a.r.start-b.r.start).map(({r,i})=><article hidden={hidden.includes(r.type)} key={`${r.type}-${r.start}-${i}`} data-testid="flaw-card" data-region-index={i} aria-current={selected===i?'true':undefined} className={`flaw-card ${selected===i?'active':''}`} style={{borderLeftColor:flaws[r.type].color}}>
+          <button className="flaw-title" onClick={()=>{setSelected(i);setSeek(r.start);}}><span className="type-chip" style={{color:flaws[r.type].color}}>{flaws[r.type].label}</span><span>{r.start.toFixed(2)}–{r.end.toFixed(2)} s</span></button>
           <div className="severity" aria-label={`Severity ${r.severity} of 5`}>{'●'.repeat(r.severity)}{'○'.repeat(5-r.severity)}<span>Severity {r.severity}/5</span></div>
-          <blockquote>{tracks.words.slice(r.word_start,r.word_end+1).map(w=>w.text).join(' ')}</blockquote><p>{r.display_explanation??r.explanation}</p>
-          <div className="playback"><Button variant="light" onClick={()=>void play(i,false)}>Yours</Button><Button variant="subtle" disabled={!segments[i]} onClick={()=>void play(i,true)}>Baseline (same words)</Button></div>
+          <blockquote>{tracks.words.slice(r.word_start,r.word_end+1).map(w=>w.text).join(' ')}</blockquote><p><Numbers text={r.display_explanation??r.explanation}/></p>
+          <div className="playback"><Button variant="light" aria-label="Yours" onClick={()=>void play(i,false)}>Yours</Button><Button variant="subtle" aria-label="Baseline (same words)" disabled={!segments[i]} onClick={()=>void play(i,true)}>Baseline (same words)</Button></div>
           {!analysis.reference.baseline_recording_id?<small>Mode C has no same-text baseline.</small>:segments[i]===null?<small>Baseline words differ here; an exact phrase match is unavailable.</small>:!segments[i]?<small>Checking baseline word matches…</small>:null}
         </article>)}</div>}
       <audio hidden={!hasPlayback} className="comparison-player" data-testid="phrase-player" ref={player} controls aria-label="Selected phrase playback" onTimeUpdate={()=>{if(player.current&&player.current.currentTime>=end.current)player.current.pause();}}/>
-    </section>
-    {!!analysis.key_moments.length&&<section><h2>Key moments <small>Guidelines, not scoring penalties</small></h2>{analysis.key_moments.map((k,i)=><p className="guideline" key={i}><strong>{k.passed?'Within guideline':'Check this moment'}</strong> · {k.message}</p>)}</section>}
+    </section></div>
+    {!!analysis.key_moments.length&&<section className="tips"><h2>Heuristic tips (not scored) <small>Key moments</small></h2>{analysis.key_moments.map((k,i)=><p className="guideline" key={i}><strong>{k.passed?'Within guideline':'Check this moment'}</strong> · {k.message}</p>)}</section>}
     {analysis.progress&&<section data-testid="rehearsal-progress"><h2>Changes since your earlier take</h2><p className="subtle">Both takes are checked against expert readers for these counts. The score above compares this take with your earlier delivery.</p>
       <div className="progress-table"><table><thead><tr><th>Delivery flag</th><th>Earlier count</th><th>Current count</th><th>Flagged seconds, earlier → current</th></tr></thead><tbody>{Object.entries(analysis.progress).map(([type,p])=><tr key={type}><th>{flaws[type as keyof typeof flaws]?.label||type}</th><td>{p.previous.count}</td><td>{p.current.count}</td><td>{p.previous.duration_s.toFixed(2)} → {p.current.duration_s.toFixed(2)}</td></tr>)}</tbody></table></div>
     </section>}
@@ -82,7 +87,7 @@ export default function App(){
   const [aid,setAid]=useState(location.pathname.startsWith('/results/')?location.pathname.split('/')[2]:''),[job,setJob]=useState<Job|null>(null),[tracks,setTracks]=useState<Tracks|null>(null);
   const [error,setError]=useState(''),[sending,setSending]=useState(false),[textsLoading,setTextsLoading]=useState(true);
   useEffect(()=>{request<TextOption[]>('/api/texts').then(setTexts).catch(e=>setError(e.message)).finally(()=>setTextsLoading(false));},[]);
-  useEffect(()=>{let cancelled=false;setPrevious('');request<Take[]>(`/api/history?text_id=${encodeURIComponent(text)}`).then(data=>{if(!cancelled)setHistory(data);}).catch(e=>{if(!cancelled)setError(e.message);});return ()=>{cancelled=true;};},[text,aid]);
+  useEffect(()=>{let cancelled=false;setPrevious('');request<Take[]>(`/api/history?text_id=${encodeURIComponent(job?.analysis?.text_id||text)}`).then(data=>{if(!cancelled)setHistory(data);}).catch(e=>{if(!cancelled)setError(e.message);});return ()=>{cancelled=true;};},[text,aid,job?.analysis?.text_id]);
   useEffect(()=>{const navigate=()=>{setAid(location.pathname.startsWith('/results/')?location.pathname.split('/')[2]:'');setError('');};window.addEventListener('popstate',navigate);return ()=>window.removeEventListener('popstate',navigate);},[]);
   useEffect(()=>{
     if(!aid)return;let cancelled=false;let timer:ReturnType<typeof setTimeout>;
@@ -102,9 +107,15 @@ export default function App(){
     }catch(e){setError((e as Error).message);}finally{setSending(false);}
   }
   function reset(){setAid('');setJob(null);setTracks(null);setError('');window.history.pushState({},'','/');}
+  function openTake(id:string){if(!id)return;setAid(id);setError('');window.history.pushState({},'',`/results/${id}`);}
+  const shownMode=job?.analysis?.mode||mode;
   const busy=!!aid&&(!job||['queued','running'].includes(job.status)||job.status==='done'&&!tracks);
-  return <div className="shell"><header className="app-header"><button onClick={reset} aria-label="Speech Eval home"><svg viewBox="0 0 40 32" aria-hidden="true"><path d="M3 13v6m7-13v20m7-25v30m7-21v12m7-18v24m6-16v8"/></svg><span>Speech Eval</span></button><span>Delivery workbench</span>{aid&&<Button variant="subtle" onClick={reset}>New analysis</Button>}</header>
-    <Legend/><main>{error&&<Alert color="red" title="Could not complete that action" role="alert" withCloseButton onClose={()=>setError('')}>{error}</Alert>}
+  return <div className="shell"><header className="app-header"><button className="brand" onClick={reset} aria-label="Speech Eval home"><svg viewBox="0 0 40 32" aria-hidden="true"><path d="M3 13v6m7-13v20m7-25v30m7-21v12m7-18v24m6-16v8"/></svg><span>Speech-Eval</span></button>
+      <div className="header-picker"><label htmlFor="header-take">{aid?'Recording / take':'Text / take'}</label><select id="header-take" value={aid||text} onChange={e=>aid?openTake(e.target.value):(setText(e.target.value),setMode(e.target.value==='own_speech'?'C':'A'),setTranscript(''))}>
+      {aid?<>{!history.some(t=>t.analysis_id===aid)&&<option value={aid}>{job?.analysis?.text_id||'Loading recording'} · current take</option>}{history.map((t,i)=><option key={t.analysis_id} value={t.analysis_id}>{takeLabels[t.recording_id]||`${(job?.analysis?.text_id||text).replaceAll('_',' ')} · Analysis ${i+1}`} · Mode {t.mode}</option>)}</>:<>{texts.map(t=><option key={t.text_id} value={t.text_id}>{t.title}</option>)}<option value="own_speech">My own speech (Mode C-lite)</option></>}</select></div>
+      <div className="mode-control" role="group" aria-label="Analysis mode">{['A','B','C'].map(m=><button key={m} aria-pressed={shownMode===m} title={{A:'Compare with expert readers',B:'Compare with my previous take',C:'Compare with good-speaker norms'}[m]} disabled={aid?!history.some(t=>t.mode===m&&t.recording_id===job?.analysis?.recording_id):text==='own_speech'&&m!=='C'} onClick={()=>{if(aid){if(shownMode!==m)openTake(history.find(t=>t.mode===m&&t.recording_id===job?.analysis?.recording_id)?.analysis_id||'');}else setMode(m);}}>Mode {m}</button>)}</div>
+      <Button variant="light" onClick={reset}>New analysis</Button></header>
+    <main>{error&&<Alert color="red" title="Could not complete that action" role="alert" withCloseButton onClose={()=>setError('')}>{error}</Alert>}
       {!aid?<><div className="intro"><h1>Hear the delivery.<br/>See the evidence.</h1><p>Compare a recording with skilled readers or your earlier take. Explore each detected difference in the audio and the measurements.</p></div>
         <form onSubmit={submit} className="new-analysis"><div className="form-main"><h2>New analysis</h2>
           {textsLoading?<Loader aria-label="Loading reference texts"/>:<NativeSelect label="Speech text" value={text} onChange={e=>{setText(e.target.value);setMode(e.target.value==='own_speech'?'C':'A');setTranscript('');}} data={[...texts.map(t=>({value:t.text_id,label:t.title})),{value:'own_speech',label:'My own speech (Mode C-lite)'}]}/>}

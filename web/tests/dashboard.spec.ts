@@ -94,7 +94,7 @@ test('real API upload, evidence, exact phrase playback and Modes A B C',async({p
   await submit(page);
   completed.push(page.url().split('/').pop()!);
   await expect(page.locator('.results-heading')).toContainText('Mode C');
-  await expect(page.getByRole('heading',{name:/Key moments/})).toBeVisible();
+  await expect(page.getByRole('heading',{name:/Heuristic tips \(not scored\)/})).toBeVisible();
   await expect(page.getByTestId('waveform')).toHaveAttribute('data-ready','true');
   expect(await page.getByRole('button',{name:'Baseline (same words)',exact:true}).evaluateAll(elements=>elements.every(e=>(e as HTMLButtonElement).disabled))).toBe(true);
   await page.screenshot({path:reportPath('img/ui_modeC.png'),fullPage:true});
