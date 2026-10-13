@@ -4,7 +4,7 @@ Prepared the requested `Downloads/speech-eval-report-inputs/` folder for Claude.
 The preserved repo-relative paths below match INDEX.md in that folder.
 All copies were verified byte-for-byte; report source/PDF were not changed.
 
-Copied files: **56**.
+Copied files: **59**.
 
 | File in this folder / repository path | Bytes | SHA256 |
 |---|---:|---|
@@ -64,3 +64,6 @@ Copied files: **56**.
 | `reports/reproducibility.md` | 11,644 | `0241446006ba6df56c54a0043e06a6223f7d832b20b50e71aefd3b801e8cf20e` |
 | `reports/ui_redesign.md` | 3,864 | `c1756c0e7dce233efc4f09838fb8e00e7e41796bc8810ddc800c0673bcc55f6b` |
 | `reports/ui_redesign_checks.json` | 3,357 | `6bfd8b98a49ddf1058176532e7bb5bed712e84cb723bc67da573c2ab98288794` |
+| `reports/picker_contrast_fix.md` | 1,350 | `26b4eda6360f68db39a871c6dbfe04cc6b3820808fccfca573363b61e36f3dce` |
+| `reports/picker_contrast_verification.json` | 461 | `f4fe5a6f3b9eabd44920b6629e7b7b144257bda61cdddfe25ee1e63e10ae796d` |
+| `reports/img/ui_picker.png` | 359,500 | `11c7d8c82e7c9df18e95a475d5e636139a996cb011d54c250141463fbc906bb3` |
