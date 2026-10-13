@@ -36,3 +36,8 @@ web/playwright-report/
 reports/reproduced/
 data/release/*.zip
 data/release/*.tar.zst
+
+# Static demo build artifacts
+deploy/hf-static/node_modules/
+deploy/hf-static/dist/
+deploy/hf-static/test-results/
