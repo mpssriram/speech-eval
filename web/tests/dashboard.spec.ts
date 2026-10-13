@@ -100,7 +100,7 @@ test('real API upload, evidence, exact phrase playback and Modes A B C',async({p
   await expect(page.getByRole('heading',{name:/Heuristic tips \(not scored\)/})).toBeVisible();
   await expect(page.getByTestId('waveform')).toHaveAttribute('data-ready','true');
   expect(await page.getByRole('button',{name:'Baseline (same words)',exact:true}).evaluateAll(elements=>elements.every(e=>(e as HTMLButtonElement).disabled))).toBe(true);
-  await page.screenshot({path:reportPath('img/ui_modeC.png'),fullPage:true});
+  await page.screenshot({path:reportPath('img/ui_modeC_upload.png'),fullPage:true});
   await page.setViewportSize({width:390,height:844});
   await expect(page.getByTestId('overall-score')).toBeVisible();
   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);

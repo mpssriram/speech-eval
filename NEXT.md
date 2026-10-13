@@ -6,7 +6,9 @@
    `docs/report/speech-eval-report.pdf`, then update the report links in the
    README, submission document and precomputed demo as needed. Claude's inputs
    are ready in `Downloads/speech-eval-report-inputs/INDEX.md`, including the
-   redesigned dashboard screenshots and `reports/ui_redesign.md`.
+   updated landing/results screenshots and `reports/ui_fixes.md`.
+   Parts A–C are shipped; the public Space landing page and examples were verified,
+   and the local Docker dashboard is available at `http://localhost:8080`.
 3. Review `reports/history_audit.md` before making the repository public.
    Private workstation paths and excluded legacy-upload metadata remain;
    no token candidates or legacy audio payload were detected. Decide whether

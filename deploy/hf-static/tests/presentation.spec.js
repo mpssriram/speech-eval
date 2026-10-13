@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 import examples from '../src/catalog.js';
 test('every rendered explanation uses readable fixed-point numbers and grammatical references',async({page})=>{
- await page.goto('/');
+ await page.goto('/#/example/'+examples.find(e=>e.default).id);
  await page.locator('#example').selectOption(examples.find(e=>e.default).id);
  for(const example of examples){
   await page.locator('#example').selectOption(example.id);

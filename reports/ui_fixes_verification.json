@@ -1,0 +1,58 @@
+{
+  "schema": "ui-fixes-verification/v1",
+  "date": "2026-10-13",
+  "python_tests_passed": 337,
+  "static_unit_tests_passed": 28,
+  "live_browser_tests_passed": 25,
+  "static_browser_tests_passed": 27,
+  "production_docker_upload_test_passed": 1,
+  "tested_widths": [
+    375,
+    768,
+    1280,
+    1440,
+    1920
+  ],
+  "docker_services": "healthy at localhost:8080",
+  "docker_api": "existing pinned runtime with current source; no scientific dependency change",
+  "standalone_static_rebuild": "passed without web/node_modules",
+  "freeze": {
+    "protected_files": 830,
+    "changed_protected_files": [],
+    "original_manifest_entries": 38,
+    "current_manifest_entries": 48
+  },
+  "public": {
+    "url": "https://huggingface.co/spaces/SriramMPS/Speech-Evalutaion",
+    "hub_status": 200,
+    "space_commit": "f1c46a605cbb4e3a6be9d5355d41df6ec31246fa",
+    "static_base_url": "https://srirammps-speech-evalutaion.static.hf.space/index.html#/",
+    "landing": true,
+    "gallery_cards": 11,
+    "example_options": 22,
+    "genuine_hit": true,
+    "static_upload_modal": true,
+    "verified_json_files": 48,
+    "api_calls": [],
+    "page_errors": []
+  },
+  "screenshots": {
+    "ui_landing.png": "2536b789532df03460f6652984165f5b00431042533156513fcea26a778d2d47",
+    "ui_upload_modal.png": "69276c1d9c483c5861d3f485266d67435709b8f87f3b2c355ff6c5c71de11a6c",
+    "ui_results.png": "d008455af5d959894b301b0962c238ec3b9c801b023971c086e3348609f47b66",
+    "ui_region.png": "bd6ba09853127d63d1d8727d65dfbf318c173eebd9705b9c07191a44987e261c",
+    "ui_modeC.png": "fdaf1d83429185b7a6f4027aed62fcae96d69272cf75a5a0971d3cf02a8e96ac",
+    "ui_upload.png": "0df476e33ea8b82e11f43d53c39b2964866fb01fe437a91dd0fce5944a79b332",
+    "ui_modeB.png": "97926076a3d5857d1fb578edf10bbfe958aa6e10c5f25404336ac5eb6432b85b",
+    "ui_modeC_upload.png": "fdaf1d83429185b7a6f4027aed62fcae96d69272cf75a5a0971d3cf02a8e96ac",
+    "ui_laptop.png": "5e35d2394f413e95399df9ac33fd8006e1aa87a8a704c8882c75e200b6debb4f",
+    "ui_mobile.png": "81c9937c616ec32894728e3e91c2383733897308013130ec3cc891a07e5f4cfd",
+    "smoke_results.png": "1253f1e41adab358b187d14787f4a357545b1394df6caaf5ff3c97ea5295deba",
+    "smoke_region.png": "920928efd919731d859e10988c966ffec621440f0f39d40a8c7ce9950c767930",
+    "static_results.png": "bf68e67ac1fa478b28901112d3f14ac5d4edd8c50504642cc74780a104e19471",
+    "static_region.png": "a5fdd4d295769d02eef580499ff92f8203aee67c3a444962736cf280f3459d98",
+    "static_mobile.png": "286a08f0b28d36c7d86debe6bf305aa6832e2df06590c39e72cfae6d1e53df10",
+    "hf_space.png": "5eab0521d75a30e36233454ed0bcd8035bd5637037d89a9cacde3899b1968420",
+    "hf_space_region.png": "c340b5c1db45f94b53f33e92d9d3260bc869c1a08208a3afeab5d3ac2c232c5a"
+  }
+}
