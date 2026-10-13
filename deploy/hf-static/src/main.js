@@ -6,9 +6,9 @@ const name=t=>t.replaceAll('_',' ');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const app=document.querySelector('#app');
 let analysis,words,baseline,example,selected=0,loadId=0,stopAt=null;
-app.innerHTML=`<header><a class="brand" href="./">Speech-Eval<span>Speech delivery analytics</span></a><nav id="links"></nav></header>
-<main><div id="banner" class="banner">Precomputed demo · Stored results only</div>
-<div class="intro"><div><h1>Hear what changed.</h1><p>Explore delivery flags, their timing and the measured evidence.</p></div><div><button id="upload" disabled title="This demo contains stored analyses only.">Upload audio</button><p id="upload-help" class="small">Audio upload is unavailable in this precomputed demo.</p></div></div>
+app.innerHTML=`<header><a class="brand" href="./">Speech-Eval<span>Speech delivery analytics</span></a><nav id="links"><a href="https://github.com/mpssriram/speech-eval">GitHub</a><a href="https://github.com/mpssriram/speech-eval/blob/main/docs/DATASET.md">Dataset</a><a href="https://github.com/mpssriram/speech-eval/blob/main/docs/report/report.pdf">Report</a></nav></header>
+<main><div id="banner" class="banner">Precomputed demo. Live analysis of your own audio runs locally with Docker; see the GitHub README.</div>
+<div class="intro"><div><h1>Hear what changed.</h1><p>Explore delivery flags, their timing and the measured evidence.</p></div><div><button id="upload" disabled aria-describedby="upload-help" title="Precomputed demo. Live analysis of your own audio runs locally with Docker; see the GitHub README.">Upload audio</button><p id="upload-help" class="small">Precomputed demo. Live analysis of your own audio runs locally with Docker; see the GitHub README.</p></div></div>
 <section class="picker"><label for="example">Choose a recording and comparison</label><select id="example"></select><p id="context" class="small"></p></section>
 <div id="error" role="alert"></div><div id="results" hidden>
 <section class="recording"><div class="section-head"><h2 id="title"></h2><span id="mode" class="pill"></span></div><p id="provenance" class="small"></p><div id="scores" class="scores"></div>
