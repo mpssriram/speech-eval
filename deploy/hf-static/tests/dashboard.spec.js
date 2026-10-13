@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import examples from '../src/catalog.js';
 import fs from 'node:fs';
 import {phraseSegment} from '../src/segments.js';
-const evidence={pageErrors:[],failedResponses:[],apiCalls:[],examples:[],checks:[]};
+const evidence={base_url:process.env.DEMO_BASE_URL||'http://127.0.0.1:18765',pageErrors:[],failedResponses:[],apiCalls:[],examples:[],checks:[]};
 function watch(page){
  page.on('pageerror',e=>evidence.pageErrors.push(e.message));
  page.on('response',r=>{if(r.status()>=400)evidence.failedResponses.push({url:r.url(),status:r.status()});});
@@ -64,6 +64,6 @@ test('mobile layout fits and uses keyboard-accessible regions',async({page})=>{
  await page.screenshot({path:'../../reports/img/static_mobile.png',fullPage:true});
 });
 test.afterAll(()=>{
- fs.writeFileSync('../../reports/deploy_browser_checks.json',JSON.stringify(evidence,null,2)+'\n');
+ fs.writeFileSync(process.env.DEMO_BASE_URL?'../../reports/deploy_browser_checks_public.json':'../../reports/deploy_browser_checks.json',JSON.stringify(evidence,null,2)+'\n');
  expect(evidence.pageErrors).toEqual([]);expect(evidence.failedResponses).toEqual([]);expect(evidence.apiCalls).toEqual([]);
 });

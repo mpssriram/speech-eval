@@ -47,4 +47,24 @@ A fresh checkout can run the hash verifier without `--require-sources`: the SHA
 pins and committed public data suffice; the strict original-source comparison
 above used the installed corpus and the stored genuine job outputs.
 
-Public Space publication and anonymous URL verification are recorded below after push.
+## Public Space verification
+
+Published [Speech-Evalutaion](https://huggingface.co/spaces/SriramMPS/Speech-Evalutaion)
+as the free static SDK, commit `2403482ae6b0e8fca3c2cdc505948bb0cc428eae`.
+`hf auth whoami` confirmed SriramMPS. The existing Space was cloned into a temp
+folder, the production build copied, committed and pushed. MP3s use Git LFS / the
+Hub storage bridge, as required by the Hub binary-file hook. No credentials were
+printed, written into project files, embedded in URLs or saved by this workflow.
+Existing login credentials were read in memory for the Git HTTPS request.
+
+Anonymous Hub page: **HTTP 200**. Its public static iframe loads the default
+Gettysburg take02 Mode B, selected awkward pause **29.90–31.47 s**. All **38/38**
+JSON files fetched anonymously from the public app match MANIFEST.sha256.
+Public production browser tests: **3 passed in 58.2 s**, including all 19 examples,
+real audio and same-word phrase playback, region selection and mobile layout;
+zero page errors, failed app responses or analysis API calls.
+
+Evidence: `reports/hf_public_check.json`, `reports/deploy_browser_checks_public.json`.
+Screenshot: `reports/img/hf_space.png` (public Hub chrome and the selected genuine
+hit); cropped public hit: `reports/img/hf_space_region.png`. Both were captured
+without a browser login. The public page was also opened in the Codex browser.

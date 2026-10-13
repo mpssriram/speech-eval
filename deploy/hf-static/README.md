@@ -51,6 +51,9 @@ These scripts copy outputs and encode playback only; they do not run a detector.
 `SOURCE_MAP.js` identifies source paths and `AUDIO_SOURCES.js` identifies playback
 source hashes/encoding. Copy `dist/` contents and this README to the exact Space
 repository `SriramMPS/Speech-Evalutaion`; no hosted build step is required.
+In the Space checkout, run `git lfs install --local` and `git lfs track "*.mp3"`
+before staging `.gitattributes` and the build; the Hub requires binary playback
+files to use its large-file storage bridge.
 
 The selected synthetic examples illustrate successful matches, not benchmark
 precision. Genuine labels are recorder-confirmed; no independent ratings or human
