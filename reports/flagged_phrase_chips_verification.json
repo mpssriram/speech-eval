@@ -38,12 +38,12 @@
     "chips_live_filtered.png": "0e79fecf0b86b0e7e3103dcd7f9d83503771aea4d29e76ecd127aec7301b6930",
     "chips_live_mobile_notice.png": "1181db4995ae5d93fd18cb82c8918fc99cca3957d16366f472d8872f7fc79766",
     "chips_live_notice.png": "000cc1bbed44fd29335bb0abdb82b47ed594b59a542cfb6a9424980216cc565b",
-    "chips_static_all.png": "dbe539c67834c1926bc55f63020f1d102679e48f26a8e61b53ccd5ce63ba5de0",
-    "chips_static_filtered.png": "b34301b5b2516249ceca0e593165e6a982e26365551f41d304623537a11f2960",
-    "chips_static_mobile_notice.png": "bab3ba148556f5adaf118884398373a3872fac4afeed35350d31a32af348eccc",
-    "chips_static_notice.png": "d91b48f90e6d4a0051e5626fdad1b26ab6966c71728f9e813893233dca007e2c"
+    "chips_static_all.png": "e60a4f8b0fba8cf203dc8e65fe4f606af9706183d92b9755d10a57ba6759b7f2",
+    "chips_static_filtered.png": "c28fc5ce0c5d6e6530e2dcbee0851836a98cd65bb61e045107281770a7105114",
+    "chips_static_mobile_notice.png": "21e967a543c6340e434a78da68339c4290636a496dd75285239566d9b61d1891",
+    "chips_static_notice.png": "cdf5c14d316b2de78546d0b07ad69967ba3efd5e123b9260cb852905869e147a"
   },
-  "shared_suite_status": "Combined static browser, live browser, Python and standalone production builds verified; Space publication pending.",
+  "shared_suite_status": "Complete: shared UI implemented, both builds verified, source and Space pushed, all five public chip checks passed, screenshots regenerated.",
   "python": {
     "passed": 336,
     "log": "/tmp/chips-pytest-final.log"
@@ -51,5 +51,12 @@
   "standalone_static_build": {
     "web_node_modules_present": false,
     "passed": true
+  },
+  "public": {
+    "url": "https://srirammps-speech-evalutaion.static.hf.space/",
+    "space_commit": "f1c46a605cbb4e3a6be9d5355d41df6ec31246fa",
+    "chip_tests_passed": 5,
+    "log": "/tmp/chips-public-static-tests.log",
+    "anonymous": true
   }
 }
