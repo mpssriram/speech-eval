@@ -1,71 +1,95 @@
-# Submission checklist — 2026-10-12
+# Speech-Eval submission — 2026-10-13
 
-**Video URL: PENDING — insert the published 3–10 minute demo video link before submission.**
-[Precomputed demo on Hugging Face](https://huggingface.co/spaces/SriramMPS/Speech-Evalutaion). Stored v1 results and audio playback; uploads are disabled.
-## Download releases
+Author: **Sriram MPS, IIT Mandi**. Assistance: Claude (Anthropic), Codex (OpenAI).
+Track C: Contrastive Speech Analytics & Temporal Flaw Grounding.
 
-[Main dataset archive](https://drive.google.com/file/d/1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm/view)
-was downloaded in full anonymously with gdown 5.2.0 on 2026-10-12 and matches
-the local release by exact size and SHA256. The old Drive folder is retired;
-an optional replacement folder URL has not been supplied.
+| Submission asset | Location / status |
+|---|---|
+| Repository | https://github.com/mpssriram/speech-eval — make public after the history audit is reviewed |
+| Precomputed demo | https://huggingface.co/spaces/SriramMPS/Speech-Evalutaion — anonymously verified, stored v1 results and playback; uploads disabled |
+| Video URL | **PENDING — insert the published 3–10 minute demo video link before submission** |
+| Final report PDF | **`docs/report/speech-eval-report.pdf` — PENDING: insert the final PDF Claude provides** |
+| Current report for reference | [docs/report/report.pdf](report/report.pdf), with [source](report/report.md); preserved unchanged by this packaging task |
 
-| File | Exact bytes | SHA256 | Download |
+## Dataset downloads
+
+| Archive | Exact bytes | SHA256 | Drive link |
 |---|---:|---|---|
-| speech-eval-dataset-v1.zip | 7,586,867,457 | `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b` | Main link above; Drive ID `1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm` |
-| speech-eval-human-takes-v1.zip | 62,520,905 | `33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd` | [Human takes](https://drive.google.com/file/d/1mKosHQuSM9WXM-x6HUyDOZRhACzDwIgP/view?usp=drive_link); owner-confirmed exact upload |
+| speech-eval-dataset-v1.zip | 7,586,867,457 | `a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b` | [Main dataset](https://drive.google.com/file/d/1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm/view) |
+| speech-eval-human-takes-v1.zip | 62,520,905 | `33e8e0e80a562dfc40e828f6ef1d9ff5285cf24ae543b5dbb7b6ff31377658bd` | [Human takes](https://drive.google.com/file/d/1mKosHQuSM9WXM-x6HUyDOZRhACzDwIgP/view?usp=drive_link) |
 
-[Human-takes archive](https://drive.google.com/file/d/1mKosHQuSM9WXM-x6HUyDOZRhACzDwIgP/view?usp=drive_link) is owner-confirmed as the exact prepared ZIP.
-Remote re-download/verification was skipped at the owner's request. The size and
-SHA256 above pin the expected release; future fetches retain all integrity checks.
-The main ZIP is immutable and contains no new human takes. Human takes are a
-separate optional release; the scientific corpus and frozen results stay fixed.
+The main archive was downloaded fully and verified anonymously on 2026-10-12.
+The human archive is an owner-confirmed exact upload; remote re-download/check
+was waived by the owner. Every future fetch still verifies the pinned size,
+SHA256 and payload inventory. The main archive is immutable and separate from
+the optional genuine-takes archive. Source-level US public-domain evidence,
+CC BY 4.0 genuine-take consent and release scope are in [DATASET.md](DATASET.md).
+
+## How to run
+
+Requires Git, Make, Docker Engine/Desktop and Compose. Runtime Python, Node and
+MFA/model dependencies are packaged in Docker. Use two terminals for the server:
 
 ```sh
-make reproduce-quick   # anonymous Drive download, checksum verification, CPU Docker
-make reproduce
-# Import the optional consented human takes:
-uv run python scripts/fetch_data.py --with-human-takes
+git clone https://github.com/mpssriram/speech-eval.git
+cd speech-eval
+make reproduce-quick   # download main archive from Drive, verify, then CPU quick check
+make up                # foreground server; http://localhost:8080
+# In another terminal, from the same checkout:
+make reproduce         # frozen Phase 6/7/8 numerical reproduction, CPU
+make test              # complete Python suite inside Docker
 ```
 
-Downloader: [gdown](https://github.com/wkentaro/gdown), pinned to 5.2.0 in
-pyproject.toml/uv.lock. File IDs are used instead of downloading Drive HTML.
-Every archive and payload hash is checked before installation; conflicting
-existing files are refused. Optional takes do not enter `make reproduce` metrics.
-
-Manual fallback: open the main link in a browser, click Download and save the ZIP,
-then run `make reproduce DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip`.
-With host Python dependencies installed, the equivalent import is:
+If Drive imposes a quota or confirmation page, download the main ZIP in a browser
+and supply it read-only through the Make wrapper:
 
 ```sh
+make reproduce-quick DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip
+make reproduce DATA_ARCHIVE=/absolute/path/speech-eval-dataset-v1.zip
+# Equivalent importer when host Python dependencies are installed:
 uv run python scripts/fetch_data.py --from-local /absolute/path/speech-eval-dataset-v1.zip
-# Browser-download fallback for the separate human archive:
-uv run python scripts/fetch_data.py --from-local /absolute/path/speech-eval-dataset-v1.zip \
-  --with-human-takes --human-from-local /absolute/path/speech-eval-human-takes-v1.zip
 ```
 
-Drive may impose quotas or a confirmation page. Browser downloads still undergo
-the same size/SHA256/member checks; do not replace the pinned hash to accept a
-different file. Evidence: `reports/drive_download_probe.json` and
-`reports/human_release_verification.json` (local packaging) and
-`reports/human_drive_owner_confirmation.json` (publication).
+This preserves all size/SHA256/member checks. [DOCKER.md](DOCKER.md) contains direct
+Compose equivalents. The Space is a precomputed demo; it never analyses uploads.
 
-## Checks
+## Verification and disk
 
-- [x] Release download metadata, exact byte sizes and SHA256 pins published.
-- [x] New main Drive archive downloaded fully and matched by exact size/SHA256; internal inventory also verified.
-- [x] Owner confirmed exact human-takes upload; link published. Remote re-download/check waived by owner.
-- [ ] Verify both browser links from a logged-out browser at submission time.
-- [ ] Confirm repository is public at submission time.
-- [ ] Record/publish a 3–10 minute video and supply its working link.
-- [x] Final PDF regenerated: six A4 pages, repeated bytes identical, every page inspected.
-- [x] Author Sriram MPS, IIT Mandi, with assistance from Claude (Anthropic) and Codex (OpenAI); MIT code and CC BY 4.0 data/docs/recordings; consent retained.
+- Complete host Python suite: **314 passed** in the verified pre-packaging run.
+  The final fresh-clone run and timings are recorded in
+  [reports/reproducibility.md](../reports/reproducibility.md).
+- Static demo: **2 Node tests**, **3 production Playwright tests** locally and
+  **3 on the public Space**; all 19 views play. **38/38** hosted JSON files match
+  original stored bytes. [Deployment checks](../reports/deploy_check.md).
+- Frozen reproduction: prior fresh-clone quick/full Docker runs matched **563/563**
+  scientific output hashes. Those historical runs remain in reproducibility.md;
+  the final fresh-clone attempt has its own dated result and timing.
+- Measured retained reproduction footprint: **32,170,019,620 bytes**
+  (**32.170019620 decimal GB / 29.961 GiB**): tools/API image **16,804,236,803**,
+  main ZIP **7,586,867,457**, unpacked payload **7,778,915,360**. This excludes web
+  image, build cache, staging/scratch, optional human takes and unrelated tools.
+  Allow additional space for download/extraction staging and image builds;
+  clean-install peak/minimum is **unmeasured**, so this is not a complete minimum
+  disk requirement. [Measurement](../reports/reproduction_disk_usage.json).
 
-Prior fresh-clone CPU Docker quick/full reproduction and repeated 563 scientific
-hash checks are recorded in `reports/reproducibility.md`; the published numbers
-are frozen, not retuned for release. Remaining human agreement and alignment
-spot-check limitations are explicit in NEXT.md and the report.
+## Disclosed limitations
 
-Final verification: 312 host tests passed; frozen code/config/audio/consent and
-main ZIP unchanged. Disk snapshot: 32,170,019,620 bytes for retained tools image,
-one archive and unpacked payload; clean-build peak remains unmeasured.
-Both direct archive links are configured; the old folder is retired.
+- **No independent ratings**; no human correlation/agreement claim. AI or recorder
+  self-ratings are not independent rater data.
+- **No human alignment spot-check**. Claude placed visual boundaries without
+  listening; automatic checks are not human listening or annotation review.
+- **Low precision** and a failed dev clean-alarm guard. Frozen v1 A-LOSO precision
+  is **0.125**; B-same-speaker precision is **0.018**. Successful demo examples are
+  selected illustrations, not evidence of broad reliability.
+- Labels and as-spoken words on genuine takes are **recorder-confirmed**, not
+  independently annotated. Spontaneous take04s are excluded from scored human
+  A/B comparisons and displayed descriptively, including their Mode C views.
+- Synthetic edits approximate flaws; rubric penalties are not a validated
+  perceptual scale. English-only proxies do not establish accent fairness;
+  Mode C is heuristic and has no invented same-text baseline.
+- Code/configuration, thresholds, scores and published scientific results remain
+  frozen. Current report source and PDF were not edited or rebuilt by this task.
+
+Before submission: supply video/final PDF, resolve any history-audit findings,
+make the repository public, check all links in a private/logged-out window,
+and submit. [Owner actions](../NEXT.md), [history audit](../reports/history_audit.md).

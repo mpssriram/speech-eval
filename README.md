@@ -6,7 +6,7 @@ measured pace, pitch, loudness, clarity and pauses compared with a reference.
 It supports rushing, dragging, monotone, too quiet, mumbling, awkward pause and
 missing pause. Built for Track C of the Multimodal AI Hackathon 2026.
 This is an experimental delivery benchmark, not a validated judgment of speaking
-quality. The dev clean-alarm guard failed; genuine human validation is pending.
+quality. The dev clean-alarm guard failed; independent human validation is pending.
 
 [Precomputed demo on Hugging Face](https://huggingface.co/spaces/SriramMPS/Speech-Evalutaion) — stored v1 examples with playback, including genuine Gettysburg take02 Mode B. Uploads are disabled; analysis of your own audio runs locally with Docker.
 
@@ -177,9 +177,11 @@ byte-for-byte twice; [scope and hashes](reports/reproducibility.md).
 
 ## Human takes and blind ratings
 
-The eight-take workflow is ready but genuine recordings, consent, notes and
-as-spoken transcripts are absent. A real-MFA synthetic smoke check is strictly
-workflow evidence and missed its injected region; no tuning followed.
+The eight genuine takes, original consent, recorder-confirmed notes and
+as-spoken transcripts are stored. Frozen v1 Mode A covers all takes; Mode B
+compares take02/take03 with take01, and Mode C displays both spontaneous take04s.
+The spontaneous takes are excluded from scored human A/B comparisons. Labels
+are recorder-confirmed and independent ratings remain absent; no tuning followed.
 [Instructions](docs/HUMAN_TAKES.md), [Phase10](reports/phase10_human_takes.md).
 
 The twelve-clip [rating pack](docs/RATING_PACK.md) and agreement script are ready.
