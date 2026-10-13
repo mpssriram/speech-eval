@@ -1,0 +1,661 @@
+{
+  "analysis_id": "737270e3c6f8",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 249.128,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "reagan_challenger__reagan__too_quiet_s5_01",
+  "reference": {
+    "baseline_recording_id": "reagan_challenger__reagan__orig",
+    "exclude_speaker": null,
+    "kind": "distribution",
+    "n_readers": 1,
+    "reference_version": "cd657c109de938f682df9699c0b6eaf1aaf4e7565cad8d1b2e2d8c05578658ee",
+    "text_id": "reagan_challenger"
+  },
+  "regions": [
+    {
+      "end": 15.14,
+      "evidence": {
+        "feature": "loud",
+        "participant": -20.2,
+        "reference": -5.574,
+        "unit": "dB",
+        "z": -5.603
+      },
+      "explanation": "14.3\u201315.1 s, \"I are pained to\": 15 dB quieter than good readers relative to your own average level (5.6 SD below).",
+      "mean_abs_z": 5.603,
+      "severity": 4,
+      "start": 14.28,
+      "tags": [],
+      "type": "too_quiet",
+      "word_end": 44,
+      "word_start": 41
+    },
+    {
+      "end": 21.18,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.03,
+        "reference": 0.461,
+        "unit": "s",
+        "z": -2031.0
+      },
+      "explanation": "21.1\u201321.2 s, \"country. This\": you paused 0.03 s after \"country.\" where good readers pause 0.46 s (0.43 s shorter, 2e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2031.0,
+      "severity": 4,
+      "start": 21.15,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 67,
+      "word_start": 66
+    },
+    {
+      "end": 25.29,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.28,
+        "reference": 1.268,
+        "unit": "s",
+        "z": 9.929
+      },
+      "explanation": "24.0\u201325.3 s, \"loss. Nineteen\": a 1.3 s pause between \"loss.\" and \"Nineteen\" where good readers pause 1.3 s (0.012 s longer, 9.9 SD above). It breaks the sentence. This phrase contains a number.",
+      "mean_abs_z": 9.929,
+      "severity": 4,
+      "start": 24.01,
+      "tags": [
+        "contains_number"
+      ],
+      "type": "awkward_pause",
+      "word_end": 73,
+      "word_start": 72
+    },
+    {
+      "end": 31.87,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.03,
+        "reference": 0.612,
+        "unit": "s",
+        "z": 536.2
+      },
+      "explanation": "30.8\u201331.9 s, \"ground. But\": a 1 s pause between \"ground.\" and \"But\" where good readers pause 0.61 s (0.42 s longer, 5.4e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 536.2,
+      "severity": 4,
+      "start": 30.84,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 91,
+      "word_start": 90
+    },
+    {
+      "end": 49.01,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.01,
+        "reference": 0.601,
+        "unit": "s",
+        "z": 534.0
+      },
+      "explanation": "48.0\u201349.0 s, \"brilliantly. We\": a 1 s pause between \"brilliantly.\" and \"We\" where good readers pause 0.6 s (0.41 s longer, 5.3e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 534.0,
+      "severity": 4,
+      "start": 48.0,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 138,
+      "word_start": 137
+    },
+    {
+      "end": 52.59,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.88,
+        "reference": 0.87,
+        "unit": "s",
+        "z": 11.84
+      },
+      "explanation": "51.7\u201352.6 s, \"Smith, Dick\": a 0.88 s pause between \"Smith,\" and \"Dick\" where good readers pause 0.87 s (0.01 s longer, 12 SD above). It breaks the sentence.",
+      "mean_abs_z": 11.84,
+      "severity": 4,
+      "start": 51.71,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 144,
+      "word_start": 143
+    },
+    {
+      "end": 57.24,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.88,
+        "reference": 0.87,
+        "unit": "s",
+        "z": 11.84
+      },
+      "explanation": "56.4\u201357.2 s, \"McNair, Ellison\": a 0.88 s pause between \"McNair,\" and \"Ellison\" where good readers pause 0.87 s (0.01 s longer, 12 SD above). It breaks the sentence.",
+      "mean_abs_z": 11.84,
+      "severity": 4,
+      "start": 56.36,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 150,
+      "word_start": 149
+    },
+    {
+      "end": 68.22,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.98,
+        "reference": 0.91,
+        "unit": "s",
+        "z": 77.1
+      },
+      "explanation": "67.2\u201368.2 s, \"seven, we\": a 0.98 s pause between \"seven,\" and \"we\" where good readers pause 0.91 s (0.07 s longer, 77 SD above). It breaks the sentence. This phrase contains a number.",
+      "mean_abs_z": 77.1,
+      "severity": 4,
+      "start": 67.24,
+      "tags": [
+        "contains_number"
+      ],
+      "type": "awkward_pause",
+      "word_end": 170,
+      "word_start": 169
+    },
+    {
+      "end": 72.7,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.21,
+        "reference": 0.772,
+        "unit": "s",
+        "z": 467.9
+      },
+      "explanation": "71.5\u201372.7 s, \"tragedy. But\": a 1.2 s pause between \"tragedy.\" and \"But\" where good readers pause 0.77 s (0.44 s longer, 4.7e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 467.9,
+      "severity": 4,
+      "start": 71.49,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 182,
+      "word_start": 181
+    },
+    {
+      "end": 77.35,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.15,
+        "reference": 1.137,
+        "unit": "s",
+        "z": 11.93
+      },
+      "explanation": "76.2\u201377.3 s, \"much. Your\": a 1.1 s pause between \"much.\" and \"Your\" where good readers pause 1.1 s (0.013 s longer, 12 SD above). It breaks the sentence.",
+      "mean_abs_z": 11.93,
+      "severity": 4,
+      "start": 76.2,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 195,
+      "word_start": 194
+    },
+    {
+      "end": 80.33,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.16,
+        "reference": 1.15,
+        "unit": "s",
+        "z": 9.091
+      },
+      "explanation": "79.2\u201380.3 s, \"brave, and\": a 1.2 s pause between \"brave,\" and \"and\" where good readers pause 1.1 s (0.01 s longer, 9.1 SD above). It breaks the sentence.",
+      "mean_abs_z": 9.091,
+      "severity": 4,
+      "start": 79.17,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 202,
+      "word_start": 201
+    },
+    {
+      "end": 95.77,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.03,
+        "reference": 0.881,
+        "unit": "s",
+        "z": 162.6
+      },
+      "explanation": "94.7\u201395.8 s, \"us. We've\": a 1 s pause between \"us.\" and \"We've\" where good readers pause 0.88 s (0.15 s longer, 1.6e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 162.6,
+      "severity": 4,
+      "start": 94.74,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 247,
+      "word_start": 246
+    },
+    {
+      "end": 98.37,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.53,
+        "reference": 0.271,
+        "unit": "s",
+        "z": 648.1
+      },
+      "explanation": "97.8\u201398.4 s, \"century. It's\": a 0.53 s pause between \"century.\" and \"It's\" where good readers pause 0.27 s (0.26 s longer, 6.5e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 648.1,
+      "severity": 4,
+      "start": 97.84,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 255,
+      "word_start": 254
+    },
+    {
+      "end": 110.99,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.8,
+        "reference": 0.68,
+        "unit": "s",
+        "z": 166.7
+      },
+      "explanation": "110.2\u2013111.0 s, \"begun. We're\": a 0.8 s pause between \"begun.\" and \"We're\" where good readers pause 0.68 s (0.12 s longer, 1.7e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 166.7,
+      "severity": 4,
+      "start": 110.19,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 291,
+      "word_start": 290
+    },
+    {
+      "end": 113.05,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.02,
+        "reference": 0.681,
+        "unit": "s",
+        "z": 417.4
+      },
+      "explanation": "112.0\u2013113.0 s, \"pioneers. They,\": a 1 s pause between \"pioneers.\" and \"They,\" where good readers pause 0.68 s (0.34 s longer, 4.2e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 417.4,
+      "severity": 4,
+      "start": 112.03,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 294,
+      "word_start": 293
+    },
+    {
+      "end": 117.51,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.42,
+        "reference": 0.851,
+        "unit": "s",
+        "z": 536.2
+      },
+      "explanation": "116.1\u2013117.5 s, \"pioneers. And\": a 1.4 s pause between \"pioneers.\" and \"And\" where good readers pause 0.85 s (0.57 s longer, 5.4e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 536.2,
+      "severity": 4,
+      "start": 116.09,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 303,
+      "word_start": 302
+    },
+    {
+      "end": 132.59,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.27,
+        "reference": 0.852,
+        "unit": "s",
+        "z": 417.1
+      },
+      "explanation": "131.3\u2013132.6 s, \"discovery. It's\": a 1.3 s pause between \"discovery.\" and \"It's\" where good readers pause 0.85 s (0.42 s longer, 4.2e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 417.1,
+      "severity": 4,
+      "start": 131.32,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 348,
+      "word_start": 347
+    },
+    {
+      "end": 136.47,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.05,
+        "reference": 1.077,
+        "unit": "s",
+        "z": -2653.0
+      },
+      "explanation": "136.4\u2013136.5 s, \"horizons. The\": you paused 0.05 s after \"horizons.\" where good readers pause 1.1 s (1 s shorter, 2.7e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2653.0,
+      "severity": 4,
+      "start": 136.42,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 359,
+      "word_start": 358
+    },
+    {
+      "end": 141.65,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.03,
+        "reference": 1.127,
+        "unit": "s",
+        "z": -2945.0
+      },
+      "explanation": "141.6\u2013141.7 s, \"brave. The\": you paused 0.03 s after \"brave.\" where good readers pause 1.1 s (1.1 s shorter, 2.9e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2945.0,
+      "severity": 4,
+      "start": 141.62,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 371,
+      "word_start": 370
+    },
+    {
+      "end": 145.86,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.88,
+        "reference": 0.85,
+        "unit": "s",
+        "z": 35.92
+      },
+      "explanation": "145.0\u2013145.9 s, \"future, and\": a 0.88 s pause between \"future,\" and \"and\" where good readers pause 0.85 s (0.03 s longer, 36 SD above). It breaks the sentence.",
+      "mean_abs_z": 35.92,
+      "severity": 4,
+      "start": 144.98,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 380,
+      "word_start": 379
+    },
+    {
+      "end": 147.445,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 1.9,
+        "unit": "s",
+        "z": -4013.0
+      },
+      "explanation": "147.4\u2013147.4 s, \"follow them.\": you paused 6.9e-18 s after \"follow\" where good readers pause 1.9 s (1.9 s shorter, 4e+03 SD below). The listener gets no breathing space. This region reaches a sentence ending.",
+      "mean_abs_z": 4013.0,
+      "severity": 4,
+      "start": 147.415,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "missing_pause",
+      "word_end": 385,
+      "word_start": 384
+    },
+    {
+      "end": 149.32,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.86,
+        "reference": 6.939e-18,
+        "unit": "s",
+        "z": 3991.0
+      },
+      "explanation": "147.5\u2013149.3 s, \"them. I've\": a 1.9 s pause between \"them.\" and \"I've\" where good readers pause 6.9e-18 s (1.9 s longer, 4e+03 SD above). It breaks the sentence.",
+      "mean_abs_z": 3991.0,
+      "severity": 4,
+      "start": 147.46,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 386,
+      "word_start": 385
+    },
+    {
+      "end": 156.72,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.19,
+        "reference": 1.181,
+        "unit": "s",
+        "z": 7.98
+      },
+      "explanation": "155.5\u2013156.7 s, \"it. We\": a 1.2 s pause between \"it.\" and \"We\" where good readers pause 1.2 s (0.009 s longer, 8 SD above). It breaks the sentence.",
+      "mean_abs_z": 7.98,
+      "severity": 4,
+      "start": 155.53,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 407,
+      "word_start": 406
+    },
+    {
+      "end": 161.38,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.88,
+        "reference": 0.825,
+        "unit": "s",
+        "z": 66.78
+      },
+      "explanation": "160.5\u2013161.4 s, \"up. We\": a 0.88 s pause between \"up.\" and \"We\" where good readers pause 0.82 s (0.055 s longer, 67 SD above). It breaks the sentence.",
+      "mean_abs_z": 66.78,
+      "severity": 4,
+      "start": 160.5,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 421,
+      "word_start": 420
+    },
+    {
+      "end": 168.23,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.18,
+        "reference": 1.176,
+        "unit": "s",
+        "z": 3.568
+      },
+      "explanation": "167.1\u2013168.2 s, \"minute. We'll\": a 1.2 s pause between \"minute.\" and \"We'll\" where good readers pause 1.2 s (0.004 s longer, 3.6 SD above). It breaks the sentence.",
+      "mean_abs_z": 3.568,
+      "severity": 3,
+      "start": 167.05,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 443,
+      "word_start": 442
+    },
+    {
+      "end": 170.73,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.6,
+        "reference": 0.595,
+        "unit": "s",
+        "z": 8.459
+      },
+      "explanation": "170.1\u2013170.7 s, \"space. There\": a 0.6 s pause between \"space.\" and \"There\" where good readers pause 0.59 s (0.005 s longer, 8.5 SD above). It breaks the sentence.",
+      "mean_abs_z": 8.459,
+      "severity": 4,
+      "start": 170.13,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 449,
+      "word_start": 448
+    },
+    {
+      "end": 179.11,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.14,
+        "reference": 0.731,
+        "unit": "s",
+        "z": 461.3
+      },
+      "explanation": "178.0\u2013179.1 s, \"space. Nothing\": a 1.1 s pause between \"space.\" and \"Nothing\" where good readers pause 0.73 s (0.41 s longer, 4.6e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 461.3,
+      "severity": 4,
+      "start": 177.97,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 469,
+      "word_start": 468
+    },
+    {
+      "end": 196.91,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.75,
+        "reference": 0.591,
+        "unit": "s",
+        "z": 242.7
+      },
+      "explanation": "196.2\u2013196.9 s, \"decades. And\": a 0.75 s pause between \"decades.\" and \"And\" where good readers pause 0.59 s (0.16 s longer, 2.4e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 242.7,
+      "severity": 4,
+      "start": 196.16,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 517,
+      "word_start": 516
+    },
+    {
+      "end": 203.91,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.48,
+        "reference": 0.261,
+        "unit": "s",
+        "z": 584.0
+      },
+      "explanation": "203.4\u2013203.9 s, \"today. On\": a 0.48 s pause between \"today.\" and \"On\" where good readers pause 0.26 s (0.22 s longer, 5.8e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 584.0,
+      "severity": 4,
+      "start": 203.43,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 530,
+      "word_start": 529
+    },
+    {
+      "end": 219.71,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.62,
+        "reference": 0.61,
+        "unit": "s",
+        "z": 16.47
+      },
+      "explanation": "219.1\u2013219.7 s, \"it, and\": a 0.62 s pause between \"it,\" and \"and\" where good readers pause 0.61 s (0.01 s longer, 16 SD above). It breaks the sentence.",
+      "mean_abs_z": 16.47,
+      "severity": 4,
+      "start": 219.09,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 575,
+      "word_start": 574
+    },
+    {
+      "end": 225.21,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.03,
+        "reference": 0.78,
+        "unit": "s",
+        "z": -2563.0
+      },
+      "explanation": "225.2\u2013225.2 s, \"crew: Their\": you paused 0.03 s after \"crew:\" where good readers pause 0.78 s (0.75 s shorter, 2.6e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2563.0,
+      "severity": 4,
+      "start": 225.18,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 589,
+      "word_start": 588
+    },
+    {
+      "end": 228.98,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.03,
+        "reference": 0.698,
+        "unit": "s",
+        "z": -2449.0
+      },
+      "explanation": "228.9\u2013229.0 s, \"complete. The\": you paused 0.03 s after \"complete.\" where good readers pause 0.7 s (0.67 s shorter, 2.4e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2449.0,
+      "severity": 4,
+      "start": 228.95,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 595,
+      "word_start": 594
+    },
+    {
+      "end": 235.4,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.21,
+        "reference": 0.712,
+        "unit": "s",
+        "z": 550.9
+      },
+      "explanation": "234.2\u2013235.4 s, \"lives. We\": a 1.2 s pause between \"lives.\" and \"We\" where good readers pause 0.71 s (0.5 s longer, 5.5e+02 SD above). It breaks the sentence. This is the speech's final sentence.",
+      "mean_abs_z": 550.9,
+      "severity": 4,
+      "start": 234.19,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "awkward_pause",
+      "word_end": 613,
+      "word_start": 612
+    },
+    {
+      "end": 237.07,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.66,
+        "reference": 0.65,
+        "unit": "s",
+        "z": 15.54
+      },
+      "explanation": "236.4\u2013237.1 s, \"them, nor\": a 0.66 s pause between \"them,\" and \"nor\" where good readers pause 0.65 s (0.01 s longer, 16 SD above). It breaks the sentence. This is the speech's final sentence.",
+      "mean_abs_z": 15.54,
+      "severity": 4,
+      "start": 236.41,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "awkward_pause",
+      "word_end": 618,
+      "word_start": 617
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 8.0,
+    "pace": 10.0,
+    "pauses": 0.0,
+    "pitch": 10.0,
+    "volume": 9.9
+  },
+  "text_id": "reagan_challenger",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "count": 6,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

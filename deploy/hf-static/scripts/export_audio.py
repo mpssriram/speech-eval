@@ -13,7 +13,8 @@ def read_module(path: Path) -> object:
 
 def export_audio() -> None:
     """Encode at 128 kbps without gain filters and make display-only waveform peaks."""
-    entries=read_module(DEMO/'src/catalog.js')
+    catalog=ROOT/'web/src/catalog.js'
+    entries=read_module(catalog)
     sources={}
     for e in entries:
         pairs=[(e['audioSource'],e['audio'])]
@@ -32,7 +33,7 @@ def export_audio() -> None:
         data=array.array('h',pcm);step=max(1,len(data)//500)
         peaks=[max(abs(x) for x in data[i:i+step])/32768 for i in range(0,len(data),step)]
         e['peaks']=[round(v,4) for v in peaks]
-    (DEMO/'src/catalog.js').write_text('export default '+json.dumps(entries,ensure_ascii=False,indent=2)+';\n')
+    catalog.write_text('export default '+json.dumps(entries,ensure_ascii=False,indent=2)+';\n')
     (DEMO/'AUDIO_SOURCES.js').write_text('export default '+json.dumps(sources,indent=2,sort_keys=True)+';\n')
     print(f'{len(sources)} MP3s, {sum(v["bytes"] for v in sources.values()):,} bytes; source audio unchanged')
 

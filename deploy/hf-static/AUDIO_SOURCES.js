@@ -62,12 +62,40 @@ export default {
     "source": "data/audio/hq/gettysburg__user__input_b7df9bd980c1.flac",
     "source_sha256": "fd2c054554a291afdddebf1b496374f16f43358c25c3769000fb71ee2a67a448"
   },
+  "audio/o_captain__lv_mac__orig.mp3": {
+    "bytes": 1130623,
+    "encoding": "libmp3lame 128 kbps, no gain/normalisation filters; playback only",
+    "sha256": "5882996271d09b02109ce2da789575f253f45831d13cbfe6ba6fbe7cb9b199af",
+    "source": "data/audio/hq/o_captain__lv_mac__orig.wav",
+    "source_sha256": "9dfc0200575538856ea6be2fab95bbbd03fb4b8f99d93da1b3701e60be99fd60"
+  },
+  "audio/o_captain__lv_th__dragging_s5_01.mp3": {
+    "bytes": 1286104,
+    "encoding": "libmp3lame 128 kbps, no gain/normalisation filters; playback only",
+    "sha256": "033ae9768735458c274a7a4831d75534a9b85910cf39469f5c29eaee75e62723",
+    "source": "data/flawed/hq/o_captain__lv_th__dragging_s5_01.flac",
+    "source_sha256": "f9a81b1a7dcf2df14e9bd07460617f3fc68342af30554690e8ea6ef7653f028c"
+  },
+  "audio/o_captain__lv_th__missing_pause_s5_01.mp3": {
+    "bytes": 1248488,
+    "encoding": "libmp3lame 128 kbps, no gain/normalisation filters; playback only",
+    "sha256": "9d0d9c503901ebe6b12ede6bd4bac4a729616ffb8ab8e4587728dbefa16cd8fe",
+    "source": "data/flawed/hq/o_captain__lv_th__missing_pause_s5_01.flac",
+    "source_sha256": "2c783086db39a953d821e2aaaf0392bfbd3981052983e23da45af5a17a7fb03d"
+  },
   "audio/reagan_challenger__reagan__orig.mp3": {
     "bytes": 3986956,
     "encoding": "libmp3lame 128 kbps, no gain/normalisation filters; playback only",
     "sha256": "f99e68f1caaa87e5173d3d5a3d6ede3f9814e88a7bc248ad3f68d2ced3be4578",
     "source": "data/audio/hq/reagan_challenger__reagan__orig.wav",
     "source_sha256": "53e5778bafa6ec87f89c98181ebafde94db145a58cd8df76ba9952488b1fe992"
+  },
+  "audio/reagan_challenger__reagan__too_quiet_s5_01.mp3": {
+    "bytes": 3986956,
+    "encoding": "libmp3lame 128 kbps, no gain/normalisation filters; playback only",
+    "sha256": "08b6c07d2cc1e2f1845b96d63a70394e21dc89464f5cd36295a75b62562864ff",
+    "source": "data/flawed/hq/reagan_challenger__reagan__too_quiet_s5_01.flac",
+    "source_sha256": "53d021bec72d60c832b178528daf5d56a4bd10b12bc1e6528c1e92b1838f7f2d"
   },
   "audio/reagan_challenger__user__input_6b1ca5bc673c.mp3": {
     "bytes": 1223828,

@@ -1,0 +1,79 @@
+{
+  "analysis_id": "066587c8820e",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 109.496,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "gettysburg__lv_tg__monotone_s5_01",
+  "reference": {
+    "baseline_recording_id": "gettysburg__lv_dj__orig",
+    "exclude_speaker": "lv_tg",
+    "kind": "distribution",
+    "n_readers": 10,
+    "reference_version": "4819f30a0854d7d25c8933537f68c59bcc823b394d37691377ad4c86f2ef2754",
+    "text_id": "gettysburg"
+  },
+  "regions": [
+    {
+      "end": 99.03,
+      "evidence": {
+        "feature": "pitchvar",
+        "participant": 0.2342,
+        "reference": 2.07,
+        "unit": "semitones",
+        "z": -6.396
+      },
+      "explanation": "97.0\u201399.0 s, \"that government of the people, by\": your pitch varied by 0.23 semitones; good readers vary by 2.1 (89% less variation, 6.4 SD below). The phrase sounds flat. This is the speech's final sentence.",
+      "mean_abs_z": 6.396,
+      "severity": 4,
+      "start": 97.04,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "monotone",
+      "word_end": 259,
+      "word_start": 254
+    },
+    {
+      "end": 98.81,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.03,
+        "reference": 0.4275,
+        "unit": "s",
+        "z": -4.977
+      },
+      "explanation": "98.8\u201398.8 s, \"people, by\": you paused 0.03 s after \"people,\" where good readers pause 0.43 s (0.4 s shorter, 5 SD below). The listener gets no breathing space. This is the speech's final sentence.",
+      "mean_abs_z": 4.977,
+      "severity": 4,
+      "start": 98.78,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 259,
+      "word_start": 258
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 9.5,
+    "pace": 10.0,
+    "pauses": 8.4,
+    "pitch": 9.3,
+    "volume": 10.0
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "count": 5,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

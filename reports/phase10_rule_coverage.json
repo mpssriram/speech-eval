@@ -1,0 +1,2519 @@
+{
+  "schema": "rule-coverage-diagnosis/v1",
+  "split": "DEV only",
+  "synthetic_files": 7,
+  "mode_runs": 21,
+  "threshold_AB": 3.5,
+  "threshold_C": {
+    "rate": 2.0,
+    "pitchrange": 2.0,
+    "final_drop": 2.0,
+    "end_pause": 2.0
+  },
+  "supported_C": [
+    "dragging",
+    "missing_pause",
+    "monotone",
+    "rushing",
+    "too_quiet"
+  ],
+  "activation_probes": {
+    "rushing": {
+      "A": true,
+      "B": true,
+      "C": true
+    },
+    "dragging": {
+      "A": true,
+      "B": true,
+      "C": true
+    },
+    "monotone": {
+      "A": true,
+      "B": true,
+      "C": true
+    },
+    "too_quiet": {
+      "A": true,
+      "B": true,
+      "C": true
+    },
+    "mumbling": {
+      "A": true,
+      "B": true,
+      "C": null
+    },
+    "awkward_pause": {
+      "A": true,
+      "B": true,
+      "C": null
+    },
+    "missing_pause": {
+      "A": true,
+      "B": true,
+      "C": true
+    }
+  },
+  "results": [
+    {
+      "injected_type": "rushing",
+      "severity": 5,
+      "mode": "A",
+      "recording_id": "o_captain__lv_s__rushing_s5_01",
+      "analysis_id": "865ad1725575",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 2,
+        "rushing": 1,
+        "too_quiet": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [
+        3
+      ],
+      "reference": {
+        "kind": "distribution",
+        "text_id": "o_captain",
+        "exclude_speaker": "lv_s",
+        "n_readers": 8,
+        "reference_version": "3ce4cc030bcc92be2927420a5f0407f1f50cd9b0ea97085645410de2e05a3e75",
+        "baseline_recording_id": "o_captain__lv_mac__orig"
+      },
+      "regions": [
+        {
+          "type": "awkward_pause",
+          "start": 37.05,
+          "end": 37.67,
+          "word_start": 88,
+          "word_end": 89,
+          "severity": 4,
+          "mean_abs_z": 5.031,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.62,
+            "reference": 0.4105,
+            "unit": "s",
+            "z": 5.031
+          },
+          "tags": [],
+          "explanation": "37.0\u201337.7 s, \"trills, For\": a 0.62 s pause between \"trills,\" and \"For\" where good readers pause 0.41 s (0.21 s longer, 5 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 49.89,
+          "end": 50.79,
+          "word_start": 119,
+          "word_end": 120,
+          "severity": 4,
+          "mean_abs_z": 10.03,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.9,
+            "reference": 0.553,
+            "unit": "s",
+            "z": 10.03
+          },
+          "tags": [],
+          "explanation": "49.9\u201350.8 s, \"head! It\": a 0.9 s pause between \"head!\" and \"It\" where good readers pause 0.55 s (0.35 s longer, 10 SD above). It breaks the sentence."
+        },
+        {
+          "type": "too_quiet",
+          "start": 52.86,
+          "end": 54.33,
+          "word_start": 128,
+          "word_end": 130,
+          "severity": 4,
+          "mean_abs_z": 4.251,
+          "evidence": {
+            "feature": "loud",
+            "participant": -14.66,
+            "reference": -5.412,
+            "unit": "dB",
+            "z": -4.251
+          },
+          "tags": [],
+          "explanation": "52.9\u201354.3 s, \"You\u2019ve fallen cold\": 9.3 dB quieter than good readers relative to your own average level (4.3 SD below)."
+        },
+        {
+          "type": "rushing",
+          "start": 57.82,
+          "end": 58.96,
+          "word_start": 136,
+          "word_end": 141,
+          "severity": 3,
+          "mean_abs_z": 3.935,
+          "evidence": {
+            "feature": "rate",
+            "participant": 6.436,
+            "reference": 3.413,
+            "unit": "syllables/s",
+            "z": 3.935
+          },
+          "tags": [],
+          "explanation": "57.8\u201359.0 s, \"not answer, his lips are pale\": you spoke at 6.4 syllables/s; good readers average 3.4 (1.9\u00d7 faster, 3.9 SD above). Rushing this phrase reduces its weight."
+        }
+      ]
+    },
+    {
+      "injected_type": "rushing",
+      "severity": 5,
+      "mode": "B",
+      "recording_id": "o_captain__lv_s__rushing_s5_01",
+      "analysis_id": "24ccc76683a1",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 5,
+        "rushing": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [
+        3
+      ],
+      "reference": {
+        "kind": "previous_take",
+        "text_id": "o_captain",
+        "exclude_speaker": null,
+        "n_readers": 1,
+        "reference_version": "77205c05011b5e8b7f056c3159acb5c97a063bf5b58701b6bbd439d96fb806bb",
+        "baseline_recording_id": "o_captain__lv_s__orig"
+      },
+      "regions": [
+        {
+          "type": "awkward_pause",
+          "start": 3.33,
+          "end": 3.93,
+          "word_start": 8,
+          "word_end": 9,
+          "severity": 4,
+          "mean_abs_z": 8.459,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.6,
+            "reference": 0.595,
+            "unit": "s",
+            "z": 8.459
+          },
+          "tags": [
+            "first_sentence"
+          ],
+          "explanation": "3.3\u20133.9 s, \"done, The\": a 0.6 s pause between \"done,\" and \"The\" where your previous take pause 0.59 s (0.005 s longer, 8.5 SD above). It breaks the sentence. This is the opening sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 16.45,
+          "end": 17.6,
+          "word_start": 43,
+          "word_end": 44,
+          "severity": 4,
+          "mean_abs_z": 12.86,
+          "evidence": {
+            "feature": "pause",
+            "participant": 1.15,
+            "reference": 1.136,
+            "unit": "s",
+            "z": 12.86
+          },
+          "tags": [],
+          "explanation": "16.4\u201317.6 s, \"daring; But\": a 1.1 s pause between \"daring;\" and \"But\" where your previous take pause 1.1 s (0.014 s longer, 13 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 32.74,
+          "end": 33.34,
+          "word_start": 75,
+          "word_end": 76,
+          "severity": 4,
+          "mean_abs_z": 5.068,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.6,
+            "reference": 0.597,
+            "unit": "s",
+            "z": 5.068
+          },
+          "tags": [],
+          "explanation": "32.7\u201333.3 s, \"bells; Rise\": a 0.6 s pause between \"bells;\" and \"Rise\" where your previous take pause 0.6 s (0.003 s longer, 5.1 SD above). It breaks the sentence."
+        },
+        {
+          "type": "rushing",
+          "start": 58.47,
+          "end": 58.96,
+          "word_start": 139,
+          "word_end": 141,
+          "severity": 4,
+          "mean_abs_z": 4.514,
+          "evidence": {
+            "feature": "rate",
+            "participant": 7.194,
+            "reference": 3.668,
+            "unit": "syllables/s",
+            "z": 4.514
+          },
+          "tags": [],
+          "explanation": "58.5\u201359.0 s, \"lips are pale\": you spoke at 7.2 syllables/s; your previous take average 3.7 (2\u00d7 faster, 4.5 SD above). Rushing this phrase reduces its weight."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 59.59,
+          "end": 60.49,
+          "word_start": 143,
+          "word_end": 144,
+          "severity": 4,
+          "mean_abs_z": 5.781,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.9,
+            "reference": 0.895,
+            "unit": "s",
+            "z": 5.781
+          },
+          "tags": [],
+          "explanation": "59.6\u201360.5 s, \"still, My\": a 0.9 s pause between \"still,\" and \"My\" where your previous take pause 0.9 s (0.005 s longer, 5.8 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 73.08,
+          "end": 74.01,
+          "word_start": 179,
+          "word_end": 180,
+          "severity": 4,
+          "mean_abs_z": 6.727,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.93,
+            "reference": 0.924,
+            "unit": "s",
+            "z": 6.727
+          },
+          "tags": [],
+          "explanation": "73.1\u201374.0 s, \"won; Exult\": a 0.93 s pause between \"won;\" and \"Exult\" where your previous take pause 0.92 s (0.006 s longer, 6.7 SD above). It breaks the sentence."
+        }
+      ]
+    },
+    {
+      "injected_type": "rushing",
+      "severity": 5,
+      "mode": "C",
+      "recording_id": "o_captain__lv_s__rushing_s5_01",
+      "analysis_id": "bb1a41f68c9e",
+      "supported": true,
+      "flags_by_type": {
+        "dragging": 3,
+        "missing_pause": 1,
+        "too_quiet": 1
+      },
+      "target_type_fired": false,
+      "strict_interval_hit_indices": [],
+      "reference": {
+        "kind": "norms",
+        "reference_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+        "n_readers": 18,
+        "baseline_recording_id": null
+      },
+      "regions": [
+        {
+          "type": "dragging",
+          "start": 17.6,
+          "end": 20.06,
+          "word_start": 44,
+          "word_end": 48,
+          "severity": 1,
+          "mean_abs_z": 2.266,
+          "sentence": 4,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.427,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.266
+          },
+          "tags": [],
+          "explanation": "17.6\u201320.1 s, \"But O heart! heart! heart!\": dragging; rate 2.4 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.3."
+        },
+        {
+          "type": "dragging",
+          "start": 25.7,
+          "end": 27.8,
+          "word_start": 62,
+          "word_end": 65,
+          "severity": 1,
+          "mean_abs_z": 2.37,
+          "sentence": 7,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.381,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.37
+          },
+          "tags": [],
+          "explanation": "25.7\u201327.8 s, \"Fallen cold and dead.\": dragging; rate 2.4 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.4."
+        },
+        {
+          "type": "too_quiet",
+          "start": 52.27,
+          "end": 52.78,
+          "word_start": 126,
+          "word_end": 127,
+          "severity": 1,
+          "mean_abs_z": 2.252,
+          "sentence": 14,
+          "evidence": {
+            "feature": "final_drop",
+            "participant": -8.606,
+            "reference": 0.5853,
+            "unit": "dB",
+            "z": -2.252
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "52.3\u201352.8 s, \"the deck,\": too quiet; final_drop -8.6 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.3."
+        },
+        {
+          "type": "missing_pause",
+          "start": 52.765,
+          "end": 52.795,
+          "word_start": 127,
+          "word_end": 128,
+          "severity": 2,
+          "mean_abs_z": 3.016,
+          "sentence": 14,
+          "evidence": {
+            "feature": "end_pause",
+            "participant": 0.08,
+            "reference": 0.71,
+            "unit": "s",
+            "z": -3.016
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "52.8\u201352.8 s, \"deck, You\u2019ve\": missing pause; end_pause 0.08 s versus good speakers in our dataset (typical range 0.47\u20131.1); z=-3."
+        },
+        {
+          "type": "dragging",
+          "start": 83.29,
+          "end": 85.53,
+          "word_start": 198,
+          "word_end": 201,
+          "severity": 1,
+          "mean_abs_z": 2.722,
+          "sentence": 23,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.232,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.722
+          },
+          "tags": [],
+          "explanation": "83.3\u201385.5 s, \"Fallen cold and dead.\": dragging; rate 2.2 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.7."
+        }
+      ]
+    },
+    {
+      "injected_type": "dragging",
+      "severity": 5,
+      "mode": "A",
+      "recording_id": "gettysburg__lv_pc__dragging_s5_01",
+      "analysis_id": "a4af31120b23",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 1
+      },
+      "target_type_fired": false,
+      "strict_interval_hit_indices": [],
+      "reference": {
+        "kind": "distribution",
+        "text_id": "gettysburg",
+        "exclude_speaker": "lv_pc",
+        "n_readers": 10,
+        "reference_version": "58ad3fcafbe53ff6aa95fef42b5691f0bce9007e3de611d9bd46ae3555d70a85",
+        "baseline_recording_id": "gettysburg__lv_dj__orig"
+      },
+      "regions": [
+        {
+          "type": "awkward_pause",
+          "start": 46.32,
+          "end": 46.86,
+          "word_start": 102,
+          "word_end": 103,
+          "severity": 4,
+          "mean_abs_z": 4.346,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.54,
+            "reference": 0.02416,
+            "unit": "s",
+            "z": 4.346
+          },
+          "tags": [],
+          "explanation": "46.3\u201346.9 s, \"But, in\": a 0.54 s pause between \"But,\" and \"in\" where good readers pause 0.024 s (0.52 s longer, 4.3 SD above). It breaks the sentence."
+        }
+      ]
+    },
+    {
+      "injected_type": "dragging",
+      "severity": 5,
+      "mode": "B",
+      "recording_id": "gettysburg__lv_pc__dragging_s5_01",
+      "analysis_id": "3f34c1f2d0ae",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 3,
+        "dragging": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [
+        0
+      ],
+      "reference": {
+        "kind": "previous_take",
+        "text_id": "gettysburg",
+        "exclude_speaker": null,
+        "n_readers": 1,
+        "reference_version": "9ad00b6c4c08f05c8bdbbc4bd704bf48bc5feff6adfa30c7fc0af3fa639c6109",
+        "baseline_recording_id": "gettysburg__lv_pc__orig"
+      },
+      "regions": [
+        {
+          "type": "dragging",
+          "start": 18.38,
+          "end": 22.98,
+          "word_start": 41,
+          "word_end": 47,
+          "severity": 4,
+          "mean_abs_z": 4.482,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.711,
+            "reference": 5.291,
+            "unit": "syllables/s",
+            "z": -4.482
+          },
+          "tags": [],
+          "explanation": "18.4\u201323.0 s, \"that nation, or any nation so conceived\": you spoke at 2.7 vs 5.3 syllables/s for your previous take (2\u00d7 slower, 4.5 SD below). The phrase loses momentum."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 46.32,
+          "end": 46.86,
+          "word_start": 102,
+          "word_end": 103,
+          "severity": 4,
+          "mean_abs_z": 18.73,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.54,
+            "reference": 0.53,
+            "unit": "s",
+            "z": 18.73
+          },
+          "tags": [],
+          "explanation": "46.3\u201346.9 s, \"But, in\": a 0.54 s pause between \"But,\" and \"in\" where your previous take pause 0.53 s (0.01 s longer, 19 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 57.91,
+          "end": 58.47,
+          "word_start": 125,
+          "word_end": 126,
+          "severity": 4,
+          "mean_abs_z": 18.11,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.56,
+            "reference": 0.55,
+            "unit": "s",
+            "z": 18.11
+          },
+          "tags": [],
+          "explanation": "57.9\u201358.5 s, \"dead, who\": a 0.56 s pause between \"dead,\" and \"who\" where your previous take pause 0.55 s (0.01 s longer, 18 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 84.67,
+          "end": 85.48,
+          "word_start": 187,
+          "word_end": 188,
+          "severity": 4,
+          "mean_abs_z": 37.58,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.81,
+            "reference": 0.781,
+            "unit": "s",
+            "z": 37.58
+          },
+          "tags": [
+            "final_sentence"
+          ],
+          "explanation": "84.7\u201385.5 s, \"advanced. It\": a 0.81 s pause between \"advanced.\" and \"It\" where your previous take pause 0.78 s (0.029 s longer, 38 SD above). It breaks the sentence. This is the speech's final sentence."
+        }
+      ]
+    },
+    {
+      "injected_type": "dragging",
+      "severity": 5,
+      "mode": "C",
+      "recording_id": "gettysburg__lv_pc__dragging_s5_01",
+      "analysis_id": "b1ff57ad19db",
+      "supported": true,
+      "flags_by_type": {
+        "too_quiet": 1
+      },
+      "target_type_fired": false,
+      "strict_interval_hit_indices": [],
+      "reference": {
+        "kind": "norms",
+        "reference_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+        "n_readers": 18,
+        "baseline_recording_id": null
+      },
+      "regions": [
+        {
+          "type": "too_quiet",
+          "start": 63.64,
+          "end": 64.66,
+          "word_start": 139,
+          "word_end": 140,
+          "severity": 1,
+          "mean_abs_z": 2.309,
+          "sentence": 6,
+          "evidence": {
+            "feature": "final_drop",
+            "participant": -8.838,
+            "reference": 0.5853,
+            "unit": "dB",
+            "z": -2.309
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "63.6\u201364.7 s, \"or detract.\": too quiet; final_drop -8.8 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.3."
+        }
+      ]
+    },
+    {
+      "injected_type": "monotone",
+      "severity": 5,
+      "mode": "A",
+      "recording_id": "o_captain__lv_sjs__monotone_s5_01",
+      "analysis_id": "c4050f979ce0",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 7,
+        "too_quiet": 3
+      },
+      "target_type_fired": false,
+      "strict_interval_hit_indices": [],
+      "reference": {
+        "kind": "distribution",
+        "text_id": "o_captain",
+        "exclude_speaker": "lv_sjs",
+        "n_readers": 8,
+        "reference_version": "1fff397f0e00349c821be9b553c820eb208187ad72d283b2a44d9c6d9f157967",
+        "baseline_recording_id": "o_captain__lv_mac__orig"
+      },
+      "regions": [
+        {
+          "type": "too_quiet",
+          "start": 18.56,
+          "end": 22.15,
+          "word_start": 44,
+          "word_end": 48,
+          "severity": 4,
+          "mean_abs_z": 4.522,
+          "evidence": {
+            "feature": "loud",
+            "participant": -20.8,
+            "reference": -6.158,
+            "unit": "dB",
+            "z": -4.522
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "18.6\u201322.1 s, \"But O heart! heart! heart!\": 15 dB quieter than good readers relative to your own average level (4.5 SD below). Your voice trails off at the end of the sentence. This region reaches a sentence ending."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 39.14,
+          "end": 39.78,
+          "word_start": 88,
+          "word_end": 89,
+          "severity": 4,
+          "mean_abs_z": 5.426,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.64,
+            "reference": 0.4105,
+            "unit": "s",
+            "z": 5.426
+          },
+          "tags": [],
+          "explanation": "39.1\u201339.8 s, \"trills, For\": a 0.64 s pause between \"trills,\" and \"For\" where good readers pause 0.41 s (0.23 s longer, 5.4 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 48.34,
+          "end": 50.26,
+          "word_start": 110,
+          "word_end": 111,
+          "severity": 4,
+          "mean_abs_z": 5.343,
+          "evidence": {
+            "feature": "pause",
+            "participant": 1.92,
+            "reference": 0.6729,
+            "unit": "s",
+            "z": 5.343
+          },
+          "tags": [],
+          "explanation": "48.3\u201350.3 s, \"turning; Here\": a 1.9 s pause between \"turning;\" and \"Here\" where good readers pause 0.67 s (1.2 s longer, 5.3 SD above). It breaks the sentence."
+        },
+        {
+          "type": "too_quiet",
+          "start": 50.26,
+          "end": 51.38,
+          "word_start": 111,
+          "word_end": 113,
+          "severity": 3,
+          "mean_abs_z": 3.817,
+          "evidence": {
+            "feature": "loud",
+            "participant": -15.77,
+            "reference": -6.355,
+            "unit": "dB",
+            "z": -3.817
+          },
+          "tags": [],
+          "explanation": "50.3\u201351.4 s, \"Here Captain! dear\": 9.4 dB quieter than good readers relative to your own average level (3.8 SD below)."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 53.58,
+          "end": 54.42,
+          "word_start": 119,
+          "word_end": 120,
+          "severity": 4,
+          "mean_abs_z": 8.589,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.84,
+            "reference": 0.553,
+            "unit": "s",
+            "z": 8.589
+          },
+          "tags": [],
+          "explanation": "53.6\u201354.4 s, \"head! It\": a 0.84 s pause between \"head!\" and \"It\" where good readers pause 0.55 s (0.29 s longer, 8.6 SD above). It breaks the sentence."
+        },
+        {
+          "type": "too_quiet",
+          "start": 60.22,
+          "end": 61.07,
+          "word_start": 133,
+          "word_end": 135,
+          "severity": 4,
+          "mean_abs_z": 5.294,
+          "evidence": {
+            "feature": "loud",
+            "participant": -18.02,
+            "reference": -5.198,
+            "unit": "dB",
+            "z": -5.294
+          },
+          "tags": [],
+          "explanation": "60.2\u201361.1 s, \"My Captain does\": 13 dB quieter than good readers relative to your own average level (5.3 SD below)."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 70.23,
+          "end": 72.06,
+          "word_start": 156,
+          "word_end": 157,
+          "severity": 4,
+          "mean_abs_z": 6.665,
+          "evidence": {
+            "feature": "pause",
+            "participant": 1.83,
+            "reference": 0.7249,
+            "unit": "s",
+            "z": 6.665
+          },
+          "tags": [],
+          "explanation": "70.2\u201372.1 s, \"will, The\": a 1.8 s pause between \"will,\" and \"The\" where good readers pause 0.72 s (1.1 s longer, 6.7 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 74.13,
+          "end": 74.75,
+          "word_start": 163,
+          "word_end": 164,
+          "severity": 3,
+          "mean_abs_z": 3.811,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.62,
+            "reference": 0.03062,
+            "unit": "s",
+            "z": 3.811
+          },
+          "tags": [],
+          "explanation": "74.1\u201374.8 s, \"sound, its\": a 0.62 s pause between \"sound,\" and \"its\" where good readers pause 0.031 s (0.59 s longer, 3.8 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 79.28,
+          "end": 79.89,
+          "word_start": 176,
+          "word_end": 177,
+          "severity": 4,
+          "mean_abs_z": 4160.0,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.61,
+            "reference": 6.939e-18,
+            "unit": "s",
+            "z": 4160.0
+          },
+          "tags": [],
+          "explanation": "79.3\u201379.9 s, \"in with\": a 0.61 s pause between \"in\" and \"with\" where good readers pause 6.9e-18 s (0.61 s longer, 4.2e+03 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 92.8,
+          "end": 96.96,
+          "word_start": 200,
+          "word_end": 201,
+          "severity": 5,
+          "mean_abs_z": 7148.0,
+          "evidence": {
+            "feature": "pause",
+            "participant": 4.16,
+            "reference": 6.939e-18,
+            "unit": "s",
+            "z": 7148.0
+          },
+          "tags": [
+            "final_sentence",
+            "sentence_final"
+          ],
+          "explanation": "92.8\u201397.0 s, \"and dead.\": a 4.2 s pause between \"and\" and \"dead.\" where good readers pause 6.9e-18 s (4.2 s longer, 7.1e+03 SD above). It breaks the sentence. This is the speech's final sentence. This region reaches a sentence ending."
+        }
+      ]
+    },
+    {
+      "injected_type": "monotone",
+      "severity": 5,
+      "mode": "B",
+      "recording_id": "o_captain__lv_sjs__monotone_s5_01",
+      "analysis_id": "8ed58e7d429c",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 7,
+        "monotone": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [
+        2
+      ],
+      "reference": {
+        "kind": "previous_take",
+        "text_id": "o_captain",
+        "exclude_speaker": null,
+        "n_readers": 1,
+        "reference_version": "fbf5e7a068d1c60e586d3e095b023b688fe25d6f31e6be7593e731b3b786df17",
+        "baseline_recording_id": "o_captain__lv_sjs__orig"
+      },
+      "regions": [
+        {
+          "type": "awkward_pause",
+          "start": 16.79,
+          "end": 18.56,
+          "word_start": 43,
+          "word_end": 44,
+          "severity": 4,
+          "mean_abs_z": 7.247,
+          "evidence": {
+            "feature": "pause",
+            "participant": 1.77,
+            "reference": 1.758,
+            "unit": "s",
+            "z": 7.247
+          },
+          "tags": [],
+          "explanation": "16.8\u201318.6 s, \"daring; But\": a 1.8 s pause between \"daring;\" and \"But\" where your previous take pause 1.8 s (0.012 s longer, 7.2 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 19.74,
+          "end": 20.43,
+          "word_start": 46,
+          "word_end": 47,
+          "severity": 4,
+          "mean_abs_z": 2952.0,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.69,
+            "reference": 6.939e-18,
+            "unit": "s",
+            "z": 2952.0
+          },
+          "tags": [],
+          "explanation": "19.7\u201320.4 s, \"heart! heart!\": a 0.69 s pause between \"heart!\" and \"heart!\" where your previous take pause 6.9e-18 s (0.69 s longer, 3e+03 SD above). It breaks the sentence."
+        },
+        {
+          "type": "monotone",
+          "start": 35.61,
+          "end": 36.99,
+          "word_start": 76,
+          "word_end": 79,
+          "severity": 4,
+          "mean_abs_z": 6.639,
+          "evidence": {
+            "feature": "pitchvar",
+            "participant": 0.2137,
+            "reference": 2.732,
+            "unit": "semitones",
+            "z": -6.639
+          },
+          "tags": [],
+          "explanation": "35.6\u201337.0 s, \"Rise up- for you\": your pitch varied by 0.21 semitones; your previous take vary by 2.7 (92% less variation, 6.6 SD below). The phrase sounds flat."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 39.14,
+          "end": 39.78,
+          "word_start": 88,
+          "word_end": 89,
+          "severity": 4,
+          "mean_abs_z": 7.967,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.64,
+            "reference": 0.635,
+            "unit": "s",
+            "z": 7.967
+          },
+          "tags": [],
+          "explanation": "39.1\u201339.8 s, \"trills, For\": a 0.64 s pause between \"trills,\" and \"For\" where your previous take pause 0.64 s (0.005 s longer, 8 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 61.7,
+          "end": 62.57,
+          "word_start": 137,
+          "word_end": 138,
+          "severity": 4,
+          "mean_abs_z": 11.97,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.87,
+            "reference": 0.86,
+            "unit": "s",
+            "z": 11.97
+          },
+          "tags": [],
+          "explanation": "61.7\u201362.6 s, \"answer, his\": a 0.87 s pause between \"answer,\" and \"his\" where your previous take pause 0.86 s (0.01 s longer, 12 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 64.41,
+          "end": 65.54,
+          "word_start": 143,
+          "word_end": 144,
+          "severity": 3,
+          "mean_abs_z": 3.72,
+          "evidence": {
+            "feature": "pause",
+            "participant": 1.13,
+            "reference": 1.126,
+            "unit": "s",
+            "z": 3.72
+          },
+          "tags": [],
+          "explanation": "64.4\u201365.5 s, \"still, My\": a 1.1 s pause between \"still,\" and \"My\" where your previous take pause 1.1 s (0.004 s longer, 3.7 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 70.23,
+          "end": 72.06,
+          "word_start": 156,
+          "word_end": 157,
+          "severity": 4,
+          "mean_abs_z": 5.842,
+          "evidence": {
+            "feature": "pause",
+            "participant": 1.83,
+            "reference": 1.82,
+            "unit": "s",
+            "z": 5.842
+          },
+          "tags": [],
+          "explanation": "70.2\u201372.1 s, \"will, The\": a 1.8 s pause between \"will,\" and \"The\" where your previous take pause 1.8 s (0.01 s longer, 5.8 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 89.75,
+          "end": 90.62,
+          "word_start": 197,
+          "word_end": 198,
+          "severity": 4,
+          "mean_abs_z": 4.773,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.87,
+            "reference": 0.866,
+            "unit": "s",
+            "z": 4.773
+          },
+          "tags": [
+            "final_sentence"
+          ],
+          "explanation": "89.8\u201390.6 s, \"lies, Fallen\": a 0.87 s pause between \"lies,\" and \"Fallen\" where your previous take pause 0.87 s (0.004 s longer, 4.8 SD above). It breaks the sentence. This is the speech's final sentence."
+        }
+      ]
+    },
+    {
+      "injected_type": "monotone",
+      "severity": 5,
+      "mode": "C",
+      "recording_id": "o_captain__lv_sjs__monotone_s5_01",
+      "analysis_id": "b079fb5a03b6",
+      "supported": true,
+      "flags_by_type": {
+        "dragging": 2,
+        "missing_pause": 2,
+        "monotone": 6,
+        "rushing": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [],
+      "reference": {
+        "kind": "norms",
+        "reference_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+        "n_readers": 18,
+        "baseline_recording_id": null
+      },
+      "regions": [
+        {
+          "type": "dragging",
+          "start": 18.56,
+          "end": 22.15,
+          "word_start": 44,
+          "word_end": 48,
+          "severity": 2,
+          "mean_abs_z": 3.23,
+          "sentence": 4,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.033,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -3.23
+          },
+          "tags": [],
+          "explanation": "18.6\u201322.1 s, \"But O heart! heart! heart!\": dragging; rate 2 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-3.2."
+        },
+        {
+          "type": "missing_pause",
+          "start": 28.355,
+          "end": 28.385,
+          "word_start": 61,
+          "word_end": 62,
+          "severity": 4,
+          "mean_abs_z": 4.648,
+          "sentence": 6,
+          "evidence": {
+            "feature": "end_pause",
+            "participant": 6.939e-18,
+            "reference": 0.71,
+            "unit": "s",
+            "z": -4.648
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "28.4\u201328.4 s, \"lies, Fallen\": missing pause; end_pause 6.9e-18 s versus good speakers in our dataset (typical range 0.47\u20131.1); z=-4.6."
+        },
+        {
+          "type": "monotone",
+          "start": 28.37,
+          "end": 29.78,
+          "word_start": 62,
+          "word_end": 65,
+          "severity": 1,
+          "mean_abs_z": 2.395,
+          "sentence": 7,
+          "evidence": {
+            "feature": "pitchrange",
+            "participant": 2.532,
+            "reference": 6.338,
+            "unit": "semitones",
+            "z": -2.395
+          },
+          "tags": [],
+          "explanation": "28.4\u201329.8 s, \"Fallen cold and dead.\": monotone; pitchrange 2.5 semitones versus good speakers in our dataset (typical range 5\u20138.1); z=-2.4."
+        },
+        {
+          "type": "monotone",
+          "start": 54.42,
+          "end": 56.2,
+          "word_start": 120,
+          "word_end": 127,
+          "severity": 1,
+          "mean_abs_z": 2.035,
+          "sentence": 14,
+          "evidence": {
+            "feature": "pitchrange",
+            "participant": 2.926,
+            "reference": 6.338,
+            "unit": "semitones",
+            "z": -2.035
+          },
+          "tags": [],
+          "explanation": "54.4\u201356.2 s, \"It is some dream that on the deck,\": monotone; pitchrange 2.9 semitones versus good speakers in our dataset (typical range 5\u20138.1); z=-2."
+        },
+        {
+          "type": "missing_pause",
+          "start": 56.185,
+          "end": 56.215,
+          "word_start": 127,
+          "word_end": 128,
+          "severity": 1,
+          "mean_abs_z": 2.28,
+          "sentence": 14,
+          "evidence": {
+            "feature": "end_pause",
+            "participant": 0.15,
+            "reference": 0.71,
+            "unit": "s",
+            "z": -2.28
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "56.2\u201356.2 s, \"deck, You\u2019ve\": missing pause; end_pause 0.15 s versus good speakers in our dataset (typical range 0.47\u20131.1); z=-2.3."
+        },
+        {
+          "type": "monotone",
+          "start": 56.35,
+          "end": 57.63,
+          "word_start": 128,
+          "word_end": 132,
+          "severity": 2,
+          "mean_abs_z": 3.33,
+          "sentence": 15,
+          "evidence": {
+            "feature": "pitchrange",
+            "participant": 1.707,
+            "reference": 6.338,
+            "unit": "semitones",
+            "z": -3.33
+          },
+          "tags": [],
+          "explanation": "56.4\u201357.6 s, \"You\u2019ve fallen cold and dead.\": monotone; pitchrange 1.7 semitones versus good speakers in our dataset (typical range 5\u20138.1); z=-3.3."
+        },
+        {
+          "type": "rushing",
+          "start": 56.35,
+          "end": 57.63,
+          "word_start": 128,
+          "word_end": 132,
+          "severity": 1,
+          "mean_abs_z": 2.154,
+          "sentence": 15,
+          "evidence": {
+            "feature": "rate",
+            "participant": 5.469,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": 2.154
+          },
+          "tags": [],
+          "explanation": "56.4\u201357.6 s, \"You\u2019ve fallen cold and dead.\": rushing; rate 5.5 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.2."
+        },
+        {
+          "type": "monotone",
+          "start": 84.98,
+          "end": 86.82,
+          "word_start": 187,
+          "word_end": 191,
+          "severity": 1,
+          "mean_abs_z": 2.394,
+          "sentence": 21,
+          "evidence": {
+            "feature": "pitchrange",
+            "participant": 2.533,
+            "reference": 6.338,
+            "unit": "semitones",
+            "z": -2.394
+          },
+          "tags": [],
+          "explanation": "85.0\u201386.8 s, \"But I with mournful tread,\": monotone; pitchrange 2.5 semitones versus good speakers in our dataset (typical range 5\u20138.1); z=-2.4."
+        },
+        {
+          "type": "monotone",
+          "start": 87.87,
+          "end": 89.75,
+          "word_start": 192,
+          "word_end": 197,
+          "severity": 1,
+          "mean_abs_z": 2.357,
+          "sentence": 22,
+          "evidence": {
+            "feature": "pitchrange",
+            "participant": 2.571,
+            "reference": 6.338,
+            "unit": "semitones",
+            "z": -2.357
+          },
+          "tags": [],
+          "explanation": "87.9\u201389.8 s, \"Walk the deck my Captain lies,\": monotone; pitchrange 2.6 semitones versus good speakers in our dataset (typical range 5\u20138.1); z=-2.4."
+        },
+        {
+          "type": "dragging",
+          "start": 90.62,
+          "end": 97.4,
+          "word_start": 198,
+          "word_end": 201,
+          "severity": 1,
+          "mean_abs_z": 2.747,
+          "sentence": 23,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.222,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.747
+          },
+          "tags": [],
+          "explanation": "90.6\u201397.4 s, \"Fallen cold and dead.\": dragging; rate 2.2 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.7."
+        },
+        {
+          "type": "monotone",
+          "start": 90.62,
+          "end": 97.4,
+          "word_start": 198,
+          "word_end": 201,
+          "severity": 1,
+          "mean_abs_z": 2.451,
+          "sentence": 23,
+          "evidence": {
+            "feature": "pitchrange",
+            "participant": 2.474,
+            "reference": 6.338,
+            "unit": "semitones",
+            "z": -2.451
+          },
+          "tags": [],
+          "explanation": "90.6\u201397.4 s, \"Fallen cold and dead.\": monotone; pitchrange 2.5 semitones versus good speakers in our dataset (typical range 5\u20138.1); z=-2.5."
+        }
+      ]
+    },
+    {
+      "injected_type": "too_quiet",
+      "severity": 4,
+      "mode": "A",
+      "recording_id": "o_captain__lv_s__too_quiet_s4_01",
+      "analysis_id": "077f95d27e63",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 2,
+        "too_quiet": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [],
+      "reference": {
+        "kind": "distribution",
+        "text_id": "o_captain",
+        "exclude_speaker": "lv_s",
+        "n_readers": 8,
+        "reference_version": "3ce4cc030bcc92be2927420a5f0407f1f50cd9b0ea97085645410de2e05a3e75",
+        "baseline_recording_id": "o_captain__lv_mac__orig"
+      },
+      "regions": [
+        {
+          "type": "awkward_pause",
+          "start": 37.05,
+          "end": 37.67,
+          "word_start": 88,
+          "word_end": 89,
+          "severity": 4,
+          "mean_abs_z": 5.031,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.62,
+            "reference": 0.4105,
+            "unit": "s",
+            "z": 5.031
+          },
+          "tags": [],
+          "explanation": "37.0\u201337.7 s, \"trills, For\": a 0.62 s pause between \"trills,\" and \"For\" where good readers pause 0.41 s (0.21 s longer, 5 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 49.88,
+          "end": 50.79,
+          "word_start": 119,
+          "word_end": 120,
+          "severity": 4,
+          "mean_abs_z": 10.26,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.91,
+            "reference": 0.553,
+            "unit": "s",
+            "z": 10.26
+          },
+          "tags": [],
+          "explanation": "49.9\u201350.8 s, \"head! It\": a 0.91 s pause between \"head!\" and \"It\" where good readers pause 0.55 s (0.36 s longer, 10 SD above). It breaks the sentence."
+        },
+        {
+          "type": "too_quiet",
+          "start": 52.86,
+          "end": 54.33,
+          "word_start": 128,
+          "word_end": 130,
+          "severity": 4,
+          "mean_abs_z": 4.249,
+          "evidence": {
+            "feature": "loud",
+            "participant": -14.66,
+            "reference": -5.412,
+            "unit": "dB",
+            "z": -4.249
+          },
+          "tags": [],
+          "explanation": "52.9\u201354.3 s, \"You\u2019ve fallen cold\": 9.2 dB quieter than good readers relative to your own average level (4.2 SD below)."
+        }
+      ]
+    },
+    {
+      "injected_type": "too_quiet",
+      "severity": 4,
+      "mode": "B",
+      "recording_id": "o_captain__lv_s__too_quiet_s4_01",
+      "analysis_id": "056afa52b1d1",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 4
+      },
+      "target_type_fired": false,
+      "strict_interval_hit_indices": [],
+      "reference": {
+        "kind": "previous_take",
+        "text_id": "o_captain",
+        "exclude_speaker": null,
+        "n_readers": 1,
+        "reference_version": "77205c05011b5e8b7f056c3159acb5c97a063bf5b58701b6bbd439d96fb806bb",
+        "baseline_recording_id": "o_captain__lv_s__orig"
+      },
+      "regions": [
+        {
+          "type": "awkward_pause",
+          "start": 3.33,
+          "end": 3.93,
+          "word_start": 8,
+          "word_end": 9,
+          "severity": 4,
+          "mean_abs_z": 8.459,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.6,
+            "reference": 0.595,
+            "unit": "s",
+            "z": 8.459
+          },
+          "tags": [
+            "first_sentence"
+          ],
+          "explanation": "3.3\u20133.9 s, \"done, The\": a 0.6 s pause between \"done,\" and \"The\" where your previous take pause 0.59 s (0.005 s longer, 8.5 SD above). It breaks the sentence. This is the opening sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 16.45,
+          "end": 17.6,
+          "word_start": 43,
+          "word_end": 44,
+          "severity": 4,
+          "mean_abs_z": 12.86,
+          "evidence": {
+            "feature": "pause",
+            "participant": 1.15,
+            "reference": 1.136,
+            "unit": "s",
+            "z": 12.86
+          },
+          "tags": [],
+          "explanation": "16.4\u201317.6 s, \"daring; But\": a 1.1 s pause between \"daring;\" and \"But\" where your previous take pause 1.1 s (0.014 s longer, 13 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 32.74,
+          "end": 33.34,
+          "word_start": 75,
+          "word_end": 76,
+          "severity": 4,
+          "mean_abs_z": 5.068,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.6,
+            "reference": 0.597,
+            "unit": "s",
+            "z": 5.068
+          },
+          "tags": [],
+          "explanation": "32.7\u201333.3 s, \"bells; Rise\": a 0.6 s pause between \"bells;\" and \"Rise\" where your previous take pause 0.6 s (0.003 s longer, 5.1 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 80.59,
+          "end": 81.38,
+          "word_start": 191,
+          "word_end": 192,
+          "severity": 4,
+          "mean_abs_z": 10.48,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.79,
+            "reference": 0.782,
+            "unit": "s",
+            "z": 10.48
+          },
+          "tags": [],
+          "explanation": "80.6\u201381.4 s, \"tread, Walk\": a 0.79 s pause between \"tread,\" and \"Walk\" where your previous take pause 0.78 s (0.008 s longer, 10 SD above). It breaks the sentence."
+        }
+      ]
+    },
+    {
+      "injected_type": "too_quiet",
+      "severity": 4,
+      "mode": "C",
+      "recording_id": "o_captain__lv_s__too_quiet_s4_01",
+      "analysis_id": "08ef9e723318",
+      "supported": true,
+      "flags_by_type": {
+        "dragging": 3,
+        "missing_pause": 1,
+        "too_quiet": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [],
+      "reference": {
+        "kind": "norms",
+        "reference_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+        "n_readers": 18,
+        "baseline_recording_id": null
+      },
+      "regions": [
+        {
+          "type": "dragging",
+          "start": 17.6,
+          "end": 20.06,
+          "word_start": 44,
+          "word_end": 48,
+          "severity": 1,
+          "mean_abs_z": 2.266,
+          "sentence": 4,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.427,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.266
+          },
+          "tags": [],
+          "explanation": "17.6\u201320.1 s, \"But O heart! heart! heart!\": dragging; rate 2.4 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.3."
+        },
+        {
+          "type": "dragging",
+          "start": 25.7,
+          "end": 27.8,
+          "word_start": 62,
+          "word_end": 65,
+          "severity": 1,
+          "mean_abs_z": 2.37,
+          "sentence": 7,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.381,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.37
+          },
+          "tags": [],
+          "explanation": "25.7\u201327.8 s, \"Fallen cold and dead.\": dragging; rate 2.4 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.4."
+        },
+        {
+          "type": "too_quiet",
+          "start": 52.27,
+          "end": 52.78,
+          "word_start": 126,
+          "word_end": 127,
+          "severity": 1,
+          "mean_abs_z": 2.251,
+          "sentence": 14,
+          "evidence": {
+            "feature": "final_drop",
+            "participant": -8.601,
+            "reference": 0.5853,
+            "unit": "dB",
+            "z": -2.251
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "52.3\u201352.8 s, \"the deck,\": too quiet; final_drop -8.6 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.3."
+        },
+        {
+          "type": "missing_pause",
+          "start": 52.765,
+          "end": 52.795,
+          "word_start": 127,
+          "word_end": 128,
+          "severity": 2,
+          "mean_abs_z": 3.016,
+          "sentence": 14,
+          "evidence": {
+            "feature": "end_pause",
+            "participant": 0.08,
+            "reference": 0.71,
+            "unit": "s",
+            "z": -3.016
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "52.8\u201352.8 s, \"deck, You\u2019ve\": missing pause; end_pause 0.08 s versus good speakers in our dataset (typical range 0.47\u20131.1); z=-3."
+        },
+        {
+          "type": "dragging",
+          "start": 84.49,
+          "end": 86.73,
+          "word_start": 198,
+          "word_end": 201,
+          "severity": 1,
+          "mean_abs_z": 2.722,
+          "sentence": 23,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.232,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.722
+          },
+          "tags": [],
+          "explanation": "84.5\u201386.7 s, \"Fallen cold and dead.\": dragging; rate 2.2 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.7."
+        }
+      ]
+    },
+    {
+      "injected_type": "mumbling",
+      "severity": 5,
+      "mode": "A",
+      "recording_id": "gettysburg__lv_rk__mumbling_s5_01",
+      "analysis_id": "f8be5fd79b1d",
+      "supported": true,
+      "flags_by_type": {
+        "dragging": 1,
+        "missing_pause": 1,
+        "mumbling": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [
+        0
+      ],
+      "reference": {
+        "kind": "distribution",
+        "text_id": "gettysburg",
+        "exclude_speaker": "lv_rk",
+        "n_readers": 10,
+        "reference_version": "0fe716ebad5ffdacaa21e37896b0b125d10ebeb5284db050fa87870f9607c3f6",
+        "baseline_recording_id": "gettysburg__lv_dj__orig"
+      },
+      "regions": [
+        {
+          "type": "mumbling",
+          "start": 64.58,
+          "end": 69.88,
+          "word_start": 144,
+          "word_end": 153,
+          "severity": 4,
+          "mean_abs_z": 7.353,
+          "evidence": {
+            "feature": "clarity",
+            "participant": -54.74,
+            "reference": -20.8,
+            "unit": "dB",
+            "z": -7.353
+          },
+          "tags": [],
+          "explanation": "64.6\u201369.9 s, \"little note, nor long remember what we say here, but\": high-frequency energy (consonant clarity) is 34 dB lower than good readers (7.4 SD below). Words may sound muffled."
+        },
+        {
+          "type": "dragging",
+          "start": 65.37,
+          "end": 67.27,
+          "word_start": 145,
+          "word_end": 147,
+          "severity": 4,
+          "mean_abs_z": 4.808,
+          "evidence": {
+            "feature": "rate",
+            "participant": 1.786,
+            "reference": 3.529,
+            "unit": "syllables/s",
+            "z": -4.808
+          },
+          "tags": [],
+          "explanation": "65.4\u201367.3 s, \"note, nor long\": you spoke at 1.8 vs 3.5 syllables/s for good readers (2\u00d7 slower, 4.8 SD below). The phrase loses momentum."
+        },
+        {
+          "type": "missing_pause",
+          "start": 115.84,
+          "end": 115.87,
+          "word_start": 257,
+          "word_end": 258,
+          "severity": 4,
+          "mean_abs_z": 4.977,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.03,
+            "reference": 0.4275,
+            "unit": "s",
+            "z": -4.977
+          },
+          "tags": [
+            "final_sentence"
+          ],
+          "explanation": "115.8\u2013115.9 s, \"people, by\": you paused 0.03 s after \"people,\" where good readers pause 0.43 s (0.4 s shorter, 5 SD below). The listener gets no breathing space. This is the speech's final sentence."
+        }
+      ]
+    },
+    {
+      "injected_type": "mumbling",
+      "severity": 5,
+      "mode": "B",
+      "recording_id": "gettysburg__lv_rk__mumbling_s5_01",
+      "analysis_id": "24d9781dab79",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 2,
+        "mumbling": 1,
+        "rushing": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [
+        2
+      ],
+      "reference": {
+        "kind": "previous_take",
+        "text_id": "gettysburg",
+        "exclude_speaker": null,
+        "n_readers": 1,
+        "reference_version": "6a52f9dd7b865c88f9820a8bb9d4ebc1939c7895b40e5e026bbdb607a2b2d9d6",
+        "baseline_recording_id": "gettysburg__lv_rk__orig"
+      },
+      "regions": [
+        {
+          "type": "awkward_pause",
+          "start": 13.62,
+          "end": 14.44,
+          "word_start": 28,
+          "word_end": 29,
+          "severity": 4,
+          "mean_abs_z": 6.314,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.82,
+            "reference": 0.815,
+            "unit": "s",
+            "z": 6.314
+          },
+          "tags": [
+            "first_sentence"
+          ],
+          "explanation": "13.6\u201314.4 s, \"equal. Now\": a 0.82 s pause between \"equal.\" and \"Now\" where your previous take pause 0.81 s (0.005 s longer, 6.3 SD above). It breaks the sentence. This is the opening sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 39.94,
+          "end": 40.79,
+          "word_start": 89,
+          "word_end": 90,
+          "severity": 3,
+          "mean_abs_z": 3.658,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.85,
+            "reference": 0.847,
+            "unit": "s",
+            "z": 3.658
+          },
+          "tags": [],
+          "explanation": "39.9\u201340.8 s, \"live. It\": a 0.85 s pause between \"live.\" and \"It\" where your previous take pause 0.85 s (0.003 s longer, 3.7 SD above). It breaks the sentence."
+        },
+        {
+          "type": "mumbling",
+          "start": 64.35,
+          "end": 69.88,
+          "word_start": 143,
+          "word_end": 153,
+          "severity": 4,
+          "mean_abs_z": 7.819,
+          "evidence": {
+            "feature": "clarity",
+            "participant": -53.53,
+            "reference": -19.8,
+            "unit": "dB",
+            "z": -7.819
+          },
+          "tags": [],
+          "explanation": "64.3\u201369.9 s, \"will little note, nor long remember what we say here, but\": high-frequency energy (consonant clarity) is 34 dB lower than your previous take (7.8 SD below). Words may sound muffled."
+        },
+        {
+          "type": "rushing",
+          "start": 67.48,
+          "end": 68.72,
+          "word_start": 148,
+          "word_end": 152,
+          "severity": 4,
+          "mean_abs_z": 4.439,
+          "evidence": {
+            "feature": "rate",
+            "participant": 5.667,
+            "reference": 2.922,
+            "unit": "syllables/s",
+            "z": 4.439
+          },
+          "tags": [],
+          "explanation": "67.5\u201368.7 s, \"remember what we say here,\": you spoke at 5.7 syllables/s; your previous take average 2.9 (1.9\u00d7 faster, 4.4 SD above). Rushing this phrase reduces its weight."
+        }
+      ]
+    },
+    {
+      "injected_type": "mumbling",
+      "severity": 5,
+      "mode": "C",
+      "recording_id": "gettysburg__lv_rk__mumbling_s5_01",
+      "analysis_id": "e38e8a35b665",
+      "supported": false,
+      "flags_by_type": {
+        "too_quiet": 1
+      },
+      "target_type_fired": false,
+      "strict_interval_hit_indices": [],
+      "reference": {
+        "kind": "norms",
+        "reference_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+        "n_readers": 18,
+        "baseline_recording_id": null
+      },
+      "regions": [
+        {
+          "type": "too_quiet",
+          "start": 12.09,
+          "end": 13.62,
+          "word_start": 27,
+          "word_end": 28,
+          "severity": 2,
+          "mean_abs_z": 2.937,
+          "sentence": 0,
+          "evidence": {
+            "feature": "final_drop",
+            "participant": -11.4,
+            "reference": 0.5853,
+            "unit": "dB",
+            "z": -2.937
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "12.1\u201313.6 s, \"created equal.\": too quiet; final_drop -11 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.9."
+        }
+      ]
+    },
+    {
+      "injected_type": "awkward_pause",
+      "severity": 5,
+      "mode": "A",
+      "recording_id": "o_captain__lv_s__awkward_pause_s5_01",
+      "analysis_id": "a0a48f9cb320",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 3,
+        "too_quiet": 2
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [
+        4
+      ],
+      "reference": {
+        "kind": "distribution",
+        "text_id": "o_captain",
+        "exclude_speaker": "lv_s",
+        "n_readers": 8,
+        "reference_version": "3ce4cc030bcc92be2927420a5f0407f1f50cd9b0ea97085645410de2e05a3e75",
+        "baseline_recording_id": "o_captain__lv_mac__orig"
+      },
+      "regions": [
+        {
+          "type": "awkward_pause",
+          "start": 37.05,
+          "end": 37.67,
+          "word_start": 88,
+          "word_end": 89,
+          "severity": 4,
+          "mean_abs_z": 5.031,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.62,
+            "reference": 0.4105,
+            "unit": "s",
+            "z": 5.031
+          },
+          "tags": [],
+          "explanation": "37.0\u201337.7 s, \"trills, For\": a 0.62 s pause between \"trills,\" and \"For\" where good readers pause 0.41 s (0.21 s longer, 5 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 49.89,
+          "end": 50.79,
+          "word_start": 119,
+          "word_end": 120,
+          "severity": 4,
+          "mean_abs_z": 10.03,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.9,
+            "reference": 0.553,
+            "unit": "s",
+            "z": 10.03
+          },
+          "tags": [],
+          "explanation": "49.9\u201350.8 s, \"head! It\": a 0.9 s pause between \"head!\" and \"It\" where good readers pause 0.55 s (0.35 s longer, 10 SD above). It breaks the sentence."
+        },
+        {
+          "type": "too_quiet",
+          "start": 52.86,
+          "end": 54.33,
+          "word_start": 128,
+          "word_end": 130,
+          "severity": 4,
+          "mean_abs_z": 4.277,
+          "evidence": {
+            "feature": "loud",
+            "participant": -14.72,
+            "reference": -5.412,
+            "unit": "dB",
+            "z": -4.277
+          },
+          "tags": [],
+          "explanation": "52.9\u201354.3 s, \"You\u2019ve fallen cold\": 9.3 dB quieter than good readers relative to your own average level (4.3 SD below)."
+        },
+        {
+          "type": "too_quiet",
+          "start": 81.37,
+          "end": 85.38,
+          "word_start": 192,
+          "word_end": 194,
+          "severity": 4,
+          "mean_abs_z": 7.799,
+          "evidence": {
+            "feature": "loud",
+            "participant": -35.46,
+            "reference": -9.661,
+            "unit": "dB",
+            "z": -7.799
+          },
+          "tags": [],
+          "explanation": "81.4\u201385.4 s, \"Walk the deck\": 26 dB quieter than good readers relative to your own average level (7.8 SD below)."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 81.73,
+          "end": 84.76,
+          "word_start": 192,
+          "word_end": 193,
+          "severity": 5,
+          "mean_abs_z": 6644.0,
+          "evidence": {
+            "feature": "pause",
+            "participant": 3.03,
+            "reference": 6.939e-18,
+            "unit": "s",
+            "z": 6644.0
+          },
+          "tags": [],
+          "explanation": "81.7\u201384.8 s, \"Walk the\": a 3 s pause between \"Walk\" and \"the\" where good readers pause 6.9e-18 s (3 s longer, 6.6e+03 SD above). It breaks the sentence."
+        }
+      ]
+    },
+    {
+      "injected_type": "awkward_pause",
+      "severity": 5,
+      "mode": "B",
+      "recording_id": "o_captain__lv_s__awkward_pause_s5_01",
+      "analysis_id": "27d1932a947c",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 4
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [
+        3
+      ],
+      "reference": {
+        "kind": "previous_take",
+        "text_id": "o_captain",
+        "exclude_speaker": null,
+        "n_readers": 1,
+        "reference_version": "77205c05011b5e8b7f056c3159acb5c97a063bf5b58701b6bbd439d96fb806bb",
+        "baseline_recording_id": "o_captain__lv_s__orig"
+      },
+      "regions": [
+        {
+          "type": "awkward_pause",
+          "start": 3.33,
+          "end": 3.93,
+          "word_start": 8,
+          "word_end": 9,
+          "severity": 4,
+          "mean_abs_z": 8.459,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.6,
+            "reference": 0.595,
+            "unit": "s",
+            "z": 8.459
+          },
+          "tags": [
+            "first_sentence"
+          ],
+          "explanation": "3.3\u20133.9 s, \"done, The\": a 0.6 s pause between \"done,\" and \"The\" where your previous take pause 0.59 s (0.005 s longer, 8.5 SD above). It breaks the sentence. This is the opening sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 16.45,
+          "end": 17.6,
+          "word_start": 43,
+          "word_end": 44,
+          "severity": 4,
+          "mean_abs_z": 12.86,
+          "evidence": {
+            "feature": "pause",
+            "participant": 1.15,
+            "reference": 1.136,
+            "unit": "s",
+            "z": 12.86
+          },
+          "tags": [],
+          "explanation": "16.4\u201317.6 s, \"daring; But\": a 1.1 s pause between \"daring;\" and \"But\" where your previous take pause 1.1 s (0.014 s longer, 13 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 32.74,
+          "end": 33.34,
+          "word_start": 75,
+          "word_end": 76,
+          "severity": 4,
+          "mean_abs_z": 5.068,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.6,
+            "reference": 0.597,
+            "unit": "s",
+            "z": 5.068
+          },
+          "tags": [],
+          "explanation": "32.7\u201333.3 s, \"bells; Rise\": a 0.6 s pause between \"bells;\" and \"Rise\" where your previous take pause 0.6 s (0.003 s longer, 5.1 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 81.73,
+          "end": 84.76,
+          "word_start": 192,
+          "word_end": 193,
+          "severity": 4,
+          "mean_abs_z": 4514.0,
+          "evidence": {
+            "feature": "pause",
+            "participant": 3.03,
+            "reference": 6.939e-18,
+            "unit": "s",
+            "z": 4514.0
+          },
+          "tags": [],
+          "explanation": "81.7\u201384.8 s, \"Walk the\": a 3 s pause between \"Walk\" and \"the\" where your previous take pause 6.9e-18 s (3 s longer, 4.5e+03 SD above). It breaks the sentence."
+        }
+      ]
+    },
+    {
+      "injected_type": "awkward_pause",
+      "severity": 5,
+      "mode": "C",
+      "recording_id": "o_captain__lv_s__awkward_pause_s5_01",
+      "analysis_id": "6d570b6a0d80",
+      "supported": false,
+      "flags_by_type": {
+        "dragging": 3,
+        "missing_pause": 1,
+        "too_quiet": 1
+      },
+      "target_type_fired": false,
+      "strict_interval_hit_indices": [],
+      "reference": {
+        "kind": "norms",
+        "reference_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+        "n_readers": 18,
+        "baseline_recording_id": null
+      },
+      "regions": [
+        {
+          "type": "dragging",
+          "start": 17.6,
+          "end": 20.06,
+          "word_start": 44,
+          "word_end": 48,
+          "severity": 1,
+          "mean_abs_z": 2.266,
+          "sentence": 4,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.427,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.266
+          },
+          "tags": [],
+          "explanation": "17.6\u201320.1 s, \"But O heart! heart! heart!\": dragging; rate 2.4 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.3."
+        },
+        {
+          "type": "dragging",
+          "start": 25.7,
+          "end": 27.8,
+          "word_start": 62,
+          "word_end": 65,
+          "severity": 1,
+          "mean_abs_z": 2.37,
+          "sentence": 7,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.381,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.37
+          },
+          "tags": [],
+          "explanation": "25.7\u201327.8 s, \"Fallen cold and dead.\": dragging; rate 2.4 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.4."
+        },
+        {
+          "type": "too_quiet",
+          "start": 52.27,
+          "end": 52.78,
+          "word_start": 126,
+          "word_end": 127,
+          "severity": 1,
+          "mean_abs_z": 2.251,
+          "sentence": 14,
+          "evidence": {
+            "feature": "final_drop",
+            "participant": -8.601,
+            "reference": 0.5853,
+            "unit": "dB",
+            "z": -2.251
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "52.3\u201352.8 s, \"the deck,\": too quiet; final_drop -8.6 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.3."
+        },
+        {
+          "type": "missing_pause",
+          "start": 52.765,
+          "end": 52.795,
+          "word_start": 127,
+          "word_end": 128,
+          "severity": 2,
+          "mean_abs_z": 3.016,
+          "sentence": 14,
+          "evidence": {
+            "feature": "end_pause",
+            "participant": 0.08,
+            "reference": 0.71,
+            "unit": "s",
+            "z": -3.016
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "52.8\u201352.8 s, \"deck, You\u2019ve\": missing pause; end_pause 0.08 s versus good speakers in our dataset (typical range 0.47\u20131.1); z=-3."
+        },
+        {
+          "type": "dragging",
+          "start": 87.49,
+          "end": 89.761,
+          "word_start": 198,
+          "word_end": 201,
+          "severity": 2,
+          "mean_abs_z": 2.796,
+          "sentence": 23,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.202,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.796
+          },
+          "tags": [],
+          "explanation": "87.5\u201389.8 s, \"Fallen cold and dead.\": dragging; rate 2.2 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.8."
+        }
+      ]
+    },
+    {
+      "injected_type": "missing_pause",
+      "severity": 5,
+      "mode": "A",
+      "recording_id": "o_captain__lv_s__missing_pause_s5_01",
+      "analysis_id": "709b3424299d",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 2,
+        "missing_pause": 1,
+        "too_quiet": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [
+        0
+      ],
+      "reference": {
+        "kind": "distribution",
+        "text_id": "o_captain",
+        "exclude_speaker": "lv_s",
+        "n_readers": 8,
+        "reference_version": "3ce4cc030bcc92be2927420a5f0407f1f50cd9b0ea97085645410de2e05a3e75",
+        "baseline_recording_id": "o_captain__lv_mac__orig"
+      },
+      "regions": [
+        {
+          "type": "missing_pause",
+          "start": 16.46,
+          "end": 16.5,
+          "word_start": 43,
+          "word_end": 44,
+          "severity": 4,
+          "mean_abs_z": 8.249,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.04,
+            "reference": 0.7017,
+            "unit": "s",
+            "z": -8.249
+          },
+          "tags": [],
+          "explanation": "16.5\u201316.5 s, \"daring; But\": you paused 0.04 s after \"daring;\" where good readers pause 0.7 s (0.66 s shorter, 8.2 SD below). The listener gets no breathing space."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 35.94,
+          "end": 36.56,
+          "word_start": 88,
+          "word_end": 89,
+          "severity": 4,
+          "mean_abs_z": 5.031,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.62,
+            "reference": 0.4105,
+            "unit": "s",
+            "z": 5.031
+          },
+          "tags": [],
+          "explanation": "35.9\u201336.6 s, \"trills, For\": a 0.62 s pause between \"trills,\" and \"For\" where good readers pause 0.41 s (0.21 s longer, 5 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 48.78,
+          "end": 49.69,
+          "word_start": 119,
+          "word_end": 120,
+          "severity": 4,
+          "mean_abs_z": 10.26,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.91,
+            "reference": 0.553,
+            "unit": "s",
+            "z": 10.26
+          },
+          "tags": [],
+          "explanation": "48.8\u201349.7 s, \"head! It\": a 0.91 s pause between \"head!\" and \"It\" where good readers pause 0.55 s (0.36 s longer, 10 SD above). It breaks the sentence."
+        },
+        {
+          "type": "too_quiet",
+          "start": 51.76,
+          "end": 53.22,
+          "word_start": 128,
+          "word_end": 130,
+          "severity": 4,
+          "mean_abs_z": 4.184,
+          "evidence": {
+            "feature": "loud",
+            "participant": -14.52,
+            "reference": -5.412,
+            "unit": "dB",
+            "z": -4.184
+          },
+          "tags": [],
+          "explanation": "51.8\u201353.2 s, \"You\u2019ve fallen cold\": 9.1 dB quieter than good readers relative to your own average level (4.2 SD below)."
+        }
+      ]
+    },
+    {
+      "injected_type": "missing_pause",
+      "severity": 5,
+      "mode": "B",
+      "recording_id": "o_captain__lv_s__missing_pause_s5_01",
+      "analysis_id": "4b38055a80db",
+      "supported": true,
+      "flags_by_type": {
+        "awkward_pause": 3,
+        "missing_pause": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [
+        1
+      ],
+      "reference": {
+        "kind": "previous_take",
+        "text_id": "o_captain",
+        "exclude_speaker": null,
+        "n_readers": 1,
+        "reference_version": "77205c05011b5e8b7f056c3159acb5c97a063bf5b58701b6bbd439d96fb806bb",
+        "baseline_recording_id": "o_captain__lv_s__orig"
+      },
+      "regions": [
+        {
+          "type": "awkward_pause",
+          "start": 3.33,
+          "end": 3.93,
+          "word_start": 8,
+          "word_end": 9,
+          "severity": 4,
+          "mean_abs_z": 8.459,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.6,
+            "reference": 0.595,
+            "unit": "s",
+            "z": 8.459
+          },
+          "tags": [
+            "first_sentence"
+          ],
+          "explanation": "3.3\u20133.9 s, \"done, The\": a 0.6 s pause between \"done,\" and \"The\" where your previous take pause 0.59 s (0.005 s longer, 8.5 SD above). It breaks the sentence. This is the opening sentence."
+        },
+        {
+          "type": "missing_pause",
+          "start": 16.46,
+          "end": 16.5,
+          "word_start": 43,
+          "word_end": 44,
+          "severity": 4,
+          "mean_abs_z": 2825.0,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.04,
+            "reference": 1.136,
+            "unit": "s",
+            "z": -2825.0
+          },
+          "tags": [],
+          "explanation": "16.5\u201316.5 s, \"daring; But\": you paused 0.04 s after \"daring;\" where your previous take pause 1.1 s (1.1 s shorter, 2.8e+03 SD below). The listener gets no breathing space."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 59.69,
+          "end": 60.59,
+          "word_start": 143,
+          "word_end": 144,
+          "severity": 4,
+          "mean_abs_z": 5.781,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.9,
+            "reference": 0.895,
+            "unit": "s",
+            "z": 5.781
+          },
+          "tags": [],
+          "explanation": "59.7\u201360.6 s, \"still, My\": a 0.9 s pause between \"still,\" and \"My\" where your previous take pause 0.9 s (0.005 s longer, 5.8 SD above). It breaks the sentence."
+        },
+        {
+          "type": "awkward_pause",
+          "start": 73.18,
+          "end": 74.11,
+          "word_start": 179,
+          "word_end": 180,
+          "severity": 4,
+          "mean_abs_z": 6.727,
+          "evidence": {
+            "feature": "pause",
+            "participant": 0.93,
+            "reference": 0.924,
+            "unit": "s",
+            "z": 6.727
+          },
+          "tags": [],
+          "explanation": "73.2\u201374.1 s, \"won; Exult\": a 0.93 s pause between \"won;\" and \"Exult\" where your previous take pause 0.92 s (0.006 s longer, 6.7 SD above). It breaks the sentence."
+        }
+      ]
+    },
+    {
+      "injected_type": "missing_pause",
+      "severity": 5,
+      "mode": "C",
+      "recording_id": "o_captain__lv_s__missing_pause_s5_01",
+      "analysis_id": "e3a2fe7a3edd",
+      "supported": true,
+      "flags_by_type": {
+        "dragging": 3,
+        "missing_pause": 2,
+        "too_quiet": 1
+      },
+      "target_type_fired": true,
+      "strict_interval_hit_indices": [],
+      "reference": {
+        "kind": "norms",
+        "reference_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+        "n_readers": 18,
+        "baseline_recording_id": null
+      },
+      "regions": [
+        {
+          "type": "missing_pause",
+          "start": 16.445,
+          "end": 16.475,
+          "word_start": 43,
+          "word_end": 44,
+          "severity": 3,
+          "mean_abs_z": 3.644,
+          "sentence": 3,
+          "evidence": {
+            "feature": "end_pause",
+            "participant": 0.04,
+            "reference": 0.71,
+            "unit": "s",
+            "z": -3.644
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "16.4\u201316.5 s, \"daring; But\": missing pause; end_pause 0.04 s versus good speakers in our dataset (typical range 0.47\u20131.1); z=-3.6."
+        },
+        {
+          "type": "dragging",
+          "start": 16.5,
+          "end": 18.93,
+          "word_start": 44,
+          "word_end": 48,
+          "severity": 1,
+          "mean_abs_z": 2.186,
+          "sentence": 4,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.463,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.186
+          },
+          "tags": [],
+          "explanation": "16.5\u201318.9 s, \"But O heart! heart! heart!\": dragging; rate 2.5 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.2."
+        },
+        {
+          "type": "dragging",
+          "start": 24.6,
+          "end": 26.69,
+          "word_start": 62,
+          "word_end": 65,
+          "severity": 1,
+          "mean_abs_z": 2.345,
+          "sentence": 7,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.392,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.345
+          },
+          "tags": [],
+          "explanation": "24.6\u201326.7 s, \"Fallen cold and dead.\": dragging; rate 2.4 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.3."
+        },
+        {
+          "type": "too_quiet",
+          "start": 51.16,
+          "end": 51.68,
+          "word_start": 126,
+          "word_end": 127,
+          "severity": 1,
+          "mean_abs_z": 2.345,
+          "sentence": 14,
+          "evidence": {
+            "feature": "final_drop",
+            "participant": -8.985,
+            "reference": 0.5853,
+            "unit": "dB",
+            "z": -2.345
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "51.2\u201351.7 s, \"the deck,\": too quiet; final_drop -9 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.3."
+        },
+        {
+          "type": "missing_pause",
+          "start": 51.665,
+          "end": 51.695,
+          "word_start": 127,
+          "word_end": 128,
+          "severity": 2,
+          "mean_abs_z": 3.016,
+          "sentence": 14,
+          "evidence": {
+            "feature": "end_pause",
+            "participant": 0.08,
+            "reference": 0.71,
+            "unit": "s",
+            "z": -3.016
+          },
+          "tags": [
+            "sentence_final"
+          ],
+          "explanation": "51.7\u201351.7 s, \"deck, You\u2019ve\": missing pause; end_pause 0.08 s versus good speakers in our dataset (typical range 0.47\u20131.1); z=-3."
+        },
+        {
+          "type": "dragging",
+          "start": 83.38,
+          "end": 85.63,
+          "word_start": 198,
+          "word_end": 201,
+          "severity": 1,
+          "mean_abs_z": 2.747,
+          "sentence": 23,
+          "evidence": {
+            "feature": "rate",
+            "participant": 2.222,
+            "reference": 3.681,
+            "unit": "syllables/s",
+            "z": -2.747
+          },
+          "tags": [],
+          "explanation": "83.4\u201385.6 s, \"Fallen cold and dead.\": dragging; rate 2.2 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=-2.7."
+        }
+      ]
+    }
+  ],
+  "detector_activation_bug_found": false,
+  "post_hoc_bug_fix": null,
+  "benchmark_test_evaluations": 0,
+  "frozen_hashes": {
+    "configs/baselines.yaml": "42dc40b2e2f84fe7fa122fdbb966440dd69227a39693a3315f8b2523f81785eb",
+    "configs/dataset.yaml": "fc3bfcf0312fd62f24ed3be621c6a2eaba66c5e08a2d91aded162f27c24ad365",
+    "configs/default.yaml": "d5b4d3f24c15f598fe84552dbb7ca34b7722cced4c1b46f383d2c752e7041710",
+    "configs/detector.yaml": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "configs/detector_v2.yaml": "3496a9c3549e5491af708c70657f4d5f4d94e23e9f23fa597b46a6e34aa60538",
+    "configs/flaws.yaml": "531b4d5305a083a892d1bb02ef132579e46fcb4836e80e2514c20a16dd86e83d",
+    "configs/rubric.yaml": "4e8af3b16ef79889763f542471748ade7b127cee299a916542ce5d47f35abfaf",
+    "configs/splits.yaml": "1bcd501d7e4b5d890788f858c637e59b4e522f527d61bbe330c54a108683a4c7",
+    "configs/text_equiv.yaml": "2fab993c9fc2ad9731f7c9fe95bec3fda03f404a72e5d2b3510f41a5380afe26",
+    "data/human/evaluation.json": "58c6f712059cea44051051466f56a7f8e1d65fa04b6503a8026197d8e8e65013",
+    "data/review/acoustic_scores.json": "e2aa50d7cab69fc20d6ee19e106ff4c055a40f941a97c5d35fa378db0a76cfed",
+    "data/review/acoustic_verification.json": "7605ba251a20f67ad676a535a477d51a6ec8549cef064a110300f0d5e0193be6",
+    "data/review/acoustic_verification_calibrated.json": "cc5b8546604ca821b7da95df7bb29168f36246f44bee6c3b89626ae684525f9c",
+    "data/review/acoustic_verification_calibrated_pre_isolation.json": "14054435f931df206a6768b1997bcfd85a2e36fb618b548940fbf375286ab71b",
+    "data/review/acoustic_verification_legacy.json": "7605ba251a20f67ad676a535a477d51a6ec8549cef064a110300f0d5e0193be6",
+    "data/review/alignment_bakeoff.json": "8bee23ec6244227857a4cf5e1578f1360cc28816c73966086c7889a1f78b6d6b",
+    "data/review/alignment_checks.json": "6038965f220037bd323cf4e1c61d3ae4fe17618307f0410829d4b9ffb0d92be3",
+    "data/review/alignment_qa.json": "b99d8ad7848df048adf94eeb07d2c938ba5016fe01ad055633a443eea0f02541",
+    "data/review/asr_regeneration.json": "c2ccabfefe1f12b4e2822ae8c9199961d341836bad956e323d14fdb017100cf0",
+    "data/review/audio_repairs.json": "4b771cc4942600ea45e36452cbd81df00f7c05450a1808f8c5586836a01d7318",
+    "data/review/calibration_checks.json": "c0854497e3f962802daae02310a1e92c2b01a2d3bd106a58fea4d65efd9b9317",
+    "data/review/calibration_controls.json": "578d45b0f154ced6c1df8890bb00cf988db0c676982a491ef7f0e9ab2887c81f",
+    "data/review/calibration_medium_asr.json": "005292dcd1d49cc843cdf317f50ffd45315cbfd5856534ca01d07d57287792ef",
+    "data/review/ctc_calibration.json": "9beee75811221b5be9f84fd7fc01cae09ec5f0d4ebc03501a09f8b7d09aa2c2c",
+    "data/review/ctc_calibration_pre_isolation.json": "4bf71827825a9b51090505b2e9cb54469c519a6eea05900b28a5fa7bc8ed32e4",
+    "data/review/custom_dictionary_comparison.json": "e179c82bb8bc2adf75ab138786d2fe924033db1290be93954d96834f8ab34ca8",
+    "data/review/cut_consistency.json": "4e0926b1234aa79087737a5206166dcc9d9c8f2ea560b2bf5a7e588814d81f82",
+    "data/review/dataset_alignment_qa.json": "9b1e6c4267ae8b53609629c17aa72ceb21b592cd046e539c855d4cb8c149cc5b",
+    "data/review/dataset_integrity.json": "15ab5dddd336e910a30c43eb238c11eae0c07073027fe50fa005caca52b1393b",
+    "data/review/detector_calibration.json": "b00e7f4aed434150f72a502c121d4e13c491c0113fad2ebfb1b86a9fa5805492",
+    "data/review/detector_calibration_initial.json": "ae98cad81a165cb69b8e02557c570b06436b7ddaa9cbb22754f50b693a125915",
+    "data/review/detector_v2_dev.json": "016cb05da10eac8e2037bce6ace19270497fd9b269cd85bbf3844b3167af5577",
+    "data/review/detector_v2_test.json": "e770969c2d44e97cff3ee0d58b318d81edb8264356004070f6edfa4aa9f9c754",
+    "data/review/detector_v2_test_started.json": "e05e0bbe789fff7fc9d29747a456165e7171091c735363a9b2d3a397917b2e9a",
+    "data/review/final_evaluation.json": "6392ff8ee0706afe21fca06d3373666c358910ee66558a3a4aa6d0b811d1d794",
+    "data/review/final_evaluation_aaf1832fe24a.json": "6392ff8ee0706afe21fca06d3373666c358910ee66558a3a4aa6d0b811d1d794",
+    "data/review/mode_c_evaluation.json": "34e9e848d5ff8f102504c55ecb169d42223a078c6ef4990a6e8103e204067e9a",
+    "data/review/number_expansion.json": "f75dd8f1c66df468afff31100a2a2030d0f62074982963949a09580ec6a08ed5",
+    "data/review/phase1_acceptance.json": "0ade964f4a1213ecd852a3968e1f60b8e26bd483e6640145c35b9182da911b1c",
+    "data/review/repro_validation.json": "48f29eb84c6fb21f055c7454fcc5bed77f203cf592884940af06c10a1f661dc2",
+    "data/review/secondary_asr.json": "b046a0a2c5da1e0bdaa60597288973e18242ade6891aa7972e8d8df0be00091a",
+    "data/review/secondary_asr_legacy.json": "a6bec9075729b7a3d394d364c2d65d323224f11b261213896660066c5bfd3151",
+    "data/review/secondary_regeneration.json": "5228cd0feec2908edae4fb236f3ad480116362300a3c9527793d29cb3d1afcf8",
+    "data/review/severity_validation.json": "79d438d9e42e996dc904ffb34d23528eddc429648f0d11a7377d20b49ba9efe3",
+    "data/review/triage.json": "a0f161248b142a5afe9b48573589dc53827112827def4c93bd56de1b0b233cea",
+    "data/review/triage_count_reconciliation.json": "3bbe6173b3dcba1750d2abc72d6c6320aafa61b89ac7eab9dd684befc0bf2ade",
+    "data/review/verification_input.json": "9dd0dee5565dab2fd23742259e5956c2984197bc3b0f32e25653c7e05db83503",
+    "src/speecheval/__init__.py": "d94212d5faa62622cf99f345f8cfa54697813aed5d8f0565799f6b440ffbb850",
+    "src/speecheval/align/__init__.py": "70efe6d3f466f7a8fe09c419d914515da2e170a9655643d8542d503bd7860dfa",
+    "src/speecheval/align/base.py": "994dc16583cc442b5ec6520e6c7069e4a5ba8f9bf0a5db0bb547cf985d05529f",
+    "src/speecheval/align/mfa.py": "889d7fa27cab72ead0d5df87c1fc0a0f66d3a89d6a978abd9f9b5ed1685a4366",
+    "src/speecheval/align/pipeline.py": "2104972bba1d5f0e7e14bdd4286d0bac2ee8e77aeff3cc4044ef6e2ab03e7fdc",
+    "src/speecheval/align/whisperx_align.py": "8fabd1b0a7c4dc40191acc5160e7ac1f89b5924bf413e3665239bd8ebe235ceb",
+    "src/speecheval/alignment_analysis.py": "6675e8a56f60e7b268b3a684e1f96fecccdd9f231bc97835a012830194b76479",
+    "src/speecheval/alignment_qa.py": "7fe0ad1234cd499b2bc7775f1fb0dca7933c62b66ed21c314104fe19741c0bb1",
+    "src/speecheval/calibrated.py": "81281d9b8ef5776b049a3c26f296600dc121b69d8bba9f7de7adaee624e355d1",
+    "src/speecheval/calibration.py": "e18212d57adcd9854b728fe6496bef3e7db2c5532cd93582cc0007b6343fd66f",
+    "src/speecheval/cli.py": "a9f917ae6ac63f43ce3db81f427cf1d0b45e0be20f609586279a48426931eb10",
+    "src/speecheval/config.py": "ff1f4971ea16245a45f63e70cf066fc8e347678d66bcaf6514ffc20f6292a6b5",
+    "src/speecheval/ctc_worker.py": "4b883e7bc298276a874b104473aa658cea0f30b0834abb114722fc2c4b74f34a",
+    "src/speecheval/dataset.py": "73ce6bee4be9ffc63b7ed6c638625d3e53165605f6e3464dd3107ded0aa653a3",
+    "src/speecheval/detect.py": "95c9d9cdc48673013f018ff1f3026a919b88474a342b08a644802d3c92bd74b9",
+    "src/speecheval/detector_v2.py": "9745fccdcc046d016597e77516632c16b54ecd95642b5cd294835b54114801b7",
+    "src/speecheval/evaluate.py": "32a665b7bf82e2ade0894d06ad3c09eb8623abbb2a3719592a18cce6974bae1b",
+    "src/speecheval/evaluate_v2.py": "040d0c4d3358332a1e4ca128705859151cd9fa29412ad0451751a1ba749382fc",
+    "src/speecheval/explain.py": "465c8cd527e177ef8de1f4b43f4b6983f22017ae71ab6d0e7c456d0a67419af9",
+    "src/speecheval/features.py": "e34045ca86ed32d57aa893495bf22d96800f9faa26950aa4b22f2dad0a1f167f",
+    "src/speecheval/gold.py": "2f190372ecab90b8d51e281a5bb650b7d541a976f69659b72bf2177781b5eb47",
+    "src/speecheval/human.py": "9cccaeea8ec1bc40f5ce104b832bb5582c1465f2c32d958061aab9b3204c812b",
+    "src/speecheval/human_confirmed_workflow.py": "a4383431c17c9b954ff06c850f5eb97de50273f0caa7b61de7544d6c69693ff9",
+    "src/speecheval/human_demo_evidence.py": "7cf82fcdaa7bf58fa67fcc99b173a958acaca3ab5ead681608ece0c27943e92c",
+    "src/speecheval/human_grounding.py": "4be28f521d388b64ed092b4b6de09c1d80355283543fd09df95a7dacd90c11ec",
+    "src/speecheval/human_recording_inputs.py": "0861cc9f0d011874dff78b0f76a45c3c0cf9276a0f4b4cde4d7d815480960d20",
+    "src/speecheval/human_takes.py": "6af454aa6e5fb3e971d3783fdb87f1f755594bf3a30efd615f75b17813bf7810",
+    "src/speecheval/inject.py": "f312c65467dfafbe45c6a67b2036705c02a769d69ecd2c5f72ec5e01f13a48a2",
+    "src/speecheval/io.py": "4a57df3fba568a6067b13d3027ef37d823bc38c684da2bff2a85985ec78a6bb8",
+    "src/speecheval/learned.py": "25d5e60b3f9ee675fdd645c983ee1574ad4f6f115349c9242094d017adf062f7",
+    "src/speecheval/mode_c.py": "b69a97c19518b7a5cb6d9d07c9950966452a1edfb38eb7db3ce180a16c4aa992",
+    "src/speecheval/normalize.py": "450da07c18761bb3e167b03c2c400039ebdc1dab0c397dfe106429688a32fe94",
+    "src/speecheval/pipeline.py": "f85aae5ed9156ebb84b326b6118e25cd50abe4914994855d4c6125cc42367079",
+    "src/speecheval/prepare.py": "2414c27b0ca3d55d8e91a0fbba8f3f6a9db976f64e0da19fd2aa4e0c67fbd842",
+    "src/speecheval/rating_pack.py": "9cad900795c917134170f37992e08c84c64d0748ae71c02a1a6ddadd927ed63d",
+    "src/speecheval/ratings.py": "71e5016c091de07ba5f316a81b4a8651dfa85ef927ac78ff370a5a3783fc7b58",
+    "src/speecheval/reference.py": "abc9230cb6d4cd234a44035c39fb6eaa4348cb9aa641ac14e736718d5597e031",
+    "src/speecheval/release_report_check.py": "93adb9b33f8642a9def13050a3675f4c4cee61ac59fefe437b34f8bc3c16e1ad",
+    "src/speecheval/reproduce.py": "f5c797444d2a53cfdddce006c49e029682003ddd10721a048f574e9b07b5036b",
+    "src/speecheval/score.py": "7a49b5d16eaa580d2faca040897d85f6ad88de5bd262ee51faadc22a26b5e5ed",
+    "src/speecheval/service_tracks.py": "3be0a168161264c4cc146206d4486a43d97eaa3468f63da39ca8d0269694c49a",
+    "src/speecheval/sources.py": "9cc3a7fc2f06083170dba6757577da7bd00bf2525f225b0850413ed71ec6112c",
+    "src/speecheval/transcripts.py": "9f61b340cd609f52cd141083dc00810091abbfbbe6ed3b4c405e70d7c777796d",
+    "src/speecheval/triage.py": "3491a79fd051341049d01680bed7a32e78701c69c933c3dc143c7def392f2169",
+    "src/speecheval/tune_v2.py": "f8012aad7c6edfb56aaf5cbbba37f0f3e7882532053cfe85ee0e1de7de5062dc",
+    "src/speecheval/validation.py": "a75f1dec10b795b4ffab959145aa96b551a89af0fb33f9fd4f697e9890449e55",
+    "src/speecheval/verify.py": "eb9c8d484e11e7321bbf8d41f4e492060970a68a2fbb4aedc24eaa63b8d25860"
+  },
+  "frozen_hash_scope": "scientific code/configuration and retained evaluation outputs; excludes UI display.py and HTTP service.py"
+}

@@ -170,3 +170,128 @@ Four Mode-A hits for each version, plus three Mode-B hits for each version. A/B 
 | v2 | [reagan_challenger__user__take03](http://localhost:8080/results/957a6bb4d47b5aed5800fc67) | B | missing_pause | 63.205-63.235 | 63.205-63.235 | 63.20–63.23 s, "tragedy. But": you left no pause after "tragedy." where your previous take pause 0.40 s (0.40 s shorter, more than 10 SD below). The listener gets no breathing space. |
 
 Suggested demonstrable primary hit: frozen v1 Gettysburg take02 Mode B, awkward pause at larger|sense, detected and labelled 29.900-31.470 s. This is a declared recorder-confirmed pause, not an independent perceptual rating.
+
+## Why mostly pause flags
+
+Read-only diagnosis of frozen v1 genuine takes. No detector, threshold, score or feature changes; no new human inference or synthetic test benchmark evaluation. All recorder-confirmed declared flaws are listed below (26 A/B comparisons of 13 labels). Monotone and mumbling were declared in take03, not take02. G = Gettysburg, R = Reagan Challenger. Take04 has unknown labels and contributes only to the flags table, not the distributions or hit counts.
+
+**Feature evidence and near misses.** A/B use ±3.5 SD. Rate is the 3-word-window syllable rate (one neighbour on either side, restricted to the sentence), pitchvar is window pitch standard deviation, loud is window mean intensity relative to the speaker median, and clarity is window mean high-band energy ratio. Mumbling evaluates clarity alone. Pause is the gap before the boundary word. z = (transformed measured value − reference centre) / shrunk reference sigma. Measured and reference values below are in physical units; z is calculated after the stated transform, rounded to the detector’s four significant digits. Each row shows the strongest z **in the flaw direction** within the exact declared span, plus median z and threshold-crossing word count. It does not represent a unit-averaged detector or imply a hit. Full per-word values and reference sigma are in `phase10_human_near_misses.json`.
+
+Non-pause rules require at least 3 flagged words in a sentence with at most 1 intervening word; unmatched/invalid evidence breaks a run. Pause flags additionally require gap ≥0.45 s (awkward), or reference gap ≥0.3 s and participant gap ≤40% of reference (missing). Ordered containment suppression still applies. A hit below means the original frozen same-type, one-to-one strict IoU ≥0.3 pair; a flag elsewhere is not a labelled hit.
+
+| Take | Mode | Unit / flaw | Feature (physical units) | Measured | Reference | z (strongest signed) | Median z | Threshold | Words crossing / finite | Primary hit |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---|
+| G take02 | A | 4 / rushing | rate (syllables/s (log transformed)) | 4.762 | 2.778 | 5.26 | 2.705 | 3.5 | 8/26 | no |
+| G take02 | A | 6 / awkward_pause | pause (seconds (log +0.05)) | 1.57 | 6.93889e-18 | 6024 | 6024 | 3.5 | 1/1 | yes |
+| G take02 | A | 8 / too_quiet | loud (dB relative to speaker median) | -5.259 | -8.7095 | 0.7644 | 2.00755 | 3.5 | 0/4 | no |
+| G take02 | B | 4 / rushing | rate (syllables/s (log transformed)) | 4.412 | 2.703 | 3.284 | 1.444 | 3.5 | 0/26 | no |
+| G take02 | B | 6 / awkward_pause | pause (seconds (log +0.05)) | 1.57 | 6.93889e-18 | 3810 | 3810 | 3.5 | 1/1 | yes |
+| G take02 | B | 8 / too_quiet | loud (dB relative to speaker median) | -7.414 | -0.136 | -2.788 | -1.22288 | 3.5 | 0/4 | no |
+| G take03 | A | 2 / monotone | pitchvar (semitones (log +0.5)) | 1.198 | 2.99258 | -3.249 | 0.28975 | 3.5 | 0/24 | no |
+| G take03 | A | 7 / mumbling | clarity (high-band ratio dB) | -18.27 | -14.575 | -0.9724 | 0.2891 | 3.5 | 0/21 | no |
+| G take03 | A | 8 / missing_pause | pause (seconds (log +0.05)) | 6.93889e-18 | 1.38652 | -13.09 | -13.09 | 3.5 | 1/1 | yes |
+| G take03 | A | 9 / dragging | rate (syllables/s (log transformed)) | 2.206 | 3.10912 | -2.614 | 1.037 | 3.5 | 0/3 | no |
+| G take03 | B | 2 / monotone | pitchvar (semitones (log +0.5)) | 0.7396 | 3.117 | -4.368 | -0.87785 | 3.5 | 1/24 | no |
+| G take03 | B | 7 / mumbling | clarity (high-band ratio dB) | -18.27 | -15.87 | -0.5563 | 0.1321 | 3.5 | 0/21 | no |
+| G take03 | B | 8 / missing_pause | pause (seconds (log +0.05)) | 6.93889e-18 | 0.26 | -1999 | -1999 | 3.5 | 1/1 | no |
+| G take03 | B | 9 / dragging | rate (syllables/s (log transformed)) | 2.206 | 2.256 | -0.1502 | 2.052 | 3.5 | 0/3 | no |
+| R take02 | A | 10 / rushing | rate (syllables/s (log transformed)) | 8.108 | 4 | 4.736 | 2.2005 | 3.5 | 3/18 | no |
+| R take02 | A | 15 / too_quiet | loud (dB relative to speaker median) | -6.128 | -7.424 | 0.4965 | 0.8218 | 3.5 | 0/4 | no |
+| R take02 | A | 16 / awkward_pause | pause (seconds (log +0.05)) | 1.56 | 6.93889e-18 | 3803 | 3803 | 3.5 | 1/1 | yes |
+| R take02 | B | 10 / rushing | rate (syllables/s (log transformed)) | 6.667 | 5.263 | 1.585 | 0.6228 | 3.5 | 0/17 | no |
+| R take02 | B | 15 / too_quiet | loud (dB relative to speaker median) | -6.53 | -3.72 | -1.077 | 0.76505 | 3.5 | 0/4 | no |
+| R take02 | B | 16 / awkward_pause | pause (seconds (log +0.05)) | 1.56 | 0.37 | 1472 | 1472 | 3.5 | 1/1 | yes |
+| R take03 | A | 6 / monotone | pitchvar (semitones (log +0.5)) | 1.659 | 1.774 | -0.2087 | 2.1295 | 3.5 | 0/18 | no |
+| R take03 | A | 9 / mumbling | clarity (high-band ratio dB) | -15.75 | -3.578 | -2.821 | -1.776 | 3.5 | 0/14 | no |
+| R take03 | A | 14 / missing_pause | pause (seconds (log +0.05)) | 6.93889e-18 | 0.772 | -3067 | -3067 | 3.5 | 1/1 | yes |
+| R take03 | B | 6 / monotone | pitchvar (semitones (log +0.5)) | 1.659 | 5.576 | -3.98 | -1.1875 | 3.5 | 1/18 | no |
+| R take03 | B | 9 / mumbling | clarity (high-band ratio dB) | -23.74 | -17.84 | -1.368 | 0.08113 | 3.5 | 0/13 | no |
+| R take03 | B | 14 / missing_pause | pause (seconds (log +0.05)) | 6.93889e-18 | 0.4 | -2407 | -2407 | 3.5 | 1/1 | yes |
+
+**All stored flags by type per take.** Includes matched and unmatched flags; zeros are explicit.
+
+| Take | Mode | Rushing | Dragging | Monotone | Too quiet | Mumbling | Awkward pause | Missing pause | Total |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| G take01 | A | 1 | 0 | 0 | 0 | 0 | 1 | 7 | 9 |
+| G take02 | A | 2 | 0 | 0 | 0 | 0 | 1 | 4 | 7 |
+| G take02 | B | 0 | 0 | 0 | 0 | 0 | 5 | 8 | 13 |
+| G take03 | A | 2 | 0 | 0 | 0 | 0 | 2 | 9 | 13 |
+| G take03 | B | 0 | 0 | 1 | 0 | 0 | 8 | 8 | 17 |
+| G take04 (unknown labels) | A | 1 | 0 | 0 | 0 | 0 | 1 | 6 | 8 |
+| R take01 | A | 0 | 0 | 0 | 0 | 0 | 3 | 11 | 14 |
+| R take02 | A | 1 | 2 | 0 | 0 | 0 | 6 | 13 | 22 |
+| R take02 | B | 0 | 1 | 0 | 0 | 0 | 9 | 4 | 14 |
+| R take03 | A | 1 | 1 | 0 | 0 | 0 | 3 | 11 | 16 |
+| R take03 | B | 0 | 0 | 0 | 0 | 0 | 12 | 7 | 19 |
+| R take04 (unknown labels) | A | 0 | 0 | 0 | 0 | 0 | 2 | 13 | 15 |
+
+**Distribution of |z| on the scored takes.** A: six takes01–03. B: four current takes02–03 versus own take01. Pause flags use each retained region’s evidence z. Non-pause feature samples use every finite word × feature in rate/pitchvar/loud/clarity, including subthreshold values. These populations have different sampling units; repeated overlapping windows are correlated. All pause-feature and non-pause-flag distributions are also shown to make the distinction explicit.
+
+| Mode | Population | n | Minimum | p25 | Median | p75 | p95 | Maximum |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| A | pause flags | 71 | 3.953 | 11.315 | 1150 | 2193 | 3895.5 | 6024 |
+| A | non-pause flags | 10 | 3.929 | 4.1032 | 4.1865 | 4.3442 | 6.1814 | 7.369 |
+| A | non-pause features (all words) | 5909 | 0 | 0.5716 | 1.23 | 2.085 | 3.8096 | 9.58 |
+| A | pause feature (all words) | 1398 | 0 | 0 | 0 | 0.8261 | 1786.4 | 6024 |
+| B | pause flags | 61 | 19.05 | 315.1 | 1122 | 2331 | 2875 | 3810 |
+| B | non-pause features (all words) | 3944 | 0 | 0.39537 | 0.84505 | 1.472 | 2.8859 | 6.806 |
+| B | pause feature (all words) | 924 | 0 | 0 | 0 | 43.363 | 1847 | 3810 |
+| B | non-pause flags | 2 | 4.635 | 4.7505 | 4.866 | 4.9815 | 5.0739 | 5.097 |
+
+| Mode / population | Absolute z <1 | 1–<2 | 2–<3.5 | 3.5–<10 | 10–<100 | 100–<1000 | 1000–<10000 | ≥10000 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| A / pause flags | 0 | 0 | 0 | 17 | 8 | 6 | 40 | 0 |
+| A / non-pause features (all words) | 2449 | 1855 | 1203 | 402 | 0 | 0 | 0 | 0 |
+| B / pause flags | 0 | 0 | 0 | 0 | 7 | 22 | 32 | 0 |
+| B / non-pause features (all words) | 2257 | 1165 | 434 | 88 | 0 | 0 | 0 | 0 |
+
+**Why pauses dominate.** The pooled training pause spread is near zero because most aligned word boundaries have no gap; its median robust spread is zero before the numerical safeguard. There is no substantive pause sigma floor in v1: `reference.py` has a generic numerical `SCALE_FLOOR = .001` in transformed units, but no pause-specific timing/noise floor. The pooled pause sigma is .001; shrinking toward it can make the per-boundary sigma even smaller. This is not literally a zero denominator. Tiny timing changes at low-spread boundaries can therefore produce very large z, while real monotone/mumbling/rate/volume edits may remain within their broader reference distributions or fail the region/localization gates. Some Mode-A boundaries have substantial reader spread, so not every pause has tiny sigma. The comparison is especially sensitive in B (one previous take) and Reagan A (one expert reader). No fix in v1.
+
+| Mode | Reference feature sigma (transformed units; word-weighted) | n | Minimum | Median | p95 | Maximum |
+|---|---|---:|---:|---:|---:|---:|
+| A | clarity | 1478 | 2.93345 | 4.31403 | 5.7062 | 7.63711 |
+| A | loud | 1478 | 1.69505 | 2.61008 | 7.19489 | 11.194 |
+| A | pitchvar | 1475 | 0.180199 | 0.280344 | 0.429282 | 0.660461 |
+| A | rate | 1478 | 0.102469 | 0.149199 | 0.255762 | 0.477201 |
+| A | pause | 1398 | 0.00057735 | 0.000912871 | 0.661693 | 1.47299 |
+| B | clarity | 986 | 4.31403 | 4.31403 | 4.31403 | 4.31403 |
+| B | loud | 986 | 2.61008 | 2.61008 | 2.61008 | 2.61008 |
+| B | pitchvar | 986 | 0.280344 | 0.280344 | 0.280344 | 0.280344 |
+| B | rate | 986 | 0.149199 | 0.149199 | 0.149199 | 0.149199 |
+| B | pause | 924 | 0.000912871 | 0.000912871 | 0.000912871 | 0.000912871 |
+
+Smallest stored awkward-pause differences (still subject to the ≥0.45 s gate): 0.49 s versus 0.48 s, Δ=0.01 s, z=20.48; 0.5 s versus 0.49 s, Δ=0.01 s, z=20.1; 0.53 s versus 0.52 s, Δ=0.01 s, z=19.05.
+
+Reproduce this read-only analysis: `env -u PYTHONPATH .venv/bin/python scripts/diagnose_human_near_misses.py`. Stored artifact hashes are checked against the retained producer state; runtime/model-path identity is not re-executed or rewritten. Genuine evaluation bytes and primary pairs remain unchanged.
+
+### DEV rule activation audit
+
+No detector activation bug found; no post-hoc detector bug fix and **zero benchmark test reruns**. All seven A/B rules and all five supported C-lite rules fire in isolated feature probes using the unchanged configuration. The probes are fabricated feature evidence, separate from the real DEV audio runs below. A non-hit on one selected audio file does not mean the rule is disabled. C-lite intentionally does not implement mumbling or awkward_pause; its too_quiet rule measures final intensity drop, not general quietness. C retains its frozen feature threshold **2.0**, not A/B’s 3.5.
+
+One preselected single-flaw synthetic DEV file per type was run once in each mode (7 files, 21 mode runs), using retained real alignment/features. A uses the train-reader distribution excluding the source speaker; B uses that DEV speaker’s original recording; C uses the retained train-only sentence norms. Selection was based on stored DEV examples and strongest injection severity (severity 4 trail shape for quietness, since C supports sentence-final drop); it is a diagnostic sample, not a new performance estimate. No new feature extraction or benchmark test evaluation.
+
+| Injected flaw / recording | Severity | Mode | Target type supported | All fired types (counts) | Target type fires anywhere | Same-type IoU ≥0.3 hit |
+|---|---:|---|---|---|---|---|
+| o_captain__lv_s__rushing_s5_01 | 5 | A | yes | awkward_pause (2), rushing (1), too_quiet (1) | yes | yes |
+| o_captain__lv_s__rushing_s5_01 | 5 | B | yes | awkward_pause (5), rushing (1) | yes | yes |
+| o_captain__lv_s__rushing_s5_01 | 5 | C | yes | dragging (3), missing_pause (1), too_quiet (1) | no | no |
+| gettysburg__lv_pc__dragging_s5_01 | 5 | A | yes | awkward_pause (1) | no | no |
+| gettysburg__lv_pc__dragging_s5_01 | 5 | B | yes | awkward_pause (3), dragging (1) | yes | yes |
+| gettysburg__lv_pc__dragging_s5_01 | 5 | C | yes | too_quiet (1) | no | no |
+| o_captain__lv_sjs__monotone_s5_01 | 5 | A | yes | awkward_pause (7), too_quiet (3) | no | no |
+| o_captain__lv_sjs__monotone_s5_01 | 5 | B | yes | awkward_pause (7), monotone (1) | yes | yes |
+| o_captain__lv_sjs__monotone_s5_01 | 5 | C | yes | dragging (2), missing_pause (2), monotone (6), rushing (1) | yes | no |
+| o_captain__lv_s__too_quiet_s4_01 | 4 | A | yes | awkward_pause (2), too_quiet (1) | yes | no |
+| o_captain__lv_s__too_quiet_s4_01 | 4 | B | yes | awkward_pause (4) | no | no |
+| o_captain__lv_s__too_quiet_s4_01 | 4 | C | yes | dragging (3), missing_pause (1), too_quiet (1) | yes | no |
+| gettysburg__lv_rk__mumbling_s5_01 | 5 | A | yes | dragging (1), missing_pause (1), mumbling (1) | yes | yes |
+| gettysburg__lv_rk__mumbling_s5_01 | 5 | B | yes | awkward_pause (2), mumbling (1), rushing (1) | yes | yes |
+| gettysburg__lv_rk__mumbling_s5_01 | 5 | C | unsupported | too_quiet (1) | no | no |
+| o_captain__lv_s__awkward_pause_s5_01 | 5 | A | yes | awkward_pause (3), too_quiet (2) | yes | yes |
+| o_captain__lv_s__awkward_pause_s5_01 | 5 | B | yes | awkward_pause (4) | yes | yes |
+| o_captain__lv_s__awkward_pause_s5_01 | 5 | C | unsupported | dragging (3), missing_pause (1), too_quiet (1) | no | no |
+| o_captain__lv_s__missing_pause_s5_01 | 5 | A | yes | awkward_pause (2), missing_pause (1), too_quiet (1) | yes | yes |
+| o_captain__lv_s__missing_pause_s5_01 | 5 | B | yes | awkward_pause (3), missing_pause (1) | yes | yes |
+| o_captain__lv_s__missing_pause_s5_01 | 5 | C | yes | dragging (3), missing_pause (2), too_quiet (1) | yes | no |
+
+Every A/B path calls the same `detect()` function. Its non-pause loop evaluates rate (positive rushing, negative dragging), pitchvar (negative monotone), loud (negative too_quiet), and clarity (negative mumbling); its boundary loop evaluates both pause types. C’s `sentence_regions()` evaluates rate both directions, pitchrange, final_drop and end_pause. The probes confirm all branches produce regions. DEV audio misses reflect measured evidence, threshold/region gates and word-versus-sentence aggregation, not disabled code. Full flags, references, activation probes and frozen hashes: `phase10_rule_coverage.json`. Reproduce DEV only: `env -u PYTHONPATH .venv/bin/python scripts/diagnose_rule_coverage.py`.

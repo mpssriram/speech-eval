@@ -1,0 +1,131 @@
+{
+  "analysis_id": "23d47562f995",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 126.0,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "gettysburg__lv_wt__mumbling_s4_01",
+  "reference": {
+    "baseline_recording_id": "gettysburg__lv_dj__orig",
+    "exclude_speaker": "lv_wt",
+    "kind": "distribution",
+    "n_readers": 10,
+    "reference_version": "2fbbbb437effc35097c3b5c586e4346dcca94547607850a01649fa070d36a27b",
+    "text_id": "gettysburg"
+  },
+  "regions": [
+    {
+      "end": 27.89,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.57,
+        "reference": 0.9494,
+        "unit": "s",
+        "z": 5.302
+      },
+      "explanation": "26.3\u201327.9 s, \"endure. We\": a 1.6 s pause between \"endure.\" and \"We\" where good readers pause 0.95 s (0.62 s longer, 5.3 SD above). It breaks the sentence.",
+      "mean_abs_z": 5.302,
+      "severity": 4,
+      "start": 26.32,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 54,
+      "word_start": 53
+    },
+    {
+      "end": 46.32,
+      "evidence": {
+        "feature": "clarity",
+        "participant": -41.98,
+        "reference": -19.27,
+        "unit": "dB",
+        "z": -5.665
+      },
+      "explanation": "44.4\u201346.3 s, \"altogether fitting and proper\": high-frequency energy (consonant clarity) is 23 dB lower than good readers (5.7 SD below). Words may sound muffled.",
+      "mean_abs_z": 5.665,
+      "severity": 4,
+      "start": 44.44,
+      "tags": [],
+      "type": "mumbling",
+      "word_end": 96,
+      "word_start": 93
+    },
+    {
+      "end": 63.485,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.5,
+        "unit": "s",
+        "z": -7.125
+      },
+      "explanation": "63.5\u201363.5 s, \"it, far\": you paused 6.9e-18 s after \"it,\" where good readers pause 0.5 s (0.5 s shorter, 7.1 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 7.125,
+      "severity": 4,
+      "start": 63.455,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 133,
+      "word_start": 132
+    },
+    {
+      "end": 84.055,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.3279,
+        "unit": "s",
+        "z": -4.811
+      },
+      "explanation": "84.0\u201384.1 s, \"work which\": you paused 6.9e-18 s after \"work\" where good readers pause 0.33 s (0.33 s shorter, 4.8 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 4.811,
+      "severity": 4,
+      "start": 84.025,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 178,
+      "word_start": 177
+    },
+    {
+      "end": 125.06,
+      "evidence": {
+        "feature": "pitchvar",
+        "participant": 0.8864,
+        "reference": 2.484,
+        "unit": "semitones",
+        "z": -4.191
+      },
+      "explanation": "123.9\u2013125.1 s, \"not perish from\": your pitch varied by 0.89 semitones; good readers vary by 2.5 (64% less variation, 4.2 SD below). The phrase sounds flat. This is the speech's final sentence.",
+      "mean_abs_z": 4.191,
+      "severity": 4,
+      "start": 123.86,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "monotone",
+      "word_end": 268,
+      "word_start": 266
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 9.4,
+    "overall": 8.9,
+    "pace": 10.0,
+    "pauses": 5.2,
+    "pitch": 9.6,
+    "volume": 10.0
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "count": 3,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

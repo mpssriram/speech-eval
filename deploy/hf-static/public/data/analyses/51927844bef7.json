@@ -1,0 +1,169 @@
+{
+  "analysis_id": "51927844bef7",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 80.304,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "o_captain__lv_th__dragging_s5_01",
+  "reference": {
+    "baseline_recording_id": "o_captain__lv_mac__orig",
+    "exclude_speaker": "lv_th",
+    "kind": "distribution",
+    "n_readers": 8,
+    "reference_version": "17dbc1e30408003dd9527c6070d18b65ad431ddaa5f084a179b45ae9f27e518c",
+    "text_id": "o_captain"
+  },
+  "regions": [
+    {
+      "end": 18.93,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.07,
+        "reference": 0.6202,
+        "unit": "s",
+        "z": -3.731
+      },
+      "explanation": "18.9\u201318.9 s, \"heart! O\": you paused 0.07 s after \"heart!\" where good readers pause 0.62 s (0.55 s shorter, 3.7 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 3.731,
+      "severity": 3,
+      "start": 18.86,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 49,
+      "word_start": 48
+    },
+    {
+      "end": 20.88,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.17,
+        "reference": 0.5971,
+        "unit": "s",
+        "z": -6.466
+      },
+      "explanation": "20.7\u201320.9 s, \"red, Where\": you paused 0.17 s after \"red,\" where good readers pause 0.6 s (0.43 s shorter, 6.5 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 6.466,
+      "severity": 4,
+      "start": 20.71,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 55,
+      "word_start": 54
+    },
+    {
+      "end": 25.07,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.42,
+        "reference": 1.391,
+        "unit": "s",
+        "z": -4.623
+      },
+      "explanation": "24.6\u201325.1 s, \"dead. O\": you paused 0.42 s after \"dead.\" where good readers pause 1.4 s (0.97 s shorter, 4.6 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 4.623,
+      "severity": 4,
+      "start": 24.65,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 66,
+      "word_start": 65
+    },
+    {
+      "end": 27.1,
+      "evidence": {
+        "feature": "pitchvar",
+        "participant": 0.451,
+        "reference": 2.729,
+        "unit": "semitones",
+        "z": -5.346
+      },
+      "explanation": "25.8\u201327.1 s, \"my Captain! rise up\": your pitch varied by 0.45 semitones; good readers vary by 2.7 (83% less variation, 5.3 SD below). The phrase sounds flat.",
+      "mean_abs_z": 5.346,
+      "severity": 4,
+      "start": 25.8,
+      "tags": [],
+      "type": "monotone",
+      "word_end": 71,
+      "word_start": 68
+    },
+    {
+      "end": 65.36,
+      "evidence": {
+        "feature": "pitchvar",
+        "participant": 0.4025,
+        "reference": 2.011,
+        "unit": "semitones",
+        "z": -4.682
+      },
+      "explanation": "61.1\u201365.4 s, \"and sound, its voyage closed and done,\": your pitch varied by 0.4 semitones; good readers vary by 2 (80% less variation, 4.7 SD below). The phrase sounds flat. This region reaches a sentence ending.",
+      "mean_abs_z": 4.682,
+      "severity": 4,
+      "start": 61.09,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "monotone",
+      "word_end": 168,
+      "word_start": 162
+    },
+    {
+      "end": 65.36,
+      "evidence": {
+        "feature": "rate",
+        "participant": 1.67,
+        "reference": 2.962,
+        "unit": "syllables/s",
+        "z": -4.223
+      },
+      "explanation": "61.8\u201365.4 s, \"voyage closed and done,\": you spoke at 1.7 vs 3 syllables/s for good readers (1.8\u00d7 slower, 4.2 SD below). The phrase loses momentum. This region reaches a sentence ending.",
+      "mean_abs_z": 4.223,
+      "severity": 4,
+      "start": 61.84,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "dragging",
+      "word_end": 168,
+      "word_start": 165
+    },
+    {
+      "end": 73.05,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.17,
+        "reference": 0.4841,
+        "unit": "s",
+        "z": -4.241
+      },
+      "explanation": "72.9\u201373.0 s, \"bells! But\": you paused 0.17 s after \"bells!\" where good readers pause 0.48 s (0.31 s shorter, 4.2 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 4.241,
+      "severity": 4,
+      "start": 72.88,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 187,
+      "word_start": 186
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 7.7,
+    "pace": 8.2,
+    "pauses": 4.0,
+    "pitch": 7.2,
+    "volume": 10.0
+  },
+  "text_id": "o_captain",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "count": 0,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}
