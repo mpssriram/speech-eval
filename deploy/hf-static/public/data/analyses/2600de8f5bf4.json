@@ -1,0 +1,79 @@
+{
+  "analysis_id": "2600de8f5bf4",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 108.531,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "gettysburg__lv_tg__rushing_s5_01",
+  "reference": {
+    "baseline_recording_id": "gettysburg__lv_dj__orig",
+    "exclude_speaker": "lv_tg",
+    "kind": "distribution",
+    "n_readers": 10,
+    "reference_version": "4819f30a0854d7d25c8933537f68c59bcc823b394d37691377ad4c86f2ef2754",
+    "text_id": "gettysburg"
+  },
+  "regions": [
+    {
+      "end": 9.69,
+      "evidence": {
+        "feature": "rate",
+        "participant": 8.176,
+        "reference": 4.257,
+        "unit": "syllables/s",
+        "z": 4.287
+      },
+      "explanation": "8.7\u20139.7 s, \"the proposition that all men\": you spoke at 8.2 syllables/s; good readers average 4.3 (1.9\u00d7 faster, 4.3 SD above). Rushing this phrase reduces its weight. This is the opening sentence.",
+      "mean_abs_z": 4.287,
+      "severity": 4,
+      "start": 8.72,
+      "tags": [
+        "first_sentence"
+      ],
+      "type": "rushing",
+      "word_end": 26,
+      "word_start": 22
+    },
+    {
+      "end": 97.85,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.03,
+        "reference": 0.4275,
+        "unit": "s",
+        "z": -4.977
+      },
+      "explanation": "97.8\u201397.8 s, \"people, by\": you paused 0.03 s after \"people,\" where good readers pause 0.43 s (0.4 s shorter, 5 SD below). The listener gets no breathing space. This is the speech's final sentence.",
+      "mean_abs_z": 4.977,
+      "severity": 4,
+      "start": 97.82,
+      "tags": [
+        "final_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 259,
+      "word_start": 258
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 9.6,
+    "pace": 9.6,
+    "pauses": 8.4,
+    "pitch": 10.0,
+    "volume": 10.0
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "count": 5,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}

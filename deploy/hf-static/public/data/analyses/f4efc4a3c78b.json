@@ -1,0 +1,264 @@
+{
+  "analysis_id": "f4efc4a3c78b",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 86.81,
+  "key_moments": [
+    {
+      "end": 0.29,
+      "kind": "number_rate",
+      "message": "guideline: key figure \"Four\" at 3.4 vs own median 5.3 syllables/s.",
+      "passed": true,
+      "start": 0.05,
+      "words": "Four"
+    },
+    {
+      "end": 0.29,
+      "kind": "number_pause",
+      "message": "guideline: pause before \"Four\" is 0 s (target \u22650.15 s).",
+      "passed": false,
+      "start": 0.05,
+      "words": "Four"
+    },
+    {
+      "end": 1.02,
+      "kind": "number_rate",
+      "message": "guideline: key figure \"seven\" at 6.8 vs own median 5.3 syllables/s.",
+      "passed": false,
+      "start": 0.78,
+      "words": "seven"
+    },
+    {
+      "end": 1.02,
+      "kind": "number_pause",
+      "message": "guideline: pause before \"seven\" is 0 s (target \u22650.15 s).",
+      "passed": false,
+      "start": 0.78,
+      "words": "seven"
+    },
+    {
+      "end": 86.55,
+      "kind": "strong_ending",
+      "message": "guideline: final sentence drop -0.058 dB and rate z=1.4; targets \u2265\u22123 dB and z\u22641.",
+      "passed": false,
+      "start": 56.81,
+      "words": "It is rather for us to be here dedicated to the great task remaining before us that from these honored dead we take increased devotion to that cause for which they gave the full measure of devotion that we here highly resolve that these dead shall not have died in vain that this nation, under God, shall have a new birth of freedom and the government that government of the people, by the people, for the people, shall not perish from the earth."
+    },
+    {
+      "end": 8.79,
+      "kind": "first_sentence",
+      "message": "guideline: opening sentence identified; no additional numerical rule or penalty.",
+      "passed": null,
+      "start": 0.05,
+      "words": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
+    }
+  ],
+  "mode": "C",
+  "progress": null,
+  "recording_id": "gettysburg__user__input_b32e8ab739c4",
+  "reference": {
+    "baseline_recording_id": null,
+    "kind": "norms",
+    "n_readers": 18,
+    "reference_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28"
+  },
+  "regions": [
+    {
+      "end": 8.79,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.897,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.564
+      },
+      "explanation": "0.1\u20138.8 s, \"Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.\": rushing; rate 5.9 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.6.",
+      "mean_abs_z": 2.564,
+      "sentence": 0,
+      "severity": 1,
+      "start": 0.05,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 29,
+      "word_start": 0
+    },
+    {
+      "end": 8.79,
+      "evidence": {
+        "feature": "final_drop",
+        "participant": -8.034,
+        "reference": 0.5853,
+        "unit": "dB",
+        "z": -2.112
+      },
+      "explanation": "8.1\u20138.8 s, \"created equal.\": too quiet; final_drop -8 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.1.",
+      "mean_abs_z": 2.112,
+      "sentence": 0,
+      "severity": 1,
+      "start": 8.14,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "too_quiet",
+      "word_end": 29,
+      "word_start": 28
+    },
+    {
+      "end": 15.95,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.438,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.123
+      },
+      "explanation": "9.3\u201315.9 s, \"Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure.\": rushing; rate 5.4 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.1.",
+      "mean_abs_z": 2.123,
+      "sentence": 1,
+      "severity": 1,
+      "start": 9.33,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 53,
+      "word_start": 30
+    },
+    {
+      "end": 26.61,
+      "evidence": {
+        "feature": "final_drop",
+        "participant": -8.091,
+        "reference": 0.5853,
+        "unit": "dB",
+        "z": -2.126
+      },
+      "explanation": "26.2\u201326.6 s, \"might live.\": too quiet; final_drop -8.1 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.1.",
+      "mean_abs_z": 2.126,
+      "sentence": 3,
+      "severity": 1,
+      "start": 26.19,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "too_quiet",
+      "word_end": 90,
+      "word_start": 89
+    },
+    {
+      "end": 35.75,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.828,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.5
+      },
+      "explanation": "30.6\u201335.8 s, \"But, in a larger sense, we cannot dedicate we cannot consecrate we cannot hallow this ground.\": rushing; rate 5.8 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.5.",
+      "mean_abs_z": 2.5,
+      "sentence": 5,
+      "severity": 1,
+      "start": 30.63,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 116,
+      "word_start": 101
+    },
+    {
+      "end": 35.75,
+      "evidence": {
+        "feature": "final_drop",
+        "participant": -7.882,
+        "reference": 0.5853,
+        "unit": "dB",
+        "z": -2.075
+      },
+      "explanation": "35.3\u201335.8 s, \"this ground.\": too quiet; final_drop -7.9 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.1.",
+      "mean_abs_z": 2.075,
+      "sentence": 5,
+      "severity": 1,
+      "start": 35.34,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "too_quiet",
+      "word_end": 116,
+      "word_start": 115
+    },
+    {
+      "end": 43.27,
+      "evidence": {
+        "feature": "final_drop",
+        "participant": -7.795,
+        "reference": 0.5853,
+        "unit": "dB",
+        "z": -2.054
+      },
+      "explanation": "42.7\u201343.3 s, \"or detract.\": too quiet; final_drop -7.8 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.1.",
+      "mean_abs_z": 2.054,
+      "sentence": 6,
+      "severity": 1,
+      "start": 42.74,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "too_quiet",
+      "word_end": 136,
+      "word_start": 135
+    },
+    {
+      "end": 48.79,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.508,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.193
+      },
+      "explanation": "43.8\u201348.8 s, \"The world will little note, nor long remember what we say here, but it can never forget what they did here.\": rushing; rate 5.5 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.2.",
+      "mean_abs_z": 2.193,
+      "sentence": 7,
+      "severity": 1,
+      "start": 43.78,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 157,
+      "word_start": 137
+    },
+    {
+      "end": 55.67,
+      "evidence": {
+        "feature": "rate",
+        "participant": 5.645,
+        "reference": 3.681,
+        "unit": "syllables/s",
+        "z": 2.327
+      },
+      "explanation": "49.2\u201355.7 s, \"It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced.\": rushing; rate 5.6 syllables/s versus good speakers in our dataset (typical range 3.1\u20134.1); z=2.3.",
+      "mean_abs_z": 2.327,
+      "sentence": 8,
+      "severity": 1,
+      "start": 49.16,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 183,
+      "word_start": 158
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 9.0,
+    "pace": 6.3,
+    "pauses": 10.0,
+    "pitch": 10.0,
+    "volume": 9.8
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "supplied",
+  "warnings": [
+    {
+      "type": "limited_sentence_norms_mode"
+    }
+  ]
+}

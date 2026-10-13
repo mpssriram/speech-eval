@@ -1,0 +1,333 @@
+{
+  "analysis_id": "2801a9bd4313",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 79.43,
+  "key_moments": [],
+  "mode": "A",
+  "progress": null,
+  "recording_id": "reagan_challenger__user__input_990df0a0f76b",
+  "reference": {
+    "baseline_recording_id": "reagan_challenger__reagan__orig",
+    "exclude_speaker": null,
+    "kind": "distribution",
+    "n_readers": 1,
+    "reference_version": "cd657c109de938f682df9699c0b6eaf1aaf4e7565cad8d1b2e2d8c05578658ee",
+    "text_id": "reagan_challenger"
+  },
+  "regions": [
+    {
+      "end": 7.195,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.45,
+        "unit": "s",
+        "z": -2522.0
+      },
+      "explanation": "7.2\u20137.2 s, \"have led\": you paused 6.9e-18 s after \"have\" where good readers pause 0.45 s (0.45 s shorter, 2.5e+03 SD below). The listener gets no breathing space. This is the opening sentence.",
+      "mean_abs_z": 2522.0,
+      "severity": 4,
+      "start": 7.165,
+      "tags": [
+        "first_sentence"
+      ],
+      "type": "missing_pause",
+      "word_end": 27,
+      "word_start": 26
+    },
+    {
+      "end": 18.065,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.32,
+        "unit": "s",
+        "z": -2193.0
+      },
+      "explanation": "18.0\u201318.1 s, \"with all\": you paused 6.9e-18 s after \"with\" where good readers pause 0.32 s (0.32 s shorter, 2.2e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2193.0,
+      "severity": 4,
+      "start": 18.035,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 63,
+      "word_start": 62
+    },
+    {
+      "end": 20.07,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.5,
+        "reference": 0.461,
+        "unit": "s",
+        "z": 80.57
+      },
+      "explanation": "19.6\u201320.1 s, \"country. This\": a 0.5 s pause between \"country.\" and \"This\" where good readers pause 0.46 s (0.039 s longer, 81 SD above). It breaks the sentence.",
+      "mean_abs_z": 80.57,
+      "severity": 4,
+      "start": 19.57,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 70,
+      "word_start": 69
+    },
+    {
+      "end": 21.88,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.5,
+        "reference": 1.268,
+        "unit": "s",
+        "z": -957.4
+      },
+      "explanation": "21.4\u201321.9 s, \"loss. Nineteen\": you paused 0.5 s after \"loss.\" where good readers pause 1.3 s (0.77 s shorter, 9.6e+02 SD below). The listener gets no breathing space. This phrase contains a number.",
+      "mean_abs_z": 957.4,
+      "severity": 4,
+      "start": 21.38,
+      "tags": [
+        "contains_number"
+      ],
+      "type": "missing_pause",
+      "word_end": 76,
+      "word_start": 75
+    },
+    {
+      "end": 23.62,
+      "evidence": {
+        "feature": "rate",
+        "participant": 6.609,
+        "reference": 3.565,
+        "unit": "syllables/s",
+        "z": 4.137
+      },
+      "explanation": "22.6\u201323.6 s, \"ago, almost to the day,\": you spoke at 6.6 syllables/s; good readers average 3.6 (1.9\u00d7 faster, 4.1 SD above). Rushing this phrase reduces its weight.",
+      "mean_abs_z": 4.137,
+      "severity": 4,
+      "start": 22.58,
+      "tags": [],
+      "type": "rushing",
+      "word_end": 82,
+      "word_start": 78
+    },
+    {
+      "end": 29.67,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.82,
+        "reference": 0.804,
+        "unit": "s",
+        "z": 20.33
+      },
+      "explanation": "28.9\u201329.7 s, \"flight; We've\": a 0.82 s pause between \"flight;\" and \"We've\" where good readers pause 0.8 s (0.016 s longer, 20 SD above). It breaks the sentence.",
+      "mean_abs_z": 20.33,
+      "severity": 4,
+      "start": 28.85,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 102,
+      "word_start": 101
+    },
+    {
+      "end": 35.75,
+      "evidence": {
+        "feature": "rate",
+        "participant": 3.37,
+        "reference": 6.826,
+        "unit": "syllables/s",
+        "z": -4.73
+      },
+      "explanation": "31.8\u201335.8 s, \"And perhaps we've forgotten the courage\": you spoke at 3.4 vs 6.8 syllables/s for good readers (2\u00d7 slower, 4.7 SD below). The phrase loses momentum.",
+      "mean_abs_z": 4.73,
+      "severity": 4,
+      "start": 31.8,
+      "tags": [],
+      "type": "dragging",
+      "word_end": 114,
+      "word_start": 109
+    },
+    {
+      "end": 41.445,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.64,
+        "unit": "s",
+        "z": -2875.0
+      },
+      "explanation": "41.4\u201341.4 s, \"dangers, but\": you paused 6.9e-18 s after \"dangers,\" where good readers pause 0.64 s (0.64 s shorter, 2.9e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2875.0,
+      "severity": 4,
+      "start": 41.415,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 133,
+      "word_start": 132
+    },
+    {
+      "end": 46.29,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.21,
+        "reference": 0.773,
+        "unit": "s",
+        "z": -1262.0
+      },
+      "explanation": "46.1\u201346.3 s, \"heroes: Michael\": you paused 0.21 s after \"heroes:\" where good readers pause 0.77 s (0.56 s shorter, 1.3e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 1262.0,
+      "severity": 4,
+      "start": 46.08,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 146,
+      "word_start": 145
+    },
+    {
+      "end": 49.25,
+      "evidence": {
+        "feature": "pause",
+        "participant": 1.21,
+        "reference": 0.8,
+        "unit": "s",
+        "z": 431.2
+      },
+      "explanation": "48.0\u201349.2 s, \"Scobee, Judith\": a 1.2 s pause between \"Scobee,\" and \"Judith\" where good readers pause 0.8 s (0.41 s longer, 4.3e+02 SD above). It breaks the sentence.",
+      "mean_abs_z": 431.2,
+      "severity": 4,
+      "start": 48.04,
+      "tags": [],
+      "type": "awkward_pause",
+      "word_end": 150,
+      "word_start": 149
+    },
+    {
+      "end": 50.1,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.06,
+        "reference": 0.58,
+        "unit": "s",
+        "z": -1912.0
+      },
+      "explanation": "50.0\u201350.1 s, \"Resnik, Ronald\": you paused 0.06 s after \"Resnik,\" where good readers pause 0.58 s (0.52 s shorter, 1.9e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 1912.0,
+      "severity": 4,
+      "start": 50.04,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 152,
+      "word_start": 151
+    },
+    {
+      "end": 51.67,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.18,
+        "reference": 0.87,
+        "unit": "s",
+        "z": -1519.0
+      },
+      "explanation": "51.5\u201351.7 s, \"McNair, Ellison\": you paused 0.18 s after \"McNair,\" where good readers pause 0.87 s (0.69 s shorter, 1.5e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 1519.0,
+      "severity": 4,
+      "start": 51.49,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 154,
+      "word_start": 153
+    },
+    {
+      "end": 53.07,
+      "evidence": {
+        "feature": "pause",
+        "participant": 0.28,
+        "reference": 0.89,
+        "unit": "s",
+        "z": -1147.0
+      },
+      "explanation": "52.8\u201353.1 s, \"Onizuka, Gregory\": you paused 0.28 s after \"Onizuka,\" where good readers pause 0.89 s (0.61 s shorter, 1.1e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 1147.0,
+      "severity": 4,
+      "start": 52.79,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 156,
+      "word_start": 155
+    },
+    {
+      "end": 59.995,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.91,
+        "unit": "s",
+        "z": -3237.0
+      },
+      "explanation": "60.0\u201360.0 s, \"seven, we\": you paused 6.9e-18 s after \"seven,\" where good readers pause 0.91 s (0.91 s shorter, 3.2e+03 SD below). The listener gets no breathing space. This phrase contains a number.",
+      "mean_abs_z": 3237.0,
+      "severity": 4,
+      "start": 59.965,
+      "tags": [
+        "contains_number"
+      ],
+      "type": "missing_pause",
+      "word_end": 175,
+      "word_start": 174
+    },
+    {
+      "end": 63.235,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.772,
+        "unit": "s",
+        "z": -3067.0
+      },
+      "explanation": "63.2\u201363.2 s, \"tragedy. But\": you paused 6.9e-18 s after \"tragedy.\" where good readers pause 0.77 s (0.77 s shorter, 3.1e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 3067.0,
+      "severity": 4,
+      "start": 63.205,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 187,
+      "word_start": 186
+    },
+    {
+      "end": 73.035,
+      "evidence": {
+        "feature": "pause",
+        "participant": 6.939e-18,
+        "reference": 0.56,
+        "unit": "s",
+        "z": -2740.0
+      },
+      "explanation": "73.0\u201373.0 s, \"challenge, and\": you paused 6.9e-18 s after \"challenge,\" where good readers pause 0.56 s (0.56 s shorter, 2.7e+03 SD below). The listener gets no breathing space.",
+      "mean_abs_z": 2740.0,
+      "severity": 4,
+      "start": 73.005,
+      "tags": [],
+      "type": "missing_pause",
+      "word_end": 222,
+      "word_start": 221
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 7.4,
+    "pace": 7.4,
+    "pauses": 0.0,
+    "pitch": 10.0,
+    "volume": 10.0
+  },
+  "text_id": "reagan_challenger",
+  "transcript_source": "supplied",
+  "warnings": [
+    {
+      "count": 7,
+      "type": "unmatched_reference_words"
+    }
+  ]
+}
