@@ -1,0 +1,5464 @@
+{
+  "disclaimer": "post-hoc sensitivity check; test split previously seen with v1",
+  "elapsed_seconds": 0.7697647200002393,
+  "evaluation_count": 1,
+  "floor": {
+    "pause_sigma_floor_s": 0.052
+  },
+  "primary_hashes_verified": 914,
+  "protocol_commit": "17a15e4f726dabd29d3ba1e7cc4df5de0783532a",
+  "provenance": {
+    "data/.cache/participants/4b7c30271b2fb9797c650d84e59e0e97a051eba4879e31b4108e061da1a872e6/state.json": "c33b9b5bbf1853d43d83deb77c9bdee14264d68ac1decd41d3cc0fa791d6ab02",
+    "data/.cache/participants/6b1ca5bc673cf52ec556f9870ae6289fb536a0201e0feca0783561779b7bf5a4/state.json": "bd9c5572cec3642bad8e849be232e47bad9120afdbc4fb174ba3d6565cf2dce9",
+    "data/.cache/participants/91e74acbc9225f824509aea4686af66420861a6fda9bddb1681f5f6f1cd2502c/state.json": "70e55448110cf9087b67dddce75311451da54168020e0f32de5def078e69aeea",
+    "data/.cache/participants/990df0a0f76beea2f3fd17f4b0b06f6a6a0d104ba25eea6ede4de45ccd5ecc1f/state.json": "9d5349f26ac5056838c196ee5027346fe57ed917a957f51425071600cb03c4df",
+    "data/.cache/participants/b7df9bd980c1c8371420380d8d2d0b98dbd7bbdb6f6f3bf1fa6f258c5357b4fe/state.json": "8d48b6f02bfb44bc3ab103b0353ca25d0935ea74ea2fee08ece7cf59b5136e83",
+    "data/.cache/participants/cf63338562c632e8ef486eb8fd678fd5cab9e43280c8ff8d756953613b57a66c/state.json": "4ecbd0758690ba23d9786195c54c0b18df01140580f6f89ec392f66f2f5e9d59",
+    "data/alignment/gettysburg__user__input_4b7c30271b2f.json": "86fa16f6e05a74d9e8ee0eb73d15ce0ac9c386bd550289ebeb690398a96c9a9b",
+    "data/alignment/gettysburg__user__input_91e74acbc922.json": "e1db3a9c8996261547066f5a54ee48bcc2d152c4d20ea07f1f8c1f1ef27ab0ab",
+    "data/alignment/gettysburg__user__input_b7df9bd980c1.json": "5f67c726e1e94ab978c2f32e15852f4b72f86e53943f4bc0c8586d72115c6c72",
+    "data/alignment/reagan_challenger__user__input_6b1ca5bc673c.json": "33c526626089333ba5464c937eb31270b1313085758005d766138aac62bf1cb3",
+    "data/alignment/reagan_challenger__user__input_990df0a0f76b.json": "cf8ae0ca36b7832b03199a7e91c5bf11e76ebefa4e9baf57b8307e86c56f48c5",
+    "data/alignment/reagan_challenger__user__input_cf63338562c6.json": "34b2121fcd9f84c70a48560e4fc8f8c15292e0578f73932e53f939c46e49c71d",
+    "data/app/jobs/0aae3748f747b13e89697e17.json": "d2a56264a74925746591443f1cd3a07dfb68fab1891f75b52572b11175600a5d",
+    "data/app/jobs/48f109663821934f4d6dc880.json": "fb1088e6eb731426c94eb73b5d4ba48a79e4b64548a4460f1e4167265978622c",
+    "data/app/jobs/57a55f0d18b627cda376b6aa.json": "8c5fe824855e2f549fff82e08a5ea8f7db003045856d2035f6bc64b52764d2bb",
+    "data/app/jobs/6d8cbd6dec22ffc8f7827ebc.json": "fa85077416a05795c682d077594cd68ac84171cfbc938922d5071c669b946485",
+    "data/app/jobs/940ff757c37df7af5db66146.json": "527738bc0efe7fd899c656dbadb0d7353a12043d4700f67ba58991a0de729eed",
+    "data/app/jobs/9a1e6c9b493bf38f97547c38.json": "f2d64570e5670ecba47dd1f6d40fc600aae221b01e247e5e32283ebd8a30a325",
+    "data/app/jobs/b6890ffc341c98cd10d65a23.json": "cada851cc4c214231c37859c5e166cd48e44d84b962467b9fd4ff384a90e51ff",
+    "data/app/jobs/d48bda35d22f96206a0ae2d7.json": "d767d1d22a8b63cace9faab1ef3f6a0ffbc81e3dddc0d1ad0d88534dceeee4bc",
+    "data/app/jobs/f76f550c01af931b64ea839b.json": "7e13d1c7f0b66cc845dda9ef786547582ce00f4c2909d05fd20976aeb29621e8",
+    "data/app/jobs/fef67fa2213341586f06ae19.json": "81b0195b3253e40f7c1f8169bf70799331cf9240745aab7f871f12eb0fec5824",
+    "data/audio/hq/gettysburg__user__input_4b7c30271b2f.flac": "044655f0c47ed0d3a95ca067cacd9cab4a14a42605f8a00e6c4fae1311815e1f",
+    "data/audio/hq/gettysburg__user__input_91e74acbc922.flac": "02424d6515c37b4d9bb3db856eee09369ba59b26af7657f6712166161f88cd35",
+    "data/audio/hq/gettysburg__user__input_b7df9bd980c1.flac": "fd2c054554a291afdddebf1b496374f16f43358c25c3769000fb71ee2a67a448",
+    "data/audio/hq/reagan_challenger__user__input_6b1ca5bc673c.flac": "513e355984380c89257cb813d701d628e5287e0d5b1c74826da7a3041febcc01",
+    "data/audio/hq/reagan_challenger__user__input_990df0a0f76b.flac": "2d8222ab48b6bece85f7d90d7ae7a28af9800368c78120e82e93d3d50c43a6d4",
+    "data/audio/hq/reagan_challenger__user__input_cf63338562c6.flac": "b8aafbce0198d364b1087f639866dbe66f90cdc95e45ca5294eb0adf657f5a09",
+    "data/features/windows/gettysburg__user__input_4b7c30271b2f.parquet": "0bc5c1481ebc3ff6d23323f69d82716932dbaf1c3c951f57e7bce158049cfb7e",
+    "data/features/windows/gettysburg__user__input_91e74acbc922.parquet": "894ef55301ebe94f8a2e0c15938aa07a12b44a9012c90c0e2f49ac0bf2583e9d",
+    "data/features/windows/gettysburg__user__input_b7df9bd980c1.parquet": "04b503bf4f82a887fd7a0fb546d6f6018ec076522de9303140950edc5b39d551",
+    "data/features/windows/reagan_challenger__user__input_6b1ca5bc673c.parquet": "6990f8781999a18ffc050946aeec3633bd270e75dad7bdd39745f62464861031",
+    "data/features/windows/reagan_challenger__user__input_990df0a0f76b.parquet": "bc5013794ba402036d6a572cdf9ed5f02b44a085ed4e2b34b194909d485dbef6",
+    "data/features/windows/reagan_challenger__user__input_cf63338562c6.parquet": "5403932dbbe729a2cf00ae00f402fedfdc304f238717f4a7d4e66ac85e96b6e7",
+    "data/features/words/gettysburg__user__input_4b7c30271b2f.parquet": "4f553e67e81990db59b0794370d01daa36732dc5c0a5993a23f06b7bd9019d99",
+    "data/features/words/gettysburg__user__input_91e74acbc922.parquet": "c5ca820668ebdf0a7271af478ebb1ac161560cb63908960aa128c1435792bc56",
+    "data/features/words/gettysburg__user__input_b7df9bd980c1.parquet": "3498fac2370e9760cb2f03fd91ed80a2ea71612393c42c2e83d5e9024ffc9dc7",
+    "data/features/words/reagan_challenger__user__input_6b1ca5bc673c.parquet": "3b52c11545f990cece9415ca45265baa717ea8ca8c2d2b3f43d3e709aac47b27",
+    "data/features/words/reagan_challenger__user__input_990df0a0f76b.parquet": "3a8400e2f4cd1bceb4945fd48a2cd1a5fd22cb8e4946c89419be17a0fe67b67d",
+    "data/features/words/reagan_challenger__user__input_cf63338562c6.parquet": "f1384094da434ad660f715407956fa0f27bdd1e175cf2b78d347ba485e02561b",
+    "data/reference/gettysburg__excl-gettysburg__user__input_b7df9bd980c1.json": "ce0b9e1190d701122fca7641e6d3311f2dd398eddf3fa8e644937b77d2bbb043",
+    "data/reference/gettysburg__excl-none.json": "f92e1f9416b7c5395feb6c57430fcdd77409e4b0fb63774e793e66b764724a57",
+    "data/reference/reagan_challenger__excl-reagan_challenger__reagan__orig.json": "8cf0364c1d1cac92cf32a71ed969c65e1df1609754742ebe5cc9792cf1ee6d14",
+    "data/reference/reagan_challenger__excl-reagan_challenger__user__input_6b1ca5bc673c.json": "711201f01aab75a1689b53d61fbf646cd0b504fc1b37718fb485c5c623b5cca4"
+  },
+  "schema": "pause-floor-sensitivity/v1",
+  "settings": {
+    "A": {
+      "changed_types": [
+        "awkward_pause",
+        "missing_pause"
+      ],
+      "excluded_uncertain_truth": 0,
+      "files": [
+        {
+          "changed_types": [
+            "awkward_pause"
+          ],
+          "excluded_truth": [],
+          "floor_pairs": [],
+          "floor_regions": [
+            {
+              "end": 4.285,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.6697221686178633,
+                "unit": "s",
+                "z": -12.41
+              },
+              "mean_abs_z": 12.41,
+              "severity": 4,
+              "start": 4.255,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 16,
+              "word_start": 15
+            },
+            {
+              "end": 10.645,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4490991885387112,
+                "unit": "s",
+                "z": -4.355
+              },
+              "mean_abs_z": 4.355,
+              "severity": 4,
+              "start": 10.615,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 39,
+              "word_start": 38
+            },
+            {
+              "end": 17.98,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.41,
+                "reference": 1.2069327746542373,
+                "unit": "s",
+                "z": -6.66
+              },
+              "mean_abs_z": 6.66,
+              "severity": 4,
+              "start": 17.57,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 64,
+              "word_start": 63
+            },
+            {
+              "end": 36.995,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.5,
+                "unit": "s",
+                "z": -7.125
+              },
+              "mean_abs_z": 7.125,
+              "severity": 4,
+              "start": 36.965,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 133,
+              "word_start": 132
+            },
+            {
+              "end": 43.83,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.14,
+                "reference": 0.5996922348312315,
+                "unit": "s",
+                "z": -4.715
+              },
+              "mean_abs_z": 4.715,
+              "severity": 4,
+              "start": 43.69,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 154,
+              "word_start": 153
+            },
+            {
+              "end": 46.48,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.26,
+                "reference": 1.386523581428443,
+                "unit": "s",
+                "z": -5.977
+              },
+              "mean_abs_z": 5.977,
+              "severity": 4,
+              "start": 46.22,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 163,
+              "word_start": 162
+            },
+            {
+              "end": 61.36,
+              "evidence": {
+                "feature": "rate",
+                "participant": 6.1415199404613885,
+                "reference": 3.360701683946391,
+                "unit": "syllables/s",
+                "z": 3.9293333333333336
+              },
+              "mean_abs_z": 3.929,
+              "severity": 3,
+              "start": 60.8,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 210,
+              "word_start": 208
+            },
+            {
+              "end": 79.225,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4274934554525329,
+                "unit": "s",
+                "z": -6.286
+              },
+              "mean_abs_z": 6.286,
+              "severity": 4,
+              "start": 79.195,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 260,
+              "word_start": 259
+            }
+          ],
+          "job_id": "0aae3748f747b13e89697e17",
+          "lost_hits": [],
+          "mode": "A",
+          "new_hits": [],
+          "recording_id": "gettysburg__user__input_b7df9bd980c1",
+          "reference_version": "746a5ef0d4f2ad2eb999a85dc58eed970ddd266438c98da4543938485fdbeabe",
+          "take_id": "gettysburg__user__take01",
+          "truth": [],
+          "v1_pairs": [],
+          "v1_regions": [
+            {
+              "end": 4.285,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.6697221686178633,
+                "unit": "s",
+                "z": -12.41
+              },
+              "mean_abs_z": 12.41,
+              "severity": 4,
+              "start": 4.255,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 16,
+              "word_start": 15
+            },
+            {
+              "end": 10.645,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4490991885387112,
+                "unit": "s",
+                "z": -4.355
+              },
+              "mean_abs_z": 4.355,
+              "severity": 4,
+              "start": 10.615,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 39,
+              "word_start": 38
+            },
+            {
+              "end": 17.98,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.41,
+                "reference": 1.2069327746542373,
+                "unit": "s",
+                "z": -6.66
+              },
+              "mean_abs_z": 6.66,
+              "severity": 4,
+              "start": 17.57,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 64,
+              "word_start": 63
+            },
+            {
+              "end": 36.995,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.5,
+                "unit": "s",
+                "z": -7.125
+              },
+              "mean_abs_z": 7.125,
+              "severity": 4,
+              "start": 36.965,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 133,
+              "word_start": 132
+            },
+            {
+              "end": 42.22,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.47000000000000003,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 4056.0
+              },
+              "mean_abs_z": 4056.0,
+              "severity": 4,
+              "start": 41.75,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 148,
+              "word_start": 147
+            },
+            {
+              "end": 43.83,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.14,
+                "reference": 0.5996922348312315,
+                "unit": "s",
+                "z": -4.715
+              },
+              "mean_abs_z": 4.715,
+              "severity": 4,
+              "start": 43.69,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 154,
+              "word_start": 153
+            },
+            {
+              "end": 46.48,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.26,
+                "reference": 1.386523581428443,
+                "unit": "s",
+                "z": -5.977
+              },
+              "mean_abs_z": 5.977,
+              "severity": 4,
+              "start": 46.22,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 163,
+              "word_start": 162
+            },
+            {
+              "end": 61.36,
+              "evidence": {
+                "feature": "rate",
+                "participant": 6.1415199404613885,
+                "reference": 3.360701683946391,
+                "unit": "syllables/s",
+                "z": 3.9293333333333336
+              },
+              "mean_abs_z": 3.929,
+              "severity": 3,
+              "start": 60.8,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 210,
+              "word_start": 208
+            },
+            {
+              "end": 79.225,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4274934554525329,
+                "unit": "s",
+                "z": -6.286
+              },
+              "mean_abs_z": 6.286,
+              "severity": 4,
+              "start": 79.195,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 260,
+              "word_start": 259
+            }
+          ]
+        },
+        {
+          "changed_types": [
+            "awkward_pause"
+          ],
+          "excluded_truth": [],
+          "floor_pairs": [
+            [
+              4,
+              1
+            ]
+          ],
+          "floor_regions": [
+            {
+              "end": 4.9,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.10000000000000002,
+                "reference": 0.6697221686178633,
+                "unit": "s",
+                "z": -7.298
+              },
+              "mean_abs_z": 7.298,
+              "severity": 4,
+              "start": 4.8,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 16,
+              "word_start": 15
+            },
+            {
+              "end": 19.66,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.48000000000000004,
+                "reference": 1.2069327746542373,
+                "unit": "s",
+                "z": -5.722
+              },
+              "mean_abs_z": 5.722,
+              "severity": 4,
+              "start": 19.18,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 63,
+              "word_start": 62
+            },
+            {
+              "end": 21.32,
+              "evidence": {
+                "feature": "rate",
+                "participant": 7.876649862373923,
+                "reference": 4.739916913937494,
+                "unit": "syllables/s",
+                "z": 4.043200000000001
+              },
+              "mean_abs_z": 4.043,
+              "severity": 3,
+              "start": 20.04,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 72,
+              "word_start": 66
+            },
+            {
+              "end": 23.54,
+              "evidence": {
+                "feature": "rate",
+                "participant": 5.155834004477818,
+                "reference": 3.2209289580139657,
+                "unit": "syllables/s",
+                "z": 4.232
+              },
+              "mean_abs_z": 4.232,
+              "severity": 4,
+              "start": 23.01,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 83,
+              "word_start": 81
+            },
+            {
+              "end": 31.47,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.57,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 4.879
+              },
+              "mean_abs_z": 4.879,
+              "severity": 4,
+              "start": 29.9,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 104,
+              "word_start": 103
+            },
+            {
+              "end": 39.735,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.5,
+                "unit": "s",
+                "z": -7.125
+              },
+              "mean_abs_z": 7.125,
+              "severity": 4,
+              "start": 39.705,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 128,
+              "word_start": 127
+            },
+            {
+              "end": 57.2,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.26,
+                "reference": 0.9657927938314979,
+                "unit": "s",
+                "z": -3.953
+              },
+              "mean_abs_z": 3.953,
+              "severity": 3,
+              "start": 56.94,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 186,
+              "word_start": 185
+            }
+          ],
+          "job_id": "fef67fa2213341586f06ae19",
+          "lost_hits": [],
+          "mode": "A",
+          "new_hits": [],
+          "recording_id": "gettysburg__user__input_91e74acbc922",
+          "reference_version": "746a5ef0d4f2ad2eb999a85dc58eed970ddd266438c98da4543938485fdbeabe",
+          "take_id": "gettysburg__user__take02",
+          "truth": [
+            {
+              "canonical_unit": 4,
+              "end": 25.01,
+              "start": 19.66,
+              "type": "rushing",
+              "word_end": 88,
+              "word_start": 63
+            },
+            {
+              "canonical_unit": 6,
+              "end": 31.47,
+              "start": 29.9,
+              "type": "awkward_pause",
+              "word_end": 104,
+              "word_start": 103
+            },
+            {
+              "canonical_unit": 8,
+              "end": 47.87,
+              "start": 47.13,
+              "type": "too_quiet",
+              "word_end": 157,
+              "word_start": 154
+            }
+          ],
+          "v1_pairs": [
+            [
+              4,
+              1
+            ]
+          ],
+          "v1_regions": [
+            {
+              "end": 4.9,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.10000000000000002,
+                "reference": 0.6697221686178633,
+                "unit": "s",
+                "z": -7.298
+              },
+              "mean_abs_z": 7.298,
+              "severity": 4,
+              "start": 4.8,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 16,
+              "word_start": 15
+            },
+            {
+              "end": 19.66,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.48000000000000004,
+                "reference": 1.2069327746542373,
+                "unit": "s",
+                "z": -5.722
+              },
+              "mean_abs_z": 5.722,
+              "severity": 4,
+              "start": 19.18,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 63,
+              "word_start": 62
+            },
+            {
+              "end": 21.32,
+              "evidence": {
+                "feature": "rate",
+                "participant": 7.876649862373923,
+                "reference": 4.739916913937494,
+                "unit": "syllables/s",
+                "z": 4.043200000000001
+              },
+              "mean_abs_z": 4.043,
+              "severity": 3,
+              "start": 20.04,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 72,
+              "word_start": 66
+            },
+            {
+              "end": 23.54,
+              "evidence": {
+                "feature": "rate",
+                "participant": 5.155834004477818,
+                "reference": 3.2209289580139657,
+                "unit": "syllables/s",
+                "z": 4.232
+              },
+              "mean_abs_z": 4.232,
+              "severity": 4,
+              "start": 23.01,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 83,
+              "word_start": 81
+            },
+            {
+              "end": 31.47,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.57,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 6024.0
+              },
+              "mean_abs_z": 6024.0,
+              "severity": 4,
+              "start": 29.9,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 104,
+              "word_start": 103
+            },
+            {
+              "end": 39.735,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.5,
+                "unit": "s",
+                "z": -7.125
+              },
+              "mean_abs_z": 7.125,
+              "severity": 4,
+              "start": 39.705,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 128,
+              "word_start": 127
+            },
+            {
+              "end": 57.2,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.26,
+                "reference": 0.9657927938314979,
+                "unit": "s",
+                "z": -3.953
+              },
+              "mean_abs_z": 3.953,
+              "severity": 3,
+              "start": 56.94,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 186,
+              "word_start": 185
+            }
+          ]
+        },
+        {
+          "changed_types": [
+            "awkward_pause"
+          ],
+          "excluded_truth": [],
+          "floor_pairs": [
+            [
+              5,
+              2
+            ]
+          ],
+          "floor_regions": [
+            {
+              "end": 4.33,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.029999999999999985,
+                "reference": 0.6697221686178633,
+                "unit": "s",
+                "z": -10.22
+              },
+              "mean_abs_z": 10.22,
+              "severity": 4,
+              "start": 4.3,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 16,
+              "word_start": 15
+            },
+            {
+              "end": 11.6,
+              "evidence": {
+                "feature": "rate",
+                "participant": 6.752178061071272,
+                "reference": 3.3689624706482295,
+                "unit": "syllables/s",
+                "z": 4.299666666666666
+              },
+              "mean_abs_z": 4.3,
+              "severity": 4,
+              "start": 10.85,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 39,
+              "word_start": 37
+            },
+            {
+              "end": 24.04,
+              "evidence": {
+                "feature": "rate",
+                "participant": 5.0235980283484425,
+                "reference": 2.9824089351003567,
+                "unit": "syllables/s",
+                "z": 4.3595
+              },
+              "mean_abs_z": 4.359,
+              "severity": 4,
+              "start": 23.19,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 86,
+              "word_start": 83
+            },
+            {
+              "end": 37.855,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.5,
+                "unit": "s",
+                "z": -7.125
+              },
+              "mean_abs_z": 7.125,
+              "severity": 4,
+              "start": 37.825,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 130,
+              "word_start": 129
+            },
+            {
+              "end": 44.775,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.5996922348312315,
+                "unit": "s",
+                "z": -9.835
+              },
+              "mean_abs_z": 9.835,
+              "severity": 4,
+              "start": 44.745,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 151,
+              "word_start": 150
+            },
+            {
+              "end": 47.085,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 1.386523581428443,
+                "unit": "s",
+                "z": -13.09
+              },
+              "mean_abs_z": 13.09,
+              "severity": 4,
+              "start": 47.055,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 160,
+              "word_start": 159
+            },
+            {
+              "end": 51.185,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.32788887255382365,
+                "unit": "s",
+                "z": -4.811
+              },
+              "mean_abs_z": 4.811,
+              "severity": 4,
+              "start": 51.155,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 175,
+              "word_start": 174
+            },
+            {
+              "end": 53.29,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.98,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 4.243
+              },
+              "mean_abs_z": 4.243,
+              "severity": 4,
+              "start": 52.31,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 179,
+              "word_start": 178
+            },
+            {
+              "end": 56.92,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.09000000000000001,
+                "reference": 0.9657927938314979,
+                "unit": "s",
+                "z": -6.601
+              },
+              "mean_abs_z": 6.601,
+              "severity": 4,
+              "start": 56.83,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 187,
+              "word_start": 186
+            },
+            {
+              "end": 77.995,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4274934554525329,
+                "unit": "s",
+                "z": -6.286
+              },
+              "mean_abs_z": 6.286,
+              "severity": 4,
+              "start": 77.965,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 257,
+              "word_start": 256
+            },
+            {
+              "end": 78.725,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4543808085167396,
+                "unit": "s",
+                "z": -5.1
+              },
+              "mean_abs_z": 5.1,
+              "severity": 4,
+              "start": 78.695,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 260,
+              "word_start": 259
+            },
+            {
+              "end": 79.265,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4999090833947008,
+                "unit": "s",
+                "z": -5.354
+              },
+              "mean_abs_z": 5.354,
+              "severity": 4,
+              "start": 79.235,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 263,
+              "word_start": 262
+            }
+          ],
+          "job_id": "48f109663821934f4d6dc880",
+          "lost_hits": [],
+          "mode": "A",
+          "new_hits": [],
+          "recording_id": "gettysburg__user__input_4b7c30271b2f",
+          "reference_version": "746a5ef0d4f2ad2eb999a85dc58eed970ddd266438c98da4543938485fdbeabe",
+          "take_id": "gettysburg__user__take03",
+          "truth": [
+            {
+              "canonical_unit": 2,
+              "end": 15.75,
+              "start": 9.68,
+              "type": "monotone",
+              "word_end": 53,
+              "word_start": 30
+            },
+            {
+              "canonical_unit": 7,
+              "end": 40.84,
+              "start": 34.16,
+              "type": "mumbling",
+              "word_end": 138,
+              "word_start": 118
+            },
+            {
+              "canonical_unit": 8,
+              "end": 47.085,
+              "start": 47.055,
+              "type": "missing_pause",
+              "word_end": 160,
+              "word_start": 159
+            },
+            {
+              "canonical_unit": 9,
+              "end": 54.97,
+              "start": 53.71,
+              "type": "dragging",
+              "word_end": 183,
+              "word_start": 180
+            }
+          ],
+          "v1_pairs": [
+            [
+              5,
+              2
+            ]
+          ],
+          "v1_regions": [
+            {
+              "end": 4.33,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.029999999999999985,
+                "reference": 0.6697221686178633,
+                "unit": "s",
+                "z": -10.22
+              },
+              "mean_abs_z": 10.22,
+              "severity": 4,
+              "start": 4.3,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 16,
+              "word_start": 15
+            },
+            {
+              "end": 11.6,
+              "evidence": {
+                "feature": "rate",
+                "participant": 6.752178061071272,
+                "reference": 3.3689624706482295,
+                "unit": "syllables/s",
+                "z": 4.299666666666666
+              },
+              "mean_abs_z": 4.3,
+              "severity": 4,
+              "start": 10.85,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 39,
+              "word_start": 37
+            },
+            {
+              "end": 24.04,
+              "evidence": {
+                "feature": "rate",
+                "participant": 5.0235980283484425,
+                "reference": 2.9824089351003567,
+                "unit": "syllables/s",
+                "z": 4.3595
+              },
+              "mean_abs_z": 4.359,
+              "severity": 4,
+              "start": 23.19,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 86,
+              "word_start": 83
+            },
+            {
+              "end": 37.855,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.5,
+                "unit": "s",
+                "z": -7.125
+              },
+              "mean_abs_z": 7.125,
+              "severity": 4,
+              "start": 37.825,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 130,
+              "word_start": 129
+            },
+            {
+              "end": 44.775,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.5996922348312315,
+                "unit": "s",
+                "z": -9.835
+              },
+              "mean_abs_z": 9.835,
+              "severity": 4,
+              "start": 44.745,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 151,
+              "word_start": 150
+            },
+            {
+              "end": 47.085,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 1.386523581428443,
+                "unit": "s",
+                "z": -13.09
+              },
+              "mean_abs_z": 13.09,
+              "severity": 4,
+              "start": 47.055,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 160,
+              "word_start": 159
+            },
+            {
+              "end": 51.185,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.32788887255382365,
+                "unit": "s",
+                "z": -4.811
+              },
+              "mean_abs_z": 4.811,
+              "severity": 4,
+              "start": 51.155,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 175,
+              "word_start": 174
+            },
+            {
+              "end": 53.29,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.98,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 5240.0
+              },
+              "mean_abs_z": 5240.0,
+              "severity": 4,
+              "start": 52.31,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 179,
+              "word_start": 178
+            },
+            {
+              "end": 55.91,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.45,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 3988.0
+              },
+              "mean_abs_z": 3988.0,
+              "severity": 4,
+              "start": 55.46,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 185,
+              "word_start": 184
+            },
+            {
+              "end": 56.92,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.09000000000000001,
+                "reference": 0.9657927938314979,
+                "unit": "s",
+                "z": -6.601
+              },
+              "mean_abs_z": 6.601,
+              "severity": 4,
+              "start": 56.83,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 187,
+              "word_start": 186
+            },
+            {
+              "end": 77.995,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4274934554525329,
+                "unit": "s",
+                "z": -6.286
+              },
+              "mean_abs_z": 6.286,
+              "severity": 4,
+              "start": 77.965,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 257,
+              "word_start": 256
+            },
+            {
+              "end": 78.725,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4543808085167396,
+                "unit": "s",
+                "z": -5.1
+              },
+              "mean_abs_z": 5.1,
+              "severity": 4,
+              "start": 78.695,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 260,
+              "word_start": 259
+            },
+            {
+              "end": 79.265,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4999090833947008,
+                "unit": "s",
+                "z": -5.354
+              },
+              "mean_abs_z": 5.354,
+              "severity": 4,
+              "start": 79.235,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 263,
+              "word_start": 262
+            }
+          ]
+        },
+        {
+          "changed_types": [
+            "awkward_pause",
+            "missing_pause"
+          ],
+          "excluded_truth": [],
+          "floor_pairs": [],
+          "floor_regions": [
+            {
+              "end": 6.375,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.45,
+                "unit": "s",
+                "z": -23.27
+              },
+              "mean_abs_z": 23.27,
+              "severity": 4,
+              "start": 6.345,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 25,
+              "word_start": 24
+            },
+            {
+              "end": 10.83,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.42,
+                "reference": 1.216,
+                "unit": "s",
+                "z": -24.62
+              },
+              "mean_abs_z": 24.62,
+              "severity": 4,
+              "start": 10.41,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 39,
+              "word_start": 38
+            },
+            {
+              "end": 17.115,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.32,
+                "unit": "s",
+                "z": -15.22
+              },
+              "mean_abs_z": 15.22,
+              "severity": 4,
+              "start": 17.085,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 61,
+              "word_start": 60
+            },
+            {
+              "end": 20.59,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.37,
+                "reference": 1.268,
+                "unit": "s",
+                "z": -29.55
+              },
+              "mean_abs_z": 29.55,
+              "severity": 4,
+              "start": 20.22,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 73,
+              "word_start": 72
+            },
+            {
+              "end": 30.05,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.25,
+                "reference": 0.875,
+                "unit": "s",
+                "z": -20.59
+              },
+              "mean_abs_z": 20.59,
+              "severity": 4,
+              "start": 29.8,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 106,
+              "word_start": 105
+            },
+            {
+              "end": 36.1,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.47000000000000003,
+                "reference": 0.09000000000000001,
+                "unit": "s",
+                "z": 4.154
+              },
+              "mean_abs_z": 4.154,
+              "severity": 4,
+              "start": 35.63,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 126,
+              "word_start": 125
+            },
+            {
+              "end": 37.255,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.64,
+                "unit": "s",
+                "z": -36.12
+              },
+              "mean_abs_z": 36.12,
+              "severity": 4,
+              "start": 37.225,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 131,
+              "word_start": 130
+            },
+            {
+              "end": 42.65,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.24,
+                "reference": 0.87,
+                "unit": "s",
+                "z": -21.0
+              },
+              "mean_abs_z": 21.0,
+              "severity": 4,
+              "start": 42.41,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 145,
+              "word_start": 144
+            },
+            {
+              "end": 46.2,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.33,
+                "reference": 0.87,
+                "unit": "s",
+                "z": -16.08
+              },
+              "mean_abs_z": 16.08,
+              "severity": 4,
+              "start": 45.87,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 151,
+              "word_start": 150
+            },
+            {
+              "end": 54.145,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.91,
+                "unit": "s",
+                "z": -56.02
+              },
+              "mean_abs_z": 56.02,
+              "severity": 4,
+              "start": 54.115,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 172,
+              "word_start": 171
+            },
+            {
+              "end": 66.34,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.37,
+                "reference": 1.15,
+                "unit": "s",
+                "z": -24.75
+              },
+              "mean_abs_z": 24.75,
+              "severity": 4,
+              "start": 65.97,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 205,
+              "word_start": 204
+            },
+            {
+              "end": 69.56,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.64,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 3.681
+              },
+              "mean_abs_z": 3.681,
+              "severity": 3,
+              "start": 68.92,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 213,
+              "word_start": 212
+            },
+            {
+              "end": 71.9,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.09000000000000001,
+                "reference": 0.56,
+                "unit": "s",
+                "z": -17.99
+              },
+              "mean_abs_z": 17.99,
+              "severity": 4,
+              "start": 71.81,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 222,
+              "word_start": 221
+            }
+          ],
+          "job_id": "57a55f0d18b627cda376b6aa",
+          "lost_hits": [],
+          "mode": "A",
+          "new_hits": [],
+          "recording_id": "reagan_challenger__user__input_6b1ca5bc673c",
+          "reference_version": "cd657c109de938f682df9699c0b6eaf1aaf4e7565cad8d1b2e2d8c05578658ee",
+          "take_id": "reagan_challenger__user__take01",
+          "truth": [],
+          "v1_pairs": [],
+          "v1_regions": [
+            {
+              "end": 6.375,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.45,
+                "unit": "s",
+                "z": -2522.0
+              },
+              "mean_abs_z": 2522.0,
+              "severity": 4,
+              "start": 6.345,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 25,
+              "word_start": 24
+            },
+            {
+              "end": 10.83,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.42,
+                "reference": 1.216,
+                "unit": "s",
+                "z": -1085.0
+              },
+              "mean_abs_z": 1085.0,
+              "severity": 4,
+              "start": 10.41,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 39,
+              "word_start": 38
+            },
+            {
+              "end": 17.115,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.32,
+                "unit": "s",
+                "z": -2193.0
+              },
+              "mean_abs_z": 2193.0,
+              "severity": 4,
+              "start": 17.085,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 61,
+              "word_start": 60
+            },
+            {
+              "end": 18.75,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.49000000000000005,
+                "reference": 0.461,
+                "unit": "s",
+                "z": 60.47
+              },
+              "mean_abs_z": 60.47,
+              "severity": 4,
+              "start": 18.26,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 67,
+              "word_start": 66
+            },
+            {
+              "end": 20.59,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.37,
+                "reference": 1.268,
+                "unit": "s",
+                "z": -1253.0
+              },
+              "mean_abs_z": 1253.0,
+              "severity": 4,
+              "start": 20.22,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 73,
+              "word_start": 72
+            },
+            {
+              "end": 30.05,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.25,
+                "reference": 0.875,
+                "unit": "s",
+                "z": -1233.0
+              },
+              "mean_abs_z": 1233.0,
+              "severity": 4,
+              "start": 29.8,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 106,
+              "word_start": 105
+            },
+            {
+              "end": 36.1,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.47000000000000003,
+                "reference": 0.09000000000000001,
+                "unit": "s",
+                "z": 1437.0
+              },
+              "mean_abs_z": 1437.0,
+              "severity": 4,
+              "start": 35.63,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 126,
+              "word_start": 125
+            },
+            {
+              "end": 37.255,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.64,
+                "unit": "s",
+                "z": -2875.0
+              },
+              "mean_abs_z": 2875.0,
+              "severity": 4,
+              "start": 37.225,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 131,
+              "word_start": 130
+            },
+            {
+              "end": 42.65,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.24,
+                "reference": 0.87,
+                "unit": "s",
+                "z": -1265.0
+              },
+              "mean_abs_z": 1265.0,
+              "severity": 4,
+              "start": 42.41,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 145,
+              "word_start": 144
+            },
+            {
+              "end": 46.2,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.33,
+                "reference": 0.87,
+                "unit": "s",
+                "z": -968.6
+              },
+              "mean_abs_z": 968.6,
+              "severity": 4,
+              "start": 45.87,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 151,
+              "word_start": 150
+            },
+            {
+              "end": 54.145,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.91,
+                "unit": "s",
+                "z": -3237.0
+              },
+              "mean_abs_z": 3237.0,
+              "severity": 4,
+              "start": 54.115,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 172,
+              "word_start": 171
+            },
+            {
+              "end": 66.34,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.37,
+                "reference": 1.15,
+                "unit": "s",
+                "z": -1150.0
+              },
+              "mean_abs_z": 1150.0,
+              "severity": 4,
+              "start": 65.97,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 205,
+              "word_start": 204
+            },
+            {
+              "end": 69.56,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.64,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 2875.0
+              },
+              "mean_abs_z": 2875.0,
+              "severity": 4,
+              "start": 68.92,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 213,
+              "word_start": 212
+            },
+            {
+              "end": 71.9,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.09000000000000001,
+                "reference": 0.56,
+                "unit": "s",
+                "z": -1612.0
+              },
+              "mean_abs_z": 1612.0,
+              "severity": 4,
+              "start": 71.81,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 222,
+              "word_start": 221
+            }
+          ]
+        },
+        {
+          "changed_types": [
+            "awkward_pause",
+            "missing_pause"
+          ],
+          "excluded_truth": [],
+          "floor_pairs": [
+            [
+              13,
+              2
+            ]
+          ],
+          "floor_regions": [
+            {
+              "end": 0.755,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.32,
+                "unit": "s",
+                "z": -15.22
+              },
+              "mean_abs_z": 15.22,
+              "severity": 4,
+              "start": 0.725,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 3,
+              "word_start": 2
+            },
+            {
+              "end": 4.12,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.31,
+                "reference": 0.96,
+                "unit": "s",
+                "z": -20.55
+              },
+              "mean_abs_z": 20.55,
+              "severity": 4,
+              "start": 3.81,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 18,
+              "word_start": 17
+            },
+            {
+              "end": 5.565,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.45,
+                "unit": "s",
+                "z": -23.27
+              },
+              "mean_abs_z": 23.27,
+              "severity": 4,
+              "start": 5.535,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 26,
+              "word_start": 25
+            },
+            {
+              "end": 9.49,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.26,
+                "reference": 1.216,
+                "unit": "s",
+                "z": -34.95
+              },
+              "mean_abs_z": 34.95,
+              "severity": 4,
+              "start": 9.23,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 40,
+              "word_start": 39
+            },
+            {
+              "end": 15.065,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.32,
+                "unit": "s",
+                "z": -15.22
+              },
+              "mean_abs_z": 15.22,
+              "severity": 4,
+              "start": 15.035,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 62,
+              "word_start": 61
+            },
+            {
+              "end": 18.63,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.29999999999999993,
+                "reference": 1.268,
+                "unit": "s",
+                "z": -34.27
+              },
+              "mean_abs_z": 34.27,
+              "severity": 4,
+              "start": 18.33,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 74,
+              "word_start": 73
+            },
+            {
+              "end": 35.585,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.64,
+                "unit": "s",
+                "z": -36.12
+              },
+              "mean_abs_z": 36.12,
+              "severity": 4,
+              "start": 35.555,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 131,
+              "word_start": 130
+            },
+            {
+              "end": 37.64,
+              "evidence": {
+                "feature": "rate",
+                "participant": 6.554184533526975,
+                "reference": 3.559544296338414,
+                "unit": "syllables/s",
+                "z": 4.091666666666667
+              },
+              "mean_abs_z": 4.092,
+              "severity": 4,
+              "start": 36.71,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 138,
+              "word_start": 135
+            },
+            {
+              "end": 42.24,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.29,
+                "reference": 0.8,
+                "unit": "s",
+                "z": -15.43
+              },
+              "mean_abs_z": 15.43,
+              "severity": 4,
+              "start": 41.95,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 148,
+              "word_start": 147
+            },
+            {
+              "end": 44.41,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.18,
+                "reference": 0.87,
+                "unit": "s",
+                "z": -25.21
+              },
+              "mean_abs_z": 25.21,
+              "severity": 4,
+              "start": 44.23,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 152,
+              "word_start": 151
+            },
+            {
+              "end": 45.66,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.24,
+                "reference": 0.89,
+                "unit": "s",
+                "z": -21.84
+              },
+              "mean_abs_z": 21.84,
+              "severity": 4,
+              "start": 45.42,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 154,
+              "word_start": 153
+            },
+            {
+              "end": 52.23,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.2,
+                "reference": 0.91,
+                "unit": "s",
+                "z": -25.51
+              },
+              "mean_abs_z": 25.51,
+              "severity": 4,
+              "start": 52.03,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 173,
+              "word_start": 172
+            },
+            {
+              "end": 56.44,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.02,
+                "reference": 0.772,
+                "unit": "s",
+                "z": 4.299
+              },
+              "mean_abs_z": 4.299,
+              "severity": 4,
+              "start": 55.42,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 185,
+              "word_start": 184
+            },
+            {
+              "end": 64.69,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.56,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 4.87
+              },
+              "mean_abs_z": 4.87,
+              "severity": 4,
+              "start": 63.13,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 202,
+              "word_start": 201
+            },
+            {
+              "end": 65.72,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.13,
+                "reference": 1.15,
+                "unit": "s",
+                "z": -44.72
+              },
+              "mean_abs_z": 44.72,
+              "severity": 4,
+              "start": 65.59,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 205,
+              "word_start": 204
+            },
+            {
+              "end": 67.14,
+              "evidence": {
+                "feature": "rate",
+                "participant": 2.2072891536564496,
+                "reference": 6.627647056876145,
+                "unit": "syllables/s",
+                "z": -7.3693333333333335
+              },
+              "mean_abs_z": 7.369,
+              "severity": 4,
+              "start": 65.72,
+              "tags": [],
+              "type": "dragging",
+              "word_end": 207,
+              "word_start": 205
+            },
+            {
+              "end": 71.075,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.56,
+                "unit": "s",
+                "z": -30.58
+              },
+              "mean_abs_z": 30.58,
+              "severity": 4,
+              "start": 71.045,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 220,
+              "word_start": 219
+            },
+            {
+              "end": 73.16,
+              "evidence": {
+                "feature": "rate",
+                "participant": 4.824768065166459,
+                "reference": 8.949566443298894,
+                "unit": "syllables/s",
+                "z": -4.141
+              },
+              "mean_abs_z": 4.141,
+              "severity": 4,
+              "start": 72.63,
+              "tags": [],
+              "type": "dragging",
+              "word_end": 228,
+              "word_start": 226
+            }
+          ],
+          "job_id": "f76f550c01af931b64ea839b",
+          "lost_hits": [],
+          "mode": "A",
+          "new_hits": [],
+          "recording_id": "reagan_challenger__user__input_cf63338562c6",
+          "reference_version": "cd657c109de938f682df9699c0b6eaf1aaf4e7565cad8d1b2e2d8c05578658ee",
+          "take_id": "reagan_challenger__user__take02",
+          "truth": [
+            {
+              "canonical_unit": 10,
+              "end": 37.64,
+              "start": 32.88,
+              "type": "rushing",
+              "word_end": 138,
+              "word_start": 121
+            },
+            {
+              "canonical_unit": 15,
+              "end": 60.89,
+              "start": 59.02,
+              "type": "too_quiet",
+              "word_end": 197,
+              "word_start": 194
+            },
+            {
+              "canonical_unit": 16,
+              "end": 64.69,
+              "start": 63.13,
+              "type": "awkward_pause",
+              "word_end": 202,
+              "word_start": 201
+            }
+          ],
+          "v1_pairs": [
+            [
+              17,
+              2
+            ]
+          ],
+          "v1_regions": [
+            {
+              "end": 0.755,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.32,
+                "unit": "s",
+                "z": -2193.0
+              },
+              "mean_abs_z": 2193.0,
+              "severity": 4,
+              "start": 0.725,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 3,
+              "word_start": 2
+            },
+            {
+              "end": 4.12,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.31,
+                "reference": 0.96,
+                "unit": "s",
+                "z": -1130.0
+              },
+              "mean_abs_z": 1130.0,
+              "severity": 4,
+              "start": 3.81,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 18,
+              "word_start": 17
+            },
+            {
+              "end": 5.565,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.45,
+                "unit": "s",
+                "z": -2522.0
+              },
+              "mean_abs_z": 2522.0,
+              "severity": 4,
+              "start": 5.535,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 26,
+              "word_start": 25
+            },
+            {
+              "end": 9.49,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.26,
+                "reference": 1.216,
+                "unit": "s",
+                "z": -1541.0
+              },
+              "mean_abs_z": 1541.0,
+              "severity": 4,
+              "start": 9.23,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 40,
+              "word_start": 39
+            },
+            {
+              "end": 15.065,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.32,
+                "unit": "s",
+                "z": -2193.0
+              },
+              "mean_abs_z": 2193.0,
+              "severity": 4,
+              "start": 15.035,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 62,
+              "word_start": 61
+            },
+            {
+              "end": 16.9,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.56,
+                "reference": 0.461,
+                "unit": "s",
+                "z": 194.0
+              },
+              "mean_abs_z": 194.0,
+              "severity": 4,
+              "start": 16.34,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 68,
+              "word_start": 67
+            },
+            {
+              "end": 18.63,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.29999999999999993,
+                "reference": 1.268,
+                "unit": "s",
+                "z": -1452.0
+              },
+              "mean_abs_z": 1452.0,
+              "severity": 4,
+              "start": 18.33,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 74,
+              "word_start": 73
+            },
+            {
+              "end": 32.88,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.11,
+                "reference": 1.026,
+                "unit": "s",
+                "z": 82.34
+              },
+              "mean_abs_z": 82.34,
+              "severity": 4,
+              "start": 31.77,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 121,
+              "word_start": 120
+            },
+            {
+              "end": 35.585,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.64,
+                "unit": "s",
+                "z": -2875.0
+              },
+              "mean_abs_z": 2875.0,
+              "severity": 4,
+              "start": 35.555,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 131,
+              "word_start": 130
+            },
+            {
+              "end": 37.64,
+              "evidence": {
+                "feature": "rate",
+                "participant": 6.554184533526975,
+                "reference": 3.559544296338414,
+                "unit": "syllables/s",
+                "z": 4.091666666666667
+              },
+              "mean_abs_z": 4.092,
+              "severity": 4,
+              "start": 36.71,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 138,
+              "word_start": 135
+            },
+            {
+              "end": 38.35,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.71,
+                "reference": 0.601,
+                "unit": "s",
+                "z": 169.6
+              },
+              "mean_abs_z": 169.6,
+              "severity": 4,
+              "start": 37.64,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 139,
+              "word_start": 138
+            },
+            {
+              "end": 42.24,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.29,
+                "reference": 0.8,
+                "unit": "s",
+                "z": -1004.0
+              },
+              "mean_abs_z": 1004.0,
+              "severity": 4,
+              "start": 41.95,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 148,
+              "word_start": 147
+            },
+            {
+              "end": 44.41,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.18,
+                "reference": 0.87,
+                "unit": "s",
+                "z": -1519.0
+              },
+              "mean_abs_z": 1519.0,
+              "severity": 4,
+              "start": 44.23,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 152,
+              "word_start": 151
+            },
+            {
+              "end": 45.66,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.24,
+                "reference": 0.89,
+                "unit": "s",
+                "z": -1288.0
+              },
+              "mean_abs_z": 1288.0,
+              "severity": 4,
+              "start": 45.42,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 154,
+              "word_start": 153
+            },
+            {
+              "end": 52.23,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.2,
+                "reference": 0.91,
+                "unit": "s",
+                "z": -1474.0
+              },
+              "mean_abs_z": 1474.0,
+              "severity": 4,
+              "start": 52.03,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 173,
+              "word_start": 172
+            },
+            {
+              "end": 56.44,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.02,
+                "reference": 0.772,
+                "unit": "s",
+                "z": 288.8
+              },
+              "mean_abs_z": 288.8,
+              "severity": 4,
+              "start": 55.42,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 185,
+              "word_start": 184
+            },
+            {
+              "end": 62.12,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.23,
+                "reference": 1.137,
+                "unit": "s",
+                "z": 82.63
+              },
+              "mean_abs_z": 82.63,
+              "severity": 4,
+              "start": 60.89,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 198,
+              "word_start": 197
+            },
+            {
+              "end": 64.69,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.56,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 3803.0
+              },
+              "mean_abs_z": 3803.0,
+              "severity": 4,
+              "start": 63.13,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 202,
+              "word_start": 201
+            },
+            {
+              "end": 65.72,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.13,
+                "reference": 1.15,
+                "unit": "s",
+                "z": -2078.0
+              },
+              "mean_abs_z": 2078.0,
+              "severity": 4,
+              "start": 65.59,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 205,
+              "word_start": 204
+            },
+            {
+              "end": 67.14,
+              "evidence": {
+                "feature": "rate",
+                "participant": 2.2072891536564496,
+                "reference": 6.627647056876145,
+                "unit": "syllables/s",
+                "z": -7.3693333333333335
+              },
+              "mean_abs_z": 7.369,
+              "severity": 4,
+              "start": 65.72,
+              "tags": [],
+              "type": "dragging",
+              "word_end": 207,
+              "word_start": 205
+            },
+            {
+              "end": 71.075,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.56,
+                "unit": "s",
+                "z": -2740.0
+              },
+              "mean_abs_z": 2740.0,
+              "severity": 4,
+              "start": 71.045,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 220,
+              "word_start": 219
+            },
+            {
+              "end": 73.16,
+              "evidence": {
+                "feature": "rate",
+                "participant": 4.824768065166459,
+                "reference": 8.949566443298894,
+                "unit": "syllables/s",
+                "z": -4.141
+              },
+              "mean_abs_z": 4.141,
+              "severity": 4,
+              "start": 72.63,
+              "tags": [],
+              "type": "dragging",
+              "word_end": 228,
+              "word_start": 226
+            }
+          ]
+        },
+        {
+          "changed_types": [
+            "awkward_pause",
+            "missing_pause"
+          ],
+          "excluded_truth": [],
+          "floor_pairs": [
+            [
+              12,
+              2
+            ]
+          ],
+          "floor_regions": [
+            {
+              "end": 7.195,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.45,
+                "unit": "s",
+                "z": -23.27
+              },
+              "mean_abs_z": 23.27,
+              "severity": 4,
+              "start": 7.165,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 27,
+              "word_start": 26
+            },
+            {
+              "end": 18.065,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.32,
+                "unit": "s",
+                "z": -15.22
+              },
+              "mean_abs_z": 15.22,
+              "severity": 4,
+              "start": 18.035,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 63,
+              "word_start": 62
+            },
+            {
+              "end": 21.88,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.5,
+                "reference": 1.268,
+                "unit": "s",
+                "z": -22.59
+              },
+              "mean_abs_z": 22.59,
+              "severity": 4,
+              "start": 21.38,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 76,
+              "word_start": 75
+            },
+            {
+              "end": 23.62,
+              "evidence": {
+                "feature": "rate",
+                "participant": 6.609454250882529,
+                "reference": 3.5653709794274557,
+                "unit": "syllables/s",
+                "z": 4.1370000000000005
+              },
+              "mean_abs_z": 4.137,
+              "severity": 4,
+              "start": 22.58,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 82,
+              "word_start": 78
+            },
+            {
+              "end": 35.75,
+              "evidence": {
+                "feature": "rate",
+                "participant": 3.3704874546833405,
+                "reference": 6.826433642944394,
+                "unit": "syllables/s",
+                "z": -4.7302
+              },
+              "mean_abs_z": 4.73,
+              "severity": 4,
+              "start": 31.8,
+              "tags": [],
+              "type": "dragging",
+              "word_end": 114,
+              "word_start": 109
+            },
+            {
+              "end": 41.445,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.64,
+                "unit": "s",
+                "z": -36.12
+              },
+              "mean_abs_z": 36.12,
+              "severity": 4,
+              "start": 41.415,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 133,
+              "word_start": 132
+            },
+            {
+              "end": 46.29,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.21000000000000002,
+                "reference": 0.773,
+                "unit": "s",
+                "z": -18.81
+              },
+              "mean_abs_z": 18.81,
+              "severity": 4,
+              "start": 46.08,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 146,
+              "word_start": 145
+            },
+            {
+              "end": 49.25,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.21,
+                "reference": 0.8,
+                "unit": "s",
+                "z": 6.629
+              },
+              "mean_abs_z": 6.629,
+              "severity": 4,
+              "start": 48.04,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 150,
+              "word_start": 149
+            },
+            {
+              "end": 50.1,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.06000000000000001,
+                "reference": 0.58,
+                "unit": "s",
+                "z": -22.01
+              },
+              "mean_abs_z": 22.01,
+              "severity": 4,
+              "start": 50.04,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 152,
+              "word_start": 151
+            },
+            {
+              "end": 51.67,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.18,
+                "reference": 0.87,
+                "unit": "s",
+                "z": -25.21
+              },
+              "mean_abs_z": 25.21,
+              "severity": 4,
+              "start": 51.49,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 154,
+              "word_start": 153
+            },
+            {
+              "end": 53.07,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.28,
+                "reference": 0.89,
+                "unit": "s",
+                "z": -19.44
+              },
+              "mean_abs_z": 19.44,
+              "severity": 4,
+              "start": 52.79,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 156,
+              "word_start": 155
+            },
+            {
+              "end": 59.995,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.91,
+                "unit": "s",
+                "z": -56.02
+              },
+              "mean_abs_z": 56.02,
+              "severity": 4,
+              "start": 59.965,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 175,
+              "word_start": 174
+            },
+            {
+              "end": 63.235,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.772,
+                "unit": "s",
+                "z": -45.64
+              },
+              "mean_abs_z": 45.64,
+              "severity": 4,
+              "start": 63.205,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 187,
+              "word_start": 186
+            },
+            {
+              "end": 73.035,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.56,
+                "unit": "s",
+                "z": -30.58
+              },
+              "mean_abs_z": 30.58,
+              "severity": 4,
+              "start": 73.005,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 222,
+              "word_start": 221
+            }
+          ],
+          "job_id": "940ff757c37df7af5db66146",
+          "lost_hits": [],
+          "mode": "A",
+          "new_hits": [],
+          "recording_id": "reagan_challenger__user__input_990df0a0f76b",
+          "reference_version": "cd657c109de938f682df9699c0b6eaf1aaf4e7565cad8d1b2e2d8c05578658ee",
+          "take_id": "reagan_challenger__user__take03",
+          "truth": [
+            {
+              "canonical_unit": 6,
+              "end": 26.4,
+              "start": 21.88,
+              "type": "monotone",
+              "word_end": 93,
+              "word_start": 76
+            },
+            {
+              "canonical_unit": 9,
+              "end": 37.58,
+              "start": 31.8,
+              "type": "mumbling",
+              "word_end": 122,
+              "word_start": 109
+            },
+            {
+              "canonical_unit": 14,
+              "end": 63.235,
+              "start": 63.205,
+              "type": "missing_pause",
+              "word_end": 187,
+              "word_start": 186
+            }
+          ],
+          "v1_pairs": [
+            [
+              14,
+              2
+            ]
+          ],
+          "v1_regions": [
+            {
+              "end": 7.195,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.45,
+                "unit": "s",
+                "z": -2522.0
+              },
+              "mean_abs_z": 2522.0,
+              "severity": 4,
+              "start": 7.165,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 27,
+              "word_start": 26
+            },
+            {
+              "end": 18.065,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.32,
+                "unit": "s",
+                "z": -2193.0
+              },
+              "mean_abs_z": 2193.0,
+              "severity": 4,
+              "start": 18.035,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 63,
+              "word_start": 62
+            },
+            {
+              "end": 20.07,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.5,
+                "reference": 0.461,
+                "unit": "s",
+                "z": 80.57
+              },
+              "mean_abs_z": 80.57,
+              "severity": 4,
+              "start": 19.57,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 70,
+              "word_start": 69
+            },
+            {
+              "end": 21.88,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.5,
+                "reference": 1.268,
+                "unit": "s",
+                "z": -957.4
+              },
+              "mean_abs_z": 957.4,
+              "severity": 4,
+              "start": 21.38,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 76,
+              "word_start": 75
+            },
+            {
+              "end": 23.62,
+              "evidence": {
+                "feature": "rate",
+                "participant": 6.609454250882529,
+                "reference": 3.5653709794274557,
+                "unit": "syllables/s",
+                "z": 4.1370000000000005
+              },
+              "mean_abs_z": 4.137,
+              "severity": 4,
+              "start": 22.58,
+              "tags": [],
+              "type": "rushing",
+              "word_end": 82,
+              "word_start": 78
+            },
+            {
+              "end": 29.67,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.82,
+                "reference": 0.804,
+                "unit": "s",
+                "z": 20.33
+              },
+              "mean_abs_z": 20.33,
+              "severity": 4,
+              "start": 28.85,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 102,
+              "word_start": 101
+            },
+            {
+              "end": 35.75,
+              "evidence": {
+                "feature": "rate",
+                "participant": 3.3704874546833405,
+                "reference": 6.826433642944394,
+                "unit": "syllables/s",
+                "z": -4.7302
+              },
+              "mean_abs_z": 4.73,
+              "severity": 4,
+              "start": 31.8,
+              "tags": [],
+              "type": "dragging",
+              "word_end": 114,
+              "word_start": 109
+            },
+            {
+              "end": 41.445,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.64,
+                "unit": "s",
+                "z": -2875.0
+              },
+              "mean_abs_z": 2875.0,
+              "severity": 4,
+              "start": 41.415,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 133,
+              "word_start": 132
+            },
+            {
+              "end": 46.29,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.21000000000000002,
+                "reference": 0.773,
+                "unit": "s",
+                "z": -1262.0
+              },
+              "mean_abs_z": 1262.0,
+              "severity": 4,
+              "start": 46.08,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 146,
+              "word_start": 145
+            },
+            {
+              "end": 49.25,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.21,
+                "reference": 0.8,
+                "unit": "s",
+                "z": 431.2
+              },
+              "mean_abs_z": 431.2,
+              "severity": 4,
+              "start": 48.04,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 150,
+              "word_start": 149
+            },
+            {
+              "end": 50.1,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.06000000000000001,
+                "reference": 0.58,
+                "unit": "s",
+                "z": -1912.0
+              },
+              "mean_abs_z": 1912.0,
+              "severity": 4,
+              "start": 50.04,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 152,
+              "word_start": 151
+            },
+            {
+              "end": 51.67,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.18,
+                "reference": 0.87,
+                "unit": "s",
+                "z": -1519.0
+              },
+              "mean_abs_z": 1519.0,
+              "severity": 4,
+              "start": 51.49,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 154,
+              "word_start": 153
+            },
+            {
+              "end": 53.07,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.28,
+                "reference": 0.89,
+                "unit": "s",
+                "z": -1147.0
+              },
+              "mean_abs_z": 1147.0,
+              "severity": 4,
+              "start": 52.79,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 156,
+              "word_start": 155
+            },
+            {
+              "end": 59.995,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.91,
+                "unit": "s",
+                "z": -3237.0
+              },
+              "mean_abs_z": 3237.0,
+              "severity": 4,
+              "start": 59.965,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 175,
+              "word_start": 174
+            },
+            {
+              "end": 63.235,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.772,
+                "unit": "s",
+                "z": -3067.0
+              },
+              "mean_abs_z": 3067.0,
+              "severity": 4,
+              "start": 63.205,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 187,
+              "word_start": 186
+            },
+            {
+              "end": 73.035,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.56,
+                "unit": "s",
+                "z": -2740.0
+              },
+              "mean_abs_z": 2740.0,
+              "severity": 4,
+              "start": 73.005,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 222,
+              "word_start": 221
+            }
+          ]
+        }
+      ],
+      "lost_hits": [],
+      "new_hits": [],
+      "v1": {
+        "clean_minutes": 2.6605,
+        "current_minutes": 8.000266666666667,
+        "false_positives_per_current_minute": 9.624679177360754,
+        "files": 6,
+        "flags_by_type": {
+          "awkward_pause": 16,
+          "dragging": 3,
+          "missing_pause": 55,
+          "monotone": 0,
+          "mumbling": 0,
+          "rushing": 7,
+          "too_quiet": 0
+        },
+        "metrics": {
+          "awkward_pause": {
+            "f1": 0.2222222222222222,
+            "false_alarms_per_minute": 1.5034767900770534,
+            "false_positives": 14,
+            "hits": 2,
+            "matched": 2,
+            "misses": 0,
+            "precision": 0.125,
+            "predicted": 16,
+            "recall": 1.0,
+            "truth": 2
+          },
+          "dragging": {
+            "f1": 0.0,
+            "false_alarms_per_minute": 0.0,
+            "false_positives": 3,
+            "hits": 0,
+            "matched": 0,
+            "misses": 1,
+            "precision": 0.0,
+            "predicted": 3,
+            "recall": 0.0,
+            "truth": 1
+          },
+          "missing_pause": {
+            "f1": 0.07017543859649122,
+            "false_alarms_per_minute": 6.765645555346739,
+            "false_positives": 53,
+            "hits": 2,
+            "matched": 2,
+            "misses": 0,
+            "precision": 0.03636363636363636,
+            "predicted": 55,
+            "recall": 1.0,
+            "truth": 2
+          },
+          "monotone": {
+            "f1": 0.0,
+            "false_alarms_per_minute": 0.0,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "mumbling": {
+            "f1": 0.0,
+            "false_alarms_per_minute": 0.0,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "overall": {
+            "f1": 0.0851063829787234,
+            "false_alarms_per_minute": 8.644991542943057,
+            "false_positives": 77,
+            "hits": 4,
+            "matched": 4,
+            "misses": 9,
+            "precision": 0.04938271604938271,
+            "predicted": 81,
+            "recall": 0.3076923076923077,
+            "truth": 13
+          },
+          "rushing": {
+            "f1": 0.0,
+            "false_alarms_per_minute": 0.37586919751926334,
+            "false_positives": 7,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 7,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "too_quiet": {
+            "f1": 0.0,
+            "false_alarms_per_minute": 0.0,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          }
+        }
+      },
+      "v1+floor": {
+        "clean_minutes": 2.6605,
+        "current_minutes": 8.000266666666667,
+        "false_positives_per_current_minute": 8.499716676110797,
+        "files": 6,
+        "flags_by_type": {
+          "awkward_pause": 7,
+          "dragging": 3,
+          "missing_pause": 55,
+          "monotone": 0,
+          "mumbling": 0,
+          "rushing": 7,
+          "too_quiet": 0
+        },
+        "metrics": {
+          "awkward_pause": {
+            "f1": 0.4444444444444444,
+            "false_alarms_per_minute": 0.7517383950385267,
+            "false_positives": 5,
+            "hits": 2,
+            "matched": 2,
+            "misses": 0,
+            "precision": 0.2857142857142857,
+            "predicted": 7,
+            "recall": 1.0,
+            "truth": 2
+          },
+          "dragging": {
+            "f1": 0.0,
+            "false_alarms_per_minute": 0.0,
+            "false_positives": 3,
+            "hits": 0,
+            "matched": 0,
+            "misses": 1,
+            "precision": 0.0,
+            "predicted": 3,
+            "recall": 0.0,
+            "truth": 1
+          },
+          "missing_pause": {
+            "f1": 0.07017543859649122,
+            "false_alarms_per_minute": 6.765645555346739,
+            "false_positives": 53,
+            "hits": 2,
+            "matched": 2,
+            "misses": 0,
+            "precision": 0.03636363636363636,
+            "predicted": 55,
+            "recall": 1.0,
+            "truth": 2
+          },
+          "monotone": {
+            "f1": 0.0,
+            "false_alarms_per_minute": 0.0,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "mumbling": {
+            "f1": 0.0,
+            "false_alarms_per_minute": 0.0,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "overall": {
+            "f1": 0.09411764705882353,
+            "false_alarms_per_minute": 7.89325314790453,
+            "false_positives": 68,
+            "hits": 4,
+            "matched": 4,
+            "misses": 9,
+            "precision": 0.05555555555555555,
+            "predicted": 72,
+            "recall": 0.3076923076923077,
+            "truth": 13
+          },
+          "rushing": {
+            "f1": 0.0,
+            "false_alarms_per_minute": 0.37586919751926334,
+            "false_positives": 7,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 7,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "too_quiet": {
+            "f1": 0.0,
+            "false_alarms_per_minute": 0.0,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          }
+        }
+      }
+    },
+    "B": {
+      "changed_types": [
+        "awkward_pause",
+        "missing_pause"
+      ],
+      "excluded_uncertain_truth": 0,
+      "files": [
+        {
+          "changed_types": [
+            "awkward_pause",
+            "missing_pause"
+          ],
+          "excluded_truth": [],
+          "floor_pairs": [
+            [
+              1,
+              1
+            ]
+          ],
+          "floor_regions": [
+            {
+              "end": 6.02,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.07,
+                "reference": 0.43,
+                "unit": "s",
+                "z": -13.48
+              },
+              "mean_abs_z": 13.48,
+              "severity": 4,
+              "start": 5.95,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 19,
+              "word_start": 18
+            },
+            {
+              "end": 31.47,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.57,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 4.879
+              },
+              "mean_abs_z": 4.879,
+              "severity": 4,
+              "start": 29.9,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 104,
+              "word_start": 103
+            },
+            {
+              "end": 44.275,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.47000000000000003,
+                "unit": "s",
+                "z": -24.57
+              },
+              "mean_abs_z": 24.57,
+              "severity": 4,
+              "start": 44.245,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 143,
+              "word_start": 142
+            },
+            {
+              "end": 47.145,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.44,
+                "unit": "s",
+                "z": -22.63
+              },
+              "mean_abs_z": 22.63,
+              "severity": 4,
+              "start": 47.115,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 154,
+              "word_start": 153
+            },
+            {
+              "end": 48.83,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.96,
+                "reference": 0.26,
+                "unit": "s",
+                "z": 7.617
+              },
+              "mean_abs_z": 7.617,
+              "severity": 4,
+              "start": 47.87,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 158,
+              "word_start": 157
+            },
+            {
+              "end": 49.555,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.34,
+                "unit": "s",
+                "z": -16.41
+              },
+              "mean_abs_z": 16.41,
+              "severity": 4,
+              "start": 49.525,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 162,
+              "word_start": 161
+            },
+            {
+              "end": 69.635,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.35,
+                "unit": "s",
+                "z": -17.01
+              },
+              "mean_abs_z": 17.01,
+              "severity": 4,
+              "start": 69.605,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 226,
+              "word_start": 225
+            },
+            {
+              "end": 71.415,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.38,
+                "unit": "s",
+                "z": -18.85
+              },
+              "mean_abs_z": 18.85,
+              "severity": 4,
+              "start": 71.385,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 229,
+              "word_start": 228
+            },
+            {
+              "end": 72.665,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.37,
+                "unit": "s",
+                "z": -18.23
+              },
+              "mean_abs_z": 18.23,
+              "severity": 4,
+              "start": 72.635,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 233,
+              "word_start": 232
+            },
+            {
+              "end": 78.125,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.42,
+                "unit": "s",
+                "z": -21.35
+              },
+              "mean_abs_z": 21.35,
+              "severity": 4,
+              "start": 78.095,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 251,
+              "word_start": 250
+            }
+          ],
+          "job_id": "6d8cbd6dec22ffc8f7827ebc",
+          "lost_hits": [],
+          "mode": "B",
+          "new_hits": [],
+          "recording_id": "gettysburg__user__input_91e74acbc922",
+          "reference_version": "32a5d37a0a3898fd1f7b438f34e96d413a05b2930ffc29905455e2b1b6f5418a",
+          "take_id": "gettysburg__user__take02",
+          "truth": [
+            {
+              "canonical_unit": 4,
+              "end": 25.01,
+              "start": 19.66,
+              "type": "rushing",
+              "word_end": 88,
+              "word_start": 63
+            },
+            {
+              "canonical_unit": 6,
+              "end": 31.47,
+              "start": 29.9,
+              "type": "awkward_pause",
+              "word_end": 104,
+              "word_start": 103
+            },
+            {
+              "canonical_unit": 8,
+              "end": 47.87,
+              "start": 47.13,
+              "type": "too_quiet",
+              "word_end": 157,
+              "word_start": 154
+            }
+          ],
+          "v1_pairs": [
+            [
+              4,
+              1
+            ]
+          ],
+          "v1_regions": [
+            {
+              "end": 6.02,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.07,
+                "reference": 0.43,
+                "unit": "s",
+                "z": -1519.0
+              },
+              "mean_abs_z": 1519.0,
+              "severity": 4,
+              "start": 5.95,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 19,
+              "word_start": 18
+            },
+            {
+              "end": 9.39,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.51,
+                "reference": 0.37,
+                "unit": "s",
+                "z": 315.1
+              },
+              "mean_abs_z": 315.1,
+              "severity": 4,
+              "start": 8.88,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 30,
+              "word_start": 29
+            },
+            {
+              "end": 16.92,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.49000000000000005,
+                "reference": 0.48000000000000004,
+                "unit": "s",
+                "z": 20.48
+              },
+              "mean_abs_z": 20.48,
+              "severity": 4,
+              "start": 16.43,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 53,
+              "word_start": 52
+            },
+            {
+              "end": 19.66,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.48000000000000004,
+                "reference": 0.41,
+                "unit": "s",
+                "z": 155.2
+              },
+              "mean_abs_z": 155.2,
+              "severity": 4,
+              "start": 19.18,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 63,
+              "word_start": 62
+            },
+            {
+              "end": 31.47,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.57,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 3810.0
+              },
+              "mean_abs_z": 3810.0,
+              "severity": 4,
+              "start": 29.9,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 104,
+              "word_start": 103
+            },
+            {
+              "end": 44.275,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.47000000000000003,
+                "unit": "s",
+                "z": -2565.0
+              },
+              "mean_abs_z": 2565.0,
+              "severity": 4,
+              "start": 44.245,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 143,
+              "word_start": 142
+            },
+            {
+              "end": 47.145,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.44,
+                "unit": "s",
+                "z": -2500.0
+              },
+              "mean_abs_z": 2500.0,
+              "severity": 4,
+              "start": 47.115,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 154,
+              "word_start": 153
+            },
+            {
+              "end": 48.83,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.96,
+                "reference": 0.26,
+                "unit": "s",
+                "z": 1294.0
+              },
+              "mean_abs_z": 1294.0,
+              "severity": 4,
+              "start": 47.87,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 158,
+              "word_start": 157
+            },
+            {
+              "end": 49.555,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.34,
+                "unit": "s",
+                "z": -2250.0
+              },
+              "mean_abs_z": 2250.0,
+              "severity": 4,
+              "start": 49.525,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 162,
+              "word_start": 161
+            },
+            {
+              "end": 69.635,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.35,
+                "unit": "s",
+                "z": -2278.0
+              },
+              "mean_abs_z": 2278.0,
+              "severity": 4,
+              "start": 69.605,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 226,
+              "word_start": 225
+            },
+            {
+              "end": 71.415,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.38,
+                "unit": "s",
+                "z": -2357.0
+              },
+              "mean_abs_z": 2357.0,
+              "severity": 4,
+              "start": 71.385,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 229,
+              "word_start": 228
+            },
+            {
+              "end": 72.665,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.37,
+                "unit": "s",
+                "z": -2331.0
+              },
+              "mean_abs_z": 2331.0,
+              "severity": 4,
+              "start": 72.635,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 233,
+              "word_start": 232
+            },
+            {
+              "end": 78.125,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.42,
+                "unit": "s",
+                "z": -2455.0
+              },
+              "mean_abs_z": 2455.0,
+              "severity": 4,
+              "start": 78.095,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 251,
+              "word_start": 250
+            }
+          ]
+        },
+        {
+          "changed_types": [
+            "awkward_pause",
+            "missing_pause"
+          ],
+          "excluded_truth": [],
+          "floor_pairs": [],
+          "floor_regions": [
+            {
+              "end": 9.68,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.6,
+                "reference": 0.37,
+                "unit": "s",
+                "z": 3.741
+              },
+              "mean_abs_z": 3.741,
+              "severity": 3,
+              "start": 9.08,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 30,
+              "word_start": 29
+            },
+            {
+              "end": 18.88,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.64,
+                "reference": 0.41,
+                "unit": "s",
+                "z": 3.786
+              },
+              "mean_abs_z": 3.786,
+              "severity": 3,
+              "start": 18.24,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 64,
+              "word_start": 63
+            },
+            {
+              "end": 29.09,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.49000000000000005,
+                "reference": 0.26,
+                "unit": "s",
+                "z": 3.579
+              },
+              "mean_abs_z": 3.579,
+              "severity": 3,
+              "start": 28.6,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 102,
+              "word_start": 101
+            },
+            {
+              "end": 41.76,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.92,
+                "reference": 0.27,
+                "unit": "s",
+                "z": 7.365
+              },
+              "mean_abs_z": 7.365,
+              "severity": 4,
+              "start": 40.84,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 139,
+              "word_start": 138
+            },
+            {
+              "end": 43.495,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.47000000000000003,
+                "unit": "s",
+                "z": -24.57
+              },
+              "mean_abs_z": 24.57,
+              "severity": 4,
+              "start": 43.465,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 145,
+              "word_start": 144
+            },
+            {
+              "end": 44.98,
+              "evidence": {
+                "feature": "pitchvar",
+                "participant": 1.097763444632522,
+                "reference": 4.692318638502422,
+                "unit": "semitones",
+                "z": -4.635
+              },
+              "mean_abs_z": 4.635,
+              "severity": 4,
+              "start": 44.28,
+              "tags": [],
+              "type": "monotone",
+              "word_end": 151,
+              "word_start": 148
+            },
+            {
+              "end": 46.385,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.44,
+                "unit": "s",
+                "z": -22.63
+              },
+              "mean_abs_z": 22.63,
+              "severity": 4,
+              "start": 46.355,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 156,
+              "word_start": 155
+            },
+            {
+              "end": 47.93,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.09000000000000001,
+                "reference": 0.34,
+                "unit": "s",
+                "z": -8.185
+              },
+              "mean_abs_z": 8.185,
+              "severity": 4,
+              "start": 47.84,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 164,
+              "word_start": 163
+            },
+            {
+              "end": 53.29,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.98,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 4.243
+              },
+              "mean_abs_z": 4.243,
+              "severity": 4,
+              "start": 52.31,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 179,
+              "word_start": 178
+            },
+            {
+              "end": 56.92,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.09000000000000001,
+                "reference": 0.46,
+                "unit": "s",
+                "z": -13.31
+              },
+              "mean_abs_z": 13.31,
+              "severity": 4,
+              "start": 56.83,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 187,
+              "word_start": 186
+            },
+            {
+              "end": 69.145,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.35,
+                "unit": "s",
+                "z": -17.01
+              },
+              "mean_abs_z": 17.01,
+              "severity": 4,
+              "start": 69.115,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 227,
+              "word_start": 226
+            },
+            {
+              "end": 70.3,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.07,
+                "reference": 0.38,
+                "unit": "s",
+                "z": -11.18
+              },
+              "mean_abs_z": 11.18,
+              "severity": 4,
+              "start": 70.23,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 231,
+              "word_start": 230
+            },
+            {
+              "end": 71.395,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.37,
+                "unit": "s",
+                "z": -18.23
+              },
+              "mean_abs_z": 18.23,
+              "severity": 4,
+              "start": 71.365,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 235,
+              "word_start": 234
+            },
+            {
+              "end": 76.785,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.42,
+                "unit": "s",
+                "z": -21.35
+              },
+              "mean_abs_z": 21.35,
+              "severity": 4,
+              "start": 76.755,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 252,
+              "word_start": 251
+            }
+          ],
+          "job_id": "9a1e6c9b493bf38f97547c38",
+          "lost_hits": [],
+          "mode": "B",
+          "new_hits": [],
+          "recording_id": "gettysburg__user__input_4b7c30271b2f",
+          "reference_version": "32a5d37a0a3898fd1f7b438f34e96d413a05b2930ffc29905455e2b1b6f5418a",
+          "take_id": "gettysburg__user__take03",
+          "truth": [
+            {
+              "canonical_unit": 2,
+              "end": 15.75,
+              "start": 9.68,
+              "type": "monotone",
+              "word_end": 53,
+              "word_start": 30
+            },
+            {
+              "canonical_unit": 7,
+              "end": 40.84,
+              "start": 34.16,
+              "type": "mumbling",
+              "word_end": 138,
+              "word_start": 118
+            },
+            {
+              "canonical_unit": 8,
+              "end": 47.085,
+              "start": 47.055,
+              "type": "missing_pause",
+              "word_end": 160,
+              "word_start": 159
+            },
+            {
+              "canonical_unit": 9,
+              "end": 54.97,
+              "start": 53.71,
+              "type": "dragging",
+              "word_end": 183,
+              "word_start": 180
+            }
+          ],
+          "v1_pairs": [],
+          "v1_regions": [
+            {
+              "end": 6.0,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.46,
+                "reference": 0.43,
+                "unit": "s",
+                "z": 66.41
+              },
+              "mean_abs_z": 66.41,
+              "severity": 4,
+              "start": 5.54,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 19,
+              "word_start": 18
+            },
+            {
+              "end": 9.68,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.6,
+                "reference": 0.37,
+                "unit": "s",
+                "z": 478.4
+              },
+              "mean_abs_z": 478.4,
+              "severity": 4,
+              "start": 9.08,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 30,
+              "word_start": 29
+            },
+            {
+              "end": 18.88,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.64,
+                "reference": 0.41,
+                "unit": "s",
+                "z": 444.2
+              },
+              "mean_abs_z": 444.2,
+              "severity": 4,
+              "start": 18.24,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 64,
+              "word_start": 63
+            },
+            {
+              "end": 29.09,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.49000000000000005,
+                "reference": 0.26,
+                "unit": "s",
+                "z": 608.0
+              },
+              "mean_abs_z": 608.0,
+              "severity": 4,
+              "start": 28.6,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 102,
+              "word_start": 101
+            },
+            {
+              "end": 34.16,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.52,
+                "reference": 0.33,
+                "unit": "s",
+                "z": 444.2
+              },
+              "mean_abs_z": 444.2,
+              "severity": 4,
+              "start": 33.64,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 118,
+              "word_start": 117
+            },
+            {
+              "end": 41.76,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.92,
+                "reference": 0.27,
+                "unit": "s",
+                "z": 1215.0
+              },
+              "mean_abs_z": 1215.0,
+              "severity": 4,
+              "start": 40.84,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 139,
+              "word_start": 138
+            },
+            {
+              "end": 43.495,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.47000000000000003,
+                "unit": "s",
+                "z": -2565.0
+              },
+              "mean_abs_z": 2565.0,
+              "severity": 4,
+              "start": 43.465,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 145,
+              "word_start": 144
+            },
+            {
+              "end": 44.98,
+              "evidence": {
+                "feature": "pitchvar",
+                "participant": 1.097763444632522,
+                "reference": 4.692318638502422,
+                "unit": "semitones",
+                "z": -4.635
+              },
+              "mean_abs_z": 4.635,
+              "severity": 4,
+              "start": 44.28,
+              "tags": [],
+              "type": "monotone",
+              "word_end": 151,
+              "word_start": 148
+            },
+            {
+              "end": 46.385,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.44,
+                "unit": "s",
+                "z": -2500.0
+              },
+              "mean_abs_z": 2500.0,
+              "severity": 4,
+              "start": 46.355,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 156,
+              "word_start": 155
+            },
+            {
+              "end": 47.93,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.09000000000000001,
+                "reference": 0.34,
+                "unit": "s",
+                "z": -1122.0
+              },
+              "mean_abs_z": 1122.0,
+              "severity": 4,
+              "start": 47.84,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 164,
+              "word_start": 163
+            },
+            {
+              "end": 53.29,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.98,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 3314.0
+              },
+              "mean_abs_z": 3314.0,
+              "severity": 4,
+              "start": 52.31,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 179,
+              "word_start": 178
+            },
+            {
+              "end": 55.91,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.45,
+                "reference": 6.938893903907228e-18,
+                "unit": "s",
+                "z": 2522.0
+              },
+              "mean_abs_z": 2522.0,
+              "severity": 4,
+              "start": 55.46,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 185,
+              "word_start": 184
+            },
+            {
+              "end": 56.92,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.09000000000000001,
+                "reference": 0.46,
+                "unit": "s",
+                "z": -1416.0
+              },
+              "mean_abs_z": 1416.0,
+              "severity": 4,
+              "start": 56.83,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 187,
+              "word_start": 186
+            },
+            {
+              "end": 69.145,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.35,
+                "unit": "s",
+                "z": -2278.0
+              },
+              "mean_abs_z": 2278.0,
+              "severity": 4,
+              "start": 69.115,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 227,
+              "word_start": 226
+            },
+            {
+              "end": 70.3,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.07,
+                "reference": 0.38,
+                "unit": "s",
+                "z": -1398.0
+              },
+              "mean_abs_z": 1398.0,
+              "severity": 4,
+              "start": 70.23,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 231,
+              "word_start": 230
+            },
+            {
+              "end": 71.395,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.37,
+                "unit": "s",
+                "z": -2331.0
+              },
+              "mean_abs_z": 2331.0,
+              "severity": 4,
+              "start": 71.365,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 235,
+              "word_start": 234
+            },
+            {
+              "end": 76.785,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.42,
+                "unit": "s",
+                "z": -2455.0
+              },
+              "mean_abs_z": 2455.0,
+              "severity": 4,
+              "start": 76.755,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 252,
+              "word_start": 251
+            }
+          ]
+        },
+        {
+          "changed_types": [
+            "awkward_pause",
+            "missing_pause"
+          ],
+          "excluded_truth": [],
+          "floor_pairs": [
+            [
+              6,
+              2
+            ]
+          ],
+          "floor_regions": [
+            {
+              "end": 32.88,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.11,
+                "reference": 0.43,
+                "unit": "s",
+                "z": 8.579
+              },
+              "mean_abs_z": 8.579,
+              "severity": 4,
+              "start": 31.77,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 121,
+              "word_start": 120
+            },
+            {
+              "end": 34.655,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.47000000000000003,
+                "unit": "s",
+                "z": -24.57
+              },
+              "mean_abs_z": 24.57,
+              "severity": 4,
+              "start": 34.625,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 126,
+              "word_start": 125
+            },
+            {
+              "end": 38.35,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.71,
+                "reference": 0.5,
+                "unit": "s",
+                "z": 3.58
+              },
+              "mean_abs_z": 3.58,
+              "severity": 3,
+              "start": 37.64,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 139,
+              "word_start": 138
+            },
+            {
+              "end": 45.66,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.24,
+                "reference": 0.73,
+                "unit": "s",
+                "z": -15.33
+              },
+              "mean_abs_z": 15.33,
+              "severity": 4,
+              "start": 45.42,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 154,
+              "word_start": 153
+            },
+            {
+              "end": 56.44,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.02,
+                "reference": 0.4,
+                "unit": "s",
+                "z": 7.921
+              },
+              "mean_abs_z": 7.921,
+              "severity": 4,
+              "start": 55.42,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 185,
+              "word_start": 184
+            },
+            {
+              "end": 62.12,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.23,
+                "reference": 0.74,
+                "unit": "s",
+                "z": 7.57
+              },
+              "mean_abs_z": 7.57,
+              "severity": 4,
+              "start": 60.89,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 198,
+              "word_start": 197
+            },
+            {
+              "end": 64.69,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.56,
+                "reference": 0.37,
+                "unit": "s",
+                "z": 11.51
+              },
+              "mean_abs_z": 11.51,
+              "severity": 4,
+              "start": 63.13,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 202,
+              "word_start": 201
+            },
+            {
+              "end": 65.72,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.13,
+                "reference": 0.37,
+                "unit": "s",
+                "z": -7.259
+              },
+              "mean_abs_z": 7.259,
+              "severity": 4,
+              "start": 65.59,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 205,
+              "word_start": 204
+            },
+            {
+              "end": 67.14,
+              "evidence": {
+                "feature": "rate",
+                "participant": 2.2072891536564496,
+                "reference": 4.721632313318199,
+                "unit": "syllables/s",
+                "z": -5.096666666666667
+              },
+              "mean_abs_z": 5.097,
+              "severity": 4,
+              "start": 65.72,
+              "tags": [],
+              "type": "dragging",
+              "word_end": 207,
+              "word_start": 205
+            },
+            {
+              "end": 68.475,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.64,
+                "unit": "s",
+                "z": -36.12
+              },
+              "mean_abs_z": 36.12,
+              "severity": 4,
+              "start": 68.445,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 212,
+              "word_start": 211
+            }
+          ],
+          "job_id": "d48bda35d22f96206a0ae2d7",
+          "lost_hits": [],
+          "mode": "B",
+          "new_hits": [],
+          "recording_id": "reagan_challenger__user__input_cf63338562c6",
+          "reference_version": "dd16455692c4f03bed0905cae93c0b33e8ba627f0ba1a022c83cdd92741b92a5",
+          "take_id": "reagan_challenger__user__take02",
+          "truth": [
+            {
+              "canonical_unit": 10,
+              "end": 37.64,
+              "start": 32.88,
+              "type": "rushing",
+              "word_end": 138,
+              "word_start": 121
+            },
+            {
+              "canonical_unit": 15,
+              "end": 60.89,
+              "start": 59.02,
+              "type": "too_quiet",
+              "word_end": 197,
+              "word_start": 194
+            },
+            {
+              "canonical_unit": 16,
+              "end": 64.69,
+              "start": 63.13,
+              "type": "awkward_pause",
+              "word_end": 202,
+              "word_start": 201
+            }
+          ],
+          "v1_pairs": [
+            [
+              10,
+              2
+            ]
+          ],
+          "v1_regions": [
+            {
+              "end": 13.75,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.53,
+                "reference": 0.48000000000000004,
+                "unit": "s",
+                "z": 98.76
+              },
+              "mean_abs_z": 98.76,
+              "severity": 4,
+              "start": 13.22,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 55,
+              "word_start": 54
+            },
+            {
+              "end": 16.9,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.56,
+                "reference": 0.49000000000000005,
+                "unit": "s",
+                "z": 133.5
+              },
+              "mean_abs_z": 133.5,
+              "severity": 4,
+              "start": 16.34,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 68,
+              "word_start": 67
+            },
+            {
+              "end": 26.82,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.66,
+                "reference": 0.51,
+                "unit": "s",
+                "z": 260.0
+              },
+              "mean_abs_z": 260.0,
+              "severity": 4,
+              "start": 26.16,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 101,
+              "word_start": 100
+            },
+            {
+              "end": 32.88,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.11,
+                "reference": 0.43,
+                "unit": "s",
+                "z": 966.6
+              },
+              "mean_abs_z": 966.6,
+              "severity": 4,
+              "start": 31.77,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 121,
+              "word_start": 120
+            },
+            {
+              "end": 34.655,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.47000000000000003,
+                "unit": "s",
+                "z": -2565.0
+              },
+              "mean_abs_z": 2565.0,
+              "severity": 4,
+              "start": 34.625,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 126,
+              "word_start": 125
+            },
+            {
+              "end": 38.35,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.71,
+                "reference": 0.5,
+                "unit": "s",
+                "z": 354.3
+              },
+              "mean_abs_z": 354.3,
+              "severity": 4,
+              "start": 37.64,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 139,
+              "word_start": 138
+            },
+            {
+              "end": 45.66,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.24,
+                "reference": 0.73,
+                "unit": "s",
+                "z": -1084.0
+              },
+              "mean_abs_z": 1084.0,
+              "severity": 4,
+              "start": 45.42,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 154,
+              "word_start": 153
+            },
+            {
+              "end": 48.64,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.63,
+                "reference": 0.6,
+                "unit": "s",
+                "z": 49.43
+              },
+              "mean_abs_z": 49.43,
+              "severity": 4,
+              "start": 48.01,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 159,
+              "word_start": 158
+            },
+            {
+              "end": 56.44,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.02,
+                "reference": 0.4,
+                "unit": "s",
+                "z": 948.8
+              },
+              "mean_abs_z": 948.8,
+              "severity": 4,
+              "start": 55.42,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 185,
+              "word_start": 184
+            },
+            {
+              "end": 62.12,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.23,
+                "reference": 0.74,
+                "unit": "s",
+                "z": 528.6
+              },
+              "mean_abs_z": 528.6,
+              "severity": 4,
+              "start": 60.89,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 198,
+              "word_start": 197
+            },
+            {
+              "end": 64.69,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.56,
+                "reference": 0.37,
+                "unit": "s",
+                "z": 1472.0
+              },
+              "mean_abs_z": 1472.0,
+              "severity": 4,
+              "start": 63.13,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 202,
+              "word_start": 201
+            },
+            {
+              "end": 65.72,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.13,
+                "reference": 0.37,
+                "unit": "s",
+                "z": -928.2
+              },
+              "mean_abs_z": 928.2,
+              "severity": 4,
+              "start": 65.59,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 205,
+              "word_start": 204
+            },
+            {
+              "end": 67.14,
+              "evidence": {
+                "feature": "rate",
+                "participant": 2.2072891536564496,
+                "reference": 4.721632313318199,
+                "unit": "syllables/s",
+                "z": -5.096666666666667
+              },
+              "mean_abs_z": 5.097,
+              "severity": 4,
+              "start": 65.72,
+              "tags": [],
+              "type": "dragging",
+              "word_end": 207,
+              "word_start": 205
+            },
+            {
+              "end": 68.475,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.64,
+                "unit": "s",
+                "z": -2875.0
+              },
+              "mean_abs_z": 2875.0,
+              "severity": 4,
+              "start": 68.445,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 212,
+              "word_start": 211
+            }
+          ]
+        },
+        {
+          "changed_types": [
+            "awkward_pause",
+            "missing_pause"
+          ],
+          "excluded_truth": [],
+          "floor_pairs": [
+            [
+              8,
+              2
+            ]
+          ],
+          "floor_regions": [
+            {
+              "end": 29.67,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.82,
+                "reference": 0.51,
+                "unit": "s",
+                "z": 4.961
+              },
+              "mean_abs_z": 4.961,
+              "severity": 4,
+              "start": 28.85,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 102,
+              "word_start": 101
+            },
+            {
+              "end": 31.8,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.56,
+                "reference": 0.25,
+                "unit": "s",
+                "z": 4.44
+              },
+              "mean_abs_z": 4.44,
+              "severity": 4,
+              "start": 31.24,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 109,
+              "word_start": 108
+            },
+            {
+              "end": 40.44,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.10000000000000002,
+                "reference": 0.47000000000000003,
+                "unit": "s",
+                "z": -13.04
+              },
+              "mean_abs_z": 13.04,
+              "severity": 4,
+              "start": 40.34,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 128,
+              "word_start": 127
+            },
+            {
+              "end": 49.25,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.21,
+                "reference": 0.4,
+                "unit": "s",
+                "z": 9.416
+              },
+              "mean_abs_z": 9.416,
+              "severity": 4,
+              "start": 48.04,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 150,
+              "word_start": 149
+            },
+            {
+              "end": 50.1,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.06000000000000001,
+                "reference": 0.31,
+                "unit": "s",
+                "z": -8.788
+              },
+              "mean_abs_z": 8.788,
+              "severity": 4,
+              "start": 50.04,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 152,
+              "word_start": 151
+            },
+            {
+              "end": 53.07,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.28,
+                "reference": 0.73,
+                "unit": "s",
+                "z": -13.33
+              },
+              "mean_abs_z": 13.33,
+              "severity": 4,
+              "start": 52.79,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 156,
+              "word_start": 155
+            },
+            {
+              "end": 58.81,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.63,
+                "reference": 0.27,
+                "unit": "s",
+                "z": 5.006
+              },
+              "mean_abs_z": 5.006,
+              "severity": 4,
+              "start": 58.18,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 169,
+              "word_start": 168
+            },
+            {
+              "end": 60.72,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.03999999999999998,
+                "reference": 0.31,
+                "unit": "s",
+                "z": -10.27
+              },
+              "mean_abs_z": 10.27,
+              "severity": 4,
+              "start": 60.68,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 178,
+              "word_start": 177
+            },
+            {
+              "end": 63.235,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4,
+                "unit": "s",
+                "z": -20.09
+              },
+              "mean_abs_z": 20.09,
+              "severity": 4,
+              "start": 63.205,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 187,
+              "word_start": 186
+            },
+            {
+              "end": 67.465,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.37,
+                "unit": "s",
+                "z": -18.23
+              },
+              "mean_abs_z": 18.23,
+              "severity": 4,
+              "start": 67.435,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 204,
+              "word_start": 203
+            },
+            {
+              "end": 70.655,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.64,
+                "unit": "s",
+                "z": -36.12
+              },
+              "mean_abs_z": 36.12,
+              "severity": 4,
+              "start": 70.625,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 214,
+              "word_start": 213
+            }
+          ],
+          "job_id": "b6890ffc341c98cd10d65a23",
+          "lost_hits": [],
+          "mode": "B",
+          "new_hits": [],
+          "recording_id": "reagan_challenger__user__input_990df0a0f76b",
+          "reference_version": "dd16455692c4f03bed0905cae93c0b33e8ba627f0ba1a022c83cdd92741b92a5",
+          "take_id": "reagan_challenger__user__take03",
+          "truth": [
+            {
+              "canonical_unit": 6,
+              "end": 26.4,
+              "start": 21.88,
+              "type": "monotone",
+              "word_end": 93,
+              "word_start": 76
+            },
+            {
+              "canonical_unit": 9,
+              "end": 37.58,
+              "start": 31.8,
+              "type": "mumbling",
+              "word_end": 122,
+              "word_start": 109
+            },
+            {
+              "canonical_unit": 14,
+              "end": 63.235,
+              "start": 63.205,
+              "type": "missing_pause",
+              "word_end": 187,
+              "word_start": 186
+            }
+          ],
+          "v1_pairs": [
+            [
+              14,
+              2
+            ]
+          ],
+          "v1_regions": [
+            {
+              "end": 5.51,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.54,
+                "reference": 0.51,
+                "unit": "s",
+                "z": 57.17
+              },
+              "mean_abs_z": 57.17,
+              "severity": 4,
+              "start": 4.97,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 19,
+              "word_start": 18
+            },
+            {
+              "end": 11.78,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.49000000000000005,
+                "reference": 0.42,
+                "unit": "s",
+                "z": 152.1
+              },
+              "mean_abs_z": 152.1,
+              "severity": 4,
+              "start": 11.29,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 41,
+              "word_start": 40
+            },
+            {
+              "end": 16.02,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.56,
+                "reference": 0.48000000000000004,
+                "unit": "s",
+                "z": 154.0
+              },
+              "mean_abs_z": 154.0,
+              "severity": 4,
+              "start": 15.46,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 56,
+              "word_start": 55
+            },
+            {
+              "end": 20.07,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.5,
+                "reference": 0.49000000000000005,
+                "unit": "s",
+                "z": 20.1
+              },
+              "mean_abs_z": 20.1,
+              "severity": 4,
+              "start": 19.57,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 70,
+              "word_start": 69
+            },
+            {
+              "end": 21.88,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.5,
+                "reference": 0.37,
+                "unit": "s",
+                "z": 295.4
+              },
+              "mean_abs_z": 295.4,
+              "severity": 4,
+              "start": 21.38,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 76,
+              "word_start": 75
+            },
+            {
+              "end": 29.67,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.82,
+                "reference": 0.51,
+                "unit": "s",
+                "z": 482.6
+              },
+              "mean_abs_z": 482.6,
+              "severity": 4,
+              "start": 28.85,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 102,
+              "word_start": 101
+            },
+            {
+              "end": 31.8,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.56,
+                "reference": 0.25,
+                "unit": "s",
+                "z": 777.4
+              },
+              "mean_abs_z": 777.4,
+              "severity": 4,
+              "start": 31.24,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 109,
+              "word_start": 108
+            },
+            {
+              "end": 38.11,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.53,
+                "reference": 0.43,
+                "unit": "s",
+                "z": 207.3
+              },
+              "mean_abs_z": 207.3,
+              "severity": 4,
+              "start": 37.58,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 123,
+              "word_start": 122
+            },
+            {
+              "end": 40.44,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.10000000000000002,
+                "reference": 0.47000000000000003,
+                "unit": "s",
+                "z": -1362.0
+              },
+              "mean_abs_z": 1362.0,
+              "severity": 4,
+              "start": 40.34,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 128,
+              "word_start": 127
+            },
+            {
+              "end": 49.25,
+              "evidence": {
+                "feature": "pause",
+                "participant": 1.21,
+                "reference": 0.4,
+                "unit": "s",
+                "z": 1128.0
+              },
+              "mean_abs_z": 1128.0,
+              "severity": 4,
+              "start": 48.04,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 150,
+              "word_start": 149
+            },
+            {
+              "end": 50.1,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.06000000000000001,
+                "reference": 0.31,
+                "unit": "s",
+                "z": -1299.0
+              },
+              "mean_abs_z": 1299.0,
+              "severity": 4,
+              "start": 50.04,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 152,
+              "word_start": 151
+            },
+            {
+              "end": 53.07,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.28,
+                "reference": 0.73,
+                "unit": "s",
+                "z": -942.3
+              },
+              "mean_abs_z": 942.3,
+              "severity": 4,
+              "start": 52.79,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 156,
+              "word_start": 155
+            },
+            {
+              "end": 58.81,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.63,
+                "reference": 0.27,
+                "unit": "s",
+                "z": 825.7
+              },
+              "mean_abs_z": 825.7,
+              "severity": 4,
+              "start": 58.18,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 169,
+              "word_start": 168
+            },
+            {
+              "end": 60.72,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.03999999999999998,
+                "reference": 0.31,
+                "unit": "s",
+                "z": -1519.0
+              },
+              "mean_abs_z": 1519.0,
+              "severity": 4,
+              "start": 60.68,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 178,
+              "word_start": 177
+            },
+            {
+              "end": 63.235,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.4,
+                "unit": "s",
+                "z": -2407.0
+              },
+              "mean_abs_z": 2407.0,
+              "severity": 4,
+              "start": 63.205,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 187,
+              "word_start": 186
+            },
+            {
+              "end": 67.465,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.37,
+                "unit": "s",
+                "z": -2331.0
+              },
+              "mean_abs_z": 2331.0,
+              "severity": 4,
+              "start": 67.435,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 204,
+              "word_start": 203
+            },
+            {
+              "end": 68.79,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.48000000000000004,
+                "reference": 0.37,
+                "unit": "s",
+                "z": 254.8
+              },
+              "mean_abs_z": 254.8,
+              "severity": 4,
+              "start": 68.31,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 207,
+              "word_start": 206
+            },
+            {
+              "end": 70.655,
+              "evidence": {
+                "feature": "pause",
+                "participant": 6.938893903907228e-18,
+                "reference": 0.64,
+                "unit": "s",
+                "z": -2875.0
+              },
+              "mean_abs_z": 2875.0,
+              "severity": 4,
+              "start": 70.625,
+              "tags": [],
+              "type": "missing_pause",
+              "word_end": 214,
+              "word_start": 213
+            },
+            {
+              "end": 74.42,
+              "evidence": {
+                "feature": "pause",
+                "participant": 0.53,
+                "reference": 0.52,
+                "unit": "s",
+                "z": 19.05
+              },
+              "mean_abs_z": 19.05,
+              "severity": 4,
+              "start": 73.89,
+              "tags": [],
+              "type": "awkward_pause",
+              "word_end": 228,
+              "word_start": 227
+            }
+          ]
+        }
+      ],
+      "lost_hits": [],
+      "new_hits": [],
+      "v1": {
+        "clean_minutes": 0.0,
+        "current_minutes": 5.339766666666666,
+        "false_positives_per_current_minute": 11.236446036967909,
+        "files": 4,
+        "flags_by_type": {
+          "awkward_pause": 34,
+          "dragging": 1,
+          "missing_pause": 27,
+          "monotone": 1,
+          "mumbling": 0,
+          "rushing": 0,
+          "too_quiet": 0
+        },
+        "metrics": {
+          "awkward_pause": {
+            "f1": 0.1111111111111111,
+            "false_alarms_per_minute": null,
+            "false_positives": 32,
+            "hits": 2,
+            "matched": 2,
+            "misses": 0,
+            "precision": 0.058823529411764705,
+            "predicted": 34,
+            "recall": 1.0,
+            "truth": 2
+          },
+          "dragging": {
+            "f1": 0.0,
+            "false_alarms_per_minute": null,
+            "false_positives": 1,
+            "hits": 0,
+            "matched": 0,
+            "misses": 1,
+            "precision": 0.0,
+            "predicted": 1,
+            "recall": 0.0,
+            "truth": 1
+          },
+          "missing_pause": {
+            "f1": 0.06896551724137931,
+            "false_alarms_per_minute": null,
+            "false_positives": 26,
+            "hits": 1,
+            "matched": 1,
+            "misses": 1,
+            "precision": 0.037037037037037035,
+            "predicted": 27,
+            "recall": 0.5,
+            "truth": 2
+          },
+          "monotone": {
+            "f1": 0.0,
+            "false_alarms_per_minute": null,
+            "false_positives": 1,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 1,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "mumbling": {
+            "f1": 0.0,
+            "false_alarms_per_minute": null,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "overall": {
+            "f1": 0.07894736842105263,
+            "false_alarms_per_minute": null,
+            "false_positives": 60,
+            "hits": 3,
+            "matched": 3,
+            "misses": 10,
+            "precision": 0.047619047619047616,
+            "predicted": 63,
+            "recall": 0.23076923076923078,
+            "truth": 13
+          },
+          "rushing": {
+            "f1": 0.0,
+            "false_alarms_per_minute": null,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "too_quiet": {
+            "f1": 0.0,
+            "false_alarms_per_minute": null,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          }
+        }
+      },
+      "v1+floor": {
+        "clean_minutes": 0.0,
+        "current_minutes": 5.339766666666666,
+        "false_positives_per_current_minute": 7.865512225877536,
+        "files": 4,
+        "flags_by_type": {
+          "awkward_pause": 16,
+          "dragging": 1,
+          "missing_pause": 27,
+          "monotone": 1,
+          "mumbling": 0,
+          "rushing": 0,
+          "too_quiet": 0
+        },
+        "metrics": {
+          "awkward_pause": {
+            "f1": 0.2222222222222222,
+            "false_alarms_per_minute": null,
+            "false_positives": 14,
+            "hits": 2,
+            "matched": 2,
+            "misses": 0,
+            "precision": 0.125,
+            "predicted": 16,
+            "recall": 1.0,
+            "truth": 2
+          },
+          "dragging": {
+            "f1": 0.0,
+            "false_alarms_per_minute": null,
+            "false_positives": 1,
+            "hits": 0,
+            "matched": 0,
+            "misses": 1,
+            "precision": 0.0,
+            "predicted": 1,
+            "recall": 0.0,
+            "truth": 1
+          },
+          "missing_pause": {
+            "f1": 0.06896551724137931,
+            "false_alarms_per_minute": null,
+            "false_positives": 26,
+            "hits": 1,
+            "matched": 1,
+            "misses": 1,
+            "precision": 0.037037037037037035,
+            "predicted": 27,
+            "recall": 0.5,
+            "truth": 2
+          },
+          "monotone": {
+            "f1": 0.0,
+            "false_alarms_per_minute": null,
+            "false_positives": 1,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 1,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "mumbling": {
+            "f1": 0.0,
+            "false_alarms_per_minute": null,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "overall": {
+            "f1": 0.10344827586206896,
+            "false_alarms_per_minute": null,
+            "false_positives": 42,
+            "hits": 3,
+            "matched": 3,
+            "misses": 10,
+            "precision": 0.06666666666666667,
+            "predicted": 45,
+            "recall": 0.23076923076923078,
+            "truth": 13
+          },
+          "rushing": {
+            "f1": 0.0,
+            "false_alarms_per_minute": null,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          },
+          "too_quiet": {
+            "f1": 0.0,
+            "false_alarms_per_minute": null,
+            "false_positives": 0,
+            "hits": 0,
+            "matched": 0,
+            "misses": 2,
+            "precision": 0.0,
+            "predicted": 0,
+            "recall": 0.0,
+            "truth": 2
+          }
+        }
+      }
+    }
+  },
+  "stage": "human"
+}

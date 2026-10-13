@@ -1,0 +1,54 @@
+{
+  "Genuine A": {
+    "added_flags": {},
+    "lost_matched_types": {},
+    "newly_matched_types": {},
+    "removed_flags": {
+      "awkward_pause": 9
+    },
+    "retained_spans_evidence_changed": {
+      "awkward_pause": 7,
+      "missing_pause": 35
+    }
+  },
+  "Genuine B": {
+    "added_flags": {},
+    "lost_matched_types": {},
+    "newly_matched_types": {},
+    "removed_flags": {
+      "awkward_pause": 18
+    },
+    "retained_spans_evidence_changed": {
+      "awkward_pause": 16,
+      "missing_pause": 27
+    }
+  },
+  "TEST A-LOSO": {
+    "added_flags": {},
+    "lost_matched_types": {
+      "awkward_pause": 1
+    },
+    "newly_matched_types": {},
+    "removed_flags": {
+      "awkward_pause": 74
+    },
+    "retained_spans_evidence_changed": {
+      "awkward_pause": 67,
+      "missing_pause": 1
+    }
+  },
+  "TEST B-same-speaker": {
+    "added_flags": {},
+    "lost_matched_types": {
+      "awkward_pause": 2
+    },
+    "newly_matched_types": {},
+    "removed_flags": {
+      "awkward_pause": 871
+    },
+    "retained_spans_evidence_changed": {
+      "awkward_pause": 519,
+      "missing_pause": 313
+    }
+  }
+}
