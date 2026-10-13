@@ -6,13 +6,22 @@
     "base_url": "http://127.0.0.1:5175",
     "api": "real Docker API at 18000",
     "targeted_tests_passed": 3,
-    "mocks": false
+    "mocks": false,
+    "full_browser_tests_passed": 25,
+    "full_suite_log": ".superpowers/ui-fixes/live-final.log",
+    "overlapping_run": {
+      "passed": 24,
+      "failed": 1,
+      "test": "dashboard.spec.ts: real API upload, evidence, exact phrase playback and Modes A B C",
+      "reason": "API restarted during upload; later complete post-restart coordinator run passed all 25"
+    }
   },
   "static": {
     "base_url": "http://127.0.0.1:18767",
     "targeted_and_layout_tests_passed": 10,
     "node_tests_passed": 27,
-    "manifest_matches": 48
+    "manifest_matches": 48,
+    "full_browser_tests_passed": 22
   },
   "red_check": {
     "isolated_baseline": "/tmp/speech-eval-chips-baseline",
@@ -25,14 +34,22 @@
   ],
   "config_sha256": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
   "screenshots": {
-    "chips_live_all.png": "372d7a0bc5fc2af55862deefeed23635cb2af8acb24b1abefc37deaeb8a143e1",
-    "chips_live_filtered.png": "3ae3e73795ba50f0dd5fba83d2de02024726d4081be8ae1bb082b4af0d55ab44",
-    "chips_live_mobile_notice.png": "b51c1c3ec6ac590ae8a3a453cf87acca37df39a0acd0fff177ecc0e57e714c8f",
-    "chips_live_notice.png": "8360cab99a1070ed541d3348cdb2bfea8ff20747a11022fa045498c4f69c55fe",
-    "chips_static_all.png": "3395663f68add09c932db7d88a9e5546d14ac8e002e393f73cc1b88bde638286",
-    "chips_static_filtered.png": "a664a008285a0cc5ab9bac90165ac78aad8d52d6e741e75ac1d1a29b6ea15f0e",
-    "chips_static_mobile_notice.png": "4e8e94e491eacdef0718c3648ea4d2be0c2b4a29eadc0d977e083b53f3f46f8c",
-    "chips_static_notice.png": "6121a778494cad4f2b0d41bc932849c2a1f30e5fecba17d0808c60ee1fc43029"
+    "chips_live_all.png": "552b21ffc867233e3e6153e3c922903c5a7890f9d39ca6f13bf60b5b4df9c9d7",
+    "chips_live_filtered.png": "0e79fecf0b86b0e7e3103dcd7f9d83503771aea4d29e76ecd127aec7301b6930",
+    "chips_live_mobile_notice.png": "1181db4995ae5d93fd18cb82c8918fc99cca3957d16366f472d8872f7fc79766",
+    "chips_live_notice.png": "000cc1bbed44fd29335bb0abdb82b47ed594b59a542cfb6a9424980216cc565b",
+    "chips_static_all.png": "dbe539c67834c1926bc55f63020f1d102679e48f26a8e61b53ccd5ce63ba5de0",
+    "chips_static_filtered.png": "b34301b5b2516249ceca0e593165e6a982e26365551f41d304623537a11f2960",
+    "chips_static_mobile_notice.png": "bab3ba148556f5adaf118884398373a3872fac4afeed35350d31a32af348eccc",
+    "chips_static_notice.png": "d91b48f90e6d4a0051e5626fdad1b26ab6966c71728f9e813893233dca007e2c"
   },
-  "shared_suite_status": "Final Python/full browser verification is coordinated with website/explanation chats because their changes are in progress."
+  "shared_suite_status": "Combined static browser, live browser, Python and standalone production builds verified; Space publication pending.",
+  "python": {
+    "passed": 336,
+    "log": "/tmp/chips-pytest-final.log"
+  },
+  "standalone_static_build": {
+    "web_node_modules_present": false,
+    "passed": true
+  }
 }
