@@ -75,6 +75,10 @@ def export() -> None:
               selectedRegion=matches[0][0], hitIoU=matches[0][1], label=lp)
     entry('13ce79b4006a','Clean Reagan reader · Mode A',
           'Unedited public-domain source recording, with no stored flags. Institutional text has a single original reader; comparison to itself is not independent validation.')
+    rights = DEMO/'public/licensing/licences.json'
+    if rights.exists():
+        shutil.copyfile(ROOT/'data/release/licences.json', rights)
+        sources['licensing/licences.json'] = {'source':'data/release/licences.json','sha256':digest(rights)}
     (DEMO/'src/catalog.js').write_text('export default '+json.dumps(entries,ensure_ascii=False,indent=2)+';\n')
     (DEMO/'SOURCE_MAP.js').write_text('export default '+json.dumps(sources,indent=2,sort_keys=True)+';\n')
     (DEMO/'MANIFEST.sha256').write_text(''.join(f"{v['sha256']}  {k}\n" for k,v in sorted(sources.items())))
