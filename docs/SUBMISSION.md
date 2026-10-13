@@ -56,14 +56,17 @@ Compose equivalents. The Space is a precomputed demo; it never analyses uploads.
 ## Verification and disk
 
 - Complete host Python suite: **314 passed** in the verified pre-packaging run.
-  The final fresh-clone run and timings are recorded in
+  The final fresh-clone Drive quick check passed in **2,214.006 s** total
+  (**18.913 s** numerical computation). Docker verified **313 + 1** cases
+  across the full pre-import suite and the one optional post-import regression.
+  Timings are recorded in
   [reports/reproducibility.md](../reports/reproducibility.md).
 - Static demo: **2 Node tests**, **3 production Playwright tests** locally and
   **3 on the public Space**; all 19 views play. **38/38** hosted JSON files match
   original stored bytes. [Deployment checks](../reports/deploy_check.md).
 - Frozen reproduction: prior fresh-clone quick/full Docker runs matched **563/563**
   scientific output hashes. Those historical runs remain in reproducibility.md;
-  the final fresh-clone attempt has its own dated result and timing.
+  the final fresh-clone quick run also matched its pinned scientific JSON exactly.
 - Measured retained reproduction footprint: **32,170,019,620 bytes**
   (**32.170019620 decimal GB / 29.961 GiB**): tools/API image **16,804,236,803**,
   main ZIP **7,586,867,457**, unpacked payload **7,778,915,360**. This excludes web

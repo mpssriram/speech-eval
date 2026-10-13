@@ -67,4 +67,12 @@ zero page errors, failed app responses or analysis API calls.
 Evidence: `reports/hf_public_check.json`, `reports/deploy_browser_checks_public.json`.
 Screenshot: `reports/img/hf_space.png` (public Hub chrome and the selected genuine
 hit); cropped public hit: `reports/img/hf_space_region.png`. Both were captured
-without a browser login. The public page was also opened in the Codex browser.
+without a browser login. The public page was opened and captured in an anonymous browser session.
+
+A later documentation/provenance-only Space update is commit
+`4d7a2f25140e21517ef96875733622b027518d85`: it clarifies that the copied licence
+JSON covers the frozen main archive, while the included genuine takes use the
+later authorised CC BY 4.0 grant. SOURCE_MAP.js / AUDIO_SOURCES.js are now also
+shipped beside the build. App assets, audio, JSON hashes and selected default
+are unchanged. Independent read-only review found no Critical or Important
+issue; this licence-scope clarification resolved its one Minor finding.

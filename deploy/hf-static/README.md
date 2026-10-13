@@ -24,8 +24,12 @@ All stored flags and scores are preserved, including false alarms.
 ## Audio licences
 
 Public-domain readers/source audio have source-specific US public-domain evidence
-in [licences.json](licensing/licences.json). Derived synthetic playback clips retain
-that source status; labels/annotations are CC BY 4.0. The author's genuine takes
+in [licences.json](licensing/licences.json). This is the frozen main-corpus
+inventory from before the separate authorised human release; its human/application
+exclusion describes that immutable archive. Included genuine demo takes use the
+later owner-authorised CC BY 4.0 grant in [LICENSE-DATA](licensing/LICENSE-DATA)
+and the consent below. Derived synthetic playback clips retain their source
+status; labels/annotations are CC BY 4.0. The author's genuine takes
 are **CC BY 4.0**, with original consent copied byte-for-byte from
 [data/human/CONSENT.md](licensing/CONSENT.md). No loudness normalisation is applied
 to playback files. They are MP3 at 128 kbps and never used to recompute results.

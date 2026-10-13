@@ -1,0 +1,95 @@
+{
+  "cleanup": "Only speech-eval-final-check containers/network stopped and removed; clone/data/images/cache retained",
+  "clone_seconds": 6.945,
+  "date": "2026-10-13",
+  "docker_suite": {
+    "command": "docker compose run --rm --no-deps tools python -m pytest --override-ini addopts= -q",
+    "exit_code": 0,
+    "label": "fresh clone Python suite in built Docker image",
+    "log": "/tmp/speech-eval-final-clone-du0bapk6/logs/fresh_clone_docker_suite.log",
+    "seconds": 34.988
+  },
+  "frozen_files_unchanged": 23,
+  "github_commit": "d7f9451f19d8674c275cda25703ecdfd4e4e947d",
+  "host_suite": {
+    "passed": 314,
+    "seconds": 20.98
+  },
+  "make_reproduce_quick": {
+    "archive_bytes": 7586867457,
+    "archive_sha256": "a41a18482a72107e449d9562d106a94193f90b8a4e11718bdbfdf746e374a23b",
+    "command": "make reproduce-quick",
+    "cpu_only": true,
+    "drive_download": "complete anonymous download, gdown 5.2.0, no cookies",
+    "drive_progress_time": "15:09",
+    "expected_json_byte_identical": true,
+    "local_fallback_needed": false,
+    "numerical_seconds": 18.913,
+    "payload_files_installed": 7730,
+    "payload_files_verified": 13812,
+    "scientific_json_sha256": "ea1f85f862117810fd1d84d0e6c4a23012d8dbf94e9cbe635c736408a274fcaa",
+    "status": "PASS",
+    "test_rows": 114,
+    "total_seconds": 2214.006
+  },
+  "make_up": {
+    "dashboard_http": 200,
+    "first_web_health_response_seconds_from_log_creation": 699.075,
+    "health": {
+      "detector_config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+      "git_commit": "d7f9451f19d8674c275cda25703ecdfd4e4e947d",
+      "reference_version": {
+        "gettysburg__excl-none": "746a5ef0d4f2ad2eb999a85dc58eed970ddd266438c98da4543938485fdbeabe",
+        "norms_v1": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28",
+        "o_captain__excl-none": "b7f6a47216851cc39bd91f786997912580808acca1bb30c406c1edadb944c8fa",
+        "pooled_sigma": null
+      },
+      "version": "0.1.0"
+    },
+    "initial_probe_code": 124,
+    "initial_probe_seconds": 300.185,
+    "method": "First nginx Docker-health GET / 200 after log creation; API must be healthy before web starts. Rounded log timestamps, not an exact externally observed readiness bound.",
+    "status": "PASS after initial readiness probe timed out during dependency installation"
+  },
+  "optional_make_test_build_attempt": {
+    "command": "make test",
+    "exit_code": 2,
+    "label": "fresh clone Python Docker suite",
+    "log": "/tmp/speech-eval-final-clone-du0bapk6/logs/fresh_clone_docker_tests.log",
+    "seconds": 294.619
+  },
+  "real_audio_regression": {
+    "command": "docker compose run --rm --no-deps tools python -m pytest tests/test_inject.py::test_pitch_effect_check_uses_fixed_source_pitch_bounds --override-ini addopts= -q -rs",
+    "exit_code": 0,
+    "label": "optional real-audio Docker regression after archive import",
+    "output": ".                                                                        [100%]\n1 passed in 4.89s\n",
+    "seconds": 7.498
+  },
+  "static_fresh_clone_steps": [
+    {
+      "command": "npm ci --ignore-scripts",
+      "exit_code": 0,
+      "label": "fresh static npm ci",
+      "seconds": 1.913
+    },
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "label": "fresh static unit tests",
+      "seconds": 0.217
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 0,
+      "label": "fresh static production build",
+      "seconds": 0.446
+    },
+    {
+      "command": "python3 scripts/verify_build.py",
+      "exit_code": 0,
+      "label": "fresh static JSON manifest",
+      "seconds": 0.052
+    }
+  ],
+  "timezone": "Asia/Calcutta"
+}
