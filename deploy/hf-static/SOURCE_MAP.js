@@ -146,5 +146,9 @@ export default {
   "data/labels/gettysburg__lv_wt__mumbling_s4_01.json": {
     "sha256": "03710aaf694da20df211659a53574da5192469383ed8547d00398d585fcf5058",
     "source": "data/labels/gettysburg__lv_wt__mumbling_s4_01.json"
+  },
+  "licensing/licences.json": {
+    "sha256": "20021c6be02b1fe738ff655a76cfae36062a1b71c5e29a5508f1499802319204",
+    "source": "data/release/licences.json"
   }
 };
