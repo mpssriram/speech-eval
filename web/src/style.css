@@ -37,3 +37,14 @@ pre,blockquote,.flaw-card p,.guideline{overflow-wrap:anywhere}a{color:#78dbe9}
 .filter-notice p{margin:0}.filter-notice p+p{margin-top:6px}
 .filter-notice button{flex-shrink:0;border:0;background:transparent;font-size:20px;line-height:1;padding:4px}
 .flaw-details[hidden]{display:none}.flaw-details .explanation{font-size:15px;color:#c3d2df;margin-bottom:20px}
+
+/* Explanation facts share the same layout in the dashboard and static Space. */
+.flaw-title{justify-content:flex-start;gap:5px;line-height:1.5;flex-wrap:wrap;text-align:left}
+.flaw-title>span.phrase-quote{white-space:normal;overflow-wrap:anywhere;color:#e5eff7;font-size:13px;font-weight:400}
+.flaw-details .explanation{margin:14px 0 16px;font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+.explanation p{margin:0 0 10px}.explanation p:last-child{margin-bottom:0}
+.fact-label{font-weight:700;color:#edf5fc}.sd-help{display:block;margin-top:4px}
+.sd-tooltip-trigger{font-size:11px;padding:2px 0;border:0;background:transparent;color:#8edbea;text-decoration:underline;text-underline-offset:3px}
+.sd-tooltip{display:block;margin:6px 0 0;padding:10px 12px;border:1px solid #52758f;border-radius:6px;background:#081422;color:#d7e6f2;font-size:12px;font-weight:400}
+
+.sd-tooltip[hidden]{display:none}

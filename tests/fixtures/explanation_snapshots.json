@@ -1,0 +1,485 @@
+[
+  {
+    "mode": "A",
+    "threshold": 3.5,
+    "region": {
+      "type": "rushing",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 6,
+        "reference": 3,
+        "z": 3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Rushing · 65.70–67.13 s · \"larger sense\"\nWhat happened: You spoke much faster here.\nMeasured: 6.0 syllables per second (you) vs 3.0 syllables per second (good readers)\nHow far off: 2.0 times faster, which is 3.1 SD above the good readers' average. Flags start at 3.5 SD.\nWhy it matters: Listeners may miss words.\nWhere: final sentence"
+  },
+  {
+    "mode": "A",
+    "threshold": 3.5,
+    "region": {
+      "type": "dragging",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 1.5,
+        "reference": 3,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Dragging · 65.70–67.13 s · \"larger sense\"\nWhat happened: You spoke much more slowly here.\nMeasured: 1.5 syllables per second (you) vs 3.0 syllables per second (good readers)\nHow far off: 2.0 times slower, which is 3.1 SD below the good readers' average. Flags start at 3.5 SD.\nWhy it matters: The phrase loses momentum.\nWhere: final sentence"
+  },
+  {
+    "mode": "A",
+    "threshold": 3.5,
+    "region": {
+      "type": "monotone",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 1.5,
+        "reference": 6,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Monotone · 65.70–67.13 s · \"larger sense\"\nWhat happened: Your pitch stayed flat here.\nMeasured: 1.5 semitones (you) vs 6.0 semitones (good readers)\nHow far off: 25.0% of the reference range, which is 3.1 SD below the good readers' average. Flags start at 3.5 SD.\nWhy it matters: Flat pitch hides which words matter.\nWhere: final sentence"
+  },
+  {
+    "mode": "A",
+    "threshold": 3.5,
+    "region": {
+      "type": "too_quiet",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": -8,
+        "reference": -2,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Too quiet · 65.70–67.13 s · \"larger sense\"\nWhat happened: You were much quieter here.\nMeasured: −8.0 dB (you) vs −2.0 dB (good readers), relative to your own average\nHow far off: 6.0 dB quieter, which is 3.1 SD below the good readers' average. Flags start at 3.5 SD.\nWhy it matters: Listeners may lose these words.\nWhere: final sentence"
+  },
+  {
+    "mode": "A",
+    "threshold": 3.5,
+    "region": {
+      "type": "mumbling",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": -12,
+        "reference": -6,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Mumbling · 65.70–67.13 s · \"larger sense\"\nWhat happened: Your words were less crisp here.\nMeasured: clarity measure (high-frequency energy): −12.0 dB (you) vs −6.0 dB (good readers)\nHow far off: 6.0 dB lower, which is 3.1 SD below the good readers' average. Flags start at 3.5 SD.\nWhy it matters: Consonants are harder to hear.\nWhere: final sentence"
+  },
+  {
+    "mode": "A",
+    "threshold": 3.5,
+    "region": {
+      "type": "awkward_pause",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 1.43,
+        "reference": 6.9e-18,
+        "z": 6046
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Awkward pause · 65.70–67.13 s · \"larger sense\"\nWhat happened: You paused in the middle of a phrase.\nMeasured: pause after 'larger': 1.43 s (you) vs no pause (good readers)\nHow far off: 1.43 s longer, which is more than 10 SD above the good readers' average. Flags start at 3.5 SD.\nWhy it matters: It breaks the sentence.\nWhere: final sentence"
+  },
+  {
+    "mode": "A",
+    "threshold": 3.5,
+    "region": {
+      "type": "missing_pause",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 6.9e-18,
+        "reference": 0.67,
+        "z": -3800
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Missing pause · 65.70–67.13 s · \"larger sense\"\nWhat happened: You did not pause where good readers pause.\nMeasured: pause after 'larger': none (you) vs 0.67 s (good readers)\nHow far off: 0.67 s shorter, which is more than 10 SD below the good readers' average. Flags start at 3.5 SD.\nWhy it matters: Listeners get no breathing space.\nWhere: final sentence"
+  },
+  {
+    "mode": "B",
+    "threshold": 3.5,
+    "region": {
+      "type": "rushing",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 6,
+        "reference": 3,
+        "z": 3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Rushing · 65.70–67.13 s · \"larger sense\"\nWhat happened: You spoke much faster here.\nMeasured: 6.0 syllables per second (you) vs 3.0 syllables per second (your earlier take)\nHow far off: 2.0 times faster, which is 3.1 SD above your earlier take's average. Flags start at 3.5 SD.\nWhy it matters: Listeners may miss words.\nWhere: final sentence"
+  },
+  {
+    "mode": "B",
+    "threshold": 3.5,
+    "region": {
+      "type": "dragging",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 1.5,
+        "reference": 3,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Dragging · 65.70–67.13 s · \"larger sense\"\nWhat happened: You spoke much more slowly here.\nMeasured: 1.5 syllables per second (you) vs 3.0 syllables per second (your earlier take)\nHow far off: 2.0 times slower, which is 3.1 SD below your earlier take's average. Flags start at 3.5 SD.\nWhy it matters: The phrase loses momentum.\nWhere: final sentence"
+  },
+  {
+    "mode": "B",
+    "threshold": 3.5,
+    "region": {
+      "type": "monotone",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 1.5,
+        "reference": 6,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Monotone · 65.70–67.13 s · \"larger sense\"\nWhat happened: Your pitch stayed flat here.\nMeasured: 1.5 semitones (you) vs 6.0 semitones (your earlier take)\nHow far off: 25.0% of the reference range, which is 3.1 SD below your earlier take's average. Flags start at 3.5 SD.\nWhy it matters: Flat pitch hides which words matter.\nWhere: final sentence"
+  },
+  {
+    "mode": "B",
+    "threshold": 3.5,
+    "region": {
+      "type": "too_quiet",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": -8,
+        "reference": -2,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Too quiet · 65.70–67.13 s · \"larger sense\"\nWhat happened: You were much quieter here.\nMeasured: −8.0 dB (you) vs −2.0 dB (your earlier take), relative to your own average\nHow far off: 6.0 dB quieter, which is 3.1 SD below your earlier take's average. Flags start at 3.5 SD.\nWhy it matters: Listeners may lose these words.\nWhere: final sentence"
+  },
+  {
+    "mode": "B",
+    "threshold": 3.5,
+    "region": {
+      "type": "mumbling",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": -12,
+        "reference": -6,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Mumbling · 65.70–67.13 s · \"larger sense\"\nWhat happened: Your words were less crisp here.\nMeasured: clarity measure (high-frequency energy): −12.0 dB (you) vs −6.0 dB (your earlier take)\nHow far off: 6.0 dB lower, which is 3.1 SD below your earlier take's average. Flags start at 3.5 SD.\nWhy it matters: Consonants are harder to hear.\nWhere: final sentence"
+  },
+  {
+    "mode": "B",
+    "threshold": 3.5,
+    "region": {
+      "type": "awkward_pause",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 1.43,
+        "reference": 6.9e-18,
+        "z": 6046
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Awkward pause · 65.70–67.13 s · \"larger sense\"\nWhat happened: You paused in the middle of a phrase.\nMeasured: pause after 'larger': 1.43 s (you) vs no pause (your earlier take)\nHow far off: 1.43 s longer, which is more than 10 SD above your earlier take's average. Flags start at 3.5 SD.\nWhy it matters: It breaks the sentence.\nWhere: final sentence"
+  },
+  {
+    "mode": "B",
+    "threshold": 3.5,
+    "region": {
+      "type": "missing_pause",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 6.9e-18,
+        "reference": 0.67,
+        "z": -3800
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Missing pause · 65.70–67.13 s · \"larger sense\"\nWhat happened: You did not pause where your earlier take pauses.\nMeasured: pause after 'larger': none (you) vs 0.67 s (your earlier take)\nHow far off: 0.67 s shorter, which is more than 10 SD below your earlier take's average. Flags start at 3.5 SD.\nWhy it matters: Listeners get no breathing space.\nWhere: final sentence"
+  },
+  {
+    "mode": "C",
+    "threshold": 2,
+    "region": {
+      "type": "rushing",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 6,
+        "reference": 3,
+        "z": 3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Rushing · 65.70–67.13 s · \"larger sense\"\nWhat happened: You spoke much faster here.\nMeasured: 6.0 syllables per second (you) vs 3.0 syllables per second (typical speakers)\nHow far off: 2.0 times faster, which is 3.1 SD above the typical speakers' average. Flags start at 2.0 SD.\nWhy it matters: Listeners may miss words.\nWhere: final sentence"
+  },
+  {
+    "mode": "C",
+    "threshold": 2,
+    "region": {
+      "type": "dragging",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 1.5,
+        "reference": 3,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Dragging · 65.70–67.13 s · \"larger sense\"\nWhat happened: You spoke much more slowly here.\nMeasured: 1.5 syllables per second (you) vs 3.0 syllables per second (typical speakers)\nHow far off: 2.0 times slower, which is 3.1 SD below the typical speakers' average. Flags start at 2.0 SD.\nWhy it matters: The phrase loses momentum.\nWhere: final sentence"
+  },
+  {
+    "mode": "C",
+    "threshold": 2,
+    "region": {
+      "type": "monotone",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 1.5,
+        "reference": 6,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Monotone · 65.70–67.13 s · \"larger sense\"\nWhat happened: Your pitch stayed flat here.\nMeasured: 1.5 semitones (you) vs 6.0 semitones (typical speakers)\nHow far off: 25.0% of the reference range, which is 3.1 SD below the typical speakers' average. Flags start at 2.0 SD.\nWhy it matters: Flat pitch hides which words matter.\nWhere: final sentence"
+  },
+  {
+    "mode": "C",
+    "threshold": 2,
+    "region": {
+      "type": "too_quiet",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": -8,
+        "reference": -2,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Too quiet · 65.70–67.13 s · \"larger sense\"\nWhat happened: You were much quieter here.\nMeasured: −8.0 dB (you) vs −2.0 dB (typical speakers), relative to your own average\nHow far off: 6.0 dB quieter, which is 3.1 SD below the typical speakers' average. Flags start at 2.0 SD.\nWhy it matters: Listeners may lose these words.\nWhere: final sentence"
+  },
+  {
+    "mode": "C",
+    "threshold": 3.5,
+    "region": {
+      "type": "mumbling",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": -12,
+        "reference": -6,
+        "z": -3.14
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Mumbling · 65.70–67.13 s · \"larger sense\"\nWhat happened: Your words were less crisp here.\nMeasured: clarity measure (high-frequency energy): −12.0 dB (you) vs −6.0 dB (typical speakers)\nHow far off: 6.0 dB lower, which is 3.1 SD below the typical speakers' average. Flags start at 3.5 SD.\nWhy it matters: Consonants are harder to hear.\nWhere: final sentence"
+  },
+  {
+    "mode": "C",
+    "threshold": 3.5,
+    "region": {
+      "type": "awkward_pause",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 1.43,
+        "reference": 6.9e-18,
+        "z": 6046
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Awkward pause · 65.70–67.13 s · \"larger sense\"\nWhat happened: You paused in the middle of a phrase.\nMeasured: pause after 'larger': 1.43 s (you) vs no pause (typical speakers)\nHow far off: 1.43 s longer, which is more than 10 SD above the typical speakers' average. Flags start at 3.5 SD.\nWhy it matters: It breaks the sentence.\nWhere: final sentence"
+  },
+  {
+    "mode": "C",
+    "threshold": 2,
+    "region": {
+      "type": "missing_pause",
+      "start": 65.7,
+      "end": 67.13,
+      "word_start": 0,
+      "word_end": 1,
+      "severity": 3,
+      "tags": [
+        "final_sentence",
+        "contains_number"
+      ],
+      "evidence": {
+        "participant": 6.9e-18,
+        "reference": 0.67,
+        "z": -3800
+      },
+      "explanation": "legacy scientific 6.9e-18"
+    },
+    "expected": "Missing pause · 65.70–67.13 s · \"larger sense\"\nWhat happened: You did not pause where typical speakers pause.\nMeasured: pause after 'larger': none (you) vs 0.67 s (typical speakers)\nHow far off: 0.67 s shorter, which is more than 10 SD below the typical speakers' average. Flags start at 2.0 SD.\nWhy it matters: Listeners get no breathing space.\nWhere: final sentence"
+  }
+]

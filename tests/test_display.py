@@ -24,9 +24,11 @@ def test_cached_pause_is_readable_without_rewriting_scientific_json(tmp_path):
     with TestClient(service.create_app(tmp_path)) as client:
         result = client.get('/api/analyses/example').json()['analysis']['regions'][0]
         assert result['display_explanation'] == (
-            '75.99–77.58 s, "it can": you paused 1.59 s between "it" and "can", '
-            'where good readers do not pause (1.59 s longer, more than 10 SD above). '
-            'It breaks the sentence.')
+            'Awkward pause · 75.99–77.58 s · "it can"\n'
+            'What happened: You paused in the middle of a phrase.\n'
+            "Measured: pause after 'it': 1.59 s (you) vs no pause (good readers)\n"
+            "How far off: 1.59 s longer, which is more than 10 SD above the good readers' average. Flags start at 3.5 SD.\n"
+            'Why it matters: It breaks the sentence.')
         assert result['evidence'] == region['evidence']
         assert result['explanation'] == region['explanation']
     assert path.read_bytes() == before
@@ -39,13 +41,33 @@ def test_display_pause_cutoff_z_cutoff_and_fixed_point_numbers():
               'evidence': {'participant': .019, 'reference': .02, 'z': -10.}}
     before = copy.deepcopy(region)
     text = explanation(region, ['one', 'two'])
-    assert 'you left no pause' in text
-    assert 'pause 0.02 s' in text
-    assert '10.00 SD below' in text
+    assert 'none (you)' in text
+    assert 'vs 0.02 s' in text
+    assert '10.0 SD below' in text
     assert region == before
     region['type'] = 'rushing'
     region['evidence'] = {'participant': 6., 'reference': 3., 'z': 4300.}
     text = explanation(region, ['one', 'two'], mode='B')
-    assert '6.0 syllables/s' in text and 'averaged 3.0' in text
-    assert 'your previous take' in text and 'more than 10 SD above' in text
+    assert '6.0 syllables per second' in text and 'vs 3.0' in text
+    assert 'your earlier take' in text and 'more than 10 SD above' in text
     assert not re.search(r'\d[eE][+-]\d', text)
+
+def test_display_uses_root_configuration_and_preserves_cached_job(tmp_path):
+    from speecheval.display import explanation
+    region={'type':'missing_pause','start':1.,'end':2.,'word_start':0,'word_end':1,'tags':[],
+            'evidence':{'participant':.07,'reference':.6,'z':-3.14},'explanation':'legacy'}
+    root=tmp_path
+    path=root/'data/app/jobs/example.json';path.parent.mkdir(parents=True)
+    path.write_text(json.dumps({'status':'done','analysis_id':'example','analysis':{'mode':'B','recording_id':'example','regions':[region]}}))
+    alignment=root/'data/alignment/example.json';alignment.parent.mkdir(parents=True)
+    alignment.write_text(json.dumps({'words':[{'text':'one'},{'text':'two'}]}))
+    config=root/'configs/detector.yaml';config.parent.mkdir();config.write_text('k: {missing_pause: 4.1}\n')
+    before=path.read_bytes()
+    with TestClient(service.create_app(root)) as client:
+        result=client.get('/api/analyses/example').json()['analysis']['regions'][0]
+    assert 'Flags start at 4.1 SD.' in result['display_explanation']
+    assert 'Your pause was too short' in result['display_explanation']
+    assert '0.07 s (you)' in result['display_explanation']
+    assert 'the your' not in result['display_explanation']
+    assert result['evidence']==region['evidence']
+    assert path.read_bytes()==before

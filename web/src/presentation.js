@@ -6,38 +6,50 @@ export function timeRange(start,end){return fixed(start)+'–'+fixed(end)+' s';}
 /** Fixed point fallback for tips, warnings and future stored templates. */
 export function formatText(text) {
  return String(text??'').replace(/[-+]?\d+(?:\.\d+)?[eE][-+]?\d+/g,v=>fixed(Number(v)))
-  .replace(/(?<![\d.])(-?\d+(?:\.\d+)?) SD/g,(v,n)=>Math.abs(Number(n))>10?'more than 10 SD':fixed(Math.abs(Number(n)))+' SD')
+  .replace(/(?<![\d.])(-?\d+(?:\.\d+)?) SD/g,(v,n)=>Math.abs(Number(n))>10?'more than 10 SD':fixed(Math.abs(Number(n)),1)+' SD')
   .replace(/your previous take pause\b/g,'your previous take paused')
   .replace(/your previous take average\b/g,'your previous take averaged')
   .replace(/your previous take vary\b/g,'your previous take varied');
 }
-export function formatExplanation(region,words,mode='A') {
+/** Thresholds are supplied from detector.yaml by the build's config loader. */
+export function flagThreshold(config,type,mode='A') {
+ const features={rushing:'rate',dragging:'rate',monotone:'pitchrange',too_quiet:'final_drop',missing_pause:'end_pause'};
+ return mode==='C'&&features[type]?config.mode_c.k[features[type]]:config.k[type];
+}
+export function sdTooltip(threshold) {
+ return 'How far from the reference average, in standard deviations. Bigger means more unusual. Flags start at '+fixed(threshold,1)+' SD.';
+}
+export function formatExplanation(region,words,mode='A',threshold) {
  const a=region.word_start,b=region.word_end;
  const word=i=>words.find(w=>w.i===i)?.text??'';
  const quote=words.filter(w=>w.i>=a&&w.i<=b).map(w=>w.text).join(' ');
- const prefix=timeRange(region.start,region.end)+', "'+quote+'": ';
+ const title=region.type.replaceAll('_',' ').replace(/^./,c=>c.toUpperCase());
+ const header=title+' · '+timeRange(region.start,region.end)+' · "'+quote+'"';
  const e=region.evidence;
- if(!e||![e.participant,e.reference,e.z].every(v=>typeof v==='number')){
-  return prefix+formatText(region.explanation).replace(/^\d+(?:\.\d+)?[–-]\d+(?:\.\d+)? s,\s*"[^"]*":\s*/,'');
- }
- const p=e.participant,r=e.reference,z=Math.abs(e.z),n=fixed;
+ if(!e||![e.participant,e.reference,e.z].every(v=>typeof v==='number'))return header+'\n'+formatText(region.display_explanation??region.explanation);
+ const p=e.participant,r=e.reference,z=Math.abs(e.z);
+ const n=v=>fixed(v,1).replace(/^-0\.0$/,'0.0').replace('-','−');
  const sd=z>10?'more than 10 SD':n(z)+' SD';
- const ref=mode==='B'?'your previous take':mode==='C'?'speaker norms':'good readers';
- const avg=mode==='B'?'averaged':'average',vary=mode==='B'?'varied':'vary',pause=mode==='B'?'paused':'pause';
- const expected=r<.02?(mode==='B'?'your previous take had no pause':ref+' do not pause'):ref+' '+pause+' '+n(r)+' s';
- const participant=p<.02?'you did not pause':'you paused '+n(p)+' s';
- const tags=region.tags??[];
- let text;
+ const ref=mode==='B'?'your earlier take':mode==='C'?'typical speakers':'good readers';
+ const average=mode==='B'?"your earlier take's average":ref+"' average";
+ const pause=v=>v<.02?'none':fixed(v)+' s';
+ let what,measured,off,why;
  switch(region.type){
- case 'rushing':text='you spoke at '+n(p,1)+' syllables/s; '+ref+' '+avg+' '+n(r,1)+' ('+n(p/r)+'× faster, '+sd+' above). Rushing this phrase reduces its weight.';break;
- case 'dragging':text='you spoke at '+n(p,1)+' vs '+n(r,1)+' syllables/s for '+ref+' ('+n(r/p)+'× slower, '+sd+' below). The phrase loses momentum.';break;
- case 'monotone':text='your pitch varied by '+n(p)+' semitones; '+ref+' '+vary+' by '+n(r)+' ('+n(r?100*(1-p/r):0)+'% less variation, '+sd+' below). The phrase sounds flat.';break;
- case 'too_quiet':text=n(r-p)+' dB quieter than '+ref+' relative to your own average level ('+sd+' below).'+(tags.includes('sentence_final')?' Your voice trails off at the end of the sentence.':'');break;
- case 'mumbling':text='high-frequency energy (consonant clarity) is '+n(r-p)+' dB lower than '+ref+' ('+sd+' below). Words may sound muffled.';break;
- case 'awkward_pause':text=participant+' between "'+word(a)+'" and "'+word(b)+'", where '+expected+' ('+n(p-r)+' s longer, '+sd+' above). It breaks the sentence.';break;
- case 'missing_pause':text=participant+' after "'+word(a)+'" where '+expected+' ('+n(r-p)+' s shorter, '+sd+' below). The listener gets no breathing space.';break;
- default:return prefix+formatText(region.explanation).replace(/^.*?:\s*/,'');
+ case 'rushing':what='You spoke much faster here.';measured=n(p)+' syllables per second (you) vs '+n(r)+' syllables per second ('+ref+')';off=n(p/r)+' times faster';why='Listeners may miss words.';break;
+ case 'dragging':what='You spoke much more slowly here.';measured=n(p)+' syllables per second (you) vs '+n(r)+' syllables per second ('+ref+')';off=n(r/p)+' times slower';why='The phrase loses momentum.';break;
+ case 'monotone':what='Your pitch stayed flat here.';measured=n(p)+' semitones (you) vs '+n(r)+' semitones ('+ref+')';off=n(r?100*p/r:0)+'% of the reference range';why='Flat pitch hides which words matter.';break;
+ case 'too_quiet':what='You were much quieter here.';measured=n(p)+' dB (you) vs '+n(r)+' dB ('+ref+'), relative to your own average';off=n(r-p)+' dB quieter';why='Listeners may lose these words.';break;
+ case 'mumbling':what='Your words were less crisp here.';measured='clarity measure (high-frequency energy): '+n(p)+' dB (you) vs '+n(r)+' dB ('+ref+')';off=n(r-p)+' dB lower';why='Consonants are harder to hear.';break;
+ case 'awkward_pause':what='You paused in the middle of a phrase.';measured="pause after '"+word(a)+"': "+pause(p)+' (you) vs '+(r<.02?'no pause':pause(r))+' ('+ref+')';off=fixed(p-r)+' s longer';why='It breaks the sentence.';break;
+ case 'missing_pause':what=(p<.02?'You did not pause where ':'Your pause was too short where ')+ref+(mode==='B'?' pauses.':' pause.');measured="pause after '"+word(a)+"': "+pause(p)+' (you) vs '+(r<.02?'no pause':pause(r))+' ('+ref+')';off=fixed(r-p)+' s shorter';why='Listeners get no breathing space.';break;
+ default:return header+'\n'+formatText(region.explanation);
  }
- const suffix={final_sentence:" This is the speech's final sentence.",first_sentence:' This is the opening sentence.',contains_number:' This phrase contains a number.',sentence_final:' This region reaches a sentence ending.'};
- return prefix+text+tags.map(t=>suffix[t]??'').join('');
+ const direction=e.z<0?'below':'above';
+ const flags=typeof threshold==='number'?' Flags start at '+fixed(threshold,1)+' SD.':'';
+ const lines=[header,'What happened: '+what,'Measured: '+measured,'How far off: '+off+', which is '+sd+' '+direction+' '+(mode==='B'?'':'the ')+average+'.'+flags,'Why it matters: '+why];
+ const tags=region.tags??[],where=[];
+ if(tags.includes('first_sentence'))where.push('opening sentence');
+ if(tags.includes('final_sentence'))where.push('final sentence');
+ if(where.length)lines.push('Where: '+where.join(' / '));
+ return lines.join('\n');
 }

@@ -4,9 +4,15 @@ import {flaws,request,type Analysis,type Tracks,type Take,type Segment,type Resu
 import {Waveform,FeatureChart,ProgressChart,featureOptions} from './Evidence';
 import {takeLabels} from './takeLabels';
 import {detectorRule} from './detectorRules';
-import {formatExplanation,formatText,timeRange,fixed} from './presentation.js';
+import {formatExplanation,formatText,timeRange,fixed,flagThreshold,sdTooltip} from './presentation.js';
+import config from 'virtual:detector-config';
 
-function Numbers({text}:{text:string}){return <>{text.split(/(>?[-+]?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?)/g).map((part,i)=>/\d/.test(part)?<strong className="number" key={i}>{part}</strong>:part)}</>;}
+function Explanation({text,threshold}:{text:string;threshold:number}){
+ const [showSD,setShowSD]=useState(false);
+ return <div className="explanation">{text.split('\n').slice(1).map((line,i)=>{
+  const colon=line.indexOf(':');return <p key={i}><strong className="fact-label">{line.slice(0,colon+1)}</strong> {line.slice(colon+2)}{i===2&&<span className="sd-help"><button className="sd-tooltip-trigger" aria-label="What is SD?" aria-expanded={showSD} onClick={()=>setShowSD(v=>!v)} onBlur={()=>setShowSD(false)}>What is SD?</button><span className="sd-tooltip" role="tooltip" hidden={!showSD}>{sdTooltip(threshold)}</span></span>}</p>;
+ })}</div>;
+}
 function Legend({counts,active,onSelect}:{counts:Record<string,number>;active:FlawType|null;onSelect:(type:FlawType|null)=>void}){return <div className="legend" data-testid="legend" role="group" aria-label="Filter flagged phrases"><button aria-pressed={active===null} onClick={()=>onSelect(null)}>All ({Object.values(counts).reduce((sum,count)=>sum+count,0)})</button>{Object.entries(flaws).map(([type,f])=><button key={type} className={counts[type]?'':'zero-count'} aria-pressed={active===type} onClick={()=>onSelect(type as FlawType)}><i style={{background:f.color}}/>{f.label} ({counts[type]})</button>)}</div>;}
 
 
@@ -77,10 +83,10 @@ export function Results({analysis,tracks,aid,onError,source}:{analysis:Analysis;
       {notice&&<div className="filter-notice" role="status" aria-live="polite" aria-atomic="true"><div><p>No {flaws[notice].label} regions were flagged in this recording.</p><p>{detectorRule(notice,analysis.mode)}</p></div><button aria-label="Dismiss notice" onClick={()=>setNotice(null)}>×</button></div>}
       {!analysis.regions.length?<div className="empty">{analysis.mode==='B'?'No delivery differences detected against your earlier take. A relative match is not an expert-quality rating.':analysis.mode==='C'?'No flaws detected against the four-feature norms. This is an automatic estimate, not a human rating.':'No flaws detected against the expert-reader reference. This is an automatic comparison, not a human rating.'}</div>:
         <div className="flaw-list" ref={list}>{analysis.regions.map((r,i)=>({r,i})).sort((a,b)=>a.r.start-b.r.start).map(({r,i})=><article hidden={hidden.includes(r.type)} key={`${r.type}-${r.start}-${i}`} data-testid="flaw-card" data-region-index={i} data-type={r.type} aria-current={selected===i?'true':undefined} className={`flaw-card ${selected===i?'active':''}`} style={{borderLeftColor:flaws[r.type].color}}>
-          <button className="flaw-title" aria-expanded={selected===i} aria-controls={`phrase-details-${aid}-${i}`} onClick={()=>{setSelected(i);setSeek(r.start);}}><span className="type-chip" style={{color:flaws[r.type].color}}>{flaws[r.type].label}</span><span>{timeRange(r.start,r.end)}</span></button>
+          <button className="flaw-title" aria-expanded={selected===i} aria-controls={`phrase-details-${aid}-${i}`} onClick={()=>{setSelected(i);setSeek(r.start);}}><span className="type-chip" style={{color:flaws[r.type].color}}>{flaws[r.type].label}</span> · <span>{timeRange(r.start,r.end)}</span> · <span className="phrase-quote">"{tracks.words.filter(w=>w.i>=r.word_start&&w.i<=r.word_end).map(w=>w.text).join(' ')}"</span></button>
           <div className="flaw-details" id={`phrase-details-${aid}-${i}`} hidden={selected!==i}>
+          <Explanation text={formatExplanation(r,tracks.words,analysis.mode,flagThreshold(config,r.type,analysis.mode))} threshold={flagThreshold(config,r.type,analysis.mode)}/>
           <div className="severity" aria-label={`Severity ${r.severity} of 5`}>{'●'.repeat(r.severity)}{'○'.repeat(5-r.severity)}<span>Severity {r.severity}/5</span></div>
-          <blockquote>{tracks.words.slice(r.word_start,r.word_end+1).map(w=>w.text).join(' ')}</blockquote><p className="explanation"><Numbers text={formatExplanation(r,tracks.words,analysis.mode)}/></p>
           <div className="playback"><Button variant="light" aria-label="Yours" onClick={()=>void play(i,false)}>Yours</Button><Button variant="subtle" aria-label="Baseline (same words)" disabled={!segments[i]} onClick={()=>void play(i,true)}>Baseline (same words)</Button></div>
           {!analysis.reference.baseline_recording_id?<small>Mode C has no same-text baseline.</small>:segments[i]===null?<small>Baseline words differ here; an exact phrase match is unavailable.</small>:!segments[i]?<small>Checking baseline word matches…</small>:null}
           </div>

@@ -5,8 +5,12 @@ test('live frozen job uses fixed point explanations without changing evidence',a
  for(const text of await page.locator('.explanation').allTextContents()){
   expect(text).not.toMatch(/\d[eE][+-]\d/);
   expect(text).not.toMatch(/previous take (?:pause|average|vary)\b/);
-  expect(text).toMatch(/^\d+\.\d{2}–\d+\.\d{2} s/);
-  for(const sd of text.matchAll(/(?<![\d.])(\d+(?:\.\d+)?) SD/g))expect(Number(sd[1])).toBeLessThanOrEqual(10);
+  expect(text).toContain('What happened:');
+   expect(text).toContain('Measured:');
+   expect(text).toContain('How far off:');
+   expect(text).toContain('Why it matters:');
+  expect(text).not.toMatch(/your previous take|speaker norms|intelligibility/);
+   for(const sd of text.matchAll(/(?<![\d.])(\d+(?:\.\d+)?) SD/g))expect(Number(sd[1])).toBeLessThanOrEqual(10);
  }
 });
 for(const width of [375,768,1280,1440,1920]){

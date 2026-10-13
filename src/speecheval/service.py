@@ -172,7 +172,15 @@ def create_app(root: Path | None = None) -> FastAPI:
             alignment = read_json(root / 'data/alignment' / f"{identifier(result['recording_id'])}.json")
             words = [w['text'] for w in alignment['words']]
             for region in result['regions']:
-                region['display_explanation'] = explanation(region, words, result['mode'])
+                settings_path = root / 'configs/detector.yaml'
+                threshold = None
+                if settings_path.exists():
+                    settings = yaml.safe_load(settings_path.read_text())
+                    feature = {'rushing': 'rate', 'dragging': 'rate', 'monotone': 'pitchrange',
+                               'too_quiet': 'final_drop', 'missing_pause': 'end_pause'}.get(region['type'])
+                    threshold = (settings['mode_c']['k'][feature] if result['mode'] == 'C' and feature
+                                 else settings['k'][region['type']])
+                region['display_explanation'] = explanation(region, words, result['mode'], threshold=threshold)
         return {k: v for k, v in job.items() if k not in ('identity', 'request')}
 
     def completed(aid: str) -> dict:

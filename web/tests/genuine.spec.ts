@@ -1,6 +1,9 @@
 import {test,expect} from '@playwright/test';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
+import {parse} from 'yaml';
+const config=parse(fs.readFileSync(new URL('../../configs/detector.yaml',import.meta.url),'utf8'));
+import {formatExplanation,flagThreshold,sdTooltip} from '../src/presentation.js';
 import {reportPath} from './fixtures';
 
 /** Existing frozen jobs only: this test neither uploads nor recomputes detectors. */
@@ -25,7 +28,8 @@ test('genuine Gettysburg B hit and report screenshots use recorder take02 vs tak
   const hit=page.getByTestId('flaw-card').nth(region);
   await expect(hit).toHaveAttribute('aria-current','true');
   await expect(page.getByTestId('waveform').locator('[part~="region"]').nth(region)).toHaveAttribute('data-selected','true');
-  await expect(hit.locator('p')).toHaveText(job.analysis.regions[region].display_explanation);
+  const tracks=await (await request.get('/api/analyses/'+id+'/tracks')).json();
+  await expect(hit.locator('.explanation')).toHaveText(formatExplanation(job.analysis.regions[region],tracks.words,'B',flagThreshold(config,job.analysis.regions[region].type,'B')).split('\n').slice(1).map((line,i)=>line+(i===2?'What is SD?'+sdTooltip(flagThreshold(config,job.analysis.regions[region].type,'B')):'')).join(''));
   await expect(hit).toContainText('larger sense,');
   await expect(hit.getByRole('button',{name:'Baseline (same words)',exact:true})).toBeEnabled();
   await page.getByRole('banner').scrollIntoViewIfNeeded();

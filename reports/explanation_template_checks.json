@@ -1,0 +1,23 @@
+{
+  "schema": "explanation-template-checks/v1",
+  "protected_files_checked": 903,
+  "protected_files_changed": [],
+  "python_suite": "336 passed",
+  "static_unit_suite": "28 passed",
+  "rendered_snapshots": "7 types \u00d7 3 modes, both surfaces passed",
+  "static_scientific_notation_scan": "all catalog examples passed",
+  "live_genuine_presentation_layout": "9 passed",
+  "builds": [
+    "dashboard production passed",
+    "static production passed"
+  ],
+  "numeric_fields": [
+    "start",
+    "end",
+    "evidence.participant",
+    "evidence.reference",
+    "evidence.z"
+  ],
+  "threshold_source": "configs/detector.yaml k, mode_c.k",
+  "raw_generator_changed": false
+}

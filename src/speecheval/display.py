@@ -1,51 +1,48 @@
-"""Human-readable presentation of frozen evidence; no detection or scoring changes."""
+"""Readable templates over frozen JSON evidence; never mutate detection or scoring."""
 from __future__ import annotations
+from pathlib import Path
+import yaml
 
-
-def explanation(region: dict, words: list[str], mode: str = 'A') -> str:
-    """Format times in seconds, rates to one decimal, and cap only displayed SD."""
-    def n(value: float) -> str:
-        return f'{value:.2f}'
-
-    kind = region['type']
-    evidence = region['evidence']
-    p, r, z = evidence['participant'], evidence['reference'], abs(evidence['z'])
-    sd = 'more than 10 SD' if z > 10 else f'{n(z)} SD'
-    reference = 'your previous take' if mode == 'B' else ('speaker norms' if mode == 'C' else 'good readers')
-    averaged = 'averaged' if mode == 'B' else 'average'
-    varied = 'varied' if mode == 'B' else 'vary'
-    paused = 'paused' if mode == 'B' else 'pause'
-    a, b = region['word_start'], region['word_end']
-    quote = ' '.join(words[a:b + 1])
-    prefix = f'{region["start"]:.2f}–{region["end"]:.2f} s, "{quote}": '
-    tags = region.get('tags', [])
-    if kind == 'rushing':
-        text = f'you spoke at {p:.1f} syllables/s; {reference} {averaged} {r:.1f} ({n(p/r)}× faster, {sd} above). Rushing this phrase reduces its weight.'
-    elif kind == 'dragging':
-        text = f'you spoke at {p:.1f} vs {r:.1f} syllables/s for {reference} ({n(r/p)}× slower, {sd} below). The phrase loses momentum.'
-    elif kind == 'monotone':
-        pct = 100 * (1 - p/r) if r else 0.
-        text = f'your pitch varied by {n(p)} semitones; {reference} {varied} by {n(r)} ({n(pct)}% less variation, {sd} below). The phrase sounds flat.'
-    elif kind == 'too_quiet':
-        text = f'{n(r-p)} dB quieter than {reference} relative to your own average level ({sd} below).'
-        if 'sentence_final' in tags:
-            text += ' Your voice trails off at the end of the sentence.'
-    elif kind == 'mumbling':
-        text = f'high-frequency energy (consonant clarity) is {n(r-p)} dB lower than {reference} ({sd} below). Words may sound muffled.'
-    elif kind == 'awkward_pause':
-        participant = 'you left no pause' if p < .02 else f'you paused {n(p)} s'
-        expected = f'{reference} do not pause' if r < .02 and mode != 'B' else (
-            'your previous take had no pause' if r < .02 else f'{reference} {paused} {n(r)} s')
-        text = f'{participant} between "{words[a]}" and "{words[b]}", where {expected} ({n(p-r)} s longer, {sd} above). It breaks the sentence.'
-    elif kind == 'missing_pause':
-        participant = 'you left no pause' if p < .02 else f'you paused {n(p)} s'
-        expected = f'{reference} do not pause' if r < .02 and mode != 'B' else (
-            'your previous take had no pause' if r < .02 else f'{reference} {paused} {n(r)} s')
-        text = f'{participant} after "{words[a]}" where {expected} ({n(r-p)} s shorter, {sd} below). The listener gets no breathing space.'
-    else:
-        raise ValueError('Unknown delivery flaw')
-    suffix = {'final_sentence': " This is the speech's final sentence.",
-              'first_sentence': ' This is the opening sentence.',
-              'contains_number': ' This phrase contains a number.',
-              'sentence_final': ' This region reaches a sentence ending.'}
-    return prefix + text + ''.join(suffix[t] for t in tags if t in suffix)
+def explanation(region: dict, words: list[str], mode: str = 'A', threshold: float | None = None) -> str:
+    """Format seconds to two decimals and features/SD to one; cap only displayed SD."""
+    kind=region['type'];e=region['evidence'];p=e['participant'];r=e['reference'];z=abs(e['z'])
+    if threshold is None:
+        config=yaml.safe_load((Path(__file__).resolve().parents[2]/'configs/detector.yaml').read_text())
+        features={'rushing':'rate','dragging':'rate','monotone':'pitchrange','too_quiet':'final_drop','missing_pause':'end_pause'}
+        threshold=config['mode_c']['k'][features[kind]] if mode=='C' and kind in features else config['k'][kind]
+    def n(v: float) -> str:
+        text=f'{v:.1f}'
+        return ('0.0' if text=='-0.0' else text).replace('-','−')
+    def pause(v: float) -> str:
+        return 'none' if v<.02 else f'{v:.2f} s'
+    ref='your earlier take' if mode=='B' else ('typical speakers' if mode=='C' else 'good readers')
+    average="your earlier take's average" if mode=='B' else ref+"' average"
+    a,b=region['word_start'],region['word_end'];quote=' '.join(words[a:b+1])
+    header=f'{kind.replace("_"," ").capitalize()} · {region["start"]:.2f}–{region["end"]:.2f} s · "{quote}"'
+    if kind=='rushing':
+        what='You spoke much faster here.';measured=f'{n(p)} syllables per second (you) vs {n(r)} syllables per second ({ref})';off=f'{n(p/r)} times faster';why='Listeners may miss words.'
+    elif kind=='dragging':
+        what='You spoke much more slowly here.';measured=f'{n(p)} syllables per second (you) vs {n(r)} syllables per second ({ref})';off=f'{n(r/p)} times slower';why='The phrase loses momentum.'
+    elif kind=='monotone':
+        what='Your pitch stayed flat here.';measured=f'{n(p)} semitones (you) vs {n(r)} semitones ({ref})';off=f'{n(100*p/r if r else 0)}% of the reference range';why='Flat pitch hides which words matter.'
+    elif kind=='too_quiet':
+        what='You were much quieter here.';measured=f'{n(p)} dB (you) vs {n(r)} dB ({ref}), relative to your own average';off=f'{n(r-p)} dB quieter';why='Listeners may lose these words.'
+    elif kind=='mumbling':
+        what='Your words were less crisp here.';measured=f'clarity measure (high-frequency energy): {n(p)} dB (you) vs {n(r)} dB ({ref})';off=f'{n(r-p)} dB lower';why='Consonants are harder to hear.'
+    elif kind in ('awkward_pause','missing_pause'):
+        expected='no pause' if r<.02 else pause(r)
+        measured=f"pause after '{words[a]}': {pause(p)} (you) vs {expected} ({ref})"
+        if kind=='awkward_pause':
+            what='You paused in the middle of a phrase.';off=f'{p-r:.2f} s longer';why='It breaks the sentence.'
+        else:
+            what=('You did not pause where ' if p<.02 else 'Your pause was too short where ')+ref+(' pauses.' if mode=='B' else ' pause.');off=f'{r-p:.2f} s shorter';why='Listeners get no breathing space.'
+    else:raise ValueError('Unknown delivery flaw')
+    sd='more than 10 SD' if z>10 else f'{n(z)} SD'
+    direction='below' if e['z']<0 else 'above'
+    article = '' if mode == 'B' else 'the '
+    lines=[header,'What happened: '+what,'Measured: '+measured,f'How far off: {off}, which is {sd} {direction} {article}{average}. Flags start at {threshold:.1f} SD.','Why it matters: '+why]
+    tags=region.get('tags',[]);where=[]
+    if 'first_sentence' in tags:where.append('opening sentence')
+    if 'final_sentence' in tags:where.append('final sentence')
+    if where:lines.append('Where: '+' / '.join(where))
+    return '\n'.join(lines)
