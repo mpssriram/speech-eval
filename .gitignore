@@ -41,3 +41,6 @@ data/release/*.tar.zst
 deploy/hf-static/node_modules/
 deploy/hf-static/dist/
 deploy/hf-static/test-results/
+
+# Authorised playback copies for the read-only public demo
+!deploy/hf-static/public/audio/*.mp3
