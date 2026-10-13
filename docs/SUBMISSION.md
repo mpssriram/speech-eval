@@ -1,5 +1,6 @@
 # Submission checklist — 2026-10-12
 
+**Video URL: PENDING — insert the published 3–10 minute demo video link before submission.**
 [Precomputed demo on Hugging Face](https://huggingface.co/spaces/SriramMPS/Speech-Evalutaion). Stored v1 results and audio playback; uploads are disabled.
 ## Download releases
 

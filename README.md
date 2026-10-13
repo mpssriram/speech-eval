@@ -1,5 +1,6 @@
 # speech-eval: speech delivery analytics with temporal flaw grounding
 
+**Video URL: PENDING — insert the published 3–10 minute demo video link before submission.**
 Speech-Eval flags **what** differs in delivery, **where** it happens and **why**:
 measured pace, pitch, loudness, clarity and pauses compared with a reference.
 It supports rushing, dragging, monotone, too quiet, mumbling, awkward pause and

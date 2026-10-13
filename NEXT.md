@@ -258,3 +258,8 @@ The interpolation-warning schema and user-specific MFA path remain disclosed
 limitations. Plotly's bundle-size warning is known and harmless. Low precision,
 failed synthetic clean-alarm guards and C-lite's limited types remain disclosed;
 no human takes or ratings are used to repair them before submission.
+
+## Final packaging: video placeholder
+
+Video URL remains pending. Publish the demo video and replace the clearly marked
+placeholder in README.md and docs/SUBMISSION.md before submission.
