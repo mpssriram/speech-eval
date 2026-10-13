@@ -1,0 +1,20 @@
+import {test,expect} from '@playwright/test';
+test('landing is default, cards navigate with browser back, and upload opens a private local-analysis modal',async({page})=>{
+ await page.goto('/#/');
+ await expect(page.getByRole('heading',{name:'Speech-Eval',exact:true})).toBeVisible();
+ await page.getByRole('link',{name:/Gettysburg take02.*Mode B/}).click();
+ await expect(page).toHaveURL(/#\/example\//);
+ await expect(page.getByTestId('overall-score')).toBeVisible();
+ await page.getByRole('link',{name:'Back to examples'}).click();
+ await expect(page.getByRole('heading',{name:'Examples',exact:true})).toBeVisible();
+ const calls=[];page.on('request',request=>calls.push({method:request.method(),url:request.url()}));
+ await page.getByRole('link',{name:'Upload a recording',exact:true}).click();
+ const dialog=page.getByRole('dialog',{name:'Live analysis runs locally'});
+ await expect(dialog).toBeVisible();
+ await expect(dialog.locator('code')).toContainText('git clone https://github.com/mpssriram/speech-eval.git && cd speech-eval && make up');
+ expect(calls).toEqual([]);
+ await page.keyboard.press('Escape');await expect(dialog).toHaveCount(0);
+ await page.goBack();await expect(dialog).toBeVisible();
+ await dialog.getByRole('button',{name:'Close',exact:true}).click();
+ await expect(dialog).toHaveCount(0);
+});

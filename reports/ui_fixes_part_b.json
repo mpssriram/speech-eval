@@ -1,0 +1,28 @@
+{
+  "part": "B",
+  "routes": [
+    "#/",
+    "#/example/<id>",
+    "#/upload"
+  ],
+  "landing_cards": 11,
+  "example_picker_views": 22,
+  "desktop_single_screen_viewports": [
+    1280,
+    1440,
+    1920
+  ],
+  "tested_widths": [
+    375,
+    768,
+    1280,
+    1440,
+    1920
+  ],
+  "live_browser_suite_passed": 25,
+  "static_browser_suite_passed": 22,
+  "additional_static_landing_modal_tests_passed": 5,
+  "static_upload_requests": 0,
+  "docker_frontend_build": "passed",
+  "stored_json_manifest_files": 48
+}

@@ -15,3 +15,12 @@ reports/reproduced
 *.flac
 *.webm
 *.m4a
+
+# Frozen example assets are presentation inputs for the web build.
+!deploy/hf-static/public/data/
+!deploy/hf-static/public/data/**
+!deploy/hf-static/public/audio/
+!deploy/hf-static/public/audio/*.mp3
+deploy/hf-static/node_modules
+deploy/hf-static/dist
+deploy/hf-static/test-results

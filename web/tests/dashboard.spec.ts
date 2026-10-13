@@ -9,7 +9,7 @@ async function submit(page:Page){
 }
 
 test('new analysis exposes upload, recording and all three modes',async({page})=>{
-  await page.goto('/');
+  await page.goto('/#/upload');
   await expect(page.getByLabel('Audio file',{exact:true})).toBeVisible();
   await expect(page.getByRole('button',{name:'Record in browser'})).toBeVisible();
   await expect(page.getByLabel('Comparison').locator('option')).toHaveText([
@@ -27,7 +27,7 @@ test('new analysis exposes upload, recording and all three modes',async({page})=
 
 test('browser recording yields an uploadable take and releases the meter',async({page,context})=>{
   await context.grantPermissions(['microphone']);
-  await page.goto('/');
+  await page.goto('/#/upload');
   await page.getByRole('button',{name:'Record in browser',exact:true}).click();
   await expect(page.getByLabel('Microphone level')).toBeVisible();
   await expect(page.getByRole('status')).toContainText('Recording · 0:01');
@@ -40,7 +40,7 @@ test('browser recording yields an uploadable take and releases the meter',async(
 test('real API upload, evidence, exact phrase playback and Modes A B C',async({page,browser,request})=>{
   const started=Date.now(),completed:string[]=[];
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
-  await page.goto('/');
+  await page.goto('/#/upload');
   await page.getByLabel('Audio file',{exact:true}).setInputFiles(speechFixture().audio);
   await page.screenshot({path:reportPath('img/ui_upload.png'),fullPage:true});
   await submit(page);
@@ -50,7 +50,8 @@ test('real API upload, evidence, exact phrase playback and Modes A B C',async({p
   await expect(page.getByTestId('feature-chart').locator('.main-svg').first()).toBeVisible();
   await page.screenshot({path:reportPath('img/smoke_results.png'),fullPage:true});
   const cards=page.getByTestId('flaw-card');
-  await expect(cards.first().locator('.flaw-title')).toContainText(/\d.*s/);
+  await cards.first().locator('.flaw-title').click();
+  await expect(cards.first().locator('.explanation')).toContainText(/\d.*s/);
   // Real API presentation must not leak scientific notation or uncapped SD.
   const explanations=await cards.locator('.explanation').allTextContents();
   expect(explanations.length).toBeGreaterThan(0);
@@ -72,6 +73,7 @@ test('real API upload, evidence, exact phrase playback and Modes A B C',async({p
   await expect.poll(()=>player.evaluate((a:HTMLAudioElement)=>a.currentSrc)).toContain('gettysburg__lv_dj__orig');
   const baselineStart=await player.evaluate((a:HTMLAudioElement)=>a.currentTime);
   await expect.poll(()=>player.evaluate((a:HTMLAudioElement)=>a.currentTime)).toBeGreaterThan(baselineStart+.1);
+  await cards.first().locator('.flaw-title').click();
   await expect(cards.first().getByRole('button',{name:'Baseline (same words)',exact:true})).toBeDisabled();
   await expect(cards.first()).toContainText('Baseline words differ');
   await expect(page.getByRole('alert')).toHaveCount(0);

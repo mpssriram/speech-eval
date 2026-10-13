@@ -13,8 +13,10 @@ Credit: **Sriram MPS, IIT Mandi**.
 Precomputed demo. Live analysis of your own audio runs locally with Docker;
 see the [GitHub README](https://github.com/mpssriram/speech-eval#quickstart).
 This Space serves a Vite build, stored analysis/v1 JSON, and playback-only MP3s.
-There are no analysis API calls and uploading is disabled. The default is the
-genuine Gettysburg take02 Mode B comparison with take01, showing larger | sense.
+There are no analysis API calls. The default is a landing page with examples;
+the first card is the genuine Gettysburg take02 Mode B comparison with take01,
+showing larger | sense. Upload opens a local Docker instruction modal and never
+sends a recording. Routes use hashes and support browser back.
 All stored flags and scores are preserved, including false alarms.
 
 [Repository](https://github.com/mpssriram/speech-eval) ·

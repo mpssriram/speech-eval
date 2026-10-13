@@ -3,8 +3,8 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {parse} from 'yaml';
 const config=parse(fs.readFileSync(new URL('../../configs/detector.yaml',import.meta.url),'utf8'));
-import {formatExplanation,flagThreshold,sdTooltip} from '../src/presentation.js';
 import {reportPath} from './fixtures';
+import {formatExplanation,flagThreshold,sdTooltip,timeRange} from '../src/presentation.js';
 
 /** Existing frozen jobs only: this test neither uploads nor recomputes detectors. */
 test('genuine Gettysburg B hit and report screenshots use recorder take02 vs take01',async({page,request})=>{
@@ -49,7 +49,7 @@ test('genuine Gettysburg B hit and report screenshots use recorder take02 vs tak
 });
 
 for(const width of [1440,390]){
-  test(`genuine waveform markers have hover labels and exact widths at ${width}px`,async({page,request})=>{
+  test(`genuine waveform markers have hover labels and minimum visible widths at ${width}px`,async({page,request})=>{
     await page.setViewportSize({width,height:1000});
     const id='0aae3748f747b13e89697e17';
     const job=await (await request.get(`/api/analyses/${id}`)).json();
@@ -66,8 +66,8 @@ for(const width of [1440,390]){
     })));
     shapes.forEach((shape,i)=>{
       const r=job.analysis.regions[i];
-      expect(shape.width).toBeCloseTo(shape.parentWidth*(r.end-r.start)/job.analysis.duration_s,0);
-      expect(shape.title).toContain(`${r.start.toFixed(2)}–${r.end.toFixed(2)} s`);
+      expect(shape.width).toBeCloseTo(Math.max(4,shape.parentWidth*(r.end-r.start)/job.analysis.duration_s),0);
+      expect(shape.title).toContain(timeRange(r.start,r.end));
       expect(shape.label).toBe(shape.title);
       expect(shape.color).not.toBe('rgba(0, 0, 0, 0)');
     });
@@ -82,7 +82,7 @@ for(const width of [1440,390]){
     const proof=width===1440?{schema:'waveform-ui-verification/v1',checks:{}}:
       JSON.parse(fs.readFileSync(proofPath,'utf8'));
     proof.checks[String(width)]={job_id:id,region_count:9,inline_labels:0,
-      actual_interval_widths_verified:true,hover_and_accessible_labels:true,
+      minimum_visible_interval_widths_verified:true,hover_and_accessible_labels:true,
       keyboard_selection:true,legend_colours_preserved:true,shapes};
     fs.writeFileSync(proofPath,JSON.stringify(proof,null,2)+'\n');
   });
