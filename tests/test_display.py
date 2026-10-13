@@ -71,3 +71,13 @@ def test_display_uses_root_configuration_and_preserves_cached_job(tmp_path):
     assert 'the your' not in result['display_explanation']
     assert result['evidence']==region['evidence']
     assert path.read_bytes()==before
+
+
+def test_display_halfway_rounding_matches_browser_fixed_point():
+    from speecheval.display import explanation
+    region={'type':'awkward_pause','start':4.255,'end':10.645,'word_start':0,'word_end':1,'tags':[],
+            'evidence':{'participant':.885,'reference':.825,'z':3.45}}
+    text=explanation(region,['one','two'],threshold=3.5)
+    assert text.startswith('Awkward pause · 4.26–10.65 s · "one two"')
+    assert "pause after 'one': 0.89 s (you) vs 0.83 s (good readers)" in text
+    assert '0.06 s longer, which is 3.5 SD above' in text
