@@ -2,10 +2,11 @@ import {useEffect,useRef,useState} from 'react';
 import WaveSurfer from 'wavesurfer.js';
 import Regions from 'wavesurfer.js/dist/plugins/regions.esm.js';
 import Plotly from 'plotly.js-basic-dist';
+import {timeRange} from './presentation.js';
 import type {Data,Layout} from 'plotly.js';
-import {flaws,type Analysis,type Region,type Tracks,type Take} from './types';
+import {flaws,type Analysis,type Region,type Tracks,type Take,type ResultSource} from './types';
 
-export function Waveform({analysis,onSelect,seek,selected,hidden=[]}:{analysis:Analysis;onSelect:(index:number)=>void;seek:number|null;selected:number;hidden?:string[]}){
+export function Waveform({analysis,onSelect,seek,selected,hidden=[],source}:{analysis:Analysis;onSelect:(index:number)=>void;seek:number|null;selected:number;hidden?:string[];source?:ResultSource}){
   const box=useRef<HTMLDivElement>(null);const audio=useRef<HTMLAudioElement>(null);const wave=useRef<WaveSurfer|null>(null);
   const regionPlugin=useRef<ReturnType<typeof Regions.create>|null>(null);
   const [error,setError]=useState('');
@@ -14,17 +15,20 @@ export function Waveform({analysis,onSelect,seek,selected,hidden=[]}:{analysis:A
     if(!box.current||!audio.current)return;
     const regions=Regions.create();
     regionPlugin.current=regions;setError('');setReady(false);
-    const instance=WaveSurfer.create({container:box.current,media:audio.current,url:`/api/audio/${analysis.recording_id}`,
+    const instance=WaveSurfer.create({container:box.current,media:audio.current,url:source?.audio(analysis.recording_id)??`/api/audio/${analysis.recording_id}`,
+      ...(source?.peaks?{peaks:[source.peaks],duration:analysis.duration_s}:{}),
       waveColor:'#63869f',progressColor:'#55d5e8',cursorColor:'#e5eff7',height:180,barWidth:2,barGap:2,normalize:false,plugins:[regions]});
     wave.current=instance;
     instance.on('ready',()=>setReady(true));
     instance.on('decode',()=>analysis.regions.forEach((r,i)=>{
-      // Text inside narrow intervals wraps/overlaps. The coloured interval keeps
-      // its actual time width; its type and exact times are available on hover.
+      // Visual minimum only: original start/end seconds remain untouched.
       const region=regions.addRegion({id:String(i),start:r.start,end:r.end,
         color:flaws[r.type].color+'55',drag:false,resize:false});
       const element=region.element;if(!element)return;
-      const label=`${flaws[r.type].label} · ${r.start.toFixed(2)}–${r.end.toFixed(2)} s`;
+      const label=`${flaws[r.type].label} · ${timeRange(r.start,r.end)}`;
+      element.style.minWidth='4px';
+      element.style.maxWidth='100%';
+      element.style.borderTop='4px solid '+flaws[r.type].color;
       element.title=label;element.setAttribute('aria-label',label);
       element.setAttribute('role','button');element.tabIndex=0;
       element.addEventListener('keydown',event=>{
@@ -35,7 +39,7 @@ export function Waveform({analysis,onSelect,seek,selected,hidden=[]}:{analysis:A
     const error=(e:Error)=>{if(e.name!=='AbortError')setError(e.message);};
     instance.on('error',error);
     return ()=>{instance.destroy();wave.current=null;regionPlugin.current=null;};
-  },[analysis,onSelect]);
+  },[analysis,onSelect,source]);
   useEffect(()=>{
     const update=()=>regionPlugin.current?.getRegions().forEach(r=>{
       if(!r.element)return;
@@ -47,8 +51,8 @@ export function Waveform({analysis,onSelect,seek,selected,hidden=[]}:{analysis:A
   },[selected,analysis,hidden]);
   useEffect(()=>{if(seek!==null)wave.current?.setTime(seek);},[seek]);
   return <section className="timeline"><div className="section-heading"><h2>Your recording</h2><span>{analysis.duration_s.toFixed(2)} seconds · click a marked phrase</span></div>
-    <div className="region-lanes" aria-label="Flag labels above waveform">{Object.entries(flaws).filter(([type])=>!hidden.includes(type)&&analysis.regions.some(r=>r.type===type)).map(([type,f])=><div className="lane" key={type}><span style={{color:f.color}}>{f.label}</span><div>{analysis.regions.map((r,i)=>r.type===type?<button key={i} aria-pressed={selected===i} title={`${f.label} · ${r.start.toFixed(2)}–${r.end.toFixed(2)} s`} style={{borderColor:f.color+'80',color:f.color}} onClick={()=>{onSelect(i);wave.current?.setTime(r.start);}}>{r.start.toFixed(2)}–{r.end.toFixed(2)} s</button>:null)}</div></div>)}</div>
-    {error&&<p role="alert">Could not load the waveform: {error}</p>}<div ref={box} data-testid="waveform" data-ready={ready}/><div className="time-axis">{Array.from({length:5},(_,i)=><span key={i}>{(analysis.duration_s*i/4).toFixed(0)} s</span>)}</div><audio ref={audio} controls preload="metadata" aria-label="Recording playback"><source src={`/api/audio/${analysis.recording_id}`}/></audio></section>;
+    <p className="provenance">{analysis.recording_id} · analysis {analysis.analysis_id}</p><div className="region-lanes" aria-label="Flag labels above waveform">{Object.entries(flaws).filter(([type])=>!hidden.includes(type)&&analysis.regions.some(r=>r.type===type)).map(([type,f])=><div className="lane" key={type}><span style={{color:f.color}}>{f.label}</span><div>{analysis.regions.map((r,i)=>r.type===type?<button key={i} aria-pressed={selected===i} title={`${f.label} · ${timeRange(r.start,r.end)}`} style={{borderColor:f.color+'80',color:f.color}} onClick={()=>{onSelect(i);wave.current?.setTime(r.start);}}>{timeRange(r.start,r.end)}</button>:null)}</div></div>)}</div>
+    {error&&<p role="alert">Could not load the waveform: {error}</p>}<div ref={box} data-testid="waveform" data-ready={ready}/><div className="time-axis">{Array.from({length:5},(_,i)=><span key={i}>{(analysis.duration_s*i/4).toFixed(0)} s</span>)}</div><audio ref={audio} controls preload="metadata" aria-label="Recording playback"><source src={source?.audio(analysis.recording_id)??`/api/audio/${analysis.recording_id}`}/></audio></section>;
 }
 
 export const featureOptions=[{id:'rate',label:'Speed',unit:'syllables/s'},{id:'pitchvar',label:'Pitch variation',unit:'semitones'},

@@ -1,0 +1,1 @@
+export function phraseSegment(region:{word_start:number;word_end:number},participant:{i:number;text:string;start:number;end:number;norm?:string}[],baseline:{i:number;text:string;start:number;end:number;norm?:string}[]):{start:number;end:number}|null;

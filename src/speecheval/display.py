@@ -11,18 +11,21 @@ def explanation(region: dict, words: list[str], mode: str = 'A') -> str:
     evidence = region['evidence']
     p, r, z = evidence['participant'], evidence['reference'], abs(evidence['z'])
     sd = 'more than 10 SD' if z > 10 else f'{n(z)} SD'
-    reference = 'your previous take' if mode == 'B' else 'good readers'
+    reference = 'your previous take' if mode == 'B' else ('speaker norms' if mode == 'C' else 'good readers')
+    averaged = 'averaged' if mode == 'B' else 'average'
+    varied = 'varied' if mode == 'B' else 'vary'
+    paused = 'paused' if mode == 'B' else 'pause'
     a, b = region['word_start'], region['word_end']
     quote = ' '.join(words[a:b + 1])
     prefix = f'{region["start"]:.2f}–{region["end"]:.2f} s, "{quote}": '
     tags = region.get('tags', [])
     if kind == 'rushing':
-        text = f'you spoke at {p:.1f} syllables/s; {reference} average {r:.1f} ({n(p/r)}× faster, {sd} above). Rushing this phrase reduces its weight.'
+        text = f'you spoke at {p:.1f} syllables/s; {reference} {averaged} {r:.1f} ({n(p/r)}× faster, {sd} above). Rushing this phrase reduces its weight.'
     elif kind == 'dragging':
         text = f'you spoke at {p:.1f} vs {r:.1f} syllables/s for {reference} ({n(r/p)}× slower, {sd} below). The phrase loses momentum.'
     elif kind == 'monotone':
         pct = 100 * (1 - p/r) if r else 0.
-        text = f'your pitch varied by {n(p)} semitones; {reference} vary by {n(r)} ({n(pct)}% less variation, {sd} below). The phrase sounds flat.'
+        text = f'your pitch varied by {n(p)} semitones; {reference} {varied} by {n(r)} ({n(pct)}% less variation, {sd} below). The phrase sounds flat.'
     elif kind == 'too_quiet':
         text = f'{n(r-p)} dB quieter than {reference} relative to your own average level ({sd} below).'
         if 'sentence_final' in tags:
@@ -32,12 +35,12 @@ def explanation(region: dict, words: list[str], mode: str = 'A') -> str:
     elif kind == 'awkward_pause':
         participant = 'you left no pause' if p < .02 else f'you paused {n(p)} s'
         expected = f'{reference} do not pause' if r < .02 and mode != 'B' else (
-            'your previous take had no pause' if r < .02 else f'{reference} pause {n(r)} s')
+            'your previous take had no pause' if r < .02 else f'{reference} {paused} {n(r)} s')
         text = f'{participant} between "{words[a]}" and "{words[b]}", where {expected} ({n(p-r)} s longer, {sd} above). It breaks the sentence.'
     elif kind == 'missing_pause':
         participant = 'you left no pause' if p < .02 else f'you paused {n(p)} s'
         expected = f'{reference} do not pause' if r < .02 and mode != 'B' else (
-            'your previous take had no pause' if r < .02 else f'{reference} pause {n(r)} s')
+            'your previous take had no pause' if r < .02 else f'{reference} {paused} {n(r)} s')
         text = f'{participant} after "{words[a]}" where {expected} ({n(r-p)} s shorter, {sd} below). The listener gets no breathing space.'
     else:
         raise ValueError('Unknown delivery flaw')

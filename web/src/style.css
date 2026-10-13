@@ -19,3 +19,10 @@ body{background:radial-gradient(ellipse at 25% 0%,#12283c 0,transparent 55%),#08
 /* Native option popups need an opaque surface paired with their text colour. */
 select option,select optgroup{color:#e5eff7;background-color:#102033}
 .header-picker select{color:#e5eff7;background-color:#102033;color-scheme:dark}
+
+/* Presentation fixes shared by live and frozen results. */
+.lane{align-items:start}.lane>div{flex-wrap:wrap;overflow:visible;min-width:0}
+.lane button{max-width:100%}.provenance{font-size:11px;color:#8199ae;overflow-wrap:anywhere;margin:-4px 0 18px}
+.progress-table{overflow:visible}table{table-layout:fixed}th,td{padding:10px 8px;overflow-wrap:anywhere}
+pre,blockquote,.flaw-card p,.guideline{overflow-wrap:anywhere}a{color:#78dbe9}
+.header-picker select{min-width:0}.categories{min-width:0}

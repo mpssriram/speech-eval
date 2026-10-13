@@ -46,6 +46,6 @@ def test_display_pause_cutoff_z_cutoff_and_fixed_point_numbers():
     region['type'] = 'rushing'
     region['evidence'] = {'participant': 6., 'reference': 3., 'z': 4300.}
     text = explanation(region, ['one', 'two'], mode='B')
-    assert '6.0 syllables/s' in text and 'average 3.0' in text
+    assert '6.0 syllables/s' in text and 'averaged 3.0' in text
     assert 'your previous take' in text and 'more than 10 SD above' in text
     assert not re.search(r'\d[eE][+-]\d', text)

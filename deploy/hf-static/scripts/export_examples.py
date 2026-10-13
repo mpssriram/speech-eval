@@ -79,7 +79,7 @@ def export() -> None:
     if rights.exists():
         shutil.copyfile(ROOT/'data/release/licences.json', rights)
         sources['licensing/licences.json'] = {'source':'data/release/licences.json','sha256':digest(rights)}
-    (DEMO/'src/catalog.js').write_text('export default '+json.dumps(entries,ensure_ascii=False,indent=2)+';\n')
+    (ROOT/'web/src/catalog.js').write_text('export default '+json.dumps(entries,ensure_ascii=False,indent=2)+';\n')
     (DEMO/'SOURCE_MAP.js').write_text('export default '+json.dumps(sources,indent=2,sort_keys=True)+';\n')
     (DEMO/'MANIFEST.sha256').write_text(''.join(f"{v['sha256']}  {k}\n" for k,v in sorted(sources.items())))
     print(f'Packaged {len(entries)} views, {len(sources)} byte-identical stored JSON files')
