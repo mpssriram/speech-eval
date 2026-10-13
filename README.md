@@ -7,6 +7,8 @@ missing pause. Built for Track C of the Multimodal AI Hackathon 2026.
 This is an experimental delivery benchmark, not a validated judgment of speaking
 quality. The dev clean-alarm guard failed; genuine human validation is pending.
 
+[Precomputed demo on Hugging Face](https://huggingface.co/spaces/SriramMPS/Speech-Evalutaion) — stored v1 examples with playback, including genuine Gettysburg take02 Mode B. Uploads are disabled; analysis of your own audio runs locally with Docker.
+
 ![Genuine Gettysburg take02 versus own take01, Mode B](reports/img/ui_results.png)
 
 This screenshot uses the recorder's genuine take02 in frozen v1 Mode B against

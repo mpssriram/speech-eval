@@ -1,5 +1,6 @@
 # Submission checklist — 2026-10-12
 
+[Precomputed demo on Hugging Face](https://huggingface.co/spaces/SriramMPS/Speech-Evalutaion). Stored v1 results and audio playback; uploads are disabled.
 ## Download releases
 
 [Main dataset archive](https://drive.google.com/file/d/1rDbbPMKORv0nnQ-QnmbrQXIg1mqktvTm/view)
