@@ -26,3 +26,14 @@ select option,select optgroup{color:#e5eff7;background-color:#102033}
 .progress-table{overflow:visible}table{table-layout:fixed}th,td{padding:10px 8px;overflow-wrap:anywhere}
 pre,blockquote,.flaw-card p,.guideline{overflow-wrap:anywhere}a{color:#78dbe9}
 .header-picker select{min-width:0}.categories{min-width:0}
+
+/* Single type filters remain available, including empty types. */
+.legend button[aria-pressed=false]{border-style:solid;background:#0a1929;color:#c5d5e2}
+.legend button[aria-pressed=false] i{opacity:1}
+.legend button[aria-pressed=true]{background:#214760;border-color:#55d5e8;color:#e5eff7}
+.legend button.zero-count{color:#9aafc2;background:#0d1b2b;border-color:#34495d}
+.legend button.zero-count i{opacity:.55}
+.filter-notice{display:flex;gap:12px;align-items:start;padding:12px;margin:0 0 16px;border:1px solid #45627a;border-radius:8px;background:#162d41;font-size:12px;color:#c5d5e2}
+.filter-notice p{margin:0}.filter-notice p+p{margin-top:6px}
+.filter-notice button{flex-shrink:0;border:0;background:transparent;font-size:20px;line-height:1;padding:4px}
+.flaw-details[hidden]{display:none}.flaw-details .explanation{font-size:15px;color:#c3d2df;margin-bottom:20px}

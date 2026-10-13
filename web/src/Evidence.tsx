@@ -44,14 +44,16 @@ export function Waveform({analysis,onSelect,seek,selected,hidden=[],source}:{ana
     const update=()=>regionPlugin.current?.getRegions().forEach(r=>{
       if(!r.element)return;
       r.element.dataset.selected=String(Number(r.id)===selected);
-      r.element.style.visibility=hidden.includes(analysis.regions[Number(r.id)].type)?'hidden':'visible';
-      r.element.style.outline=Number(r.id)===selected?'2px solid #e5eff7':'';
+      const dimmed=hidden.includes(analysis.regions[Number(r.id)].type);
+      r.element.style.opacity=dimmed?'0.18':'1';
+      r.element.dataset.dimmed=String(dimmed);
+      r.element.style.outline=!dimmed&&Number(r.id)===selected?'2px solid #e5eff7':'';
     });
     update();return wave.current?.on('ready',update);
   },[selected,analysis,hidden]);
   useEffect(()=>{if(seek!==null)wave.current?.setTime(seek);},[seek]);
   return <section className="timeline"><div className="section-heading"><h2>Your recording</h2><span>{analysis.duration_s.toFixed(2)} seconds · click a marked phrase</span></div>
-    <p className="provenance">{analysis.recording_id} · analysis {analysis.analysis_id}</p><div className="region-lanes" aria-label="Flag labels above waveform">{Object.entries(flaws).filter(([type])=>!hidden.includes(type)&&analysis.regions.some(r=>r.type===type)).map(([type,f])=><div className="lane" key={type}><span style={{color:f.color}}>{f.label}</span><div>{analysis.regions.map((r,i)=>r.type===type?<button key={i} aria-pressed={selected===i} title={`${f.label} · ${timeRange(r.start,r.end)}`} style={{borderColor:f.color+'80',color:f.color}} onClick={()=>{onSelect(i);wave.current?.setTime(r.start);}}>{timeRange(r.start,r.end)}</button>:null)}</div></div>)}</div>
+    <p className="provenance">{analysis.recording_id} · analysis {analysis.analysis_id}</p><div className="region-lanes" aria-label="Flag labels above waveform">{Object.entries(flaws).filter(([type])=>analysis.regions.some(r=>r.type===type)).map(([type,f])=><div className="lane" key={type} style={{opacity:hidden.includes(type)?0.18:1}}><span style={{color:f.color}}>{f.label}</span><div>{analysis.regions.map((r,i)=>r.type===type?<button key={i} aria-pressed={selected===i} title={`${f.label} · ${timeRange(r.start,r.end)}`} style={{borderColor:f.color+'80',color:f.color}} onClick={()=>{onSelect(i);wave.current?.setTime(r.start);}}>{timeRange(r.start,r.end)}</button>:null)}</div></div>)}</div>
     {error&&<p role="alert">Could not load the waveform: {error}</p>}<div ref={box} data-testid="waveform" data-ready={ready}/><div className="time-axis">{Array.from({length:5},(_,i)=><span key={i}>{(analysis.duration_s*i/4).toFixed(0)} s</span>)}</div><audio ref={audio} controls preload="metadata" aria-label="Recording playback"><source src={source?.audio(analysis.recording_id)??`/api/audio/${analysis.recording_id}`}/></audio></section>;
 }
 

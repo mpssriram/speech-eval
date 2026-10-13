@@ -1,15 +1,28 @@
 import {useCallback,useEffect,useRef,useState} from 'react';
 import {Button} from '@mantine/core';
-import {flaws,request,type Analysis,type Tracks,type Take,type Segment,type ResultSource} from './types';
+import {flaws,request,type Analysis,type Tracks,type Take,type Segment,type ResultSource,type FlawType} from './types';
 import {Waveform,FeatureChart,ProgressChart,featureOptions} from './Evidence';
 import {takeLabels} from './takeLabels';
+import {detectorRule} from './detectorRules';
 import {formatExplanation,formatText,timeRange,fixed} from './presentation.js';
 
 function Numbers({text}:{text:string}){return <>{text.split(/(>?[-+]?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?)/g).map((part,i)=>/\d/.test(part)?<strong className="number" key={i}>{part}</strong>:part)}</>;}
-function Legend({hidden,onToggle}:{hidden:string[];onToggle:(type:string)=>void}){return <div className="legend" data-testid="legend" aria-label="Filter flagged phrases">{Object.entries(flaws).map(([type,f])=><button key={type} aria-pressed={!hidden.includes(type)} onClick={()=>onToggle(type)}><i style={{background:f.color}}/>{f.label}</button>)}</div>;}
+function Legend({counts,active,onSelect}:{counts:Record<string,number>;active:FlawType|null;onSelect:(type:FlawType|null)=>void}){return <div className="legend" data-testid="legend" role="group" aria-label="Filter flagged phrases"><button aria-pressed={active===null} onClick={()=>onSelect(null)}>All ({Object.values(counts).reduce((sum,count)=>sum+count,0)})</button>{Object.entries(flaws).map(([type,f])=><button key={type} className={counts[type]?'':'zero-count'} aria-pressed={active===type} onClick={()=>onSelect(type as FlawType)}><i style={{background:f.color}}/>{f.label} ({counts[type]})</button>)}</div>;}
+
 
 export function Results({analysis,tracks,aid,onError,source}:{analysis:Analysis;tracks:Tracks;aid:string;onError:(message:string)=>void;source?:ResultSource}){
-  const [hidden,setHidden]=useState<string[]>([]);
+  const [activeType,setActiveType]=useState<FlawType|null>(null);
+  const [notice,setNotice]=useState<FlawType|null>(null),[noticeVersion,setNoticeVersion]=useState(0);
+  const counts=Object.fromEntries(Object.keys(flaws).map(type=>[type,analysis.regions.filter(r=>r.type===type).length]));
+  const hidden=activeType?Object.keys(flaws).filter(type=>type!==activeType):[];
+  const list=useRef<HTMLDivElement>(null);
+  useEffect(()=>{if(!notice)return;const timer=setTimeout(()=>setNotice(null),5000);return ()=>clearTimeout(timer);},[notice,noticeVersion]);
+  function filter(type:FlawType|null){
+    if(type&&counts[type]===0){setNotice(type);setNoticeVersion(v=>v+1);return;}
+    setNotice(null);
+    const next=type===activeType?null:type;setActiveType(next);
+    if(next){const first=analysis.regions.map((r,i)=>({r,i})).filter(({r})=>r.type===next).sort((a,b)=>a.r.start-b.r.start)[0];setSelected(first.i);setSeek(first.r.start);}
+  }
   const [selected,setSelected]=useState(source?.selectedRegion??0),[feature,setFeature]=useState('rate'),[seek,setSeek]=useState<number|null>(null);
   const player=useRef<HTMLAudioElement>(null),end=useRef<number>(Infinity);
   const playback=useRef(0);
@@ -27,8 +40,8 @@ export function Results({analysis,tracks,aid,onError,source}:{analysis:Analysis;
     request<Take[]>(`/api/history?text_id=${encodeURIComponent(analysis.text_id)}`).then(data=>{if(!cancelled)setTakes(data);}).catch(e=>{if(!cancelled)onError(e.message);});
     return ()=>{cancelled=true;playback.current++;};
   },[aid,analysis,onError,source]);
-  const select=useCallback((index:number)=>{setSelected(index);},[]);
-  useEffect(()=>{const list=document.querySelector('.flaw-list'),card=list?.querySelector(`[data-region-index="${selected}"]`) as HTMLElement|null;if(list&&card)list.scrollTop=card.offsetTop;},[selected]);
+  const select=useCallback((index:number)=>{setSelected(index);setActiveType(old=>old&&analysis.regions[index]?.type!==old?null:old);},[analysis]);
+  useEffect(()=>{const card=list.current?.querySelector(`[data-region-index="${selected}"]`) as HTMLElement|null;if(list.current&&card){list.current.scrollTop=card.offsetTop;if(activeType)card.scrollIntoView({block:'nearest'});}},[selected,activeType]);
   const region=analysis.regions[selected];
   async function play(index:number,baseline:boolean){
     const token=++playback.current;
@@ -60,14 +73,17 @@ export function Results({analysis,tracks,aid,onError,source}:{analysis:Analysis;
       <div role="tablist" aria-label="Delivery features" className="feature-tabs">{featureOptions.map(f=><button key={f.id} role="tab" aria-selected={feature===f.id} onClick={()=>setFeature(f.id)}>{f.label}</button>)}</div>
       <FeatureChart tracks={tracks} feature={feature} selected={region}/></section>}
     </div><section className="flag-panel"><div className="section-heading"><h2>Flagged phrases</h2><span>{analysis.regions.length} detected regions · sorted by time</span></div>
-      <Legend hidden={hidden} onToggle={type=>setHidden(old=>old.includes(type)?old.filter(t=>t!==type):[...old,type])}/>{analysis.regions.length>0&&analysis.regions.every(r=>hidden.includes(r.type))&&<p className="empty">All flaw types are hidden. Select a filter to show its phrases.</p>}
+      <Legend counts={counts} active={activeType} onSelect={filter}/>
+      {notice&&<div className="filter-notice" role="status" aria-live="polite" aria-atomic="true"><div><p>No {flaws[notice].label} regions were flagged in this recording.</p><p>{detectorRule(notice,analysis.mode)}</p></div><button aria-label="Dismiss notice" onClick={()=>setNotice(null)}>×</button></div>}
       {!analysis.regions.length?<div className="empty">{analysis.mode==='B'?'No delivery differences detected against your earlier take. A relative match is not an expert-quality rating.':analysis.mode==='C'?'No flaws detected against the four-feature norms. This is an automatic estimate, not a human rating.':'No flaws detected against the expert-reader reference. This is an automatic comparison, not a human rating.'}</div>:
-        <div className="flaw-list">{analysis.regions.map((r,i)=>({r,i})).sort((a,b)=>a.r.start-b.r.start).map(({r,i})=><article hidden={hidden.includes(r.type)} key={`${r.type}-${r.start}-${i}`} data-testid="flaw-card" data-region-index={i} aria-current={selected===i?'true':undefined} className={`flaw-card ${selected===i?'active':''}`} style={{borderLeftColor:flaws[r.type].color}}>
-          <button className="flaw-title" onClick={()=>{setSelected(i);setSeek(r.start);}}><span className="type-chip" style={{color:flaws[r.type].color}}>{flaws[r.type].label}</span><span>{timeRange(r.start,r.end)}</span></button>
+        <div className="flaw-list" ref={list}>{analysis.regions.map((r,i)=>({r,i})).sort((a,b)=>a.r.start-b.r.start).map(({r,i})=><article hidden={hidden.includes(r.type)} key={`${r.type}-${r.start}-${i}`} data-testid="flaw-card" data-region-index={i} data-type={r.type} aria-current={selected===i?'true':undefined} className={`flaw-card ${selected===i?'active':''}`} style={{borderLeftColor:flaws[r.type].color}}>
+          <button className="flaw-title" aria-expanded={selected===i} aria-controls={`phrase-details-${aid}-${i}`} onClick={()=>{setSelected(i);setSeek(r.start);}}><span className="type-chip" style={{color:flaws[r.type].color}}>{flaws[r.type].label}</span><span>{timeRange(r.start,r.end)}</span></button>
+          <div className="flaw-details" id={`phrase-details-${aid}-${i}`} hidden={selected!==i}>
           <div className="severity" aria-label={`Severity ${r.severity} of 5`}>{'●'.repeat(r.severity)}{'○'.repeat(5-r.severity)}<span>Severity {r.severity}/5</span></div>
           <blockquote>{tracks.words.slice(r.word_start,r.word_end+1).map(w=>w.text).join(' ')}</blockquote><p className="explanation"><Numbers text={formatExplanation(r,tracks.words,analysis.mode)}/></p>
           <div className="playback"><Button variant="light" aria-label="Yours" onClick={()=>void play(i,false)}>Yours</Button><Button variant="subtle" aria-label="Baseline (same words)" disabled={!segments[i]} onClick={()=>void play(i,true)}>Baseline (same words)</Button></div>
           {!analysis.reference.baseline_recording_id?<small>Mode C has no same-text baseline.</small>:segments[i]===null?<small>Baseline words differ here; an exact phrase match is unavailable.</small>:!segments[i]?<small>Checking baseline word matches…</small>:null}
+          </div>
         </article>)}</div>}
       <audio hidden={!hasPlayback} className="comparison-player" data-testid="phrase-player" ref={player} controls aria-label="Selected phrase playback" onTimeUpdate={()=>{if(player.current&&player.current.currentTime>=end.current)player.current.pause();}}/>
     </section></div>

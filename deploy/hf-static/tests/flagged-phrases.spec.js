@@ -1,0 +1,32 @@
+import {test,expect} from '@playwright/test';
+import {flaggedPhraseTests} from '../../../web/tests/flaggedPhrases.js';
+import examples from '../src/catalog.js';
+import fs from 'node:fs';
+import {parse} from 'yaml';
+const detector=parse(fs.readFileSync('../../configs/detector.yaml','utf8'));
+flaggedPhraseTests(test,expect,'/#/example/'+examples.find(e=>e.default).id,'static',detector);
+test('static recording switch resets counts, selection and notice and uses Mode C config',async({page})=>{
+ await page.goto('/#/example/'+examples.find(e=>e.default).id);
+ await expect(page.getByTestId('legend')).toBeVisible();
+ await page.getByTestId('legend').getByRole('button',{name:'Monotone (0)',exact:true}).click();
+ await expect(page.getByRole('status')).toContainText('No Monotone');
+ const next=examples.find(e=>e.title.endsWith('Mode C'));
+ await page.locator('#example').selectOption(next.id);
+ await expect(page.getByRole('heading',{name:next.title,exact:true})).toBeVisible();
+ const analysis=JSON.parse(fs.readFileSync('public/'+next.analysis,'utf8'));
+ await expect(page.getByTestId('legend').getByRole('button',{name:`All (${analysis.regions.length})`,exact:true})).toHaveAttribute('aria-pressed','true');
+ await expect(page.getByRole('status')).toHaveCount(0);
+ await page.getByTestId('legend').getByRole('button',{name:'Monotone (0)',exact:true}).click();
+ await expect(page.getByRole('status')).toContainText(`at least ${detector.mode_c.k.pitchrange} robust SD below good-speaker norms`);
+ await page.getByTestId('legend').getByRole('button',{name:'Awkward pause (0)',exact:true}).click();
+ await expect(page.getByRole('status')).toContainText('not evaluated by Mode C');
+});
+test('static recording with no flags keeps All selected when an empty chip is clicked',async({page})=>{
+ const empty=examples.find(e=>JSON.parse(fs.readFileSync('public/'+e.analysis,'utf8')).regions.length===0);
+ expect(empty).toBeTruthy();await page.goto('/#/example/'+empty.id);
+ await expect(page.getByTestId('legend').getByRole('button',{name:'All (0)',exact:true})).toHaveAttribute('aria-pressed','true');
+ await page.getByTestId('legend').getByRole('button',{name:'Rushing (0)',exact:true}).click();
+ await expect(page.getByRole('status')).toContainText('No Rushing regions were flagged in this recording.');
+ await expect(page.getByTestId('legend').getByRole('button',{name:'All (0)',exact:true})).toHaveAttribute('aria-pressed','true');
+ await expect(page.locator('.empty')).toBeVisible();
+});

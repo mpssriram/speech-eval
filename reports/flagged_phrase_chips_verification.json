@@ -1,0 +1,38 @@
+{
+  "schema": "flagged-phrase-chips-verification/v1",
+  "date": "2026-10-13",
+  "scope": "Shared UI only; detector/config/scores unchanged by this task",
+  "live": {
+    "base_url": "http://127.0.0.1:5175",
+    "api": "real Docker API at 18000",
+    "targeted_tests_passed": 3,
+    "mocks": false
+  },
+  "static": {
+    "base_url": "http://127.0.0.1:18767",
+    "targeted_and_layout_tests_passed": 10,
+    "node_tests_passed": 27,
+    "manifest_matches": 48
+  },
+  "red_check": {
+    "isolated_baseline": "/tmp/speech-eval-chips-baseline",
+    "tests_failed": 3,
+    "expected_reason": "Missing All/count chips in baseline Results component"
+  },
+  "builds": [
+    "live tsc -b + vite build",
+    "static vite build"
+  ],
+  "config_sha256": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+  "screenshots": {
+    "chips_live_all.png": "372d7a0bc5fc2af55862deefeed23635cb2af8acb24b1abefc37deaeb8a143e1",
+    "chips_live_filtered.png": "3ae3e73795ba50f0dd5fba83d2de02024726d4081be8ae1bb082b4af0d55ab44",
+    "chips_live_mobile_notice.png": "b51c1c3ec6ac590ae8a3a453cf87acca37df39a0acd0fff177ecc0e57e714c8f",
+    "chips_live_notice.png": "8360cab99a1070ed541d3348cdb2bfea8ff20747a11022fa045498c4f69c55fe",
+    "chips_static_all.png": "3395663f68add09c932db7d88a9e5546d14ac8e002e393f73cc1b88bde638286",
+    "chips_static_filtered.png": "a664a008285a0cc5ab9bac90165ac78aad8d52d6e741e75ac1d1a29b6ea15f0e",
+    "chips_static_mobile_notice.png": "4e8e94e491eacdef0718c3648ea4d2be0c2b4a29eadc0d977e083b53f3f46f8c",
+    "chips_static_notice.png": "6121a778494cad4f2b0d41bc932849c2a1f30e5fecba17d0808c60ee1fc43029"
+  },
+  "shared_suite_status": "Final Python/full browser verification is coordinated with website/explanation chats because their changes are in progress."
+}
