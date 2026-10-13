@@ -3,8 +3,7 @@
 1. Publish the 3–10 minute demo video and replace the **Video URL: PENDING**
    placeholders in README.md and docs/SUBMISSION.md.
 2. Insert the final report PDF Claude provides at
-   `docs/report/speech-eval-report.pdf`, then update the report links in the
-   README, submission document and precomputed demo as needed. Claude's inputs
+   `docs/report/report.pdf`. The existing Report link already points there. Claude's inputs
    are ready in `Downloads/speech-eval-report-inputs/INDEX.md`, including the
    updated landing/results screenshots and `reports/ui_fixes.md`.
    Parts A–C are shipped; the public Space landing page and examples were verified,

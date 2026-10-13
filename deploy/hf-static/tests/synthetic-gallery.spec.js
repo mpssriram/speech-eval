@@ -6,7 +6,7 @@ test('gallery exposes seven labelled synthetic hits with phrase playback',async(
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/');
  for(const e of examples.filter(e=>e.injectedType)){
-  await expect(page.locator(`.example-card[href="#/example/${e.id}"]`)).toContainText(`synthetic edit, severity ${e.injectionSeverity}`);
+  await expect(page.locator(`.example-card[href="#/example/${e.id}"]`)).toContainText(`Synthetic edit (severity ${e.injectionSeverity}). The detector found the injected flaw.`);
  }
  for(const e of examples.filter(e=>e.injectedType)){
   await page.goto('/#/example/'+e.id);

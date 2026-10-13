@@ -1,14 +1,14 @@
 # Report inputs handoff — 2026-10-13
 
-Parts A–C screenshots, report, current evidence and NEXT.md copied to Downloads/speech-eval-report-inputs. Every refreshed copy is byte-identical to its source. Existing source/PDF files and all previous inputs are retained.
+Refreshed UI text fixes, public Space evidence and screenshots in Downloads/speech-eval-report-inputs. All refreshed copies were byte-verified. The final PDF destination remains docs/report/report.pdf. Existing report source/PDF bytes are unchanged.
 
-Copied files: **83**.
+Copied files: **98**.
 
 | File in this folder / repository path | Bytes | SHA256 |
 |---|---:|---|
-| `NEXT.md` | 1,322 | `44d38698c93bce84a2b978ebff8a7ce9089e4dcad7900b5a1e2f27355844101e` |
+| `NEXT.md` | 1,258 | `f9300650c4fb9a64a4ef7d06eee126e9382bc01ea10b6e2b44a59d48245457fb` |
 | `docs/DATASET.md` | 14,830 | `a411500f09b8fdc70c21b0eba5461a13db4960dd57fd7621579c7240ad931d1a` |
-| `docs/SUBMISSION.md` | 5,912 | `590c84dd53c37f64a18d0b7a063f3b7212373736cd4f11675ff887aba763b9e7` |
+| `docs/SUBMISSION.md` | 5,900 | `29f67b0182d027d650b3a10d255870741c3aed6d3bb69f764861420763386085` |
 | `docs/report/BUILD.md` | 1,364 | `83032f608624d87ec90e5237f2622c13ec42fe536fcc9d4cc8eecec8a287d30a` |
 | `docs/report/build_pdf.py` | 8,862 | `8f07d5070cf1385f9138a3a8bebc5cb221396b0b2646f64a3e154254732e8f72` |
 | `docs/report/report.md` | 16,978 | `4f863cda3335ddc9a71e51fdc703899b6255d601b47e1f650924176f5014edce` |
@@ -16,7 +16,7 @@ Copied files: **83**.
 | `docs/report/verification.json` | 552 | `575afdefcaa412714e4ef2590ce2bddb48c09e9ef7200cf9c38b2e52dc5f1a7d` |
 | `docs/report/verify_pdf.py` | 2,716 | `7c45c09b39815a2d5d55194edd2f0fa71784716e923198409eb5293be1b0342f` |
 | `phase10_human_takes.md` | 34,260 | `9a1bdee694dde530bf7da4b082011da7d761e153abd71e869f5d074c8976825b` |
-| `reports/deploy_browser_checks.json` | 7,020 | `21381821f10312481cb784eb7e9702df3587812c9187eac9b3016164f0346aad` |
+| `reports/deploy_browser_checks.json` | 6,904 | `ac98ab0aae626a450ddc10a67aac8ed84e1933e9dc9698010e386ff543ee4c7e` |
 | `reports/deploy_browser_checks_public.json` | 8,924 | `bbe69e166a007c7ca232ae6ee2bace8281032045d3d555894bc3e3269addc80e` |
 | `reports/deploy_check.md` | 6,268 | `c23f206c3331f3f85334430247da72e794885d6bf608ef9521a02a29f3dbaaca` |
 | `reports/explanation_screenshot_checks.json` | 967 | `bfe52018d55e55562163181bd0d64ec5ae4567f56ada95c0fe53454fb278cb7c` |
@@ -26,8 +26,16 @@ Copied files: **83**.
 | `reports/hf_public_check.json` | 459 | `0643fddf53b26d0cb79a880c44e21ca370e6e5a74ef3e6af01210d1e58ba4ec7` |
 | `reports/history_audit.md` | 4,969 | `c7a0825d31968793b6bd8b1c8ba6d7ca0237fe5b44ab8a33ff22496fa6ab1c74` |
 | `reports/history_audit_evidence.json` | 24,857 | `19f21c03b9940cc684dd1d975185bf6e8fd2df17595dfe68dc3d1f3245571ed7` |
-| `reports/human_ui_verification.json` | 1,041 | `732b0a059f135ba0224a4a7c1c8a46a8521af34a5960f0c95645d327adb2de38` |
+| `reports/human_ui_verification.json` | 1,030 | `2c7750afbb4e0c8a0f38d3d1a1df298b016507a093d62b97eccf295f760e1daf` |
 | `reports/img/85ec3faf6df9.png` | 486,696 | `b4c257c4eb79c06ca23c7876d04fb5f25e7c20fca78b5461b4d093cd059292c6` |
+| `reports/img/chips_live_all.png` | 607,294 | `8efaf09cc1c2292eb3bf378dee3a96af7d1d3d86538b9403f705178879701777` |
+| `reports/img/chips_live_filtered.png` | 606,469 | `0aaf0f3a56ef92bff08c5193809df4e025d0726d2c3d6b3b4e09db313fa10e55` |
+| `reports/img/chips_live_mobile_notice.png` | 433,136 | `8f1778e0430bfd926d4efae186c0f5a7c7f9440be63060499ac1dccaff4c2a4f` |
+| `reports/img/chips_live_notice.png` | 618,570 | `38264ef0b5294ea2f10816fe948964988d00b3899bb965e554714fbf03f604a6` |
+| `reports/img/chips_static_all.png` | 628,903 | `5afefc33c1161c3a1f8bb32605aa2cd2730a9d8558e2b4c42c90c582c9bb40a5` |
+| `reports/img/chips_static_filtered.png` | 629,486 | `aa2e1e1e5a3cb0768ea98107b67ead40c5f78af6e589805d10a8cccc404297bc` |
+| `reports/img/chips_static_mobile_notice.png` | 408,096 | `1495fae8340c3766a8f21d93a9d08f2609714e6eb926928d13a9f66fb4b91efd` |
+| `reports/img/chips_static_notice.png` | 587,058 | `ddd9532f65baa35781e1e24548404e18bdd68f5980ddc6397c778ddf3b401a0e` |
 | `reports/img/confusion_A-LOSO.png` | 51,741 | `e35b841fd24e01f2689fd2fa09c17c74b087072d2e006c6eb73d827a0ff6080f` |
 | `reports/img/confusion_B-same-speaker.png` | 56,895 | `4f6127556d656576d0050f1a8b9595d57ff83aac858d4c0699c25d1a080ed04f` |
 | `reports/img/dev_threshold_sweeps.png` | 119,216 | `f7cf718f8f3524815d37adfd139aef4aa763e9fe1dace55a2bfe1daba56460c5` |
@@ -38,8 +46,9 @@ Copied files: **83**.
 | `reports/img/explanation_dashboard_space.png` | 630,291 | `56c209e64a351e3feee97dfb7c739a1db920725db5e20fd24875ab18f5aa993e` |
 | `reports/img/explanation_sd_live.png` | 43,139 | `f8b40f4e3fa997f34f52042f9552bc3ec759ae0184fbe91c54468cc84cc9cc61` |
 | `reports/img/explanation_sd_space.png` | 43,009 | `516f8ee4cc9331850a3ad735afdc32077683a876eea7221660ddc907d300a3fe` |
-| `reports/img/hf_space.png` | 348,031 | `5eab0521d75a30e36233454ed0bcd8035bd5637037d89a9cacde3899b1968420` |
+| `reports/img/hf_space.png` | 346,237 | `f79d2f7d2ec71565eddd924523fcb130257abbf253339051b0c1fa73a485b39e` |
 | `reports/img/hf_space_region.png` | 36,798 | `c340b5c1db45f94b53f33e92d9d3260bc869c1a08208a3afeab5d3ac2c232c5a` |
+| `reports/img/hf_space_too_quiet.png` | 303,824 | `b8b0177bff2963dade54e0f9f30bc29553054c6128848b8b3f9526640df00d80` |
 | `reports/img/human_gettysburg_take01.jpg` | 72,233 | `10d2503ade85868340f280c1107abf595592db880c9e20b39208aef8e93bcd5a` |
 | `reports/img/human_posthoc_v2.jpg` | 68,114 | `da947f65c31d94f02bae0b6245cb96091059336d7513dc3e0f2dc60fe82818ef` |
 | `reports/img/onset_error_hist.png` | 22,402 | `3dbe18ddbc66040e639c7d420e57132601f615ddab295b7c9263aa0ca6bd65a4` |
@@ -47,25 +56,27 @@ Copied files: **83**.
 | `reports/img/recall_vs_severity_A-LOSO.png` | 103,830 | `ad6eb5e25bcdece4166c9726d21d22614dd97a18239bdd0769b11191184591d7` |
 | `reports/img/recall_vs_severity_B-same-speaker.png` | 91,256 | `e88e0c821bc449cc30012858634aef834ea85d37481c1eb3a70669451bffe4a6` |
 | `reports/img/score_vs_severity.png` | 71,983 | `462da64461539a51a4c5a22f66a2f135036fd0406650ba35be9ff2af92f8a8b2` |
-| `reports/img/smoke_region.png` | 582,930 | `920928efd919731d859e10988c966ffec621440f0f39d40a8c7ce9950c767930` |
-| `reports/img/smoke_results.png` | 600,487 | `1253f1e41adab358b187d14787f4a357545b1394df6caaf5ff3c97ea5295deba` |
-| `reports/img/static_mobile.png` | 420,518 | `286a08f0b28d36c7d86debe6bf305aa6832e2df06590c39e72cfae6d1e53df10` |
+| `reports/img/smoke_region.png` | 580,911 | `c1124b61f592f9c649a0d3faf75d0c0b220a6ef26a45fa3261419b32944ab7c7` |
+| `reports/img/smoke_results.png` | 598,760 | `af1bdc061c40a3dcb69a6cce660767162a30c4d51747d366a69689f1176b79db` |
+| `reports/img/static_mobile.png` | 419,764 | `66fc5dbc5b09b057a686c58c17898243f39bbe3d295542aa3a0b76fba8220c75` |
 | `reports/img/static_region.png` | 36,798 | `a5fdd4d295769d02eef580499ff92f8203aee67c3a444962736cf280f3459d98` |
-| `reports/img/static_results.png` | 536,132 | `bf68e67ac1fa478b28901112d3f14ac5d4edd8c50504642cc74780a104e19471` |
+| `reports/img/static_results.png` | 534,568 | `59d80cc2b237de245ccc78d69f21aba37c60c0d60724992e63d549a505b40cac` |
 | `reports/img/static_results_before.png` | 290,578 | `16250d4c38ebdc1d31fa494f936bf5f4cb89f270b442ebeb113794cc6414824b` |
-| `reports/img/ui_landing.png` | 332,390 | `2536b789532df03460f6652984165f5b00431042533156513fcea26a778d2d47` |
+| `reports/img/ui_landing.png` | 330,665 | `d7acb4a87252a9ca76f70786a1588df992844233c5893b626a2f97b8e1e030c4` |
 | `reports/img/ui_laptop.png` | 275,765 | `5e35d2394f413e95399df9ac33fd8006e1aa87a8a704c8882c75e200b6debb4f` |
-| `reports/img/ui_mobile.png` | 512,161 | `81c9937c616ec32894728e3e91c2383733897308013130ec3cc891a07e5f4cfd` |
-| `reports/img/ui_modeB.png` | 728,785 | `97926076a3d5857d1fb578edf10bbfe958aa6e10c5f25404336ac5eb6432b85b` |
-| `reports/img/ui_modeC.png` | 654,033 | `fdaf1d83429185b7a6f4027aed62fcae96d69272cf75a5a0971d3cf02a8e96ac` |
-| `reports/img/ui_modeC_upload.png` | 654,033 | `fdaf1d83429185b7a6f4027aed62fcae96d69272cf75a5a0971d3cf02a8e96ac` |
+| `reports/img/ui_mobile.png` | 511,421 | `2b9c5b866395200b685ade92166900f0b2d992c94e4f4e55405053911cb59da8` |
+| `reports/img/ui_modeB.png` | 727,563 | `c8e17d4807449ef0546ad3b53e31e14c17e1d75c1b71c3caff1d63a86aeb1d54` |
+| `reports/img/ui_modeC.png` | 624,386 | `16e08c9dc51950f02b28eadee7ddead7a0e4a73f7263208b7b647677d83f8c7a` |
+| `reports/img/ui_modeC_upload.png` | 651,841 | `5c474da15bf10d91b008aff1c0981aa3d747fd84ee84e2735ddcdd0271445c8d` |
 | `reports/img/ui_picker.png` | 359,500 | `11c7d8c82e7c9df18e95a475d5e636139a996cb011d54c250141463fbc906bb3` |
 | `reports/img/ui_region.png` | 36,932 | `bd6ba09853127d63d1d8727d65dfbf318c173eebd9705b9c07191a44987e261c` |
 | `reports/img/ui_region_before.png` | 22,769 | `bc9106233d5db4f415b07252f4d03e0630cbea07568c393c395c9d9b07c75f10` |
 | `reports/img/ui_results.png` | 298,688 | `d008455af5d959894b301b0962c238ec3b9c801b023971c086e3348609f47b66` |
 | `reports/img/ui_results_before.png` | 68,548 | `34cdf08608f5f125e7c57d7dbb4c36cf9010d5e4097bdc98a6d0629fe3c97bfb` |
-| `reports/img/ui_upload.png` | 305,733 | `0df476e33ea8b82e11f43d53c39b2964866fb01fe437a91dd0fce5944a79b332` |
-| `reports/img/ui_upload_modal.png` | 177,196 | `69276c1d9c483c5861d3f485266d67435709b8f87f3b2c355ff6c5c71de11a6c` |
+| `reports/img/ui_too_quiet.png` | 496,413 | `c8f21c1e87ed58e3058b5f52ae557318f00ffdd51d2ccacb2c90f48e2335667b` |
+| `reports/img/ui_transcript.png` | 44,375 | `1c0d6a0c4569972783cb99dc563698f74a4921d4315a6e9268e3ebc36ea646a4` |
+| `reports/img/ui_upload.png` | 307,834 | `21b5ee8513b9f68c6ddc06b794591ee8ba4b7ca2a9cc832f0820af1f3b179547` |
+| `reports/img/ui_upload_modal.png` | 175,609 | `75214f7fae184964e0163d5ce5c19614bfa6654f2e0d524d5890d31e04b620ba` |
 | `reports/phase06_results.md` | 5,928 | `f74cd0392a1813b5afc8fbd2f041c9d2ec32750cca195f856106de821ac4c7b5` |
 | `reports/phase07_validation.md` | 1,582 | `7a9c891ead95f3ab63a1fbdec796efd7900946cbfe5e53e0dab1e24a0771fd0c` |
 | `reports/phase08_mode_c.md` | 2,591 | `9c491b9a1958519a3579ef50761e617a7338606c77e9652c1e76ac7dc712b397` |
@@ -82,10 +93,14 @@ Copied files: **83**.
 | `reports/ui_fixes_verification.json` | 2,734 | `17f78142ba8849d40004547fe74ffaa35842f9704799aca8658cefefbeaa3756` |
 | `reports/ui_redesign.md` | 3,864 | `c1756c0e7dce233efc4f09838fb8e00e7e41796bc8810ddc800c0673bcc55f6b` |
 | `reports/ui_redesign_checks.json` | 3,357 | `6bfd8b98a49ddf1058176532e7bb5bed712e84cb723bc67da573c2ab98288794` |
-| `reports/ui_verification.json` | 965 | `c2858bdf3395d423b423c62d575986fc0ac0345e2169e4bc0f925d900dbaa90f` |
+| `reports/ui_text_fixes_public_verification.json` | 886 | `7b5f45088ea724a65d2abc85b64ff3a6797b523492cfdc4d0ab13e19015a1813` |
+| `reports/ui_text_fixes_verification.json` | 6,608 | `6d23cfd756c46d1509b104eeff1abfc220e5b62d84e03f098403c0d570fc0a22` |
+| `reports/ui_verification.json` | 964 | `5cc5054cbc9f1d8ae9b24e585554f5b7b60c8b21361cd3cb9335751fd32fe403` |
 | `reports/waveform_ui_verification.json` | 4,891 | `ab3827bb20253deee86e68bd26306911303b869d00d5ade3120b27a690390532` |
-| `ui_landing.png` | 332,390 | `2536b789532df03460f6652984165f5b00431042533156513fcea26a778d2d47` |
-| `ui_modeC.png` | 654,033 | `fdaf1d83429185b7a6f4027aed62fcae96d69272cf75a5a0971d3cf02a8e96ac` |
+| `ui_landing.png` | 330,665 | `d7acb4a87252a9ca76f70786a1588df992844233c5893b626a2f97b8e1e030c4` |
+| `ui_modeC.png` | 624,386 | `16e08c9dc51950f02b28eadee7ddead7a0e4a73f7263208b7b647677d83f8c7a` |
 | `ui_region.png` | 36,932 | `bd6ba09853127d63d1d8727d65dfbf318c173eebd9705b9c07191a44987e261c` |
 | `ui_results.png` | 298,688 | `d008455af5d959894b301b0962c238ec3b9c801b023971c086e3348609f47b66` |
-| `ui_upload_modal.png` | 177,196 | `69276c1d9c483c5861d3f485266d67435709b8f87f3b2c355ff6c5c71de11a6c` |
+| `ui_too_quiet.png` | 496,413 | `c8f21c1e87ed58e3058b5f52ae557318f00ffdd51d2ccacb2c90f48e2335667b` |
+| `ui_transcript.png` | 44,375 | `1c0d6a0c4569972783cb99dc563698f74a4921d4315a6e9268e3ebc36ea646a4` |
+| `ui_upload_modal.png` | 175,609 | `75214f7fae184964e0163d5ce5c19614bfa6654f2e0d524d5890d31e04b620ba` |

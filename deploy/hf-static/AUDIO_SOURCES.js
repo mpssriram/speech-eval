@@ -20,6 +20,13 @@ export default {
     "source": "data/flawed/hq/gettysburg__lv_tg__rushing_s5_01.flac",
     "source_sha256": "e402b336b8278ced0e7112d1bd495f509f0b953cf34fe496000e666acfed5cda"
   },
+  "audio/gettysburg__lv_tg__too_quiet_s4_01.mp3": {
+    "bytes": 1752964,
+    "encoding": "libmp3lame 128 kbps, no gain/normalisation filters; playback only",
+    "sha256": "e5fefd39aefa637660e5e82c01b282719c0059f997708d119a0ff544886edd81",
+    "source": "data/flawed/hq/gettysburg__lv_tg__too_quiet_s4_01.flac",
+    "source_sha256": "7ecc7855ceac1abefe31f08fcb64c5387e756db223ae290389a7503bae3a6712"
+  },
   "audio/gettysburg__lv_wt__awkward_pause_s3_01.mp3": {
     "bytes": 2040938,
     "encoding": "libmp3lame 128 kbps, no gain/normalisation filters; playback only",
@@ -89,13 +96,6 @@ export default {
     "sha256": "f99e68f1caaa87e5173d3d5a3d6ede3f9814e88a7bc248ad3f68d2ced3be4578",
     "source": "data/audio/hq/reagan_challenger__reagan__orig.wav",
     "source_sha256": "53e5778bafa6ec87f89c98181ebafde94db145a58cd8df76ba9952488b1fe992"
-  },
-  "audio/reagan_challenger__reagan__too_quiet_s5_01.mp3": {
-    "bytes": 3986956,
-    "encoding": "libmp3lame 128 kbps, no gain/normalisation filters; playback only",
-    "sha256": "08b6c07d2cc1e2f1845b96d63a70394e21dc89464f5cd36295a75b62562864ff",
-    "source": "data/flawed/hq/reagan_challenger__reagan__too_quiet_s5_01.flac",
-    "source_sha256": "53d021bec72d60c832b178528daf5d56a4bd10b12bc1e6528c1e92b1838f7f2d"
   },
   "audio/reagan_challenger__user__input_6b1ca5bc673c.mp3": {
     "bytes": 1223828,

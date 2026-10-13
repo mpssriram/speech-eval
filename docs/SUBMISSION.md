@@ -8,7 +8,7 @@ Track C: Contrastive Speech Analytics & Temporal Flaw Grounding.
 | Repository | https://github.com/mpssriram/speech-eval — make public after the history audit is reviewed |
 | Precomputed demo | https://huggingface.co/spaces/SriramMPS/Speech-Evalutaion — anonymously verified, stored v1 results and playback; uploads disabled |
 | Video URL | **PENDING — insert the published 3–10 minute demo video link before submission** |
-| Final report PDF | **`docs/report/speech-eval-report.pdf` — PENDING: insert the final PDF Claude provides** |
+| Final report PDF | **`docs/report/report.pdf` — PENDING: insert the final PDF Claude provides** |
 | Current report for reference | [docs/report/report.pdf](report/report.pdf), with [source](report/report.md); preserved unchanged by this packaging task |
 
 ## Dataset downloads

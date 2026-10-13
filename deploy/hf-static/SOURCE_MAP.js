@@ -11,6 +11,10 @@ export default {
     "sha256": "981021e15af346c83205e9864a8a9242e1640420ad6596ca8d5fef17ca49a5d2",
     "source": "data/alignment/gettysburg__lv_tg__rushing_s5_01.json"
   },
+  "data/alignment/gettysburg__lv_tg__too_quiet_s4_01.json": {
+    "sha256": "7ab2784136b9d645354cc3fb00570caa8deaaa604cacdac4e57f678bb99a48c2",
+    "source": "data/alignment/gettysburg__lv_tg__too_quiet_s4_01.json"
+  },
   "data/alignment/gettysburg__lv_wt__awkward_pause_s3_01.json": {
     "sha256": "66aa8f135565d6d7b119090b7bbe1db923d941a68e3a4c1ece26b9511b348e93",
     "source": "data/alignment/gettysburg__lv_wt__awkward_pause_s3_01.json"
@@ -123,6 +127,10 @@ export default {
     "sha256": "27bdf9f5328ff692e8277e49927068ed17cf8e5a4da8a190528c931519870a16",
     "source": "data/analyses/51927844bef7.json"
   },
+  "data/analyses/54f57af20c5d.json": {
+    "sha256": "f9d750f49f36da4685a1dc8e480b9e8acd2a9c1719ee7819dd46a865cb073195",
+    "source": "data/analyses/54f57af20c5d.json"
+  },
   "data/analyses/622b2cca881e.json": {
     "sha256": "509ad95ff7355f47000afaa1a8a7834148f1128fd2a40983bb2d6f9702c6c9db",
     "source": "data/analyses/622b2cca881e.json"
@@ -166,6 +174,10 @@ export default {
   "data/labels/gettysburg__lv_tg__rushing_s5_01.json": {
     "sha256": "5559456696002d4cc133ff9c5bb01ee8e3a9d0e6f786ad7decdd0bc602f180cb",
     "source": "data/labels/gettysburg__lv_tg__rushing_s5_01.json"
+  },
+  "data/labels/gettysburg__lv_tg__too_quiet_s4_01.json": {
+    "sha256": "6e4d5d77f8463151d03e4f87e8b2e4583c10b6f81fd967619349e282a3c3c0d0",
+    "source": "data/labels/gettysburg__lv_tg__too_quiet_s4_01.json"
   },
   "data/labels/gettysburg__lv_wt__awkward_pause_s3_01.json": {
     "sha256": "e5e7eb4abb83290052f13e0b6085e1d3c5eb87ad91b6145a3b83a4a3b79bc429",

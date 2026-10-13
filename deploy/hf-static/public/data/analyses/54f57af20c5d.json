@@ -1,0 +1,106 @@
+{
+  "analysis_id": "54f57af20c5d",
+  "detector": {
+    "config_hash": "f0759b1d459d2f1fd06452a1fa617e49444558f03c2ee8f8d1dfc05e1bc87e09",
+    "engine": "rules"
+  },
+  "duration_s": 109.496,
+  "key_moments": [
+    {
+      "end": 0.42,
+      "kind": "number_rate",
+      "message": "guideline: key figure \"Four\" at 2.7 vs own median 4.1 syllables/s.",
+      "passed": true,
+      "start": 0.14,
+      "words": "Four"
+    },
+    {
+      "end": 0.42,
+      "kind": "number_pause",
+      "message": "guideline: pause before \"Four\" is 0 s (target \u22650.15 s).",
+      "passed": false,
+      "start": 0.14,
+      "words": "Four"
+    },
+    {
+      "end": 1.47,
+      "kind": "number_rate",
+      "message": "guideline: key figure \"seven\" at 4.1 vs own median 4.1 syllables/s.",
+      "passed": false,
+      "start": 1.05,
+      "words": "seven"
+    },
+    {
+      "end": 1.47,
+      "kind": "number_pause",
+      "message": "guideline: pause before \"seven\" is 0 s (target \u22650.15 s).",
+      "passed": false,
+      "start": 1.05,
+      "words": "seven"
+    },
+    {
+      "end": 107.97,
+      "kind": "strong_ending",
+      "message": "guideline: final sentence drop 6.4 dB and rate z=0.11; targets \u2265\u22123 dB and z\u22641.",
+      "passed": true,
+      "start": 73.39,
+      "words": "It is rather for us to be here dedicated to the great task remaining before us that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion that we here highly resolve that these dead shall not have died in vain that this nation, under God, shall have a new birth of freedom and that government of the people, by the people, for the people, shall not perish from this earth."
+    },
+    {
+      "end": 11.88,
+      "kind": "first_sentence",
+      "message": "guideline: opening sentence identified; no additional numerical rule or penalty.",
+      "passed": null,
+      "start": 0.14,
+      "words": "Four score and seven years ago our fathers brought forth upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men were created equal."
+    }
+  ],
+  "mode": "C",
+  "progress": null,
+  "recording_id": "gettysburg__lv_tg__too_quiet_s4_01",
+  "reference": {
+    "baseline_recording_id": null,
+    "kind": "norms",
+    "n_readers": 18,
+    "reference_version": "e9686b646c5e9d96af004b7bacdace75aa7886ebdd1c7f6fbaa22dfea313ba28"
+  },
+  "regions": [
+    {
+      "end": 72.86,
+      "evidence": {
+        "feature": "final_drop",
+        "participant": -9.235,
+        "reference": 0.5853,
+        "unit": "dB",
+        "z": -2.406
+      },
+      "explanation": "71.6\u201372.9 s, \"nobly advanced.\": too quiet; final_drop -9.2 dB versus good speakers in our dataset (typical range -2.2\u20133.3); z=-2.4.",
+      "mean_abs_z": 2.406,
+      "sentence": 8,
+      "severity": 1,
+      "start": 71.6,
+      "tags": [
+        "sentence_final"
+      ],
+      "type": "too_quiet",
+      "word_end": 188,
+      "word_start": 187
+    }
+  ],
+  "schema": "analysis/v1",
+  "scores": {
+    "clarity": 10.0,
+    "overall": 10.0,
+    "pace": 10.0,
+    "pauses": 10.0,
+    "pitch": 10.0,
+    "volume": 9.9
+  },
+  "text_id": "gettysburg",
+  "transcript_source": "stored_as_spoken",
+  "warnings": [
+    {
+      "type": "limited_sentence_norms_mode"
+    }
+  ]
+}

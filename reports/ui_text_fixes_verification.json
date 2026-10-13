@@ -1,0 +1,178 @@
+{
+  "schema": "ui-text-fixes-verification/v1",
+  "date": "2026-10-13",
+  "scope": "presentation and gallery selection only; stored detector/config/score/evidence/label/report-source files unchanged",
+  "source_base_commit": "17a15e4f726dabd29d3ba1e7cc4df5de0783532a",
+  "tests": {
+    "python_passed": 337,
+    "static_unit_passed": 28,
+    "static_browser_passed": 28,
+    "live_browser_passed": 26,
+    "transcript_regression_failed_before_fix": true
+  },
+  "builds": [
+    "live tsc -b + vite build",
+    "static vite build",
+    "production Docker web rebuilt; both services healthy"
+  ],
+  "freeze_and_selection": {
+    "protected_files": 5376,
+    "changed_protected_files": [],
+    "original_manifest_entries_preserved": 48,
+    "current_manifest_entries": 51,
+    "stored_too_quiet_hits_all_modes": [
+      {
+        "id": "54f57af20c5d",
+        "mode": "C",
+        "flags": 1
+      },
+      {
+        "id": "0e18a9ed79e0",
+        "mode": "C",
+        "flags": 2
+      },
+      {
+        "id": "aa79c7aaf3be",
+        "mode": "C",
+        "flags": 2
+      },
+      {
+        "id": "609e6536e8c8",
+        "mode": "A",
+        "flags": 4
+      },
+      {
+        "id": "7f12fdc831ae",
+        "mode": "C",
+        "flags": 4
+      },
+      {
+        "id": "ab197c792bb7",
+        "mode": "A",
+        "flags": 4
+      },
+      {
+        "id": "bbcd1da6dd93",
+        "mode": "A",
+        "flags": 16
+      },
+      {
+        "id": "d6bcb3905013",
+        "mode": "B",
+        "flags": 16
+      },
+      {
+        "id": "cf70a8b104ac",
+        "mode": "C",
+        "flags": 32
+      },
+      {
+        "id": "737270e3c6f8",
+        "mode": "A",
+        "flags": 34
+      },
+      {
+        "id": "f9ec7f242864",
+        "mode": "B",
+        "flags": 34
+      }
+    ],
+    "selected_id": "54f57af20c5d",
+    "selected_flags": 1,
+    "selection_rule": "fewest total flags among stored single-flaw synthetic frozen-v1 hits (same type, temporal IoU >= 0.3); ties by analysis ID"
+  },
+  "selected_injected_hit": {
+    "recording_id": "gettysburg__lv_tg__too_quiet_s4_01",
+    "analysis_id": "54f57af20c5d",
+    "mode": "C",
+    "flags": 1,
+    "injection_severity": 4,
+    "temporal_iou": 0.5502183406113544
+  },
+  "repeat_packaging": {
+    "checked_files": 78,
+    "changed_files": []
+  },
+  "local_ui_checks": {
+    "static": {
+      "gallery_selected_id": "54f57af20c5d",
+      "flags": 1,
+      "mode": "C",
+      "description": "Synthetic edit (severity 4). The detector found the injected flaw.",
+      "iou_only_in_tooltips": true,
+      "warning_correct": true,
+      "transcript_has_real_spaces": true,
+      "report_link_correct": true
+    },
+    "live": {
+      "gallery_selected_id": "54f57af20c5d",
+      "flags": 1,
+      "mode": "C",
+      "description": "Synthetic edit (severity 4). The detector found the injected flaw.",
+      "iou_only_in_tooltips": true,
+      "warning_correct": true,
+      "transcript_has_real_spaces": true,
+      "report_link_correct": true
+    }
+  },
+  "public": {
+    "url": "https://huggingface.co/spaces/SriramMPS/Speech-Evalutaion",
+    "hub_status": 200,
+    "space_commit": "5da2e6fb8c08ebc550dd2f736466f3e04197f011",
+    "static_base_url": "https://srirammps-speech-evalutaion.static.hf.space/index.html#/example/54f57af20c5d",
+    "landing": true,
+    "gallery_cards": 11,
+    "example_options": 22,
+    "too_quiet": {
+      "id": "54f57af20c5d",
+      "mode": "C",
+      "flags": 1,
+      "injection_severity": 4,
+      "matching_injected_flaw": true
+    },
+    "plain_english_descriptions": true,
+    "iou_only_in_tooltips": true,
+    "human_validation_was_not_done": true,
+    "transcript_real_spaces": true,
+    "report_path": "docs/report/report.pdf",
+    "genuine_hit": true,
+    "static_upload_modal": true,
+    "verified_json_files": 51,
+    "verified_build_assets": [
+      "assets/index-Bvevz1mo.js",
+      "assets/index-CzHhSSBT.css"
+    ],
+    "api_calls": [],
+    "page_errors": []
+  },
+  "screenshots": {
+    "chips_live_all.png": "8efaf09cc1c2292eb3bf378dee3a96af7d1d3d86538b9403f705178879701777",
+    "chips_live_filtered.png": "0aaf0f3a56ef92bff08c5193809df4e025d0726d2c3d6b3b4e09db313fa10e55",
+    "chips_live_mobile_notice.png": "8f1778e0430bfd926d4efae186c0f5a7c7f9440be63060499ac1dccaff4c2a4f",
+    "chips_live_notice.png": "38264ef0b5294ea2f10816fe948964988d00b3899bb965e554714fbf03f604a6",
+    "chips_static_all.png": "5afefc33c1161c3a1f8bb32605aa2cd2730a9d8558e2b4c42c90c582c9bb40a5",
+    "chips_static_filtered.png": "aa2e1e1e5a3cb0768ea98107b67ead40c5f78af6e589805d10a8cccc404297bc",
+    "chips_static_mobile_notice.png": "1495fae8340c3766a8f21d93a9d08f2609714e6eb926928d13a9f66fb4b91efd",
+    "chips_static_notice.png": "ddd9532f65baa35781e1e24548404e18bdd68f5980ddc6397c778ddf3b401a0e",
+    "hf_space.png": "f79d2f7d2ec71565eddd924523fcb130257abbf253339051b0c1fa73a485b39e",
+    "hf_space_region.png": "c340b5c1db45f94b53f33e92d9d3260bc869c1a08208a3afeab5d3ac2c232c5a",
+    "hf_space_too_quiet.png": "b8b0177bff2963dade54e0f9f30bc29553054c6128848b8b3f9526640df00d80",
+    "smoke_region.png": "c1124b61f592f9c649a0d3faf75d0c0b220a6ef26a45fa3261419b32944ab7c7",
+    "smoke_results.png": "af1bdc061c40a3dcb69a6cce660767162a30c4d51747d366a69689f1176b79db",
+    "static_mobile.png": "66fc5dbc5b09b057a686c58c17898243f39bbe3d295542aa3a0b76fba8220c75",
+    "static_region.png": "a5fdd4d295769d02eef580499ff92f8203aee67c3a444962736cf280f3459d98",
+    "static_results.png": "59d80cc2b237de245ccc78d69f21aba37c60c0d60724992e63d549a505b40cac",
+    "ui_landing.png": "d7acb4a87252a9ca76f70786a1588df992844233c5893b626a2f97b8e1e030c4",
+    "ui_laptop.png": "5e35d2394f413e95399df9ac33fd8006e1aa87a8a704c8882c75e200b6debb4f",
+    "ui_mobile.png": "2b9c5b866395200b685ade92166900f0b2d992c94e4f4e55405053911cb59da8",
+    "ui_modeB.png": "c8e17d4807449ef0546ad3b53e31e14c17e1d75c1b71c3caff1d63a86aeb1d54",
+    "ui_modeC.png": "16e08c9dc51950f02b28eadee7ddead7a0e4a73f7263208b7b647677d83f8c7a",
+    "ui_modeC_upload.png": "5c474da15bf10d91b008aff1c0981aa3d747fd84ee84e2735ddcdd0271445c8d",
+    "ui_region.png": "bd6ba09853127d63d1d8727d65dfbf318c173eebd9705b9c07191a44987e261c",
+    "ui_results.png": "d008455af5d959894b301b0962c238ec3b9c801b023971c086e3348609f47b66",
+    "ui_too_quiet.png": "c8f21c1e87ed58e3058b5f52ae557318f00ffdd51d2ccacb2c90f48e2335667b",
+    "ui_transcript.png": "1c0d6a0c4569972783cb99dc563698f74a4921d4315a6e9268e3ebc36ea646a4",
+    "ui_upload.png": "21b5ee8513b9f68c6ddc06b794591ee8ba4b7ca2a9cc832f0820af1f3b179547",
+    "ui_upload_modal.png": "75214f7fae184964e0163d5ce5c19614bfa6654f2e0d524d5890d31e04b620ba"
+  }
+}

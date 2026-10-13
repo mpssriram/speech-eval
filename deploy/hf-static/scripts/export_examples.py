@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[3]
 DEMO = ROOT / 'deploy/hf-static'
 SYNTHETIC = [('05a48433edcf','awkward_pause'), ('2600de8f5bf4','rushing'),
              ('23d47562f995','mumbling'), ('066587c8820e','monotone'),
-             ('51927844bef7','dragging'), ('737270e3c6f8','too_quiet'),
+             ('51927844bef7','dragging'), ('54f57af20c5d','too_quiet'),
              ('1d90395b3f99','missing_pause')]
 
 def digest(path: Path) -> str:
@@ -19,7 +19,9 @@ def digest(path: Path) -> str:
 def export() -> None:
     """Copy stored JSON bytes and write separate presentation metadata."""
     entries = []
-    sources = {}
+    # Retain previously published example URLs and their unchanged stored bytes.
+    source_map = DEMO / 'SOURCE_MAP.js'
+    sources = json.loads(source_map.read_text().removeprefix('export default ').strip().removesuffix(';')) if source_map.exists() else {}
     def copy(source: str, kind: str) -> str:
         path = ROOT / source
         target = f'data/{kind}/{path.name}'
@@ -74,8 +76,8 @@ def export() -> None:
         if not matches:raise ValueError(f'Missing labelled hit: {aid}')
         label_path=copy(lp,'labels')
         severity=matches[0][2]
-        entry(aid, f'Synthetic {typ.replace("_"," ")} · synthetic edit, severity {severity} · Mode A',
-              f'Synthetic edit, severity {severity}. Selected illustration with a matching injected label (same type, IoU ≥ 0.3). All other stored flags remain visible; this selection is not a precision estimate.',
+        entry(aid, f'Synthetic {typ.replace("_"," ")} · synthetic edit, severity {severity} · Mode {a["mode"]}',
+              f'Synthetic edit (severity {severity}). The detector found the injected flaw.',
               selectedRegion=matches[0][0], hitIoU=matches[0][1], label=label_path,
               injectedType=typ, injectionSeverity=severity)
     entry('13ce79b4006a','Clean Reagan reader · Mode A',
@@ -96,9 +98,10 @@ def export() -> None:
     gallery = []
     for aid in [*human_gallery, *(aid for aid,_ in SYNTHETIC)]:
         e=next(e for e in entries if e['id']==aid)
-        description=human_gallery.get(aid) or f'synthetic edit, severity {e["injectionSeverity"]}; matching injected label (same type, IoU ≥0.3).'
+        description=human_gallery.get(aid) or f'Synthetic edit (severity {e["injectionSeverity"]}). The detector found the injected flaw.'
         gallery.append({'id':aid,'title':human_titles.get(aid,e['title'].rsplit(' · Mode ',1)[0]),
-                        'mode':e['mode'],'description':description,'flags':e['flags']})
+                        'mode':e['mode'],'description':description,'flags':e['flags'],
+                        'tooltip': f'Matching injected label: same flaw type, IoU ≥ 0.3; this hit has IoU {e["hitIoU"]:.3f}. All stored flags remain visible; this illustration is not a precision estimate.' if e.get('injectedType') else ''})
     (ROOT/'web/src/gallery.ts').write_text('export default '+json.dumps(gallery,ensure_ascii=False,indent=2)+';\n')
     (DEMO/'SOURCE_MAP.js').write_text('export default '+json.dumps(sources,indent=2,sort_keys=True)+';\n')
     (DEMO/'MANIFEST.sha256').write_text(''.join(f"{v['sha256']}  {k}\n" for k,v in sorted(sources.items())))

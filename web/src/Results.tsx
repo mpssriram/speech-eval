@@ -1,4 +1,4 @@
-import {useCallback,useEffect,useRef,useState} from 'react';
+import {Fragment,useCallback,useEffect,useRef,useState} from 'react';
 import {Button} from '@mantine/core';
 import {flaws,request,type Analysis,type Tracks,type Take,type Segment,type ResultSource,type FlawType} from './types';
 import {Waveform,FeatureChart,ProgressChart,featureOptions} from './Evidence';
@@ -70,11 +70,11 @@ export function Results({analysis,tracks,aid,onError,source}:{analysis:Analysis;
       const count=analysis.regions.filter(r=>categoryTypes[c].includes(r.type)).length;
       return <div key={c}><span>{c[0].toUpperCase()+c.slice(1)}</span><meter min={0} max={10} value={analysis.scores[c]} aria-label={`${c} score`}/><strong>{fixed(analysis.scores[c],1)}<small>/10</small></strong><p>{count?`${count} flagged ${count===1?'region':'regions'}`:'No detected penalty'}</p></div>;})}</div></section>
     <div className="workspace"><div className="recording-column"><Waveform source={source} analysis={analysis} onSelect={select} seek={seek} selected={selected} hidden={hidden}/>
-    <section className="transcript"><h2>Transcript</h2><p>Click a word to seek. Underlines mark detected regions.</p><div>{tracks.words.map(w=>{
+    <section className="transcript"><h2>Transcript</h2><p>Click a word to seek. Underlines mark detected regions.</p><div>{tracks.words.map((w,index)=>{
       const idx=analysis.regions.findIndex(r=>r.word_start<=w.i&&w.i<=r.word_end);const f=idx>=0?analysis.regions[idx]:undefined;
-      return <button className={idx===selected?'selected-word':''} key={w.i} title={`${w.start.toFixed(2)} s${f?' · '+flaws[f.type].label:''}`}
+      return <Fragment key={w.i}>{index>0?' ':null}<button className={idx===selected?'selected-word':''} title={`${w.start.toFixed(2)} s${f?' · '+flaws[f.type].label:''}`}
         style={f?{textDecorationColor:flaws[f.type].color,textDecorationLine:'underline'}:{}}
-        onClick={()=>{setSeek(w.start);if(idx>=0)setSelected(idx);}}>{w.text}</button>;})}</div></section>
+        onClick={()=>{setSeek(w.start);if(idx>=0)setSelected(idx);}}>{w.text}</button></Fragment>;})}</div></section>
     {!source&&<section className="evidence"><div className="section-heading"><h2>Measured delivery</h2><span>{analysis.mode==='C'?'Per-word curves; no same-text reference band':'Shaded band: reference ±2σ in transformed space'}</span></div>
       <div role="tablist" aria-label="Delivery features" className="feature-tabs">{featureOptions.map(f=><button key={f.id} role="tab" aria-selected={feature===f.id} onClick={()=>setFeature(f.id)}>{f.label}</button>)}</div>
       <FeatureChart tracks={tracks} feature={feature} selected={region}/></section>}
@@ -99,6 +99,6 @@ export function Results({analysis,tracks,aid,onError,source}:{analysis:Analysis;
     </section>}
     {takes.length>1&&<section><h2>Rehearsal history</h2><p className="subtle">Compare scores within the same mode and reference. Mode B scores are relative to the selected earlier take.</p><ProgressChart takes={takes}/></section>}
     {!!analysis.warnings.length&&<details><summary>Analysis warnings ({analysis.warnings.length})</summary><pre>{formatText(JSON.stringify(analysis.warnings,null,2))}</pre></details>}
-    <p className="limitations">Automatic, reproducible estimates. Human validation is pending; calibrated rules can produce false alarms. Mode C is a four-feature prototype, not a substitute for same-text comparison.</p>
+    <p className="limitations">Automatic, reproducible estimates. Human validation was not done; calibrated rules can produce false alarms. Mode C is a four-feature prototype, not a substitute for same-text comparison.</p>
   </>;
 }
