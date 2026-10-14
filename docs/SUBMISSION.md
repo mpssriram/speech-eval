@@ -5,11 +5,11 @@ Track C: Contrastive Speech Analytics & Temporal Flaw Grounding.
 
 | Submission asset | Location / status |
 |---|---|
-| Repository | https://github.com/mpssriram/speech-eval — make public after the history audit is reviewed |
+| Repository | https://github.com/mpssriram/speech-eval |
 | Precomputed demo | https://huggingface.co/spaces/SriramMPS/Speech-Evalutaion — anonymously verified, stored v1 results and playback; uploads disabled |
-| Video URL | **PENDING — insert the published 3–10 minute demo video link before submission** |
-| Final report PDF | **`docs/report/report.pdf` — PENDING: insert the final PDF Claude provides** |
-| Current report for reference | [docs/report/report.pdf](report/report.pdf), with [source](report/report.md); preserved unchanged by this packaging task |
+| Video URL | [Demo video](https://youtu.be/bbhAc6iyl7E) |
+| Final report PDF | [docs/report/report.pdf](report/report.pdf) — 6 pages |
+| Technical appendix PDF | [docs/report/technical-appendix.pdf](report/technical-appendix.pdf) |
 
 ## Dataset downloads
 
@@ -91,8 +91,4 @@ Compose equivalents. The Space is a precomputed demo; it never analyses uploads.
   perceptual scale. English-only proxies do not establish accent fairness;
   Mode C is heuristic and has no invented same-text baseline.
 - Code/configuration, thresholds, scores and published scientific results remain
-  frozen. Current report source and PDF were not edited or rebuilt by this task.
-
-Before submission: supply video/final PDF, resolve any history-audit findings,
-make the repository public, check all links in a private/logged-out window,
-and submit. [Owner actions](../NEXT.md), [history audit](../reports/history_audit.md).
+  frozen.
